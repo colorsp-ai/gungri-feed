@@ -42,10 +42,12 @@ def excluded(title, cfg):
 def collect(api, cfg, state, today, max_details, log):
     """목록 → 바뀐 항목만 상세 → 피드 레코드"""
     seen = state.setdefault('seen', {})
-    todo = []  # (kind, contentId, contentTypeId, modifiedtime)
+    buckets = []  # 권역 × 유형별 장소 후보 [(kind, contentId, contentTypeId, modifiedtime)]
+    events = []
     # 1) 장소 목록 (수정일순, 권역 × 유형)
     for regn in cfg['regions']:
         for ct in cfg['placeContentTypes']:
+            b = []; buckets.append(b)
             for page in range(1, cfg['listPagesPerQuery'] + 1):
                 r = api.area_based(ct, regn, page=page, rows=cfg['numOfRows'])
                 fresh = 0
@@ -54,7 +56,7 @@ def collect(api, cfg, state, today, max_details, log):
                     if excluded(mapping.clean(it.get('title')), cfg):
                         continue
                     if seen.get(cid) != mt:
-                        todo.append(('PLACE', cid, ct, mt)); fresh += 1
+                        b.append(('PLACE', cid, ct, mt)); fresh += 1
                 if fresh == 0 or page * cfg['numOfRows'] >= r['total']:
                     break  # 수정일순이므로 새 것이 없으면 다음 페이지도 없음
     # 2) 행사 (오늘 이후 시작 또는 진행 중)
@@ -68,10 +70,15 @@ def collect(api, cfg, state, today, max_details, log):
             if end < today.strftime('%Y%m%d') or st > horizon or excluded(mapping.clean(it.get('title')), cfg):
                 continue
             if seen.get(cid) != mt:
-                todo.append(('EVENT', cid, '15', mt))
+                events.append(('EVENT', cid, '15', mt))
         if page * cfg['numOfRows'] >= r['total']:
             break
-    log.append(f'목록 확인: 새로 받을 항목 {len(todo)}건 (이번 실행 상한 {max_details}건)')
+    # 순서: 행사 먼저(기간이 있어 늦으면 쓸모없음) → 장소는 권역·유형을 번갈아(한 권역만 몰리지 않게)
+    events.sort(key=lambda t: t[3], reverse=True)
+    todo = list(events)
+    for i in range(max((len(b) for b in buckets), default=0)):
+        todo.extend(b[i] for b in buckets if i < len(b))
+    log.append(f'목록 확인: 새로 받을 항목 {len(todo)}건(행사 {len(events)}) · 이번 실행 상한 {max_details}건')
     # 3) 상세 (common + intro + image = 3건/항목)
     out = {'PLACE': [], 'EVENT': []}
     done = 0
@@ -160,6 +167,7 @@ def main(argv=None):
     log = []
     if a.mock:
         from .mock import MockOpener
+        cfg['regions'] = ['11', '41', '43']  # 예시 자료가 있는 권역(설정과 무관하게 시험)
         api = TourAPI('MOCK-KEY', cfg.get('mobileApp', 'GUNGRI'), cfg['dailyCallBudget'], opener=MockOpener(), sleep=0)
     else:
         try:

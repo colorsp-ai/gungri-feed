@@ -5,7 +5,7 @@
   "maxDetailsPerRun": 200,
   "listPagesPerQuery": 2,
   "numOfRows": 100,
-  "regions": ["11", "41", "28", "51", "43", "44", "30", "36", "52", "46", "29", "47", "27", "48", "26", "31", "50"],
+  "regions": ["11", "41", "28"],
   "placeContentTypes": ["12", "14", "38", "28"],
   "festivalDaysAhead": 60,
   "excludeTitleKeywords": ["키즈", "클럽", "나이트", "성인", "카지노", "모텔", "호텔", "펜션", "게스트하우스", "리조트"],

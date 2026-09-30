@@ -38,6 +38,12 @@ class T(unittest.TestCase):
             f = self.run_mock(d, '--max-details', '2')
             self.assertEqual(f['stats']['newPlaces'] + f['stats']['newEvents'], 2)
 
+    def test_order_events_first_then_mixed_regions(self):
+        with tempfile.TemporaryDirectory() as d:
+            f = self.run_mock(d, '--max-details', '3')
+            self.assertEqual(f['stats']['newEvents'], 1, '행사를 먼저 받음')
+            self.assertEqual(len({p['ar'] for p in f['places']}), 2, '장소는 권역을 번갈아 받음')
+
     def test_errors(self):
         self.assertRaises(TourAPIError, TourAPI, '')
         api = TourAPI('K', opener=lambda u: '<OpenAPI_ServiceResponse><cmmMsgHeader><returnAuthMsg>SERVICE_KEY_IS_NOT_REGISTERED_ERROR</returnAuthMsg></cmmMsgHeader></OpenAPI_ServiceResponse>', sleep=0)
