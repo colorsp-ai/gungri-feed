@@ -74,6 +74,22 @@ class T(unittest.TestCase):
             finally:
                 open(ex, 'w', encoding='utf-8').write(old)
 
+    def test_timeout_is_retried_not_fatal(self):
+        n = {'c': 0}
+        def flaky(u):
+            n['c'] += 1
+            if n['c'] < 3: raise TimeoutError('The read operation timed out')
+            return '{"response":{"header":{"resultCode":"0000"},"body":{"items":"","totalCount":0}}}'
+        api = TourAPI('K', opener=flaky, sleep=0)
+        import time as _t; old = _t.sleep; _t.sleep = lambda x: None
+        try:
+            self.assertEqual(api.call('x')['items'], [])
+            def dead(u): raise TimeoutError('t')
+            api2 = TourAPI('K', opener=dead, sleep=0)
+            self.assertRaises(TourAPIError, api2.call, 'x')
+        finally:
+            _t.sleep = old
+
     def test_errors(self):
         self.assertRaises(TourAPIError, TourAPI, '')
         api = TourAPI('K', opener=lambda u: '<OpenAPI_ServiceResponse><cmmMsgHeader><returnAuthMsg>SERVICE_KEY_IS_NOT_REGISTERED_ERROR</returnAuthMsg></cmmMsgHeader></OpenAPI_ServiceResponse>', sleep=0)

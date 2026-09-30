@@ -10,7 +10,7 @@
   - 바뀐 것만 상세를 다시 받습니다(feed/state.json 에 contentId별 수정일 기록).
   - 하루 호출 예산(config.dailyCallBudget)을 넘기지 않습니다. 넘기면 멈추고 다음 날 이어서 받습니다.
 """
-import argparse, datetime, json, os, sys
+import argparse, datetime, json, os, sys, time
 
 from . import mapping
 from .tourapi import TourAPI, QuotaExceeded, TourAPIError
@@ -112,7 +112,12 @@ def collect(api, cfg, state, today, max_details, log):
     # 3) 상세 (common + intro + image = 3건/항목)
     out = {'PLACE': [], 'EVENT': []}
     done = 0
+    t0 = time.time(); fails = 0
     for kind, cid, ct, mt in todo[:max_details]:
+        if time.time() - t0 > cfg.get('maxSeconds', 1080):  # 워크플로 제한(30분) 전에 멈추고 지금까지 받은 것을 저장
+            log.append('시간 한도 도달 — 남은 항목은 다음 실행에서 이어 받습니다'); break
+        if fails >= 8:
+            log.append('연속 실패 8회 — 서버가 불안정해 중단하고 지금까지 받은 것을 저장합니다'); break
         try:
             c = api.common(cid)
             if not c:
@@ -123,7 +128,8 @@ def collect(api, cfg, state, today, max_details, log):
         except QuotaExceeded:
             log.append('호출 예산 도달 — 남은 항목은 다음 실행에서 이어 받습니다'); break
         except TourAPIError as e:
-            log.append(f'{cid} 건너뜀: {e}'); continue
+            log.append(f'{cid} 건너뜀: {e}'); fails += 1; continue
+        fails = 0
         checked = today.isoformat()
         rec = mapping.event(c, i, im, checked, cfg['maxOverviewChars']) if kind == 'EVENT' else mapping.place(c, i, im, ct, checked, cfg['maxOverviewChars'])
         out[kind].append(rec)

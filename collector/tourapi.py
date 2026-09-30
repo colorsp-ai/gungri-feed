@@ -2,7 +2,7 @@
 - 하루 호출 한도(개발계정 1,000건)를 넘지 않도록 호출 수를 셉니다.
 - 서비스키는 공공데이터포털의 '일반 인증키(Decoding)'를 권장합니다. Encoding 키(%가 들어간 키)도 그대로 받습니다.
 - 오류 응답이 JSON이 아닌 XML로 오는 경우(키 미등록 등)를 구분해 알려 줍니다."""
-import json, time, urllib.parse, urllib.request, urllib.error, os, re
+import json, time, urllib.parse, urllib.request, urllib.error, http.client, os, re
 
 BASE = os.environ.get('TOURAPI_BASE', 'https://apis.data.go.kr/B551011/KorService2')
 
@@ -57,6 +57,8 @@ class TourAPI:
                 raise TourAPIError(f'{op}: {last}')
             except urllib.error.URLError as e:
                 last = str(e.reason); time.sleep(2 * (attempt + 1))
+            except (TimeoutError, OSError, http.client.HTTPException) as e:  # 읽기 시간 초과·연결 끊김: 잠시 뒤 다시 시도
+                last = f'{type(e).__name__}: {e}'; time.sleep(3 * (attempt + 1))
         else:
             raise TourAPIError(f'{op}: 연결 실패 ({last})')
         if self.sleep:
