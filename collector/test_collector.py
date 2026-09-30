@@ -108,6 +108,23 @@ class T(unittest.TestCase):
         self.assertEqual(run.curation_tag(recs), 1)
         self.assertEqual(recs[0]['curation'], ['로컬100'])
 
+    def test_photo_rights_and_options(self):
+        recs = [{'n': 'a', 'photos': [
+            {'url': 'u1', 'usable': True, 'license': '공공누리 1유형'},
+            {'url': 'u2', 'usable': True, 'license': '공공누리 3유형'},
+            {'url': 'u3', 'usable': True, 'license': '공공누리 1유형', 'rights': 'AUTO'},
+            {'url': 'u4', 'usable': False, 'license': '공공누리 4유형'}]}]
+        n = run.apply_photo_rights(recs, {'u3'}, {'u4'})
+        self.assertEqual(n, 1)
+        ph = recs[0]['photos']
+        self.assertEqual([x['url'] for x in ph], ['u1', 'u2', 'u4'])
+        self.assertEqual(ph[0]['rights'], 'AUTO')
+        self.assertEqual(ph[1]['rights'], 'AUTO_NOEDIT')
+        self.assertFalse(ph[2].get('rights'))
+        with tempfile.TemporaryDirectory() as d:
+            f = self.run_mock(d)
+            self.assertTrue(f['options']['showExamples'])
+
     def test_clean(self):
         self.assertEqual(mapping.clean('a<br>b &amp; c'), 'a / b & c')
         self.assertEqual(mapping.href('<a href="https://x.kr/y">x</a>'), 'https://x.kr/y')

@@ -55,6 +55,33 @@ def region_labels(cfg):
     return {mapping.REGION[c] for c in cfg['regions'] if c in mapping.REGION}
 
 
+def photo_rights():
+    """대표 결정(collector/photo_rights.json): rejectUrls = 철회(피드에서 뺌), verifyUrls = 수동 확인 완료"""
+    d = load(os.path.join(HERE, 'photo_rights.json'), {})
+    return set(d.get('rejectUrls') or []), set(d.get('verifyUrls') or [])
+
+
+def apply_photo_rights(recs, rej, ver):
+    n = 0
+    for r in recs:
+        ph = r.get('photos')
+        if not ph:
+            continue
+        keep = []
+        for x in ph:
+            u = x.get('url')
+            if u in rej:
+                n += 1; continue
+            if x.get('usable') and not x.get('rights'):  # 이전에 받은 사진: 사용권 문구로 규칙 적용
+                lic = str(x.get('license') or '')
+                x['rights'] = 'AUTO' if lic.startswith('공공누리 1유형') else 'AUTO_NOEDIT' if lic.startswith('공공누리 3유형') else ''
+            if u in ver and x.get('usable'):
+                x['rights'] = x.get('rights') or 'MANUAL_OK'
+            keep.append(x)
+        r['photos'] = keep
+    return n
+
+
 def slim(recs, cfg):
     """사진은 사용 가능한 것 먼저 최대 maxPhotos장만 남겨 피드 크기를 줄임"""
     n = cfg.get('maxPhotos', 3)
@@ -71,12 +98,19 @@ def collect(api, cfg, state, today, max_details, log):
     seen = state.setdefault('seen', {})
     buckets = []  # 권역 × 유형별 장소 후보 [(kind, contentId, contentTypeId, modifiedtime)]
     events = []
+    okq = badq = 0
     # 1) 장소 목록 (수정일순, 권역 × 유형)
     for regn in cfg['regions']:
         for ct in cfg['placeContentTypes']:
             b = []; buckets.append(b)
             for page in range(1, cfg['listPagesPerQuery'] + 1):
-                r = api.area_based(ct, regn, page=page, rows=cfg['numOfRows'])
+                try:
+                    r = api.area_based(ct, regn, page=page, rows=cfg['numOfRows'])
+                    okq += 1
+                except TourAPIError as e:  # 한 목록이 안 열려도 나머지는 계속(서버가 느릴 때)
+                    log.append(f'목록 건너뜀(권역 {regn}·유형 {ct}): {e}'); badq += 1
+                    if okq == 0 and badq >= 3: raise TourAPIError('목록 조회가 연속 실패했습니다(TourAPI 서버가 응답하지 않음). 잠시 뒤 다시 실행해 주세요')
+                    break
                 fresh = 0
                 for it in r['items']:
                     cid, mt = str(it.get('contentid')), str(it.get('modifiedtime') or '')
@@ -90,7 +124,11 @@ def collect(api, cfg, state, today, max_details, log):
     start = (today - datetime.timedelta(days=30)).strftime('%Y%m%d')
     horizon = (today + datetime.timedelta(days=cfg['festivalDaysAhead'])).strftime('%Y%m%d')
     for page in range(1, cfg['listPagesPerQuery'] * 3 + 1):
-        r = api.festivals(start, page=page, rows=cfg['numOfRows'])
+        try:
+            r = api.festivals(start, page=page, rows=cfg['numOfRows'])
+            okq += 1
+        except TourAPIError as e:
+            log.append(f'행사 목록 건너뜀: {e}'); badq += 1; break
         for it in r['items']:
             cid, mt = str(it.get('contentid')), str(it.get('modifiedtime') or '')
             end = str(it.get('eventenddate') or '99999999'); st = str(it.get('eventstartdate') or '0')
@@ -104,6 +142,8 @@ def collect(api, cfg, state, today, max_details, log):
         if page * cfg['numOfRows'] >= r['total']:
             break
     # 순서: 행사 먼저(기간이 있어 늦으면 쓸모없음) → 장소는 권역·유형을 번갈아(한 권역만 몰리지 않게)
+    if okq == 0 and badq:
+        raise TourAPIError('목록 조회가 모두 실패했습니다(TourAPI 서버가 응답하지 않음). 잠시 뒤 다시 실행해 주세요')
     events.sort(key=lambda t: t[3], reverse=True)
     todo = list(events)
     for i in range(max((len(b) for b in buckets), default=0)):
@@ -233,6 +273,10 @@ def main(argv=None):
     events = [x for x in events if not x.get('region') or x['region'] in keep]
     if before != (len(places), len(events)):
         log.append(f'설정 권역 밖 항목 정리: 장소 {before[0] - len(places)} · 행사 {before[1] - len(events)}건 제외')
+    rej, ver = photo_rights()
+    m = apply_photo_rights(places + events, rej, ver)
+    if m:
+        log.append(f'철회한 사진 {m}장 피드에서 제거(photo_rights.json)')
     slim(places + events, cfg)
     log.append(f'큐레이션 표시(로컬100 등) {curation_tag(places + events)}건')
     out = {
@@ -240,6 +284,7 @@ def main(argv=None):
         'source': {'name': '한국관광공사 TourAPI 4.0 (KorService2)', 'page': mapping.SOURCE_PAGE,
                    'notice': '사진은 공공누리 유형(Type1·Type3)이 표시된 것만 사용 가능으로 표시합니다. 공개는 궁리 스텝 검수·대표 승인 후에만 합니다.'},
         'stats': {'places': len(places), 'events': len(events), 'newPlaces': len(new['PLACE']), 'newEvents': len(new['EVENT']), 'apiCalls': api.calls, 'mock': a.mock},
+        'options': {'showExamples': bool(cfg.get('showExamples', True))},
         'log': log, 'places': places, 'events': events,
     }
     save(feed_path, out)

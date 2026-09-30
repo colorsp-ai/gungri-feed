@@ -30,7 +30,7 @@ class TourAPI:
     # ---------------------------------------------------------------- transport
     def _http(self, url):
         req = urllib.request.Request(url, headers={'User-Agent': 'GUNGRI-collector/1.0'})
-        with urllib.request.urlopen(req, timeout=30) as r:
+        with urllib.request.urlopen(req, timeout=60) as r:
             return r.read().decode('utf-8', 'replace')
 
     def _url(self, op, params):
@@ -45,7 +45,7 @@ class TourAPI:
             raise QuotaExceeded(f'오늘 호출 예산 {self.budget}건을 다 썼습니다')
         url = self._url(op, params)
         last = None
-        for attempt in range(3):
+        for attempt in range(4):
             try:
                 self.calls += 1
                 txt = self.opener(url)

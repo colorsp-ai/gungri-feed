@@ -105,7 +105,9 @@ def photos(images, common, max_n=6):
         seen.add(u)
         out.append({'url': u, 'thumb': str(im.get('smallimageurl') or '').replace('http://', 'https://') or u,
                     'licenseCode': code or None, 'license': LICENSE.get(code, ''), 'source': '한국관광공사',
-                    'usable': code in LICENSE})
+                    'usable': code in LICENSE,
+                    # 자동 확인 규칙: 1유형은 출처표시만, 3유형은 원본 그대로(변경 금지). 2·4유형은 usable=False라 받지 않음
+                    'rights': {'Type1': 'AUTO', 'Type3': 'AUTO_NOEDIT'}.get(code, '')})
         if len(out) >= max_n:
             break
     return out
