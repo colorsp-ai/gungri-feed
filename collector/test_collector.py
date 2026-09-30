@@ -44,6 +44,36 @@ class T(unittest.TestCase):
             self.assertEqual(f['stats']['newEvents'], 1, '행사를 먼저 받음')
             self.assertEqual(len({p['ar'] for p in f['places']}), 2, '장소는 권역을 번갈아 받음')
 
+    def test_region_filter_and_photo_cap(self):
+        from . import mock
+        mock.FESTIVALS.append({'contentid': '900103', 'title': '부산 바다축제', 'addr1': '부산광역시 해운대구', 'lDongRegnCd': '26', 'eventstartdate': mock.D(5), 'eventenddate': mock.D(9), 'modifiedtime': '20260925090000'})
+        mock.COMMON['900103'] = {'overview': '부산 행사', 'firstimage': '', 'cpyrhtDivCd': ''}
+        try:
+            with tempfile.TemporaryDirectory() as d:
+                self.assertEqual(run.main(['--mock', '--out', d]), 0)
+                f = json.load(open(os.path.join(d, 'gungri_feed.json'), encoding='utf-8'))
+                self.assertEqual([e['name'] for e in f['events']], ['구리 코스모스 축제'], '권역 밖 행사 제외')
+            cfg = {'maxPhotos': 2}
+            rec = [{'photos': [{'usable': False}, {'usable': True, 'u': 1}, {'usable': True, 'u': 2}]}]
+            run.slim(rec, cfg)
+            self.assertEqual([p.get('u') for p in rec[0]['photos']], [1, 2], '사용 가능한 사진 우선 · 최대 장수')
+        finally:
+            mock.FESTIVALS[:] = [x for x in mock.FESTIVALS if x['contentid'] != '900103']
+
+    def test_exclude_ids(self):
+        with tempfile.TemporaryDirectory() as d:
+            f = self.run_mock(d)
+            pid = f['places'][0]['feedId']; eid = f['events'][0]['feedId']
+            ex = os.path.join(os.path.dirname(run.__file__), 'exclude.json')
+            old = open(ex, encoding='utf-8').read()
+            try:
+                open(ex, 'w', encoding='utf-8').write(json.dumps({'excludeIds': [pid, eid]}))
+                f2 = self.run_mock(d)
+                self.assertNotIn(pid, [x['feedId'] for x in f2['places']], '폐기한 장소는 피드에서 빠짐')
+                self.assertNotIn(eid, [x['feedId'] for x in f2['events']], '폐기한 행사는 피드에서 빠짐')
+            finally:
+                open(ex, 'w', encoding='utf-8').write(old)
+
     def test_errors(self):
         self.assertRaises(TourAPIError, TourAPI, '')
         api = TourAPI('K', opener=lambda u: '<OpenAPI_ServiceResponse><cmmMsgHeader><returnAuthMsg>SERVICE_KEY_IS_NOT_REGISTERED_ERROR</returnAuthMsg></cmmMsgHeader></OpenAPI_ServiceResponse>', sleep=0)

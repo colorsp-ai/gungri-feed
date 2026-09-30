@@ -39,6 +39,33 @@ def excluded(title, cfg):
     return any(k in (title or '') for k in cfg.get('excludeTitleKeywords', []))
 
 
+def exclude_ids(here=HERE):
+    """폐기한 항목(feedId) 목록 — collector/exclude.json {"excludeIds": ["TA-126508", "TA-E-2933421"]}. 다시 받지 않고 피드에서도 뺍니다."""
+    d = load(os.path.join(here, 'exclude.json'), {})
+    return {str(x).strip() for x in (d.get('excludeIds') or []) if str(x).strip()}
+
+
+def is_excluded_id(kind, cid, cfg):
+    ex = cfg.get('_exclude') or set()
+    return ('TA-E-' if kind == 'EVENT' else 'TA-') + str(cid) in ex
+
+
+def region_labels(cfg):
+    """설정한 시·도 코드 → 피드에 쓰는 권역 이름(예: 11→서울)"""
+    return {mapping.REGION[c] for c in cfg['regions'] if c in mapping.REGION}
+
+
+def slim(recs, cfg):
+    """사진은 사용 가능한 것 먼저 최대 maxPhotos장만 남겨 피드 크기를 줄임"""
+    n = cfg.get('maxPhotos', 3)
+    for r in recs:
+        ph = r.get('photos')
+        if ph:
+            ph.sort(key=lambda x: not x.get('usable'))
+            r['photos'] = ph[:n]
+    return recs
+
+
 def collect(api, cfg, state, today, max_details, log):
     """목록 → 바뀐 항목만 상세 → 피드 레코드"""
     seen = state.setdefault('seen', {})
@@ -53,7 +80,7 @@ def collect(api, cfg, state, today, max_details, log):
                 fresh = 0
                 for it in r['items']:
                     cid, mt = str(it.get('contentid')), str(it.get('modifiedtime') or '')
-                    if excluded(mapping.clean(it.get('title')), cfg):
+                    if excluded(mapping.clean(it.get('title')), cfg) or is_excluded_id('PLACE', cid, cfg):
                         continue
                     if seen.get(cid) != mt:
                         b.append(('PLACE', cid, ct, mt)); fresh += 1
@@ -67,8 +94,11 @@ def collect(api, cfg, state, today, max_details, log):
         for it in r['items']:
             cid, mt = str(it.get('contentid')), str(it.get('modifiedtime') or '')
             end = str(it.get('eventenddate') or '99999999'); st = str(it.get('eventstartdate') or '0')
-            if end < today.strftime('%Y%m%d') or st > horizon or excluded(mapping.clean(it.get('title')), cfg):
+            if end < today.strftime('%Y%m%d') or st > horizon or excluded(mapping.clean(it.get('title')), cfg) or is_excluded_id('EVENT', cid, cfg):
                 continue
+            lab = mapping.region_of(it)
+            if lab and lab not in region_labels(cfg):
+                continue  # 설정한 권역 밖 행사는 받지 않음
             if seen.get(cid) != mt:
                 events.append(('EVENT', cid, '15', mt))
         if page * cfg['numOfRows'] >= r['total']:
@@ -161,6 +191,7 @@ def main(argv=None):
     ap.add_argument('--probe', action='store_true', help='인증키 확인: 각 기능을 1건씩 불러 응답 항목 이름을 보여 줌(호출 약 5건)')
     a = ap.parse_args(argv)
     cfg = load(os.path.join(HERE, 'config.json'), {})
+    cfg['_exclude'] = exclude_ids()
     today = datetime.date.fromisoformat(a.today) if a.today else datetime.datetime.now(KST).date()
     feed_path, state_path = os.path.join(a.out, 'gungri_feed.json'), os.path.join(a.out, 'state.json')
     feed, state = load(feed_path, {}), load(state_path, {})
@@ -183,6 +214,20 @@ def main(argv=None):
         print('수집 실패:', e, file=sys.stderr)
         return 2
     places, events = merge(feed, new, today)
+    ex = cfg['_exclude']
+    if ex:
+        n0 = len(places) + len(events)
+        places = [x for x in places if x['feedId'] not in ex]
+        events = [x for x in events if x['feedId'] not in ex]
+        if n0 != len(places) + len(events):
+            log.append(f'폐기 목록(exclude.json)에 있는 항목 {n0 - len(places) - len(events)}건 피드에서 제거')
+    keep = region_labels(cfg)
+    before = (len(places), len(events))
+    places = [x for x in places if not x.get('ar') or x['ar'] in keep]
+    events = [x for x in events if not x.get('region') or x['region'] in keep]
+    if before != (len(places), len(events)):
+        log.append(f'설정 권역 밖 항목 정리: 장소 {before[0] - len(places)} · 행사 {before[1] - len(events)}건 제외')
+    slim(places + events, cfg)
     log.append(f'큐레이션 표시(로컬100 등) {curation_tag(places + events)}건')
     out = {
         'schema': 'GUNGRI_FEED_V1', 'generatedAt': datetime.datetime.now(KST).isoformat(timespec='seconds'),

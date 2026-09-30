@@ -9,5 +9,6 @@
   "placeContentTypes": ["12", "14", "38", "28"],
   "festivalDaysAhead": 60,
   "excludeTitleKeywords": ["키즈", "클럽", "나이트", "성인", "카지노", "모텔", "호텔", "펜션", "게스트하우스", "리조트"],
-  "maxOverviewChars": 400
+  "maxOverviewChars": 400,
+  "maxPhotos": 3
 }
