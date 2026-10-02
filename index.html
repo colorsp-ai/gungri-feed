@@ -1767,8 +1767,8 @@ function uSpots(){
  var places=SPOTS.filter(function(x){return x.admin_hidden!==true&&discPlacePass(x);});
  places.sort(function(a,b){return accessOf(a).km-accessOf(b).km;});
  var events=discEvents().filter(discEventPass),h="";
- places.forEach(function(x){h+='<button class="card" data-go="s:'+x.id+'"><div class="row"><span class="chip c-ok">장소</span><span class="sm mute" style="margin-left:auto">'+(x.axis||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+x.n+'</div><div class="sm mute">'+x.ar+' '+x.r+' · '+(window.guriSubTag&&guriSubTag(x)?'<b data-gr-sub="1">'+guriSubTag(x)+'</b>':(x.k||[]).join(", "))+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+x.a+'</div><div class="row" style="margin-top:7px;flex-wrap:wrap">'+accessTag(x)+'<span class="stars">'+stars(x.lv)+'</span><span class="sm mute">'+lvName(x.lv)+'</span></div></button>';});
- events.forEach(function(e){var id=e.event_id||e.id,th=e.theme||[];if(typeof th==="string")th=[th];h+='<button class="card" data-goevent="'+id+'"><div class="row"><span class="chip c-b">행사</span><span class="sm mute" style="margin-left:auto">'+(e.region||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+discEventName(e)+'</div><div class="sm mute">'+(window.guriEvSub&&guriEvSub(e)?'<b data-gr-sub="1">'+guriEvSub(e)+'</b> · ':'')+th.join(" · ")+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+discEventPlace(e)+'</div><div class="sm mute" style="margin-top:5px">📅 '+discEventStart(e)+(e.end||e.end_date?' ~ '+(e.end||e.end_date):'')+'</div></button>';});
+ places.forEach(function(x){h+='<button class="card" data-go="s:'+x.id+'"><div class="row"><span class="chip c-ok">장소</span><span class="sm mute" style="margin-left:auto">'+(x.axis||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+x.n+'</div><div class="sm mute">'+x.ar+' '+x.r+' · '+(window.guriSubTag&&guriSubTag(x)?'<b data-gr-sub="1">'+guriSubTag(x)+'</b>':(x.k||[]).join(", "))+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+x.a+'</div><div class="row" style="margin-top:7px;flex-wrap:wrap">'+accessTag(x)+'<span class="stars">'+stars(x.lv)+'</span><span class="sm mute">'+lvName(x.lv)+'</span>'+(window.guriBenefitBadge?guriBenefitBadge(guriBenefitPlace(x)):'')+'</div></button>';});
+ events.forEach(function(e){var id=e.event_id||e.id,th=e.theme||[];if(typeof th==="string")th=[th];h+='<button class="card" data-goevent="'+id+'"><div class="row"><span class="chip c-b">행사</span><span class="sm mute" style="margin-left:auto">'+(e.region||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+discEventName(e)+'</div><div class="sm mute">'+(window.guriEvSub&&guriEvSub(e)?'<b data-gr-sub="1">'+guriEvSub(e)+'</b> · ':'')+th.join(" · ")+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+discEventPlace(e)+'</div><div class="sm mute" style="margin-top:5px">📅 '+discEventStart(e)+(e.end||e.end_date?' ~ '+(e.end||e.end_date):'')+(window.guriBenefitBadge?guriBenefitBadge(guriBenefitEvent(e)):'')+'</div></button>';});
  return head("t")+'<div class="sec">'+discFilterUI()+'<div class="row" style="margin:16px 0 9px"><b style="font-size:19px">찾아본 결과</b><span class="sm mute" style="margin-left:auto">장소 '+places.length+' · 행사 '+events.length+'</span></div>'+(h?'<div class="grid2">'+h+'</div>':emptyBox())+
  '<div class="card" style="background:var(--paperD);border:none;margin-top:14px"><b>내가 아는 좋은 곳이 있으신가요?</b><div class="sm mute" style="margin:5px 0 10px">회원 제보는 확인 후 장소 정보에 반영합니다.</div>'+(isAdm()?'<button class="btn btn-g w100" data-act="spotnew">가볼 곳 등록</button>':'<button class="btn btn-o w100" data-act="spotreq">가볼 곳 알려주기</button>')+'</div></div><div class="pad"></div>';
 }
@@ -17526,7 +17526,7 @@ window.GUNGRI_UNIFIED_PLACE_EVENT_DETAIL_V150=true;
     row('📍','주소',addrText(x),(has(x.a)?mapBtn(mapUrl(x.n,x.a)):'')+provOf('PLACE',x,'address',x.a)),
     row('🕘','운영시간',pick(M.openingHours),provOf('PLACE',x,'openingHours',pick(M.openingHours))),
     row('🚫','휴무',pick(M.closedDays,x.cl),provOf('PLACE',x,'closedDays',pick(M.closedDays,x.cl))),
-    row('💰','이용요금',pick(M.fee),provOf('PLACE',x,'fee',pick(M.fee))),
+    row('💰','이용요금',pick(M.fee),provOf('PLACE',x,'fee',pick(M.fee))+(W.guriBenefitBadge?W.guriBenefitBadge(W.guriBenefitOf(pick(M.fee))):'')),
     row('☎','전화',pick(M.phone,cd.phone,x.tel,x.phone),provOf('PLACE',x,'phone',pick(M.phone,cd.phone,x.tel,x.phone))),
     row('🚗','주차',pick(cd.parking,x.parking,x.pk),provOf('PLACE',x,'parking',pick(cd.parking,x.parking,x.pk))),
     row('🚇','대중교통/가는 길',access),
@@ -17546,6 +17546,7 @@ window.GUNGRI_UNIFIED_PLACE_EVENT_DETAIL_V150=true;
     {label:'지도로 보기',attr:'data-guri-map="'+esc(co?mapUrl(co.start,co.start):mapUrl(x.n,x.a))+'"'}
    ]};
   vm.photos=W.GR&&GR.photosFor?GR.photosFor('PLACE',x.id):null;
+  vm.benefit=W.guriBenefitOf?W.guriBenefitOf(pick(M.fee)):null;
   return vm;
  }
  function eventVM(e){
@@ -17556,14 +17557,14 @@ window.GUNGRI_UNIFIED_PLACE_EVENT_DETAIL_V150=true;
   var period=start?(start+(end&&end!==start?' ~ '+end:'')):'';
   var src=safeUrl(e.source_url)||safeUrl(e.sourceUrl);
   var life=e.lifecycle_state==='ENDED'?'종료된 행사입니다. 다음 회차는 공식정보에서 확인하세요.':e.lifecycle_state==='UPCOMING'?'아직 시작 전인 행사입니다.':'';
-  return {kind:'EVENT',id:id,title:(typeof discEventName==='function'?discEventName(e):pick(e.title,e.name)),
+  return {kind:'EVENT',feedFee:pick(M.fee,e.fee,e.price),id:id,title:(typeof discEventName==='function'?discEventName(e):pick(e.title,e.name)),
    hook:pick(e.hook,e.summary,'행사를 실제 외출과 만남으로 연결합니다.'),
    chips:(e.curation||[]).map(function(c){return '🏅 '+c;}).concat([pick(e.region,'지역 확인 중')+(has(e.city)?' '+e.city:''),'행사']).concat(th.slice(0,3)).concat(has(e.axis)?['5축 · '+e.axis]:[]),
    rows:[
     row('📅','행사기간',period),
     row('🕘','운영시간',pick(M.startTime&&M.endTime?M.startTime+' ~ '+M.endTime:'',e.hours),provOf('EVENT',e,'hours',e.hours)),
     row('📍','행사장소',place+(has(e.address)&&String(place).indexOf(e.address)<0?(' · '+e.address):''),(has(place)||has(e.address)?mapBtn(mapUrl(e.place_name||place,e.address)):'')+provOf('EVENT',e,'place_name',e.place_name)),
-    row('💰','참가비',pick(M.fee,e.fee,e.price),provOf('EVENT',e,'fee',pick(M.fee,e.fee,e.price))),
+    row('💰','참가비',pick(M.fee,e.fee,e.price),provOf('EVENT',e,'fee',pick(M.fee,e.fee,e.price))+(W.guriBenefitBadge?W.guriBenefitBadge(W.guriBenefitOf(pick(M.fee,e.fee,e.price))):'')),
     row('🏢','주최',pick(M.organizer,e.organizer),provOf('EVENT',e,'organizer',pick(M.organizer,e.organizer))),
     row('☎','문의',pick(M.phone,e.phone,e.contact,e.tel),provOf('EVENT',e,'phone',pick(M.phone,e.phone,e.contact,e.tel))),
     row('🚗','주차',pick(e.parking)),
@@ -17602,7 +17603,7 @@ window.GUNGRI_UNIFIED_PLACE_EVENT_DETAIL_V150=true;
    '<div class="gd-top-actions"><button class="gd-share-btn" data-gr-share="'+esc(vm.kind+':'+vm.id)+'" data-gr-share-title="'+esc(vm.title)+'">↗ 친구에게 보내기</button></div>'+
    '<div class="gd150-chips">'+vm.chips.filter(has).map(function(c){return '<span class="gd150-chip">'+esc(c)+'</span>';}).join('')+'</div>'+
    '<div class="gd150-hero'+(ev?' event':'')+'"><div class="gd-kicker">'+(ev?'이번에 같이 가볼 행사':'오늘 가볼 곳')+'</div><h2 class="hello">'+esc(vm.title)+'</h2><div class="gd-hook">'+esc(vm.hook)+'</div></div>'+
-   '<div class="gd-rows">'+vm.rows+'</div>'+
+   '<div class="gd-rows">'+vm.rows+'</div>'+(W.guriBenefitNote?W.guriBenefitNote(vm.benefit||(vm.kind==='EVENT'&&W.guriBenefitOf?W.guriBenefitOf(vm.feedFee):null)):'')+
    '<div class="gd150-panel gd150-good"><h3>👍 '+(ev?'이런 분께 좋습니다':'이래서 좋습니다')+'</h3>'+(good||'<div class="gd-unknown">'+UNKNOWN+'</div>')+'</div>'+
    '<div class="gd150-panel gd150-know gd-know7" data-gr-know="7"><h3>ⓘ 알고 가세요</h3>'+senior+(vm.stay?row('⏱','머무는 시간',vm.stay):'')+(know||'')+'</div>'+
    '<div class="gd150-source"><b>🧳 '+(ev?'공식 행사정보':'공식정보 확인')+'</b>'+srcHtml+'<small>검증되지 않은 값은 임의로 채우지 않고 ‘확인 중’으로 둡니다.</small></div>'+
@@ -19819,6 +19820,9 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
 .gr-extips{margin:12px 0;padding:10px 12px;border-radius:14px;background:#FFF7E0}.gr-extips ul{margin:6px 0 0;padding-left:18px}.gr-extips li{margin:5px 0;font-size:15px}
 
 .gd-prov{display:inline-block;margin-left:8px;font-style:normal;font-size:12.5px;font-weight:700;color:#5b6b63;background:#eef3f0;border-radius:10px;padding:2px 8px;white-space:nowrap}.gd-prov-staff{color:#0b5a3a;background:#dff3e8}
+.gr-ben{display:inline-block;margin-left:6px;padding:2px 9px;border-radius:12px;font-size:13px;font-weight:800;white-space:nowrap}
+.gr-ben-free{color:#0b5a3a;background:#dff3e8}.gr-ben-disc{color:#7a4a00;background:#fdf0d5}
+.gr-bennote{margin:6px 14px 10px;font-size:13.5px;color:#5b6b63;line-height:1.45}
 </style>
 <script id="guri-r17-shell">
 /* ==========================================================================
@@ -20847,6 +20851,96 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
    "axis": "눈",
    "n": "숲|섬$|폭포|동굴|파크|타워|등대|테마파크|정서진|트라이보울|동화마을|무릉|허브|두물머리|퍼플|화담|세미원|동의보감",
    "t": "경관"
+  },
+  {
+   "sub": "캠핑장",
+   "axis": "몸",
+   "n": "스테이|캠핑|글램핑|펜션|야영|오토캠프|카라반",
+   "t": "캠핑"
+  },
+  {
+   "sub": "공연장",
+   "axis": "눈",
+   "n": "씨어터|극장|라이브하우스|공연예술|문예회관|아트홀|콘서트|오페라|뮤지컬|홀$",
+   "t": "공연"
+  },
+  {
+   "sub": "전시장",
+   "axis": "머리",
+   "n": "옥션|화랑|갤러리|쿤스트|아트센터|아트스페이스|스페이스K|스튜디오|아카이브|전시",
+   "t": "갤러리|전시"
+  },
+  {
+   "sub": "음식거리",
+   "axis": "입",
+   "n": "포장마차|아구찜|먹자|맛집|[가-힣]{2,6} 거리$|차이나타운|막걸리|떡볶이",
+   "t": "음식"
+  },
+  {
+   "sub": "둘레길",
+   "axis": "몸",
+   "n": "구간|지하 배수로|산책|둘레",
+   "t": "트레킹|트레일"
+  },
+  {
+   "sub": "유적지",
+   "axis": "머리",
+   "n": "문$|종묘|총국|공사관|대교당|별장|성곽|한양도성|궁$|궁궐|능$|릉$|서원|향교|고택|가옥|묘$|묘역|사\\(|사$|암$|탑$|비$|성지|교회|성당|사적|유네스코|세계유산",
+   "t": "^(궁|사찰|사적|유적|성곽)$|사찰|궁"
+  },
+  {
+   "sub": "수변활동",
+   "axis": "몸",
+   "n": "크루즈|유람선|튜브|카약|보트|선착장|낚시|[가-힣]{1,5}천$|[가-힣]{1,5}강$|하천|버들습지|습지",
+   "t": "계곡|^강$"
+  },
+  {
+   "sub": "체험문화시설",
+   "axis": "손",
+   "n": "한복|한방|한의원|사우나|연구소|양조|랩$|페이퍼|체험관|체험장|공방|테마파크|키즈|랜드|프렌쥬|트리하우스|놀이",
+   "t": "^마을$|체험"
+  },
+  {
+   "sub": "문화공간",
+   "axis": "머리",
+   "n": "문화발전소|라운지|하우스|센터$|플랫폼|스페이스|복합|문화원|문화의집|기념$|홍보관|전시관|스테이션|컨벤션",
+   "t": "^문화시설$"
+  },
+  {
+   "sub": "해안활동",
+   "axis": "몸",
+   "n": "섬$|갑문|항$|등대|바다|해안",
+   "t": "^섬$"
+  },
+  {
+   "sub": "숲/치유",
+   "axis": "몸",
+   "n": "시험림|숲|수목|산림|휴양림",
+   "t": "^숲$"
+  },
+  {
+   "sub": "등산",
+   "axis": "몸",
+   "n": "[가-힣]{1,6}산\\(|봉$|산성",
+   "t": "^산$"
+  },
+  {
+   "sub": "운동장",
+   "axis": "몸",
+   "n": "스케이트|스키|아이스링크|골프|볼링|수영장|체육|경기장|짚라인|번지|서바이벌|ATV|승마|레포츠|힐링캠프",
+   "t": "^레포츠$|스케이트|스키|골프"
+  },
+  {
+   "sub": "해변",
+   "axis": "눈",
+   "n": "해수욕장|해변|비치",
+   "t": "해수욕장"
+  },
+  {
+   "sub": "공원",
+   "axis": "눈",
+   "n": "광장|녹지|공원|케이블카|전망|타워|포토|스타로드|길 |식물",
+   "t": "케이블카|^관광지$"
   }
  ],
  "eventRules": [
@@ -21079,6 +21173,54 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  };
  D.addEventListener('change',function(e){var t=e.target;if(t&&t.id==='discSub'){W.DISC_SUB=t.value||'ALL';(W.renderKeepScroll||W.render)();}});
 })();</script>
+<!-- GUNGRI_R17_STAGE7_BENEFIT -->
+<script id="guri-r17-benefit">
+/* R17 경로우대·무료 표시 — 요금 안내 문구(공식 정보)에서 "65세 이상/경로/어르신 무료·할인"과 "무료 입장"을 읽어 표시한다.
+   · 문구를 새로 만들지 않고, 공식 요금 문구에 적힌 것만 읽는다. 방문 전 공식 확인 안내를 함께 보인다. */
+(function(){
+ var W=window,D=document;
+ function esc(x){return String(x==null?'':x).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ var PRICE=/\d[\d,]*\s*원/;
+ /* → {k:'SENIOR_FREE'|'SENIOR_DISC'|'FREE', label} | null */
+ W.guriBenefitOf=function(fee){
+  var t=String(fee==null?'':fee).replace(/\s+/g,' ').trim();if(!t)return null;
+  var SEN=/(만\s*)?65\s*세\s*이상|경로|노인|어르신|시니어|우대/g,m,free=false,disc=false;
+  while((m=SEN.exec(t))){
+   var after=t.slice(m.index,m.index+16);
+   if(PRICE.test(after)||/할인|%/.test(after)){disc=true;continue;}
+   var before=t.slice(0,m.index),seg=before.slice(before.lastIndexOf('※')+1),i=seg.lastIndexOf('무료');
+   if(i>=0&&!PRICE.test(seg.slice(i)))free=true;
+  }
+  if(free)return {k:'SENIOR_FREE',label:'경로 무료'};
+  if(!PRICE.test(t)&&/무료|없음/.test(t)&&!/유료/.test(t))return {k:'FREE',label:'무료 입장'};
+  if(disc)return {k:'SENIOR_DISC',label:'경로 할인'};
+  return null;
+ };
+ function feeOfPlace(x){var d=(x&&x.contentDetail)||{};return d.fee||(x&&x.fee)||'';}
+ function feeOfEvent(e){return (e&&(e.fee||e.price))||'';}
+ W.guriBenefitPlace=function(x){return W.guriBenefitOf(feeOfPlace(x));};
+ W.guriBenefitEvent=function(e){return W.guriBenefitOf(feeOfEvent(e));};
+ W.guriBenefitBadge=function(b){return b?'<span class="gr-ben gr-ben-'+(b.k==='SENIOR_DISC'?'disc':'free')+'" data-gr-ben="'+b.k+'">🎟 '+esc(b.label)+'</span>':'';};
+ W.guriBenefitNote=function(b){return b&&b.k!=='FREE'?'<div class="gr-bennote" data-gr-bennote="1">65세 이상 기준 · 신분증 지참 · 공식 요금 안내 문구에서 읽은 내용이라 방문 전 확인하세요</div>':'';};
+
+ /* 어디가볼까 조회조건: 혜택 */
+ W.DISC_BEN=W.DISC_BEN||'ALL';
+ function benPass(b){var f=W.DISC_BEN;if(f==='ALL')return true;if(!b)return false;if(f==='FREE')return b.k==='FREE'||b.k==='SENIOR_FREE';if(f==='SENIOR')return b.k!=='FREE';return true;}
+ var bpp=W.discPlacePass,bep=W.discEventPass;
+ if(typeof bpp==='function')W.discPlacePass=function(x){return bpp(x)&&benPass(W.guriBenefitPlace(x));};
+ if(typeof bep==='function')W.discEventPass=function(e){return bep(e)&&benPass(W.guriBenefitEvent(e));};
+ function selHTML(){
+  return '<div class="row gr-discben" style="margin-top:8px"><select id="discBen" style="flex:1"><option value="ALL">혜택 전체</option><option value="FREE"'+(W.DISC_BEN==='FREE'?' selected':'')+'>🎟 무료로 갈 수 있는 곳</option><option value="SENIOR"'+(W.DISC_BEN==='SENIOR'?' selected':'')+'>🎟 경로 무료·할인</option></select></div>';
+ }
+ var bus=W.uSpots;
+ if(typeof bus==='function')W.uSpots=function(){
+  var h=bus.apply(this,arguments);if(typeof h!=='string')return h;
+  var k='<div class="row" style="margin:16px 0 9px"><b style="font-size:19px"',i=h.indexOf(k);
+  return i<0?h:h.slice(0,i)+selHTML()+h.slice(i);
+ };
+ D.addEventListener('change',function(e){var t=e.target;if(t&&t.id==='discBen'){W.DISC_BEN=t.value||'ALL';(W.renderKeepScroll||W.render)();}});
+})();
+</script>
 <!-- GUNGRI_R17_STAGE7_EXAMPLES -->
 <script id="guri-r17-examples">
 /* ==========================================================================
