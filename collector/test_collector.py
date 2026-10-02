@@ -125,6 +125,18 @@ class T(unittest.TestCase):
             f = self.run_mock(d)
             self.assertTrue(f['options']['showExamples'])
 
+    def test_taxonomy_sub(self):
+        from . import taxonomy
+        self.assertEqual(taxonomy.sub_of_place('국립현대미술관 서울', ['문화/미술관']), '미술관')
+        self.assertEqual(taxonomy.sub_of_place('망원시장', ['시장']), '시장')
+        self.assertEqual(taxonomy.sub_of_place('성심당', []), '맛집')
+        self.assertEqual(taxonomy.sub_of_event('고양호수예술축제', ['공연']), '축제')
+        self.assertEqual(taxonomy.sub_of_event('한강 걷기 대회', []), '행사')
+        with tempfile.TemporaryDirectory() as d:
+            f = self.run_mock(d)
+            self.assertTrue(all(p.get('sub') is None or isinstance(p['sub'], str) for p in f['places']))
+            self.assertTrue(all(e.get('sub') for e in f['events']), '행사는 세부 유형이 항상 붙음')
+
     def test_clean(self):
         self.assertEqual(mapping.clean('a<br>b &amp; c'), 'a / b & c')
         self.assertEqual(mapping.href('<a href="https://x.kr/y">x</a>'), 'https://x.kr/y')

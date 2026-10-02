@@ -1,5 +1,6 @@
 """TourAPI 응답 → 궁리 피드(GUNGRI_FEED_V1) 변환. 값이 없으면 넣지 않습니다(앱에서 '확인 중')."""
 import html, re
+from . import taxonomy
 
 REGION = {  # 법정동 시도 코드 → 궁리 권역
     '11': '서울', '41': '경기', '28': '인천', '51': '강원', '42': '강원',
@@ -125,7 +126,7 @@ def place(common, intro, images, ctype, checked, max_over=400):
     addr = ' '.join(x for x in [clean(common.get('addr1')), clean(common.get('addr2'))] if x)
     rec = {
         'feedId': 'TA-' + cid, 'contentId': cid, 'contentTypeId': str(ctype), 'modifiedtime': str(common.get('modifiedtime') or ''),
-        'n': title, 'a': addr, 'ar': region_of(common), 'r': city_of(addr), 'k': tags(title, ctype, over),
+        'n': title, 'a': addr, 'ar': region_of(common), 'r': city_of(addr), 'k': tags(title, ctype, over), 'sub': taxonomy.sub_of_place(title, tags(title, ctype, over)),
         'why': first_sentence(over), 'summary': over[:max_over] + ('…' if len(over) > max_over else ''),
         'hours': hours, 'closed': pick(intro, f['closed']), 'fee': pick(intro, f['fee']), 'parking': pick(intro, f['parking']),
         'phone': clean(common.get('tel')) or pick(intro, f['phone']), 'stay': pick(intro, f['stay']),
@@ -149,7 +150,7 @@ def event(common, intro, images, checked, max_over=400):
         'place_name': clean(intro.get('eventplace')), 'address': addr, 'region': region_of(common), 'city': city_of(addr),
         'hours': clean(intro.get('playtime')), 'fee': clean(intro.get('usetimefestival')), 'organizer': clean(intro.get('sponsor1')),
         'phone': clean(intro.get('sponsor1tel')) or clean(common.get('tel')), 'why': first_sentence(over),
-        'summary': over[:max_over] + ('…' if len(over) > max_over else ''), 'theme': tags(clean(common.get('title')), '15', over)[1:],
+        'summary': over[:max_over] + ('…' if len(over) > max_over else ''), 'theme': tags(clean(common.get('title')), '15', over)[1:], 'sub': taxonomy.sub_of_event(clean(common.get('title')), tags(clean(common.get('title')), '15', over)[1:]),
         'source_url': home or SOURCE_PAGE, 'source_label': SOURCE_LABEL + (' · 행사 홈페이지' if home else f' (contentId {cid})'),
         'lat': _num(common.get('mapy')), 'lng': _num(common.get('mapx')), 'checkedAt': checked, 'photos': photos(images, common),
     }
