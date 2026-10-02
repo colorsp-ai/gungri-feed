@@ -1655,6 +1655,7 @@ function card(m){
  '<div class="tt">'+m.title+'</div>'+
  '<div class="sm mute">'+(reg?m.days+' '+ftime(m.time):fdate(m.date)+' '+ftime(m.time))+
  (edu&&m.n>1?' · '+m.n+'회 과정':'')+(m.volHours?' · 봉사 '+m.volHours+'시간':'')+'</div>'+
+ (window.guriMeetLine&&guriMeetLine(m)?'<div class="sm mute" style="margin-top:3px" data-gr-meetline="1">'+guriMeetLine(m)+'</div>':'')+
  '<div class="row" style="margin-top:7px;flex-wrap:wrap"><span class="stars">'+stars(m.lv)+'</span>'+
  '<span class="sm mute">'+lvName(m.lv)+'</span>'+accessTag(meetPt(m))+'</div>'+
  '<div class="row" style="margin-top:9px;border-top:1px solid var(--paperD);padding-top:9px">'+
@@ -1669,7 +1670,7 @@ function uTicket(){
  if(SUB==="spot")return uSpots();
  var list=openBy("NORMAL").filter(function(m){
   if(!passFilter(meetPt(m)))return false;
-  return !MSEARCH||m.title.indexOf(MSEARCH)>=0||m.place.indexOf(MSEARCH)>=0||m.cap.indexOf(MSEARCH)>=0;});
+  return !MSEARCH||m.title.indexOf(MSEARCH)>=0||m.place.indexOf(MSEARCH)>=0||m.cap.indexOf(MSEARCH)>=0||(window.guriMeetSearchText&&guriMeetSearchText(m).indexOf(MSEARCH)>=0);});
  list.sort(function(a,b){return accessOf(meetPt(a)).km-accessOf(meetPt(b)).km;});
  var h="";list.forEach(function(m){h+=card(m);});
  if(!h)h='<div class="card"><b>지금 공개된 나가요 활동이 없습니다.</b><div class="sm mute" style="margin-top:5px">가볼 곳을 먼저 둘러보고 같이 갈 사람을 찾아보셔도 됩니다.</div><div style="height:9px"></div><button class="btn btn-o w100" data-sub="spot">가볼 곳 보기</button></div>';
@@ -1766,8 +1767,8 @@ function uSpots(){
  var places=SPOTS.filter(function(x){return x.admin_hidden!==true&&discPlacePass(x);});
  places.sort(function(a,b){return accessOf(a).km-accessOf(b).km;});
  var events=discEvents().filter(discEventPass),h="";
- places.forEach(function(x){h+='<button class="card" data-go="s:'+x.id+'"><div class="row"><span class="chip c-ok">장소</span><span class="sm mute" style="margin-left:auto">'+(x.axis||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+x.n+'</div><div class="sm mute">'+x.ar+' '+x.r+' · '+(x.k||[]).join(", ")+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+x.a+'</div><div class="row" style="margin-top:7px;flex-wrap:wrap">'+accessTag(x)+'<span class="stars">'+stars(x.lv)+'</span><span class="sm mute">'+lvName(x.lv)+'</span></div></button>';});
- events.forEach(function(e){var id=e.event_id||e.id,th=e.theme||[];if(typeof th==="string")th=[th];h+='<button class="card" data-goevent="'+id+'"><div class="row"><span class="chip c-b">행사</span><span class="sm mute" style="margin-left:auto">'+(e.region||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+discEventName(e)+'</div><div class="sm mute">'+th.join(" · ")+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+discEventPlace(e)+'</div><div class="sm mute" style="margin-top:5px">📅 '+discEventStart(e)+(e.end||e.end_date?' ~ '+(e.end||e.end_date):'')+'</div></button>';});
+ places.forEach(function(x){h+='<button class="card" data-go="s:'+x.id+'"><div class="row"><span class="chip c-ok">장소</span><span class="sm mute" style="margin-left:auto">'+(x.axis||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+x.n+'</div><div class="sm mute">'+x.ar+' '+x.r+' · '+(window.guriSubTag&&guriSubTag(x)?'<b data-gr-sub="1">'+guriSubTag(x)+'</b>':(x.k||[]).join(", "))+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+x.a+'</div><div class="row" style="margin-top:7px;flex-wrap:wrap">'+accessTag(x)+'<span class="stars">'+stars(x.lv)+'</span><span class="sm mute">'+lvName(x.lv)+'</span></div></button>';});
+ events.forEach(function(e){var id=e.event_id||e.id,th=e.theme||[];if(typeof th==="string")th=[th];h+='<button class="card" data-goevent="'+id+'"><div class="row"><span class="chip c-b">행사</span><span class="sm mute" style="margin-left:auto">'+(e.region||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+discEventName(e)+'</div><div class="sm mute">'+(window.guriEvSub&&guriEvSub(e)?'<b data-gr-sub="1">'+guriEvSub(e)+'</b> · ':'')+th.join(" · ")+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+discEventPlace(e)+'</div><div class="sm mute" style="margin-top:5px">📅 '+discEventStart(e)+(e.end||e.end_date?' ~ '+(e.end||e.end_date):'')+'</div></button>';});
  return head("t")+'<div class="sec">'+discFilterUI()+'<div class="row" style="margin:16px 0 9px"><b style="font-size:19px">찾아본 결과</b><span class="sm mute" style="margin-left:auto">장소 '+places.length+' · 행사 '+events.length+'</span></div>'+(h?'<div class="grid2">'+h+'</div>':emptyBox())+
  '<div class="card" style="background:var(--paperD);border:none;margin-top:14px"><b>내가 아는 좋은 곳이 있으신가요?</b><div class="sm mute" style="margin:5px 0 10px">회원 제보는 확인 후 장소 정보에 반영합니다.</div>'+(isAdm()?'<button class="btn btn-g w100" data-act="spotnew">가볼 곳 등록</button>':'<button class="btn btn-o w100" data-act="spotreq">가볼 곳 알려주기</button>')+'</div></div><div class="pad"></div>';
 }
@@ -10720,6 +10721,7 @@ body.visual-ui .v29913-help{font-size:14.5px;color:var(--mute);line-height:1.55;
       '<div class="tt">'+m.title+'</div>'+
       '<div class="sm mute">📅 '+date+(edu&&m.n>1?' · '+m.n+'회':'')+'</div>'+
       '<div class="sm mute" style="margin-top:4px">📍 '+(m.place||m.venueName||'장소 확인 중')+'</div>'+
+      (window.guriMeetLine&&guriMeetLine(m)?'<div class="sm mute" style="margin-top:3px" data-gr-meetline="1">'+guriMeetLine(m)+'</div>':'')+
       '<div class="row" style="margin-top:8px;flex-wrap:wrap"><span class="chip">'+fee+'</span><span class="chip">'+people+'</span>'+
       (m.lv?'<span class="chip">'+((typeof lvName==='function')?lvName(m.lv):m.lv)+'</span>':'')+'</div>'+
       '<div class="v29913-next"><span>'+(joined?'내 신청 확인하기':'이 활동 자세히 보기')+'</span><span>›</span></div></button>';
@@ -17485,6 +17487,9 @@ window.GUNGRI_UNIFIED_PLACE_EVENT_DETAIL_V150=true;
  function has(v){if(v==null)return false;if(Array.isArray(v))return v.length>0;var s=String(v).trim();return !!s&&s!=='undefined'&&s!=='null'&&s!=='확인 필요'&&s!=='확인중'&&s!==UNKNOWN;}
  function pick(){for(var i=0;i<arguments.length;i++){if(has(arguments[i]))return Array.isArray(arguments[i])?arguments[i].join(', '):String(arguments[i]).trim();}return '';}
  function starsTxt(n){n=+n||0;if(!n)return '';var s='';for(var i=1;i<=5;i++)s+=(i<=n?'★':'☆');return s+' '+(typeof lvName==='function'?lvName(n):'');}
+ function provOf(kind,x,f,val){try{if(!has(val))return '';var id=x.event_id||x.id,lk=false;try{var r=GR.contentRec(kind,id);lk=!!(r&&r.overrides&&r.overrides[f]);}catch(e){}
+  if(lk)return '<em class="gd-prov gd-prov-staff" data-gr-prov="staff">운영진 확인</em>';
+  var ff=x.feedFilled&&x.feedFilled[f];if(ff)return '<em class="gd-prov" data-gr-prov="auto">자동 수집'+(ff!==true?' · '+esc(String(ff).slice(5).replace('-','/'))+' 확인':'')+'</em>';}catch(e){}return '';}
  function row(icon,label,value,act){var u=!has(value);return '<div class="gd-row'+(u?' gd-unknown':'')+'"><b>'+icon+' '+label+'</b><span>'+(u?UNKNOWN:esc(value))+(act||'')+'</span></div>';}
  function mapBtn(url){return ' <button class="gd-inline" data-guri-map="'+esc(url)+'">지도보기 ›</button>';}
  function seniorRows(o){return [['🚶','걷는 거리',o.walking],['⛰','경사',o.slope],['🪜','계단',o.stairs],['🚻','화장실',o.restroom],['🪑','휴식',o.rest],['👥','혼잡',pick(o.crowd,o.congestion)],['🏠','귀가 동선',pick(o.returnRoute,o.homeRoute)]];}
@@ -17518,12 +17523,12 @@ window.GUNGRI_UNIFIED_PLACE_EVENT_DETAIL_V150=true;
     row('🔖','스탬프',pick(co.stamps&&co.stamps.join(', '))),
     row('🗓','최종 확인일',pick(M.checkedAt,cd.verified))
    ].join(''):[
-    row('📍','주소',addrText(x),has(x.a)?mapBtn(mapUrl(x.n,x.a)):''),
-    row('🕘','운영시간',pick(M.openingHours)),
-    row('🚫','휴무',pick(M.closedDays,x.cl)),
-    row('💰','이용요금',pick(M.fee)),
-    row('☎','전화',pick(M.phone,cd.phone,x.tel,x.phone)),
-    row('🚗','주차',pick(cd.parking,x.parking,x.pk)),
+    row('📍','주소',addrText(x),(has(x.a)?mapBtn(mapUrl(x.n,x.a)):'')+provOf('PLACE',x,'address',x.a)),
+    row('🕘','운영시간',pick(M.openingHours),provOf('PLACE',x,'openingHours',pick(M.openingHours))),
+    row('🚫','휴무',pick(M.closedDays,x.cl),provOf('PLACE',x,'closedDays',pick(M.closedDays,x.cl))),
+    row('💰','이용요금',pick(M.fee),provOf('PLACE',x,'fee',pick(M.fee))),
+    row('☎','전화',pick(M.phone,cd.phone,x.tel,x.phone),provOf('PLACE',x,'phone',pick(M.phone,cd.phone,x.tel,x.phone))),
+    row('🚗','주차',pick(cd.parking,x.parking,x.pk),provOf('PLACE',x,'parking',pick(cd.parking,x.parking,x.pk))),
     row('🚇','대중교통/가는 길',access),
     row('♿','접근성',pick(cd.accessibility,cd.facilities)),
     row('⛰','활동강도',has(x.lv)?(isFinite(+x.lv)?starsTxt(x.lv):String(x.lv)):pick(x.intensity)),
@@ -17556,11 +17561,11 @@ window.GUNGRI_UNIFIED_PLACE_EVENT_DETAIL_V150=true;
    chips:(e.curation||[]).map(function(c){return '🏅 '+c;}).concat([pick(e.region,'지역 확인 중')+(has(e.city)?' '+e.city:''),'행사']).concat(th.slice(0,3)).concat(has(e.axis)?['5축 · '+e.axis]:[]),
    rows:[
     row('📅','행사기간',period),
-    row('🕘','운영시간',pick(M.startTime&&M.endTime?M.startTime+' ~ '+M.endTime:'',e.hours)),
-    row('📍','행사장소',place+(has(e.address)&&String(place).indexOf(e.address)<0?(' · '+e.address):''),has(place)||has(e.address)?mapBtn(mapUrl(e.place_name||place,e.address)):''),
-    row('💰','참가비',pick(M.fee,e.fee,e.price)),
-    row('🏢','주최',pick(M.organizer,e.organizer)),
-    row('☎','문의',pick(M.phone,e.phone,e.contact,e.tel)),
+    row('🕘','운영시간',pick(M.startTime&&M.endTime?M.startTime+' ~ '+M.endTime:'',e.hours),provOf('EVENT',e,'hours',e.hours)),
+    row('📍','행사장소',place+(has(e.address)&&String(place).indexOf(e.address)<0?(' · '+e.address):''),(has(place)||has(e.address)?mapBtn(mapUrl(e.place_name||place,e.address)):'')+provOf('EVENT',e,'place_name',e.place_name)),
+    row('💰','참가비',pick(M.fee,e.fee,e.price),provOf('EVENT',e,'fee',pick(M.fee,e.fee,e.price))),
+    row('🏢','주최',pick(M.organizer,e.organizer),provOf('EVENT',e,'organizer',pick(M.organizer,e.organizer))),
+    row('☎','문의',pick(M.phone,e.phone,e.contact,e.tel),provOf('EVENT',e,'phone',pick(M.phone,e.phone,e.contact,e.tel))),
     row('🚗','주차',pick(e.parking)),
     row('🚇','교통',pick(e.transit,e.transport)),
     row('♿','접근성',pick(e.accessibility)),
@@ -19219,7 +19224,8 @@ body.gr-phview-open{overflow:hidden}
    ========================================================================== */
 (function(){
  'use strict';
- var W=window,D=document,CK='GUNGRI_FEED_CACHE_V1',UK='GUNGRI_FEED_URL',LK='GUNGRI_FEED_LAST';
+ var W=window,D=document,CK='GUNGRI_FEED_CACHE_V1',UK='GUNGRI_FEED_URL',LK='GUNGRI_FEED_LAST',DEFURL='https://raw.githubusercontent.com/colorsp-ai/gungri-feed/main/feed/gungri_feed.json';
+ W.GURI_FEED_DEFAULT_URL=DEFURL;
  var LAST=null;
  function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
  function has(v){return v!=null&&String(v).trim()!==''&&!/^(확인 ?중|확인 필요|undefined|null)$/.test(String(v).trim());}
@@ -19249,7 +19255,7 @@ body.gr-phview-open{overflow:hidden}
    st=d.rev[p.url]?'REJECTED':basis?'VERIFIED':'RIGHTS_CHECK',at=new Date().toISOString(),h=[{at:at,actor:'SYSTEM',to:'RIGHTS_CHECK',note:'자동 수집 · '+p.license}];
   if(st==='VERIFIED')h.push({at:at,actor:/^AUTO/.test(basis)?'RULE':'OWNER',from:'RIGHTS_CHECK',to:'VERIFIED',note:PBASIS[basis]});
   if(st==='REJECTED')h.push({at:at,actor:'OWNER',from:'RIGHTS_CHECK',to:'REJECTED',note:'대표 철회(이 기기 결정)'});
-  g.photos.push({photoId:'PH-F'+(g.photos.length+1)+'-'+id,entityType:t,entityId:id,url:p.url,license:p.license,source:p.source||'한국관광공사',role:i===0?'MAIN':'GALLERY',rightsState:st,checkedAt:st==='VERIFIED'?today:null,history:h,via:'FEED',
+  g.photos.push({photoId:'PH-F'+(g.photos.length+1)+'-'+id,entityType:t,entityId:id,url:p.url,license:p.license,source:p.source||'한국관광공사',role:(i===0&&!g.photos.some(function(x){return x.entityType===t&&x.entityId===id&&x.role==='MAIN'&&x.rightsState!=='REJECTED';}))?'MAIN':'GALLERY',rightsState:st,checkedAt:st==='VERIFIED'?today:null,history:h,via:'FEED',
    autoRights:/^AUTO/.test(basis),basis:basis,noEdit:ru==='AUTO_NOEDIT'||/3유형/.test(p.license),revoked:st==='REJECTED'});
   if(st==='VERIFIED'&&/^AUTO/.test(basis))AUTO_N++;else if(st==='RIGHTS_CHECK')n++;});return n;}
  /* 새 피드에서 빠진 자동 확인 사진(철회된 사진 등)은 다시 회원에게 보이지 않게 정리 */
@@ -19260,8 +19266,9 @@ body.gr-phview-open{overflow:hidden}
  wrapPh();
  function locked(t,id,f){try{var r=G().contentRec(t,id);return !!(r&&r.overrides&&r.overrides[f]);}catch(e){return false;}}
  /* 이미 있는 장소: 비어 있는 칸만 채움 */
+ function mark(o,f,at){(o.feedFilled=o.feedFilled||{})[f]=String(at||'').slice(0,10)||true;}
  function fillPlace(p,x){var cd=p.contentDetail||(p.contentDetail={}),n=[];
-  function put(f,cur,val,apply){if(!has(val)||has(cur)||locked('PLACE',p.id,f))return;apply(val);n.push(f);}
+  function put(f,cur,val,apply){if(!has(val)||has(cur)||locked('PLACE',p.id,f))return;apply(val);n.push(f);mark(p,f,x.checkedAt);}
   put('address',street(p.a)?p.a:'',x.a,function(v){p.a_master=p.a_master||p.a;p.a=v;p.addressType='EXACT';});
   put('openingHours',cd.hours,x.hours,function(v){cd.hours=v;});
   put('closedDays',p.cl,x.closed,function(v){p.cl=v;});
@@ -19274,7 +19281,7 @@ body.gr-phview-open{overflow:hidden}
   p.feedId=x.feedId;if(x.lat&&!p.lat){p.feedLat=x.lat;p.feedLng=x.lng;}
   return n.length;}
  function fillEvent(e,x){var n=[];
-  [['place_name','place_name'],['address','address'],['hours','hours'],['fee','fee'],['organizer','organizer'],['phone','phone'],['why','why']].forEach(function(k){if(has(x[k[1]])&&!has(e[k[0]])&&!locked('EVENT',e.event_id||e.id,k[0])){e[k[0]]=x[k[1]];n.push(k[0]);}});
+  [['place_name','place_name'],['address','address'],['hours','hours'],['fee','fee'],['organizer','organizer'],['phone','phone'],['why','why']].forEach(function(k){if(has(x[k[1]])&&!has(e[k[0]])&&!locked('EVENT',e.event_id||e.id,k[0])){e[k[0]]=x[k[1]];n.push(k[0]);mark(e,k[0],x.checkedAt);}});
   if(n.length){source('EVENT',e.event_id||e.id,x.source_url,x.source_label,x.checkedAt);}
   e.feedId=x.feedId;return n.length;}
  function matchPlace(x){var S=W.SPOTS||[],id=x.feedId,nm=norm(x.n);
@@ -19293,10 +19300,12 @@ body.gr-phview-open{overflow:hidden}
    if(!x||!x.feedId||!has(x.n)){st.skipped++;return;}
    if(g.isDiscarded&&g.isDiscarded(x.feedId)){st.discarded++;return;}
    var p=matchPlace(x);
-   if(p){if(fillPlace(p,x))st.filledPlaces++;if(p.id.indexOf('TA-')===0){st.photos+=photos('PLACE',p.id,x.photos);if(opt.from!=='cache')pruneAuto('PLACE',p.id,x.photos);}return;}
+   if(x.sub&&p)p.feedSub=x.sub;
+   if(p){if(fillPlace(p,x))st.filledPlaces++;if(Array.isArray(x.photos)){st.photos+=photos('PLACE',p.id,x.photos);if(opt.from!=='cache')pruneAuto('PLACE',p.id,x.photos);}return;}
    var o={id:x.feedId,feedId:x.feedId,n:x.n,a:x.a||'',addressType:street(x.a)?'EXACT':'',ar:x.ar||'',r:(x.r||'').replace(/(시|군|구)$/,''),k:(x.k||[]).slice(),tr:[],cart:[],why:x.why||'',
-    cl:x.closed||'',pk:x.parking||'',src:'TourAPI 자동 수집',contentOrigin:'TOURAPI_FEED',feedLat:x.lat||null,feedLng:x.lng||null,
+    cl:x.closed||'',pk:x.parking||'',src:'TourAPI 자동 수집',feedSub:x.sub||'',contentOrigin:'TOURAPI_FEED',feedLat:x.lat||null,feedLng:x.lng||null,
     contentDetail:{summary:x.summary||'',hours:x.hours||'',fee:x.fee||'',phone:x.phone||'',parking:x.parking||'',stay:x.stay||'',sourceUrl:x.sourceUrl||'',sourceLabel:x.sourceLabel||'',verified:x.checkedAt||''}};
+   [['address','a'],['openingHours','hours'],['closedDays','closed'],['fee','fee'],['phone','phone'],['parking','parking'],['stay','stay'],['summary','summary']].forEach(function(k){if(has(x[k[1]]))mark(o,k[0],x.checkedAt);});
    source('PLACE',o.id,x.sourceUrl,x.sourceLabel,x.checkedAt);
    g.contentIngest('PLACE',o,{note:'TourAPI 자동 수집 '+(feed.generatedAt||'').slice(0,10)});
    st.photos+=photos('PLACE',o.id,x.photos);st.newPlaces++;}catch(e){st.skipped++;}});
@@ -19304,10 +19313,12 @@ body.gr-phview-open{overflow:hidden}
    if(!x||!x.feedId||!has(x.name)){st.skipped++;return;}
    if(g.isDiscarded&&g.isDiscarded(x.feedId)){st.discarded++;return;}
    var e=matchEvent(x);
-   if(e){if(fillEvent(e,x))st.filledEvents++;var eid=e.event_id||e.id;if(String(eid).indexOf('TA-E-')===0){st.photos+=photos('EVENT',eid,x.photos);if(opt.from!=='cache')pruneAuto('EVENT',eid,x.photos);}return;}
+   if(x.sub&&e)e.feedSub=x.sub;
+   if(e){if(fillEvent(e,x))st.filledEvents++;var eid=e.event_id||e.id;if(Array.isArray(x.photos)){st.photos+=photos('EVENT',eid,x.photos);if(opt.from!=='cache')pruneAuto('EVENT',eid,x.photos);}return;}
    var o={event_id:x.feedId,id:x.feedId,feedId:x.feedId,name:x.name,title:x.name,start_date:x.start_date||'',start:x.start_date||'',end_date:x.end_date||'',end:x.end_date||'',
     place_name:x.place_name||'',address:x.address||'',region:x.region||'',city:(x.city||'').replace(/(시|군|구)$/,''),hours:x.hours||'',fee:x.fee||'',organizer:x.organizer||'',phone:x.phone||'',
-    why:x.why||'',summary:x.summary||'',theme:(x.theme||[]).slice(),source_url:x.source_url||'',source_label:x.source_label||'',verified:x.checkedAt||'',checked_at:x.checkedAt||'',cart:[],contentOrigin:'TOURAPI_FEED',curation:(x.curation||[]).slice()};
+    why:x.why||'',summary:x.summary||'',theme:(x.theme||[]).slice(),source_url:x.source_url||'',source_label:x.source_label||'',verified:x.checkedAt||'',checked_at:x.checkedAt||'',cart:[],contentOrigin:'TOURAPI_FEED',feedSub:x.sub||'',curation:(x.curation||[]).slice()};
+   ['place_name','address','hours','fee','organizer','phone'].forEach(function(k){if(has(x[k]))mark(o,k,x.checkedAt);});
    source('EVENT',o.event_id,x.source_url,x.source_label,x.checkedAt);
    g.contentIngest('EVENT',o,{note:'TourAPI 자동 수집 '+(feed.generatedAt||'').slice(0,10)});
    try{W.grEventRevalidateR09&&W.grEventRevalidateR09();}catch(z){}
@@ -19334,7 +19345,7 @@ body.gr-phview-open{overflow:hidden}
  W.guriFeedCardHTML=function(){if(!canUse())return '';var L=LAST||(function(){try{return JSON.parse(get(LK)||'null');}catch(e){return null;}})(),c=feedCounts(),pp=pendingPhotos();
   return '<details class="card gr-feed" '+(!L||(Date.now()-new Date(L.at).getTime())<300000?'open':'')+'><summary><b>자동 수집 (한국관광공사 TourAPI)</b> <span class="sm mute">'+(L?'마지막 반영 '+esc(String(L.at).slice(0,16).replace('T',' ')):'아직 불러온 피드 없음')+' · 자동 후보 '+c.all+'건 중 QA 대기 '+c.qa+'건</span></summary>'+
    '<div class="sm mute" style="margin:8px 0">수집기가 매일 만든 피드를 불러오면 새 장소·행사가 <b>QA 대기</b>로 들어오고, 이미 있는 곳은 비어 있는 칸만 채웁니다. 공개는 지금처럼 검수 후 대표가 합니다.</div>'+
-   '<label for="grf_url">피드 주소</label><input id="grf_url" value="'+esc(get(UK)||'')+'" placeholder="https://raw.githubusercontent.com/…/feed/gungri_feed.json">'+
+   '<label for="grf_url">피드 주소</label><input id="grf_url" value="'+esc(get(UK)||DEFURL)+'" placeholder="https://raw.githubusercontent.com/…/feed/gungri_feed.json">'+
    '<div class="row" style="gap:8px;margin-top:8px"><button class="btn btn-g" style="flex:1" data-grf="url">주소에서 불러오기</button><label class="btn btn-o" style="flex:1;text-align:center">파일에서 불러오기<input type="file" id="grf_file" accept=".json,application/json" style="display:none"></label></div>'+
    (isOwner()&&pp?'<button class="btn btn-o w100" style="margin-top:8px" data-grf="photos">공공누리 사진 '+pp+'장 사용권 확인(대표)</button>':'')+
    '<div id="grf_msg" class="sm" style="margin-top:8px;font-weight:700">'+(L?esc(msg(L.stats)):'')+'</div></details>';};
@@ -19346,7 +19357,7 @@ body.gr-phview-open{overflow:hidden}
   r.onload=function(){var st;try{st=W.guriFeedIngest(JSON.parse(r.result),{from:'file:'+t.files[0].name});}catch(x){st={error:'JSON 파일을 읽지 못했습니다'};}if(!st.error)try{W.render();}catch(x){}show(st);};r.readAsText(t.files[0]);});
  /* 다시 열 때: 보관된 피드 반영 → 주소가 있으면 새로 받아 반영 */
  W.addEventListener('load',function(){setTimeout(function(){try{var c=get(CK);if(c)W.guriFeedIngest(JSON.parse(c),{from:'cache',cache:false});}catch(e){try{W.guriLogError&&W.guriLogError('feed','cache '+e.message);}catch(x){}}
-  var u=get(UK);if(u&&W.fetch&&navigator.onLine!==false)W.guriFeedLoadURL(u).then(function(st){if(st&&!st.error&&(st.newPlaces||st.newEvents))try{W.render();}catch(x){}});},150);});
+  var u=get(UK)||DEFURL;if(u==='off'||W.__GR_NO_FEED)return;if(W.fetch&&navigator.onLine!==false)W.guriFeedLoadURL(u).then(function(st){if(st&&!st.error&&(st.newPlaces||st.newEvents||st.filledPlaces||st.filledEvents||st.photos||st.autoPhotos))try{W.render();}catch(x){}});},150);});
 })();
 </script>
 <!-- GUNGRI_R17_STAGE6_EDITOR -->
@@ -19806,6 +19817,8 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
 .gr-exrow{display:flex;gap:10px;padding:5px 0;font-size:15.5px}.gr-exrow b{flex:0 0 76px;color:#4a5660}.gr-exrow span{flex:1;min-width:0}
 .gr-exdesc{margin:10px 0;font-size:16px;line-height:1.6}
 .gr-extips{margin:12px 0;padding:10px 12px;border-radius:14px;background:#FFF7E0}.gr-extips ul{margin:6px 0 0;padding-left:18px}.gr-extips li{margin:5px 0;font-size:15px}
+
+.gd-prov{display:inline-block;margin-left:8px;font-style:normal;font-size:12.5px;font-weight:700;color:#5b6b63;background:#eef3f0;border-radius:10px;padding:2px 8px;white-space:nowrap}.gd-prov-staff{color:#0b5a3a;background:#dff3e8}
 </style>
 <script id="guri-r17-shell">
 /* ==========================================================================
@@ -20308,6 +20321,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
    '<div class="row gre-newbar" style="gap:8px;margin:8px 0 12px"><button class="btn btn-g" style="flex:1" data-gre-new="PLACE">＋ 새 가볼 곳</button><button class="btn btn-g" style="flex:1" data-gre-new="EVENT">＋ 새 행사</button></div>'+
    (W.guriFeedCardHTML?W.guriFeedCardHTML():'')+
    (W.guriExamplesAdminHTML?W.guriExamplesAdminHTML():'')+
+   (W.guriSubAdminHTML?W.guriSubAdminHTML():'')+
    '<div class="gr3-tabs">'+['PLACE','EVENT','PHOTO','SOURCE'].map(function(x){return '<button class="gr3-tab'+(QA_TAB===x?' on':'')+'" data-gr-qatab="'+x+'">'+x+'</button>';}).join('')+'</div>';
   if(QA_TAB==='PLACE'||QA_TAB==='EVENT'){
    var t=QA_TAB,cnt=st[t];
@@ -20480,6 +20494,591 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  (function(){var o=W.guriActionRegistry;if(typeof o!=='function')return;W.guriActionRegistry=function(){var r=o();r['data-grinv']='R17 invite · 초대장 미리보기';return r;};})();
 })();
 </script>
+<!-- GUNGRI_R17_STAGE7_TAXO -->
+<script id="guri-r17-taxo">
+/* ==========================================================================
+   GUNG-RI R17 · 세부 유형(나가요) · 배울 주제(배워요) · 지역(시·도/시·군·구)
+   - 눈·입·손·머리·몸은 창마다 뜻이 다르다: 나가요 = 즐기는 방식(장소·행사 유형), 배워요 = 배우는 통로(주제)
+   - 나가요 세부 유형은 장소·행사에서 자동으로 따라온다 (분류 규칙은 taxonomy.json — 수집기와 같은 파일)
+   - 지역은 글자가 아니라 정해진 값(시·도 → 시·군·구)으로 저장해 검색·필터가 정확하다
+   ========================================================================== */
+(function(){
+ 'use strict';
+ var W=window,D=document,TAXO={
+ "version": 1,
+ "naga": {
+  "눈": [
+   "공원",
+   "호수",
+   "해변",
+   "수목원",
+   "미술관",
+   "영화관",
+   "공연장",
+   "축제",
+   "공연",
+   "행사"
+  ],
+  "입": [
+   "시장",
+   "음식거리",
+   "식문화권",
+   "카페",
+   "맛집",
+   "먹자골목"
+  ],
+  "손": [
+   "체험문화시설",
+   "농촌",
+   "생활체험",
+   "공방·공예",
+   "체험축제",
+   "체험행사"
+  ],
+  "머리": [
+   "도서관",
+   "문화공간",
+   "박물관",
+   "역사관",
+   "기념관",
+   "전시장",
+   "유적지",
+   "복합문화공간"
+  ],
+  "몸": [
+   "수변활동",
+   "해안활동",
+   "숲/치유",
+   "둘레길",
+   "등산",
+   "캠핑장",
+   "운동장"
+  ]
+ },
+ "edu": {
+  "눈": [
+   "여행 계획·답사",
+   "역사 탐방",
+   "전시",
+   "미술 감상",
+   "영화",
+   "공연",
+   "사진 감상",
+   "건축",
+   "문화재",
+   "정원",
+   "식물"
+  ],
+  "입": [
+   "노래",
+   "합창",
+   "외국어 회화",
+   "낭독",
+   "스피치",
+   "음식·커피·차 이야기",
+   "토론",
+   "이야기"
+  ],
+  "손": [
+   "인테리어",
+   "집수리",
+   "사진 촬영",
+   "그림",
+   "서예",
+   "목공",
+   "공예",
+   "요리",
+   "원예",
+   "재봉",
+   "뜨개질"
+  ],
+  "머리": [
+   "스마트폰",
+   "컴퓨터",
+   "AI",
+   "글쓰기",
+   "부동산",
+   "재테크",
+   "경제",
+   "역사 강좌",
+   "인문학",
+   "법률",
+   "독서",
+   "과학",
+   "바둑",
+   "체스"
+  ],
+  "몸": [
+   "걷기",
+   "트래킹",
+   "등산",
+   "근력",
+   "스트레칭",
+   "요가",
+   "필라테스",
+   "댄스",
+   "자전거",
+   "수영",
+   "골프",
+   "탁구",
+   "배드민턴",
+   "테니스"
+  ]
+ },
+ "placeRules": [
+  {
+   "sub": "도서관",
+   "axis": "머리",
+   "n": "도서관|문학관|책방|서점",
+   "t": "도서관"
+  },
+  {
+   "sub": "역사관",
+   "axis": "머리",
+   "n": "역사관|역사문화관|역사체험관",
+   "t": ""
+  },
+  {
+   "sub": "박물관",
+   "axis": "머리",
+   "n": "박물관|과학관|민속촌|수장고",
+   "t": "박물관|과학관"
+  },
+  {
+   "sub": "기념관",
+   "axis": "머리",
+   "n": "기념관|생가",
+   "t": "기념관"
+  },
+  {
+   "sub": "미술관",
+   "axis": "눈",
+   "n": "미술|갤러리|조각|뮤지엄|아트",
+   "t": "미술관|조각"
+  },
+  {
+   "sub": "영화관",
+   "axis": "눈",
+   "n": "영화|시네마",
+   "t": "영화"
+  },
+  {
+   "sub": "공연장",
+   "axis": "눈",
+   "n": "공연장|극장|아트홀|콘서트|오페라|문화예술회관|예술의전당|아트센터",
+   "t": "공연장"
+  },
+  {
+   "sub": "전시장",
+   "axis": "머리",
+   "n": "전시장|전시관|미디어아트|전시",
+   "t": "전시|미디어아트"
+  },
+  {
+   "sub": "복합문화공간",
+   "axis": "머리",
+   "n": "복합",
+   "t": "복합문화"
+  },
+  {
+   "sub": "문화공간",
+   "axis": "머리",
+   "n": "문화공간|문화의집|문화센터|문화거리|문화의거리",
+   "t": "^문화공간$|문화거리"
+  },
+  {
+   "sub": "유적지",
+   "axis": "머리",
+   "n": "유적|궁궐|고궁|[가-힣]{1,4}궁$|[가-힣]{1,4}궁 |성곽|산성|읍성|행궁|고분|왕릉|[가-힣]릉$|서원|향교|사찰|사적|문화유산|고택|한옥마을|전통마을|민속마을",
+   "t": "유적|문화유산|역사"
+  },
+  {
+   "sub": "수목원",
+   "axis": "눈",
+   "n": "수목원|식물원|정원",
+   "t": "수목원|정원"
+  },
+  {
+   "sub": "호수",
+   "axis": "눈",
+   "n": "호수|저수지",
+   "t": "호수"
+  },
+  {
+   "sub": "해변",
+   "axis": "눈",
+   "n": "해변|해수욕장|바닷가|비치",
+   "t": "해변"
+  },
+  {
+   "sub": "시장",
+   "axis": "입",
+   "n": "시장",
+   "t": "시장"
+  },
+  {
+   "sub": "식문화권",
+   "axis": "입",
+   "n": "식문화",
+   "t": "식문화권"
+  },
+  {
+   "sub": "먹자골목",
+   "axis": "입",
+   "n": "먹자|먹거리골목",
+   "t": "먹자"
+  },
+  {
+   "sub": "음식거리",
+   "axis": "입",
+   "n": "음식거리|먹거리|국밥거리|맛의거리",
+   "t": "음식거리"
+  },
+  {
+   "sub": "카페",
+   "axis": "입",
+   "n": "카페|커피|로스팅",
+   "t": "카페|커피"
+  },
+  {
+   "sub": "맛집",
+   "axis": "입",
+   "n": "맛집|식당",
+   "t": "맛집"
+  },
+  {
+   "sub": "공방·공예",
+   "axis": "손",
+   "n": "공방|공예|도자|도기|한지|나전|모시|대나무|보석|백자|옹기|창작촌",
+   "t": "공예|도자|도기|한지|나전|모시|대나무|보석|백자|제작문화"
+  },
+  {
+   "sub": "농촌",
+   "axis": "손",
+   "n": "농촌|농원|농장|목장|팜|체험마을|농업",
+   "t": "^농촌"
+  },
+  {
+   "sub": "체험문화시설",
+   "axis": "손",
+   "n": "체험관|체험촌|체험장",
+   "t": "^체험문화시설$"
+  },
+  {
+   "sub": "생활체험",
+   "axis": "손",
+   "n": "생활체험|머드|체험",
+   "t": "생활체험|체험"
+  },
+  {
+   "sub": "캠핑장",
+   "axis": "몸",
+   "n": "캠핑|야영",
+   "t": "캠핑"
+  },
+  {
+   "sub": "운동장",
+   "axis": "몸",
+   "n": "운동장|체육|경기장|스포츠",
+   "t": "운동장|스포츠"
+  },
+  {
+   "sub": "등산",
+   "axis": "몸",
+   "n": "등산|국립공원|봉우리|[가-힣]{1,6}산$|[가-힣]{1,6}산 ",
+   "t": "(^|/)산(/|$)|등산"
+  },
+  {
+   "sub": "둘레길",
+   "axis": "몸",
+   "n": "둘레길|올레|숲길|트레일|도보|걷기|벼랑길|출렁다리|오름|생태탐방",
+   "t": "둘레길|숲길|걷기|도보|벼랑길|출렁다리|오름|생태탐방|습지"
+  },
+  {
+   "sub": "수변활동",
+   "axis": "몸",
+   "n": "수변|강변|하천|천변",
+   "t": "수변|강변"
+  },
+  {
+   "sub": "해안활동",
+   "axis": "몸",
+   "n": "해안|바닷길|해양",
+   "t": "해안|바닷길"
+  },
+  {
+   "sub": "숲/치유",
+   "axis": "몸",
+   "n": "치유|휴양림|자연휴양",
+   "t": "숲/치유|치유"
+  },
+  {
+   "sub": "공원",
+   "axis": "눈",
+   "n": "공원|생태공원|산책로",
+   "t": "공원|산책"
+  },
+  {
+   "sub": "맛집",
+   "axis": "입",
+   "n": "성심당|감자빵|빵집|제과|국밥|칼국수",
+   "t": "맛집|음식점"
+  },
+  {
+   "sub": "유적지",
+   "axis": "머리",
+   "n": "마을$|사$|성지|서원|향교|고택|명주 골목|근대로의",
+   "t": "역사|유적"
+  },
+  {
+   "sub": "문화공간",
+   "axis": "머리",
+   "n": "문화역|문화마을|문화창고|문화촌|문화플랫폼|문화비축|문화공감|예술촌|출판|서가|음악역|테미오래|DDP|플라자|미디어파사드|시민마당|문화특구|대학로",
+   "t": "^문화/|문화공간|문학"
+  },
+  {
+   "sub": "둘레길",
+   "axis": "몸",
+   "n": "길$|골목|보행교|평화의 길",
+   "t": "^$never"
+  },
+  {
+   "sub": "공원",
+   "axis": "눈",
+   "n": "숲|섬$|폭포|동굴|파크|타워|등대|테마파크|정서진|트라이보울|동화마을|무릉|허브|두물머리|퍼플|화담|세미원|동의보감",
+   "t": "경관"
+  }
+ ],
+ "eventRules": [
+  {
+   "sub": "체험축제",
+   "axis": "손",
+   "re": "체험.*(축제|페스티벌)|(축제|페스티벌).*체험"
+  },
+  {
+   "sub": "축제",
+   "axis": "눈",
+   "re": "축제|페스티벌|엑스포"
+  },
+  {
+   "sub": "공연",
+   "axis": "눈",
+   "re": "공연|콘서트|음악회|연극|뮤지컬|오페라|국악|연주"
+  },
+  {
+   "sub": "체험행사",
+   "axis": "손",
+   "re": "체험|만들기|클래스|교실"
+  }
+ ],
+ "eventDefault": {
+  "sub": "행사",
+  "axis": "눈"
+ }
+};
+ function get(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+ function set(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+ function esc(x){return String(x==null?'':x).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function me(){try{return W.me();}catch(e){return {};}}
+ function perm(){try{return W.perm();}catch(e){return '';}}
+ var AXK=['눈','입','손','머리','몸'];
+ W.GRTAXO=TAXO;
+
+ /* ------------------------------------------------------------------
+    1. 지역 마스터 (시·도 → 시·군·구). 일반 시는 '수원시'까지(하위 구는 상세 주소), 특별·광역시는 자치구
+    ------------------------------------------------------------------ */
+ var RG=[
+  ['서울특별시','서울','수도권','종로구 중구 용산구 성동구 광진구 동대문구 중랑구 성북구 강북구 도봉구 노원구 은평구 서대문구 마포구 양천구 강서구 구로구 금천구 영등포구 동작구 관악구 서초구 강남구 송파구 강동구'],
+  ['부산광역시','부산','경남권','중구 서구 동구 영도구 부산진구 동래구 남구 북구 해운대구 사하구 금정구 강서구 연제구 수영구 사상구 기장군'],
+  ['대구광역시','대구','경북권','중구 동구 서구 남구 북구 수성구 달서구 달성군 군위군'],
+  ['인천광역시','인천','수도권','중구 동구 미추홀구 연수구 남동구 부평구 계양구 서구 강화군 옹진군'],
+  ['광주광역시','광주','호남권','동구 서구 남구 북구 광산구'],
+  ['대전광역시','대전','충청권','동구 중구 서구 유성구 대덕구'],
+  ['울산광역시','울산','경남권','중구 남구 동구 북구 울주군'],
+  ['세종특별자치시','세종','충청권','세종시'],
+  ['경기도','경기','수도권','수원시 성남시 의정부시 안양시 부천시 광명시 평택시 동두천시 안산시 고양시 과천시 구리시 남양주시 오산시 시흥시 군포시 의왕시 하남시 용인시 파주시 이천시 안성시 김포시 화성시 광주시 양주시 포천시 여주시 연천군 가평군 양평군'],
+  ['강원특별자치도','강원','강원권','춘천시 원주시 강릉시 동해시 태백시 속초시 삼척시 홍천군 횡성군 영월군 평창군 정선군 철원군 화천군 양구군 인제군 고성군 양양군'],
+  ['충청북도','충북','충청권','청주시 충주시 제천시 보은군 옥천군 영동군 증평군 진천군 괴산군 음성군 단양군'],
+  ['충청남도','충남','충청권','천안시 공주시 보령시 아산시 서산시 논산시 계룡시 당진시 금산군 부여군 서천군 청양군 홍성군 예산군 태안군'],
+  ['전북특별자치도','전북','호남권','전주시 군산시 익산시 정읍시 남원시 김제시 완주군 진안군 무주군 장수군 임실군 순창군 고창군 부안군'],
+  ['전라남도','전남','호남권','목포시 여수시 순천시 나주시 광양시 담양군 곡성군 구례군 고흥군 보성군 화순군 장흥군 강진군 해남군 영암군 무안군 함평군 영광군 장성군 완도군 진도군 신안군'],
+  ['경상북도','경북','경북권','포항시 경주시 김천시 안동시 구미시 영주시 영천시 상주시 문경시 경산시 의성군 청송군 영양군 영덕군 청도군 고령군 성주군 칠곡군 예천군 봉화군 울진군 울릉군'],
+  ['경상남도','경남','경남권','창원시 진주시 통영시 사천시 김해시 밀양시 거제시 양산시 의령군 함안군 창녕군 고성군 남해군 하동군 산청군 함양군 거창군 합천군'],
+  ['제주특별자치도','제주','제주권','제주시 서귀포시']
+ ].map(function(r){return {n:r[0],s:r[1],z:r[2],sg:r[3].split(' ')};});
+ var ALIAS={'강원도':'강원특별자치도','전라북도':'전북특별자치도','제주도':'제주특별자치도','전북도':'전북특별자치도'};
+ function sidoOf(tok){tok=ALIAS[tok]||tok;for(var i=0;i<RG.length;i++){if(RG[i].n===tok||RG[i].s===tok||RG[i].n.replace(/(특별시|광역시|특별자치시|특별자치도|도)$/,'')===tok)return RG[i];}return null;}
+ function skey(s){return String(s||'').replace(/(시|군|구)$/,'');}
+ W.GRREGION={list:RG,sido:function(n){return sidoOf(n);}};
+ /* 글자 주소 → {sido,sidoShort,sg,zone} (알 수 있는 만큼, 모르면 null). hint = 시·도 이름/약칭 */
+ W.guriRegionOf=function(text,hint){
+  var toks=String(text||'').replace(/[(),·\/]/g,' ').split(/\s+/).filter(Boolean),sd=hint?sidoOf(hint):null,i,j;
+  if(!sd){for(i=0;i<Math.min(toks.length,3)&&!sd;i++)sd=sidoOf(toks[i]);}
+  var sg='';
+  if(sd){
+   for(i=0;i<toks.length&&!sg;i++){var t=toks[i];for(j=0;j<sd.sg.length;j++){var it=sd.sg[j];if(t===it||(skey(t)===skey(it)&&skey(t)&&(t===skey(it)||t===it))){sg=it;break;}}}
+   if(!sg&&sd.sg.length===1)sg=sd.sg[0];
+   if(!sg&&sd.n==='세종특별자치시')sg='세종시';
+  }else{
+   var hit=[];RG.forEach(function(r){r.sg.forEach(function(it){if(!/(시|군)$/.test(it))return;for(var k=0;k<toks.length;k++){if(toks[k]===it){hit.push([r,it]);return;}}});});
+   if(hit.length===1){sd=hit[0][0];sg=hit[0][1];}
+  }
+  if(!sd)return null;
+  return {sido:sd.n,sidoShort:sd.s,sg:sg,zone:sd.z};
+ };
+ W.guriRegionLabel=function(r){return r?(r.sidoShort||'')+(r.sg?' '+r.sg:''):'';};
+ W.guriSigunguList=function(sido){var s=sidoOf(sido);return s?s.sg.slice():[];};
+ W.guriZoneOfSido=function(sido){var s=sidoOf(sido);return s?s.z:'';};
+
+ /* ------------------------------------------------------------------
+    2. 세부 유형 분류 (나가요: 장소·행사)
+    ------------------------------------------------------------------ */
+ var AXOF={};AXK.forEach(function(a){(TAXO.naga[a]||[]).forEach(function(s){AXOF[s]=a;});});
+ var PR=TAXO.placeRules.map(function(r){return {sub:r.sub,axis:r.axis,n:r.n?new RegExp(r.n):null,t:r.t?new RegExp(r.t):null};});
+ var ER=TAXO.eventRules.map(function(r){return {sub:r.sub,axis:r.axis,re:new RegExp(r.re)};});
+ var OK='GUNGRI_SUB_OVR_V1';
+ function ovr(){try{return JSON.parse(get(OK)||'{}')||{};}catch(e){return {};}}
+ function classifyPlace(p){
+  var n=String(p.n||''),tags=(p.k||[]).map(String),i,j;
+  for(i=0;i<PR.length;i++){var r=PR[i];if(r.n&&r.n.test(n))return {sub:r.sub,axis:r.axis};
+   if(r.t)for(j=0;j<tags.length;j++){if(r.t.test(tags[j]))return {sub:r.sub,axis:r.axis};}}
+  return null;
+ }
+ function classifyEvent(e){
+  var t=String(e.name||e.title||'')+' '+(Array.isArray(e.theme)?e.theme.join(' '):String(e.theme||''));
+  for(var i=0;i<ER.length;i++){if(ER[i].re.test(t))return {sub:ER[i].sub,axis:ER[i].axis};}
+  return {sub:TAXO.eventDefault.sub,axis:TAXO.eventDefault.axis};
+ }
+ /* 장소: 관리자 지정 > 수집 피드의 sub > 분류 규칙 */
+ W.guriSubOfPlace=function(p){
+  if(!p)return null;var id=p.id,o=ovr()['PLACE:'+id];
+  if(o&&AXOF[o])return {sub:o,axis:AXOF[o],by:'ADMIN'};
+  if(p.feedSub&&AXOF[p.feedSub])return {sub:p.feedSub,axis:AXOF[p.feedSub],by:'FEED'};
+  var c=classifyPlace(p);return c?{sub:c.sub,axis:c.axis,by:'RULE'}:null;
+ };
+ W.guriSubOfEvent=function(e){
+  if(!e)return null;var id=e.event_id||e.id,o=ovr()['EVENT:'+id];
+  if(o&&AXOF[o])return {sub:o,axis:AXOF[o],by:'ADMIN'};
+  if(e.feedSub&&AXOF[e.feedSub])return {sub:e.feedSub,axis:AXOF[e.feedSub],by:'FEED'};
+  var c=classifyEvent(e);return {sub:c.sub,axis:c.axis,by:'RULE'};
+ };
+ W.guriSubOfText=function(t){var c=classifyPlace({n:t,k:[]});return c?{sub:c.sub,axis:c.axis,by:'RULE'}:null;};
+ W.guriSubAxis=function(sub){return AXOF[sub]||'';};
+ W.guriSubSet=function(kind,id,sub){var o=ovr();if(sub)o[kind+':'+id]=sub;else delete o[kind+':'+id];set(OK,JSON.stringify(o));};
+ /* 장소·행사 카드 태그 */
+ W.guriSubTag=function(x){var s=W.guriSubOfPlace(x);return s?s.sub:'';};
+ W.guriSubAxisOf=function(x){var s=W.guriSubOfPlace(x);return s?s.axis:(x&&x.axis)||'';};
+ W.guriEvSub=function(e){var s=W.guriSubOfEvent(e);return s?s.sub:'';};
+
+ /* ------------------------------------------------------------------
+    3. 배워요 주제 (캡틴·회원 같은 목록) — 직접 입력은 검토 대기 후 대표 승인
+    ------------------------------------------------------------------ */
+ var CK='GUNGRI_TOPIC_CUSTOM_V1',PK='GUNGRI_TOPIC_PENDING_V1';
+ function jget(k,d){try{var v=JSON.parse(get(k)||'null');return v==null?d:v;}catch(e){return d;}}
+ W.guriEduTopics=function(axis){var base=(TAXO.edu[axis]||[]).slice(),c=jget(CK,{});(c[axis]||[]).forEach(function(t){if(base.indexOf(t)<0)base.push(t);});return base;};
+ W.guriEduAxisOf=function(topic){for(var i=0;i<AXK.length;i++){if(W.guriEduTopics(AXK[i]).indexOf(topic)>=0)return AXK[i];}return '';};
+ W.guriTopicPending=function(){return jget(PK,[]);};
+ W.guriTopicPropose=function(axis,topic,mid){topic=String(topic||'').replace(/\s+/g,' ').trim().slice(0,16);if(!topic||AXK.indexOf(axis)<0)return false;
+  if(W.guriEduTopics(axis).indexOf(topic)>=0)return false;var L=jget(PK,[]);if(L.some(function(x){return x.axis===axis&&x.topic===topic&&!x.done;}))return true;
+  L.push({id:'tp'+Date.now()+L.length,axis:axis,topic:topic,by:me().n||'',mid:mid||'',at:new Date().toISOString().slice(0,10),done:''});set(PK,JSON.stringify(L));return true;};
+ W.guriTopicDecide=function(id,ok){if(perm()!=='OWNER'||me().role!=='ADMIN')return false;var L=jget(PK,[]),x=L.filter(function(y){return y.id===id;})[0];if(!x)return false;
+  x.done=ok?'APPROVED':'REJECTED';if(ok){var c=jget(CK,{});c[x.axis]=c[x.axis]||[];if(c[x.axis].indexOf(x.topic)<0)c[x.axis].push(x.topic);set(CK,JSON.stringify(c));}set(PK,JSON.stringify(L));
+  try{var MM=W.eval('MEET');(MM||[]).forEach(function(m){if(m.topicsPending&&m.topicsPending.indexOf(x.topic)>=0){m.topicsPending=m.topicsPending.filter(function(t){return t!==x.topic;});if(ok){m.topics=(m.topics||[]);if(m.topics.indexOf(x.topic)<0)m.topics.push(x.topic);}}});}catch(e){}
+  return true;};
+
+ /* ------------------------------------------------------------------
+    4. 모임의 지역·세부 유형 읽기 (옛 모임은 글자 주소에서 최대한 읽는다)
+    ------------------------------------------------------------------ */
+ W.guriMeetLoc=function(m){
+  if(!m)return null;
+  if(m.sido){var s=sidoOf(m.sido);if(s)return {sido:s.n,sidoShort:s.s,sg:m.sigungu||'',zone:s.z};}
+  var r0=W.guriRegionOf([m.addr,m.venueAddress,m.place,m.venueName].join(' '));if(r0&&r0.sg)return r0;
+  try{if(m.spotId||m.sourceKind==='PLACE'){var sp=(W.SPOTS||[]).filter(function(p){return String(p.id)===String(m.spotId||m.sourceId);})[0];if(sp){var r1=W.guriRegionOf(sp.a||'',sp.ar);if(r1)return r1;}}
+   if(m.sourceKind==='EVENT'){var ev=(W.discEvents?W.discEvents():[]).filter(function(e){return String(e.event_id||e.id)===String(m.sourceId);})[0];if(ev){var r2=W.guriRegionOf(ev.address||ev.place_name||'',ev.region);if(r2)return r2;}}}catch(e){}
+  return r0||null;
+ };
+ W.guriMeetTags=function(m){
+  if(!m)return [];if(m.cat==='EDU'&&m.topics&&m.topics.length)return m.topics.slice();
+  if(m.sub)return [m.sub];
+  if(m.cat==='NORMAL'){var s=W.guriSubOfText(m.sourceTitle||m.title||'');return s?[s.sub]:[];}
+  return [];
+ };
+ W.guriMeetSearchText=function(m){var l=W.guriMeetLoc(m)||{};return [l.sido,l.sidoShort,l.sg].concat(W.guriMeetTags(m)).join(' ');};
+ W.guriMeetLine=function(m){var l=W.guriMeetLoc(m),t=W.guriMeetTags(m);var a=[];if(l)a.push('📍 '+W.guriRegionLabel(l));if(t.length)a.push(t.join('·'));return a.join(' · ');};
+
+ /* ------------------------------------------------------------------
+    5. 관리자 화면 조각: 세부 유형 없음 · 배워요 주제 검토
+    ------------------------------------------------------------------ */
+ function allSubs(){var o=[];AXK.forEach(function(a){(TAXO.naga[a]||[]).forEach(function(s){o.push([a,s]);});});return o;}
+ W.guriSubOptionsHTML=function(sel){return '<option value="">선택</option>'+AXK.map(function(a){return '<optgroup label="'+a+'">'+(TAXO.naga[a]||[]).map(function(s){return '<option value="'+esc(s)+'"'+(sel===s?' selected':'')+'>'+esc(s)+'</option>';}).join('')+'</optgroup>';}).join('');};
+ W.guriSubAdminHTML=function(){
+  if(me().role!=='ADMIN')return '';
+  var miss=[],tot=0,ev=0;
+  (W.SPOTS||[]).forEach(function(p){if(!p||p.admin_hidden===true)return;tot++;if(!W.guriSubOfPlace(p))miss.push(p);});
+  var pend=W.guriTopicPending().filter(function(x){return !x.done;}),own=perm()==='OWNER';
+  var h='<details class="card gr-subadm" data-gr-subadm="1"><summary><b>세부 유형 · 배울 주제 관리</b> <span class="sm mute">세부 유형 없음 '+miss.length+'곳 / 전체 '+tot+'곳 · 주제 검토 대기 '+pend.length+'건</span></summary>'+
+   '<div class="sm mute" style="margin:8px 0">나가요의 세부 유형은 장소·행사에서 자동으로 정해집니다. 규칙으로 못 정한 곳만 아래에서 골라 주세요(이 기기에 저장).</div>';
+  h+=miss.slice(0,30).map(function(p){return '<div class="row" style="gap:6px;padding:6px 0;border-top:1px solid #E3EAE5;align-items:center"><div style="flex:1;min-width:0"><b class="sm">'+esc(p.n)+'</b><div class="sm mute">'+esc((p.k||[]).join(', '))+'</div></div>'+
+   '<select id="grsub_'+esc(p.id)+'" style="max-width:130px">'+W.guriSubOptionsHTML('')+'</select>'+(own?'<button class="btn btn-s" data-grtx="sub|'+esc(p.id)+'">지정</button>':'')+'</div>';}).join('')||'<div class="sm mute">모든 장소에 세부 유형이 있습니다.</div>';
+  if(miss.length>30)h+='<div class="sm mute">…외 '+(miss.length-30)+'곳</div>';
+  h+='<div style="margin-top:12px"><b>배워요 주제 검토 대기</b></div>'+(pend.map(function(x){return '<div class="row" style="gap:6px;padding:6px 0;border-top:1px solid #E3EAE5;align-items:center"><div style="flex:1"><b class="sm">'+esc(x.topic)+'</b> <span class="sm mute">'+esc(x.axis)+' · '+esc(x.by)+' · '+esc(x.at)+'</span></div>'+(own?'<button class="btn btn-s" data-grtx="tpok|'+esc(x.id)+'">승인</button><button class="btn btn-s btn-o" data-grtx="tpno|'+esc(x.id)+'">반려</button>':'')+'</div>';}).join('')||'<div class="sm mute">검토할 주제가 없습니다.</div>');
+  return h+'</details>';
+ };
+ D.addEventListener('click',function(e){var q=e.target&&e.target.closest&&e.target.closest('[data-grtx]');if(!q)return;e.preventDefault();e.stopPropagation();
+  if(perm()!=='OWNER'||me().role!=='ADMIN'){try{W.toast('대표만 할 수 있습니다');}catch(x){}return;}
+  var a=q.getAttribute('data-grtx').split('|');
+  if(a[0]==='sub'){var s=D.getElementById('grsub_'+a[1]);if(s&&s.value){W.guriSubSet('PLACE',a[1],s.value);try{W.toast('세부 유형을 지정했습니다');}catch(x){}}else{try{W.toast('세부 유형을 먼저 고르세요');}catch(x){}}}
+  else if(a[0]==='tpok'){W.guriTopicDecide(a[1],true);try{W.toast('주제를 목록에 추가했습니다');}catch(x){}}
+  else if(a[0]==='tpno'){W.guriTopicDecide(a[1],false);}
+  (W.renderKeepScroll||W.render)();
+ },true);
+ (function(){var o=W.guriActionRegistry;if(typeof o!=='function')return;W.guriActionRegistry=function(){var r=o();r['data-grtx']='R17 taxo · 세부 유형·주제 관리';return r;};})();
+
+ /* ------------------------------------------------------------------
+    6. 모임 지역 필터(시·도 → 시·군·구) — 활동 창 조회조건
+    ------------------------------------------------------------------ */
+ W.MF=W.MF||{sido:'',sg:''};
+ var basePass=W.passFilter;
+ if(typeof basePass==='function')W.passFilter=function(o,isSpot){
+  if(!basePass(o,isSpot))return false;
+  if(!isSpot&&(W.MF.sido||W.MF.sg)&&o&&o.cat){var l=W.guriMeetLoc(o);if(!l)return false;if(W.MF.sido&&l.sido!==W.MF.sido)return false;if(W.MF.sg&&l.sg!==W.MF.sg)return false;}
+  return true;
+ };
+ function mfHTML(){
+  return '<div class="gr-mf" data-gr-mf="1"><div style="margin:10px 0 7px;font-weight:800">시·도 · 시·군·구로 찾기</div><div class="row" style="gap:6px">'+
+   '<select id="mfSido" style="flex:1"><option value="">시·도 전체</option>'+RG.map(function(r){return '<option value="'+esc(r.n)+'"'+(W.MF.sido===r.n?' selected':'')+'>'+esc(r.n)+'</option>';}).join('')+'</select>'+
+   '<select id="mfSg" style="flex:1"'+(W.MF.sido?'':' disabled')+'><option value="">시·군·구 전체</option>'+(W.MF.sido?W.guriSigunguList(W.MF.sido).map(function(s){return '<option'+(W.MF.sg===s?' selected':'')+'>'+esc(s)+'</option>';}).join(''):'')+'</select></div></div>';
+ }
+ var baseBar=W.searchBar;
+ if(typeof baseBar==='function')W.searchBar=function(scope){
+  var h=baseBar.apply(this,arguments);if(typeof h!=='string')return h;
+  var k='<button class="btn btn-o w100" style="min-height:50px" data-act="morefilter">',i=h.indexOf(k);
+  return i<0?h:h.slice(0,i)+mfHTML()+h.slice(i);
+ };
+ D.addEventListener('change',function(e){var t=e.target;if(!t)return;
+  if(t.id==='mfSido'){W.MF.sido=t.value||'';W.MF.sg='';(W.renderKeepScroll||W.render)();}
+  else if(t.id==='mfSg'){W.MF.sg=t.value||'';(W.renderKeepScroll||W.render)();}
+ });
+
+ /* ------------------------------------------------------------------
+    7. 어디가볼까: 세부 유형 조회조건
+    ------------------------------------------------------------------ */
+ W.DISC_SUB=W.DISC_SUB||'ALL';
+ var bpp=W.discPlacePass,bep=W.discEventPass;
+ if(typeof bpp==='function')W.discPlacePass=function(x){if(!bpp(x))return false;if(W.DISC_SUB!=='ALL'){var s=W.guriSubOfPlace(x);if(!s||s.sub!==W.DISC_SUB)return false;}return true;};
+ if(typeof bep==='function')W.discEventPass=function(e){if(!bep(e))return false;if(W.DISC_SUB!=='ALL'){var s=W.guriSubOfEvent(e);if(!s||s.sub!==W.DISC_SUB)return false;}return true;};
+ function subSelHTML(){
+  return '<div class="row gr-discsub" style="margin-top:8px"><select id="discSub" style="flex:1"><option value="ALL">세부 유형 전체 (미술관·시장·공원…)</option>'+
+   AXK.map(function(a){return '<optgroup label="'+a+'">'+(TAXO.naga[a]||[]).map(function(x){return '<option'+(W.DISC_SUB===x?' selected':'')+'>'+esc(x)+'</option>';}).join('')+'</optgroup>';}).join('')+'<option'+(W.DISC_SUB==='행사'?' selected':'')+'>행사</option></select></div>';
+ }
+ var bus=W.uSpots;
+ if(typeof bus==='function')W.uSpots=function(){
+  var h=bus.apply(this,arguments);if(typeof h!=='string')return h;
+  var k='<div class="row" style="margin:16px 0 9px"><b style="font-size:19px"',i=h.indexOf(k);
+  return i<0?h:h.slice(0,i)+subSelHTML()+h.slice(i);
+ };
+ D.addEventListener('change',function(e){var t=e.target;if(t&&t.id==='discSub'){W.DISC_SUB=t.value||'ALL';(W.renderKeepScroll||W.render)();}});
+})();</script>
 <!-- GUNGRI_R17_STAGE7_EXAMPLES -->
 <script id="guri-r17-examples">
 /* ==========================================================================
@@ -20587,6 +21186,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  function useIt(){var x=CUR;if(!x)return;var cat=x.win,d={title:x.title.replace(/^\(예시\)\s*/,''),desc:x.desc,axes:(x.axes||[]).slice(),lv:x.lv||2};
   if(x.kind==='CAPTAIN'){d.price=x.price||0;d.inc=(x.inc||[]).slice();d.excNote=x.exc||'';if(x.refund)d.refund=x.refund;}
   if(x.seats)d.seats=x.seats;
+  if(cat==='EDU')d.axes=d.axes.slice(0,1);
   close();if(typeof W.guriRegOpen==='function')W.guriRegOpen(cat,{d:d,from:'EXAMPLE'});}
  /* ---- 관리자: 예시 관리 ---- */
  W.guriExamplesAdminHTML=function(){if(me().role!=='ADMIN')return '';build();var d=st(),n=W.guriExamplesList().length,own=perm()==='OWNER';
@@ -20763,7 +21363,7 @@ body.gr-reg-open{overflow:hidden}
  function mkDefaults(cat,mode){
   var d={title:'',desc:'',lv:2,axes:[],kind2:'',type:'같이 하기',place:'',address:'',meetAt:'',date:defDate(),endDate:'',time:cat==='REGULAR'?'07:00':'10:00',
    seats:({NORMAL:12,REGULAR:'',EDU:12,SOCIAL:6,VOL:10})[cat],days:[],dur:'50분',rain:RAINS[2],price:0,mat:0,inc:[],excNote:'',refund:(G('REFUNDDEF')||'출발 3일 전까지 전액 환불, 이후 50% 환불, 당일 취소는 환불되지 않습니다'),
-   safe:(G('SAFEDEF')||''),makeup:(G('MAKEUPDEF')||''),feeKind:'무료',stay:'',planNote:'',n:1,vol:2,costNote:'',extra:'',capName:'',photoData:''};
+   safe:(G('SAFEDEF')||''),makeup:(G('MAKEUPDEF')||''),feeKind:'무료',stay:'',planNote:'',n:1,vol:2,costNote:'',extra:'',capName:'',photoData:'',sido:'',sigungu:'',sub:'',topics:[],topicsNew:[],pq:'',topicNew:''};
   if(mode==='MEMBER'){d.seats=cat==='REGULAR'?'':4;}
   return d;
  }
@@ -20777,6 +21377,7 @@ body.gr-reg-open{overflow:hidden}
   if(cat&&!actOf(cat))cat=null;
   RG={mode:mode,cat:cat||null,step:cat?1:0,d:cat?mkDefaults(cat,mode):{},err:'',src:opt.src||null,from:opt.from||'',fixed:!!cat};
   if(opt.d)Object.keys(opt.d).forEach(function(k){RG.d[k]=opt.d[k];});
+  if(cat==='NORMAL'&&RG.src)applySrc(RG.src);
   draw();return true;
  };
  W.guriOverlayBack=function(){if(RG){W.guriRegClose();return true;}var iv=D.getElementById('grInv');if(iv){iv.parentNode.removeChild(iv);D.body.classList.remove('gr-reg-open');return true;}return false;};
@@ -20792,18 +21393,89 @@ body.gr-reg-open{overflow:hidden}
  var LVS=[[1,'★ 아주 쉬움'],[2,'★★ 쉬움'],[3,'★★★ 보통'],[4,'★★★★ 조금 힘듦'],[5,'★★★★★ 힘듦']];
  function lvOptions(){try{var L=G('LV');if(Array.isArray(L)&&L.length)return L.map(function(x){return [x[1],(W.stars?W.stars(x[1]):'')+' '+x[0]];});}catch(e){}return LVS;}
 
+ /* ---- 나가요: 등록된 장소·행사에서만 만든다 / 시도·시군구 ---- */
+ function srcObj(sr){if(!sr)return null;if(sr.kind==='PLACE')return (W.SPOTS||[]).filter(function(p){return String(p.id)===String(sr.id);})[0]||null;return (W.discEvents?W.discEvents():[]).filter(function(e){return String(e.event_id||e.id)===String(sr.id);})[0]||null;}
+ function evNm(e){return (typeof W.discEventName==='function'?W.discEventName(e):(e.title||e.name))||'';}
+ function applySrc(sr){
+  var o=srcObj(sr);if(!o)return;var isP=sr.kind==='PLACE';
+  var addr=isP?(o.a||''):(o.address||o.place_name||''),nm=isP?o.n:evNm(o),hint=isP?o.ar:(o.region||'');
+  var r=(W.guriRegionOf?(W.guriRegionOf(addr,hint)||W.guriRegionOf(nm+' '+addr)):null);
+  var sb=W.guriSubOfPlace?(isP?W.guriSubOfPlace(o):W.guriSubOfEvent(o)):null;
+  RG.d.place=nm;RG.d.address=addr;RG.d.sido=r?r.sido:'';RG.d.sigungu=r?r.sg:'';RG.d.sub=sb?sb.sub:'';
+  if(!RG.d.axes.length&&sb&&sb.axis)RG.d.axes=[sb.axis];
+ }
+ function regionLine(){var r=RG.d.sido?{sidoShort:(W.GRREGION.sido(RG.d.sido)||{}).s||RG.d.sido,sg:RG.d.sigungu}:null;return r?W.guriRegionLabel(r):'';}
+ function regionSel(req){
+  var L=(W.GRREGION&&W.GRREGION.list)||[],sg=RG.d.sido?W.guriSigunguList(RG.d.sido):[];
+  return '<div class="gr7-two"><div><label class="gr7-l'+(req?' req':'')+'">시·도</label><select data-f="sido"><option value="">선택</option>'+L.map(function(x){return '<option value="'+esc(x.n)+'"'+(RG.d.sido===x.n?' selected':'')+'>'+esc(x.n)+'</option>';}).join('')+'</select></div>'+
+   '<div><label class="gr7-l'+(req?' req':'')+'">시·군·구</label><select data-f="sigungu"><option value="">'+(RG.d.sido?'선택':'시·도를 먼저')+'</option>'+sg.map(function(x){return '<option value="'+esc(x)+'"'+(RG.d.sigungu===x?' selected':'')+'>'+esc(x)+'</option>';}).join('')+'</select></div></div>'+
+   '<div class="gr7-h">일반 시는 “수원시”처럼, 서울·광역시는 “성동구”처럼 고릅니다. 이렇게 저장해야 시·군·구로 모임을 찾을 수 있습니다.</div>';
+ }
+ function pickItems(){
+  var q=String(RG.d.pq||'').trim().toLowerCase(),toks=q.split(/\s+/).filter(Boolean),out=[];
+  function lab(r){return r?W.guriRegionLabel(r):'';}
+  function hit(txt){txt=txt.toLowerCase();return toks.every(function(t){return txt.indexOf(t)>=0;});}
+  var evs=(W.discEvents?W.discEvents():[]).filter(function(e){return (e.publication_state||'PUBLISHED')==='PUBLISHED'&&e.lifecycle_state!=='ENDED';});
+  if(q){
+   (W.SPOTS||[]).forEach(function(p){if(p.status!=='PUBLISHED'||out.length>=40)return;var sb=W.guriSubOfPlace(p),r=W.guriRegionOf(p.a||'',p.ar);var txt=[p.n,p.a,p.ar,sb?sb.sub:'',(p.k||[]).join(' '),lab(r)].join(' ');if(hit(txt))out.push({kind:'PLACE',id:p.id,n:p.n,line:[lab(r),sb?sb.sub:'','장소'].filter(Boolean).join(' · ')});});
+   evs.forEach(function(e){if(out.length>=60)return;var sb=W.guriSubOfEvent(e),r=W.guriRegionOf(e.address||e.place_name||'',e.region),nm=evNm(e);var txt=[nm,e.place_name,e.address,e.region,e.city,sb?sb.sub:'',(e.theme||[]).join(' '),lab(r)].join(' ');if(hit(txt))out.push({kind:'EVENT',id:e.event_id||e.id,n:nm,line:[lab(r),sb?sb.sub:'행사','행사 '+(e.start||e.start_date||'')].filter(Boolean).join(' · ')});});
+  }else{
+   evs.slice(0,6).forEach(function(e){var sb=W.guriSubOfEvent(e),r=W.guriRegionOf(e.address||e.place_name||'',e.region);out.push({kind:'EVENT',id:e.event_id||e.id,n:evNm(e),line:[lab(r),sb?sb.sub:'행사','행사 '+(e.start||e.start_date||'')].filter(Boolean).join(' · ')});});
+  }
+  return out;
+ }
+ function pickListHTML(){
+  var it=pickItems(),q=String(RG.d.pq||'').trim();
+  if(!it.length)return '<div class="gr7-h" style="margin:10px 0">'+(q?'“'+esc(q)+'”로 등록된 곳을 찾지 못했습니다.':'장소·행사 이름이나 지역(예: 성동구, 미술관)을 적어 보세요.')+'</div>';
+  return (q?'':'<div class="gr7-h" style="margin:8px 0">곧 열리는 행사입니다. 장소는 위 검색창에서 찾으세요.</div>')+it.map(function(x){return '<button class="gr7-choice" data-grr-pickplace="'+x.kind+':'+esc(x.id)+'"><span><b>'+esc(x.n)+'</b><small>'+esc(x.line)+'</small><em>이곳으로 모임 만들기</em></span></button>';}).join('');
+ }
+ function pickPhase(a){
+  var h='<div class="gr7-note"><b>나가요는 등록된 장소나 행사로 만듭니다.</b> 이름이나 지역으로 찾아 <b>“이곳으로 모임 만들기”</b>를 누르세요. 장소·행사 정보와 지역(시·군·구)이 모임에 자동으로 붙어 검색이 쉬워집니다.</div>';
+  h+='<label class="gr7-l req">가볼 장소·행사 찾기</label><input data-f="pq" type="search" id="grrPq" value="'+esc(RG.d.pq||'')+'" placeholder="예: 성동구 미술관 · 고양호수예술축제">';
+  h+='<div id="grrPickList">'+pickListHTML()+'</div>';
+  if(RG.reqDone){
+   h+='<div class="gr7-note gr7-ok" style="margin-top:12px"><b>등록 요청을 보냈습니다.</b> 운영진이 확인해 장소·행사로 등록하면 목록에 나타나고, 그때 모임을 만들 수 있습니다. (임시 모임은 만들 수 없습니다)</div>';
+  }else if(RG.req){
+   h+='<div class="gr7-proxy" style="margin-top:12px"><b>장소·행사 등록 요청</b><div class="gr7-h">승인된 뒤에 모임을 만들 수 있습니다.</div>'+
+    sel('rqKind','구분',['장소','행사'],1)+fi('rqName','이름','text',{req:1,ph:'예: 응봉산 개나리길'})+regionSel(true)+fi('rqAddr','자세한 위치 (아는 만큼)','text',{ph:'도로명·지번·근처 건물'})+
+    '<div style="height:8px"></div><button class="gr7-b gr7-g" style="width:100%" data-grr="sendreq">등록 요청 보내기</button></div>';
+  }else{
+   h+='<button class="gr7-b gr7-o" style="width:100%;margin-top:12px" data-grr="openreq">찾는 곳이 없어요 · 장소·행사 등록 요청</button>';
+  }
+  h+='<div class="gr7-note" style="margin-top:14px"><b>장소 없이 만나고 싶으신가요?</b> 모임 의사가 있다면 얼마든지 만날 수 있어요.<div class="gr7-kinds" style="margin-top:8px"><button type="button" class="gr7-kb" data-grr-pick="REGULAR">움직여요 · 걷기<span>정해진 요일에 함께 걷기·운동</span></button><button type="button" class="gr7-kb" data-grr-pick="SOCIAL">만나요 · 한 번<span>한 번 만나 이야기하기</span></button><button type="button" class="gr7-kb" data-grr-pick="VOL">나눠요 · 기타<span>경험과 시간을 나누기</span></button></div></div>';
+  return h;
+ }
+ function srcBlock(){
+  var d=RG.d,r=regionLine();
+  return '<div class="gr7-src">📍 <b>'+esc(RG.src.title||d.place)+'</b>'+(r?'<br><small>'+esc(r)+(d.sub?' · '+esc(d.sub):'')+' · '+(RG.src.kind==='EVENT'?'등록된 행사':'등록된 장소')+'</small>':(d.sub?'<br><small>'+esc(d.sub)+'</small>':''))+'</div>'+
+   '<div class="gr7-h">장소·행사 정보와 지역은 등록된 내용으로 자동 저장됩니다.</div><button class="gr7-b gr7-o" style="margin:6px 0 10px" data-grr="repick">다른 곳으로 바꾸기</button>';
+ }
+ function eduBlock(){
+  var d=RG.d,ax=d.axes[0]||'',h='';
+  h+='<label class="gr7-l req">배우는 주제 대분류 <span class="gr7-opt">(하나)</span></label><div class="gr7-axrow">'+AXK.map(function(k){var on=ax===k;return '<button type="button" class="gr7-axb'+(on?' on':'')+'" data-grr-axis="'+k+'"><b>'+k+'</b><span>'+({눈:'보며 배움',입:'말하며 배움',손:'만들며 배움',머리:'익히며 배움',몸:'움직이며 배움'})[k]+'</span></button>';}).join('')+'</div>';
+  if(ax){
+   var all=W.guriEduTopics(ax);
+   h+='<label class="gr7-l req">세부 주제 <span class="gr7-opt">(1~3개)</span></label><div class="gr7-kinds" id="grrTopics">'+all.map(function(t){return '<button type="button" class="gr7-kb'+(d.topics.indexOf(t)>=0?' on':'')+'" data-grr-topic="'+esc(t)+'">'+esc(t)+'</button>';}).join('')+d.topicsNew.map(function(t){return '<button type="button" class="gr7-kb on" data-grr-topicdel="'+esc(t)+'">'+esc(t)+'<span>검토 대기 ✕</span></button>';}).join('')+'</div>';
+   h+='<div class="gr7-two"><div><input data-f="topicNew" type="text" value="'+esc(d.topicNew||'')+'" placeholder="목록에 없는 주제 직접 입력" maxlength="16"></div><div><button class="gr7-b gr7-o" style="width:100%" data-grr="topicadd">직접 추가</button></div></div><div class="gr7-h">직접 입력한 주제는 “검토 대기”로 모임에 붙고, 대표가 승인하면 모두의 목록에 추가됩니다.</div>';
+  }else h+='<div class="gr7-h">대분류를 먼저 고르면 세부 주제가 나옵니다.</div>';
+  return h;
+ }
+
  function step1(a){
   var d=RG.d,h='';
+  if(a.cat==='NORMAL'&&!RG.src)return pickPhase(a);
   if(RG.mode==='PROXY'){
    var caps=(G('ACCOUNTS')||[]).filter(function(x){return x.role==='CAPTAIN';});
    h+='<div class="gr7-proxy"><label class="gr7-l">진행 캡틴</label><select data-f="capName"><option value="">운영진이 직접 진행</option>'+caps.map(function(c){return '<option value="'+esc(c.n)+'"'+(d.capName===c.n?' selected':'')+'>'+esc(c.n)+' 캡틴 대신 등록</option>';}).join('')+'</select>'+
     '<div class="gr7-h">캡틴을 고르면 그 캡틴이 진행하는 모임으로 등록되고, <b>“등록자: '+esc(me().n)+' (대신 등록)”</b>이 기록에 남습니다. 캡틴에게는 알림이 갑니다.</div></div>';
   }
+  if(a.cat==='NORMAL'&&RG.src)h+=srcBlock();
   h+=fi('title','제목','text',{req:1,ph:'구리한강공원 코스모스 산책'});
   h+=ta('desc','어떤 모임인가요','어떤 분들과 어떻게 보내는지 편하게 적어 주세요',1);
   h+='<label class="gr7-l">대표사진 <span class="gr7-opt">(선택)</span></label><input type="file" accept="image/*" data-f="photo">'+
    (d.photoData?'<img class="gr7-ph" src="'+esc(d.photoData)+'" alt="대표사진"><button class="btn btn-o btn-s" data-grr="photoclear" style="margin-top:6px">사진 지우기</button>':'<div class="gr7-h">없으면 승인된 장소 사진이나 기본 이미지를 씁니다.</div>');
-  if(a.axes){
+  if(a.cat==='EDU'){h+=eduBlock();}
+  else if(a.axes){
    h+='<label class="gr7-l req">무엇인가요 <span class="gr7-opt">(하나 이상)</span></label><div class="gr7-axrow">'+AXK.map(function(k){var on=d.axes.indexOf(k)>=0;return '<button type="button" class="gr7-axb'+(on?' on':'')+'" data-grr-axis="'+k+'"><b>'+k+'</b><span>'+AX[k]+'</span></button>';}).join('')+'</div>'+
     '<div class="gr7-h">눈=보고 감상 · 입=먹고 이야기 · 손=만들고 그리기 · 머리=배우고 생각 · 몸=걷고 움직이기</div>';
   }else{
@@ -20818,9 +21490,13 @@ body.gr-reg-open{overflow:hidden}
  }
  function step2(a){
   var d=RG.d,h='';
-  if(RG.src)h+='<div class="gr7-src">📍 <b>'+esc(RG.src.title||'')+'</b>(으)로 가는 모임입니다. 출처가 함께 저장됩니다.</div>';
-  h+=fi('place',a.cat==='NORMAL'?'목적지':'장소','text',{req:1,ph:'예: 장자호수공원 체조광장'});
-  h+=fi('address','주소 (아는 만큼)','text',{ph:'도로명·지번·시군구'},'주소가 있으면 거리·권역 검색이 정확해집니다.');
+  if(a.cat==='NORMAL'&&RG.src)h+=srcBlock();
+  else if(RG.src)h+='<div class="gr7-src">📍 <b>'+esc(RG.src.title||'')+'</b>(으)로 가는 모임입니다. 출처가 함께 저장됩니다.</div>';
+  if(a.cat!=='NORMAL'){
+   h+=regionSel(true);
+   h+=fi('place','장소 이름 (선택)','text',{ph:'예: 장자호수공원 체조광장'});
+   h+=fi('address','자세한 주소 (아는 만큼)','text',{ph:'도로명·지번 — 모르면 비워도 됩니다'},'시·도와 시·군·구가 정해져 있어 주소는 아는 만큼만 적으시면 됩니다.');
+  }
   h+=fi('meetAt','만나는 곳','text',{ph:'예: 구리역 1번 출구 · 주차장 입구'});
   if(a.cat==='REGULAR'){
    h+='<label class="gr7-l req">요일</label><div class="gr7-days">'+DAYS.map(function(x){return '<button type="button" class="gr7-day'+(d.days.indexOf(x)>=0?' on':'')+'" data-grr-day="'+x+'">'+x+'</button>';}).join('')+'</div>';
@@ -20904,14 +21580,18 @@ body.gr-reg-open{overflow:hidden}
  function valid(step){
   var d=RG.d,a=actOf(RG.cat),t=function(k){return String(d[k]==null?'':d[k]).trim();};
   if(step===1){
+   if(a.cat==='NORMAL'&&!RG.src)return '먼저 가볼 장소나 행사를 골라 주세요';
    if(t('title').length<2)return '제목을 적어 주세요';
    if(!t('desc'))return '어떤 모임인지 적어 주세요';
-   if(a.axes&&!d.axes.length)return '“무엇인가요”를 하나 이상 골라 주세요 (눈·입·손·머리·몸)';
+   if(a.cat==='NORMAL'&&!RG.src)return '먼저 가볼 장소나 행사를 골라 주세요';
+   if(a.cat==='EDU'){if(d.axes.length!==1)return '배우는 주제 대분류를 하나 골라 주세요 (눈·입·손·머리·몸)';var tc=d.topics.length+d.topicsNew.length;if(tc<1)return '세부 주제를 1개 이상 골라 주세요';if(tc>3)return '세부 주제는 3개까지 고를 수 있습니다';}
+   else if(a.axes&&!d.axes.length)return '“무엇인가요”를 하나 이상 골라 주세요 (눈·입·손·머리·몸)';
    if(!a.axes&&a.tab!=='t'&&!d.kind2)return '“무엇인가요”를 골라 주세요';
    if(a.cat==='EDU'&&/자격증\s*(취득|반|과정)/.test(t('title')+t('desc')))return '자격증 취득반은 등록할 수 없습니다. “○○로 일해본 이야기”처럼 적어 주세요';
   }
   if(step===2){
-   if(!t('place'))return (a.cat==='NORMAL'?'목적지':'장소')+'를 적어 주세요';
+   if(a.cat==='NORMAL'){if(!RG.src)return '먼저 가볼 장소나 행사를 골라 주세요';}
+   else{if(!t('sido'))return '시·도를 골라 주세요';if(!t('sigungu'))return '시·군·구를 골라 주세요';}
    if(a.cat==='REGULAR'){if(!d.days.length)return '요일을 하나 이상 골라 주세요';if(!t('time'))return '시작 시간을 넣어 주세요';}
    else{if(!t('date'))return '날짜를 넣어 주세요';if(t('date')<todayS())return '지난 날짜로는 등록할 수 없습니다';if(!t('time'))return '시간을 넣어 주세요';
     if(t('endDate')&&t('endDate')<t('date'))return '종료일은 시작일보다 빠를 수 없습니다';}
@@ -20939,9 +21619,16 @@ body.gr-reg-open{overflow:hidden}
   o.type=cat==='EDU'?(t('type')||'같이 하기'):cat==='REGULAR'?'운동':cat==='SOCIAL'?(d.kind2||'한 번'):cat==='VOL'?'재능기부':'산책';
   o.meetStyle=cat==='REGULAR'?'group':cat==='EDU'?'learn':'quick';
   o.axes=a.axes?d.axes.slice():[];
+  if(cat==='EDU'&&o.axes[0])o.topicAxis=o.axes[0];
   o.kind2=a.axes?(G('axisLegacy')?W.axisLegacy(o.axes[0]):o.axes[0]+'으로'):(d.kind2||'');
-  o.venueName=t('place');o.venueAddress=t('address');o.venueDetail=t('meetAt');
-  o.place=o.venueName+(o.venueAddress?' · '+o.venueAddress:'')+(o.venueDetail?' · '+o.venueDetail:'');
+  o.venueName=t('place');o.venueDetail=t('meetAt');
+  var sdo=W.GRREGION&&W.GRREGION.sido(t('sido')),rl=sdo?(sdo.s+(t('sigungu')?' '+t('sigungu'):'')):'';
+  o.sido=sdo?sdo.n:'';o.sigungu=t('sigungu');o.zoneLabel=sdo?sdo.z:'';
+  o.venueAddress=(cat==='NORMAL')?t('address'):[sdo?sdo.n:'',t('sigungu'),t('address')].filter(Boolean).join(' ');
+  o.addr=o.venueAddress;
+  o.place=(o.venueName?o.venueName+' · ':'')+(cat==='NORMAL'?(t('address')||rl):(t('address')?o.venueAddress:rl))+(o.venueDetail?' · '+o.venueDetail:'');
+  if(cat==='NORMAL'&&t('sub'))o.sub=t('sub');
+  if(cat==='EDU'){o.topics=d.topics.slice();o.topicsPending=d.topicsNew.slice();}
   o.venue={n:o.venueName,a:o.venueAddress,detail:o.venueDetail,venueOnly:true};o.placeProposal=false;
   o.rain=t('rain');o.refund=t('refund')||'무료 활동입니다';
   if(d.photoData)o.photoData=d.photoData;
@@ -20971,10 +21658,19 @@ body.gr-reg-open{overflow:hidden}
    if(s.spotId)o.spotId=s.spotId;}
   return o;
  }
+function sendPlaceReq(){
+  var d=RG.d,nm=String(d.rqName||'').trim();
+  if(nm.length<2){RG.err='장소·행사 이름을 적어 주세요';draw();return;}
+  if(!d.sido||!d.sigungu){RG.err='시·도와 시·군·구를 골라 주세요';draw();return;}
+  var sd=W.GRREGION.sido(d.sido),addr=[sd?sd.n:'',d.sigungu,String(d.rqAddr||'').trim()].filter(Boolean).join(' ');
+  try{var Q=G('SPOTREQ');if(Array.isArray(Q))Q.push({id:'q'+nextSeq(),n:nm,by:me().n,a:addr,memo:(d.rqKind||'장소')+' 등록 요청 · 모임 만들기용',kind:d.rqKind||'장소',sido:sd?sd.n:'',sigungu:d.sigungu,forMeet:true});}catch(e){}
+  RG.reqDone=true;RG.req=false;RG.err='';draw();
+ }
  function save(){
   var w=valid(1)||valid(2)||valid(3);
   if(w){RG.err=w;RG.step=valid(1)?1:valid(2)?2:3;draw();return;}
   var o=make(),M=MEETS(),m=RG.mode;
+  try{(o.topicsPending||[]).forEach(function(tp){W.guriTopicPropose(o.axes[0],tp,o.id);});}catch(e){}
   var A=G('ATT');if(A&&!A[o.id])A[o.id]={};
   M.unshift(o);
   try{if(W.GR&&W.GR.adoptMeet)W.GR.adoptMeet(o);}catch(e){}
@@ -21011,6 +21707,8 @@ body.gr-reg-open{overflow:hidden}
   e.stopPropagation();
   if(k==='photo'){var f=t.files&&t.files[0];if(!f)return;shrink(f,function(u){if(!RG)return;if(!u){RG.err='사진을 읽지 못했습니다. 다른 사진을 골라 주세요';}else{RG.err='';RG.d.photoData=u;}keepScroll(draw);});return;}
   RG.d[k]=t.value;
+  if(k==='sido'){RG.d.sigungu='';keepScroll(draw);return;}
+  if(k==='pq'){var pl=D.getElementById('grrPickList');if(pl)pl.innerHTML=pickListHTML();return;}
  }
  function keepScroll(fn){var b=D.querySelector('#grReg .gr7-body'),y=b?b.scrollTop:0;fn();var b2=D.querySelector('#grReg .gr7-body');if(b2)b2.scrollTop=y;}
  W.addEventListener('input',onField,true);
@@ -21020,17 +21718,27 @@ body.gr-reg-open{overflow:hidden}
   var t=e.target;if(!t||!t.closest)return;
   var bx=t.closest('#grReg');
   if(bx){
-   e.stopPropagation();var b=t.closest('[data-grr],[data-grr-axis],[data-grr-kind],[data-grr-day],[data-grr-inc],[data-grr-pick],[data-grr-rep],[data-grr-repsend]');if(!b)return;e.preventDefault();
+   e.stopPropagation();var b=t.closest('[data-grr],[data-grr-axis],[data-grr-kind],[data-grr-day],[data-grr-inc],[data-grr-pick],[data-grr-rep],[data-grr-repsend],[data-grr-pickplace],[data-grr-topic],[data-grr-topicdel]');if(!b)return;e.preventDefault();
    if(b.hasAttribute('data-grr-pick')){var c=b.getAttribute('data-grr-pick');RG.cat=c;RG.step=1;RG.d=mkDefaults(c,RG.mode);RG.err='';draw();return;}
    if(b.hasAttribute('data-grr-rep')){RG.rep=b.getAttribute('data-grr-rep');keepScroll(drawReport);return;}
    if(b.hasAttribute('data-grr-repsend')){sendReport();return;}
    if(!RG)return;
-   if(b.hasAttribute('data-grr-axis')){toggle(RG.d.axes,b.getAttribute('data-grr-axis'));keepScroll(draw);return;}
+   if(b.hasAttribute('data-grr-pickplace')){var pv=b.getAttribute('data-grr-pickplace'),ix=pv.indexOf(':');RG.src={kind:pv.slice(0,ix),id:pv.slice(ix+1),title:''};var so=srcObj(RG.src);RG.src.title=so?(RG.src.kind==='PLACE'?so.n:evNm(so)):'';if(RG.src.kind==='PLACE')RG.src.spotId=RG.src.id;
+    applySrc(RG.src);if(!RG.d.title)RG.d.title=RG.src.title+' 같이 가요';RG.err='';draw();return;}
+   if(b.hasAttribute('data-grr-topic')){var tp=b.getAttribute('data-grr-topic');toggle(RG.d.topics,tp);keepScroll(draw);return;}
+   if(b.hasAttribute('data-grr-topicdel')){var td=b.getAttribute('data-grr-topicdel'),ti=RG.d.topicsNew.indexOf(td);if(ti>=0)RG.d.topicsNew.splice(ti,1);keepScroll(draw);return;}
+   if(b.hasAttribute('data-grr-axis')){var axk=b.getAttribute('data-grr-axis');if(RG.cat==='EDU'){if(RG.d.axes[0]!==axk){RG.d.axes=[axk];RG.d.topics=[];RG.d.topicsNew=[];}}else toggle(RG.d.axes,axk);keepScroll(draw);return;}
    if(b.hasAttribute('data-grr-kind')){RG.d.kind2=b.getAttribute('data-grr-kind');keepScroll(draw);return;}
    if(b.hasAttribute('data-grr-day')){toggle(RG.d.days,b.getAttribute('data-grr-day'));keepScroll(draw);return;}
    if(b.hasAttribute('data-grr-inc')){toggle(RG.d.inc,b.getAttribute('data-grr-inc'));keepScroll(draw);return;}
    var a=b.getAttribute('data-grr');
    if(a==='close'){W.guriRegClose();return;}
+   if(a==='repick'){RG.src=null;RG.d.place='';RG.d.address='';RG.d.sido='';RG.d.sigungu='';RG.d.sub='';RG.step=1;RG.err='';draw();return;}
+   if(a==='openreq'){RG.req=true;keepScroll(draw);return;}
+   if(a==='topicadd'){var tn=String(RG.d.topicNew||'').replace(/\s+/g,' ').trim();if(!tn){RG.err='추가할 주제를 적어 주세요';draw();return;}
+    var base=W.guriEduTopics(RG.d.axes[0]||'');if(base.indexOf(tn)>=0){if(RG.d.topics.indexOf(tn)<0)RG.d.topics.push(tn);}else if(RG.d.topicsNew.indexOf(tn)<0)RG.d.topicsNew.push(tn);
+    RG.d.topicNew='';RG.err='';keepScroll(draw);return;}
+   if(a==='sendreq'){sendPlaceReq();return;}
    if(a==='photoclear'){RG.d.photoData='';keepScroll(draw);return;}
    if(a==='back0'){RG.step=0;RG.cat=null;RG.err='';draw();return;}
    if(a==='prev'){RG.step=Math.max(1,RG.step-1);RG.err='';draw();return;}
