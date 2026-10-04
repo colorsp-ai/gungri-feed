@@ -1,6 +1,6 @@
 {
  "schema": "GUNGRI_FEED_V1",
- "generatedAt": "2026-10-04T09:17:30+09:00",
+ "generatedAt": "2026-10-04T11:38:43+09:00",
  "source": {
   "name": "한국관광공사 TourAPI 4.0 (KorService2)",
   "page": "https://www.data.go.kr/data/15101578/openapi.do",
@@ -9,18 +9,18 @@
  "stats": {
   "places": 1531,
   "events": 113,
-  "newPlaces": 200,
+  "newPlaces": 0,
   "newEvents": 0,
-  "apiCalls": 630,
+  "apiCalls": 16,
   "mock": false
  },
  "options": {
   "showExamples": true
  },
  "log": [
-  "목록 확인: 새로 받을 항목 836건(행사 0) · 이번 실행 상한 200건",
-  "상세 수집 200건 · API 호출 630건",
-  "큐레이션 표시(로컬100 등) 1건"
+  "목록 확인: 새로 받을 항목 0건(행사 0) · 이번 실행 상한 200건",
+  "상세 수집 0건 · API 호출 16건",
+  "큐레이션 표시(로컬100 등) 0건"
  ],
  "places": [
   {
