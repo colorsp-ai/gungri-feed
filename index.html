@@ -21628,7 +21628,102 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  if(W.GR&&typeof W.GR.addExperience==='function'){var ae=W.GR.addExperience;W.GR.addExperience=function(x){var r=ae.apply(this,arguments);if(r&&x&&x.sourceKind!=='CLOUD')later();return r;};}
  /* 앱을 열 때 로그인 상태면 조용히 불러오기 */
  if(S)setTimeout(function(){sync(true);},2500);
- W.guriCloud={state:function(){return {on:!!S,email:S&&S.email,uid:S&&S.uid,last:S&&S.last,localId:S&&S.localId};},signIn:function(e,p){return auth('in',e,p);},signUp:function(e,p,n){return auth('up',e,p,n);},signOut:signOut,sync:function(){return sync(false);},rows:rows,open:openSheet};
+ W.guriCloud={_fresh:fresh,_raw:raw,_rest:rest,_sess:function(){return S;},_url:URL_,state:function(){return {on:!!S,email:S&&S.email,uid:S&&S.uid,last:S&&S.last,localId:S&&S.localId};},signIn:function(e,p){return auth('in',e,p);},signUp:function(e,p,n){return auth('up',e,p,n);},signOut:signOut,sync:function(){return sync(false);},rows:rows,open:openSheet};
+})();
+</script>
+<!-- GUNGRI_R17_STAGE7_COMM -->
+<script id="guri-r17-community">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriComm)return;W.__guriComm=1;
+ /* 회원 사진·이야기: 가볼 곳/행사 상세에 붙는다. 읽기는 누구나, 쓰기는 보관함 로그인 필요.
+    사진은 올리면 '확인 대기', 운영진이 승인해야 모두에게 보인다. 이야기는 바로 보이고 운영진이 숨길 수 있다. */
+ var C=function(){return W.guriCloud;};
+ var CACHE={},BUSY={},STAFF=null,PEND=null,MSG={};
+ function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function sess(){return C()&&C()._sess();}
+ function pub(path){return C()._url+'/storage/v1/object/public/member-photos/'+path.split('/').map(encodeURIComponent).join('/');}
+ function uuid(){try{return crypto.randomUUID();}catch(e){return 'x'+Date.now().toString(36)+Math.random().toString(36).slice(2,10);}}
+ function human(e){var m=String(e&&(e.msg||e.message||e.error_description||e.error)||e||'');
+  if(/network|failed to fetch|abort|timeout/i.test(m))return '서버에 연결되지 않아요. 잠시 뒤에 다시 해 주세요.';
+  if(/row-level|policy|violat|403|unauthor/i.test(m))return '올릴 권한이 없어요. 다시 로그인해 보세요.';
+  return '잘 되지 않았어요.'+(m?' ('+m.slice(0,100)+')':'');}
+ /* ---- 읽기 ---- */
+ function load(type,id){var k=type+'|'+id;if(BUSY[k])return;BUSY[k]=1;
+  var q='target_type=eq.'+type+'&target_id=eq.'+encodeURIComponent(id);
+  var tok=null;
+  Promise.all([C()._raw('/rest/v1/member_photos?select=id,user_id,caption,storage_path,status,created_at&'+q+'&order=created_at.desc&limit=30',{},sess()?sess().access_token:null),
+   C()._raw('/rest/v1/member_stories?select=id,user_id,body,status,created_at&'+q+'&order=created_at.desc&limit=30',{},sess()?sess().access_token:null),
+   C()._raw('/rest/v1/profiles?select=id,nickname&limit=500',{},sess()?sess().access_token:null).catch(function(){return [];})]).then(function(r){
+   var nick={};(r[2]||[]).forEach(function(p){nick[p.id]=p.nickname;});
+   CACHE[k]={at:Date.now(),photos:r[0]||[],stories:r[1]||[],nick:nick};BUSY[k]=0;paint(type,id);
+  },function(e){BUSY[k]=0;CACHE[k]=CACHE[k]||{at:Date.now(),photos:[],stories:[],nick:{},err:1};paint(type,id);});}
+ function me(){var s=sess();return s&&s.uid;}
+ function html(type,id,name){var k=type+'|'+id,c=CACHE[k],u=me(),m=MSG[k]||'';
+  if(!c)return '<div class="gcm-sm">불러오는 중…</div>';
+  var ph=c.photos.map(function(p){var mine=u&&p.user_id===u,ok=p.status==='OK';if(!ok&&!mine)return '';
+   return '<figure class="gcm-f"><img data-gcm-img="1" loading="lazy" alt="회원이 올린 사진" src="'+esc(pub(p.storage_path))+'"><figcaption>'+esc(p.caption||'')+
+    (ok?'':' <b class="gcm-w">확인 대기 중 (나만 보여요)</b>')+(c.nick[p.user_id]?'<i> · '+esc(c.nick[p.user_id])+'</i>':'')+
+    (mine&&!ok?' <button type="button" class="gcm-x" data-gcm="delp" data-id="'+esc(p.id)+'" data-path="'+esc(p.storage_path)+'">지우기</button>':'')+'</figcaption></figure>';}).join('');
+  var st=c.stories.map(function(s){return '<div class="gcm-s">“'+esc(s.body)+'”<i> — '+esc(c.nick[s.user_id]||'궁리회원')+'</i></div>';}).join('');
+  var write=u?'<div class="gcm-row"><button type="button" class="gcm-b" data-gcm="photo">📷 사진 올리기</button><button type="button" class="gcm-b gcm-g" data-gcm="story">✍ 이야기 쓰기</button></div>'+
+    '<div class="gcm-sm">내가 찍은 사진만 올려 주세요. 얼굴이 크게 나온 사진은 그분의 동의가 있어야 해요. 운영진이 확인하면 모두에게 보여요.</div>':
+    '<div class="gcm-row"><button type="button" class="gcm-b gcm-g" data-gcm="login">로그인하고 사진·이야기 남기기</button></div>';
+  return (ph?'<div class="gcm-grid">'+ph+'</div>':'')+(st?'<div class="gcm-ss">'+st+'</div>':'')+(!ph&&!st?'<div class="gcm-sm">아직 회원이 남긴 사진·이야기가 없어요. 첫 번째가 되어 주세요.</div>':'')+write+(m?'<div class="gcm-msg" role="status">'+esc(m)+'</div>':'')+(c.err?'<div class="gcm-sm">서버에 연결되지 않아 새 글은 보이지 않을 수 있어요.</div>':'');}
+ function paint(type,id){[].forEach.call(D.querySelectorAll('[data-gcm-box]'),function(b){if(b.getAttribute('data-gcm-box')===type+'|'+id)b.querySelector('.gcm-in').innerHTML=html(type,id,b.getAttribute('data-name'));});}
+ function box(type,id,name){var k=type+'|'+id,c=CACHE[k];if(!c||Date.now()-c.at>60000)setTimeout(function(){load(type,id);},0);
+  return '<div class="gcm" data-gcm-box="'+esc(k)+'" data-name="'+esc(name||'')+'"><h3 class="gcm-h">회원이 남긴 사진·이야기</h3><div class="gcm-in">'+html(type,id,name)+'</div></div>';}
+ /* ---- 쓰기 ---- */
+ function say(k,m){MSG[k]=m;var p=k.split('|');paint(p[0],p.slice(1).join('|'));}
+ function resize(file){return new Promise(function(res,rej){var img=new Image(),u=URL.createObjectURL(file);img.onload=function(){var M=1280,w=img.naturalWidth,h=img.naturalHeight,r=Math.min(1,M/Math.max(w,h)),c=D.createElement('canvas');c.width=Math.round(w*r);c.height=Math.round(h*r);c.getContext('2d').drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(u);c.toBlob(function(b){b?res(b):rej({msg:'이미지 변환 실패'});},'image/jpeg',0.82);};img.onerror=function(){rej({msg:'사진을 읽을 수 없어요'});};img.src=u;});}
+ function upload(type,id,name,file){var k=type+'|'+id,s=sess();if(!s)return;say(k,'사진을 올리는 중…');
+  var cap=W.prompt?(W.prompt('사진 설명을 짧게 적어 주세요 (건너뛰려면 빈칸)','')||''):'';
+  resize(file).then(function(blob){var path=s.uid+'/'+uuid()+'.jpg';
+   return fetchUp(path,blob).then(function(){return C()._rest('/member_photos',{method:'POST',body:{user_id:s.uid,target_type:type,target_id:String(id),target_name:String(name||'').slice(0,60),caption:cap.slice(0,200),storage_path:path},prefer:'return=minimal'});});
+  }).then(function(){CACHE[k]=null;load(type,id);say(k,'올렸어요! 운영진이 확인하면 모두에게 보여요.');PEND=null;},function(e){say(k,human(e));});}
+ function fetchUp(path,blob){return C()._fresh().then(function(tok){var s=sess();
+  return fetch(C()._url+'/storage/v1/object/member-photos/'+path.split('/').map(encodeURIComponent).join('/'),{method:'POST',headers:{'apikey':'sb_publishable_eJjV4_VNLYZVIzCURXYmng_6KeYewE4','Authorization':'Bearer '+tok,'Content-Type':'image/jpeg','x-upsert':'false'},body:blob}).then(function(r){if(!r.ok)return r.text().then(function(t){var j={};try{j=JSON.parse(t);}catch(e){}throw j.message?{msg:j.message}:{msg:'HTTP '+r.status};});});});}
+ function story(type,id){var k=type+'|'+id,s=sess();if(!s)return;var t=W.prompt?W.prompt('이야기를 적어 주세요 (500자까지)\n예) 가을엔 해 질 무렵이 제일 좋아요',''):'';
+  t=String(t||'').trim();if(!t)return;say(k,'올리는 중…');
+  C()._rest('/member_stories',{method:'POST',body:{user_id:s.uid,target_type:type,target_id:String(id),body:t.slice(0,500)},prefer:'return=minimal'}).then(function(){CACHE[k]=null;load(type,id);say(k,'이야기를 남겼어요.');},function(e){say(k,human(e));});}
+ function delp(type,id,pid,path){var k=type+'|'+id,s=sess();if(!s||!W.confirm('이 사진을 지울까요?'))return;
+  C()._rest('/member_photos?id=eq.'+encodeURIComponent(pid),{method:'DELETE'}).then(function(){CACHE[k]=null;load(type,id);say(k,'지웠어요.');PEND=null;},function(e){say(k,human(e));});}
+ /* ---- 운영진 ---- */
+ function checkStaff(){var s=sess();if(!s){STAFF=null;return Promise.resolve(false);}if(STAFF!==null&&STAFF.uid===s.uid)return Promise.resolve(STAFF.v);
+  return C()._rest('/staff_roles?select=role').then(function(r){STAFF={uid:s.uid,v:!!(r&&r.length)};return STAFF.v;},function(){return false;});}
+ function staffCard(){var s=sess();if(!s||!STAFF||!STAFF.v||STAFF.uid!==s.uid)return '';
+  return '<div class="cl-card"><b>🛡 운영진 · 회원 사진 확인</b><div class="cl-sm">'+(PEND==null?'대기 중인 사진을 확인해요.':'확인 대기 사진 '+PEND+'장')+'</div><div class="cl-row"><button type="button" class="cl-b" data-gcm="review">확인하러 가기</button></div></div>';}
+ function openReview(){var el=D.getElementById('grRv');if(!el){el=D.createElement('div');el.id='grRv';D.body.appendChild(el);}el.style.display='block';el.innerHTML='<div class="gcm-sheet"><div class="gcm-top"><b>회원 사진 확인</b><button type="button" class="gcm-x2" data-gcm="rclose">닫기</button></div><div id="grRvList">불러오는 중…</div></div>';
+  C()._rest('/member_photos?select=id,user_id,target_type,target_id,target_name,caption,storage_path,created_at&status=eq.PENDING&order=created_at.asc&limit=50').then(function(l){PEND=l.length;var b=D.getElementById('grRvList');if(!b)return;
+   b.innerHTML=l.length?l.map(function(p){return '<div class="gcm-rv" data-pid="'+esc(p.id)+'"><img data-gcm-img="1" src="'+esc(pub(p.storage_path))+'" alt="올라온 사진"><div><b>'+esc(p.target_name||p.target_id)+'</b> <i>('+esc(p.target_type)+')</i><div>'+esc(p.caption||'(설명 없음)')+'</div>'+
+     '<div class="gcm-row"><button type="button" class="gcm-b" data-gcm="ok" data-id="'+esc(p.id)+'">승인</button><button type="button" class="gcm-b gcm-g" data-gcm="hide" data-id="'+esc(p.id)+'">반려</button></div></div></div>';}).join(''):'<div class="gcm-sm">대기 중인 사진이 없어요.</div>';},function(e){var b=D.getElementById('grRvList');if(b)b.textContent=human(e);});}
+ function review(pid,st){var s=sess();C()._rest('/member_photos?id=eq.'+encodeURIComponent(pid),{method:'PATCH',body:{status:st,reviewed_by:s.uid,reviewed_at:new Date().toISOString()},prefer:'return=minimal'}).then(function(){var r=D.querySelector('[data-pid="'+pid+'"]');if(r)r.remove();if(PEND)PEND--;Object.keys(CACHE).forEach(function(k){CACHE[k]=null;});},function(e){var b=D.getElementById('grRvList');if(b)b.insertAdjacentHTML('afterbegin','<div class="gcm-msg">'+esc(human(e))+'</div>');});}
+ /* ---- 화면 연결 ---- */
+ var st=D.createElement('style');st.textContent=
+  '.gcm{margin:18px 0;padding:14px;border:1px solid #d8e2de;border-radius:16px;background:#fff;font-size:17px;line-height:1.5}.gcm-h{font-size:19px;margin:0 0 10px}.gcm-sm{font-size:15px;color:#4b5a60;margin:6px 0}'+
+  '.gcm-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.gcm-f{margin:0}.gcm-f img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;cursor:zoom-in}.gcm-f img.big{grid-column:1/-1}.gcm-f figcaption{font-size:14px;color:#4b5a60}.gcm-w{color:#b36b00}.gcm-x{border:1px solid #b3261e;color:#b3261e;background:#fff;border-radius:8px;min-height:36px;padding:0 8px}'+
+  '.gcm-ss{margin:10px 0}.gcm-s{padding:8px 10px;margin:6px 0;background:#f6f4ec;border-radius:10px;font-size:16px}.gcm-s i{color:#4b5a60;font-size:14px}.gcm-row{display:flex;gap:8px;margin-top:10px}.gcm-b{flex:1;min-height:50px;border-radius:12px;border:0;background:#0f6b45;color:#fff;font-size:17px;font-weight:800}.gcm-b.gcm-g{background:#fff;color:#0f6b45;border:1px solid #0f6b45}.gcm-msg{margin-top:8px;color:#0f6b45;font-weight:700}'+
+  '#grRv{display:none;position:fixed;inset:0;z-index:2147482400;background:rgba(0,0,0,.45);overflow:auto}.gcm-sheet{box-sizing:border-box;max-width:560px;margin:0 auto;min-height:100%;background:#fff;padding:14px 16px 30px}.gcm-top{display:flex;justify-content:space-between;align-items:center;font-size:21px;margin-bottom:10px}.gcm-x2{min-height:46px;padding:0 16px;border-radius:12px;border:1px solid #b8c4be;background:#fff;font-size:17px}.gcm-rv{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #e1e6e3}.gcm-rv img{width:46%;max-height:220px;object-fit:cover;border-radius:10px;flex:none}';
+ D.head.appendChild(st);
+ function wrapDetail(fn,type,idf,namef){var o=W[fn];if(typeof o!=='function')return;W[fn]=function(){var h=o.apply(this,arguments),id,nm;try{id=idf();nm=namef();}catch(e){}if(!id)return h;
+  var i=h.lastIndexOf('<div class="pad"></div>'),b=box(type,String(id),nm);return i>=0?h.slice(0,i)+b+h.slice(i):h+b;};}
+ wrapDetail('uSpotDetail','PLACE',function(){var x=W.SP&&W.SP();return x&&x.id;},function(){var x=W.SP&&W.SP();return x&&x.n;});
+ function evCur(){var id=W.EVENTCUR;if(!id)return null;var l=[];try{l=W.discEvents?W.discEvents():[];}catch(e){}var e=l.filter(function(x){return String(x.event_id||x.id||x.eventId||x.cid)===String(id);})[0];return {id:String(id),n:e?(e.name||e.title||''):''};}
+ wrapDetail('discEventDetail','EVENT',function(){var e=evCur();return e&&e.id;},function(){var e=evCur();return e&&e.n;});
+ var op=W.uPassport;if(typeof op==='function')W.uPassport=function(){var h=op.apply(this,arguments),m='<div class="sec gr3">',i=h.indexOf(m);if(i<0)return h;
+  setTimeout(function(){checkStaff().then(function(v){if(v&&PEND==null)C()._rest('/member_photos?select=id&status=eq.PENDING&limit=100').then(function(l){PEND=l.length;},function(){});});},0);
+  return h.slice(0,i+m.length)+staffCard()+h.slice(i+m.length);};
+ D.addEventListener('click',function(ev){var t=ev.target;if(!t||!t.closest)return;
+  var im=t.closest('[data-gcm-img]');if(im){im.classList.toggle('big');var f=im.closest('.gcm-f');if(f)f.style.gridColumn=im.classList.contains('big')?'1/-1':'';return;}
+  var b=t.closest('[data-gcm]');if(!b)return;var a=b.getAttribute('data-gcm'),bx=b.closest('[data-gcm-box]'),k=bx?bx.getAttribute('data-gcm-box'):'',p=k.split('|'),type=p[0],id=p.slice(1).join('|'),nm=bx?bx.getAttribute('data-name'):'';ev.preventDefault();
+  if(a==='login'){C().open('in');}
+  else if(a==='photo'){var inp=D.createElement('input');inp.type='file';inp.accept='image/*';inp.onchange=function(){if(inp.files&&inp.files[0])upload(type,id,nm,inp.files[0]);};inp.click();}
+  else if(a==='story')story(type,id);
+  else if(a==='delp')delp(type,id,b.getAttribute('data-id'),b.getAttribute('data-path'));
+  else if(a==='review')openReview();
+  else if(a==='rclose'){var e=D.getElementById('grRv');if(e)e.style.display='none';try{W.render();}catch(x){}}
+  else if(a==='ok')review(b.getAttribute('data-id'),'OK');
+  else if(a==='hide')review(b.getAttribute('data-id'),'HIDDEN');});
+ W.guriCommunity={box:box,load:load,cache:function(){return CACHE;},resize:resize};
 })();
 </script>
 <!-- GUNGRI_R17_STAGE7_EXAMPLES -->
