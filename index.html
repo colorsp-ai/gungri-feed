@@ -21392,11 +21392,11 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  /* ---------- 말하기(마이크) ---------- */
  function mic(){var SR=W.SpeechRecognition||W.webkitSpeechRecognition;
   if(!SR){bot('이 폰의 브라우저에서는 말하기를 쓸 수 없어요. 글자로 써서 보내 주세요.');return;}
-  if(W.isSecureContext===false){bot('지금은 파일로 열어 둔 화면이라 마이크를 쓸 수 없어요. 인터넷 주소(https)로 열면 마이크가 켜져요. 그때까지는 글자로 써서 보내 주세요.');return;}
+  if((W.isSecureContext===false||W.location.protocol!=='https:')){bot('지금은 파일로 열어 둔 화면이라 마이크를 쓸 수 없어요. 인터넷 주소(https)로 열면 마이크가 켜져요. 그때까지는 글자로 써서 보내 주세요.');return;}
   if(G.listening&&G.rec){try{G.rec.stop();}catch(e){}return;}
   try{var r=new SR();r.lang='ko-KR';r.interimResults=false;r.maxAlternatives=1;G.rec=r;G.listening=true;
    r.onresult=function(e){var t=e.results&&e.results[0]&&e.results[0][0]?e.results[0][0].transcript:'';G.listening=false;paintBar();if(t)send(t);};
-   r.onerror=function(e){G.listening=false;paintBar();bot((e&&e.error==='not-allowed')?(W.isSecureContext===false?'파일로 연 화면에서는 마이크를 쓸 수 없어요. 인터넷 주소(https)로 열어 주세요.':'마이크를 쓸 수 있게 허락해 주세요. 주소창 왼쪽 자물쇠에서 바꿀 수 있어요.'):'잘 못 들었어요. 한 번 더 말씀해 주세요.');};
+   r.onerror=function(e){G.listening=false;paintBar();bot((e&&e.error==='not-allowed')?((W.isSecureContext===false||W.location.protocol!=='https:')?'파일로 연 화면에서는 마이크를 쓸 수 없어요. 인터넷 주소(https)로 열어 주세요.':'마이크를 쓸 수 있게 허락해 주세요. 주소창 왼쪽 자물쇠에서 바꿀 수 있어요.'):'잘 못 들었어요. 한 번 더 말씀해 주세요.');};
    r.onend=function(){G.listening=false;paintBar();};
    r.start();paintBar();}catch(e){G.listening=false;paintBar();bot('말하기를 시작하지 못했어요. 글자로 써서 보내 주세요.');}}
  /* ---------- 화면 ---------- */
@@ -21422,7 +21422,10 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   var e=D.createElement('div');e.id='grGl';e.setAttribute('role','dialog');e.setAttribute('aria-label','궁리와 이야기하기');
   e.innerHTML='<div class="h"><b>궁리</b><button type="button" data-ggc="speak">소리 켜기</button><button type="button" data-ggc="close">닫기 ✕</button></div><div class="s" style="display:none"></div><div class="m"></div>'+
    '<div class="f"><input id="ggIn" type="text" placeholder="궁리에게 말 걸기…" autocomplete="off" aria-label="궁리에게 할 말"><button type="button" class="snd" data-ggc="send">보내기</button><button type="button" class="mk" data-ggc="mic" aria-label="말로 하기">🎤</button></div>';
-  D.body.appendChild(e);D.body.classList.add('gr-reg-open');paintBar();bot(GREET,{chips:MENU});}
+  D.body.appendChild(e);D.body.classList.add('gr-reg-open');fit();paintBar();bot(GREET,{chips:MENU});}
+ function fit(){var e=box();if(!e)return;var v=W.visualViewport;if(v){e.style.top=v.offsetTop+'px';e.style.height=v.height+'px';e.style.bottom='auto';var m=e.querySelector('.m');if(m)m.scrollTop=m.scrollHeight;}else{e.style.height=W.innerHeight+'px';}}
+ if(W.visualViewport){W.visualViewport.addEventListener('resize',fit);W.visualViewport.addEventListener('scroll',fit);}
+ W.addEventListener('resize',fit);
  function closeG(){var e=box();if(e)e.remove();D.body.classList.remove('gr-reg-open');G.open=false;try{if(G.rec)G.rec.abort();}catch(x){}G.listening=false;try{W.speechSynthesis&&W.speechSynthesis.cancel();}catch(x){}}
  function goFind(){closeG();var c=D.querySelector('[data-ui-axis="place"]');if(c&&D.body.classList.contains('visual-home')){c.click();return;}try{D.body.classList.remove('visual-home');W.UV='t';W.SUB='spot';W.render();}catch(e){}}
  function goPlace(id){closeG();try{W.guriGo('PLACE_DETAIL',{id:id});}catch(e){}}
