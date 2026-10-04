@@ -21539,7 +21539,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   if(/rate limit|too many|after \d+ seconds/i.test(m))return '잠시 뒤에 다시 해 주세요. (너무 자주 눌렀어요)';
   if(/confirm|not confirmed/i.test(m))return '메일 확인이 필요해요. 받은 메일의 확인 단추를 눌러 주세요.';
   if(/network|failed to fetch|abort|timeout|load failed/i.test(m))return '서버에 연결되지 않아요. 인터넷을 확인해 주세요. 기록은 이 폰에 그대로 있어요.';
-  return '잘 되지 않았어요. 잠시 뒤에 다시 해 주세요.';}
+  return '잘 되지 않았어요. 잠시 뒤에 다시 해 주세요.'+(m?' (서버 답: '+m.slice(0,140)+')':'');}
  function raw(path,opt,tok){opt=opt||{};var c=new AbortController(),t=setTimeout(function(){c.abort();},15000);
   var h={'apikey':KEY,'Authorization':'Bearer '+(tok||KEY),'Content-Type':'application/json'};if(opt.prefer)h['Prefer']=opt.prefer;
   return fetch(URL_+path,{method:opt.method||'GET',headers:h,body:opt.body==null?undefined:JSON.stringify(opt.body),signal:c.signal}).then(function(r){clearTimeout(t);
