@@ -21518,6 +21518,119 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   PP=(PP==null?0:PP)+(b.hasAttribute('data-gp-next')?1:-1);try{W.render();}catch(e){}});
 })();
 </script>
+<!-- GUNGRI_R17_STAGE7_CLOUD -->
+<script id="guri-r17-cloud">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriCloud)return;W.__guriCloud=1;
+ /* 궁리 서버(Supabase) 연결: 이메일+비밀번호 가입/로그인, 궁리여권 도장 보관·불러오기.
+    공개용 열쇠(publishable)만 넣는다. 비밀 열쇠(service_role)·DB 비밀번호는 절대 넣지 않는다. 서버가 안 되면 지금처럼 폰 안에서만 동작. */
+ var URL_='https://gvzpdexgpaudnfncpxcs.supabase.co',KEY='sb_publishable_eJjV4_VNLYZVIzCURXYmng_6KeYewE4',LS='gungri_cloud_v1';
+ var S=load(),BUSY=false,MSG='',MODE='in',OPEN=false,LAST='';
+ function load(){try{var j=JSON.parse(localStorage.getItem(LS)||'null');return j&&j.access_token?j:null;}catch(e){return null;}}
+ function save(){try{if(S)localStorage.setItem(LS,JSON.stringify(S));else localStorage.removeItem(LS);}catch(e){}}
+ function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function now(){return Math.floor(Date.now()/1000);}
+ function say(m){MSG=m||'';var el=D.getElementById('grClMsg');if(el)el.textContent=MSG;}
+ function human(e){var m=String(e&&(e.msg||e.message||e.error_description||e.error)||e||'');
+  if(/already registered|already been registered/i.test(m))return '이미 가입된 이메일이에요. “로그인”으로 들어가 주세요.';
+  if(/invalid login|invalid credentials/i.test(m))return '이메일이나 비밀번호가 맞지 않아요.';
+  if(/at least|too short|weak/i.test(m))return '비밀번호는 6자 이상으로 해 주세요.';
+  if(/valid email|invalid.*email|email address/i.test(m)&&!/rate/i.test(m))return '이메일 모양이 맞지 않아요. 예) hong@naver.com';
+  if(/rate limit|too many|after \d+ seconds/i.test(m))return '잠시 뒤에 다시 해 주세요. (너무 자주 눌렀어요)';
+  if(/confirm|not confirmed/i.test(m))return '메일 확인이 필요해요. 받은 메일의 확인 단추를 눌러 주세요.';
+  if(/network|failed to fetch|abort|timeout|load failed/i.test(m))return '서버에 연결되지 않아요. 인터넷을 확인해 주세요. 기록은 이 폰에 그대로 있어요.';
+  return '잘 되지 않았어요. 잠시 뒤에 다시 해 주세요.';}
+ function raw(path,opt,tok){opt=opt||{};var c=new AbortController(),t=setTimeout(function(){c.abort();},15000);
+  var h={'apikey':KEY,'Authorization':'Bearer '+(tok||KEY),'Content-Type':'application/json'};if(opt.prefer)h['Prefer']=opt.prefer;
+  return fetch(URL_+path,{method:opt.method||'GET',headers:h,body:opt.body==null?undefined:JSON.stringify(opt.body),signal:c.signal}).then(function(r){clearTimeout(t);
+   return r.text().then(function(tx){var j=null;try{j=tx?JSON.parse(tx):null;}catch(e){}if(!r.ok)throw (j||{msg:'HTTP '+r.status});return j;});},function(e){clearTimeout(t);throw e;});}
+ function setSess(j,localId){if(!j||!j.access_token)return false;
+  S={access_token:j.access_token,refresh_token:j.refresh_token,expires_at:j.expires_at||(now()+(j.expires_in||3600)),uid:(j.user&&j.user.id)||(S&&S.uid),email:(j.user&&j.user.email)||(S&&S.email),
+   localId:localId||(S&&S.localId)||null,nick:(S&&S.nick)||'',last:(S&&S.last)||''};save();return true;}
+ function fresh(){if(!S)return Promise.reject({msg:'no session'});if(S.expires_at-now()>60)return Promise.resolve(S.access_token);
+  return raw('/auth/v1/token?grant_type=refresh_token',{method:'POST',body:{refresh_token:S.refresh_token}}).then(function(j){setSess(j);return S.access_token;},function(e){if(e&&(e.error||e.msg)&&!/network|fetch|abort/i.test(String(e.msg||e.message||'')))out();throw e;});}
+ function rest(path,opt){return fresh().then(function(t){return raw('/rest/v1'+path,opt,t);});}
+ function meId(){try{var m=W.me();return m&&m.role!=='GUEST'&&m.id?m.id:null;}catch(e){return null;}}
+ function isGuest(){try{return typeof W.isGuest==='function'?W.isGuest():!meId();}catch(e){return !meId();}}
+ function redraw(){try{if(OPEN)paint();W.render&&W.render();}catch(e){}}
+ function out(){S=null;save();}
+ /* ---- 가입·로그인·로그아웃 ---- */
+ function auth(mode,email,pw,nick){if(BUSY)return Promise.resolve(false);email=String(email||'').trim();pw=String(pw||'');
+  if(!email||!pw){say('이메일과 비밀번호를 적어 주세요.');return Promise.resolve(false);}
+  if(mode==='up'&&pw.length<6){say('비밀번호는 6자 이상으로 해 주세요.');return Promise.resolve(false);}
+  BUSY=true;say('잠시만요…');
+  var p=mode==='up'?raw('/auth/v1/signup',{method:'POST',body:{email:email,password:pw,data:{nickname:String(nick||'').trim().slice(0,20)||'궁리회원'}}}):raw('/auth/v1/token?grant_type=password',{method:'POST',body:{email:email,password:pw}});
+  return p.then(function(j){BUSY=false;
+   if(!j||!j.access_token){say('메일로 확인 안내를 보냈어요. 메일의 확인 단추를 누른 뒤 “로그인” 해 주세요.');return false;}
+   setSess(j,meId());S.nick=String(nick||'').trim().slice(0,20)||S.nick;save();say('');OPEN=false;closeSheet();
+   return sync(true).then(function(){redraw();return true;});
+  },function(e){BUSY=false;say(human(e));return false;});}
+ function signOut(){var t=S&&S.access_token;out();if(t)raw('/auth/v1/logout',{method:'POST'},t).catch(function(){});LAST='';redraw();}
+ /* ---- 도장(경험) 보관·불러오기 ---- */
+ var TYPES={'나가요':1,'움직여요':1,'배워요':1,'만나요':1,'나눠요':1};
+ function keyOf(e){return String(e.cloudKey||e.placeId||e.eventId||e.programId||e.meetingId||e.title||'');}
+ function dOf(e){var m=String(e.date||'').match(/^\d{4}-\d{2}-\d{2}/);return m?m[0]:new Date().toISOString().slice(0,10);}
+ function rows(){var id=meId(),out_=[],seen={};if(!id||!S)return out_;var ex=[];try{ex=W.GR.experiencesOf(id);}catch(e){}
+  ex.forEach(function(e){var k=keyOf(e);if(!k)return;var d=dOf(e),z=k+'|'+d;if(seen[z])return;seen[z]=1;
+   out_.push({user_id:S.uid,source_key:k,place_id:e.placeId||null,event_id:e.eventId||null,program_id:e.programId||null,meeting_id:e.meetingId||null,title:String(e.title||'').slice(0,100),
+    activity_type:TYPES[e.activityType]?e.activityType:null,axes:(e.experienceAxes||[]).map(String).slice(0,6),date:d,memo:String(e.memo||'').slice(0,300)});});
+  return out_;}
+ function sync(quiet){var id=meId();if(!S)return Promise.resolve(false);
+  if(!id){return Promise.resolve(false);}
+  if(S.localId&&S.localId!==id){return Promise.resolve(false);}
+  if(!S.localId){S.localId=id;save();}
+  var r=rows(),push=r.length?rest('/experiences?on_conflict=user_id,source_key,date',{method:'POST',body:r,prefer:'resolution=ignore-duplicates,return=minimal'}):Promise.resolve();
+  return push.then(function(){return rest('/experiences?select=source_key,place_id,event_id,program_id,meeting_id,title,activity_type,axes,date,memo&order=date.asc&limit=1000');}).then(function(list){
+   var have={};(W.GR.experiencesOf(id)||[]).forEach(function(e){have[keyOf(e)+'|'+dOf(e)]=1;});var add=0;
+   (list||[]).forEach(function(x){var z=x.source_key+'|'+x.date;if(have[z])return;
+    var e=W.GR.addExperience({memberId:id,sourceKind:'CLOUD',sourceId:x.source_key,placeId:x.place_id,eventId:x.event_id,programId:x.program_id,meetingId:x.meeting_id,date:x.date,activityType:x.activity_type||'',experienceAxes:x.axes||[],title:x.title||'',memo:x.memo||'',withIds:[]});
+    if(e){e.cloudKey=x.source_key;add++;have[z]=1;}});
+   S.last=new Date().toISOString().slice(0,16).replace('T',' ');save();LAST=quiet?'':'서버에 보관했어요. (불러온 도장 '+add+'개)';if(add)redraw();return true;
+  }).catch(function(e){LAST=quiet?'':human(e);return false;});}
+ var T=null;function later(){if(!S)return;clearTimeout(T);T=setTimeout(function(){sync(true);},4000);}
+ /* ---- 화면 ---- */
+ function card(){
+  if(isGuest())return '';
+  if(S){return '<div class="cl-card"><b>☁ 내 기록 보관함</b> <span class="cl-ok">켜짐</span><div class="cl-sm">'+esc(S.email||'')+(S.last?' · 마지막 저장 '+esc(S.last):'')+'</div>'+
+   (S.localId&&S.localId!==meId()?'<div class="cl-sm">지금 보는 회원은 이 계정과 달라서 저장하지 않아요.</div>':'')+
+   (LAST?'<div class="cl-sm" id="grClLast">'+esc(LAST)+'</div>':'')+
+   '<div class="cl-row"><button type="button" class="cl-b" data-cl="sync">지금 저장</button><button type="button" class="cl-b cl-g" data-cl="out">로그아웃</button></div></div>';}
+  return '<div class="cl-card"><b>☁ 내 기록 보관함</b><div class="cl-sm">도장 기록을 서버에 보관하면 폰을 바꿔도, 앱을 지워도 그대로 남아요.</div>'+
+   '<div class="cl-row"><button type="button" class="cl-b" data-cl="open">이메일로 시작하기</button></div></div>';}
+ function paint(){var el=D.getElementById('grCl');if(!el)return;var up=MODE==='up';
+  el.innerHTML='<div class="cl-sheet" role="dialog" aria-modal="true" aria-label="내 기록 보관함"><div class="cl-top"><b>내 기록 보관함</b><button type="button" class="cl-x" data-cl="close" aria-label="닫기">닫기</button></div>'+
+   '<div class="cl-tabs"><button type="button" data-cl="tab-in" class="'+(up?'':'on')+'">로그인</button><button type="button" data-cl="tab-up" class="'+(up?'on':'')+'">처음 가입</button></div>'+
+   '<label for="clEm">이메일</label><input id="clEm" type="email" inputmode="email" autocomplete="email" placeholder="예) hong@naver.com">'+
+   (up?'<label for="clNk">별명 (다른 회원에게 보이는 이름)</label><input id="clNk" type="text" maxlength="20" autocomplete="nickname" placeholder="예) 구리 산책왕">':'')+
+   '<label for="clPw">비밀번호 (6자 이상)</label><input id="clPw" type="password" autocomplete="'+(up?'new-password':'current-password')+'">'+
+   '<div class="cl-msg" id="grClMsg" role="status">'+esc(MSG)+'</div>'+
+   '<button type="button" class="cl-go" data-cl="go">'+(up?'가입하고 보관 시작':'로그인')+'</button>'+
+   '<div class="cl-pv">가입하면 <b>이메일, 별명, 도장 기록</b>이 궁리 서버에 저장돼요. 다른 곳에 쓰지 않아요. 비밀번호는 서버도 알 수 없게 암호화돼요.</div></div>';}
+ function openSheet(m){MODE=m||MODE;OPEN=true;MSG='';var el=D.getElementById('grCl');if(!el){el=D.createElement('div');el.id='grCl';D.body.appendChild(el);}el.style.display='block';paint();}
+ function closeSheet(){OPEN=false;var el=D.getElementById('grCl');if(el)el.style.display='none';}
+ var st=D.createElement('style');st.textContent=
+  '.cl-card{margin:0 0 14px;padding:14px;border:1px solid #cfdcd6;border-radius:16px;background:#f3f8f6;font-size:17px;line-height:1.5}.cl-ok{display:inline-block;padding:1px 8px;border-radius:10px;background:#0f6b45;color:#fff;font-size:14px;font-weight:700}'+
+  '.cl-sm{font-size:15px;color:#4b5a60;margin-top:2px;word-break:break-all}.cl-row{display:flex;gap:8px;margin-top:10px}.cl-b{flex:1;min-height:48px;border-radius:12px;border:0;background:#0f6b45;color:#fff;font-size:17px;font-weight:800}.cl-b.cl-g{background:#fff;color:#0f6b45;border:1px solid #0f6b45}'+
+  '#grCl{display:none;position:fixed;inset:0;z-index:2147482500;background:rgba(0,0,0,.45);overflow:auto}.cl-sheet{box-sizing:border-box;max-width:520px;margin:0 auto;min-height:100%;background:#fff;padding:14px 16px 28px;font-size:18px}'+
+  '.cl-top{display:flex;justify-content:space-between;align-items:center;font-size:21px;margin-bottom:10px}.cl-x{min-height:46px;padding:0 16px;border-radius:12px;border:1px solid #b8c4be;background:#fff;font-size:17px}'+
+  '.cl-tabs{display:flex;gap:8px;margin-bottom:8px}.cl-tabs button{flex:1;min-height:50px;border-radius:12px;border:1px solid #0f6b45;background:#fff;color:#0f6b45;font-size:18px;font-weight:800}.cl-tabs button.on{background:#0f6b45;color:#fff}'+
+  '.cl-sheet label{display:block;margin:12px 0 4px;font-weight:700}.cl-sheet input{box-sizing:border-box;width:100%;min-height:52px;padding:0 12px;border:2px solid #b8c4be;border-radius:12px;font-size:19px}'+
+  '.cl-msg{min-height:26px;margin:10px 0;color:#b3261e;font-size:17px;font-weight:700}.cl-go{width:100%;min-height:56px;border:0;border-radius:14px;background:#0f6b45;color:#fff;font-size:20px;font-weight:900}.cl-pv{margin-top:14px;font-size:15px;color:#4b5a60;line-height:1.55}';
+ D.head.appendChild(st);
+ var orig=W.uPassport;
+ if(typeof orig==='function'){W.uPassport=function(){var h=orig.apply(this,arguments),m='<div class="sec gr3">',i=h.indexOf(m);if(i<0)return h;return h.slice(0,i+m.length)+card()+h.slice(i+m.length);};}
+ D.addEventListener('click',function(ev){var t=ev.target;if(!t||!t.closest)return;var b=t.closest('[data-cl]');if(!b)return;ev.preventDefault();var a=b.getAttribute('data-cl');
+  if(a==='open')openSheet('in');else if(a==='close')closeSheet();else if(a==='tab-in'||a==='tab-up'){MODE=a==='tab-up'?'up':'in';MSG='';paint();}
+  else if(a==='go'){var g=function(i){var e=D.getElementById(i);return e?e.value:'';};auth(MODE,g('clEm'),g('clPw'),g('clNk'));}
+  else if(a==='sync'){LAST='저장하는 중…';redraw();sync(false).then(redraw);}
+  else if(a==='out'){signOut();}});
+ /* 새 도장이 생기면 잠시 뒤 자동 저장 */
+ if(W.GR&&typeof W.GR.addExperience==='function'){var ae=W.GR.addExperience;W.GR.addExperience=function(x){var r=ae.apply(this,arguments);if(r&&x&&x.sourceKind!=='CLOUD')later();return r;};}
+ /* 앱을 열 때 로그인 상태면 조용히 불러오기 */
+ if(S)setTimeout(function(){sync(true);},2500);
+ W.guriCloud={state:function(){return {on:!!S,email:S&&S.email,uid:S&&S.uid,last:S&&S.last,localId:S&&S.localId};},signIn:function(e,p){return auth('in',e,p);},signUp:function(e,p,n){return auth('up',e,p,n);},signOut:signOut,sync:function(){return sync(false);},rows:rows,open:openSheet};
+})();
+</script>
 <!-- GUNGRI_R17_STAGE7_EXAMPLES -->
 <script id="guri-r17-examples">
 /* ==========================================================================
