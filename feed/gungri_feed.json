@@ -1,25 +1,25 @@
 {
  "schema": "GUNGRI_FEED_V1",
- "generatedAt": "2026-10-04T22:47:38+09:00",
+ "generatedAt": "2026-10-05T06:28:36+09:00",
  "source": {
   "name": "한국관광공사 TourAPI 4.0 (KorService2)",
   "page": "https://www.data.go.kr/data/15101578/openapi.do",
   "notice": "사진은 공공누리 유형(Type1·Type3)이 표시된 것만 사용 가능으로 표시합니다. 공개는 궁리 스텝 검수·대표 승인 후에만 합니다."
  },
  "stats": {
-  "places": 1531,
-  "events": 113,
-  "newPlaces": 0,
+  "places": 1532,
+  "events": 99,
+  "newPlaces": 1,
   "newEvents": 0,
-  "apiCalls": 16,
+  "apiCalls": 20,
   "mock": false
  },
  "options": {
   "showExamples": true
  },
  "log": [
-  "목록 확인: 새로 받을 항목 0건(행사 0) · 이번 실행 상한 200건",
-  "상세 수집 0건 · API 호출 16건",
+  "목록 확인: 새로 받을 항목 1건(행사 0) · 이번 실행 상한 200건",
+  "상세 수집 1건 · API 호출 20건",
   "큐레이션 표시(로컬100 등) 0건"
  ],
  "places": [
@@ -56529,6 +56529,65 @@
    ]
   },
   {
+   "feedId": "TA-2993396",
+   "contentId": "2993396",
+   "contentTypeId": "14",
+   "modifiedtime": "20261004013001",
+   "n": "상촌재",
+   "a": "서울특별시 종로구 자하문로17길 12-11 (옥인동) 상촌재",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설",
+    "전시",
+    "궁",
+    "공예"
+   ],
+   "sub": "전시장",
+   "why": "상촌재는 경복궁 서측에 조성된 한옥문화공간으로, 전통문화의 우수성을 알리는 전시와 함께 한복, 한글, 전통공예 등 한문화 콘텐츠 활성화를 위한 공간이다.",
+   "summary": "상촌재는 경복궁 서측에 조성된 한옥문화공간으로, 전통문화의 우수성을 알리는 전시와 함께 한복, 한글, 전통공예 등 한문화 콘텐츠 활성화를 위한 공간이다. 장기간 방치된 경찰청 소유의 한옥 폐가를 종로구에서 매입해 1년여에 걸쳐 복원하고 2017년 6월에 개관했다. 19세기 말 전통한옥 방식으로 복원된 공간으로, 전통의 형식 속에서 현재의 가치를 잘 담아낸 건축물로 평가받고 있다. 우리나라의 고유한 주거문화를 경험하는 동시에 온돌의 우수성을 엿볼 수 있는 전시 공간이 있으며, 한복과 공예 그리고 절기 등 다양한 전통문화를 체험할 수 있는 프로그램을 운영하고 있다.",
+   "hours": "09:00~18:00",
+   "closed": "매주 월요일 / 1월 1일 / 설·추석 당일",
+   "fee": "무료※ 단체 관람 시 사전 예약 바람",
+   "phone": "02-6013-1142",
+   "homepage": "https://www.jfac.or.kr",
+   "lat": 37.5818739876,
+   "lng": 126.9697396096,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.jfac.or.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-05",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/04/3056504_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/04/3056504_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/05/3056505_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/05/3056505_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/06/3056506_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/06/3056506_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2994062",
    "contentId": "2994062",
    "contentTypeId": "12",
@@ -81924,41 +81983,6 @@
    ]
   },
   {
-   "feedId": "TA-E-4115268",
-   "contentId": "4115268",
-   "contentTypeId": "15",
-   "modifiedtime": "20260928134844",
-   "name": "쿼드, 연극의 질문들：〈옥상 밭 고추는 왜〉",
-   "start_date": "2026-09-19",
-   "end_date": "2026-10-04",
-   "place_name": "대학로극장 쿼드",
-   "address": "서울특별시 종로구 동숭길 122 (동숭동)",
-   "region": "서울",
-   "city": "종로구",
-   "hours": "- 평일 19:30- 주말/공휴일 15:00※ 월요일 공연 없음",
-   "fee": "전석 50,000원※ 자세한 이용요금 및 할인정보는 공식 홈페이지 참조",
-   "organizer": "서울문화재단 대학로극장 쿼드",
-   "phone": "1577-0369",
-   "why": "서울 변두리의 오래되고 낡은 다세대 주택.",
-   "summary": "서울 변두리의 오래되고 낡은 다세대 주택. 저마다의 사연과 결핍을 품은 이웃들이 살아가고 있다. 뙤약볕이 내리쬐던 어느 여름날, 빌라 옥상의 작은 텃밭에서 소박하게 고추를 기르던 노인 ‘광자’의 고추밭에 고추가 모두 사라지는 사건이 발생한다. 고추를 몽땅 가져간 범인은 다름 아닌 같은 빌라에 사는 이웃 ‘현자’. 이웃사람들은 이를 가지고 저마다 말을 꺼내는데 특히 301호 ‘현태’의 눈에는 이 ‘고추 도난 사건’이 사소한 문제로 보이지 않는다. 이는 망가지고 있는 세상과 관계된 일이다. ‘현태’의 말에 가족은 물론 빌라 사람들 모두가 불편해하지만 단 한 사람, 303호 ‘동교’만이 알 수 없는 이유로 ‘현태’를 도와 행동하기 시작한다. 그깟 고추 때문에 시작된 이웃 간의 실랑이는 빌라 전체의 거대한 소동으로…",
-   "source_url": "https://www.quad.or.kr",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.5836990003,
-   "lng": 127.0037166586,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/03/4115303_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/03/4115303_image3_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-2751090",
    "contentId": "2751090",
    "contentTypeId": "15",
@@ -82047,62 +82071,6 @@
    ]
   },
   {
-   "feedId": "TA-E-2818138",
-   "contentId": "2818138",
-   "contentTypeId": "15",
-   "modifiedtime": "20260907142344",
-   "name": "창경궁 야연",
-   "start_date": "2026-09-24",
-   "end_date": "2026-10-04",
-   "place_name": "창경궁 문정전 일원",
-   "address": "서울특별시 종로구 창경궁로 185 (와룡동)",
-   "region": "서울",
-   "city": "종로구",
-   "hours": "17:00~20:30",
-   "fee": "유료 / 무료(일부 체험 및 공연 관람)",
-   "organizer": "국가유산청 궁능유적본부",
-   "phone": "1522-2295",
-   "why": "\"창경궁 야연\"은 효명세자가 아버지 순조에게 올렸던 지극한 효심의 연회를 현대적으로 재해석한 가족 친화적 야간 궁중 연회 프로그램이다.",
-   "summary": "\"창경궁 야연\"은 효명세자가 아버지 순조에게 올렸던 지극한 효심의 연회를 현대적으로 재해석한 가족 친화적 야간 궁중 연회 프로그램이다. 참가자는 조선시대 문무백관과 외명부가 되어 궁중 복식을 갖춰 입고 연회에 참여하여, 동반한 가족과 함께 궁중 병과를 맛보고 전통 공연 관람과 다채로운 전통 체험 프로그램에 참여한다. 2026년 은 상반기 5월 7일(목)-5월 17일(일) / 하반기 9월 24일(목)-10월 4일(일) 총 20일간 진행된다. 어버이날과 추석 연휴, 사랑하는 가족들과 고궁의 밤을 거닐며 아름다운 시간을 기록할 수 있다.",
-   "theme": [
-    "궁"
-   ],
-   "source_url": "https://www.kh.or.kr/short/8aCe",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.5788809216,
-   "lng": 126.9964488355,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/49/4059849_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/49/4059849_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/47/4059847_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/47/4059847_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/48/4059848_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/48/4059848_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-1725993",
    "contentId": "1725993",
    "contentTypeId": "15",
@@ -82151,42 +82119,6 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/35/4110535_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/35/4110535_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-3361334",
-   "contentId": "3361334",
-   "contentTypeId": "15",
-   "modifiedtime": "20261001094511",
-   "name": "연천고려인삼축제",
-   "start_date": "2026-10-02",
-   "end_date": "2026-10-04",
-   "place_name": "연천역 앞 광장",
-   "address": "경기도 연천군 연천읍 연천로 275",
-   "region": "경기",
-   "city": "연천군",
-   "hours": "10:00~17:00",
-   "fee": "무료",
-   "organizer": "연천군 인삼연구회",
-   "phone": "031-839-2314",
-   "why": "연천 고려인삼 축제는 연천군에서 생산되는 고려인삼의 우수성을 널리 알리고, 지역 농업과 농산물 소비를 활성화하기 위한 축제이다.",
-   "summary": "연천 고려인삼 축제는 연천군에서 생산되는 고려인삼의 우수성을 널리 알리고, 지역 농업과 농산물 소비를 활성화하기 위한 축제이다. 북위 38도에 위치한 연천 지역은 위도, 기후, 토질 등 인삼 생육에 적합한 자연환경을 갖춘 곳으로서, 6년근 인삼 재배의 최적지로 평가되는 지역이다. 특히 연천에서 생산되는 개성인삼 계열의 고려인삼은 품질이 우수한 지역 특산물로 알려져 있다. 본 축제는 연천 인삼의 역사성과 상품성을 바탕으로 다양한 전시, 판매, 체험, 먹거리 프로그램을 운영하는 행사이다. 또한 지역 농업인과 소비자가 직접 만나 연천 농산물을 직거래하는 소통과 교류의 장이자, 연천 농업의 경쟁력과 가치를 대내외에 알리는 대표적인 농특산물 축제이다.",
-   "sub": "축제",
-   "source_url": "https://www.data.go.kr/data/15101578/openapi.do",
-   "source_label": "한국관광공사 TourAPI (contentId 3361334)",
-   "lat": 38.1007545889,
-   "lng": 127.0739927015,
-   "checkedAt": "2026-10-02",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/25/4105525_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/25/4105525_image3_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -82278,116 +82210,6 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/69/4113269_image2_1.png",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/69/4113269_image3_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-1266642",
-   "contentId": "1266642",
-   "contentTypeId": "15",
-   "modifiedtime": "20260916141426",
-   "name": "부평풍물대축제",
-   "start_date": "2026-10-02",
-   "end_date": "2026-10-04",
-   "place_name": "신트리공원, 부평대로 & 부평일대",
-   "address": "인천광역시 부평구 부평대로 34-1 (부평동)",
-   "region": "인천",
-   "city": "부평구",
-   "hours": "10:00~21:30",
-   "fee": "무료",
-   "organizer": "인천광역시 부평구",
-   "phone": "032-509-7516",
-   "why": "제30회 부평풍물대축제는 도심 속에서 울려 퍼지는 서른 번째 신명과 화합의 장이다.",
-   "summary": "제30회 부평풍물대축제는 도심 속에서 울려 퍼지는 서른 번째 신명과 화합의 장이다. 인천을 넘어 대한민국을 대표하는 전통문화 예술 축제인 부평풍물대축제가 어느덧 뜻깊은 30주년을 맞이했다. 1997년 첫발을 내디딘 이래, 부평풍물대축제는 삭막한 도심 한복판에 우리 고유의 전통장단을 불어넣으며 시민과 예술인이 하나 되는 거대한 소통의 장으로 성장해 왔다. 축제의 핵심인 22개 동풍물단이 만들어내는 신명 나는 장단은 구민 모두를 하나로 연결하는 축제의 든든한 근간이 되어왔다. 특히 2026년 10월 2일부터 4일까지 3일간 열리는 이번 제30회 축제는 지난 30년간 이어온 전통의 맥을 되짚어보고, 앞으로 다가올 새로운 미래를 축하하는 특별한 의미를 담아 그 어느 때보다 거대하고 화려한 규모로 펼쳐진다. 또한 부…",
-   "source_url": "https://portal.icbp.go.kr/bpf",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.4944181127,
-   "lng": 126.7229954336,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/77/4067377_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/77/4067377_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/76/4067376_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/76/4067376_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/78/4067378_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/78/4067378_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-506809",
-   "contentId": "506809",
-   "contentTypeId": "15",
-   "modifiedtime": "20261001094041",
-   "name": "소래포구축제",
-   "start_date": "2026-10-02",
-   "end_date": "2026-10-04",
-   "place_name": "소래포구 일원(해오름광장 및 소래포구 관광벨트)",
-   "address": "인천광역시 남동구 장도로 86-17 (논현동)",
-   "region": "인천",
-   "city": "남동구",
-   "hours": "09:00~21:00",
-   "fee": "무료(일부 체험 유료)",
-   "organizer": "남동구",
-   "phone": "070-8820-4038",
-   "why": "소래포구축제는 소래포구가 지닌 풍부한 생태자원과 역사·문화적 가치를 바탕으로 지역의 정체성을 담아내는 대표 축제이다.",
-   "summary": "소래포구축제는 소래포구가 지닌 풍부한 생태자원과 역사·문화적 가치를 바탕으로 지역의 정체성을 담아내는 대표 축제이다. ​축제장은 메인무대존, 부스존, 체험존, 아트존, 경관존, 어린이존 등 다양한 테마 공간으로 구성되어 남녀노소 누구나 즐길 수 있는 다채로운 프로그램을 선보인다. 어린이 갯벌 놀이터, 어린이 소금 놀이터, 어린이 보트 낚시 놀이터 등 소래의 자연환경을 직접 체험할 수 있는 생태 프로그램을 비롯하여, 주민 참여 어등 만들기, 수산물 음식 경연대회, 소래포구 청소년 그림 그리기 대회, 소래 예술인 콘서트 등 지역 주민과 상인, 예술인, 유관기관이 함께 만들어가는 주민 참여 프로그램이 운영된다. 또한 화려한 불꽃쇼, 가족 모두가 즐길 수 있는 오징어게임, 문화예술 공연과 전시, 야간 경관 콘텐츠 …",
-   "theme": [
-    "체험"
-   ],
-   "sub": "체험축제",
-   "source_url": "https://blog.naver.com/soraefestival",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.3979276988,
-   "lng": 126.7393126807,
-   "checkedAt": "2026-10-02",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/93/4074893_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/93/4074893_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/95/4074895_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/95/4074895_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/96/4074896_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/96/4074896_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -82507,313 +82329,6 @@
    ]
   },
   {
-   "feedId": "TA-E-3543595",
-   "contentId": "3543595",
-   "contentTypeId": "15",
-   "modifiedtime": "20260923164344",
-   "name": "대한민국 조아용 페스티벌",
-   "start_date": "2026-10-03",
-   "end_date": "2026-10-04",
-   "place_name": "용인미르스타디움",
-   "address": "경기도 용인시 처인구 동백죽전대로 61 (삼가동)",
-   "region": "경기",
-   "city": "용인시",
-   "hours": "10:00~21:00(일 10:00~17:00)",
-   "fee": "무료",
-   "organizer": "용인시",
-   "phone": "031-6193-2064",
-   "why": "2026년 10월 3일(토)부터 4일(일)까지 용인미르스타디움에서 「2026 대한민국 조아용 페스티벌」이 개최된다.",
-   "summary": "2026년 10월 3일(토)부터 4일(일)까지 용인미르스타디움에서 「2026 대한민국 조아용 페스티벌」이 개최된다. 제31회 용인시민의 날과 용인시 승격 30주년을 기념해 열리는 이번 축제에서는 조아용 퍼레이드, 조아용 코스프레 경연대회 등 조아용을 활용한 다채로운 프로그램을 선보인다. 특히 전국 각지의 인기 캐릭터들이 한자리에 모여 시민과 관람객을 만나는 특별한 기회가 마련된다. 이와 함께 사이버과학축제, 평생학습박람회, 청년페스티벌, 먹거리페스타, 식품산업박람회, 조아용 푸드페스타 등 다양한 연계행사도 함께 열릴 예정이다. 선선한 가을, 용인미르스타디움에서 펼쳐지는 캐릭터 축제와 풍성한 체험 프로그램, 다채로운 축하공연을 통해 온 가족이 함께 즐거운 추억을 만들 수 있다.",
-   "source_url": "https://www.yongin.go.kr",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.2496309759,
-   "lng": 127.1651580363,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/81/4115081_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/81/4115081_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/78/4115078_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/78/4115078_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/79/4115079_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/79/4115079_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-1725929",
-   "contentId": "1725929",
-   "contentTypeId": "15",
-   "modifiedtime": "20260923153727",
-   "name": "정조효문화제",
-   "start_date": "2026-10-03",
-   "end_date": "2026-10-04",
-   "place_name": "정조효공원 일원",
-   "address": "경기도 화성시 장조1로 34 정조효공원 일원",
-   "region": "경기",
-   "city": "화성시",
-   "hours": "10:00~18:00",
-   "fee": "무료",
-   "organizer": "화성특례시",
-   "phone": "070-4202-5144",
-   "why": "정조효공원 일원에서 펼쳐지는 정조효문화제는 역사적 가치와 가족 친화적인 요소를 함께 담은 화성특례시의 대표 역사문화축제이다.",
-   "summary": "정조효공원 일원에서 펼쳐지는 정조효문화제는 역사적 가치와 가족 친화적인 요소를 함께 담은 화성특례시의 대표 역사문화축제이다. 다양한 공연과 전통 체험 프로그램을 즐길 수 있으며, 특히 정조대왕이 아버지 사도세자의 묘를 조선 최고 길지로 이름난 화성시 융릉으로 이전하는 대서사시를 재현한 현륭원 천원은 정조대왕의 지극한 효심을 상징적으로 보여주는 대표 프로그램이다. 또한 10월 4일에는 1795 을묘원행을 재현하는 정조대왕 능행차가 동탄 센트럴파크에서 출발해 장대한 행렬을 펼치며 전통과 현대가 어우러진 다채로운 볼거리를 선사한다. 천하의 명당, 효의 도시 \"화성특례시\"에서 펼쳐지는 본 축제는 역사와 문화, 그리고 가족이 함께하는 특별한 시간을 제공할 것이다.",
-   "theme": [
-    "공원",
-    "체험"
-   ],
-   "source_url": "http://www.정조효문화제.com",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.2066442866,
-   "lng": 126.995063775,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/62/4054062_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/62/4054062_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/59/4054059_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/59/4054059_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/60/4054060_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/60/4054060_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-3530974",
-   "contentId": "3530974",
-   "contentTypeId": "15",
-   "modifiedtime": "20260922141401",
-   "name": "호법 코스모스 꽃축제",
-   "start_date": "2026-10-03",
-   "end_date": "2026-10-04",
-   "place_name": "호법레포츠공원, 호법면 코스모스길",
-   "address": "경기도 이천시 호법면 동산로395번길 139-38",
-   "region": "경기",
-   "city": "이천시",
-   "hours": "08:00~17:00(일 10:00~17:00)",
-   "fee": "무료",
-   "organizer": "이천시 호법면",
-   "phone": "031-644-8542",
-   "why": "제4회 호법 코스모스 꽃축제는 ‘호법을 거닐며 청춘을 꽃피우다’를 주제로 오는 10월 3일부터 4일까지 이틀간 호법레포츠공원과 복하천 코스모스길 일원에서 개최되…",
-   "summary": "제4회 호법 코스모스 꽃축제는 ‘호법을 거닐며 청춘을 꽃피우다’를 주제로 오는 10월 3일부터 4일까지 이틀간 호법레포츠공원과 복하천 코스모스길 일원에서 개최되는 가을 축제이다. 축제 첫날인 10월 3일 오전에는 코스모스길을 함께 걸으며 가을의 정취를 느낄 수 있는 ‘코스모스길 걷기행사’와 개막식이 진행되며, 오후에는 세대를 넘어 누구나 자신만의 청춘을 즐기고 공감할 수 있는 ‘청춘UP! 스테이지’가 펼쳐진다. 10월 4일 오후에는 다양한 세대가 함께 참여하며 소통하는 ‘세대공감 청춘퀴즈쇼’를 통해 축제의 흥겨움을 이어갈 예정이다. 이와 함께 축제 기간 동안 사진·영상 기록전, 코스모스 풍경을 바라보며 여유롭게 휴식할 수 있는 ‘꽃멍쉼터’, 남녀노소 누구나 즐길 수 있는 다채로운 체험 프로그램 등 상시 참여…",
-   "theme": [
-    "공원"
-   ],
-   "source_url": "http://www.xn--js0bp6w82idpf13l.com",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.2150905518,
-   "lng": 127.4068714246,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/02/4114602_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/02/4114602_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-3542109",
-   "contentId": "3542109",
-   "contentTypeId": "15",
-   "modifiedtime": "20260918132750",
-   "name": "북내 금당천 삼색별미축제",
-   "start_date": "2026-10-03",
-   "end_date": "2026-10-04",
-   "place_name": "경기도 여주시 북내면 행정복지센터 앞 시가지 일원",
-   "address": "경기도 여주시 북내면 당우리 192-3",
-   "region": "경기",
-   "city": "여주시",
-   "hours": "10:00~20:00",
-   "fee": "입장료 무료 (일부 체험프로그램 유료)",
-   "organizer": "북내면 행정복지센터",
-   "phone": "031-887-3483",
-   "why": "북내면의 아름다운 금당천과 지역의 풍성한 먹거리를 한자리에서 만날 수 있는 「제2회 북내 금당천 삼색별미축제」는 지역 주민과 방문객이 함께 어우러져 맛과 멋, …",
-   "summary": "북내면의 아름다운 금당천과 지역의 풍성한 먹거리를 한자리에서 만날 수 있는 「제2회 북내 금당천 삼색별미축제」는 지역 주민과 방문객이 함께 어우러져 맛과 멋, 즐거움을 나누고, 침체된 지역 상권에 활력을 더하기 위해 마련되었다. 축제장에서는 북내면의 특색 있는 먹거리를 즐길 수 있는 먹거리 부스와 신선한 지역 농산물을 만날 수 있는 농산물 판매 부스가 운영된다. 또한 페스츄리 무료 시식회와 다양한 체험 프로그램이 마련되어 남녀노소 누구나 즐거운 시간을 보낼 수 있다. 특히 개막식에는 40인조 오케스트라 공연을 비롯한 다채로운 문화공연이 펼쳐지며, 축제 기간 동안 흥겨운 공연과 볼거리가 이어질 예정이다. 금당천의 아름다운 자연과 북내면의 정겨운 인심, 그리고 지역의 맛있는 먹거리가 어우러지는 축제이다.",
-   "source_url": "https://www.data.go.kr/data/15101578/openapi.do",
-   "source_label": "한국관광공사 TourAPI (contentId 3542109)",
-   "lat": 37.32765,
-   "lng": 127.681102,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/46/4113446_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/46/4113446_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/45/4113445_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/45/4113445_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/47/4113447_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/47/4113447_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-2431706",
-   "contentId": "2431706",
-   "contentTypeId": "15",
-   "modifiedtime": "20260930174402",
-   "name": "용인사이버과학축제",
-   "start_date": "2026-10-03",
-   "end_date": "2026-10-04",
-   "place_name": "용인미르스타디움",
-   "address": "경기도 용인시 처인구 동백죽전대로 61 (삼가동) 용인미르스타디움",
-   "region": "경기",
-   "city": "용인시",
-   "hours": "10:00~17:00",
-   "fee": "무료(일부 프로그램 재료비 소요)",
-   "organizer": "용인특례시",
-   "phone": "031-6193-2083",
-   "why": "제26회 용인사이버과학축제는 용인특례시가 주최하는 과학 행사이며, 개최 기간은 2026년 10월 3일부터 10월 4일까지 2일간이다.",
-   "summary": "제26회 용인사이버과학축제는 용인특례시가 주최하는 과학 행사이며, 개최 기간은 2026년 10월 3일부터 10월 4일까지 2일간이다. 행사 장소는 용인미르스타디움이고 운영 시간은 오전 10시부터 오후 5시까지이다. 주요 전시 및 체험은 '미래기술 탐험', '미래생활 체험공방', '미래도시 용인', '미래과학 주인공'의 4개 테마이다. 세부 구성 프로그램은 로봇팔 시연, 휴머노이드 로봇 및 드론 조종, 미래 모빌리티 시승, VR 시뮬레이터 조종 체험이다. 또한 탄소중립 에너지 과학 실험, 아두이노와 3D펜을 활용한 스마트 소품 제작, 돌봄 AI 로봇 '보미' 체험 등이 포함되어 있다. 더불어 삼성전자 등 관내 기업·기관의 최신 기술 전시와 관내 초·중·고 과학 동아리 부스, 드론 축구 교실, 조아용 캐릭터 과…",
-   "source_url": "https://www.yongin.go.kr/event/2026_festival",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.2496309759,
-   "lng": 127.1651580363,
-   "checkedAt": "2026-10-01",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/80/4109880_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/80/4109880_image3_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/73/4109873_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/73/4109873_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/74/4109874_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/4109874_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-2859297",
-   "contentId": "2859297",
-   "contentTypeId": "15",
-   "modifiedtime": "20260909143321",
-   "name": "페스티벌 광명",
-   "start_date": "2026-10-03",
-   "end_date": "2026-10-04",
-   "place_name": "철산역 8차선 일대",
-   "address": "경기도 광명시 철산동 13",
-   "region": "경기",
-   "city": "광명시",
-   "hours": "11:00~21:00 (프로그램별 상이)",
-   "fee": "무료",
-   "organizer": "경기도 광명시",
-   "phone": "02-2680-2787",
-   "why": "페스티벌 광명은 광명의 거리를 음악과 문화 그리고 축제의 열기로 가득 채우는 광명의 대표 축제이다.",
-   "summary": "페스티벌 광명은 광명의 거리를 음악과 문화 그리고 축제의 열기로 가득 채우는 광명의 대표 축제이다. 올해 메인무대인 ‘GM 라이브’는 총 11팀의 아티스트가 무대를 꾸밀 예정이다. 3일에는 독보적인 싱어송라이터 10CM(십센치)​가 헤드라이너로 무대에 오르며, ‘데이브레이크’, ‘잭킹콩’, ‘아스라이’, ‘아사달’ 등 실력파 아티스트들이 함께한다. 4일에는 한국 록의 전설 김종서를 필두로 ‘로맨틱펀치’ ‘불나방스타 쏘세지클럽’, ‘신현희 밴드’, ‘칵투스’, ‘루아멜’ 등이 무대에 올라 축제의 열기를 이어간다. 아울러, 8차선 도로를 막고 조성된 거리 광장에는 시민 모두가 즐길 수 있는 랜덤플레이댄스, 거리 노래방, 버블 쇼, 키다리 삐에로, 석고 마임 등 다양한 프로그램이 진행될 예정이며, 광명의 대표 여…",
-   "source_url": "http://www.festivalgm.or.kr/2026",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.476554,
-   "lng": 126.869358,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/27/4109227_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/27/4109227_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/28/4109228_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/28/4109228_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/29/4109229_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/29/4109229_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-737479",
    "contentId": "737479",
    "contentTypeId": "15",
@@ -82858,154 +82373,6 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/39/4101839_image2_1.JPG",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/39/4101839_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-3371765",
-   "contentId": "3371765",
-   "contentTypeId": "15",
-   "modifiedtime": "20261001151859",
-   "name": "용인청년페스티벌",
-   "start_date": "2026-10-03",
-   "end_date": "2026-10-04",
-   "place_name": "용인미르스타디움(주경기장)",
-   "address": "경기도 용인시 처인구 동백죽전대로 61 (삼가동)",
-   "region": "경기",
-   "city": "용인시",
-   "hours": "10:00~17:00",
-   "fee": "무료",
-   "organizer": "용인특례시",
-   "phone": "031-6193-2791",
-   "why": "2026 청년의 날을 기념하여 청년이 직접 기획하고 주도적으로 참여하여 만들어가는 행사이다.",
-   "summary": "2026 청년의 날을 기념하여 청년이 직접 기획하고 주도적으로 참여하여 만들어가는 행사이다. 청년LAB프로그램, 이달의 청년강사 클래스 등 청년 참여 및 체험 프로그램을 구성하여 청년세대 소통과 화합, 청년 문화 공유의 장이 펼쳐진다. 2026년 용인청년페스티벌 부제인 ''청년? 너도용? 나도용!''은 용인 청년 간의 공감대를 형성하고 문화를 공유하며 교류하는 기회를 만든다는 뜻을 갖고 있다. 와랄랄라 낮맥모임, 얼레벌레 보드게임 프로그램을 통해 지역 청년들에게 소통 기회를 제공하고, 우당탕탕 가짜찾기, 요리조리 축제탐방 챌린지를 통해 대한민국 조아용 페스티벌 등 연계행사를 즐길 수 있으며, 와리가리 스피드OX퀴즈로 청년정책부터 문화까지 알아보는 시간도 준비되어있다.",
-   "theme": [
-    "체험"
-   ],
-   "sub": "체험축제",
-   "source_url": "https://youth.yongin.go.kr/web/main",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.2496309759,
-   "lng": 127.1651580363,
-   "checkedAt": "2026-10-02",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/78/4109978_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/78/4109978_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-4099989",
-   "contentId": "4099989",
-   "contentTypeId": "15",
-   "modifiedtime": "20260923173529",
-   "name": "금천시흥행궁문화제",
-   "start_date": "2026-10-04",
-   "end_date": "2026-10-04",
-   "place_name": "금천구 은행나무로 일대",
-   "address": "서울특별시 금천구 은행나무로 44 (시흥동)",
-   "region": "서울",
-   "city": "금천구",
-   "hours": "12:00 ~ 20:00",
-   "fee": "무료",
-   "organizer": "금천구",
-   "phone": "070-4114-6352",
-   "why": "'금천시흥행궁문화제'는 금천구의 역사적 정체성과 문화예술적 의미를 담은 금천구 대표 역사문화축제이다.",
-   "summary": "'금천시흥행궁문화제'는 금천구의 역사적 정체성과 문화예술적 의미를 담은 금천구 대표 역사문화축제이다. [2026 금천시흥행궁문화제]는 왕의 행렬을 기다리는 주민들의 들뜬 마음을 표현한 1부 '행행잔치'를 시작으로, 2부에서는 정조대왕이 아버지 사도세자의 능에 참배하러 가는 행차의 모습을 서울시와 연계해 '정조대왕 능행차 행렬' 선보인다. 마지막 3부에서는 정조의 애민정신에 부합하는 '모두가 함께 즐기는 국악'으로 구성될 ‘금천시흥행궁문화제’만의 특화콘텐츠 '시흥행궁night'까지 다채로운 프로그램으로 주민들이 모두 함께 즐길 수 있는 축제이다.",
-   "theme": [
-    "궁"
-   ],
-   "source_url": "https://www.data.go.kr/data/15101578/openapi.do",
-   "source_label": "한국관광공사 TourAPI (contentId 4099989)",
-   "lat": 37.4506976783,
-   "lng": 126.9074454056,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/02/4100002_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/02/4100002_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/03/4100003_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/03/4100003_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/04/4100004_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/04/4100004_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-2554814",
-   "contentId": "2554814",
-   "contentTypeId": "15",
-   "modifiedtime": "20260824133359",
-   "name": "정조대왕 능행차 공동재현",
-   "start_date": "2026-10-04",
-   "end_date": "2026-10-04",
-   "place_name": "경복궁",
-   "address": "서울특별시 종로구 사직로 161 (세종로)",
-   "region": "서울",
-   "city": "종로구",
-   "hours": "09:00~21:00",
-   "fee": "무료 (일부 프로그램 참가비 유료)",
-   "organizer": "서울특별시, 경기도, 수원특례시, 화성특례시",
-   "phone": "서울 02-786-0610수원 031-5191-2367화성 070-4202-1017",
-   "why": "백성과 함께한 행복한 8일, 시민의 축제로 다가온다.",
-   "summary": "백성과 함께한 행복한 8일, 시민의 축제로 다가온다. 조선 역사상 가장 성대한 축제이자 백성과 성군이 함께한 동행! 2026년 정조대왕의 능행차 길을 따라 『원행을묘정리의궤』 속 정조의 뜻을 되새긴다. 1795년 정조는 어머니 혜경궁 홍씨의 회갑을 기념하여 수원 화성으로 행차했다. 정조의 8일 간의 여정은 단순한 왕의 이동이 아닌 백성과 즐거운 기억을 공유한 역사적인 사건이었다. 정조의 애민정신은 『원행을묘정리의궤』에 담겨 널리 배포되었다. 2026년, 정조대왕의 정신을 계승하고 백성의 행복한 기억이 시민의 행복한 기억으로 재현된다. 정조대왕 능행차 공동재현은 서울시, 경기도, 수원시, 화성시가 협력해 '을묘년 화성원행'의 원형을 현대에 화려하게 재현하는 축제이다.",
-   "source_url": "https://www.data.go.kr/data/15101578/openapi.do",
-   "source_label": "한국관광공사 TourAPI (contentId 2554814)",
-   "lat": 37.5760307,
-   "lng": 126.9767218661,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/59/4078459_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/59/4078459_image3_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/47/4033347_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/47/4033347_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/48/4033348_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/48/4033348_image2_1.png",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
