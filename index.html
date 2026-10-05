@@ -17587,8 +17587,26 @@ window.GUNGRI_UNIFIED_PLACE_EVENT_DETAIL_V150=true;
  }
 
  /* ---------- renderer ---------- */
+ /* 소개(오늘 가볼 곳)와 장점(이래서 좋습니다)이 같은 글이 되지 않게: 소개는 앞 한두 문장, 장점은 나머지 문장 중 핵심만 */
+ function splitS(t){return (String(t||'').replace(/\s+/g,' ').trim().match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[]).map(function(x){return x.trim();}).filter(Boolean);}
+ function nz(t){return String(t||'').replace(/[\s.,!?·\-~"'“”‘’()\[\]]/g,'');}
+ var KEYW=/접근|무료|체험|쉽게|편하|편리|가족|산책|볼거리|먹거리|즐길|아름|여유|추천|프로그램|전시|관람|야경|풍경|시원|사계절|저렴|할인|깔끔|쾌적|경치|휴식|힐링|걷기|주차|대중교통|역사|문화/;
+ function tidy(vm){var hook0=String(vm.hook||''),hs=splitS(hook0),hook=hook0;
+  if(hook0.length>90&&hs.length>1){hook=hs[0];if(hook.length<40&&hs[1]&&(hook+' '+hs[1]).length<=110)hook+=' '+hs[1];}
+  var used={};splitS(hook).forEach(function(x){used[nz(x)]=1;});
+  var cand=[],tags=[],seen={};
+  var src=[];if(hook!==hook0)src.push(hook0);(vm.good||[]).forEach(function(g){src.push(g);});
+  src.forEach(function(g){if(!has(g))return;var t=String(g);
+   if(t.length<=40&&!/[.!?]$/.test(t)){var k=nz(t);if(!seen[k]&&!used[k]){seen[k]=1;tags.push(t);}return;}
+   splitS(t).forEach(function(x){var k=nz(x);if(k.length<8||used[k]||seen[k])return;seen[k]=1;cand.push(x);});});
+  var sc=cand.map(function(x,i){return {x:x,i:i,s:(KEYW.test(x)?2:0)+(x.length<=110?1:0)+(i===0?0.5:0)};});
+  var top=sc.slice().sort(function(a,b){return b.s-a.s||a.i-b.i;}).slice(0,3).sort(function(a,b){return a.i-b.i;}).map(function(o){return o.x;});
+  var good=top.concat(tags.slice(0,4));
+  return {hook:hook,good:good};}
  function renderVM(vm,extra){
   var ev=vm.kind==='EVENT';
+  try{var nh=nz(vm.hook||''),dup=nh.length>=12&&(vm.good||[]).some(function(g){var ng=nz(g);return ng.length>=12&&(ng.indexOf(nh)>=0||nh.indexOf(ng)>=0);});
+   if(dup){var tv=tidy(vm);if(tv.hook)vm.hook=tv.hook;vm.good=tv.good;}}catch(e){}
   var good=list(vm.good),know=list(vm.know);
   var srcHtml=vm.source&&(vm.source.url||vm.source.label)?
    '<div>'+esc(vm.source.label||'공식정보')+(vm.source.verified?' · 확인일 '+esc(vm.source.verified):'')+'</div>'+(vm.source.url?'<a class="gd-url" href="'+esc(vm.source.url)+'" target="_blank" rel="noopener" data-guri-official="'+esc(vm.source.url)+'">'+esc(vm.source.url)+' ↗</a>':''):
