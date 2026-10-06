@@ -21631,10 +21631,12 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  function now(){return Math.floor(Date.now()/1000);}
  function say(m){MSG=m||'';var el=D.getElementById('grClMsg');if(el)el.textContent=MSG;}
  function human(e){var m=String(e&&(e.msg||e.message||e.error_description||e.error)||e||'');
-  if(/already registered|already been registered/i.test(m))return '이미 가입된 이메일이에요. “로그인”으로 들어가 주세요.';
-  if(/invalid login|invalid credentials/i.test(m))return '이메일이나 비밀번호가 맞지 않아요.';
+  if(/already registered|already been registered/i.test(m))return '이미 가입된 번호(이메일)예요. “로그인”으로 들어가 주세요.';
+  if(/phone.*(disabled|not enabled|unsupported)|unsupported phone|sms.*(provider|disabled)/i.test(m))return '전화번호 가입이 서버에서 아직 켜져 있지 않아요. (운영자 설정이 필요해요) 기록은 이 폰에 그대로 있어요.';
+  if(/invalid login|invalid credentials/i.test(m))return '전화번호(이메일)나 비밀번호가 맞지 않아요.';
   if(/at least|too short|weak/i.test(m))return '비밀번호는 6자 이상으로 해 주세요.';
   if(/valid email|invalid.*email|email address/i.test(m)&&!/rate/i.test(m))return '이메일 모양이 맞지 않아요. 예) hong@naver.com';
+  if(/phone/i.test(m)&&/invalid|format/i.test(m))return '전화번호 모양이 맞지 않아요. 예) 010-1234-5678';
   if(/rate limit|too many|after \d+ seconds/i.test(m))return '잠시 뒤에 다시 해 주세요. (너무 자주 눌렀어요)';
   if(/confirm|not confirmed/i.test(m))return '메일 확인이 필요해요. 받은 메일의 확인 단추를 눌러 주세요.';
   if(/network|failed to fetch|abort|timeout|load failed/i.test(m))return '서버에 연결되지 않아요. 인터넷을 확인해 주세요. 기록은 이 폰에 그대로 있어요.';
@@ -21644,7 +21646,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   return fetch(URL_+path,{method:opt.method||'GET',headers:h,body:opt.body==null?undefined:JSON.stringify(opt.body),signal:c.signal}).then(function(r){clearTimeout(t);
    return r.text().then(function(tx){var j=null;try{j=tx?JSON.parse(tx):null;}catch(e){}if(!r.ok)throw (j||{msg:'HTTP '+r.status});return j;});},function(e){clearTimeout(t);throw e;});}
  function setSess(j,localId){if(!j||!j.access_token)return false;
-  S={access_token:j.access_token,refresh_token:j.refresh_token,expires_at:j.expires_at||(now()+(j.expires_in||3600)),uid:(j.user&&j.user.id)||(S&&S.uid),email:(j.user&&j.user.email)||(S&&S.email),
+  S={access_token:j.access_token,refresh_token:j.refresh_token,expires_at:j.expires_at||(now()+(j.expires_in||3600)),uid:(j.user&&j.user.id)||(S&&S.uid),email:(j.user&&j.user.email)||(S&&S.email),phone:(j.user&&j.user.phone)||(S&&S.phone),
    localId:localId||(S&&S.localId)||null,nick:(S&&S.nick)||'',last:(S&&S.last)||''};save();return true;}
  function fresh(){if(!S)return Promise.reject({msg:'no session'});if(S.expires_at-now()>60)return Promise.resolve(S.access_token);
   return raw('/auth/v1/token?grant_type=refresh_token',{method:'POST',body:{refresh_token:S.refresh_token}}).then(function(j){setSess(j);return S.access_token;},function(e){if(e&&(e.error||e.msg)&&!/network|fetch|abort/i.test(String(e.msg||e.message||'')))out();throw e;});}
@@ -21666,14 +21668,20 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
    try{W.UV='h';}catch(e){}
    return true;},function(){return false;});}
  /* ---- 가입·로그인·로그아웃 ---- */
- function auth(mode,email,pw,nick){if(BUSY)return Promise.resolve(false);email=String(email||'').trim();pw=String(pw||'');
-  if(!email||!pw){say('이메일과 비밀번호를 적어 주세요.');return Promise.resolve(false);}
-  if(email.indexOf('@')<0){say('이메일 주소(@ 포함)를 적어 주세요. 별명이 아니에요.');return Promise.resolve(false);}
+ /* 로그인 ID = 휴대전화 번호(기본) 또는 이메일(운영진). 010-1234-5678 → +821012345678 */
+ function phoneOf(v){var d=String(v||'').replace(/\D/g,'');if(/^8210\d{8}$/.test(d)||/^821[16789]\d{7,8}$/.test(d))d='0'+d.slice(2);return /^01[016789]\d{7,8}$/.test(d)?d:'';}
+ function showPhone(p){var d=String(p||'').replace(/\D/g,'');if(/^82/.test(d))d='0'+d.slice(2);return d.length===11?d.slice(0,3)+'-'+d.slice(3,7)+'-'+d.slice(7):d.length===10?d.slice(0,3)+'-'+d.slice(3,6)+'-'+d.slice(6):d;}
+ function idLabel(){return S?(S.email||showPhone(S.phone)||''):'';}
+ function auth(mode,idv,pw,nick){if(BUSY)return Promise.resolve(false);idv=String(idv||'').trim();pw=String(pw||'');
+  if(!idv||!pw){say('전화번호와 비밀번호를 적어 주세요.');return Promise.resolve(false);}
+  var isMail=idv.indexOf('@')>=0,ph=isMail?'':phoneOf(idv);
+  if(!isMail&&!ph){say('휴대전화 번호를 숫자로 적어 주세요. 예) 010-1234-5678 (운영진은 이메일, @ 포함)');return Promise.resolve(false);}
   if(mode==='up'&&pw.length<6){say('비밀번호는 6자 이상으로 해 주세요.');return Promise.resolve(false);}
   BUSY=true;say('잠시만요…');
-  var p=mode==='up'?raw('/auth/v1/signup',{method:'POST',body:{email:email,password:pw,data:{nickname:String(nick||'').trim().slice(0,20)||'궁리회원'}}}):raw('/auth/v1/token?grant_type=password',{method:'POST',body:{email:email,password:pw}});
+  var cred=isMail?{email:idv}:{phone:'+82'+ph.slice(1)};
+  var p=mode==='up'?raw('/auth/v1/signup',{method:'POST',body:Object.assign({password:pw,data:{nickname:String(nick||'').trim().slice(0,20)||'궁리회원'}},cred)}):raw('/auth/v1/token?grant_type=password',{method:'POST',body:Object.assign({password:pw},cred)});
   return p.then(function(j){BUSY=false;
-   if(!j||!j.access_token){say('메일로 확인 안내를 보냈어요. 메일의 확인 단추를 누른 뒤 “로그인” 해 주세요.');return false;}
+   if(!j||!j.access_token){say(isMail?'메일로 확인 안내를 보냈어요. 메일의 확인 단추를 누른 뒤 “로그인” 해 주세요.':'문자로 인증번호를 보냈어요. 인증 뒤 “로그인” 해 주세요.');return false;}
    setSess(j,meId());S.nick=String(nick||'').trim().slice(0,20)||S.nick;save();say('');OPEN=false;closeSheet();
    return adopt().then(function(){return sync(true);}).then(function(){redraw();return true;});
   },function(e){BUSY=false;say(human(e));return false;});}
@@ -21703,22 +21711,22 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  /* ---- 화면 ---- */
  function card(){
   if(isGuest())return '';
-  if(S){return '<div class="cl-card"><b>☁ 내 기록 보관함</b> <span class="cl-ok">켜짐</span><div class="cl-sm">'+esc(S.email||'')+(S.last?' · 마지막 저장 '+esc(S.last):'')+'</div>'+
+  if(S){return '<div class="cl-card"><b>☁ 내 기록 보관함</b> <span class="cl-ok">켜짐</span><div class="cl-sm">'+esc(idLabel())+(S.last?' · 마지막 저장 '+esc(S.last):'')+'</div>'+
    (S.localId&&S.localId!==meId()?'<div class="cl-sm">지금 보는 회원은 이 계정과 달라서 저장하지 않아요.</div>':'')+
    (LAST?'<div class="cl-sm" id="grClLast">'+esc(LAST)+'</div>':'')+
    '<div class="cl-row"><button type="button" class="cl-b" data-cl="sync">지금 저장</button><button type="button" class="cl-b cl-g" data-cl="out">로그아웃</button></div></div>';}
   return '<div class="cl-card"><b>☁ 내 기록 보관함</b><div class="cl-sm">도장 기록을 서버에 보관하면 폰을 바꿔도, 앱을 지워도 그대로 남아요.</div>'+
-   '<div class="cl-sm">가입할 때 이메일을 적지 않으셨다면, “처음 가입” 탭에서 이메일을 등록하세요. 지금 쓰는 회원 정보와 그대로 이어져요.</div>'+
-   '<div class="cl-row"><button type="button" class="cl-b" data-cl="open">이메일로 시작하기</button></div></div>';}
+   '<div class="cl-sm">예전에 비밀번호 없이 가입하셨다면, “처음 가입” 탭에서 전화번호와 비밀번호를 정해 주세요. 지금 쓰는 회원 정보와 그대로 이어져요.</div>'+
+   '<div class="cl-row"><button type="button" class="cl-b" data-cl="open">전화번호로 시작하기</button></div></div>';}
  function paint(){var el=D.getElementById('grCl');if(!el)return;var up=MODE==='up';
   el.innerHTML='<div class="cl-sheet" role="dialog" aria-modal="true" aria-label="내 기록 보관함"><div class="cl-top"><b>내 기록 보관함</b><button type="button" class="cl-x" data-cl="close" aria-label="닫기">닫기</button></div>'+
-   (up?'<div class="cl-sm">이메일을 등록하면 다른 기기에서도 로그인할 수 있어요. 지금 앱에 가입해 두신 분은 이 이메일이 그 회원과 이어져요.</div>':'<div class="cl-sm">이메일로 가입하신 분만 로그인할 수 있어요. 앱에서 이메일 없이 가입하셨다면 그 폰에서 “내 기록 보관함 → 처음 가입”으로 이메일을 등록해 주세요.</div>')+'<div class="cl-tabs"><button type="button" data-cl="tab-in" class="'+(up?'':'on')+'">로그인</button><button type="button" data-cl="tab-up" class="'+(up?'on':'')+'">처음 가입</button></div>'+
+   (up?'<div class="cl-sm">전화번호와 비밀번호를 정해 두면 다른 기기에서도 로그인할 수 있어요. 지금 앱에 가입해 두신 분은 이 번호가 그 회원과 이어져요.</div>':'<div class="cl-sm">앱에 가입하실 때 정한 휴대전화 번호와 비밀번호로 들어오세요.</div>')+'<div class="cl-tabs"><button type="button" data-cl="tab-in" class="'+(up?'':'on')+'">로그인</button><button type="button" data-cl="tab-up" class="'+(up?'on':'')+'">처음 가입</button></div>'+
    (up?'<label for="clNk">별명 (다른 회원에게 보이는 이름)</label><input id="clNk" name="nickname" type="text" maxlength="20" autocomplete="off" data-lpignore="true" placeholder="예) 구리 산책왕">':'')+
-   '<label for="clEm">이메일 (로그인할 때 쓰는 주소)</label><input id="clEm" name="username" type="email" inputmode="email" autocomplete="username" placeholder="예) hong@naver.com">'+
+   '<label for="clEm">휴대전화 번호 (로그인할 때 쓰는 번호)</label><input id="clEm" name="username" type="text" inputmode="text" autocomplete="username" placeholder="예) 010-1234-5678">'+'<div class="cl-sm">운영진은 이메일(@ 포함)을 적으셔도 돼요.</div>'+
    '<label for="clPw">비밀번호 (6자 이상)</label><input id="clPw" type="password" autocomplete="'+(up?'new-password':'current-password')+'">'+
    '<div class="cl-msg" id="grClMsg" role="status">'+esc(MSG)+'</div>'+
    '<button type="button" class="cl-go" data-cl="go">'+(up?'가입하고 보관 시작':'로그인')+'</button>'+
-   '<div class="cl-pv">가입하면 <b>이메일, 별명, 도장 기록</b>이 궁리 서버에 저장돼요. 다른 곳에 쓰지 않아요. 비밀번호는 서버도 알 수 없게 암호화돼요.</div></div>';}
+   '<div class="cl-pv">가입하면 <b>전화번호(또는 이메일), 별명, 도장 기록</b>이 궁리 서버에 저장돼요. 다른 곳에 쓰지 않아요. 비밀번호는 서버도 알 수 없게 암호화돼요.</div></div>';}
  function openSheet(m){MODE=m||MODE;OPEN=true;MSG='';var el=D.getElementById('grCl');if(!el){el=D.createElement('div');el.id='grCl';D.body.appendChild(el);}el.style.display='block';paint();}
  function closeSheet(){OPEN=false;var el=D.getElementById('grCl');if(el)el.style.display='none';}
  var st=D.createElement('style');st.textContent=
@@ -21743,7 +21751,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  if(W.GR&&typeof W.GR.addExperience==='function'){var ae=W.GR.addExperience;W.GR.addExperience=function(x){var r=ae.apply(this,arguments);if(r&&x&&x.sourceKind!=='CLOUD')later();return r;};}
  /* 앱을 열 때 로그인 상태면 조용히 불러오기 */
  if(S)setTimeout(function(){adopt().then(function(){return sync(true);}).then(redraw);},2500);
- W.guriCloud={_fresh:fresh,_raw:raw,_rest:rest,_sess:function(){return S;},_url:URL_,state:function(){return {on:!!S,email:S&&S.email,uid:S&&S.uid,last:S&&S.last,localId:S&&S.localId};},signIn:function(e,p){return auth('in',e,p);},signUp:function(e,p,n){return auth('up',e,p,n);},signOut:signOut,sync:function(){return sync(false);},rows:rows,open:openSheet};
+ W.guriCloud={_fresh:fresh,_raw:raw,_rest:rest,_sess:function(){return S;},_url:URL_,state:function(){return {on:!!S,email:S&&S.email,phone:S&&S.phone,uid:S&&S.uid,last:S&&S.last,localId:S&&S.localId};},signIn:function(e,p){return auth('in',e,p);},phoneOf:phoneOf,signUp:function(e,p,n){return auth('up',e,p,n);},signOut:signOut,sync:function(){return sync(false);},rows:rows,open:openSheet};
 })();
 </script>
 <!-- GUNGRI_R17_STAGE7_COMM -->
@@ -21954,39 +21962,34 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
 <script id="guri-r17-signup-email">
 (function(){'use strict';
  var W=window,D=document;if(W.__guriSignupEmail)return;W.__guriSignupEmail=1;
- /* 앱 가입(휴대전화·이름…)에 이메일·비밀번호(선택)를 받아, 가입 완료 때 서버 계정도 함께 만든다.
-    → 폰을 바꾸거나 PC에서 “로그인”할 때 쓸 수 있다. 적지 않으면 지금처럼 이 기기 안에서만 쓴다(나중에 보관함에서 등록 가능). */
- var X={em:'',pw:''};
+ /* 앱 가입에 “로그인 비밀번호”를 받아, 가입 완료 때 서버 계정(휴대전화 번호 = 로그인 ID)도 함께 만든다.
+    → 폰을 바꾸거나 PC에서 “로그인”할 때 전화번호+비밀번호로 들어온다. (문자 인증을 켜면 같은 흐름에서 인증번호 확인이 추가됨) */
+ var X={pw:'',tel:''};
  function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
- function block(){return '<div class="info" style="margin-top:14px"><b>다른 기기에서도 로그인하려면 (선택)</b><br>이메일과 비밀번호를 적어 두시면 폰을 바꾸거나 PC에서도 “로그인”할 수 있어요. 지금 건너뛰고 나중에 “내 기록 보관함”에서 등록하셔도 됩니다.</div>'+
-  '<label for="su_em">이메일 (선택)</label><input id="su_em" type="email" inputmode="email" autocomplete="off" placeholder="예) hong@naver.com" value="'+esc(X.em)+'">'+
-  '<label for="su_pw">비밀번호 (이메일을 적을 때, 6자 이상)</label><input id="su_pw" type="password" autocomplete="new-password" value="'+esc(X.pw)+'">';}
+ function block(){return '<label class="req" for="su_pw">로그인 비밀번호 (6자 이상)</label><div class="row"><input id="su_pw" type="password" autocomplete="new-password" placeholder="로그인할 때 쓰실 비밀번호" value="'+esc(X.pw)+'" style="flex:1"><button type="button" class="btn btn-s btn-o" style="flex:none" data-sxshow="1">보기</button></div>'+
+  '<div class="sm mute" style="margin-top:5px">다음에 로그인할 때는 위 <b>휴대전화 번호 + 이 비밀번호</b>를 씁니다.</div>';}
  function wrap(){var o=W.uSignup;if(typeof o!=='function'||o.__sx)return;
   W.uSignup=function(){var h=o.apply(this,arguments),m='<div style="height:16px"></div><button class="btn btn-g w100" data-act="su2">';
    if(h.indexOf(m)<0||h.indexOf('id="su_tel"')<0)return h;return h.replace(m,block()+m);};W.uSignup.__sx=1;}
  wrap();setTimeout(wrap,0);D.addEventListener('DOMContentLoaded',wrap);W.addEventListener('load',function(){wrap();setTimeout(wrap,800);});
- function keep(){var e=D.getElementById('su_em'),p=D.getElementById('su_pw');if(e)X.em=e.value.trim();if(p)X.pw=p.value;}
- D.addEventListener('input',function(ev){var t=ev.target;if(t&&(t.id==='su_em'||t.id==='su_pw'))keep();},true);
+ function keep(){var p=D.getElementById('su_pw'),t=D.getElementById('su_tel');if(p)X.pw=p.value;if(t)X.tel=t.value;}
+ D.addEventListener('input',function(ev){var t=ev.target;if(t&&(t.id==='su_pw'||t.id==='su_tel'))keep();},true);
  function err(m){var el=D.getElementById('su_err');if(el)el.innerHTML='<div class="err">'+esc(m)+'</div>';try{W.toast&&W.toast(m);}catch(e){}}
- /* 다음 단계로 가기 전에 이메일·비밀번호 확인 (적었을 때만) */
+ D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-sxshow]'):null;if(!b)return;var p=D.getElementById('su_pw');if(!p)return;var sh=p.type==='password';p.type=sh?'text':'password';b.textContent=sh?'가리기':'보기';},true);
+ /* 다음 단계로 가기 전에 비밀번호 확인 */
  D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-act="su2"]'):null;if(!b)return;keep();
-  if(!X.em&&!X.pw)return;
-  var bad='';if(!X.em)bad='비밀번호만 적으셨어요. 이메일도 적어 주세요. (이메일 없이 가입하려면 비밀번호 칸을 비워 주세요)';
-  else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(X.em))bad='이메일 모양이 맞지 않아요. 예) hong@naver.com';
-  else if(X.pw.length<6)bad='비밀번호는 6자 이상으로 해 주세요.';
-  if(bad){ev.preventDefault();ev.stopPropagation();ev.stopImmediatePropagation();err(bad);}},true);
+  if(X.pw.length<6){ev.preventDefault();ev.stopPropagation();ev.stopImmediatePropagation();err('로그인에 쓰실 비밀번호를 6자 이상 적어 주세요.');}},true);
  /* 가입 완료 뒤: 서버 계정 만들고 이 회원과 연결 */
  D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-act="sudone"]'):null;if(!b)return;
-  var em=X.em,pw=X.pw;if(!em||!pw)return;
+  var tel=X.tel,pw=X.pw;if(!tel||!pw)return;
   setTimeout(function(){try{
     var C=W.guriCloud;if(!C||!C.signUp)return;var m=W.me&&W.me();if(!m||m.role==='GUEST')return;   /* 가입이 막혔으면(약관 미동의) 아무것도 안 함 */
     if(C.state().on)return;
-    var nick=m.nick||m.n||'';
-    C.signUp(em,pw,nick).then(function(ok){X.pw='';
-     try{W.toast&&W.toast(ok?'서버에도 보관 시작했어요. 다음엔 이 이메일로 로그인하세요.':'가입은 됐어요. 서버 보관은 아직이에요(이메일 확인 메일을 눌러 주세요). “내 기록 보관함”에서 다시 할 수 있어요.');}catch(e){}
+    C.signUp(tel,pw,m.nick||m.n||'').then(function(ok){X.pw='';
+     try{W.toast&&W.toast(ok?'서버에도 보관 시작했어요. 다음엔 이 번호와 비밀번호로 로그인하세요.':'가입은 됐어요. 서버 보관은 아직이에요. “내 기록 보관함”에서 다시 할 수 있어요.');}catch(e){}
     },function(){X.pw='';});
   }catch(e){}},700);},false);
- W.guriSignupEmailState=function(){return {em:X.em,pwLen:X.pw.length};};
+ W.guriSignupEmailState=function(){return {pwLen:X.pw.length,tel:X.tel};};
 })();
 </script>
 <!-- GUNGRI_R17_STAGE7_EXAMPLES -->
