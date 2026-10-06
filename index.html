@@ -21708,10 +21708,11 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
    (LAST?'<div class="cl-sm" id="grClLast">'+esc(LAST)+'</div>':'')+
    '<div class="cl-row"><button type="button" class="cl-b" data-cl="sync">지금 저장</button><button type="button" class="cl-b cl-g" data-cl="out">로그아웃</button></div></div>';}
   return '<div class="cl-card"><b>☁ 내 기록 보관함</b><div class="cl-sm">도장 기록을 서버에 보관하면 폰을 바꿔도, 앱을 지워도 그대로 남아요.</div>'+
+   '<div class="cl-sm">가입할 때 이메일을 적지 않으셨다면, “처음 가입” 탭에서 이메일을 등록하세요. 지금 쓰는 회원 정보와 그대로 이어져요.</div>'+
    '<div class="cl-row"><button type="button" class="cl-b" data-cl="open">이메일로 시작하기</button></div></div>';}
  function paint(){var el=D.getElementById('grCl');if(!el)return;var up=MODE==='up';
   el.innerHTML='<div class="cl-sheet" role="dialog" aria-modal="true" aria-label="내 기록 보관함"><div class="cl-top"><b>내 기록 보관함</b><button type="button" class="cl-x" data-cl="close" aria-label="닫기">닫기</button></div>'+
-   '<div class="cl-tabs"><button type="button" data-cl="tab-in" class="'+(up?'':'on')+'">로그인</button><button type="button" data-cl="tab-up" class="'+(up?'on':'')+'">처음 가입</button></div>'+
+   (up?'<div class="cl-sm">이메일을 등록하면 다른 기기에서도 로그인할 수 있어요. 지금 앱에 가입해 두신 분은 이 이메일이 그 회원과 이어져요.</div>':'<div class="cl-sm">이메일로 가입하신 분만 로그인할 수 있어요. 앱에서 이메일 없이 가입하셨다면 그 폰에서 “내 기록 보관함 → 처음 가입”으로 이메일을 등록해 주세요.</div>')+'<div class="cl-tabs"><button type="button" data-cl="tab-in" class="'+(up?'':'on')+'">로그인</button><button type="button" data-cl="tab-up" class="'+(up?'on':'')+'">처음 가입</button></div>'+
    (up?'<label for="clNk">별명 (다른 회원에게 보이는 이름)</label><input id="clNk" name="nickname" type="text" maxlength="20" autocomplete="off" data-lpignore="true" placeholder="예) 구리 산책왕">':'')+
    '<label for="clEm">이메일 (로그인할 때 쓰는 주소)</label><input id="clEm" name="username" type="email" inputmode="email" autocomplete="username" placeholder="예) hong@naver.com">'+
    '<label for="clPw">비밀번호 (6자 이상)</label><input id="clPw" type="password" autocomplete="'+(up?'new-password':'current-password')+'">'+
@@ -21947,6 +21948,45 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  W.addEventListener('load',function(){setTimeout(boot,2500);});
  /* 로그인하면 못 올린 결정을 다시 시도 */
  (function(){var n=0;(function tick(){if(W.guriCloud&&W.guriCloud._sess&&W.guriCloud._sess()){if(Object.keys(Q).length)doFlush();if(Object.keys(EQ).length)edoFlush();}if(++n<400)setTimeout(tick,15000);})();})();
+})();
+</script>
+<!-- GUNGRI_R17_STAGE7_SIGNUPEMAIL -->
+<script id="guri-r17-signup-email">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriSignupEmail)return;W.__guriSignupEmail=1;
+ /* 앱 가입(휴대전화·이름…)에 이메일·비밀번호(선택)를 받아, 가입 완료 때 서버 계정도 함께 만든다.
+    → 폰을 바꾸거나 PC에서 “로그인”할 때 쓸 수 있다. 적지 않으면 지금처럼 이 기기 안에서만 쓴다(나중에 보관함에서 등록 가능). */
+ var X={em:'',pw:''};
+ function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function block(){return '<div class="info" style="margin-top:14px"><b>다른 기기에서도 로그인하려면 (선택)</b><br>이메일과 비밀번호를 적어 두시면 폰을 바꾸거나 PC에서도 “로그인”할 수 있어요. 지금 건너뛰고 나중에 “내 기록 보관함”에서 등록하셔도 됩니다.</div>'+
+  '<label for="su_em">이메일 (선택)</label><input id="su_em" type="email" inputmode="email" autocomplete="off" placeholder="예) hong@naver.com" value="'+esc(X.em)+'">'+
+  '<label for="su_pw">비밀번호 (이메일을 적을 때, 6자 이상)</label><input id="su_pw" type="password" autocomplete="new-password" value="'+esc(X.pw)+'">';}
+ function wrap(){var o=W.uSignup;if(typeof o!=='function'||o.__sx)return;
+  W.uSignup=function(){var h=o.apply(this,arguments),m='<div style="height:16px"></div><button class="btn btn-g w100" data-act="su2">';
+   if(h.indexOf(m)<0||h.indexOf('id="su_tel"')<0)return h;return h.replace(m,block()+m);};W.uSignup.__sx=1;}
+ wrap();setTimeout(wrap,0);D.addEventListener('DOMContentLoaded',wrap);W.addEventListener('load',function(){wrap();setTimeout(wrap,800);});
+ function keep(){var e=D.getElementById('su_em'),p=D.getElementById('su_pw');if(e)X.em=e.value.trim();if(p)X.pw=p.value;}
+ D.addEventListener('input',function(ev){var t=ev.target;if(t&&(t.id==='su_em'||t.id==='su_pw'))keep();},true);
+ function err(m){var el=D.getElementById('su_err');if(el)el.innerHTML='<div class="err">'+esc(m)+'</div>';try{W.toast&&W.toast(m);}catch(e){}}
+ /* 다음 단계로 가기 전에 이메일·비밀번호 확인 (적었을 때만) */
+ D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-act="su2"]'):null;if(!b)return;keep();
+  if(!X.em&&!X.pw)return;
+  var bad='';if(!X.em)bad='비밀번호만 적으셨어요. 이메일도 적어 주세요. (이메일 없이 가입하려면 비밀번호 칸을 비워 주세요)';
+  else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(X.em))bad='이메일 모양이 맞지 않아요. 예) hong@naver.com';
+  else if(X.pw.length<6)bad='비밀번호는 6자 이상으로 해 주세요.';
+  if(bad){ev.preventDefault();ev.stopPropagation();ev.stopImmediatePropagation();err(bad);}},true);
+ /* 가입 완료 뒤: 서버 계정 만들고 이 회원과 연결 */
+ D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-act="sudone"]'):null;if(!b)return;
+  var em=X.em,pw=X.pw;if(!em||!pw)return;
+  setTimeout(function(){try{
+    var C=W.guriCloud;if(!C||!C.signUp)return;var m=W.me&&W.me();if(!m||m.role==='GUEST')return;   /* 가입이 막혔으면(약관 미동의) 아무것도 안 함 */
+    if(C.state().on)return;
+    var nick=m.nick||m.n||'';
+    C.signUp(em,pw,nick).then(function(ok){X.pw='';
+     try{W.toast&&W.toast(ok?'서버에도 보관 시작했어요. 다음엔 이 이메일로 로그인하세요.':'가입은 됐어요. 서버 보관은 아직이에요(이메일 확인 메일을 눌러 주세요). “내 기록 보관함”에서 다시 할 수 있어요.');}catch(e){}
+    },function(){X.pw='';});
+  }catch(e){}},700);},false);
+ W.guriSignupEmailState=function(){return {em:X.em,pwLen:X.pw.length};};
 })();
 </script>
 <!-- GUNGRI_R17_STAGE7_EXAMPLES -->
