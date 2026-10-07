@@ -21664,10 +21664,11 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   return Promise.all([rest('/profiles?select=nickname&id=eq.'+encodeURIComponent(S.uid)).then(function(r){return (r&&r[0]&&r[0].nickname)||'';},function(){return '';}),
    rest('/member_private?select=name,sex,born,reg,tags,want&id=eq.'+encodeURIComponent(S.uid)).then(function(r){return (r&&r[0])||{};},function(){return {};})]).then(function(pr){var nk=pr[0],mp=pr[1]||{};
    if(!isGuest())return false;
+   var ex=(W.ACCOUNTS||[]).filter(function(a){return a.uid===S.uid;})[0];if(ex){W.ACC=ex.id;S.localId=ex.id;save();try{W.UV='h';}catch(e){}return true;}
    nk=String(nk||S.nick||(S.email||'').split('@')[0]||'궁리회원').trim().slice(0,20)||'궁리회원';S.nick=nk;save();
    var A=W.ACCOUNTS;if(!A)return false;var nm=nk;if(A.some(function(a){return a.n===nm;}))nm=nk+'·'+String(S.uid||'').slice(0,4);
    var id='u'+(++W.SEQ);
-   A.push({id:id,n:nm,nick:nk,tel:S.phone?showPhone(S.phone):'',sex:mp.sex||'',role:'USER',tier:'기본',born:mp.born||1965,reg:mp.reg||'경기도 구리시',firstDay:false,tags:(mp.tags||[]).slice(),want:(mp.want||[]).slice(),lv:2,cloud:true,svName:mp.name||''});
+   A.push({id:id,n:nm,nick:nk,tel:S.phone?showPhone(S.phone):'',sex:mp.sex||'',role:'USER',tier:'기본',born:mp.born||1965,reg:mp.reg||'경기도 구리시',firstDay:false,tags:(mp.tags||[]).slice(),want:(mp.want||[]).slice(),lv:2,cloud:true,uid:S.uid,svName:mp.name||''});
    try{W.STAMPS=W.STAMPS||{};W.STAMPS[nm]=W.STAMPS[nm]||[];W.ACT=W.ACT||{};W.ACT[nm]=W.ACT[nm]||{out:0,walk:0,cul:0,meet:0,vol:0,prev:0};}catch(e){}
    W.ACC=id;S.localId=id;save();
    try{W.UV='h';}catch(e){}
@@ -21690,6 +21691,13 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
      A.push({id:'sv'+String(m.id).slice(0,8),uid:m.id,n:nm,nick:nk,tel:m.phone?showPhone(m.phone):'',sex:m.sex||'',role:'USER',tier:'기본',born:m.born||'',reg:m.reg||'',firstDay:false,tags:m.tags||[],want:[],lv:1,serverOnly:true});
      try{W.STAMPS[nm]=W.STAMPS[nm]||[];W.ACT[nm]=W.ACT[nm]||{out:0,walk:0,cul:0,meet:0,vol:0,prev:0};}catch(e){}add++;});
     if(add)redraw();return add;});},function(){return 0;}).catch(function(){return 0;});}
+ /* 로그인한 서버 계정이 지금 보는 회원과 다른 사람이면, 그 계정의 회원으로 바꾼다 (같은 사람이거나 옛 계정이면 지금 회원에 연결) */
+ function decideLink(cur){return rest('/member_private?select=name&id=eq.'+encodeURIComponent(S.uid)).then(function(r){return (r&&r[0]&&r[0].name)||'';},function(){return '';}).then(function(nm){
+  var m=null;try{m=W.me();}catch(e){}
+  var ex=(W.ACCOUNTS||[]).filter(function(a){return a.uid===S.uid;})[0];
+  if(ex&&(!cur||cur!==ex.id)){W.ACC=ex.id;S.localId=ex.id;save();try{W.UV='h';}catch(e){}return;}
+  if(cur&&m&&(!nm||m.n===nm||m.nick===nm)){S.localId=cur;save();return;}
+  try{W.ACC='guest';W.UV='h';}catch(e){}});}
  /* ---- 가입·로그인·로그아웃 ---- */
  /* 로그인 ID = 휴대전화 번호(기본) 또는 이메일(운영진). 010-1234-5678 → +821012345678 */
  function phoneOf(v){var d=String(v||'').replace(/\D/g,'');if(/^8210\d{8}$/.test(d)||/^821[16789]\d{7,8}$/.test(d))d='0'+d.slice(2);return /^01[016789]\d{7,8}$/.test(d)?d:'';}
@@ -21705,10 +21713,10 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   var p=mode==='up'?raw('/auth/v1/signup',{method:'POST',body:Object.assign({password:pw,data:{nickname:String(nick||'').trim().slice(0,20)||'궁리회원'}},cred)}):raw('/auth/v1/token?grant_type=password',{method:'POST',body:Object.assign({password:pw},cred)});
   return p.then(function(j){BUSY=false;
    if(!j||!j.access_token){say(isMail?'메일로 확인 안내를 보냈어요. 메일의 확인 단추를 누른 뒤 “로그인” 해 주세요.':'문자로 인증번호를 보냈어요. 인증 뒤 “로그인” 해 주세요.');return false;}
-   setSess(j,meId());S.nick=String(nick||'').trim().slice(0,20)||S.nick;save();say('');OPEN=false;closeSheet();
-   return adopt().then(function(){return pushProfile();}).then(function(){return sync(true);}).then(function(){loadMembers();redraw();return true;});
+   var cur=meId();setSess(j,null);S.localId=mode==='up'?cur:null;S.nick=String(nick||'').trim().slice(0,20)||S.nick;save();say('');OPEN=false;closeSheet();
+   return (mode==='up'?Promise.resolve():decideLink(cur)).then(function(){return adopt();}).then(function(){return pushProfile();}).then(function(){return sync(true);}).then(function(){loadMembers();redraw();return true;});
   },function(e){BUSY=false;say(human(e));return false;});}
- function signOut(){var t=S&&S.access_token;var cm=false;try{cm=W.me()&&W.me().cloud;}catch(e){}out();if(cm){try{W.ACC='guest';W.UV='h';}catch(e){}}if(t)raw('/auth/v1/logout',{method:'POST'},t).catch(function(){});LAST='';redraw();}
+ function signOut(){var t=S&&S.access_token;var cm=false;try{var mm=W.me();cm=mm&&(mm.cloud||(S&&S.localId&&S.localId===mm.id));}catch(e){}out();if(cm){try{W.ACC='guest';W.UV='h';}catch(e){}}if(t)raw('/auth/v1/logout',{method:'POST'},t).catch(function(){});LAST='';redraw();}
  /* ---- 도장(경험) 보관·불러오기 ---- */
  var TYPES={'나가요':1,'움직여요':1,'배워요':1,'만나요':1,'나눠요':1};
  function keyOf(e){return String(e.cloudKey||e.placeId||e.eventId||e.programId||e.meetingId||e.title||'');}
