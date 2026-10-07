@@ -3797,7 +3797,7 @@ function aUser(){
   '<div class="fact"><b>등급</b><span>'+(u.tier||"-")+' · 도장 '+st+'개</span></div>'+
   '<div class="fact"><b>움직임 지수</b><span>'+score(n)+'점 (지난달 '+(a.prev||0)+')</span></div>'+
   '<div class="fact"><b>참여</b><span>'+my.length+'건</span></div>'+
-  '<div class="fact"><b>연락처</b><span>'+(perm()==="OWNER"?"010-****-1234":"권한 없음")+'</span></div>'+
+  '<div class="fact"><b>연락처</b><span>'+(perm()==="OWNER"?(window.guriTelShow?guriTelShow(u,1):"-"):"권한 없음")+'</span></div>'+
   '<div class="fact"><b>비상연락</b><span>'+(perm()==="OWNER"?"등록됨":"권한 없음")+'</span></div></div>'+
   '<div class="warn" style="margin-top:11px">연락처와 비상연락처는 <b>대표 권한에서만</b> 보입니다. 조회 기록이 남습니다.</div>'+
   '<h3 style="font-size:17px;margin:16px 0 9px">참여 내역</h3>'+
@@ -3817,7 +3817,7 @@ function aUser(){
    '<span class="chip '+(u.role==="USER"?"":"c-b")+'">'+(u.role==="USER"?"회원":u.role==="CAPTAIN"?"캡틴":u.perm==="OWNER"?"대표":"운영자")+'</span>',
    u.tier||"-",(STAMPS[n]||[]).length+'개',score(n)+'점',
    MEET.filter(function(m){return m.book.indexOf(n)>=0;}).length+'건',
-   perm()==="OWNER"?"010-****-1234":"—",
+   perm()==="OWNER"?(window.guriTelShow?guriTelShow(u,0):"-"):"—",
    '<button class="btn btn-o btn-s" data-ud="'+u.id+'">상세</button>'];});
  return '<h2 style="font-size:21px">회원</h2>'+
  '<div class="info">회원명 검색과 회원구분 필터를 함께 사용할 수 있습니다. 검색 결과 <b>'+filtered.length+'명</b></div>'+
@@ -21662,7 +21662,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
    nk=String(nk||S.nick||(S.email||'').split('@')[0]||'궁리회원').trim().slice(0,20)||'궁리회원';S.nick=nk;save();
    var A=W.ACCOUNTS;if(!A)return false;var nm=nk;if(A.some(function(a){return a.n===nm;}))nm=nk+'·'+String(S.uid||'').slice(0,4);
    var id='u'+(++W.SEQ);
-   A.push({id:id,n:nm,nick:nk,sex:'',role:'USER',tier:'기본',born:1960,reg:'경기도 구리시',firstDay:false,tags:[],want:[],lv:2,cloud:true});
+   A.push({id:id,n:nm,nick:nk,tel:S.phone?showPhone(S.phone):'',sex:'',role:'USER',tier:'기본',born:1960,reg:'경기도 구리시',firstDay:false,tags:[],want:[],lv:2,cloud:true});
    try{W.STAMPS=W.STAMPS||{};W.STAMPS[nm]=W.STAMPS[nm]||[];W.ACT=W.ACT||{};W.ACT[nm]=W.ACT[nm]||{out:0,walk:0,cul:0,meet:0,vol:0,prev:0};}catch(e){}
    W.ACC=id;S.localId=id;save();
    try{W.UV='h';}catch(e){}
@@ -21982,13 +21982,16 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  /* 가입 완료 뒤: 서버 계정 만들고 이 회원과 연결 */
  D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-act="sudone"]'):null;if(!b)return;
   var tel=X.tel,pw=X.pw;if(!tel||!pw)return;
-  setTimeout(function(){try{
+  setTimeout(function(){try{try{var m0=W.me&&W.me();if(m0&&m0.role!=='GUEST'&&!m0.tel)m0.tel=tel;}catch(e){}
     var C=W.guriCloud;if(!C||!C.signUp)return;var m=W.me&&W.me();if(!m||m.role==='GUEST')return;   /* 가입이 막혔으면(약관 미동의) 아무것도 안 함 */
     if(C.state().on)return;
     C.signUp(tel,pw,m.nick||m.n||'').then(function(ok){X.pw='';
      try{W.toast&&W.toast(ok?'서버에도 보관 시작했어요. 다음엔 이 번호와 비밀번호로 로그인하세요.':'가입은 됐어요. 서버 보관은 아직이에요. “내 기록 보관함”에서 다시 할 수 있어요.');}catch(e){}
     },function(){X.pw='';});
   }catch(e){}},700);},false);
+ /* 회원 목록·상세에 보일 연락처 (목록은 가운데 가림) */
+ W.guriTelShow=function(u,full){var d=String(u&&u.tel||'').replace(/\D/g,'');if(/^82/.test(d))d='0'+d.slice(2);if(d.length<10)return '-';
+  var a=d.slice(0,3),z=d.slice(-4),mid=d.length===11?d.slice(3,7):d.slice(3,6);return full?(a+'-'+mid+'-'+z):(a+'-'+mid.replace(/./g,'*')+'-'+z);};
  W.guriSignupEmailState=function(){return {pwLen:X.pw.length,tel:X.tel};};
 })();
 </script>
