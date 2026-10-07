@@ -21748,7 +21748,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
    '<div class="cl-row"><button type="button" class="cl-b" data-cl="sync">지금 저장</button><button type="button" class="cl-b cl-g" data-cl="out">로그아웃</button></div></div>';}
   return '<div class="cl-card"><b>☁ 내 기록 보관함</b><div class="cl-sm">도장 기록을 서버에 보관하면 폰을 바꿔도, 앱을 지워도 그대로 남아요.</div>'+
    '<div class="cl-sm">예전에 비밀번호 없이 가입하셨다면, “처음 가입” 탭에서 전화번호와 비밀번호를 정해 주세요. 지금 쓰는 회원 정보와 그대로 이어져요.</div>'+
-   '<div class="cl-row"><button type="button" class="cl-b" data-cl="open">전화번호로 시작하기</button><button type="button" class="cl-b cl-g" data-cl="leave">이 회원에서 나가기</button></div></div>';}
+   '<div class="cl-row"><button type="button" class="cl-b" data-cl="open">전화번호로 시작하기</button></div></div>';}
  function paint(){var el=D.getElementById('grCl');if(!el)return;var up=MODE==='up';
   el.innerHTML='<div class="cl-sheet" role="dialog" aria-modal="true" aria-label="내 기록 보관함"><div class="cl-top"><b>내 기록 보관함</b><button type="button" class="cl-x" data-cl="close" aria-label="닫기">닫기</button></div>'+
    (up?'<div class="cl-sm">전화번호와 비밀번호를 정해 두면 다른 기기에서도 로그인할 수 있어요. 지금 앱에 가입해 두신 분은 이 번호가 그 회원과 이어져요.</div>':'<div class="cl-sm">앱에 가입하실 때 정한 휴대전화 번호와 비밀번호로 들어오세요.</div>')+'<div class="cl-tabs"><button type="button" data-cl="tab-in" class="'+(up?'':'on')+'">로그인</button><button type="button" data-cl="tab-up" class="'+(up?'on':'')+'">처음 가입</button></div>'+
@@ -21777,8 +21777,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   if(a==='open')openSheet('in');else if(a==='close')closeSheet();else if(a==='tab-in'||a==='tab-up'){MODE=a==='tab-up'?'up':'in';MSG='';paint();}
   else if(a==='go'){var g=function(i){var e=D.getElementById(i);return e?e.value:'';};auth(MODE,g('clEm'),g('clPw'),g('clNk'));}
   else if(a==='sync'){LAST='저장하는 중…';redraw();sync(false).then(redraw);}
-  else if(a==='out'){signOut();}
-  else if(a==='leave'){try{W.ACC='guest';W.UV='h';}catch(e){}LAST='';redraw();}});
+  else if(a==='out'){signOut();}});
  /* 새 도장이 생기면 잠시 뒤 자동 저장 */
  if(W.GR&&typeof W.GR.addExperience==='function'){var ae=W.GR.addExperience;W.GR.addExperience=function(x){var r=ae.apply(this,arguments);if(r&&x&&x.sourceKind!=='CLOUD')later();return r;};}
  /* 앱을 열 때 로그인 상태면 조용히 불러오기 */
