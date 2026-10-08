@@ -4166,7 +4166,7 @@ function __renderCore(){if(window.GR)GR.adoptAll();
    trust:uTrust,why:uWhy,invite:uInviteCard,friendinvite:uFriendInvite,exc:uExc,excd:uExcDetail,invset:uInvSet,blocked:uBlocked,noti:uNoti,history:uHistory,
    t:uTicket,m:uReg,e:uEdu,c:uSocial,talk:uTalk,v:uVol,detail:uDetail,spot:uSpotDetail,eventspot:discEventDetail,quicknew:uQuickNew,
    room:uRoom,compnew:uCompNew,phnew:uPhotoNew,capapply:uCapApply,spotreq:uSpotReq,prof:uProfile,
-   today:function(){return window.uToday();},week:function(){return window.uWeek();},mine:function(){return isGuest()?uHome():window.uMine();},passport:function(){return isGuest()?uHome():window.uPassport();}}[UV];
+   today:function(){return window.uToday();},week:function(){return window.uWeek();},mine:function(){return isGuest()?uHome():window.uMine();},passport:function(){return isGuest()?uHome():window.uPassport();},tdfeed:function(){return window.uTdFeed?window.uTdFeed():'';},tdnew:function(){return window.uTdNew?window.uTdNew():'';}}[UV];
   html=f?f():uHome();
  } else if(isCap()){
   var c={done:uDone,chome:cHome,cmanage:cManage,cnew:cNew,cincident:cIncident,cclose:cClose,cschedule:cSchedule,croster:cRoster,csettle:cSettle,ctalk:uTalk,
@@ -19923,6 +19923,8 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   DISCOVERY:{U:{UV:'t',SUB:'spot'}},
   TICKET:{U:{UV:'tk'},C:{CV:'tk'},member:true},
   PROFILE:{U:{UV:'prof'},C:{CV:'prof'},member:true},
+  TDFEED:{U:{UV:'tdfeed'}},
+  TDNEW:{U:{UV:'tdnew'},member:true},
   PLACE_DETAIL:{U:{UV:'spot',CURT:'s'},C:{CV:'spot',CURT:'s'},p:'CUR'},
   EVENT_DETAIL:{U:{UV:'eventspot'},C:{CV:'eventspot'},p:'EVENTCUR'},
   MEETING_DETAIL:{U:{UV:'detail',CURT:'m'},C:{CV:'detail',CURT:'m'},p:'CUR'},
@@ -19962,7 +19964,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  };
  W.guriRoutes=function(){return Object.keys(ROUTES);};
  /* one owner of the top-bar title (legacy title writers delegate here) */
- var TITLES={h:'궁리',first:'궁리',today:'오늘 궁리',week:'이번 주',mine:'나의 궁리',passport:'궁리여권',what:'뭐할까?',who:'함께할까?',t:'나가요',m:'움직여요',e:'배워요',c:'만나요',v:'나눠요',talk:'만나요',tk:'신청·결제 내역',my:'내 정보',prof:'내 정보',signup:'새로 가입',
+ var TITLES={h:'궁리',first:'궁리',today:'오늘 궁리',week:'이번 주',mine:'나의 궁리',passport:'궁리여권',what:'뭐할까?',who:'함께할까?',t:'나가요',m:'움직여요',e:'배워요',c:'만나요',v:'나눠요',tdfeed:'오늘도 난',tdnew:'오늘도 난 쓰기',talk:'만나요',tk:'신청·결제 내역',my:'내 정보',prof:'내 정보',signup:'새로 가입',
   detail:'활동 상세',room:'대화방',spot:'가볼 곳',eventspot:'행사',quicknew:'모임 만들기',compnew:'동행 만들기',phnew:'사진 올리기',capapply:'캡틴 신청',spotreq:'가볼 곳 알려주기',onb:'추천 조건',invset:'초대 설정',blocked:'차단 관리',history:'지난 활동',noti:'알림',why:'추천 이유',trust:'안심 원칙',exc:'결제·환불',excd:'결제·환불',friendinvite:'친구 초대',invite:'초대장',done:'완료',
   chome:'캡틴 홈',cops:'운영',cmore:'더보기',cnew:'새 프로그램',cmanage:'활동 운영',croster:'출석',ctalk:'대화',csettle:'정산',cclose:'활동 마감',cincident:'사고 보고',cschedule:'일정',cmember:'회원 화면'};
  W.guriIsFront=function(){try{if(role()!=='USER')return false;var sh=document.getElementById('visualShell'),app=document.getElementById('app');var sv=!!sh&&getComputedStyle(sh).display!=='none'&&sh.getClientRects().length>0;var av=!!app&&getComputedStyle(app).display!=='none'&&app.getClientRects().length>0;return sv&&!av;}catch(e){return false;}};
@@ -21660,13 +21662,17 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  function redraw(){try{if(OPEN)paint();W.render&&W.render();}catch(e){}}
  function out(){S=null;save();}
  /* ---- 서버 로그인 → 앱 회원으로 연결 (새 폰·새 PC에서도 바로 회원 화면) ---- */
+ /* 같은 이름의 기존 회원(서버 연결 전)이 있으면 새로 만들지 않고 그 회원에 연결한다 */
+ function localSame(nm){return (W.ACCOUNTS||[]).filter(function(a){return a.n===nm&&!a.uid&&!a.cloud&&!a.serverOnly&&a.role==='USER'&&a.id!=='guest';})[0]||null;}
  function adopt(){if(!S||!isGuest())return Promise.resolve(false);
   return Promise.all([rest('/profiles?select=nickname&id=eq.'+encodeURIComponent(S.uid)).then(function(r){return (r&&r[0]&&r[0].nickname)||'';},function(){return '';}),
    rest('/member_private?select=name,sex,born,reg,tags,want&id=eq.'+encodeURIComponent(S.uid)).then(function(r){return (r&&r[0])||{};},function(){return {};})]).then(function(pr){var nk=pr[0],mp=pr[1]||{};
    if(!isGuest())return false;
    var ex=(W.ACCOUNTS||[]).filter(function(a){return a.uid===S.uid;})[0];if(ex){W.ACC=ex.id;S.localId=ex.id;save();try{W.UV='h';}catch(e){}return true;}
    nk=String(nk||S.nick||(S.email||'').split('@')[0]||'궁리회원').trim().slice(0,20)||'궁리회원';S.nick=nk;save();
-   var A=W.ACCOUNTS;if(!A)return false;var nm=nk;if(A.some(function(a){return a.n===nm;}))nm=nk+'·'+String(S.uid||'').slice(0,4);
+   var A=W.ACCOUNTS;if(!A)return false;
+   var same=localSame(mp.name||nk);if(same){same.uid=S.uid;if(S.phone)same.tel=showPhone(S.phone);W.ACC=same.id;S.localId=same.id;save();try{W.UV='h';}catch(e){}return true;}
+   var nm=nk;if(A.some(function(a){return a.n===nm;}))nm=nk+'·'+String(S.uid||'').slice(0,4);
    var id='u'+(++W.SEQ);
    A.push({id:id,n:nm,nick:nk,tel:S.phone?showPhone(S.phone):'',sex:mp.sex||'',role:'USER',tier:'기본',born:mp.born||1965,reg:mp.reg||'경기도 구리시',firstDay:false,tags:(mp.tags||[]).slice(),want:(mp.want||[]).slice(),lv:2,cloud:true,uid:S.uid,svName:mp.name||''});
    try{W.STAMPS=W.STAMPS||{};W.STAMPS[nm]=W.STAMPS[nm]||[];W.ACT=W.ACT||{};W.ACT[nm]=W.ACT[nm]||{out:0,walk:0,cul:0,meet:0,vol:0,prev:0};}catch(e){}
@@ -21687,7 +21693,8 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
    return Promise.all([rest('/member_private?select=id,phone,name,sex,born,reg,tags,created_at&order=created_at.asc&limit=1000'),rest('/profiles?select=id,nickname&limit=1000')]).then(function(x){
     var mp=x[0]||[],pf={};(x[1]||[]).forEach(function(p){pf[p.id]=p.nickname;});var A=W.ACCOUNTS,add=0;if(!A)return 0;
     mp.forEach(function(m){if(A.some(function(a){return a.uid===m.id;}))return;if(m.id===S.uid)return;
-     var nk=pf[m.id]||m.name||'궁리회원',nm=m.name||nk;if(A.some(function(a){return a.n===nm;}))nm=nm+'·'+String(m.id).slice(0,4);
+     var nk=pf[m.id]||m.name||'궁리회원',nm=m.name||nk;
+     var sm=localSame(nm);if(sm){sm.uid=m.id;if(m.phone)sm.tel=showPhone(m.phone);if(!sm.born&&m.born)sm.born=m.born;if(!sm.reg&&m.reg)sm.reg=m.reg;return;}if(A.some(function(a){return a.n===nm;}))nm=nm+'·'+String(m.id).slice(0,4);
      A.push({id:'sv'+String(m.id).slice(0,8),uid:m.id,n:nm,nick:nk,tel:m.phone?showPhone(m.phone):'',sex:m.sex||'',role:'USER',tier:'기본',born:m.born||'',reg:m.reg||'',firstDay:false,tags:m.tags||[],want:[],lv:1,serverOnly:true});
      try{W.STAMPS[nm]=W.STAMPS[nm]||[];W.ACT[nm]=W.ACT[nm]||{out:0,walk:0,cul:0,meet:0,vol:0,prev:0};}catch(e){}add++;});
     if(add)redraw();return add;});},function(){return 0;}).catch(function(){return 0;});}
@@ -21748,7 +21755,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
    '<div class="cl-row"><button type="button" class="cl-b" data-cl="sync">지금 저장</button><button type="button" class="cl-b cl-g" data-cl="out">로그아웃</button></div></div>';}
   return '<div class="cl-card"><b>☁ 내 기록 보관함</b><div class="cl-sm">도장 기록을 서버에 보관하면 폰을 바꿔도, 앱을 지워도 그대로 남아요.</div>'+
    '<div class="cl-sm">예전에 비밀번호 없이 가입하셨다면, “처음 가입” 탭에서 전화번호와 비밀번호를 정해 주세요. 지금 쓰는 회원 정보와 그대로 이어져요.</div>'+
-   '<div class="cl-row"><button type="button" class="cl-b" data-cl="open">전화번호로 시작하기</button></div></div>';}
+   '<div class="cl-row"><button type="button" class="cl-b" data-cl="open">전화번호로 시작하기</button><button type="button" class="cl-b cl-g" data-cl="leave">이 회원에서 나가기</button></div></div>';}
  function paint(){var el=D.getElementById('grCl');if(!el)return;var up=MODE==='up';
   el.innerHTML='<div class="cl-sheet" role="dialog" aria-modal="true" aria-label="내 기록 보관함"><div class="cl-top"><b>내 기록 보관함</b><button type="button" class="cl-x" data-cl="close" aria-label="닫기">닫기</button></div>'+
    (up?'<div class="cl-sm">전화번호와 비밀번호를 정해 두면 다른 기기에서도 로그인할 수 있어요. 지금 앱에 가입해 두신 분은 이 번호가 그 회원과 이어져요.</div>':'<div class="cl-sm">앱에 가입하실 때 정한 휴대전화 번호와 비밀번호로 들어오세요.</div>')+'<div class="cl-tabs"><button type="button" data-cl="tab-in" class="'+(up?'':'on')+'">로그인</button><button type="button" data-cl="tab-up" class="'+(up?'on':'')+'">처음 가입</button></div>'+
@@ -21777,7 +21784,8 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   if(a==='open')openSheet('in');else if(a==='close')closeSheet();else if(a==='tab-in'||a==='tab-up'){MODE=a==='tab-up'?'up':'in';MSG='';paint();}
   else if(a==='go'){var g=function(i){var e=D.getElementById(i);return e?e.value:'';};auth(MODE,g('clEm'),g('clPw'),g('clNk'));}
   else if(a==='sync'){LAST='저장하는 중…';redraw();sync(false).then(redraw);}
-  else if(a==='out'){signOut();}});
+  else if(a==='out'){signOut();}
+  else if(a==='leave'){try{W.ACC='guest';W.UV='h';}catch(e){}LAST='';redraw();}});
  /* 새 도장이 생기면 잠시 뒤 자동 저장 */
  if(W.GR&&typeof W.GR.addExperience==='function'){var ae=W.GR.addExperience;W.GR.addExperience=function(x){var r=ae.apply(this,arguments);if(r&&x&&x.sourceKind!=='CLOUD')later();return r;};}
  /* 앱을 열 때 로그인 상태면 조용히 불러오기 */
@@ -22040,8 +22048,8 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  var ACTS=['나가요','움직여요','배워요','만나요','나눠요'];
  var VIS=[['ALL','전체'],['REGION','지역'],['ME','나만']];
  var RK=[['COOL','멋져요'],['CHEER','응원해요'],['ME2','나도 할래요']];
- var F={open:false,scope:'all',posts:null,nick:{},reacts:{},mine:{},err:0,busy:false,msg:'',staff:null,pending:null};
- var WR={open:false,photos:[],title:'',body:'',act:'',vis:'ALL',msg:'',busy:false,listen:false};
+ var F={scope:'all',posts:null,nick:{},reacts:{},mine:{},err:0,busy:false,msg:'',staff:null,pending:null,at:0};
+ var WR={photos:[],title:'',body:'',act:'',vis:'ALL',msg:'',busy:false,listen:false};
  function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
  function sess(){return C()&&C()._sess();}
  function uid(){var s=sess();return s&&s.uid;}
@@ -22071,9 +22079,16 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
     raw('/profiles?select=id,nickname&limit=500').catch(function(){return [];})]).then(function(r){
     F.posts=l;F.nick={};(r[1]||[]).forEach(function(p){F.nick[p.id]=p.nickname;});
     F.reacts={};F.mine={};(r[0]||[]).forEach(function(x){var o=F.reacts[x.post_id]=F.reacts[x.post_id]||{COOL:0,CHEER:0,ME2:0};o[x.kind]=(o[x.kind]||0)+1;if(x.user_id===uid())F.mine[x.post_id+'|'+x.kind]=1;});});
-  }).then(function(){F.busy=false;paintFeed();},function(e){F.busy=false;F.err=1;F.posts=F.posts||[];F.msg=human(e);paintFeed();});
-  if(uid()&&F.staff===null)C()._rest('/staff_roles?select=role').then(function(r){F.staff=!!(r&&r.length);if(F.staff)paintFeed();},function(){F.staff=false;});}
- /* ---------- 모아보기 화면 ---------- */
+  }).then(function(){F.busy=false;F.at=Date.now();refresh();},function(e){F.busy=false;F.err=1;F.at=Date.now();F.posts=F.posts||[];F.msg=human(e);refresh();});
+  if(uid()&&F.staff===null)C()._rest('/staff_roles?select=role').then(function(r){F.staff=!!(r&&r.length);if(F.staff)refresh();},function(){F.staff=false;});}
+
+ /* ---------- 앱 화면으로 들어가기: 다른 화면과 같은 위쪽 바·뒤로가기·아래 메뉴를 쓴다 ---------- */
+ function view(){try{return W.UV;}catch(e){return '';}}
+ function refresh(){var v=view();if(v!=='tdfeed'&&v!=='tdnew')return;var y=W.scrollY||0;try{W.render();}catch(e){}try{W.scrollTo(0,y);}catch(e){}}
+ function go(n){try{if(typeof W.guriGo==='function'&&W.guriGo(n)!==false)return true;}catch(e){}return false;}
+ function openFeed(){F.msg=F.msg||'';F.at=0;go('TDFEED');}
+ function openWrite(){if(!uid()){F.msg='글을 쓰려면 먼저 로그인해 주세요.';refresh();try{C().open('in');}catch(e){}return;}WR.msg='';draftLoad();go('TDNEW');}
+ /* ---------- 모아보기 ---------- */
  function chips(){var g=[['all','전체']];if(myGu())g.push(['gu','우리 지역']);if(uid())g.push(['mine','내가 쓴 글']);if(F.staff)g.push(['wait','확인 대기']);
   return '<div class="td-chips" role="group" aria-label="보기 범위">'+g.map(function(x){return '<button type="button" class="td-chip" data-td="scope" data-v="'+x[0]+'" aria-pressed="'+(F.scope===x[0])+'">'+x[1]+'</button>';}).join('')+'</div>';}
  function card(p){var ph=(p.photos||[]),mine=uid()&&p.user_id===uid(),o=F.reacts[p.id]||{COOL:0,CHEER:0,ME2:0};
@@ -22086,90 +22101,86 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
    '<div class="td-sub">'+(mine?'<button type="button" class="td-lk" data-td="del">지우기</button>':'<button type="button" class="td-lk" data-td="report">신고</button>')+
    (F.staff&&p.status==='PENDING'?'<button type="button" class="td-ok" data-td="approve">승인</button><button type="button" class="td-lk" data-td="reject">반려</button>':'')+
    (F.staff&&p.status==='OK'&&!mine?'<button type="button" class="td-lk" data-td="reject">숨기기</button>':'')+'</div></div></article>';}
- function paintFeed(){var el=D.getElementById('grTd');if(!el||!F.open)return;var l=F.posts;
+ W.uTdFeed=function(){
+  if(!F.busy&&(F.posts==null||Date.now()-F.at>20000))setTimeout(load,0);
+  var l=F.posts;
   var body=l==null?'<div class="td-empty">불러오는 중…</div>':l.length?l.map(card).join(''):'<div class="td-empty">'+(F.scope==='mine'?'아직 쓰신 글이 없어요. 오늘 한 일을 하나 남겨 보세요.':F.scope==='wait'?'확인 대기 중인 글이 없어요.':'아직 올라온 글이 없어요. 첫 번째 글을 써 보세요.')+'</div>';
-  var st=el.querySelector('.td-scroll'),y=st?st.scrollTop:0;
-  el.innerHTML='<div class="td-sheet" role="dialog" aria-modal="true" aria-label="오늘도 난"><div class="td-top"><button type="button" class="td-back" data-td="close" aria-label="닫기">‹</button><b>오늘도 난…</b></div><div class="td-scroll">'+chips()+
-   (F.msg?'<div class="td-msg" role="status">'+esc(F.msg)+'</div>':'')+body+(F.err?'<div class="td-sm">서버에 연결되지 않아 새 글이 보이지 않을 수 있어요.</div>':'')+'<div style="height:84px"></div></div><button type="button" class="td-fab" data-td="write">✎ 글쓰기</button></div>';
-  var s2=el.querySelector('.td-scroll');if(s2)s2.scrollTop=y;}
- function openFeed(){F.open=true;F.msg='';var el=D.getElementById('grTd');if(!el){el=D.createElement('div');el.id='grTd';D.body.appendChild(el);}el.style.display='block';D.body.classList.add('td-lock');F.posts=F.posts||null;paintFeed();load();}
- function closeFeed(){F.open=false;var el=D.getElementById('grTd');if(el)el.style.display='none';D.body.classList.remove('td-lock');}
+  return '<div class="top"><div class="inner"><div class="code">오 늘 도 난 …</div><div class="hello serif">오늘 한 일을<br>사진과 함께 남겨요</div><div class="sub">혼자 걷고, 배우고, 만든 이야기를 자랑해 보세요</div></div></div>'+
+   '<div class="sec"><button type="button" class="btn btn-g w100" data-td="write">✎ 오늘도 난 쓰기</button>'+
+   '<div class="sm mute" style="margin:8px 2px 14px">처음 쓰신 글은 운영진이 확인한 뒤 올라가요.</div>'+chips()+
+   (F.msg?'<div class="td-msg" role="status">'+esc(F.msg)+'</div>':'')+body+(F.err?'<div class="td-sm">서버에 연결되지 않아 새 글이 보이지 않을 수 있어요.</div>':'')+'</div><div class="pad"></div>';};
  /* ---------- 반응·신고·삭제·승인 ---------- */
- function needLogin(){if(uid())return false;F.msg='로그인하면 반응을 남기고 글도 쓸 수 있어요.';paintFeed();try{C().open('in');}catch(e){}return true;}
+ function needLogin(){if(uid())return false;F.msg='로그인하면 반응을 남기고 글도 쓸 수 있어요.';refresh();try{C().open('in');}catch(e){}return true;}
  function react(pid,k){if(needLogin())return;var key=pid+'|'+k,on=!!F.mine[key],o=F.reacts[pid]=F.reacts[pid]||{COOL:0,CHEER:0,ME2:0};
-  if(on){delete F.mine[key];o[k]=Math.max(0,(o[k]||0)-1);}else{F.mine[key]=1;o[k]=(o[k]||0)+1;}paintFeed();
+  if(on){delete F.mine[key];o[k]=Math.max(0,(o[k]||0)-1);}else{F.mine[key]=1;o[k]=(o[k]||0)+1;}refresh();
   var p=on?C()._rest('/today_reacts?post_id=eq.'+encodeURIComponent(pid)+'&user_id=eq.'+encodeURIComponent(uid())+'&kind=eq.'+k,{method:'DELETE'}):C()._rest('/today_reacts?on_conflict=post_id,user_id,kind',{method:'POST',body:{post_id:pid,user_id:uid(),kind:k},prefer:'resolution=ignore-duplicates,return=minimal'});
-  p.catch(function(e){if(on){F.mine[key]=1;o[k]++;}else{delete F.mine[key];o[k]=Math.max(0,o[k]-1);}F.msg=human(e);paintFeed();});}
- function report(pid){if(needLogin())return;C()._rest('/today_reports?on_conflict=post_id,user_id',{method:'POST',body:{post_id:pid,user_id:uid()},prefer:'resolution=ignore-duplicates,return=minimal'}).then(function(){F.msg='신고했어요. 운영진이 살펴볼게요.';paintFeed();},function(e){F.msg=human(e);paintFeed();});}
+  p.catch(function(e){if(on){F.mine[key]=1;o[k]++;}else{delete F.mine[key];o[k]=Math.max(0,o[k]-1);}F.msg=human(e);refresh();});}
+ function report(pid){if(needLogin())return;C()._rest('/today_reports?on_conflict=post_id,user_id',{method:'POST',body:{post_id:pid,user_id:uid()},prefer:'resolution=ignore-duplicates,return=minimal'}).then(function(){F.msg='신고했어요. 운영진이 살펴볼게요.';refresh();},function(e){F.msg=human(e);refresh();});}
  function del(pid){var b=D.querySelector('[data-pid="'+pid+'"] [data-td="del"]');if(b&&b.getAttribute('data-sure')!=='1'){b.setAttribute('data-sure','1');b.textContent='정말 지울까요? 한 번 더 누르세요';return;}
-  C()._rest('/today_posts?id=eq.'+encodeURIComponent(pid),{method:'DELETE'}).then(function(){F.posts=(F.posts||[]).filter(function(p){return p.id!==pid;});F.msg='지웠어요.';paintFeed();},function(e){F.msg=human(e);paintFeed();});}
- function decide(pid,st){C()._rest('/today_posts?id=eq.'+encodeURIComponent(pid),{method:'PATCH',body:{status:st,reviewed_by:uid(),reviewed_at:new Date().toISOString()},prefer:'return=minimal'}).then(function(){F.posts=(F.posts||[]).filter(function(p){return p.id!==pid;});F.msg=st==='OK'?'승인했어요.':'숨겼어요.';paintFeed();},function(e){F.msg=human(e);paintFeed();});}
- /* ---------- 글쓰기 화면 ---------- */
- function draftLoad(){try{var d=JSON.parse(localStorage.getItem(LSD)||'null');if(d){WR.title=d.title||'';WR.body=d.body||'';WR.act=d.act||'';WR.vis=d.vis||'ALL';}}catch(e){}}
+  C()._rest('/today_posts?id=eq.'+encodeURIComponent(pid),{method:'DELETE'}).then(function(){F.posts=(F.posts||[]).filter(function(p){return p.id!==pid;});F.msg='지웠어요.';refresh();},function(e){F.msg=human(e);refresh();});}
+ function decide(pid,st){C()._rest('/today_posts?id=eq.'+encodeURIComponent(pid),{method:'PATCH',body:{status:st,reviewed_by:uid(),reviewed_at:new Date().toISOString()},prefer:'return=minimal'}).then(function(){F.posts=(F.posts||[]).filter(function(p){return p.id!==pid;});F.msg=st==='OK'?'승인했어요.':'숨겼어요.';refresh();},function(e){F.msg=human(e);refresh();});}
+ /* ---------- 글쓰기 ---------- */
+ function draftLoad(){try{var d=JSON.parse(localStorage.getItem(LSD)||'null');if(d&&!WR.title&&!WR.body){WR.title=d.title||'';WR.body=d.body||'';WR.act=d.act||'';WR.vis=d.vis||'ALL';}}catch(e){}}
  function draftSave(){try{if(WR.title||WR.body)localStorage.setItem(LSD,JSON.stringify({title:WR.title,body:WR.body,act:WR.act,vis:WR.vis}));else localStorage.removeItem(LSD);}catch(e){}}
  function canListen(){return !!(W.SpeechRecognition||W.webkitSpeechRecognition);}
- function paintWrite(keepFocus){var el=D.getElementById('grTw');if(!el||!WR.open)return;
+ W.uTdNew=function(){
   var ph=WR.photos.map(function(p,i){return '<div class="tw-ph"><img alt="고른 사진 '+(i+1)+'" src="'+esc(p.url)+'">'+(i===0?'<s>대표</s>':'')+'<button type="button" class="tw-x" data-tw="rm" data-i="'+i+'" aria-label="사진 빼기">×</button>'+(i>0?'<button type="button" class="tw-up" data-tw="up" data-i="'+i+'" aria-label="앞으로">‹</button>':'')+'</div>';}).join('');
-  el.innerHTML='<div class="td-sheet" role="dialog" aria-modal="true" aria-label="오늘도 난 쓰기"><div class="td-top"><button type="button" class="td-back" data-tw="close" aria-label="닫기">‹</button><b>오늘도 난… 쓰기</b><span class="tw-saved">'+(WR.title||WR.body?'임시저장됨':'')+'</span></div><div class="td-scroll">'+
-   '<label class="tw-l">사진 <small>(최대 6장, 첫 사진이 대표)</small></label><div class="tw-photos">'+ph+(WR.photos.length<6?'<button type="button" class="tw-add" data-tw="pick">＋ 추가</button>':'')+'</div>'+
+  return '<div class="top"><div class="inner"><div class="code">오 늘 도 난 …</div><div class="hello serif">오늘 한 일을<br>남겨 볼까요?</div><div class="sub">'+(WR.title||WR.body?'쓰던 내용은 자동으로 저장돼요':'사진 한 장, 한 줄이면 충분해요')+'</div></div></div>'+
+   '<div class="sec"><label class="tw-l" style="margin-top:0">사진 <small>(최대 6장, 첫 사진이 대표)</small></label><div class="tw-photos">'+ph+(WR.photos.length<6?'<button type="button" class="tw-add" data-tw="pick">＋ 추가</button>':'')+'</div>'+
    '<label class="tw-l" for="twT">제목</label><div class="tw-title"><span>오늘도 난</span><input id="twT" type="text" maxlength="30" autocomplete="off" placeholder="예) 왕숙천을 걸었다" value="'+esc(WR.title)+'"></div>'+
    '<label class="tw-l" for="twB">이야기 <small>(없어도 돼요)</small></label><textarea id="twB" maxlength="1000" placeholder="오늘 한 일, 느낀 점을 편하게 적어 주세요.">'+esc(WR.body)+'</textarea>'+
    (canListen()?'<button type="button" class="tw-mic'+(WR.listen?' on':'')+'" data-tw="mic">'+(WR.listen?'■ 듣는 중… 누르면 멈춰요':'🎤 말로 쓰기')+'</button>':'')+
    '<label class="tw-l">어떤 활동인가요 <small>(고르지 않아도 돼요)</small></label><div class="td-chips">'+ACTS.map(function(a){return '<button type="button" class="td-chip" data-tw="act" data-v="'+a+'" aria-pressed="'+(WR.act===a)+'">'+a+'</button>';}).join('')+'</div>'+
    '<label class="tw-l">누구에게 보일까요</label><div class="td-chips">'+VIS.map(function(v){return '<button type="button" class="td-chip" data-tw="vis" data-v="'+v[0]+'" aria-pressed="'+(WR.vis===v[0])+'">'+v[1]+'</button>';}).join('')+'</div>'+
    '<div class="td-sm">'+(WR.vis==='REGION'?'같은 시·군·구 회원에게만 보여요.':WR.vis==='ME'?'나만 볼 수 있는 기록이에요.':'모든 분이 볼 수 있어요.')+' 다른 사람의 얼굴이 크게 나온 사진은 그분께 허락을 받아 주세요. 사진 속 위치 정보는 지워서 올려요.</div>'+
-   (WR.msg?'<div class="td-msg" role="status">'+esc(WR.msg)+'</div>':'')+'<div style="height:12px"></div></div><div class="tw-bar"><button type="button" class="tw-go" data-tw="send"'+(WR.busy?' disabled':'')+'>'+(WR.busy?'올리는 중…':'올리기')+'</button></div></div>';
-  if(keepFocus){var f=D.getElementById(keepFocus);if(f){f.focus();try{f.setSelectionRange(f.value.length,f.value.length);}catch(e){}}}}
- function openWrite(){if(!uid()){F.msg='글을 쓰려면 먼저 로그인해 주세요.';paintFeed();try{C().open('in');}catch(e){}return;}
-  WR.open=true;WR.msg='';draftLoad();var el=D.getElementById('grTw');if(!el){el=D.createElement('div');el.id='grTw';D.body.appendChild(el);}el.style.display='block';D.body.classList.add('td-lock');paintWrite();}
- function closeWrite(){WR.open=false;var el=D.getElementById('grTw');if(el)el.style.display='none';if(!F.open)D.body.classList.remove('td-lock');}
- function addFiles(files){var room=6-WR.photos.length,list=[].slice.call(files||[]).slice(0,room);if(!list.length)return;WR.msg='사진을 정리하는 중…';paintWrite();
-  Promise.all(list.map(function(f){return W.guriCommunity.resize(f).then(function(b){return {blob:b,url:URL.createObjectURL(b)};}).catch(function(){return null;});})).then(function(r){r.forEach(function(x){if(x&&WR.photos.length<6)WR.photos.push(x);});WR.msg='';paintWrite();});}
- function send(){if(WR.busy)return;var t=String(WR.title||'').trim();if(!t){WR.msg='제목을 적어 주세요. 예) 왕숙천을 걸었다';paintWrite();return;}
-  if(!WR.photos.length&&!String(WR.body||'').trim()){WR.msg='사진이나 이야기 중 하나는 있어야 해요.';paintWrite();return;}
-  WR.busy=true;WR.msg='';paintWrite();var s=sess(),paths=[];
+   (WR.msg?'<div class="td-msg" role="status">'+esc(WR.msg)+'</div>':'')+
+   '<div class="row" style="gap:8px;margin-top:14px"><button type="button" class="btn btn-o" style="flex:1" data-guri-back="1">취소</button><button type="button" class="btn btn-g" style="flex:2" data-tw="send"'+(WR.busy?' disabled':'')+'>'+(WR.busy?'올리는 중…':'올리기')+'</button></div></div><div class="pad"></div>';};
+ function addFiles(files){var room=6-WR.photos.length,list=[].slice.call(files||[]).slice(0,room);if(!list.length)return;WR.msg='사진을 정리하는 중…';refresh();
+  Promise.all(list.map(function(f){return W.guriCommunity.resize(f).then(function(b){return {blob:b,url:URL.createObjectURL(b)};}).catch(function(){return null;});})).then(function(r){r.forEach(function(x){if(x&&WR.photos.length<6)WR.photos.push(x);});WR.msg='';refresh();});}
+ function send(){if(WR.busy)return;var t=String(WR.title||'').trim();if(!t){WR.msg='제목을 적어 주세요. 예) 왕숙천을 걸었다';refresh();return;}
+  if(!WR.photos.length&&!String(WR.body||'').trim()){WR.msg='사진이나 이야기 중 하나는 있어야 해요.';refresh();return;}
+  WR.busy=true;WR.msg='';refresh();var s=sess(),paths=[];
   var up=WR.photos.reduce(function(pr,p){return pr.then(function(){var path=s.uid+'/today-'+(W.crypto&&crypto.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2,8))+'.jpg';return W.guriCommunity.upload(path,p.blob).then(function(){paths.push(path);});});},Promise.resolve());
   up.then(function(){return C()._rest('/today_posts',{method:'POST',body:{user_id:s.uid,title:t.slice(0,30),body:String(WR.body||'').trim().slice(0,1000),activity:WR.act||null,photos:paths,visibility:WR.vis},prefer:'return=representation'});}).then(function(r){
-   WR.busy=false;var st=r&&r[0]&&r[0].status;WR.photos.forEach(function(p){try{URL.revokeObjectURL(p.url);}catch(e){}});WR.photos=[];WR.title='';WR.body='';WR.act='';draftSave();closeWrite();
-   F.msg=st==='PENDING'?'올렸어요. 처음 쓰신 글은 운영진이 확인한 뒤 올라가요. 보통 하루 안에 올라가요.':'올렸어요.';if(!F.open)openFeed();else{F.posts=null;paintFeed();load();}
-  },function(e){WR.busy=false;WR.msg=human(e)+' 쓰신 글은 그대로 있어요.';paintWrite();});}
+   WR.busy=false;var st=r&&r[0]&&r[0].status;WR.photos.forEach(function(p){try{URL.revokeObjectURL(p.url);}catch(e){}});WR.photos=[];WR.title='';WR.body='';WR.act='';draftSave();
+   F.msg=st==='PENDING'?'올렸어요. 처음 쓰신 글은 운영진이 확인한 뒤 올라가요. 보통 하루 안에 올라가요.':'올렸어요.';F.posts=null;F.at=0;
+   if(view()==='tdnew'){if(!go('TDFEED'))refresh();}else refresh();
+  },function(e){WR.busy=false;WR.msg=human(e)+' 쓰신 글은 그대로 있어요.';refresh();});}
  var REC=null;function mic(){var SR=W.SpeechRecognition||W.webkitSpeechRecognition;if(!SR)return;if(WR.listen&&REC){try{REC.stop();}catch(e){}return;}
-  REC=new SR();REC.lang='ko-KR';REC.interimResults=false;REC.continuous=true;WR.listen=true;paintWrite();
+  REC=new SR();REC.lang='ko-KR';REC.interimResults=false;REC.continuous=true;WR.listen=true;refresh();
   REC.onresult=function(ev){var t='';for(var i=ev.resultIndex;i<ev.results.length;i++)if(ev.results[i].isFinal)t+=ev.results[i][0].transcript;if(t){WR.body=(WR.body?WR.body+' ':'')+t.trim();draftSave();}};
-  REC.onend=function(){WR.listen=false;paintWrite();};REC.onerror=function(){WR.listen=false;WR.msg='마이크를 쓸 수 없어요. 글자로 적어 주세요.';paintWrite();};
-  try{REC.start();}catch(e){WR.listen=false;paintWrite();}}
+  REC.onend=function(){WR.listen=false;refresh();};REC.onerror=function(){WR.listen=false;WR.msg='마이크를 쓸 수 없어요. 글자로 적어 주세요.';refresh();};
+  try{REC.start();}catch(e){WR.listen=false;refresh();}}
  /* ---------- 이벤트 ---------- */
  D.addEventListener('input',function(ev){var t=ev.target;if(!t)return;if(t.id==='twT'){WR.title=t.value;draftSave();}else if(t.id==='twB'){WR.body=t.value;draftSave();}},true);
  D.addEventListener('click',function(ev){var t=ev.target;if(!t||!t.closest)return;
   var h=t.closest('[data-ui-today]');if(h){ev.preventDefault();ev.stopPropagation();ev.stopImmediatePropagation();openFeed();return;}
   var b=t.closest('[data-td]');if(b){var a=b.getAttribute('data-td'),post=b.closest('[data-pid]'),pid=post&&post.getAttribute('data-pid');ev.preventDefault();
-   if(a==='close')closeFeed();else if(a==='write')openWrite();else if(a==='scope'){F.scope=b.getAttribute('data-v');F.posts=null;F.msg='';paintFeed();load();}
+   if(a==='write')openWrite();else if(a==='scope'){F.scope=b.getAttribute('data-v');F.posts=null;F.msg='';F.at=0;refresh();setTimeout(load,0);}
    else if(a==='react')react(pid,b.getAttribute('data-k'));else if(a==='report')report(pid);else if(a==='del')del(pid);else if(a==='approve')decide(pid,'OK');else if(a==='reject')decide(pid,'HIDDEN');
    else if(a==='zoom'){t.classList.toggle('big');}return;}
   var w=t.closest('[data-tw]');if(w){var x=w.getAttribute('data-tw'),i=+w.getAttribute('data-i');ev.preventDefault();
-   if(x==='close')closeWrite();else if(x==='pick'){var inp=D.createElement('input');inp.type='file';inp.accept='image/*';inp.multiple=true;inp.id='twFile';inp.onchange=function(){addFiles(inp.files);};inp.click();}
-   else if(x==='rm'){var r=WR.photos.splice(i,1)[0];if(r)try{URL.revokeObjectURL(r.url);}catch(e){}paintWrite();}
-   else if(x==='up'&&i>0){var q=WR.photos[i];WR.photos[i]=WR.photos[i-1];WR.photos[i-1]=q;paintWrite();}
-   else if(x==='act'){var v=w.getAttribute('data-v');WR.act=WR.act===v?'':v;draftSave();paintWrite();}
-   else if(x==='vis'){WR.vis=w.getAttribute('data-v');draftSave();paintWrite();}
+   if(x==='pick'){var inp=D.createElement('input');inp.type='file';inp.accept='image/*';inp.multiple=true;inp.id='twFile';inp.onchange=function(){addFiles(inp.files);};inp.click();}
+   else if(x==='rm'){var r=WR.photos.splice(i,1)[0];if(r)try{URL.revokeObjectURL(r.url);}catch(e){}refresh();}
+   else if(x==='up'&&i>0){var q=WR.photos[i];WR.photos[i]=WR.photos[i-1];WR.photos[i-1]=q;refresh();}
+   else if(x==='act'){var v=w.getAttribute('data-v');WR.act=WR.act===v?'':v;draftSave();refresh();}
+   else if(x==='vis'){WR.vis=w.getAttribute('data-v');draftSave();refresh();}
    else if(x==='mic')mic();else if(x==='send')send();}
  },true);
  D.addEventListener('keydown',function(ev){if(ev.key!=='Enter'&&ev.key!==' ')return;var t=ev.target;if(t&&t.hasAttribute&&t.hasAttribute('data-ui-today')){ev.preventDefault();openFeed();}},true);
  var st=D.createElement('style');st.textContent=
-  'body.td-lock{overflow:hidden}#grTd,#grTw{display:none;position:fixed;inset:0;z-index:2147482300;background:#fff}#grTw{z-index:2147482350}.td-sheet{box-sizing:border-box;max-width:560px;margin:0 auto;height:100%;display:flex;flex-direction:column;background:#faf8f4;position:relative;font-size:17px;line-height:1.5;color:#1f2a30}'+
-  '.td-top{display:flex;align-items:center;gap:6px;padding:10px 12px;background:#fff;border-bottom:1px solid #e3ddd2;font-size:20px;font-weight:900}.td-back{min-width:48px;min-height:48px;border:0;background:transparent;font-size:30px;line-height:1;color:#4b5a60}.tw-saved{margin-left:auto;font-size:14px;font-weight:500;color:#2f7a4f}'+
-  '.td-scroll{flex:1;overflow-y:auto;padding:14px 14px}.td-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.td-chip{min-height:46px;padding:0 16px;border:1.5px solid #cfc7ba;background:#fff;color:#1f2a30;border-radius:24px;font-size:17px;font-weight:500}.td-chip[aria-pressed="true"]{background:#1f2a30;color:#fff;border-color:#1f2a30;font-weight:800}'+
+  '.td-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.td-chip{min-height:46px;padding:0 16px;border:1.5px solid #cfc7ba;background:#fff;color:#1f2a30;border-radius:24px;font-size:17px;font-weight:500}.td-chip[aria-pressed="true"]{background:#1f2a30;color:#fff;border-color:#1f2a30;font-weight:800}'+
   '.td-post{background:#fff;border:1px solid #e3ddd2;border-radius:16px;overflow:hidden;margin-bottom:14px}.td-pics{display:grid;gap:2px;position:relative;background:#eee}.td-pics.n1{grid-template-columns:1fr}.td-pics.n2{grid-template-columns:1fr 1fr}.td-pics.n3{grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr}.td-pics.n3 img:first-child{grid-row:1/3}'+
-  '.td-pics img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;display:block;cursor:zoom-in}.td-pics.n1 img{aspect-ratio:4/3}.td-pics img.big{position:fixed;inset:0;z-index:2147483000;width:100vw;height:100vh;object-fit:contain;background:#000;aspect-ratio:auto;cursor:zoom-out}.td-more{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.6);color:#fff;font-style:normal;font-size:14px;padding:2px 10px;border-radius:12px}'+
+  '.td-pics img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;display:block;cursor:zoom-in}.td-pics img.big{position:fixed;inset:0;z-index:2147483000;width:100vw;height:100vh;object-fit:contain;background:#000;aspect-ratio:auto;cursor:zoom-out}.td-more{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.6);color:#fff;font-style:normal;font-size:14px;padding:2px 10px;border-radius:12px}'+
   '.td-pb{padding:12px 14px 14px}.td-pt{margin:0 0 4px;font-size:20px;line-height:1.35}.td-pt em{font-style:normal;color:#c4501b}.td-tx{margin:0 0 8px;white-space:pre-wrap;word-break:break-word}.td-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:14.5px;color:#6b625a}.td-pill{background:#fbe9dd;color:#c4501b;border-radius:14px;padding:1px 10px;font-weight:800}'+
   '.td-wait{margin-top:8px;padding:8px 10px;background:#fff4dc;color:#7a4a00;border-radius:10px;font-size:15px}.td-react{display:flex;gap:6px;margin-top:10px}.td-rb{flex:1;min-width:0;min-height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.25;white-space:nowrap;border:1.5px solid #d8d1c5;background:#fff;color:#1f2a30;border-radius:12px;font-size:15.5px;font-weight:500;padding:0 2px}.td-rb[aria-pressed="true"]{background:#fbe9dd;border-color:#c4501b;color:#c4501b;font-weight:800}'+
   '.td-sub{display:flex;gap:14px;align-items:center;margin-top:8px}.td-lk{min-height:40px;border:0;background:transparent;color:#6b625a;font-size:15px;text-decoration:underline}.td-ok{min-height:40px;padding:0 16px;border:0;border-radius:10px;background:#0f6b45;color:#fff;font-weight:800;font-size:15px}'+
-  '.td-fab{position:absolute;right:16px;bottom:18px;min-height:56px;padding:0 24px;border:0;border-radius:30px;background:#c4501b;color:#fff;font-size:19px;font-weight:900;box-shadow:0 4px 14px rgba(0,0,0,.3)}.td-empty{padding:40px 10px;text-align:center;color:#6b625a}.td-msg{margin:0 0 12px;padding:10px 12px;background:#e4f3ea;color:#0b5a3a;border-radius:12px;font-weight:700}.td-sm{font-size:14.5px;color:#6b625a;margin:8px 0}'+
+  '.td-empty{padding:40px 10px;text-align:center;color:#6b625a}.td-msg{margin:0 0 12px;padding:10px 12px;background:#e4f3ea;color:#0b5a3a;border-radius:12px;font-weight:700}.td-sm{font-size:14.5px;color:#6b625a;margin:8px 0}'+
   '.tw-l{display:block;margin:16px 0 6px;font-weight:800}.tw-l small{font-weight:400;color:#6b625a}.tw-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.tw-ph{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;background:#eee}.tw-ph img{width:100%;height:100%;object-fit:cover}.tw-ph s{position:absolute;left:5px;top:5px;background:#1f2a30;color:#fff;text-decoration:none;font-size:13px;font-weight:700;border-radius:12px;padding:0 8px}'+
   '.tw-x,.tw-up{position:absolute;min-width:40px;min-height:40px;border:0;border-radius:20px;background:rgba(0,0,0,.6);color:#fff;font-size:22px;line-height:1}.tw-x{right:4px;top:4px}.tw-up{left:4px;bottom:4px}.tw-add{aspect-ratio:1;border:2px dashed #c4501b;border-radius:12px;background:transparent;color:#c4501b;font-size:17px;font-weight:800}'+
   '.tw-title{display:flex;align-items:center;gap:8px;border:1.5px solid #cfc7ba;background:#fff;border-radius:12px;padding:4px 12px}.tw-title span{font-weight:900;color:#c4501b;white-space:nowrap;font-size:19px}.tw-title input{flex:1;min-width:0;border:0;outline:0;font-size:19px;min-height:48px;background:transparent;color:#1f2a30}'+
   '#twB{box-sizing:border-box;width:100%;min-height:130px;border:1.5px solid #cfc7ba;background:#fff;border-radius:12px;padding:10px 12px;font-size:18px;font-family:inherit;color:#1f2a30;resize:vertical}.tw-mic{margin-top:8px;width:100%;min-height:50px;border:1.5px solid #cfc7ba;background:#fff;border-radius:12px;font-size:17px;color:#1f2a30}.tw-mic.on{background:#fbe9dd;border-color:#c4501b;color:#c4501b;font-weight:800}'+
-  '.tw-bar{padding:10px 14px;background:#fff;border-top:1px solid #e3ddd2}.tw-go{width:100%;min-height:56px;border:0;border-radius:14px;background:#c4501b;color:#fff;font-size:20px;font-weight:900}.tw-go[disabled]{opacity:.6}#grTd button:focus-visible,#grTw button:focus-visible,#grTw input:focus-visible,#grTw textarea:focus-visible{outline:3px solid #c4501b;outline-offset:2px}'+
+  '#app button:focus-visible,#app input:focus-visible,#app textarea:focus-visible{outline:3px solid #c4501b;outline-offset:2px}'+
   '.ui-cat[data-ui-today] .ui-cat-img{background:linear-gradient(135deg,#ffd9bd,#f3a46b 55%,#d9733a)}.ui-cat[data-ui-today]{cursor:pointer;background:#fff4ec}';
  D.head.appendChild(st);
  W.guriToday={open:openFeed,write:openWrite,state:function(){return {F:F,WR:WR};}};
