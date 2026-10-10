@@ -1,25 +1,25 @@
 {
  "schema": "GUNGRI_FEED_V1",
- "generatedAt": "2026-10-10T05:26:39+09:00",
+ "generatedAt": "2026-10-11T05:30:26+09:00",
  "source": {
   "name": "한국관광공사 TourAPI 4.0 (KorService2)",
   "page": "https://www.data.go.kr/data/15101578/openapi.do",
   "notice": "사진은 공공누리 유형(Type1·Type3)이 표시된 것만 사용 가능으로 표시합니다. 공개는 궁리 스텝 검수·대표 승인 후에만 합니다."
  },
  "stats": {
-  "places": 2011,
-  "events": 106,
-  "newPlaces": 1,
+  "places": 2080,
+  "events": 100,
+  "newPlaces": 70,
   "newEvents": 0,
-  "apiCalls": 20,
+  "apiCalls": 230,
   "mock": false
  },
  "options": {
   "showExamples": true
  },
  "log": [
-  "목록 확인: 새로 받을 항목 1건(행사 0) · 이번 실행 상한 200건",
-  "상세 수집 1건 · API 호출 20건",
+  "목록 확인: 새로 받을 항목 70건(행사 0) · 이번 실행 상한 200건",
+  "상세 수집 70건 · API 호출 230건",
   "큐레이션 표시(로컬100 등) 0건"
  ],
  "places": [
@@ -1911,6 +1911,62 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/08/3048708_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/08/3048708_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-1114573",
+   "contentId": "1114573",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "인천기독교사회복지관(여선교사합숙소)",
+   "a": "인천광역시 제물포구 우각로 57 (창영동)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "옛 여선교사 합숙소로 감리교 여자 선교사들이 머물던 곳이다.",
+   "summary": "옛 여선교사 합숙소로 감리교 여자 선교사들이 머물던 곳이다. 1885년 북장로교회 언더우드 선교사와 북감리교회 아펜젤러 선교사 부부가 제물포항을 통해 우리나라에 들어오면서 본격적인 기독교 포교 활동이 시작됐다. 이후 포교 활동을 위해 도착한 선교사들이 기거할 수 있는 숙소가 필요했고, 여 선교사 합숙소도 그러한 이유로 1894년 준공됐다. 건축을 주도한 사람은 1892년 인천에 부임한 내리교회 존스 목사였다. 19세기 말 미국 북감리교회가 파송한 여자 선교사들이 합숙소로 사용했고, 서울과 평양에 있는 여자 선교사들의 여름휴가 장소로도 이용됐다. 건물 규모는 지상 2층, 지하 1층의 건평 142평으로 옆에는 남자 선교사들의 숙소가 지어졌고, 또 다른 건물은 아펜젤러 선교사 사택 등으로 사용했다. 남자 선교사 …",
+   "hours": "09:00~17:00",
+   "closed": "공휴일",
+   "parking": "가능",
+   "phone": "032-762-5118",
+   "homepage": "https://www.changyoung.or.kr/sub01j_01.html",
+   "lat": 37.4706816068,
+   "lng": 126.6411378044,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.changyoung.or.kr/sub01j_01.html",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/98/3039398_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/98/3039398_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/87/3039387_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/87/3039387_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/88/3039388_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/88/3039388_image3_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -3841,6 +3897,34 @@
    ]
   },
   {
+   "feedId": "TA-125501",
+   "contentId": "125501",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "영종도",
+   "a": "인천광역시 영종구 운남서로 100 (운남동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "섬"
+   ],
+   "sub": "해안활동",
+   "why": "영종대교를 통해 육지와 연결되고, 간척공사로 용유도, 삼목도와 하나로 합해진 섬이다.",
+   "summary": "영종대교를 통해 육지와 연결되고, 간척공사로 용유도, 삼목도와 하나로 합해진 섬이다. 인천 연안부두에서 서북쪽으로 3㎞ 거리에 있다. 창밖으로 펼쳐진 갯벌과 바다를 내다보며 4.42㎞를 달리는 기분은 여행의 또 다른 시원한 맛을 느끼게 된다. 영종도에 도착하자마자 가정 먼저 만나게 될 진풍경은 어시장이다. 광어, 우럭, 도다리, 게, 해삼, 멍게 같은 해산물은 인근 바다에서 그날 잡은 것으로 즉석에서 회를 떠서 맛볼 수도 있으며 해산물을 구입할 수 있다. 영종도에는 사색의 숲을 거쳐 가는 아담한 사찰인 용궁사와 산책하기 좋은 백운산이 있으며, 학생 해양탐구학습장인 이곳은 지난 1984년 개장하여 운영되고 있으며 수천수만 년 동안 파도에 의해 형성된 해안절벽과 해식동굴을 볼 수 있다. 백운산 정상에서는 동북아…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-760-6478",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.4941755361496,
+   "lng": 126.53150047257,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11"
+  },
+  {
    "feedId": "TA-125503",
    "contentId": "125503",
    "contentTypeId": "12",
@@ -5404,6 +5488,63 @@
    ]
   },
   {
+   "feedId": "TA-126676",
+   "contentId": "126676",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "용궁사(인천)",
+   "a": "인천광역시 영종구 운남로 199-1 (운남동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "궁"
+   ],
+   "sub": "유적지",
+   "why": "신라 문무왕 10년(670년)에 원효대사가 창건하여 산 이름을 딴 백운사라 하였다.",
+   "summary": "신라 문무왕 10년(670년)에 원효대사가 창건하여 산 이름을 딴 백운사라 하였다. 흥선대원군 이하응이 이 절에 머물면서 10년 동안 기도를 하였다고 한다. 1864년에 고종이 왕위에 오르자, 흥선대원군은 절을 옛터에 옮겨 짓고, 구담사에서 용궁사로 이름을 바꾸었다. 일설에는 영종도 중산 월촌에 사는 윤공이란 어부가 꿈을 꾼 뒤 바다에서 작은 옥불을 어망으로 끌어올려 이 절에 봉안했다는 전설에 따라 붙여진 이름이라고도 한다. 흥선대원군이 중건한 관음전과 대원군의 친필 현판이 걸려 있는 대방, 그리고 칠성각과 용황각 등의 객사가 남아 있다. 관음전에는 관음상이 고풍스러운 후불탱화를 배경으로 앉아있다. 절 기둥에는 해강 김규진이 쓴 시가 새겨져 있다. 절 입구에는 수령 1,000년이 넘는 느티나무 고목 두 그루…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능 / 요금 (무료)",
+   "phone": "032-746-1361",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=ITD21122714413216128",
+   "lat": 37.4971570919,
+   "lng": 126.5279807341,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=ITD21122714413216128",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/88/3047388_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/88/3047388_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/75/3047375_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/75/3047375_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/76/3047376_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/76/3047376_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-126705",
    "contentId": "126705",
    "contentTypeId": "12",
@@ -5735,6 +5876,62 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/94/3532994_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/94/3532994_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-126798",
+   "contentId": "126798",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "용유도",
+   "a": "인천광역시 영종구 을왕동",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "용유도는 바다에서 헤엄치며 노는 용의 모습을 닮았다는 데서 붙여진 이름이다.",
+   "summary": "용유도는 바다에서 헤엄치며 노는 용의 모습을 닮았다는 데서 붙여진 이름이다. 인천국제공항이 건설되면서 용유도와 가까이 있던 영종도와 신불도, 삼목도 사이를 매립해 지금과 같은 모습이 되었다. 영종도와 합쳐진 용유도는 영종대교와 인천대교를 통해 서울 도심 및 수도권과 빠르게 연결되어 주말 나들이 여행지로 주목받고 있다. 용유도에는 크고 작은 해변들이 여럿 있는데 그중 가장 유명한 것이 을왕리해수욕장이다. 기암절벽이 늘어선 수려한 풍경과 너른 백사장은 물론 숙소와 식당, 카페, 등이 많아 관광을 하기에도 좋다. 언덕을 하나 넘으면 조금 한적한 왕산해수욕장이 나타나며 선녀바위가 있는 작은 해변도 가볼 만하다. 을왕리해수욕장부터 선녀바위까지 이어진 문화탐방로는 용유도를 여행하는 또 하나의 즐거움이다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-760-7991",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.4237,
+   "lng": 126.4216,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/64/3518664_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/64/3518664_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/65/3518665_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/65/3518665_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/66/3518666_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/66/3518666_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -7091,6 +7288,62 @@
    ]
   },
   {
+   "feedId": "TA-127585",
+   "contentId": "127585",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "월미도",
+   "a": "인천광역시 제물포구 월미문화로 36 (북성동1가)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "1989년 7월 문화의 거리가 조성된 이래 문화예술의 장, 만남과 교환의 장 그리고 공연놀이마당 등으로도 알려지기 시작한 월미도는 인천 하면 떠올릴 만큼 유명한…",
+   "summary": "1989년 7월 문화의 거리가 조성된 이래 문화예술의 장, 만남과 교환의 장 그리고 공연놀이마당 등으로도 알려지기 시작한 월미도는 인천 하면 떠올릴 만큼 유명한 곳이다. 이곳은 카페, 회센터 등 조화를 이루며 늘어서 있어 시원한 바다를 바라보며 구미에 맞는 음식을 골라 즐길 수도 있다. 휴일엔 각지에서 수십만 명의 인파가 몰리며 인천시민과 그 주변 시민의 휴식 공간으로 자리하고 있다. 월미도 문화의 거리는 관광객을 위하여 특성있는 구간을 조성하여 만남교환의 장, 문화예술의 장과 각종 공연을 위한 연출의 장을 설치하여 이용객의 편의를 도모하여 시민문화 의식의 고취와 지방 예술 문화창달에 기여하고 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "월미도관광안내소 032-765-4169",
+   "homepage": "http://wolmi-do.co.kr",
+   "lat": 37.4722,
+   "lng": 126.6001,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://wolmi-do.co.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/94/3518594_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/94/3518594_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/95/3518595_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/95/3518595_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/96/3518596_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/96/3518596_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-127614",
    "contentId": "127614",
    "contentTypeId": "12",
@@ -7974,6 +8227,64 @@
    ]
   },
   {
+   "feedId": "TA-128601",
+   "contentId": "128601",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "큰무리어촌체험마을",
+   "a": "인천광역시 영종구 대무의로 26-9 (무의동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "마을",
+    "체험"
+   ],
+   "sub": "농촌",
+   "why": "큰무리어촌체험마을은 서해안 특유의 넓은 갯벌이 발달한 곳으로, 갯벌 체험은 물론 바다낚시, 어장 체험, 횃불 게잡이 등 다양한 어촌 활동을 즐길 수 있는 마을이…",
+   "summary": "큰무리어촌체험마을은 서해안 특유의 넓은 갯벌이 발달한 곳으로, 갯벌 체험은 물론 바다낚시, 어장 체험, 횃불 게잡이 등 다양한 어촌 활동을 즐길 수 있는 마을이다. 씨름, 미니축구 같은 갯벌 체육 활동과 수산생물 관찰도 가능해 아이들과 함께하기에 좋은 체험형 관광지이다. 마을 인근에는 영화 실미도의 촬영지로 알려진 실미도가 있어, 다양한 볼거리도 함께 즐길 수 있다. 수도권에서 이처럼 다양한 해양 체험을 한자리에서 경험할 수 있는 곳은 큰무리어촌체험마을이 유일하다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능 / 요금 (무료)",
+   "phone": "032-751-0310",
+   "homepage": "http://xn--oy2b2b23di5xg1bu8mura20tbsn.kr/IC001/index.do",
+   "lat": 37.4092736399,
+   "lng": 126.4135102749,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://xn--oy2b2b23di5xg1bu8mura20tbsn.kr/IC001/index.do",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/56/3047256_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/3047256_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/44/3047244_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/44/3047244_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/45/3047245_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/45/3047245_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-128611",
    "contentId": "128611",
    "contentTypeId": "12",
@@ -8455,6 +8766,63 @@
    ]
   },
   {
+   "feedId": "TA-129254",
+   "contentId": "129254",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "하나개해수욕장",
+   "a": "인천광역시 영종구 하나개로 150 (무의동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "해수욕장"
+   ],
+   "sub": "해변",
+   "why": "하나개해수욕장은 무의도 서쪽에 자리한 갯벌을 품은 해수욕장이다.",
+   "summary": "하나개해수욕장은 무의도 서쪽에 자리한 갯벌을 품은 해수욕장이다. 하나개는 가장 큰 갯벌이라는 뜻이다. 1㎞ 길이의 고운 모래 백사장이 펼쳐지고, 물이 빠지면 고운 모래사장 너머로 너른 갯벌이 드러난다. 갯벌을 조금만 파 내려가면 흰 속살의 동죽조개를 비롯하여 소라, 방게, 바지락 등이 지천이다. 해가 질 때의 붉은빛 노을은 해수욕장의 또 다른 장관이다. 하나개해수욕장은 아이들이 놀기에 수심이 적당하고 숙박시설과 샤워장, 식당, 노래방 등 편의시설이 많아 주로 가족 단위 관광객들이 많이 찾는다. 해수욕장 뒤편에는 유원지가 조성돼 있어 즐길 거리도 많다. 유원지에서는 승마, 사륜오토바이, 씨 스카이월드를 즐길 수 있다. 씨 스카이월드는 백사장에 설치된 높이 25m의 철탑으로부터 413m의 와이어를 연결하여 높은…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-751-8833",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.384642,
+   "lng": 126.409268,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/54/3498254_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/54/3498254_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/53/3498253_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/53/3498253_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/55/3498255_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/55/3498255_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-129255",
    "contentId": "129255",
    "contentTypeId": "12",
@@ -8839,6 +9207,62 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/12/4056112_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/12/4056112_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-129608",
+   "contentId": "129608",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "잠진도",
+   "a": "인천광역시 영종구 을왕동",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "섬"
+   ],
+   "sub": "해안활동",
+   "why": "인천 잠진도는 영종도와 무의도를 이어주는 무의대교 중간에 위치한 작은 섬이다.",
+   "summary": "인천 잠진도는 영종도와 무의도를 이어주는 무의대교 중간에 위치한 작은 섬이다. 밀물 때 물이 차오르면 섬이 잠길 듯 말 듯 한다고 하여 잠진도라고 이름이 붙여졌다. 갯벌을 붉게 물들이는 낙조가 아름답기로 유명하여 사진 촬영을 하려고 찾아오는 관광객이 많다. 물이 빠진 뒤에는 갯벌에서 조개를 캐는 사람들도 많다. 주변 가까운 곳에는 을왕리해수욕장, 덕교해수욕장, 하나개해수욕장 등이 있어 함께 둘러보기 좋다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "인천종합관광안내소 032-832-3031",
+   "lat": 37.4185,
+   "lng": 126.414,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 129608)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/61/3518461_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/61/3518461_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/62/3518462_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/62/3518462_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/63/3518463_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/63/3518463_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -18206,6 +18630,63 @@
    ]
   },
   {
+   "feedId": "TA-1325945",
+   "contentId": "1325945",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "수도권매립지 드림파크 야생화단지",
+   "a": "인천광역시 검단구 자원순환로 170 (백석동)",
+   "ar": "인천",
+   "r": "검단구",
+   "k": [
+    "관광지",
+    "숲"
+   ],
+   "sub": "공원",
+   "why": "드림파크 야생화단지는 수도권매립지 내에 축구장 60개 규모의 대규모 녹지공간으로 조성된 도시숲이다.",
+   "summary": "드림파크 야생화단지는 수도권매립지 내에 축구장 60개 규모의 대규모 녹지공간으로 조성된 도시숲이다. 과거 연탄재 야적장이었던 부지를 수도권매립지관리공사와 지역주민이 함께 가꾸어 꽃과 나무가 어우러진 생태녹지로 탈바꿈시켜, 수도권 시민들에게 산책과 휴식, 환경교육의 장을 제공하고 있다. 드림파크 야생화단지는 테마식물지구, 야생초화지구, 습지생태지구 등 다양한 주제 공간으로 구성되어 있으며, 약 300여 종의 식물이 식재되어 있어 사계절 내내 다채로운 자연을 즐길 수 있다. 4월에는 벚꽃과 수선화, 5~6월에는 작약과 수국, 9~11월에는 핑크뮬리로 물든 꽃밭이 펼쳐져 풍성한 생태계를 감상할 수 있다. 이 밖에도 연꽃과 벗풀, 꽃창포가 있는 수생식물원, 시원한 녹음이 드리운 참나무 쉼터, 물 위를 걷는 듯한 징…",
+   "hours": "4월~11월 10:00~18:00 (입장 마감 17:00)",
+   "closed": "매주 월요일",
+   "parking": "가능",
+   "phone": "032-560-9940",
+   "homepage": "https://www.slc.or.kr/인천투어",
+   "lat": 37.57309049314356,
+   "lng": 126.64811305670366,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.slc.or.kr/인천투어",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/90/3527490_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/90/3527490_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/91/3527491_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/91/3527491_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/92/3527492_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/92/3527492_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-132668",
    "contentId": "132668",
    "contentTypeId": "38",
@@ -19742,6 +20223,62 @@
    ]
   },
   {
+   "feedId": "TA-1619133",
+   "contentId": "1619133",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "인천 경서동 녹청자 요지",
+   "a": "인천광역시 서해구 도요지로 54 (경서동)",
+   "ar": "인천",
+   "r": "서해구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "인천 검암동 일대에서 10∼11세기에 걸쳐 청자를 만들었던 5∼6기의 고려 가마터이다.",
+   "summary": "인천 검암동 일대에서 10∼11세기에 걸쳐 청자를 만들었던 5∼6기의 고려 가마터이다. 가마터 주위 지세는 얕은 비탈을 이루며 바다로 이어져 있다. 현재는 발굴조사 시 드러난 가마의 남은 부분에 보호각을 지어 보존하고 있지만, 나머지 일대는 골프장으로 변해있다. 발굴 당시 가마 1기를 조사하여 많은 녹청자조각과 가마도구들을 발견하였다. 가마는 자연 경사를 이용한 것으로 칸이 없는 통가마이다. 3차례에 걸쳐 다시 고쳤쌓았는데, 경사도 20°도 안팎의 가마바닥에 모래를 깔고 그 위에 경사진 넓적한 자기로 만든 도지미를 깔고 그릇을 구웠음을 알 수 있다. 이 가마에서 구운 것은 녹청색의 짙은 청자로 유약은 녹청색·녹갈색으로 표면이 고르지 못하며, 문양이 없는 것이 대부분이고 드물게 병의 몸통에 주름무늬가 보인다.…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-560-5932",
+   "homepage": "https://www.seo.incheon.kr/open_content/tour/locinfo/cultualAsset.do?act=detail&loc_seq=115",
+   "lat": 37.5585049971,
+   "lng": 126.656383968,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.seo.incheon.kr/open_content/tour/locinfo/cultualAsset.do?act=detail&loc_seq=115",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/18/3524618_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/18/3524618_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/19/3524619_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/19/3524619_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/20/3524620_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/20/3524620_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-1619170",
    "contentId": "1619170",
    "contentTypeId": "12",
@@ -20091,6 +20628,63 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/06/3396406_image2_1.JPG",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/06/3396406_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-1619630",
+   "contentId": "1619630",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "거잠포해변",
+   "a": "인천광역시 영종구 잠진도길 11 (운서동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "해변",
+    "섬"
+   ],
+   "sub": "해변",
+   "why": "거잠포해변은 인천 영종도에 위치한 해돋이 명소로, 인천국제공항 인근에 있어 수도권에서 접근이 용이하다.",
+   "summary": "거잠포해변은 인천 영종도에 위치한 해돋이 명소로, 인천국제공항 인근에 있어 수도권에서 접근이 용이하다. 해변에서는 상어 지느러미 모양의 섬 하나가 보이는데, 이 섬이 바로 매도랑이다. 매도랑 너머로 떠오르는 붉은 해는 장관을 이루며, 이곳에서는 일출과 일몰을 모두 감상할 수 있다. 해변을 따라 소나무 숲이 병풍처럼 둘러싸여 있고, 하얀 모래사장과 갯벌이 어우러져 가족 단위 관광객에게도 인기 있는 휴양지로 주목받고 있다. 거잠포해변을 한눈에 내려다보고 싶다면, 거잠포선착장에서 약 300m 거리에 위치한 용유 하늘전망대를 방문해 보는 것을 추천한다.",
+   "hours": "상시 개방",
+   "parking": "가능 / 요금 (무료)",
+   "phone": "032-760-7497",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112609173130718",
+   "lat": 37.4221334646,
+   "lng": 126.4254532761,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112609173130718",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/29/2661929_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/29/2661929_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/26/2661926_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/26/2661926_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/11/3047011_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/11/3047011_image3_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -23267,6 +23861,115 @@
    ]
   },
   {
+   "feedId": "TA-1945647",
+   "contentId": "1945647",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "국사봉(인천)",
+   "a": "인천광역시 영종구 무의동",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "잠진도와 무의도를 잇는 연도교를 지나 무의도에 도착하면 바로 국사봉 등산로가 시작된다.",
+   "summary": "잠진도와 무의도를 잇는 연도교를 지나 무의도에 도착하면 바로 국사봉 등산로가 시작된다. 국사봉은 무의도 한복판에 솟아오른 해발 230m의 산으로 등산마니아라면 꼭 한번은 가볼 만한 트래킹 명소이다. 산 정상에서 탁 트인 서해를 볼 수 있으며, 멀리 인천국제공항, 인천대교가 한눈에 보이고, 무의도 주변 실미해변, 하나개 해수욕장 등 무의도의 아름다운 경관을 감상할 수 있다.",
+   "phone": "인천종합관광안내소 032-832-3031",
+   "homepage": "http://muui-do.co.kr",
+   "lat": 37.3915951817,
+   "lng": 126.4159494251,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://muui-do.co.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/84/3586984_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/84/3586984_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/82/3586982_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/3586982_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/83/3586983_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/3586983_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-1945662",
+   "contentId": "1945662",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "호룡곡산",
+   "a": "인천광역시 영종구 대무의로 464 (무의동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "등산",
+   "why": "옛날에 호랑이와 용이 싸웠다는 전설에서 유래된 이름의 호룡곡산은 244m의 나지막한 산이지만 무의도에서는 가장 높은 곳이다.",
+   "summary": "옛날에 호랑이와 용이 싸웠다는 전설에서 유래된 이름의 호룡곡산은 244m의 나지막한 산이지만 무의도에서는 가장 높은 곳이다. 맑은 날 산 정상에 오르면 서해의 관문 인천항과 인천국제공항이 손에 닿을 듯 가깝게 보인다. 국사봉과 실미해수욕장, 호랑바위를 지나 하나개해수욕장으로 가는 등산로가 있다. 오르는 도중에 호랑바위, 부처바위 등 다양한 기암을 구경할 수 있으며, 서해와 주변의 섬들을 한눈에 조망할 수 있다. 정상에서 하나개해수욕장 방면으로 하산하면 해변 언덕 위 숲길을 따라 걸으며 눈부신 바다가 발아래로 펼쳐지는 환상의 길을 만날 수 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "032-832-3031",
+   "homepage": "http://www.icjg.go.kr/tour/",
+   "lat": 37.376852609,
+   "lng": 126.4250489979,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.icjg.go.kr/tour/",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/31/3497331_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3497331_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/28/3497328_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/28/3497328_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/29/3497329_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/29/3497329_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-1955511",
    "contentId": "1955511",
    "contentTypeId": "12",
@@ -23431,6 +24134,63 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-1957680",
+   "contentId": "1957680",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "월미 관광특구",
+   "a": "인천광역시 제물포구 월미문화로 81 (북성동1가)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "달의 꼬리를 닮았다 하여 이름 붙여진 월미도는 러일 전쟁, 병인양요 및 인천상륙작전 등 근대역사의 주무대이자 인천을 대표하는 유원지이다.",
+   "summary": "달의 꼬리를 닮았다 하여 이름 붙여진 월미도는 러일 전쟁, 병인양요 및 인천상륙작전 등 근대역사의 주무대이자 인천을 대표하는 유원지이다. 주변에 카페촌, 식당, 숙박시설, 테마 공원까지 여행에 필요한 시설이 모두 모여 있어 데이트와 가족 나들이 코스로 인기가 많다. 월미도에는 우리 선조들의 이민사를 살펴볼 수 있는 한국이민사박물관도 자리하고 있다. 유원시설이 있어 젊은이들이 많이 찾는 장소이기도 하다. 월미관광특구는 인천의 구도심 지역을 중심으로 우리나라 근대 역사와 문화를 엿볼 수 있는 곳이다. 인천 앞바다와 접한 항구를 통해 근대 문물이 유입된 까닭에 개항기의 역사가 담긴 근대 건축물과 근대 문화유산도 풍부하다. 월미관광특구에 개항장에 포함되는 차이나타운은 한국으로 건너와 살아가는 중국인들의 과거와 현재…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능 / 요금 (무료)",
+   "phone": "032-760-6481",
+   "homepage": "http://wolmi-do.co.kr",
+   "lat": 37.4714251763,
+   "lng": 126.5964029776,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://wolmi-do.co.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/18/3047118_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/18/3047118_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/05/3047105_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/05/3047105_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/09/3047109_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/09/3047109_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -25702,6 +26462,61 @@
    ]
   },
   {
+   "feedId": "TA-2361081",
+   "contentId": "2361081",
+   "contentTypeId": "28",
+   "modifiedtime": "20261010013004",
+   "n": "가평 레일바이크",
+   "a": "경기도 가평군 가평읍 장터길 14",
+   "ar": "경기",
+   "r": "가평군",
+   "k": [
+    "레포츠"
+   ],
+   "sub": "운동장",
+   "why": "가평 레일바이크는 가평역을 출발해 북한강 철교, 계절 따라 그 모습을 달리하는 느티나무터널, 영화 의 촬영지 경강역에서 회차, 가평역으로 돌아오는 왕복코스다.",
+   "summary": "가평 레일바이크는 가평역을 출발해 북한강 철교, 계절 따라 그 모습을 달리하는 느티나무터널, 영화 의 촬영지 경강역에서 회차, 가평역으로 돌아오는 왕복코스다. 북한강을 가로지르는 높이 30m의 아찔한 북한강 철교를 따라 페달을 밟다 보면 한적한 시골마을과, 푸른 빛깔의 아름다운 강변이 번갈아가면서 눈앞에 펼쳐진다. 레일바이크는 일반 자전거와 달리 차체가 무거워 안전사고에 유의해야 하는데 승차정원을 초과하여 탑승할 수 없으며 레일바이크 운행 중 급정지, 무단하차, 옆사람과의 장난은 삼가야 한다. 그리고 레일바이크 운행 중 음주나 흡연은 금지되며 하차할 때에는 완전히 정차한 후에 내려야 한다.",
+   "hours": "- 평일 09:00~18:00- 주말 및 공휴일 9:00~18:30※ 평일 출발(6회) : 10:00 / 11:30 / 13:30 / 15:00 / 16:30 / 18:00※ 주말 및 공휴일 출발 (7회): 09:00 / 10:30 / 12:00 / 14:00 / 15:30 / 17:00 / 18:30",
+   "closed": "연중무휴",
+   "phone": "031-582-7788",
+   "homepage": "http://www.gprailpark.com/공식",
+   "lat": 37.8289664371,
+   "lng": 127.5158558383,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.gprailpark.com/공식",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/45/3096245_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/45/3096245_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/10/3095310_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/10/3095310_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/40/3095640_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/40/3095640_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2362944",
    "contentId": "2362944",
    "contentTypeId": "14",
@@ -25980,6 +26795,62 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/31/3412231_image2_1.JPG",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3412231_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2375571",
+   "contentId": "2375571",
+   "contentTypeId": "12",
+   "modifiedtime": "20261010013004",
+   "n": "캠프 그리브스",
+   "a": "경기도 파주시 군내면 적십자로 137",
+   "ar": "경기",
+   "r": "파주시",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "캠프 그리브스는 한국전쟁 정전협정 후 50여 년간 미 2사단 506 보병대대가 주둔해 오다 2004년 미군의 철수 이후 2007년 8월 한국 정부에 반환된 곳이…",
+   "summary": "캠프 그리브스는 한국전쟁 정전협정 후 50여 년간 미 2사단 506 보병대대가 주둔해 오다 2004년 미군의 철수 이후 2007년 8월 한국 정부에 반환된 곳이다. 장교 숙소, 생활관과 체육관 등 다양한 군 시설이 그대로 보존되어 근대문화유산으로서 문화적 가치가 충분하다는 특성을 살려 민간인을 위한 평화 안보 체험시설로 변신했다. 이곳은 남북 간의 충돌을 막기 위해 만들어진 비무장지대, DMZ 남방한계선에서 불과 2㎞ 떨어진 곳에 위치해 있으며, 파주 민간인 통제구역 내 최초의 유스호스텔이기도 하다. 미군 장교들의 숙소 한 동을 리모델링한 유스호스텔은 최대 240명을 수용할 수 있도록 설계되어 있으며, 1층에는 사무실과 소강당, 2층과 3층에는 숙소, 4층에는 실내 활동을 위한 대강당과 식당이 자리 잡고 있…",
+   "hours": "[당일체험]- 입소 10:00- 퇴소 17:00[숙박이용]- 입실 15:00- 퇴실 11:00",
+   "closed": "매주 월요일 / 1월1일 / 설·추석 당일",
+   "parking": "가능",
+   "phone": "대표전화 031-953-6970 예약상담 031-953-8978 촬영대관 031-953-6981",
+   "homepage": "http://dmzcamp131.or.kr",
+   "lat": 37.8984296881,
+   "lng": 126.7316305557,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://dmzcamp131.or.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/86/4090286_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/86/4090286_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/85/4090285_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/85/4090285_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/87/4090287_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/87/4090287_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -28850,6 +29721,62 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/37/3400837_image2_1.JPG",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/37/3400837_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2535506",
+   "contentId": "2535506",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "인천국제공항 제2여객터미널",
+   "a": "인천광역시 영종구 제2터미널대로 446",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "2001년 개항 이래 세계 공항서비스 평가에서 12년 연속 1위를 하며 세계인들에게 인정받은 인천국제공항이 2018년 제2여객터미널을 공식 개장했다.",
+   "summary": "2001년 개항 이래 세계 공항서비스 평가에서 12년 연속 1위를 하며 세계인들에게 인정받은 인천국제공항이 2018년 제2여객터미널을 공식 개장했다. 2009년 공사에 착수한 지 9년 만에 문을 연 제2여객터미널은 아트포트(Artport·Art+Airport) 개념의 엔터테인먼트 공간으로 꾸며져 볼거리, 즐길 거리가 가득하다. 승객을 위한 편의도 한층 업그레이드되어 무인탑승수속기와 스마트카운터에서 자동 수화물 위탁을 이용하여 탑승시간을 줄이며 안내로봇, 양방향 정보안내 등 각종 첨단기술로 여행객 안내를 강화하고 항공보안 또한 강화했다. 현저히 줄어든 탑승수속시간에는 공항에서 제공하는 각종 문화공간 및 볼거리를 즐길 수 있다. 전국에서 엄선한 맛집이 모여있는 ‘한식미담길’부터 프랜차이즈 식당과 다양한 디저트 …",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "1577-2600",
+   "homepage": "https://www.airport.kr/ap/ko/index.do",
+   "lat": 37.4784546859,
+   "lng": 126.4250156573,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.airport.kr/ap/ko/index.do",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/46/3396046_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/46/3396046_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/48/3396048_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/48/3396048_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/49/3396049_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/49/3396049_image3_1.JPG",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -33065,6 +33992,64 @@
    "sourceUrl": "https://itour.incheon.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
    "checkedAt": "2026-10-01"
+  },
+  {
+   "feedId": "TA-264517",
+   "contentId": "264517",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "영종도 마시안해변",
+   "a": "인천광역시 영종구 마시란로 118 (덕교동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "산책",
+    "해변",
+    "섬"
+   ],
+   "sub": "해변",
+   "why": "마시안해변은 긴 해변길을 자랑하는 곳이다.",
+   "summary": "마시안해변은 긴 해변길을 자랑하는 곳이다. 긴 해변의 모래사장과 소나무의 조화가 아름다워 용유팔경 중 제 4경 명사십리에 꼽힌다. 해변 주변으로 잠진도, 무의도, 실미도 등의 섬들이 많아 해변을 산책하며 주변 경관을 즐길 수 있다. 해변 모양이 마치 말안장처럼 생겼다고 하여 말안장의 옛말인 ‘마시안’이라고 불리었는데 공식 명칭은 ‘마시란’이다. 이곳은 물이 들어왔을 때는 모래사장이고, 물이 빠질 때는 드넓은 갯벌이 펼쳐지는데, 해수욕을 즐긴 뒤에 갯벌 체험도 할 수 있는 두 가지 매력의 해변이다. 마시안해변의 갯벌은 끝이 보이지 않을 정도로 광활하게 펼쳐지는 것으로 유명하며 땅이 비옥하고 갯벌생태계가 잘 조성되어 있어 많은 바다생물이 서식하고 있다. 마시안해변을 따라 하나, 둘 대형 카페가 들어서면서 카페거…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "마시안 마을 032-746-3093",
+   "lat": 37.4317,
+   "lng": 126.4163,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 264517)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/77/3518377_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/77/3518377_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/78/3518378_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/78/3518378_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/79/3518379_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/79/3518379_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
   },
   {
    "feedId": "TA-2647687",
@@ -49636,6 +50621,63 @@
    "checkedAt": "2026-10-02"
   },
   {
+   "feedId": "TA-2754462",
+   "contentId": "2754462",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "남항근린공원",
+   "a": "인천광역시 제물포구 서해대로94번길 93 (신흥동3가)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "공원",
+    "체험"
+   ],
+   "sub": "생활체험",
+   "why": "남항근린공원은 인천환경공단 남항사업소에서 조성된 공원이다.",
+   "summary": "남항근린공원은 인천환경공단 남항사업소에서 조성된 공원이다. 하수처리시설을 지하에 설치해 상부 공간을 공원으로 조성했다. 넓은 공간과 시설을 깨끗하게 관리하고 있는 대형 공원이다. 물을 형상화한 체험 및 놀이 구조물이 있는 환경 놀이터, 팔레트 모양의 팔레트공원, 생태연못과 나무다리, 데크 산책로와 해양 산책로, 하늘공원 등으로 구성되어 있다. 역사의 현장이었던 갯골을 따라 산책로와 자전거길이 조성되어 있으며, 운동시설로는 인조잔디구장, 족구장, 농구장이 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "인천환경공단 남항사업소 032-899-4700",
+   "lat": 37.435,
+   "lng": 126.6299,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2754462)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/36/3518336_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/36/3518336_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/31/3518331_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3518331_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/32/3518332_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/32/3518332_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2754479",
    "contentId": "2754479",
    "contentTypeId": "14",
@@ -49745,6 +50787,64 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2754729",
+   "contentId": "2754729",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "월미산유리전망대",
+   "a": "인천광역시 제물포구 북성동1가 125",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "전망대",
+    "섬"
+   ],
+   "sub": "해안활동",
+   "why": "월미산유리전망대는 월미산 108m 정상에 위치한 전망시설이다.",
+   "summary": "월미산유리전망대는 월미산 108m 정상에 위치한 전망시설이다. 3층 높이(23m)의 유리전망대는 서해의 낙조, 야경과 함께 인천항 주변의 섬, 인천대교 연안 여객선터미널 등을 조망할 수 있다. 월미산 정상까지는 도보로 약 30분 정도 소요되며 셔틀버스(물범카)를 이용하면 15분 정도 소요된다.",
+   "hours": "07:00~22:00",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-440-5917",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=ITD21122715333106434",
+   "lat": 37.4712808586,
+   "lng": 126.6026468561,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=ITD21122715333106434",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/40/3390140_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/40/3390140_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/41/3390141_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/41/3390141_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/42/3390142_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/42/3390142_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -54284,6 +55384,63 @@
    ]
   },
   {
+   "feedId": "TA-2765523",
+   "contentId": "2765523",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "북성포구",
+   "a": "인천광역시 제물포구 북성포길 49 (북성동1가)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "시장"
+   ],
+   "sub": "시장",
+   "why": "일몰과 야경이 아름다운 곳으로 유명한 북성포구는 인천항의 항만 풍광으로 색다른 일몰을 조망할 수 있는 곳이다.",
+   "summary": "일몰과 야경이 아름다운 곳으로 유명한 북성포구는 인천항의 항만 풍광으로 색다른 일몰을 조망할 수 있는 곳이다. 인천항 부두와 어선들이 늘어선 포구와 한편에 자리 잡은 어시장들의 모습은 이미 사진가들에게는 잘 알려진 포토 스폿이다. 배우 황정민과 이정재가 출연한 영화 촬영지로 알려져 있다. 인근에 월미도, 개항누리길, 제물포구락부, 송월동 동화마을 등이 위치하여 함께 관광할 수 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "032-832-3031",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112710001459862#guide",
+   "lat": 37.4831408166,
+   "lng": 126.6154759117,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112710001459862#guide",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/47/3352647_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/47/3352647_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/45/3352645_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/45/3352645_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/46/3352646_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/46/3352646_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2766193",
    "contentId": "2766193",
    "contentTypeId": "38",
@@ -55390,6 +56547,65 @@
    ]
   },
   {
+   "feedId": "TA-2767598",
+   "contentId": "2767598",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "늘푸른공원",
+   "a": "인천광역시 서해구 국제대로 29 (청라동)",
+   "ar": "인천",
+   "r": "서해구",
+   "k": [
+    "관광지",
+    "공원",
+    "산책",
+    "전망대"
+   ],
+   "sub": "공원",
+   "why": "늘 푸른 공원은 공촌천을 따라 길게 조성된 공원으로, 약 1㎞의 산책코스를 이용할 수 있으며 서해바다를 조망할 수 있는 공촌천 전망대와 여름철 물놀이 시설로도 …",
+   "summary": "늘 푸른 공원은 공촌천을 따라 길게 조성된 공원으로, 약 1㎞의 산책코스를 이용할 수 있으며 서해바다를 조망할 수 있는 공촌천 전망대와 여름철 물놀이 시설로도 유명하다. 특히 여름철에 운영되는 물놀이장은 워터파크급의 수준 높은 시설임에도 무료로 이용이 가능하여 인기가 많은 놀이공간이다. 게이트볼장과 배드민턴장 등 다양한 체육시설과 운동시설이 있어 산책과 운동을 즐기는 시민들이 자주 찾는 공원이다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-560-4805",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112609135496974",
+   "lat": 37.5422535285,
+   "lng": 126.6234846479,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112609135496974",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/83/3524483_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/3524483_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/84/3524484_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/84/3524484_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/85/3524485_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/85/3524485_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2767603",
    "contentId": "2767603",
    "contentTypeId": "12",
@@ -55443,6 +56659,47 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2767605",
+   "contentId": "2767605",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "노을공원(인천)",
+   "a": "인천광역시 서해구 로봇랜드로 291 (청라동)",
+   "ar": "인천",
+   "r": "서해구",
+   "k": [
+    "관광지",
+    "공원",
+    "숲",
+    "섬"
+   ],
+   "sub": "공원",
+   "why": "인천 청라지구 서쪽 끝에 위치한 약 19만㎡ 규모의 공원이다.",
+   "summary": "인천 청라지구 서쪽 끝에 위치한 약 19만㎡ 규모의 공원이다. 과거 바다와 섬이었던 곳으로 지구 내 유일한 보존 숲이 입지 하여 생태적 가치가 높은 곳이다. 아래로는 심곡천이 흐르고 위로는 공촌천이 흐르는 자연환경과 잘 어우러진 공원으로 잔디와 피크닉장을 갖추고 있어 가족 단위로도 많이 찾는다. 특히 규모가 큰 스케이트 플라자를 조성해 놓아 자전거, 숏 보드, 인라인스케이트 등 익스트림을 즐기는 청소년들에게 인기가 많은데 기초 수준에서부터 최상위급 수준까지 모두 연습할 수 있는 다양한 시설들로 꾸며져 있다. 공원 언덕 위 전망대에서는 청라국제도시의 모습을 한눈에 볼 수 있으며 바다 쪽으로는 영종도도 볼 수 있고, 해 질 녘이면 멋진 노을을 감상할 수 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능요금 (무료)",
+   "phone": "인천서구청 검단공원녹지과 032-560-4653",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.529798,
+   "lng": 126.613766,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/44/2780444_image2_1.png",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/44/2780444_image3_1.png",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -55726,6 +56983,149 @@
    ]
   },
   {
+   "feedId": "TA-2767621",
+   "contentId": "2767621",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "백운산전망대",
+   "a": "인천광역시 영종구 운서동 산1-1",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "전망대"
+   ],
+   "sub": "공원",
+   "why": "인천 영종도 공항신도시에 있는 255m 높이의 백운산에 있는 전망대로, 인천 해넘이 명소로 서해 낙조와 인천 국제도시의 야경을 볼 수 있는 장소로 유명한 곳이다.",
+   "summary": "인천 영종도 공항신도시에 있는 255m 높이의 백운산에 있는 전망대로, 인천 해넘이 명소로 서해 낙조와 인천 국제도시의 야경을 볼 수 있는 장소로 유명한 곳이다. 백운산 정상에 오르면 인천국제공항터미널과 공항 신도시, 인천대교와 영종대교는 물론 인천 내륙의 청라지구와 송도지구까지 파노라마처럼 조망할 수 있다. 무료로 사용할 수 있는 망원경 2대가 설치되어 있다. 주변 관광지로는 백운산 동북쪽 기슭에 위치한 용궁사가 있다. (출처: 인천투어 홈페이지)",
+   "hours": "09:00~17:00",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "인천종합 관광안내소 032-832-3031",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112609134178098",
+   "lat": 37.4924879905,
+   "lng": 126.5165819042,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112609134178098",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/77/3364277_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/77/3364277_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/74/3364274_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/3364274_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/75/3364275_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/75/3364275_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2767624",
+   "contentId": "2767624",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "세계평화의숲",
+   "a": "인천광역시 영종구 신도시북로 31-35 (운서동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "공원",
+    "숲"
+   ],
+   "sub": "공원",
+   "why": "세계로 통하는 인천국제공항이 있는 영종도 운서동에 있는 자연 친화적인 공원으로 주민들을 위한 휴식처 역할을 하고 있다.",
+   "summary": "세계로 통하는 인천국제공항이 있는 영종도 운서동에 있는 자연 친화적인 공원으로 주민들을 위한 휴식처 역할을 하고 있다. 이곳은 이름처럼 세계 평화의 염원을 담아서 2009년 복권기금과 인천국제공항공사 및 기업과 시민들의 기금을 모아 습지와 갯벌이 어우러진 자연생태공원으로 조성한 곳이다. 영종도에서 신도를 바라보는 섬 끝자락 바다 바로 앞에 있으며 중앙잔디광장과 넓은 호수를 비롯해 산책로가 있다. 자연을 소재로 한 나무 데크 쉼터가 곳곳에 마련되어 있고 숲, 습지, 갯벌 등 다양한 생태 공간을 갖추었다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-760-7773",
+   "homepage": "https://cafe.naver.com/wpforest",
+   "lat": 37.4996600768552,
+   "lng": 126.480474753516,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://cafe.naver.com/wpforest",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11"
+  },
+  {
+   "feedId": "TA-2767625",
+   "contentId": "2767625",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "실미도",
+   "a": "인천광역시 영종구 무의동",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "섬"
+   ],
+   "sub": "해안활동",
+   "why": "인천의 실미도는 영종도 하단 무의도의 부속 섬인 무인도이다.",
+   "summary": "인천의 실미도는 영종도 하단 무의도의 부속 섬인 무인도이다. 영화 실미도를 통해 인지도가 높아진 섬으로 무의도와는 하루 두 번 썰물 때 개펄로 연결된다. 실미도는 1968년 중앙정보부가 창설한 북파 부대원이 지옥훈련을 했던 장소였다. 이후 실미도의 실상을 파헤친 백동호의 소설 실미도가 발표된 후 영화가 개봉하면서 역사적 사실이 알려지게 되었다. 지금은 무의대교를 통해 자동차를 타고 역사의 현장을 직접 느껴보기 위해 많은 사람이 실미도를 찾고 있으며, 차박 캠핑지로도 인기 있다.",
+   "hours": "상시 개방※ 자세한 사항은 전화문의 요망",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "실미도유원지 032-752-4466",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.400751131038,
+   "lng": 126.391277875892,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/30/3518130_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/30/3518130_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/31/3518131_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3518131_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/32/3518132_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/32/3518132_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2767723",
    "contentId": "2767723",
    "contentTypeId": "12",
@@ -55751,6 +57151,92 @@
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2767723)",
    "checkedAt": "2026-10-08"
+  },
+  {
+   "feedId": "TA-2767752",
+   "contentId": "2767752",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "신석체육공원",
+   "a": "인천광역시 서해구 길주로 39 (석남동)",
+   "ar": "인천",
+   "r": "서해구",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "운동장",
+   "why": "인천광역시에 위치한 체육공원으로 포스코에너지㈜가 인천시민의 건강과 여가 생활 증진을 위해 조성한 곳이다.",
+   "summary": "인천광역시에 위치한 체육공원으로 포스코에너지㈜가 인천시민의 건강과 여가 생활 증진을 위해 조성한 곳이다. 인조 잔디가 있는 축구장 1면과 인조 잔디로 된 풋살장 1면이 있다. 또한 족구장 1면과 농구장 2면의 시설을 갖추고 있다. 이 외에도 어린이 놀이터 및 운동 시설이 있으며 운동장은 선착순 온라인 예약제로 운영되고 있다. 예약은 포스에너지 홈페이지 예약페이지를 통해 접수할 수 있다. 체육공원 주변으로 벚나무가 식재되어 봄이면 벚꽃을 감상하려는 사람들의 산책 코스로도 인기가 많다.",
+   "hours": "07:00~21:00",
+   "closed": "설·추석 연휴",
+   "parking": "가능요금 (무료)",
+   "phone": "032-573-6727",
+   "homepage": "https://shinsukngreen.co.kr",
+   "lat": 37.5078633043964,
+   "lng": 126.665609063118,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://shinsukngreen.co.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11"
+  },
+  {
+   "feedId": "TA-2767760",
+   "contentId": "2767760",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "드림파크 주민체육공원",
+   "a": "인천광역시 검단구 왕길동 581-15",
+   "ar": "인천",
+   "r": "검단구",
+   "k": [
+    "관광지",
+    "공원",
+    "산책"
+   ],
+   "sub": "운동장",
+   "why": "드림파크 주민체육공원은 주민들의 건강과 여가를 위해 열린 공간으로, 인조잔디 축구장부터 인라인트랙, 배구, 농구, 테니스장까지 다양한 스포츠 시설이 마련되어 있…",
+   "summary": "드림파크 주민체육공원은 주민들의 건강과 여가를 위해 열린 공간으로, 인조잔디 축구장부터 인라인트랙, 배구, 농구, 테니스장까지 다양한 스포츠 시설이 마련되어 있다. 또한, 산책로와 어린이놀이터, 분수 등 다양한 시설이 설치되어 있어 남녀노소 누구나 즐길 수 있는 공간이다. 체육시설 (축구장, 테니스장)을 이용하려면 수도권매립지관리공사에 방문 후 단체 등록 신청을 완료하고, 홈페이지에서 사전 예약을 진행하면 된다.",
+   "hours": "※ 시설별 상이하므로 홈페이지 참고",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-560-9586",
+   "homepage": "https://www.slc.or.kr/slc/csc/ser/athFacRes/athFacRes01.do#/eyJ3ZWJQYWdlTm8iOiI0MjAiLCJ0YWJObyI6MH0=",
+   "lat": 37.5855043289,
+   "lng": 126.6391625652,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.slc.or.kr/slc/csc/ser/athFacRes/athFacRes01.do#/eyJ3ZWJQYWdlTm8iOiI0MjAiLCJ0YWJObyI6MH0=",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/51/3524551_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/51/3524551_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/52/3524552_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/52/3524552_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/53/3524553_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/53/3524553_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
   },
   {
    "feedId": "TA-2767777",
@@ -56029,6 +57515,63 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2767889",
+   "contentId": "2767889",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "인천환경공단 청라생태공원",
+   "a": "인천광역시 서해구 로봇랜드로249번길 38 (청라동)",
+   "ar": "인천",
+   "r": "서해구",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "인천광역시 청라동에 위치한 약 73,000㎡ 규모의 생태공원이다.",
+   "summary": "인천광역시 청라동에 위치한 약 73,000㎡ 규모의 생태공원이다. 인천환경공단이 청라 생활 폐기물 처리시설(청라자원환경센터) 내에 지역 주민들에게 자연을 느끼면서 편안하게 휴식을 취할 수 있는 주민편익시설을 제공한다는 목적으로 조성하여 무료로 개방하고 있다. 주요 시설로는 환경온실, 생태연못, 어린이 놀이터, 잔디마당 등 여가시설과 천연잔디, 축구장, 테니스장, 농구장, 배구장 등 체육시설을 운영하고 있으며 축구장을 제외한 모든 시설은 무료로 운영하고 있다. 또한 생태공원 내에는 지역 주민들을 위한 다양한 환경체험행사와 어린이들을 위한 체험프로그램을 수시로 운영하고 있다.",
+   "hours": "09:00~18:00",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-899-0400",
+   "homepage": "https://www.eco-i.or.kr/main/main.asp",
+   "lat": 37.5309751671568,
+   "lng": 126.607347586182,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.eco-i.or.kr/main/main.asp",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/08/4056208_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/08/4056208_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/09/4056209_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/09/4056209_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/10/4056210_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/10/4056210_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
     }
    ]
   },
@@ -56560,6 +58103,62 @@
    ]
   },
   {
+   "feedId": "TA-2768117",
+   "contentId": "2768117",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "동인천역 북광장",
+   "a": "인천광역시 제물포구 화도진로 53 (송현동)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "전시"
+   ],
+   "sub": "전시장",
+   "why": "인천 근대로 발자취 여행의 시작점이기도 한 북광장에는 사면으로 열린 광장문 건축물이 있다.",
+   "summary": "인천 근대로 발자취 여행의 시작점이기도 한 북광장에는 사면으로 열린 광장문 건축물이 있다. 광장 주변으로 다양한 조각품들이 전시되어 있으며, 겨울이면 대형 크리스마스트리를 장식하여 시민들에게 멋진 야경을 선사한다. 동인천역 북광장에는 많은 시민들과 예술 애호가들이 소통하고 함께 즐길 수 있는 컨테이너형 복합 문화예술공간인 동인천 아트큐브가 있다. 안내소와 공연 연습실 2개 동, 전시동으로 이루어져 있으며, 누구나 예약하여 이용할 수 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "0507-1382-7313",
+   "lat": 37.47647163319748,
+   "lng": 126.63191706489833,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2768117)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/57/3524357_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/57/3524357_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/58/3524358_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/58/3524358_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/59/3524359_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/59/3524359_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2768126",
    "contentId": "2768126",
    "contentTypeId": "28",
@@ -56776,6 +58375,61 @@
    ]
   },
   {
+   "feedId": "TA-2768168",
+   "contentId": "2768168",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "만석부두",
+   "a": "인천광역시 제물포구 만석동 9-34 (만석동)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "서울로 향하는 곡물을 만석이나 쌓아놓았던 곳이라 해서 만석이라는 이름이 붙었다는 만석부두는 주말이면 낚시꾼들이 즐겨 찾는 명소로 유명한 곳이다.",
+   "summary": "서울로 향하는 곡물을 만석이나 쌓아놓았던 곳이라 해서 만석이라는 이름이 붙었다는 만석부두는 주말이면 낚시꾼들이 즐겨 찾는 명소로 유명한 곳이다. 만석부두와 화수부두는 1970년대까지 인천의 대표 어항으로 인천 유일의 수산물 공판장이자 새우젓으로 전국적 유명세를 타고 있다. 또한 ‘노을 따라 해안산책로길’ 코스 중 한 곳으로 바다를 산책하며 볼 수 있도록 조성한 만석·화수해안산책로를 노을이 질 때 걸어 보면 좋다. 다른 바다에서는 볼 수 없는 거대한 조선소와 선박을 수리하는 병원, 물치도, 십자수로, 멀리 목재공장의 목재 찌는 증기와 아름다운 노을 등이 연출하는 풍광을 천천히 즐길 수 있는 길이다.",
+   "hours": "08:00~17:00 (변동 가능)",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "homepage": "https://www.icdonggu.go.kr/tour",
+   "lat": 37.4867626,
+   "lng": 126.6214288,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.icdonggu.go.kr/tour",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/32/3524332_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/32/3524332_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/33/3524333_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/33/3524333_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/34/3524334_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/34/3524334_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2768173",
    "contentId": "2768173",
    "contentTypeId": "38",
@@ -56892,6 +58546,119 @@
    ]
   },
   {
+   "feedId": "TA-2768188",
+   "contentId": "2768188",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "거북바위",
+   "a": "인천광역시 영종구 선녀바위로 68-2 (을왕동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "마을"
+   ],
+   "sub": "체험문화시설",
+   "why": "왕산리 통개포구에 커다란 너럭바위를 지반으로 거북이와 비슷한 모양을 한 바위가 있다.",
+   "summary": "왕산리 통개포구에 커다란 너럭바위를 지반으로 거북이와 비슷한 모양을 한 바위가 있다. 이 바위의 형태를 살펴보면 연평도 방향을 바라보며 입을 벌리고 있고 꼬리 부분은 마을을 바라보고 있다. 전설에 따르면 삼현파 김해 김 씨 가문 집안 초상 때 식사를 대접받은 한 식객이 거북바위를 향해 묫자리를 잡으면 후대에 부귀영화를 누린다고 하여 이를 따랐다. 후대에 김 씨 가문이 광업에 뛰어들어 대부자가 되자 김 씨 삼 형제들은 자비로 도서민들의 생활에 고통을 덜어주는 편의 시설과 자선사업을 많이 하였고 그들을 기리는 송덕비가 세워져 있어 후세인들의 칭송을 받고 있다. (출처 : 인천투어)",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능 / 요금 (무료)",
+   "phone": "032-760-6297",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112609151098915",
+   "lat": 37.4391529006,
+   "lng": 126.37916537,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112609151098915",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/45/3395945_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/45/3395945_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/47/3395947_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/47/3395947_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/48/3395948_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/48/3395948_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2768191",
+   "contentId": "2768191",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "황룡사(인천)",
+   "a": "인천광역시 검단구 봉수대로 1172-1",
+   "ar": "인천",
+   "r": "검단구",
+   "k": [
+    "관광지",
+    "사찰"
+   ],
+   "sub": "유적지",
+   "why": "황룡사는 인천광역시에 위치한 사찰이다.",
+   "summary": "황룡사는 인천광역시에 위치한 사찰이다. 남북의 불교문화 교류와 애국불교를 적극 실천하는 통일문화도량으로 황룡사 대불보전은 유럽의 건축물에 불교의 상징과 전통 사찰의 모든 것을 담아 놓은 건물 외형을 가졌다. 건물 입구와 벽면에 불상들이 부조로 조각되어 있으며 대불보전 입구와 건물 지붕은 전통 사찰의 기와와 형태를 갖췄다. 사찰 마당에는 대형 불상이 세워져 있으며 불교의 탄생과 교리가 석면에 그림으로 조각되어 있어 이곳은 마치 불교 조각 미술을 보는 전시 공간과도 같다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-567-2533",
+   "lat": 37.5805775647,
+   "lng": 126.6640687601,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2768191)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/50/3530650_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/50/3530650_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/43/3530643_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/43/3530643_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/44/3530644_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/44/3530644_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2768192",
    "contentId": "2768192",
    "contentTypeId": "14",
@@ -56945,6 +58712,61 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2768195",
+   "contentId": "2768195",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "인천북항다목적부두",
+   "a": "인천광역시 서해구 북항로 135 (원창동)",
+   "ar": "인천",
+   "r": "서해구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "인천광역시 공업단지를 배후에 두고 있는 인천 북항은 다목적 부두, 제 4부두, INTC 부두 3부두가 있다.",
+   "summary": "인천광역시 공업단지를 배후에 두고 있는 인천 북항은 다목적 부두, 제 4부두, INTC 부두 3부두가 있다. 인천 북항은 원목, 고철, 사료용 부원료 등 산업 원부자재 화물을 취급하는 종합항만으로 5만 톤급 12개를 포함해 총 26개 선석을 보유하고 있다. 업체들은 주로 석유화학, 목재, 합판, 건축 및 인테리어 자재 등을 다루는 목재 전문기업으로, 산업 원부자재 화물을 취급하는 인천 북항에 특화되어 있다. 항만하역과 물류창고 시설을 갖췄고 통관업무와 화물 운송 중개 등 수상 화물 처리의 대표 부두이다. 인천북항다목적부두는 안전문화를 확산시키고 야간 안전사고 예방을 위한 로고라이트 4기를 설치하여 운영해오고 있다. 로고라이트는 조명을 이용해 문구나 이미지를 바닥 또는 벽면에 비추는 장치로, 조도를 높임과 동…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "032-571-0940",
+   "lat": 37.506543967,
+   "lng": 126.6333486301,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2768195)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/05/3524405_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/05/3524405_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/06/3524406_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/06/3524406_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/07/3524407_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/07/3524407_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
     }
    ]
   },
@@ -57117,6 +58939,177 @@
    ]
   },
   {
+   "feedId": "TA-2768207",
+   "contentId": "2768207",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "거잠포선착장",
+   "a": "인천광역시 영종구 잠진도길 11 (운서동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "해변"
+   ],
+   "sub": "해변",
+   "why": "거잠포 선착장은 영종도에서 무의도로 연결된 인천 공항선 용유역 가까이에 위치해 있다.",
+   "summary": "거잠포 선착장은 영종도에서 무의도로 연결된 인천 공항선 용유역 가까이에 위치해 있다. 영종도와 잠진도를 거쳐 무의도까지 드라이브 코스로도 좋은 이곳은 서해안에서 일출을 보기 좋은 명소로 알려져 있다. 거잠포 해변에서 바라보는 매도랑과 주변 작은 무인 섬이 아름다운 경치를 더해 준다. 선착장 옆, 인천국제공항 남쪽 방조제는 해안도로 드라이브 코스로도 좋다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능(간이주차)",
+   "phone": "인천종합 관광안내소 032-832-3031",
+   "lat": 37.4221140221,
+   "lng": 126.4254255008,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2768207)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/25/3303925_image2_1.jpeg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/25/3303925_image3_1.jpeg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/24/3303924_image2_1.jpeg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/24/3303924_image3_1.jpeg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/26/3303926_image2_1.jpeg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/26/3303926_image3_1.jpeg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2768211",
+   "contentId": "2768211",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "SK인천석유화학벚꽃동산",
+   "a": "인천광역시 서해구 봉수대로 415 (원창동)",
+   "ar": "인천",
+   "r": "서해구",
+   "k": [
+    "관광지",
+    "공원",
+    "산책"
+   ],
+   "sub": "등산",
+   "why": "인천광역시 원창동 SK 석유화학단지 주변에 벚꽃 600여 그루를 심어 조성한 공원이다.",
+   "summary": "인천광역시 원창동 SK 석유화학단지 주변에 벚꽃 600여 그루를 심어 조성한 공원이다. 40년이 지난 세월만큼 벚나무도 성장하여 봄이 되면 하늘을 뒤덮는 벚꽃의 향연이 펼쳐진다. 길이 1.5 킬로미터로 조성된 산책길에는 끝도 없이 펼쳐지는 벚꽃나무들이 눈처럼 하얗게 피어나 눈꽃 세상을 연상케 한다. 자연 친화적인 산책로와 곳곳에 벤치가 설치되어 있어 만발한 벚꽃을 감상할 수 있다. 산책로를 따라 군락을 이룬 벚꽃이 만개한 하단에는 노란색 개나리도 함께 피어 노란색과 연분홍색의 화려한 색 잔치가 펼쳐진다. 이곳에서 벚꽃을 감상할 수 있는 시기는 벚꽃 만개일로부터 일주일가량이다. SK 석유화학벚꽃동산은 일주일가량만 시민들에게 개방되므로 방문 전에 개방 시기를 알아봐야 한다. 주차장이 마련되지 않는 경우가 있으니…",
+   "hours": "상시 개방",
+   "closed": "벚꽃 개화 시기 7일 개방",
+   "parking": "불가능",
+   "phone": "SK인천석유화학 032-570-5151",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.5132532785226,
+   "lng": 126.660734532058,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/67/4064067_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/67/4064067_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/61/4064061_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/61/4064061_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/62/4064062_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/62/4064062_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2768217",
+   "contentId": "2768217",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "건지공원",
+   "a": "인천광역시 서해구 건지로334번길 47 (가좌동)",
+   "ar": "인천",
+   "r": "서해구",
+   "k": [
+    "관광지",
+    "공원",
+    "산책"
+   ],
+   "sub": "공원",
+   "why": "건지공원은 인천광역시 가좌동에 위치한 아름다운 공원으로, 지역 주민들에게 여가와 휴식을 제공하는 중요한 공간이다.",
+   "summary": "건지공원은 인천광역시 가좌동에 위치한 아름다운 공원으로, 지역 주민들에게 여가와 휴식을 제공하는 중요한 공간이다. 이 공원은 넓은 잔디밭과 잘 정돈된 산책로를 갖추고 있어, 자연 속에서 편안한 시간을 보내기에 적합하다. 특히, 공원 중앙에 위치한 큰 호수는 주변 경관을 더욱 아름답게 만들어, 산책이나 운동을 즐기기에 좋은 장소이다. 또한, 건지공원은 다양한 운동 시설과 어린이 놀이터를 구비하고 있어, 가족 단위 방문객들에게도 인기가 많다. 공원 내에는 벤치와 쉼터가 곳곳에 마련되어 있어, 여유롭게 시간을 보내기 좋다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "032-560-4800",
+   "lat": 37.4940490113,
+   "lng": 126.6794142183,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2768217)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/19/3524419_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/19/3524419_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/20/3524420_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/20/3524420_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/21/3524421_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/21/3524421_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2768223",
    "contentId": "2768223",
    "contentTypeId": "28",
@@ -57224,6 +59217,65 @@
    ]
   },
   {
+   "feedId": "TA-2769472",
+   "contentId": "2769472",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "예단포선착장",
+   "a": "인천광역시 영종구 예단포1로 2-10 (운북동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "공원",
+    "둘레길",
+    "산책"
+   ],
+   "sub": "둘레길",
+   "why": "영종도 둘레길인 미단시티 공원 산책로가 시작되는 곳이다.",
+   "summary": "영종도 둘레길인 미단시티 공원 산책로가 시작되는 곳이다. 영종대교를 건넌 후 강화도 방면으로는 영종도의 금산, 석산, 수악끝산 등 나지막한 산들이 아름다운 자연 풍광을 만들어 낸다. 그곳에 미단시티 근린공원 12호가 조성되었는데 그 둘레길 산책로로 주민들과 관광객들에게 인기가 좋다. 등대와 산책로 벽화에는 하얀색 벽과 파란 지붕이 상징인 그리스 산토리니 마을의 풍경을 그려 놓았다. 해변을 마주하다 공원 안쪽으로 들어가면 울창한 숲길이 나온다. (출처 : 인천투어)",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능 / 요금 (무료)",
+   "phone": "인천중구청 032-760-7114",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21120810001467186",
+   "lat": 37.5314359892,
+   "lng": 126.5024321193,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21120810001467186",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/91/3395991_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/91/3395991_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/92/3395992_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/92/3395992_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/93/3395993_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/93/3395993_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2769475",
    "contentId": "2769475",
    "contentTypeId": "12",
@@ -57280,6 +59332,119 @@
    ]
   },
   {
+   "feedId": "TA-2769480",
+   "contentId": "2769480",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "석산곶",
+   "a": "인천광역시 영종구 운서동 2854-2",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "석산곶은 영종도 스카이 72 골프장 앞 영종 해안도로에서 돌출된 곳이며 서해의 수평선과 인천대교 위로 떠오르는 태양을 만끽할 수 있는 최고의 전망지이다.",
+   "summary": "석산곶은 영종도 스카이 72 골프장 앞 영종 해안도로에서 돌출된 곳이며 서해의 수평선과 인천대교 위로 떠오르는 태양을 만끽할 수 있는 최고의 전망지이다. 선산곶에서 일출을 보고 국내외 토목전문가들이 선정한 세계의 3대 아름다운 다리인 인천대교와 인천대교 프로젝트의 시작부터 완공까지의 건설 과정, 국내 교량 건설의 기술력 등을 전시한 인천대교기념관을 방문해 보는 것을 추천한다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "032-760-6260",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21120810001312929",
+   "lat": 37.4447568721,
+   "lng": 126.4847916801,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21120810001312929",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/58/3338358_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/58/3338358_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/00/2788200_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/00/2788200_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/02/2788202_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/02/2788202_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2769492",
+   "contentId": "2769492",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "월미산",
+   "a": "인천 제물포구 북성동1가 125",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "섬"
+   ],
+   "sub": "등산",
+   "why": "인천 월미도에 있는 작은 산인 월미산(月尾山)은 마치 반달 꼬리처럼 휘어져 있다는 섬의 모양에서 유래한다.",
+   "summary": "인천 월미도에 있는 작은 산인 월미산(月尾山)은 마치 반달 꼬리처럼 휘어져 있다는 섬의 모양에서 유래한다. 한국전쟁 당시 인천상륙작전이 벌어진 전초기지였으며 1950년 이후 국제연합군이 주둔했다. 월미산은 오랫동안 군사 보호구역으로 지정되어 민간인의 출입이 통제되었다가 2001년에 국방부로부터 인수받은 인천시가 이곳에 월미공원을 조성해 일반인에게 개방했다. 월미산은 50년 가까이 사람 발길이 닿지 않은 덕분에 자연 생태계가 잘 보전되어 있다. 울창한 숲 지대가 많아 참나무, 느티나무, 오리나무, 벚나무 등 다양한 수종이 어우러져 자라며 봄이면 개나리와 진달래가 꽃 잔치를 벌인다. 산 정상에는 월미산 전망대가 관광객들을 맞는다. 전망대는 벽면이 모두 유리로 되어 있어 파노라마와 같은 전망이 펼쳐지며, 고배율 …",
+   "hours": "- 상시개방- 전망대 07:00~22:00",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "월미공원안내소 032-765-4133",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.4712268172968,
+   "lng": 126.602633050249,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/00/4062100_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/00/4062100_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/74/4062074_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/4062074_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/76/4062076_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/76/4062076_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2769502",
    "contentId": "2769502",
    "contentTypeId": "38",
@@ -57327,6 +59492,121 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/41/3517741_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/41/3517741_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2769505",
+   "contentId": "2769505",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "용유도해변",
+   "a": "인천광역시 영종구 남북동",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "산책",
+    "해변"
+   ],
+   "sub": "해변",
+   "why": "용유도해변은 인천광역시에 자리한 아름다운 해변이다.",
+   "summary": "용유도해변은 인천광역시에 자리한 아름다운 해변이다. 육지와 가까운 쪽은 흙과 잘게 부서진 조개밭을 이루고, 해면 가까이 갈수록 모래사장이 나타나 산책하기도 좋다. 맑고 깨끗한 바다와 넓은 백사장이 특징이다. 이 해변은 특히 여름철에 많은 관광객들이 찾는 곳으로 해수욕과 해양 스포츠를 즐기기에 좋은 환경을 제공한다. 용유도해변은 바다의 수평선이 한눈에 보이며, 주변 자연경관도 아름다워 휴식과 산책을 즐기기에 좋다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "인천종합관광안내소 032-832-3031",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.4452,
+   "lng": 126.398,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/63/3518063_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/63/3518063_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/64/3518064_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/64/3518064_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/65/3518065_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/65/3518065_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2769637",
+   "contentId": "2769637",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "잠진도선착장",
+   "a": "인천광역시 영종구 덕교동 103-22",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "마을",
+    "섬"
+   ],
+   "sub": "수변활동",
+   "why": "잠진도선착장은 인천광역시에 위치한 항구로, 인천과 잠진도를 연결하는 중요한 교통 거점이다.",
+   "summary": "잠진도선착장은 인천광역시에 위치한 항구로, 인천과 잠진도를 연결하는 중요한 교통 거점이다. 이 선착장은 작은 규모의 어촌 마을과 연결되어 있어, 낚시나 바다 여행을 즐기는 사람들에게 인기가 많다. 또한, 이곳은 섬 여행의 출발점으로, 잠진도와 인근 섬들로 향하는 여객선이 운행된다. 잠진도의 아름다운 자연경관을 즐기기 위한 관광객들이 자주 찾는 명소이며, 특히 해양 스포츠와 낚시를 좋아하는 사람들에게 많은 관심을 받는 장소이다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "인천종합관광안내소 032-832-3031",
+   "lat": 37.416632944883,
+   "lng": 126.41507789007,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2769637)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/21/3518421_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/21/3518421_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/15/3518415_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/15/3518415_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/16/3518416_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/16/3518416_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -57445,6 +59725,66 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2769795",
+   "contentId": "2769795",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "해상관광탐방로",
+   "a": "인천광역시 영종구 무의동",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "둘레길",
+    "산책",
+    "해수욕장",
+    "섬"
+   ],
+   "sub": "둘레길",
+   "why": "인천의 해상관광탐방로는 무의도 둘레길 코스 중의 하나인 하나개해수욕장 인근 해안도로 탐방로이다.",
+   "summary": "인천의 해상관광탐방로는 무의도 둘레길 코스 중의 하나인 하나개해수욕장 인근 해안도로 탐방로이다. 섬과 약간 떨어진 위치한 바다 위에 산책로 데크 길을 만들어 바다와 무의도 섬의 절경을 동시에 감상할 수 있는 해안 둘레길이다. 해상관광탐방로에서는 사자바위, 소나무의 기개, 만물상, 자매바위, 주먹바위, 해식동굴, 총석정, 부처바위, 만고풍상, 불독바위, 협곡, 원숭이바위, 햄버거바위 등 12가지의 자연경관을 감상할 수 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "인천종합관광안내소 032-832-3031",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.383263,
+   "lng": 126.410384,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/95/3518095_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/95/3518095_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/73/3518073_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/73/3518073_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/74/3518074_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/3518074_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
     }
    ]
   },
@@ -59209,6 +61549,61 @@
    ]
   },
   {
+   "feedId": "TA-2781333",
+   "contentId": "2781333",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "광명항",
+   "a": "인천광역시 영종구 무의동",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "해안활동",
+   "why": "광명항은 소무의도를 바라보는 곳에 있는 무의도의 작은 항구다.",
+   "summary": "광명항은 소무의도를 바라보는 곳에 있는 무의도의 작은 항구다. 예전에는 소무의도로 건너가는 배가 뜨던 포구였으나 지금은 소무의도 인도교가 생기면서 광명항의 역할도 변하게 되었다. 예전의 여객선이 드나드는 선착장의 역할 대신 소무의도 바다 누리길을 찾아온 관광객들을 실어 나르는 버스의 종착점이 된 것이다. 용유도 잠진 선착장에서 무의도 가는 배를 타고 내리면 큰무리 선착장, 이곳에서 마을 공영버스를 타면 광명항에 내려주는데 이곳에서 소무의도 인도교를 건너면 바로 소무의도 바다 누리길로 연결된다. 광명항은 또한 무의도의 인기 등반코스인 호룡곡산으로 넘어가는 길목이기도 하다. 그런 까닭에 하나개해수욕장과 더불어 무의도와 소무의도 여행의 중요한 기점이 되고 있다. 현재는 근처에 펜션과 횟집 등이 속속 생겨나며 이전…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-760-8838",
+   "lat": 37.3747,
+   "lng": 126.4366,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2781333)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/60/3517860_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/60/3517860_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/28/3370428_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/28/3370428_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/31/3370431_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3370431_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2781334",
    "contentId": "2781334",
    "contentTypeId": "12",
@@ -59256,6 +61651,63 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/23/4096223_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/23/4096223_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2781335",
+   "contentId": "2781335",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "월미문화의거리 & 달빛음악분수",
+   "a": "인천광역시 제물포구 월미로 252 (북성동1가)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "문화공간",
+   "why": "인천의 대표적인 관광지 중의 하나인 월미도에는 월미도 문화의 거리, 월미공원, 월미테마파크 등이 있다.",
+   "summary": "인천의 대표적인 관광지 중의 하나인 월미도에는 월미도 문화의 거리, 월미공원, 월미테마파크 등이 있다. 월미도 문화의 거리는 보행자 전용 도로로 차량 출입시간을 제외하고는 차량의 출입이 통제되어 있다. 초상화를 그려주는 길거리 화가들이 나와 있고 앉아 쉴 수 있는 벤치가 있는 작은 쉼터 같은 거리다. 월미공원에 위치한 월미 전망대에서는 인천항 일대의 전경을 다 볼 수 있어 월미도를 간다면 한 번쯤 들러서 전망을 구경하는 것도 좋다. 놀이와 체험이 가능한 월미테마파크에는 다양한 놀이 기구가 있어 연인들의 데이트 장소나 가족들의 나들이 장소로 인기 있다. 월미 달빛 음악 분수는 월미문화 거리 안에 있는 분수로 크지는 않지만 월미도의 볼거리 중 하나이다. 5월 1일부터 10월 31일까지 진행하고 매주 월요일은 정…",
+   "hours": "09:00~18:00",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "032-764-0842",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21120710052543179",
+   "lat": 37.4738860361,
+   "lng": 126.5983832839,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21120710052543179",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/69/2786469_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/69/2786469_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/72/2786472_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/72/2786472_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/34/3020434_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/34/3020434_image3_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -59321,6 +61773,65 @@
    ]
   },
   {
+   "feedId": "TA-2781446",
+   "contentId": "2781446",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "아라빛섬",
+   "a": "인천광역시 검단구 오류동 (오류동)",
+   "ar": "인천",
+   "r": "검단구",
+   "k": [
+    "관광지",
+    "산책",
+    "호수",
+    "섬"
+   ],
+   "sub": "호수",
+   "why": "아라빛섬은 섬의 긴 축이 200m도 되지 않는 인공으로 만들어진 작은 섬이다.",
+   "summary": "아라빛섬은 섬의 긴 축이 200m도 되지 않는 인공으로 만들어진 작은 섬이다. 섬 둘레를 산책해서 둘러볼 수 있고 앞쪽의 서해 바다와는 분리되어 있어, 마치 호수 위의 작은 섬 같은 분위기를 느낄 수 있다. 아라빛섬에는 노을 명소인 정서진 광장부터 홍보관, 인천광역시의 전경을 파노라마처럼 볼 수 있는 전망대가 위치한 경인항 통합운영센터등이 있다. 전망대의 건물 1층에는 홍보관으로 인천광역시 중소기업, 사회적 기업의 우수한 제품들이 전시되어 있다. 전망대는 23층으로 인천의 곳곳을 훤히 볼 수 있는 곳이다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능 / 요금 (무료)",
+   "phone": "032-560-5930",
+   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112710001265264",
+   "lat": 37.5927530419,
+   "lng": 126.6141118748,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112710001265264",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/96/3395796_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/96/3395796_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/98/3395798_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/98/3395798_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/00/3395800_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/00/3395800_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2781467",
    "contentId": "2781467",
    "contentTypeId": "28",
@@ -59369,6 +61880,63 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2781591",
+   "contentId": "2781591",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "하늘정원",
+   "a": "인천광역시 영종구 운서동 2848-1",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "정원"
+   ],
+   "sub": "수목원",
+   "why": "인천국제공항 옆에 자리한 하늘정원은 매년 가을이면 분홍빛 코스모스가 마치 눈밭처럼 펼쳐진다.",
+   "summary": "인천국제공항 옆에 자리한 하늘정원은 매년 가을이면 분홍빛 코스모스가 마치 눈밭처럼 펼쳐진다. 가을 햇살에 반짝이는 코스모스가 살랑살랑 바람이 불어올 때마다 물결을 이루며 환상적인 분위기를 연출한다. 36,000㎡에 달하는 정원에는 코스모스 외에도 은빛 억새와 핑크 뮬리까지 더해져 계절의 정취를 느끼기 좋다. 최근에는 노란색 황화 코스모스까지 심어 더욱 다채로운 빛깔을 감상할 수 있다. 무엇보다 무료로 즐길 수 있는 꽃밭이라 언제든 부담 없이 찾을 수 있으며 하늘정원이 가진 또 하나 매력은 인천국제공항에서 이착륙하는 비행기를 볼 수 있다는 것이다. 머리 바로 위로 날아오르는 비행기가 아름다운 꽃밭 풍경과 어우러져 여행의 설렘까지 더한다. 또한 해 질 무렵이면 영종도의 붉은 노을이 로맨틱한 분위기를 자아내 데이…",
+   "hours": "09:30~18:00",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "인천종합관광안내소 032-832-3031 / 인천공항 1577-2600",
+   "homepage": "https://www.airport.kr/co/ko/index.do",
+   "lat": 37.4442512024,
+   "lng": 126.4749120409,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.airport.kr/co/ko/index.do",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/48/3516548_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/48/3516548_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/40/3516540_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/40/3516540_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/41/3516541_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/41/3516541_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
     }
    ]
   },
@@ -60785,6 +63353,43 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/79/3302879_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/79/3302879_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2783146",
+   "contentId": "2783146",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "인천항 제8부두",
+   "a": "인천광역시 제물포구 북성동1가",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "인천역 앞에 위치한 인천항 제8부두는 제1부두와 함께 철재와 목재 등을 하역하던 장소였다.",
+   "summary": "인천역 앞에 위치한 인천항 제8부두는 제1부두와 함께 철재와 목재 등을 하역하던 장소였다. 2021년 10월부터 인천 개항장 곳곳을 누비는 ‘인천 개항장 골목투어’ 버스투어가 시작됐다. 인천항 제8부두 임시주차장에서 출발해 동화마을과 차이나타운, 제물포구락부, 신포시장 등을 운행한다. 현재 인천항 제8부두에는 인천 상상플랫폼이 위치해 있으며, 이곳은 낡은 곡물창고를 해양복합문화관광시설로 리모델링하여 2024년 7월에 개관했다. 상상플랫폼은 인천의 다양한 역사를 만나고 수많은 이야기와 경험을 공유하는 장소로써, 문화 예술을 중심으로 역사, 관광 자원이 살아 숨 쉬는 문화 창구이다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능요금 (무료)",
+   "phone": "032-890-8243",
+   "lat": 37.4749,
+   "lng": 126.6141,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2783146)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/99/2791099_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/99/2791099_image3_1.JPG",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -71788,6 +74393,65 @@
    ]
   },
   {
+   "feedId": "TA-2993378",
+   "contentId": "2993378",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "씨사이드파크",
+   "a": "인천광역시 영종구 하늘달빛로2번길 6 씨사이드파크 관리사무실",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "정원",
+    "전망대",
+    "폭포"
+   ],
+   "sub": "수목원",
+   "why": "인천광역시 영종도에 위치한 씨사이드파크는 바닷바람정원, 염전테마정원, 수변, 송산, 하늘구름 광장, 영종진으로 구획되어 있다.",
+   "summary": "인천광역시 영종도에 위치한 씨사이드파크는 바닷바람정원, 염전테마정원, 수변, 송산, 하늘구름 광장, 영종진으로 구획되어 있다. 다양한 체육시설과 놀이터는 물론 인공암벽폭포, 야외공연장, 조형분수, 전망대, 조형물 등이 있다. 바다공원답게 물놀이터와 족욕장, 갯벌과 염전창고도 찾아볼 수 있다. 또한 씨사이드파크의 중간부에 위치한 캠핑장을 이용할 수 있고 다채로운 볼거리와 탁 트인 바다 전망을 동시에 즐길 수 있다. 매년 6월~8월 무료로 운영하는 어린이 물놀이장은 아이와 함께 찾아오는 가족들에게 인기가 많다. 어린이 물놀이장은 관리사무소 뒤편에 위치해 있으며 근처에 카페와 편의점도 있어 이용이 편리하다. (출처 : 인천광역시 문화관광)",
+   "hours": "※ 시설별 상이하므로 홈페이지 참고",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-456-2972~5",
+   "homepage": "https://www.insiseol.or.kr/main",
+   "lat": 37.4833018704679,
+   "lng": 126.568160681001,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.insiseol.or.kr/main",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/32/3501132_image2_1.png",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/32/3501132_image3_1.png",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/28/3501128_image2_1.png",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/28/3501128_image2_1.png",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/29/3501129_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/29/3501129_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2993396",
    "contentId": "2993396",
    "contentTypeId": "14",
@@ -72407,6 +75071,119 @@
    ]
   },
   {
+   "feedId": "TA-3003138",
+   "contentId": "3003138",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "북성동 원조 자장면거리",
+   "a": "인천광역시 제물포구 북성동2가",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "북성동 원조자장면거리는 인천 차이나타운 일대에 위치한 음식거리로, 한국식 짜장면의 발상지로 알려진 곳이다.",
+   "summary": "북성동 원조자장면거리는 인천 차이나타운 일대에 위치한 음식거리로, 한국식 짜장면의 발상지로 알려진 곳이다. 개항 이후 인천에는 청국 조계지인 '청관거리'가 형성되었고, 이곳에 자리한 공화춘과 중화루 등 중국 음식점들은 부두 노동자와 시민들을 위한 음식 문화를 발전시켰다. 이 과정에서 볶은 춘장에 면을 비벼 먹는 한국식 짜장면이 탄생해 전국으로 퍼져나갔다. 거리 일대에는 짜장면의 역사를 간직한 중식당과 관련 문화시설이 자리하고 있으며, 특히 1905년 문을 연 공화춘 건물은 현재 짜장면박물관으로 활용되고 있다. 인천 개항장의 역사와 함께 한국인의 대표 음식으로 자리 잡은 짜장면의 발자취를 만나볼 수 있는 거리이다.",
+   "hours": "점포별로 상이함",
+   "closed": "점포별로 상이함",
+   "phone": "인천종합관광안내소 032-832-3031",
+   "lat": 37.475683,
+   "lng": 126.619571,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 3003138)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/56/3001856_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/3001856_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/52/3001852_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/52/3001852_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/54/3001854_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/54/3001854_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3003184",
+   "contentId": "3003184",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "월미공원 월미전망대",
+   "a": "인천 제물포구 북성동1가 125",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "공원",
+    "전망대",
+    "섬"
+   ],
+   "sub": "공원",
+   "why": "월미공원 월미전망대는 월미산 정상에 위치한 전망시설로, 인천항과 인천대교, 연안여객선터미널, 서해의 섬들을 한눈에 조망할 수 있는 곳이다.",
+   "summary": "월미공원 월미전망대는 월미산 정상에 위치한 전망시설로, 인천항과 인천대교, 연안여객선터미널, 서해의 섬들을 한눈에 조망할 수 있는 곳이다. 원형 계단을 따라 전망대에 오르면 인천 시가지와 자유공원, 인천항과 서해 바다의 풍경이 펼쳐진다. 특히 일몰 시간에는 서해의 낙조를 감상할 수 있으며, 야간에는 조명이 더해진 유리전망대에서 색다른 경관을 만날 수 있다. 전망대 내에는 휴식을 취할 수 있는 카페가 마련되어 있으며, 인근의 월미산 정상광장과 예포광장 등을 함께 둘러보기 좋다.",
+   "hours": "07:00~21:30",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-440-5917",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.4701885046,
+   "lng": 126.595978727,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/80/3001880_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/80/3001880_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/74/3001874_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/3001874_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/77/3001877_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/77/3001877_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-3003299",
    "contentId": "3003299",
    "contentTypeId": "14",
@@ -72457,6 +75234,59 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/10/3001910_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/10/3001910_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3003517",
+   "contentId": "3003517",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "인천일본풍거리",
+   "a": "인천광역시 제물포구 관동1가",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "일본풍거리는 인천역 인근에 위치한 거리로, 개항기 일본 조계지의 흔적을 살펴볼 수 있는 곳이다.",
+   "summary": "일본풍거리는 인천역 인근에 위치한 거리로, 개항기 일본 조계지의 흔적을 살펴볼 수 있는 곳이다. 과거 일본인 거주지였던 이 일대에는 일본식 목조주택과 석조 건축물 등이 남아 있어 근대 도시 인천의 역사와 문화를 엿볼 수 있다. 개항 초기에는 상점과 주거 공간이 결합된 마치야 형식의 건물과 나가야 형식의 연립주택이 주를 이루었으며, 이후에는 문화주택 양식의 건축물이 조성되었다. 현재 남아 있는 일본식 건축물들은 카페와 전시관, 문화공간 등으로 활용되고 있으며, 거리 곳곳에서 일본풍 분위기를 느낄 수 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "lat": 37.473619,
+   "lng": 126.620861,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 3003517)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/66/3001966_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/66/3001966_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/46/3001946_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/46/3001946_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/55/3001955_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/55/3001955_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -75667,6 +78497,62 @@
    ]
   },
   {
+   "feedId": "TA-3015858",
+   "contentId": "3015858",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "인천공항전망대",
+   "a": "인천광역시 영종구 공항서로 279 (남북동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "전망대"
+   ],
+   "sub": "공원",
+   "why": "인천공항전망대는 인천국제공항 제1여객터미널 인근 오성산 자락에 위치한 전망 시설로, 공항 전경과 항공기의 이착륙 모습을 가까이에서 관찰할 수 있는 곳이다.",
+   "summary": "인천공항전망대는 인천국제공항 제1여객터미널 인근 오성산 자락에 위치한 전망 시설로, 공항 전경과 항공기의 이착륙 모습을 가까이에서 관찰할 수 있는 곳이다. 2층 규모로 조성되어 있으며, 1층 실내 전망 공간에서는 편안하게 활주로와 공항 시설을 조망할 수 있고 공항 조감도와 항공 관련 정보도 함께 살펴볼 수 있다. 2층 야외 전망대에서는 활주로와 제1·2여객터미널, 탑승동 등을 한눈에 내려다볼 수 있으며, 항공기의 이착륙 장면을 더욱 생생하게 감상할 수 있다. 인천국제공항의 규모와 역동적인 모습을 가까이에서 체험할 수 있는 전망 명소이다.",
+   "hours": "- 하절기 10:00~17:30- 동절기 10:00~17:00",
+   "closed": "연중무휴 (단, 기상 악화 시 휴관)",
+   "parking": "가능",
+   "phone": "032-751-2117",
+   "lat": 37.4488928059,
+   "lng": 126.4242554396,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 3015858)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/45/3015845_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/45/3015845_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/43/3015843_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/43/3015843_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/49/3015849_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/49/3015849_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-3017550",
    "contentId": "3017550",
    "contentTypeId": "28",
@@ -75883,6 +78769,63 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/62/3022962_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/62/3022962_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3023048",
+   "contentId": "3023048",
+   "contentTypeId": "12",
+   "modifiedtime": "20261010013003",
+   "n": "포천 허브힐링센터",
+   "a": "경기도 포천시 신북면 청신로947번길 35",
+   "ar": "경기",
+   "r": "포천시",
+   "k": [
+    "관광지",
+    "체험"
+   ],
+   "sub": "생활체험",
+   "why": "허브힐링센터는 ‘허브로 행복한 세상’이라는 비전을 가지고 2012년에 개장했다.",
+   "summary": "허브힐링센터는 ‘허브로 행복한 세상’이라는 비전을 가지고 2012년에 개장했다. 특별한 향, 맛, 치유 효과가 있는 허브를 이용한 건강 및 뷰티 관련 제품과 체험을 제공하고 있다. 당사에서 개발한 무농약 허브 재배기술을 이용하여 허브를 직접 재배 및 수확하여 건강면역관리 스파체험 프로그램을 운영하고 있다. 건강면역관리 스파 프로그램은 전문 아로마테라피스가 고객 한 분 한 분에게 정성을 담아 체질 상담 후에 고객의 체질, 증상, 바이오리듬에 맞는 허브, 향, 색상, 음악, 허브차를 제공하고 있다. 이 외에도 계절별 수확한 허브를 이용하여 다양한 체험을 제공하고 있다. 봄에는 쟈스민 활력 프로그램, 여름에는 페퍼민트 디톡스 프로그램, 가을에는 히비스커스 뷰티 프로그램, 겨울에는 로즈마리 보양 프로그램 등이 있다…",
+   "hours": "10:00~21:00 ※ 계절에 따라 운영시간이 변동될 수 있음",
+   "closed": "매주 수요일※ 수요일이 공휴일일 시 정상 운영",
+   "parking": "가능 (약 1,000대)",
+   "phone": "1644-1997",
+   "homepage": "https://www.herbisland.co.kr",
+   "lat": 37.9650155089,
+   "lng": 127.1317913097,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.herbisland.co.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/89/4075789_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/89/4075789_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/82/3022982_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/3022982_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/86/3022986_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/86/3022986_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -78246,6 +81189,120 @@
    ]
   },
   {
+   "feedId": "TA-3061206",
+   "contentId": "3061206",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "만석동 주꾸미거리",
+   "a": "인천광역시 제물포구 만석동 54-2",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "만석동 주꾸미거리는 인천 원도심의 옛 추억을 그대로 간직한 곳이다.",
+   "summary": "만석동 주꾸미거리는 인천 원도심의 옛 추억을 그대로 간직한 곳이다. 이 골목은 만석동과 송월동을 연결하는 만석고가교 근처에 위치한다. 과거에 주변 포구에서 어부들이 잡아온 저렴한 주꾸미로 맛있는 요리를 만들어 파는 음식점들이 모여들면서 만석동 주꾸미거리가 형성되었다. 이곳에는 50년 전통의 맛집부터 소박한 식당들이 자리하고 있어 다양한 주꾸미 요리를 맛볼 수 있다. 인천 사람들뿐만 아니라 많은 여행객들이 샤부샤부처럼 약한 불에 데쳐 회고추장에 찍어먹는 주꾸미와 전골로 끓인 주꾸미 요리를 맛보기 위해 이곳을 찾고 있다. 지금은 신도시에 밀려 점차 잊혀 가지만 사람 사는 삶의 모습을 볼 수 있으며 소박하지만 정감 있는 먹자골목이다.",
+   "hours": "점포 별로 상이함",
+   "closed": "점포 별로 상이함",
+   "parking": "가능",
+   "phone": "인천종합관광안내소 032-832-3031",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.481104,
+   "lng": 126.620754,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/35/3001335_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/35/3001335_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/25/3001325_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/25/3001325_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/26/3001326_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/26/3001326_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3061207",
+   "contentId": "3061207",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "동구 어린이 교통공원",
+   "a": "인천광역시 제물포구 송림동 297-2",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "공원",
+    "체험"
+   ],
+   "sub": "생활체험",
+   "why": "아이들이 체험을 통해 교통질서와 문화, 안전수칙 등을 쉽게 배울 수 있도록 조성된 교육시설이다.",
+   "summary": "아이들이 체험을 통해 교통질서와 문화, 안전수칙 등을 쉽게 배울 수 있도록 조성된 교육시설이다. 시설은 실내체험관과 실외 교통교육장으로 나뉘어 운영된다. 실내체험관에서는 횡단보도 건너기, 통학버스 체험, 자전거 및 킥보드 체험 등을 통해 다양한 안전사고 예방법을 배울 수 있으며, 관련된 3D 입체영상도 관람할 수 있다. 실외 교통교육장에는 실물과 동일하게 제작된 교통시설이 어린이의 눈높이에 맞춰 설치되어 있어, 보다 생생한 체험이 가능하다. 횡단보도와 자전거 트랙 등 실제 도로와 유사하게 조성된 체험 공간은 현장감 있는 교육환경을 제공한다. 이곳에서는 아이들이 횡단보도를 안전하게 건너는 방법, 교차로에서의 상황 대처 요령, 자전거 도로 이용법 등을 직접 체험하며 익힐 수 있다. 통행금지, 자전거 전용 도로,…",
+   "hours": "[교통공원] - 상시 개방[교통안전체험장] - 10:00~12:00- 14:00~15:00※ 동절기(12월~2월) 및 하절기(6월~8월)에는 모든 교육이 실내 교통안전교육으로 진행함",
+   "closed": "매주 토요일~일요일 / 법정공휴일",
+   "parking": "가능요금 (무료)",
+   "phone": "032-770-6894",
+   "homepage": "https://www.icdonggu.go.kr",
+   "lat": 37.47945,
+   "lng": 126.66743,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.icdonggu.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/41/3001341_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/41/3001341_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/42/3001342_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/42/3001342_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/43/3001343_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/43/3001343_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-3061208",
    "contentId": "3061208",
    "contentTypeId": "28",
@@ -78412,6 +81469,62 @@
    ]
   },
   {
+   "feedId": "TA-3061212",
+   "contentId": "3061212",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "청라국제도시커낼웨이",
+   "a": "인천광역시 서해구 청라동",
+   "ar": "인천",
+   "r": "서해구",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "청라커낼웨이는 인천광역시 청라국제도시 중심을 관통하는 수변공원과 이를 둘러싼 상업지구를 의미한다.",
+   "summary": "청라커낼웨이는 인천광역시 청라국제도시 중심을 관통하는 수변공원과 이를 둘러싼 상업지구를 의미한다. 인천시설공단에서 명명한 공식 명칭은 ‘문화공원’이지만, 많은 사람들이 수로와 함께 걷는 길이라는 의미로 ‘커낼웨이(Canal Way)‘라고 부른다. 커낼웨이는 좁은 의미로는 청라국제도시 1·2·3동에 각각 조성된 세 개의 공원 집합을 뜻하며, 넓은 의미로는 도시 중앙을 따라 층별로 구성된 야외 공간 전체를 포함한다. 초기 입주 시기에 조성된 가장 오래된 수변 거리인 에메랄드존(녹청공원), 가장 번화한 지역인 루비존(창해공원), 그리고 활발하게 개발 중인 사파이어존(정서진공원)으로 불리는 수변 공간들이 서로 연결되어 있다. 지하 1층은 도시를 동서로 가로지르는 산책로로 이어지며, 지상 1층은 건널목과 골목길을 통…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능요금 (무료)",
+   "phone": "인천광역시청 청라관리과 032-453-7692",
+   "lat": 37.532891,
+   "lng": 126.65162,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 3061212)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/85/3001485_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/85/3001485_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/70/3001470_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/70/3001470_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/71/3001471_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/71/3001471_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-3061213",
    "contentId": "3061213",
    "contentTypeId": "12",
@@ -78460,6 +81573,118 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/45/3001545_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/45/3001545_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3061214",
+   "contentId": "3061214",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "경인아라뱃길 시천공원",
+   "a": "인천광역시 검단구 시천동 170-7",
+   "ar": "인천",
+   "r": "검단구",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "시천공원은 검암역 인근, 아라뱃길 건너편 시천교 북측에 위치한 공원으로 아라뱃길을 바라보며 휴식할 수 있는 곳이다.",
+   "summary": "시천공원은 검암역 인근, 아라뱃길 건너편 시천교 북측에 위치한 공원으로 아라뱃길을 바라보며 휴식할 수 있는 곳이다. 아라뱃길 자전거길과 인접해 있어 많은 이들이 찾는 명소이며, 아라뱃길 수향 8경 중 제3경인 시천가람터와도 가까이 있다. 공원 전체는 고요한 분위기를 지니며, 아담한 산책로들이 곳곳에 조성되어 있다. 아라뱃길을 상징하는 배 모양의 놀이터가 있는 돛단배 녹지, 250년 된 보호수 산수유와 300년이 넘는 보호수 은행나무가 있는 노거수 길은 산책과 휴식에 안성맞춤이다. 이 외에도 아라뱃길과 시천공원을 한눈에 조망할 수 있는 전망대, 각종 행사가 펼쳐지는 문화광장, 여름철 더위를 식혀줄 바닥분수, 풍차, 카페 등 다양한 편의시설이 마련되어 있다. 자전거길을 따라 자전거를 대여해 아라뱃길의 아름다운 …",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능요금 (무료)",
+   "phone": "070-8671-0851",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.572848,
+   "lng": 126.675455,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/67/3001567_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/67/3001567_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/55/3001555_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/55/3001555_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/56/3001556_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/3001556_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3061215",
+   "contentId": "3061215",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "아라천환경놀이터",
+   "a": "인천광역시 검단구 오류동 1607",
+   "ar": "인천",
+   "r": "검단구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "체험문화시설",
+   "why": "경인아라뱃길 봉수마당 옆에 개장한 아라천 환경 놀이터는 어린이와 청소년들에게 지속이 가능한 지구를 위해 실천해야 할 생태환경 교육의 중요성을 알리기 위해 설립되…",
+   "summary": "경인아라뱃길 봉수마당 옆에 개장한 아라천 환경 놀이터는 어린이와 청소년들에게 지속이 가능한 지구를 위해 실천해야 할 생태환경 교육의 중요성을 알리기 위해 설립되었다. 환경놀이터는 자연 지형을 몸으로 익히고 놀이를 스스로 만들면서 다양한 신체 활동할 수 있는 모험놀이터와 동식물 관찰 등 생태적 감수성을 키울 수 있는 환경 놀이정원 등으로 구성되어 있다. 야외 강의실(놀이연구소)에서는 사계절 다양한 프로그램을 제공하고 복합적인 교육문화 활동이 이루어진다. 국립생물자원관, 드림파크 등 지역시설과 연계하여 높은 수준의 환경문화프로그램을 제공하여 생태환경 현장 체험 학습장으로 운영하고 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능요금 (무료)",
+   "phone": "인천종합관광안내소 032-832-3031",
+   "lat": 37.571149,
+   "lng": 126.658966,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 3061215)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/79/3001579_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/79/3001579_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/73/3001573_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/73/3001573_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/74/3001574_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/3001574_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -78903,6 +82128,64 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/71/3025271_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/71/3025271_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3074715",
+   "contentId": "3074715",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "마시안갯벌체험장",
+   "a": "인천광역시 영종구 마시란로 107-8",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "해변",
+    "마을",
+    "체험"
+   ],
+   "sub": "해변",
+   "why": "마시안갯벌체험장은 인천 영종도 마시안해변에 위치한 갯벌생태체험장으로, 마시안마을 어촌계에서 운영하고 있다.",
+   "summary": "마시안갯벌체험장은 인천 영종도 마시안해변에 위치한 갯벌생태체험장으로, 마시안마을 어촌계에서 운영하고 있다. 수도권에서 접근성이 좋고 해양 생태계가 비교적 잘 보전되어 있어 많은 방문객이 찾는다. 넓게 펼쳐진 갯벌에서는 동죽과 골뱅이 등 다양한 어패류를 채취할 수 있으며, 갯벌 체험에 필요한 장화와 호미를 대여할 수 있다. 또한 갯벌 마차를 이용해 먼 갯벌까지 이동할 수 있어 보다 다양한 체험이 가능하다. 갯벌 체험 외에도 맨손 고기잡이 체험인 어전통발과 단체 대상 체험 프로그램을 운영하고 있으며, 인근에는 마시안해변 카페거리와 거잠포해변이 자리하고 있다.",
+   "hours": "물때마다 상이함※ 자세한 사항은 홈페이지 참조 또는 전화 문의 요망",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-746-3093",
+   "lat": 37.4316203464,
+   "lng": 126.4169825135,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 3074715)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/00/3074700_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/00/3074700_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/99/3074699_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/99/3074699_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/05/3074705_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/05/3074705_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -79510,6 +82793,120 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/79/3497579_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/79/3497579_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3078308",
+   "contentId": "3078308",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "미단씨티1호근린공원",
+   "a": "인천광역시 영종구 운북동 1279",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "인천 영종도 미단시티를 대표하는 근린공원이다.",
+   "summary": "인천 영종도 미단시티를 대표하는 근린공원이다. 미단시티 근린공원은 1호부터 12호까지 순차적으로 조성되었다. 아직 인적이 많지 않지만 1호 근린공원에 있는 익스트림장, 축구장 겸 농구장을 이용하는 사람이 꽤 많다. 이 곳에서는 보드와 킥보드를 좋아하는 아이들이 시간 가는 줄 모르고 신나게 놀 수 있다. 익스트림장 주변으로 벤치와 산책로가 잘 조성되어 있다. 남북으로 길게 형성되어 있는 산책로를 따라 동쪽 끝까지 가면 갈대밭이 아름답고 사진 찍기 좋은 미단시티1호소공원으로 연결된다. 미단시티의 여러 근린공원들도 해안산책로 등 그 나름의 특색을 가지고 있어 홀로 또는 가족과 함께 나들이하기에 좋다. 미단시티 공원 산책로가 시작되는 예단포선착장을 함께 둘러볼 수도 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "인천중구청 도시공원과 032-760-7777",
+   "lat": 37.518532,
+   "lng": 126.536518,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 3078308)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/18/3053018_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/18/3053018_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/08/3053008_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/08/3053008_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/09/3053009_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/09/3053009_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3078309",
+   "contentId": "3078309",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "국립무의도자연휴양림",
+   "a": "인천광역시 영종구 하나개로 74 (무의동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지",
+    "자연휴양림",
+    "섬"
+   ],
+   "sub": "공방·공예",
+   "why": "인천의 크고 작은 섬들 중에서도 빼어난 경관을 자랑하는 환상의 섬, 무의도는 그 형태가 투구를 쓰고 장군복을 입은 인물이 춤추는 모습과 닮아 ‘무의도(舞衣島)’…",
+   "summary": "인천의 크고 작은 섬들 중에서도 빼어난 경관을 자랑하는 환상의 섬, 무의도는 그 형태가 투구를 쓰고 장군복을 입은 인물이 춤추는 모습과 닮아 ‘무의도(舞衣島)’라 불리게 되었다. 인접한 섬들 중 큰 섬은 대무의도, 작은 섬은 소무의도라고 한다. 무의도는 서해의 알프스라 불릴 만큼 자연경관이 아름답고 빼어난 조망과 풍부한 산림자원을 자랑한다. 등산 코스도 잘 정비되어 있으며, 호룡곡산, 국사봉, 하나개해수욕장, 큰무리해수욕장, 실미도 유원지 등 다양한 명소가 있다. 국립무의도자연휴양림은 무의대교를 이용하면 배편 없이 차량으로 접근할 수 있어 지리적으로도 접근성이 뛰어나다. 뛰어난 자연 및 해양 경관과 함께 주변 관광자원도 풍부하여 다양한 볼거리를 즐길 수 있다.",
+   "hours": "[휴양림]- 09:00~18:00[숙박]- 입실 15:00- 퇴실 11:00",
+   "closed": "매주 화요일",
+   "parking": "가능",
+   "phone": "032-751-0426",
+   "homepage": "https://www.foresttrip.go.kr",
+   "lat": 37.389035,
+   "lng": 126.409212,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.foresttrip.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/63/3053063_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/63/3053063_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/49/3053049_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/49/3053049_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/50/3053050_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/50/3053050_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -87143,6 +90540,33 @@
    ]
   },
   {
+   "feedId": "TA-3336134",
+   "contentId": "3336134",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "독독",
+   "a": "인천광역시 영종구 공항서로 517 (남북동)",
+   "ar": "인천",
+   "r": "영종구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "독독은 인천공항 T1, T2 중간에 위치한 프리미엄 애견호텔, 애견유치원, 펫 스타디움, 펫 치유센터이다.",
+   "summary": "독독은 인천공항 T1, T2 중간에 위치한 프리미엄 애견호텔, 애견유치원, 펫 스타디움, 펫 치유센터이다. 국내 최초로 김포공항 내부에 입점하였으며, 100% 예약제로 이용 가능하다. 1,200평 공간에 넓은 놀이터 6개가 구비되어 있다. 야외 잔디 놀이터에서는 목줄 없이 자유롭게 뛰어놀 수 있으며 날씨가 안 좋을 경우, 70평이 넘는 실내 스타디움 놀이터를 이용할 수도 있다. 그 외 반려견 성향에 따른 맞춤형 케어 및 다양한 어질리티 프로그램 등이 다양하게 준비되어 있다.",
+   "hours": "상시 개방※ 숙박 시 이용시간은 홈페이지 참조 및 전화 문의 요망",
+   "closed": "연중무휴",
+   "parking": "가능요금 (무료)",
+   "phone": "0507-1370-0022",
+   "homepage": "https://dogdogpethotel.imweb.me/index",
+   "lat": 37.45898458461,
+   "lng": 126.4015009883779,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://dogdogpethotel.imweb.me/index",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11"
+  },
+  {
    "feedId": "TA-3338707",
    "contentId": "3338707",
    "contentTypeId": "14",
@@ -88064,6 +91488,64 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3393766",
+   "contentId": "3393766",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630212627",
+   "n": "소래해넘이전망대",
+   "a": "인천광역시 남동구 아암대로 1454 (논현동)",
+   "ar": "인천",
+   "r": "남동구",
+   "k": [
+    "관광지",
+    "산책",
+    "전망대"
+   ],
+   "sub": "공원",
+   "why": "소래해넘이전망대는 인천광역시의 아름다운 일몰을 감상할 수 있는 최적의 장소이다.",
+   "summary": "소래해넘이전망대는 인천광역시의 아름다운 일몰을 감상할 수 있는 최적의 장소이다. 또한 산책과 휴식 등 여가활동이 가능한 친수공간이다. 소래 해넘이다리와 연결되어 있으며 전망대에는 주변 환경과 조화를 이룰 수 있는 경관조명을 설치하여 어두운 밤에도 은은하게 빛을 내 도심지에서 소래바다를 충분히 느낄 수 있는 해양친수공간이다. 소래해넘이전망대는 일상에 지친 이들에게 힐링을 제공하며, 자연의 아름다움과 평온함을 느낄 수 있는 공간이다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "인천종합관광안내소 032-832-3031",
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.38725247125091,
+   "lng": 126.72697976710744,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://itour.incheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/61/3393561_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/61/3393561_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/63/3393563_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/63/3393563_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/64/3393564_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/64/3393564_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -89302,7 +92784,7 @@
    "feedId": "TA-3457335",
    "contentId": "3457335",
    "contentTypeId": "12",
-   "modifiedtime": "20260723131845",
+   "modifiedtime": "20261010013003",
    "n": "두리생태공원",
    "a": "인천광역시 계양구 귤현동 19-1",
    "ar": "인천",
@@ -89324,7 +92806,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://itour.incheon.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-02",
+   "checkedAt": "2026-10-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/64/3455864_image2_1.jpg",
@@ -101191,6 +104673,61 @@
    ]
   },
   {
+   "feedId": "TA-699274",
+   "contentId": "699274",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "연안부두 밴댕이회무침거리",
+   "a": "인천광역시 제물포구 항동7가",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "지금부터 30여 년 전 지금의 밴댕이 거리 언덕배기 언저리에 밴댕이를 팔던 집이 있었다.",
+   "summary": "지금부터 30여 년 전 지금의 밴댕이 거리 언덕배기 언저리에 밴댕이를 팔던 집이 있었다. 지금은 없어진 그 집이 인천 밴댕이 거리에 처음 생긴 집이었다. 지금은 그 집에서 일하던 사람이 차린 밴댕이 집이 가장 오래된 집인데 그 역사가 30년이 된 것이다. 그리고 몇 해 전 구청에서 밴댕이 골목 입구에 밴댕이 골목을 알리는 조형물을 세웠다. 밴댕이는 3월과 4월에 먹어야 가장 맛있다고 한다. 살이 오르고 기름기가 많아져 고소하기 때문에 봄날 먹기 좋은 음식이다.",
+   "hours": "※ 점포 별로 상이함",
+   "closed": "※ 점포 별로 상이함",
+   "parking": "가능",
+   "phone": "인천종합관광안내소 032-832-3031",
+   "lat": 37.456266,
+   "lng": 126.603466,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 699274)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/35/3518635_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/35/3518635_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/31/3518631_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3518631_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/32/3518632_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/32/3518632_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-701642",
    "contentId": "701642",
    "contentTypeId": "12",
@@ -103424,6 +106961,63 @@
    ]
   },
   {
+   "feedId": "TA-879086",
+   "contentId": "879086",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "월미공원",
+   "a": "인천광역시 제물포구 월미로 131-31 (북성동1가)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "월미산은 50여 년간 국제연합군 주둔으로 시민의 출입이 제한되었으나 2001년 국방부로부터 인천시가 인수하면서 공원으로 조성하여 시민들에게 개방하였다.",
+   "summary": "월미산은 50여 년간 국제연합군 주둔으로 시민의 출입이 제한되었으나 2001년 국방부로부터 인천시가 인수하면서 공원으로 조성하여 시민들에게 개방하였다. 월미공원은 50년 가까이 사람의 발길이 닿지 않아 자연생태계가 잘 보전되어 있다. 월미공원에는 공원조성계획에 의해 조성된 한국전통정원이 있는데 궁궐정원, 별서정원, 민가정원으로 구성되어 있다. 궁궐정원에는 창덕궁의 연못 부용지, 연꽃이 가득한 연못 애련지, 아미산 굴뚝 및 화계가 있고, 별서정원에는 국담원, 소쇄원, 서석지가 있다. 민가정원에는 전통 건축 양식의 양진당과 초가, 인공 연못, 개울, 논 등 다양한 볼거리가 많다.",
+   "hours": "- 하절기(3월~10월) 05:00 ~ 23:00 / 하절기 입장종료 22:00 / - 동절기(11월~2월) 05:00 ~ 22:00 / 동절기 입장종료 21:00",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-765-4133",
+   "homepage": "https://www.icjg.go.kr/tour/cttu0104a05",
+   "lat": 37.47574981,
+   "lng": 126.6041549279,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.icjg.go.kr/tour/cttu0104a05",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/69/3532869_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/69/3532869_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/70/3532870_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/70/3532870_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/72/3532872_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/72/3532872_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-944786",
    "contentId": "944786",
    "contentTypeId": "12",
@@ -103536,6 +107130,61 @@
    ]
   },
   {
+   "feedId": "TA-945052",
+   "contentId": "945052",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "제물포구락부",
+   "a": "인천광역시 제물포구 자유공원남로 25",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "개항기 인천 제물포에 거주하던 미국, 영국, 독일, 프랑스 등 외국인들의 친목을 돕는 사교장으로 사용하기 위하여 1901년에 지었다.",
+   "summary": "개항기 인천 제물포에 거주하던 미국, 영국, 독일, 프랑스 등 외국인들의 친목을 돕는 사교장으로 사용하기 위하여 1901년에 지었다. 벽돌로 된 2층 건물로 지붕을 양철로 덮었으며 내부에는 사교실·도서실·당구대 등을 마련하였고, 따로 테니스 코트도 있었다. 제물포구락부는 1953년부터 1990년까지는 인천시립박물관으로 이용하였고, 1990년부터 2006년까지 인천문화원으로 사용되었으며, 2007년 제물포구락부로 재탄생하였다. 새롭게 단장한 제물포 구락부는 영국, 이탈리아, 러시아, 독일 등의 국가들과 인천국제문화교류페스티벌을 진행하는 등 지금도 다양한 문화에 관심이 많은 어린이, 청소년, 일반 시민들의 문화 교류 창구의 역할을 수행하고 있다.",
+   "hours": "09:30~17:30",
+   "closed": "매주 월요일 / 1월 1일 / 설·추석 연휴",
+   "parking": "불가능",
+   "phone": "0507-1343-0261",
+   "lat": 37.4745600965158,
+   "lng": 126.622500461047,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 945052)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/36/3529336_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/36/3529336_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/37/3529337_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/37/3529337_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/38/3529338_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/38/3529338_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-945221",
    "contentId": "945221",
    "contentTypeId": "12",
@@ -103588,6 +107237,62 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-945420",
+   "contentId": "945420",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "구 일본우선주식회사 인천지점",
+   "a": "인천광역시 제물포구 제물량로218번길 3 (해안동1가)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "해안동에 있는 구 일본우선(郵船)주식회사 인천지점 건물은 개항 이후 인천의 해운업을 독점했던 일본 운송회사의 사옥이었다.",
+   "summary": "해안동에 있는 구 일본우선(郵船)주식회사 인천지점 건물은 개항 이후 인천의 해운업을 독점했던 일본 운송회사의 사옥이었다. 일본우선(郵船)주식회사는 당시 인천의 해운업을 거의 독점하다시피 했으며 지금도 도쿄에 본사를 두고 해운업을 계속하고 있다. 이 건물은 당시 업무용 건물로서 규모가 큰 편으로 붉은색 지붕에 외벽을 노란색 타일로 처리했다. 이 건물은 지금 남아 있는 우리나라 근대 건축물 중 상당히 오래되었고, 종교시설과 공공시설이 아닌 민간 소유의 건물 중에 원형이 잘 보존되어 있으며 근대문화 유산으로서 보존 가치가 높다. 최근까지도 해운업 관련 회사의 사무실로 이용되었으며 우리나라 해운 산업의 역사를 보여주는 건물로 가치가 있다.",
+   "hours": "※ 자세한 사항은 전화문의 요망",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-760-6440",
+   "homepage": "https://www.icjg.go.kr/tour/cths0103c02",
+   "lat": 37.4726449029,
+   "lng": 126.6204590814,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.icjg.go.kr/tour/cths0103c02",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/25/3530025_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/25/3530025_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/24/3530024_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/24/3530024_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/26/3530026_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/26/3530026_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
     }
    ]
   },
@@ -103863,6 +107568,62 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/30/3526830_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/30/3526830_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-949266",
+   "contentId": "949266",
+   "contentTypeId": "12",
+   "modifiedtime": "20260630184428",
+   "n": "월미짱랜드",
+   "a": "인천광역시 제물포구 월미문화로 81 (북성동1가)",
+   "ar": "인천",
+   "r": "제물포구",
+   "k": [
+    "관광지",
+    "체험"
+   ],
+   "sub": "생활체험",
+   "why": "인천에 위치한 월미도의 대형 놀이체험 테마파크이다.",
+   "summary": "인천에 위치한 월미도의 대형 놀이체험 테마파크이다. 아케이드 게임, 물총놀이, 물놀이보트, 미니 후룸라이드 등 다양한 놀이기구와 체험이 준비되어 있어 남녀노소 누구나 즐길 수 있는 공간이다. 특히 아이들과 함께 방문하기에 좋으며, 연인과의 데이트 장소로도 안성맞춤이다. 테마파크 내에는 커피숍, 햄버거 가게, 편의점 등 다양한 먹거리와 편의시설이 마련되어 있다. 월미짱랜드에서 가장 눈에 띄는 놀이기구는 대관람차로, 밤이 되면 화려한 조명이 켜지며 아름다운 야경을 감상할 수 있는 명소이다.",
+   "hours": "[월요일~목요일]12:00~22:00[금요일]12:00~24:00[토요일]11:00~24:00[일요일]11:00~22:00※ 자세한 사항은 전화문의 요망",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "0507-1423-3138",
+   "lat": 37.4714,
+   "lng": 126.5963,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 949266)",
+   "checkedAt": "2026-10-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/41/3518141_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/41/3518141_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/42/3518142_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/42/3518142_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/43/3518143_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/43/3518143_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -106225,60 +109986,6 @@
    ]
   },
   {
-   "feedId": "TA-E-2849159",
-   "contentId": "2849159",
-   "contentTypeId": "15",
-   "modifiedtime": "20261001091734",
-   "name": "연수 능허대 문화축제",
-   "start_date": "2026-10-09",
-   "end_date": "2026-10-10",
-   "place_name": "연수한마음공원",
-   "address": "인천 연수구 선학동 231-3 연수한마음공원",
-   "region": "인천",
-   "city": "연수구",
-   "hours": "12:00 ~ 21:00",
-   "fee": "무료",
-   "organizer": "인천광역시 연수구",
-   "phone": "032-749-7330 / 032-822-1000",
-   "why": "「2026 제14회 연수 능허대 문화축제」는 고대 백제 사신이 도전과 진취의 정신으로 출항했던 능허대의 역사성을 계승하고, 그 정신을 오늘날 연수구민과 함께 나…",
-   "summary": "「2026 제14회 연수 능허대 문화축제」는 고대 백제 사신이 도전과 진취의 정신으로 출항했던 능허대의 역사성을 계승하고, 그 정신을 오늘날 연수구민과 함께 나누는 대화합의 문화축제이다. 연수구를 대표하는 '백제사신 퍼레이드'를 비롯해 주민이 함께 참여하는 다양한 프로그램이 마련되어 있으며, 구민의 날 기념 시상식, 인기 연예인 축하공연, 불꽃놀이 등 풍성한 연계 행사와 체험 부스는 능허대 축제만의 특별한 즐거움을 선사한다. 특히 올해는 2,000여 대의 드론이 밤하늘을 수놓는 역대 최대 규모의 드론 라이트 쇼​가 펼쳐진다. ‘능허대, 빛의 항해’​를 주제로, 고대 능허대를 통해 이어졌던 해상 교류의 역사와 세계를 향해 나아가는 글로벌 항해의 의미를 첨단 미디어 기술로 재해석해 화려한 빛의 장관을 선보일 예…",
-   "sub": "축제",
-   "source_url": "https://www.yeonsu.go.kr/tour/festival/neungheodae_festival/info.asp",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.4052019914,
-   "lng": 126.6305643362,
-   "checkedAt": "2026-10-02",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/51/4108751_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/51/4108751_image3_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/48/4108748_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/48/4108748_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/49/4108749_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/49/4108749_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-2559193",
    "contentId": "2559193",
    "contentTypeId": "15",
@@ -106390,60 +110097,6 @@
    ]
   },
   {
-   "feedId": "TA-E-4117047",
-   "contentId": "4117047",
-   "contentTypeId": "15",
-   "modifiedtime": "20261008152034",
-   "name": "양평부추축제",
-   "start_date": "2026-10-09",
-   "end_date": "2026-10-10",
-   "place_name": "양동역 일원",
-   "address": "경기도 양평군 양동면 양동역길 20-4",
-   "region": "경기",
-   "city": "양평군",
-   "hours": "10:00 ~ 18:00",
-   "fee": "무료",
-   "organizer": "양동면, 양평부추축제추진위원회",
-   "phone": "010-2728-1054",
-   "why": "올해로 7회를 맞이하는 양평부추축제는 전국 최고의 부추 생산지인 양평군 양동면의 명품 부추와 양평군의 우수 농특산물을 널리 알리고, 지역 학교와 농가, 주민이 …",
-   "summary": "올해로 7회를 맞이하는 양평부추축제는 전국 최고의 부추 생산지인 양평군 양동면의 명품 부추와 양평군의 우수 농특산물을 널리 알리고, 지역 학교와 농가, 주민이 함께 만들어가는 주민주도형 축제다.특히 2026년 「부추多 양평부추축제」는 ‘맛도 많고, 즐거움도 많고, 행복도 많은 축제’를 주제로 대한민국 으뜸 양동 부추와 농민들의 정성이 담긴 신선한 농산물은 물론, 다채로운 먹거리와 체험 프로그램을 한자리에서 즐길 수 있다. 축제의 대표 먹거리인 ‘부추多 부추국밥’을 비롯해 부추떡, 부추국수, 부추막걸리 등 양동 부추를 활용한 풍성한 먹거리가 방문객의 입맛을 사로잡는다. 또한 부추 화분 심기, 부추 다듬기 등 양동 부추를 직접 보고 만지고 경험할 수 있는 체험 프로그램과 온 가족이 함께 즐길 수 있는 다양한 놀…",
-   "sub": "축제",
-   "source_url": "https://buchoofestival.com",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.4198407182,
-   "lng": 127.7542477259,
-   "checkedAt": "2026-10-09",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/36/4117136_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/36/4117136_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/33/4117133_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/33/4117133_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/34/4117134_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/34/4117134_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-3113045",
    "contentId": "3113045",
    "contentTypeId": "15",
@@ -106498,41 +110151,6 @@
    ]
   },
   {
-   "feedId": "TA-E-3540329",
-   "contentId": "3540329",
-   "contentTypeId": "15",
-   "modifiedtime": "20261007145137",
-   "name": "한글날 문화행사",
-   "start_date": "2026-10-09",
-   "end_date": "2026-10-10",
-   "address": "경기도 여주시 세종대왕면 영릉로 269-10",
-   "region": "경기",
-   "city": "여주시",
-   "hours": "10:00~17:00",
-   "fee": "무료",
-   "organizer": "여주시",
-   "phone": "031-881-9692",
-   "why": "훈민정음 반포 제580돌을 맞아 2026년 10월 9일부터 10일까지 세종대왕릉 일원에서 「2026 한글날 문화행사」가 개최된다.",
-   "summary": "훈민정음 반포 제580돌을 맞아 2026년 10월 9일부터 10일까지 세종대왕릉 일원에서 「2026 한글날 문화행사」가 개최된다. 이번 행사는 세종대왕의 업적과 한글의 가치를 알리고 한글날의 의미를 되새기기 위해 마련된 문화 행사이다. 어린이와 가족 단위 방문객을 대상으로 '캐치! 티니핑' 특별공연과 '흔한남매' 소통공연을 비롯해 한글을 주제로 한 다양한 체험 및 전시 프로그램이 운영된다. 또한 세종대왕릉 곳곳에서는 다양한 문화예술 공연을 선보이는 '쉼터 작은 음악회'가 진해오딘다. 이와 함께 한글과 세종대왕을 주제로 한 체험 프로그램을 통해 한글의 역사와 가치를 접할 수 있는 프로그램이 마련된다. 세종대왕릉의 역사·문화적 공간을 활용해 공연과 체험, 전시 등 다양한 프로그램을 운영하는 행사로, 한글날을 맞…",
-   "sub": "행사",
-   "source_url": "https://www.yjcf.or.kr",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.3047787539,
-   "lng": 127.6128192378,
-   "checkedAt": "2026-10-08",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/91/4109191_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/91/4109191_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-1620571",
    "contentId": "1620571",
    "contentTypeId": "15",
@@ -106578,140 +110196,6 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/96/4116096_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/96/4116096_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-3001045",
-   "contentId": "3001045",
-   "contentTypeId": "15",
-   "modifiedtime": "20260928141437",
-   "name": "2026 한강 종이비행기 축제",
-   "start_date": "2026-10-10",
-   "end_date": "2026-10-10",
-   "place_name": "여의도한강공원 녹음수광장 (이크루즈 유람선 선착장 앞)",
-   "address": "서울특별시 영등포구 여의도동 85",
-   "region": "서울",
-   "city": "영등포구",
-   "hours": "10:00~18:00",
-   "fee": "무료",
-   "organizer": "서울시 미래한강본부",
-   "phone": "070-8144-5221",
-   "why": "올해 축제는 '가을빛 놀이터'라는 컨셉으로 가을날 한강에서 종이비행기를 접어 날려보는 한강 종이비행기 날리기 대회와 종이비행기 국가대표의 강연과 시연, 온 가족…",
-   "summary": "올해 축제는 '가을빛 놀이터'라는 컨셉으로 가을날 한강에서 종이비행기를 접어 날려보는 한강 종이비행기 날리기 대회와 종이비행기 국가대표의 강연과 시연, 온 가족이 함께 즐길 수 있는 체험, 공연, 포토존, 포토 타입 이벤트와 현장 이벤트 경기 등으로 구성되어 있다. 축제의 하이라이트인 종이비행기 대회 참가자는 1일간 진행되는 대회 특성상 최대 수용 가능한 인원인 총 700명을 사전 선착순으로 접수하며 온라인으로만 신청 가능하다. 대회 참가 신청을 하지 못한 참관객을 위해 올해는 \"현장 이벤트 경기\"를 운영하며, 이벤트 경기 종목은 당일 현장에서 공개될 예정으로 현장에서 누구나 참여가 가능하다.",
-   "theme": [
-    "체험"
-   ],
-   "source_url": "https://hangang.seoul.go.kr/",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.524746,
-   "lng": 126.937737,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/57/4115157_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/57/4115157_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-2846034",
-   "contentId": "2846034",
-   "contentTypeId": "15",
-   "modifiedtime": "20261001150529",
-   "name": "안양청년축제",
-   "start_date": "2026-10-10",
-   "end_date": "2026-10-10",
-   "place_name": "평촌중앙공원",
-   "address": "경기도 안양시 동안구 관평로 149 (평촌동) 평촌중앙공원",
-   "region": "경기",
-   "city": "안양시",
-   "hours": "16:00~21:00",
-   "fee": "무료",
-   "organizer": "안양시",
-   "phone": "031-8045-5779",
-   "why": "안양청년축제가 10월 10일 평촌중앙공원에서 열린다.",
-   "summary": "안양청년축제가 10월 10일 평촌중앙공원에서 열린다. 올해 축제는 ''청춘은 보라''라는 슬로건 아래 각자의 고유한 빛을 가진 청년들이 안양의 색 ‘보라’ 안에서 어우러져, 안양의 오늘을 가장 아름다운 청춘으로 물들이는 축제라는 의미를 담고 있다. 슬로건의 '보라'는 열정의 '빨강'과 쉼의 '파랑'이 만난 청춘의 색이자, 서로의 다채로운 청춘을 함께 보고 나누자는 의미이다. 청년의 문화적 감수성을 반영한 다양한 전시·홍보·체험부스 프로그램 운영 및 안양 지역 청년 예술가 공연, 축하공연, 청년상 시상 등 다양한 프로그램으로 꾸려질 예정이다.",
-   "theme": [
-    "공원"
-   ],
-   "sub": "축제",
-   "source_url": "https://www.data.go.kr/data/15101578/openapi.do",
-   "source_label": "한국관광공사 TourAPI (contentId 2846034)",
-   "lat": 37.3901365976,
-   "lng": 126.9613286581,
-   "checkedAt": "2026-10-02",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/82/4116882_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/4116882_image3_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/80/4116880_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/80/4116880_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/81/4116881_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/81/4116881_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-3560787",
-   "contentId": "3560787",
-   "contentTypeId": "15",
-   "modifiedtime": "20261006175607",
-   "name": "2026 양강섬예술축제",
-   "start_date": "2026-10-10",
-   "end_date": "2026-10-10",
-   "place_name": "양강섬 일원",
-   "address": "경기도 양평군 양평읍 양평체육공원길 13",
-   "region": "경기",
-   "city": "양평군",
-   "hours": "17:00~21:00",
-   "fee": "무료",
-   "organizer": "양평문화재단, 양평군청",
-   "phone": "031-773-2612",
-   "why": "양강섬예술축제는 음악을 통해 서로 다른 세대가 함께 공감하고 즐길 수 있는 문화예술축제로 특정 세대에 한정된 공연을 넘어 각 시대를 대표하는 음악과 아티스트를 …",
-   "summary": "양강섬예술축제는 음악을 통해 서로 다른 세대가 함께 공감하고 즐길 수 있는 문화예술축제로 특정 세대에 한정된 공연을 넘어 각 시대를 대표하는 음악과 아티스트를 한자리에서 만나며 세대별 감성과 추억을 함께 나눌 수 있는 무대를 선보인다. 감성적인 록부터 재즈, 레트로 대중음악까지 다양한 장르의 음악을 통해 어린 세대부터 중장년층까지 누구나 편안하게 축제를 즐길 수 있도록 구성했으며 지역 주민과 관광객이 함께 어울리고 참여할 수 있는 열린 축제로 마련하여 공연을 즐기는 것을 넘어 서로의 이야기를 나누고 세대 간 공감대를 형성하는 자리로 만들고자 한다. 아름다운 양강섬을 배경으로 음악과 사람이 어우러지는 특별한 시간을 선사하며 양평군의 문화적 매력을 널리 알리고 지역 공동체가 함께 즐기는 문화예술축제를 추진하고자…",
-   "theme": [
-    "섬"
-   ],
-   "sub": "축제",
-   "source_url": "https://ypcf.or.kr/2026-yanggangfestival",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.4831299305,
-   "lng": 127.4986628246,
-   "checkedAt": "2026-10-07",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/30/4118030_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/30/4118030_image3_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
