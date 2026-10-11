@@ -4425,7 +4425,7 @@ document.addEventListener("click",function(e){
   if(PLACEMODE==="pick"){ADDRPICK=null;ADDRSEL={};}
   else {PICKSPOT=null;}
   refreshAdminNewModal();renderKeepScroll();return;}
- if(q=t.closest("[data-dkm]")){DISC_KM=+q.dataset.dkm||0;render();return;}
+ if(q=t.closest("[data-dkm]")){DISC_KM=+q.dataset.dkm||0;DIST_F=0;render();return;}
  if(q=t.closest("[data-dwho]")){DISC_WHO=q.dataset.dwho;render();return;}
  if(q=t.closest("[data-dwhen]")){DISC_WHEN=q.dataset.dwhen;render();return;}
  if(q=t.closest("[data-dkind]")){DISC_KIND=q.dataset.dkind;render();return;}
@@ -4784,10 +4784,10 @@ document.addEventListener("click",function(e){
  else if(k==="clearf"){ACC_F="";DIST_F=0;REGION_F="AUTO";REGION_FS=[];KIND_F="";KIND_FS=[];AXIS_FS=[];LV_F=0;FEE_F="";WHEN_F="";LEARN_G="all";render();toast("조회조건을 지웠습니다");}
  else if(k==="basechg"){GPSASK=true;render();}
  else if(k==="gpshome"){
-  GPSON=false;GPSASK=false;MODAL="";ACC_F="";DIST_F=5;
+  GPSON=false;GPSASK=false;MODAL="";ACC_F="";DIST_F=(UV==="t"?0:5);
   render();toast("내 동네 기준으로 가까운 곳을 보여드립니다");}
  else if(k==="gpson"){
-  ACC_F="";DIST_F=5;
+  ACC_F="";DIST_F=(UV==="t"?0:5);
   if(navigator.geolocation&&location.protocol!=="content:"){
    navigator.geolocation.getCurrentPosition(function(pos){
     GPSPT={lat:pos.coords.latitude,lng:pos.coords.longitude,name:"지금 계신 곳"};
