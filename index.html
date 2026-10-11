@@ -799,7 +799,7 @@ input,textarea,select{font-size:16px} input[type="file"]{padding:12px 0;min-heig
 .ui-brandmark img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 </style>
 <style id="guri-discovery-r03-css">
-.disc-row{display:grid;grid-template-columns:105px 1fr;gap:10px;align-items:center;margin:11px 0}.disc-row>b{font-size:17px}.disc-options{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.disc-options button{min-height:48px;border:1.5px solid var(--line);background:#fff;border-radius:14px;font-size:16px;font-weight:750;padding:6px}.disc-options button.on{background:var(--navy);color:#fff;border-color:var(--navy)}@media(max-width:520px){.disc-row{grid-template-columns:92px 1fr}.disc-options button{font-size:15px}}
+.disc-row.wide{grid-template-columns:1fr}.disc-row.wide>b{font-size:18px}.disc-row.wide .disc-options button{min-height:54px;font-size:17px}.disc-row.wide.gps .disc-options{grid-template-columns:1fr}.disc-row{display:grid;grid-template-columns:105px 1fr;gap:10px;align-items:center;margin:11px 0}.disc-row>b{font-size:17px}.disc-options{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.disc-options button{min-height:48px;border:1.5px solid var(--line);background:#fff;border-radius:14px;font-size:16px;font-weight:750;padding:6px}.disc-options button.on{background:var(--navy);color:#fff;border-color:var(--navy)}@media(max-width:520px){.disc-row{grid-template-columns:92px 1fr}.disc-options button{font-size:15px}}
 </style></head><body>
 <div id="grBootSplash" style="position:fixed;inset:0;z-index:2147483000;background:#f4f1ea;display:flex;flex-direction:column;align-items:center;justify-content:center;font:700 22px/1.5 sans-serif;color:#12314F">궁리를 준비하고 있어요<span style="font-weight:400;font-size:16px;color:#5b6b63;margin-top:6px">잠시만 기다려 주세요</span></div>
 <script id="guri-r17-boot">
@@ -1748,9 +1748,9 @@ function discDist(x){var p=null;try{p=filterPoint(x);}catch(e){}if(!p)return nul
 function discFilterUI(){
  return '<div class="card" style="padding:18px;margin-top:0"><div class="serif" style="font-size:25px;font-weight:800">어디가볼까?</div>'+
  '<div style="font-size:17px;line-height:1.65;margin:12px 0 18px">가볼 곳과 행사를 한 번에 찾아요.</div>'+
- '<div class="disc-row"><b>내 주변</b><div class="disc-options"><button data-act="gpson" class="'+(GPSON?"on":"")+'">📍 내 위치에서 가까운 순</button>'+(GPSON?'<button data-act="gpshome">내 동네 기준</button>':'')+'</div></div>'+
- '<div class="sm mute" style="margin:-6px 0 10px">기준: '+(GPSON?"지금 계신 곳":basePt().name)+' · 위치는 이 기기에서만 계산하고 서버로 보내지 않아요 · 정확한 좌표(한국관광공사 제공)가 없는 곳은 시·군·구 중심으로 대략 계산해요</div>'+
- '<div class="disc-row"><b>거리</b><div class="disc-options">'+[[0,"전체"],[1,"1km"],[3,"3km"],[5,"5km"],[10,"10km"],[30,"30km"]].map(function(k){return '<button data-dkm="'+k[0]+'" class="'+(DISC_KM===k[0]?"on":"")+'">'+k[1]+'</button>';}).join("")+'</div></div>'+
+ '<div class="disc-row wide gps"><b>내 주변</b><div class="disc-options"><button data-act="gpson" class="'+(GPSON?"on":"")+'">📍 내 위치에서 가까운 순</button>'+(GPSON?'<button data-act="gpshome">내 동네 기준</button>':'')+'</div></div>'+
+ '<div style="font-size:16px;line-height:1.6;color:#4a4f52;margin:-4px 0 12px"><b>기준: '+(GPSON?"지금 계신 곳":basePt().name)+'</b><br>위치는 이 폰에서만 계산하고 서버로 보내지 않아요.<br>정확한 좌표가 없는 곳은 시·군·구 중심으로 <b>대략</b> 계산해요. (좌표 출처: 한국관광공사)</div>'+
+ '<div class="disc-row wide"><b>거리</b><div class="disc-options">'+[[0,"전체"],[1,"1km"],[3,"3km"],[5,"5km"],[10,"10km"],[30,"30km"]].map(function(k){return '<button data-dkm="'+k[0]+'" class="'+(DISC_KM===k[0]?"on":"")+'">'+k[1]+'</button>';}).join("")+'</div></div>'+
  '<div class="disc-row"><b>누구와</b><div class="disc-options"><button data-dwho="ANY" class="'+(DISC_WHO==="ANY"?"on":"")+'">상관없어요</button><button data-dwho="ALONE" class="'+(DISC_WHO==="ALONE"?"on":"")+'">혼자</button><button data-dwho="WITH" class="'+(DISC_WHO==="WITH"?"on":"")+'">누군가와</button></div></div>'+
  '<div class="disc-row"><b>언제</b><div class="disc-options"><button data-dwhen="ANY" class="'+(DISC_WHEN==="ANY"?"on":"")+'">언제든</button><button data-dwhen="TODAY" class="'+(DISC_WHEN==="TODAY"?"on":"")+'">오늘</button><button data-dwhen="WEEKEND" class="'+(DISC_WHEN==="WEEKEND"?"on":"")+'">이번 주말</button></div></div>'+
  '<div class="disc-row"><b>무엇을</b><div class="disc-options"><button data-dkind="ALL" class="'+(DISC_KIND==="ALL"?"on":"")+'">전체</button><button data-dkind="PLACE" class="'+(DISC_KIND==="PLACE"?"on":"")+'">장소</button><button data-dkind="EVENT" class="'+(DISC_KIND==="EVENT"?"on":"")+'">행사</button></div></div>'+
@@ -19974,7 +19974,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   detail:'활동 상세',room:'대화방',spot:'가볼 곳',eventspot:'행사',quicknew:'모임 만들기',compnew:'동행 만들기',phnew:'사진 올리기',capapply:'캡틴 신청',spotreq:'가볼 곳 알려주기',onb:'추천 조건',invset:'초대 설정',blocked:'차단 관리',history:'지난 활동',noti:'알림',why:'추천 이유',trust:'안심 원칙',exc:'결제·환불',excd:'결제·환불',friendinvite:'친구 초대',invite:'초대장',done:'완료',
   chome:'캡틴 홈',cops:'운영',cmore:'더보기',cnew:'새 프로그램',cmanage:'활동 운영',croster:'출석',ctalk:'대화',csettle:'정산',cclose:'활동 마감',cincident:'사고 보고',cschedule:'일정',cmember:'회원 화면'};
  W.guriIsFront=function(){try{if(role()!=='USER')return false;var sh=document.getElementById('visualShell'),app=document.getElementById('app');var sv=!!sh&&getComputedStyle(sh).display!=='none'&&sh.getClientRects().length>0;var av=!!app&&getComputedStyle(app).display!=='none'&&app.getClientRects().length>0;return sv&&!av;}catch(e){return false;}};
- var OWN_TITLE={today:1,week:1,mine:1,passport:1,cops:1,cmore:1,csettle:1};
+ var OWN_TITLE={h:1,today:1,week:1,mine:1,passport:1,cops:1,cmore:1,csettle:1};
  var HEADING_FIRST={detail:1,spot:1,eventspot:1,quicknew:1,compnew:1,chome:1,cnew:1,cmanage:1,croster:1,cclose:1,cschedule:1,cincident:1,phnew:1,capapply:1,spotreq:1};
  W.guriScreenTitle=function(){try{var r=role();if(r!=='USER'&&r!=='CAPTAIN')return '궁리';var v=r==='CAPTAIN'?G('CV'):G('UV');if(OWN_TITLE[v])return TITLES[v];if(!HEADING_FIRST[v]){var mt=W.__guriScreenTitle();if(mt&&mt!=='궁리')return mt;}
   var h=document.querySelector('#app .gd150-hero h2,#app .hello');var t=h?String(h.innerText||'').split('\n')[0].replace(/\s+/g,' ').trim():'';if(t)return t.length>28?t.slice(0,27)+'…':t;return W.__guriScreenTitle();}catch(e){return '궁리';}};
@@ -23217,6 +23217,45 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  function apply(){var n=0;try{(W.SPOTS||[]).forEach(function(p){var c=p&&C[p.id];if(c&&(p.lat==null||p.lng==null)){p.lat=c.lat;p.lng=c.lng;p.coordSrc='한국관광공사 TourAPI';n++;}});}catch(e){}return n;}
  apply();W.addEventListener('load',function(){setTimeout(function(){if(apply()&&typeof W.render==='function'){try{W.render();}catch(e){}}},200);});
  W.guriCoords={apply:apply,count:Object.keys(C).length};
+})();
+</script>
+<!-- GUNGRI_R17_STAGE7_HOMEONE -->
+<script id="guri-r17-homeone">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriHomeOne)return;W.__guriHomeOne=1;
+ var N=0;
+ function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function usr(){try{var m=W.me();return m&&m.role==='USER'&&!m.guest&&m.id!=='guest'?m:null;}catch(e){return null;}}
+ function pool(){var a=[];try{(W.SPOTS||[]).forEach(function(x){if(!x||x.admin_hidden===true||!x.n||!x.id)return;var d=W.discDist(x);if(d)a.push({x:x,d:d});});}catch(e){}
+  var ex=a.filter(function(o){return !o.d.approx;});var p=ex.length>=3?ex:a;p.sort(function(a,b){return a.d.km-b.d.km;});return p.slice(0,8);}
+ function card(first){var m=usr();if(!m)return '';var p=pool();if(!p.length)return '';var o=p[N%p.length],x=o.x,d=o.d,km=d.km;
+  var near=km<=1.5?'걸어서 '+Math.max(1,Math.round(km/0.067))+'분 · ':'';
+  var dist=(d.approx?'대략 ':'')+(km<10?km.toFixed(1):Math.round(km))+'km';
+  var gps=false;try{gps=!!W.GPSON;}catch(e){}
+  var base=gps?'지금 계신 곳':(function(){try{return W.basePt().name;}catch(e){return '내 동네';}})();
+  var why=String(x.why||'').replace(/\s+/g,' ');if(why.length>70)why=why.slice(0,68)+'…';
+  var noTag=!(m.tags&&m.tags.length);
+  return '<div class="sec h1-sec"><div class="h1-card" data-h1="1"><div class="h1-k">'+(first?'오늘 첫 걸음 · 딱 하나만':'오늘, 여기 하나만')+'</div>'+
+   '<div class="h1-t serif">'+esc(x.n)+'</div>'+
+   '<div class="h1-m">'+near+dist+' · '+esc(base)+' 기준</div>'+
+   (why?'<div class="h1-w">'+esc(why)+'</div>':'')+
+   '<button type="button" class="btn btn-g w100 h1-go" data-go="s:'+esc(x.id)+'">이곳 자세히 보기</button>'+
+   '<div class="h1-row"><button type="button" class="btn btn-o" data-h1-next="1">다른 곳 하나 더</button>'+
+   (gps?'':'<button type="button" class="btn btn-o" data-act="gpson">📍 내 위치로</button>')+'</div>'+
+   '<div class="h1-row"><button type="button" class="btn btn-o" data-ui-today="1">📸 오늘도 난</button><button type="button" class="btn btn-o" data-gr-route="DISCOVERY">어디가볼까?</button></div>'+
+   (noTag?'<button type="button" class="h1-lnk" data-act="onb">나에게 맞게 고르기 (3가지 질문) ›</button>':'')+
+  '</div></div>';}
+ function wrap(name,first){var o=W[name];if(typeof o!=='function')return;W[name]=function(){var h=o.apply(this,arguments);if(typeof h!=='string')return h;var c=card(first);if(!c)return h;
+  var i=h.indexOf('<div class="sec">');if(i<0)return h+c;return h.slice(0,i)+c+h.slice(i);};}
+ wrap('uHome',false);wrap('uFirstDay',true);
+ D.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('[data-h1-next]');if(!b)return;e.preventDefault();e.stopPropagation();N++;try{(W.renderKeepScroll||W.render)();}catch(x){}},true);
+ var st=D.createElement('style');st.textContent=
+  '.h1-card{background:linear-gradient(160deg,#fff7ee,#fff);border:2px solid #e8c9a8;border-radius:20px;padding:18px 16px}'+
+  '.h1-k{font-size:16px;font-weight:800;color:#b4531a;margin-bottom:6px}.h1-t{font-size:27px;line-height:1.3;font-weight:800;color:#1f2a30;margin:2px 0 6px;word-break:keep-all}'+
+  '.h1-m{font-size:18px;font-weight:700;color:#1f2a30;margin-bottom:6px}.h1-w{font-size:17px;line-height:1.55;color:#4a4f52;margin-bottom:14px}'+
+  '.h1-go{min-height:58px;font-size:19px}.h1-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.h1-row .btn{min-height:52px;font-size:16.5px;padding:6px 8px}'+
+  '.h1-lnk{display:block;width:100%;margin-top:10px;min-height:48px;border:0;background:transparent;color:#0f6b45;font-size:17px;font-weight:800;text-decoration:underline}';
+ D.head.appendChild(st);
 })();
 </script>
 <!-- GUNGRI_R17_STAGE7_EXAMPLES -->
