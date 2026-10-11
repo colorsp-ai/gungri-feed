@@ -1724,7 +1724,7 @@ function uVol(){
  '</div><div class="pad"></div>';}
 
 /* ===== 어디가볼까? : 안정화 디자인 + 개발본 검색구조 ===== */
-var DISC_KIND="ALL",DISC_WHO="ANY",DISC_WHEN="ANY",DISC_REGION="ALL",DISC_THEME="ALL",DISC_Q="",EVENTCUR=null;
+var DISC_KM=0,DISC_KIND="ALL",DISC_WHO="ANY",DISC_WHEN="ANY",DISC_REGION="ALL",DISC_THEME="ALL",DISC_Q="",EVENTCUR=null;
 function discEvents(){return (window.GUNG_RI_EVENT_MASTER||[]).filter(function(e){return e&&e.publication_state!=="PREVIEW_BLOCKED";});}
 function discEventName(e){return e.name||e.title||e.event_name||"행사";}
 function discEventPlace(e){return e.place_name||e.venue_text||e.address||"";}
@@ -1732,6 +1732,7 @@ function discEventStart(e){return e.start||e.start_date||e["시작일"]||"";}
 function discMatchText(v,q){return !q||String(v||"").toLowerCase().indexOf(q.toLowerCase())>=0;}
 function discPlacePass(x){if(!isAdm()&&String(x.status||"PUBLISHED")!=="PUBLISHED")return false;
  if(DISC_KIND==="EVENT")return false;
+ if(DISC_KM>0){var _d=discDist(x);if(!_d||_d.km>DISC_KM)return false;}
  if(DISC_REGION!=="ALL"&&String(x.ar||"")!==DISC_REGION)return false;
  if(DISC_THEME!=="ALL"&&[x.axis].concat(x.k||[]).join(" ").indexOf(DISC_THEME)<0)return false;
  return discMatchText([x.n,x.ar,x.r,x.a,(x.k||[]).join(" ")].join(" "),DISC_Q);
@@ -1743,9 +1744,13 @@ function discEventPass(e){
  if(DISC_THEME!=="ALL"&&th.join(" ").indexOf(DISC_THEME)<0)return false;
  return discMatchText([discEventName(e),discEventPlace(e),reg,th.join(" ")].join(" "),DISC_Q);
 }
+function discDist(x){var p=null;try{p=filterPoint(x);}catch(e){}if(!p)return null;return {km:dist(p.lat,p.lng),approx:!!p.approx};}
 function discFilterUI(){
  return '<div class="card" style="padding:18px;margin-top:0"><div class="serif" style="font-size:25px;font-weight:800">어디가볼까?</div>'+
  '<div style="font-size:17px;line-height:1.65;margin:12px 0 18px">가볼 곳과 행사를 한 번에 찾아요.</div>'+
+ '<div class="disc-row"><b>내 주변</b><div class="disc-options"><button data-act="gpson" class="'+(GPSON?"on":"")+'">📍 내 위치에서 가까운 순</button>'+(GPSON?'<button data-act="gpshome">내 동네 기준</button>':'')+'</div></div>'+
+ '<div class="sm mute" style="margin:-6px 0 10px">기준: '+(GPSON?"지금 계신 곳":basePt().name)+' · 위치는 이 기기에서만 계산하고 서버로 보내지 않아요 · 정확한 좌표(한국관광공사 제공)가 없는 곳은 시·군·구 중심으로 대략 계산해요</div>'+
+ '<div class="disc-row"><b>거리</b><div class="disc-options">'+[[0,"전체"],[1,"1km"],[3,"3km"],[5,"5km"],[10,"10km"],[30,"30km"]].map(function(k){return '<button data-dkm="'+k[0]+'" class="'+(DISC_KM===k[0]?"on":"")+'">'+k[1]+'</button>';}).join("")+'</div></div>'+
  '<div class="disc-row"><b>누구와</b><div class="disc-options"><button data-dwho="ANY" class="'+(DISC_WHO==="ANY"?"on":"")+'">상관없어요</button><button data-dwho="ALONE" class="'+(DISC_WHO==="ALONE"?"on":"")+'">혼자</button><button data-dwho="WITH" class="'+(DISC_WHO==="WITH"?"on":"")+'">누군가와</button></div></div>'+
  '<div class="disc-row"><b>언제</b><div class="disc-options"><button data-dwhen="ANY" class="'+(DISC_WHEN==="ANY"?"on":"")+'">언제든</button><button data-dwhen="TODAY" class="'+(DISC_WHEN==="TODAY"?"on":"")+'">오늘</button><button data-dwhen="WEEKEND" class="'+(DISC_WHEN==="WEEKEND"?"on":"")+'">이번 주말</button></div></div>'+
  '<div class="disc-row"><b>무엇을</b><div class="disc-options"><button data-dkind="ALL" class="'+(DISC_KIND==="ALL"?"on":"")+'">전체</button><button data-dkind="PLACE" class="'+(DISC_KIND==="PLACE"?"on":"")+'">장소</button><button data-dkind="EVENT" class="'+(DISC_KIND==="EVENT"?"on":"")+'">행사</button></div></div>'+
@@ -1765,9 +1770,9 @@ function discEventDetail(){
 }
 function uSpots(){
  var places=SPOTS.filter(function(x){return x.admin_hidden!==true&&discPlacePass(x);});
- places.sort(function(a,b){return accessOf(a).km-accessOf(b).km;});
- var events=discEvents().filter(discEventPass),h="";
- places.forEach(function(x){h+='<button class="card" data-go="s:'+x.id+'"><div class="row"><span class="chip c-ok">장소</span><span class="sm mute" style="margin-left:auto">'+(x.axis||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+x.n+'</div><div class="sm mute">'+x.ar+' '+x.r+' · '+(window.guriSubTag&&guriSubTag(x)?'<b data-gr-sub="1">'+guriSubTag(x)+'</b>':(x.k||[]).join(", "))+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+x.a+'</div><div class="row" style="margin-top:7px;flex-wrap:wrap">'+accessTag(x)+'<span class="stars">'+stars(x.lv)+'</span><span class="sm mute">'+lvName(x.lv)+'</span>'+(window.guriBenefitBadge?guriBenefitBadge(guriBenefitPlace(x)):'')+'</div></button>';});
+ places.sort(function(a,b){var da=discDist(a),db=discDist(b);return (da?da.km:99999)-(db?db.km:99999);});
+ var events=DISC_KM>0?[]:discEvents().filter(discEventPass),h="";
+ places.forEach(function(x){h+='<button class="card" data-go="s:'+x.id+'"><div class="row"><span class="chip c-ok">장소</span><span class="sm mute" style="margin-left:auto">'+(x.axis||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+x.n+'</div><div class="sm mute">'+x.ar+' '+x.r+' · '+(window.guriSubTag&&guriSubTag(x)?'<b data-gr-sub="1">'+guriSubTag(x)+'</b>':(x.k||[]).join(", "))+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+x.a+'</div><div class="row" style="margin-top:7px;flex-wrap:wrap">'+(function(){var d=discDist(x);return d?'<span class="acc">'+(d.approx?'대략 ':'')+(d.km<10?d.km.toFixed(1):Math.round(d.km))+'km</span>':accessTag(x);})()+'<span class="stars">'+stars(x.lv)+'</span><span class="sm mute">'+lvName(x.lv)+'</span>'+(window.guriBenefitBadge?guriBenefitBadge(guriBenefitPlace(x)):'')+'</div></button>';});
  events.forEach(function(e){var id=e.event_id||e.id,th=e.theme||[];if(typeof th==="string")th=[th];h+='<button class="card" data-goevent="'+id+'"><div class="row"><span class="chip c-b">행사</span><span class="sm mute" style="margin-left:auto">'+(e.region||"")+'</span></div><div class="serif" style="font-size:19px;font-weight:800;margin-top:7px">'+discEventName(e)+'</div><div class="sm mute">'+(window.guriEvSub&&guriEvSub(e)?'<b data-gr-sub="1">'+guriEvSub(e)+'</b> · ':'')+th.join(" · ")+'</div><div style="margin-top:8px;font-size:15.5px">📍 '+discEventPlace(e)+'</div><div class="sm mute" style="margin-top:5px">📅 '+discEventStart(e)+(e.end||e.end_date?' ~ '+(e.end||e.end_date):'')+(window.guriBenefitBadge?guriBenefitBadge(guriBenefitEvent(e)):'')+'</div></button>';});
  return head("t")+'<div class="sec">'+discFilterUI()+'<div class="row" style="margin:16px 0 9px"><b style="font-size:19px">찾아본 결과</b><span class="sm mute" style="margin-left:auto">장소 '+places.length+' · 행사 '+events.length+'</span></div>'+(h?'<div class="grid2">'+h+'</div>':emptyBox())+
  '<div class="card" style="background:var(--paperD);border:none;margin-top:14px"><b>내가 아는 좋은 곳이 있으신가요?</b><div class="sm mute" style="margin:5px 0 10px">회원 제보는 확인 후 장소 정보에 반영합니다.</div>'+(isAdm()?'<button class="btn btn-g w100" data-act="spotnew">가볼 곳 등록</button>':'<button class="btn btn-o w100" data-act="spotreq">가볼 곳 알려주기</button>')+'</div></div><div class="pad"></div>';
@@ -4420,6 +4425,7 @@ document.addEventListener("click",function(e){
   if(PLACEMODE==="pick"){ADDRPICK=null;ADDRSEL={};}
   else {PICKSPOT=null;}
   refreshAdminNewModal();renderKeepScroll();return;}
+ if(q=t.closest("[data-dkm]")){DISC_KM=+q.dataset.dkm||0;render();return;}
  if(q=t.closest("[data-dwho]")){DISC_WHO=q.dataset.dwho;render();return;}
  if(q=t.closest("[data-dwhen]")){DISC_WHEN=q.dataset.dwhen;render();return;}
  if(q=t.closest("[data-dkind]")){DISC_KIND=q.dataset.dkind;render();return;}
@@ -22184,6 +22190,1033 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   '.ui-cat[data-ui-today] .ui-cat-img{background:linear-gradient(135deg,#ffd9bd,#f3a46b 55%,#d9733a)}.ui-cat[data-ui-today]{cursor:pointer;background:#fff4ec}';
  D.head.appendChild(st);
  W.guriToday={open:openFeed,write:openWrite,state:function(){return {F:F,WR:WR};}};
+})();
+</script>
+<!-- GUNGRI_R17_STAGE7_COORDS -->
+<script id="guri-r17-coords">
+(function(){'use strict';
+ var W=window;if(W.__guriCoords)return;W.__guriCoords=1;
+ /* 한국관광공사 TourAPI 좌표 (공공데이터 · 이용허락범위 제한 없음). 정확한 좌표가 없는 장소에만 채운다. */
+ var C={
+"PL-004": {
+"lat": 37.64066,
+"lng": 127.06686,
+"by": "name",
+"feed": "TA-1866427",
+"fn": "서울시립 북서울미술관"
+},
+"PL-005": {
+"lat": 37.53855,
+"lng": 126.99849,
+"by": "name",
+"feed": "TA-130525",
+"fn": "리움미술관"
+},
+"PL-006": {
+"lat": 37.52879,
+"lng": 126.96867,
+"by": "name",
+"feed": "TA-2773303",
+"fn": "아모레퍼시픽미술관"
+},
+"PL-007": {
+"lat": 37.56917,
+"lng": 126.836,
+"by": "name",
+"feed": "TA-2589349",
+"fn": "서울식물원"
+},
+"PL-008": {
+"lat": 37.54307,
+"lng": 127.0418,
+"by": "name",
+"feed": "TA-128611",
+"fn": "서울숲"
+},
+"PL-009": {
+"lat": 37.51766,
+"lng": 126.95804,
+"by": "name",
+"feed": "TA-2638475",
+"fn": "노들섬"
+},
+"PL-011": {
+"lat": 37.54224,
+"lng": 126.90243,
+"by": "name",
+"feed": "TA-2661405",
+"fn": "선유도공원"
+},
+"PL-012": {
+"lat": 37.5691,
+"lng": 126.88634,
+"by": "name",
+"feed": "TA-2654607",
+"fn": "하늘공원"
+},
+"PL-013": {
+"lat": 37.57765,
+"lng": 126.99023,
+"by": "addr",
+"feed": "TA-127642",
+"fn": "창덕궁과 후원 [유네스코 세계유산]"
+},
+"PL-014": {
+"lat": 37.56505,
+"lng": 126.97657,
+"by": "name",
+"feed": "TA-126509",
+"fn": "덕수궁"
+},
+"PL-019": {
+"lat": 37.51245,
+"lng": 126.99598,
+"by": "addr",
+"feed": "TA-2647687",
+"fn": "골든블루마리나"
+},
+"PL-022": {
+"lat": 37.34076,
+"lng": 127.28942,
+"by": "name",
+"feed": "TA-2436233",
+"fn": "화담숲"
+},
+"PL-025": {
+"lat": 37.54093,
+"lng": 127.32397,
+"by": "addr",
+"feed": "TA-3012425",
+"fn": "세미원 연꽃박물관"
+},
+"PL-028": {
+"lat": 37.75954,
+"lng": 127.16892,
+"by": "name",
+"feed": "TA-127497",
+"fn": "국립수목원"
+},
+"PL-031": {
+"lat": 37.16861,
+"lng": 126.62447,
+"by": "name",
+"feed": "TA-125503",
+"fn": "제부도"
+},
+"PL-032": {
+"lat": 37.11603,
+"lng": 126.68127,
+"by": "addr",
+"feed": "TA-1960233",
+"fn": "궁평항수산물직판장"
+},
+"PL-038": {
+"lat": 37.2881,
+"lng": 126.97702,
+"by": "name",
+"feed": "TA-3076051",
+"fn": "일월수목원"
+},
+"PL-039": {
+"lat": 37.25958,
+"lng": 127.07309,
+"by": "name",
+"feed": "TA-2998800",
+"fn": "영흥수목원"
+},
+"PL-040": {
+"lat": 37.28327,
+"lng": 127.07006,
+"by": "name",
+"feed": "TA-2662855",
+"fn": "광교호수공원"
+},
+"PL-043": {
+"lat": 37.7871,
+"lng": 127.0837,
+"by": "fuzzy",
+"feed": "TA-2670558",
+"fn": "나리농원"
+},
+"PL-044": {
+"lat": 37.92377,
+"lng": 127.23898,
+"by": "addr",
+"feed": "TA-2464201",
+"fn": "포천아트밸리 (한탄강 유네스코 세계지질공원)"
+},
+"PL-045": {
+"lat": 37.96502,
+"lng": 127.13179,
+"by": "addr",
+"feed": "TA-3023048",
+"fn": "포천 허브힐링센터"
+},
+"PL-048": {
+"lat": 37.3929,
+"lng": 126.6383,
+"by": "name",
+"feed": "TA-2465107",
+"fn": "송도 센트럴파크"
+},
+"PL-049": {
+"lat": 37.39411,
+"lng": 126.63503,
+"by": "name",
+"feed": "TA-2693521",
+"fn": "트라이보울"
+},
+"PL-050": {
+"lat": 37.4722,
+"lng": 126.6001,
+"by": "name",
+"feed": "TA-127585",
+"fn": "월미도"
+},
+"PL-051": {
+"lat": 37.4776,
+"lng": 126.6206,
+"by": "name",
+"feed": "TA-1938168",
+"fn": "송월동 동화마을"
+},
+"PL-052": {
+"lat": 37.45762,
+"lng": 126.74926,
+"by": "name",
+"feed": "TA-128027",
+"fn": "인천대공원"
+},
+"PL-053": {
+"lat": 37.39025,
+"lng": 126.63879,
+"by": "name",
+"feed": "TA-2767851",
+"fn": "송도 한옥마을"
+},
+"PL-054": {
+"lat": 37.44595,
+"lng": 126.37272,
+"by": "name",
+"feed": "TA-128767",
+"fn": "을왕리해수욕장"
+},
+"PL-055": {
+"lat": 37.45648,
+"lng": 126.36931,
+"by": "name",
+"feed": "TA-129256",
+"fn": "왕산해수욕장"
+},
+"PL-056": {
+"lat": 37.4317,
+"lng": 126.4163,
+"by": "addr",
+"feed": "TA-264517",
+"fn": "영종도 마시안해변"
+},
+"PL-057": {
+"lat": 37.5569,
+"lng": 126.6048,
+"by": "name",
+"feed": "TA-2662684",
+"fn": "정서진"
+},
+"PL-058": {
+"lat": 37.53054,
+"lng": 126.63627,
+"by": "name",
+"feed": "TA-2465152",
+"fn": "청라호수공원"
+},
+"PL-062": {
+"lat": 37.57904,
+"lng": 127.03914,
+"by": "name",
+"feed": "TA-948730",
+"fn": "경동시장"
+},
+"PL-063": {
+"lat": 37.55602,
+"lng": 126.90645,
+"by": "name",
+"feed": "TA-2499807",
+"fn": "망원시장"
+},
+"PL-071": {
+"lat": 37.57033,
+"lng": 126.96185,
+"by": "addr",
+"feed": "TA-2789102",
+"fn": "독립문영천시장"
+},
+"PL-074": {
+"lat": 37.56628,
+"lng": 126.99265,
+"by": "name",
+"feed": "TA-2994062",
+"fn": "을지로 노가리골목"
+},
+"PL-091": {
+"lat": 37.28082,
+"lng": 127.44036,
+"by": "addr",
+"feed": "TA-2764919",
+"fn": "관고전통시장"
+},
+"PL-098": {
+"lat": 37.20912,
+"lng": 126.81661,
+"by": "name",
+"feed": "TA-2733829",
+"fn": "남양시장"
+},
+"PL-099": {
+"lat": 37.59954,
+"lng": 127.1399,
+"by": "name",
+"feed": "TA-3090931",
+"fn": "구리전통시장"
+},
+"PL-102": {
+"lat": 37.90708,
+"lng": 127.05347,
+"by": "name",
+"feed": "TA-132744",
+"fn": "동두천 중앙시장"
+},
+"PL-109": {
+"lat": 37.47145,
+"lng": 126.62781,
+"by": "name",
+"feed": "TA-132381",
+"fn": "신포국제시장"
+},
+"PL-112": {
+"lat": 37.45418,
+"lng": 126.72148,
+"by": "addr",
+"feed": "TA-1025593",
+"fn": "인천 모래내시장"
+},
+"PL-114": {
+"lat": 37.44557,
+"lng": 126.67639,
+"by": "name",
+"feed": "TA-2465126",
+"fn": "신기시장"
+},
+"PL-115": {
+"lat": 37.4756,
+"lng": 126.6179,
+"by": "name",
+"feed": "TA-264512",
+"fn": "인천 차이나타운"
+},
+"PL-116": {
+"lat": 37.47839,
+"lng": 126.63014,
+"by": "addr",
+"feed": "TA-699269",
+"fn": "인천 화평동 세숫대야 냉면거리"
+},
+"PL-118": {
+"lat": 37.45408,
+"lng": 126.60715,
+"by": "addr",
+"feed": "TA-132742",
+"fn": "인천 종합어시장"
+},
+"PL-120": {
+"lat": 37.39025,
+"lng": 126.63879,
+"by": "fuzzy",
+"feed": "TA-2767851",
+"fn": "송도 한옥마을"
+},
+"PL-122": {
+"lat": 37.57909,
+"lng": 126.98628,
+"by": "addr",
+"feed": "TA-1100498",
+"fn": "북촌 8경"
+},
+"PL-127": {
+"lat": 37.58061,
+"lng": 127.03721,
+"by": "name",
+"feed": "TA-2692910",
+"fn": "서울한방진흥센터"
+},
+"PL-128": {
+"lat": 37.58242,
+"lng": 126.98611,
+"by": "name",
+"feed": "TA-2993183",
+"fn": "북촌전통공예체험관"
+},
+"PL-133": {
+"lat": 37.57671,
+"lng": 126.97149,
+"by": "name",
+"feed": "TA-3013269",
+"fn": "서울생활문화센터 체부"
+},
+"PL-136": {
+"lat": 37.64182,
+"lng": 127.0766,
+"by": "name",
+"feed": "TA-2989541",
+"fn": "서울시립과학관"
+},
+"PL-137": {
+"lat": 37.57474,
+"lng": 126.83284,
+"by": "name",
+"feed": "TA-2993173",
+"fn": "서울물재생체험관"
+},
+"PL-138": {
+"lat": 37.64075,
+"lng": 127.06522,
+"by": "name",
+"feed": "TA-2745731",
+"fn": "노원천문우주과학관"
+},
+"PL-140": {
+"lat": 37.54307,
+"lng": 127.0418,
+"by": "addr",
+"feed": "TA-128611",
+"fn": "서울숲"
+},
+"PL-144": {
+"lat": 37.35028,
+"lng": 127.33479,
+"by": "name",
+"feed": "TA-130358",
+"fn": "경기도자박물관"
+},
+"PL-147": {
+"lat": 37.26653,
+"lng": 126.98117,
+"by": "name",
+"feed": "TA-2747132",
+"fn": "경기상상캠퍼스"
+},
+"PL-148": {
+"lat": 37.46379,
+"lng": 126.87041,
+"by": "name",
+"feed": "TA-2034106",
+"fn": "광명업사이클아트센터"
+},
+"PL-149": {
+"lat": 37.64663,
+"lng": 126.69621,
+"by": "name",
+"feed": "TA-2633971",
+"fn": "김포 아트빌리지"
+},
+"PL-152": {
+"lat": 36.99209,
+"lng": 127.19441,
+"by": "name",
+"feed": "TA-2463653",
+"fn": "안성팜랜드"
+},
+"PL-153": {
+"lat": 37.17277,
+"lng": 127.29842,
+"by": "addr",
+"feed": "TA-2629751",
+"fn": "용인농촌테마파크 농경문화전시관"
+},
+"PL-163": {
+"lat": 37.35028,
+"lng": 127.33479,
+"by": "addr",
+"feed": "TA-130358",
+"fn": "경기도자박물관"
+},
+"PL-164": {
+"lat": 37.4007,
+"lng": 126.8084,
+"by": "addr",
+"feed": "TA-710258",
+"fn": "연꽃테마파크"
+},
+"PL-166": {
+"lat": 37.31087,
+"lng": 126.95026,
+"by": "name",
+"feed": "TA-1850672",
+"fn": "의왕조류생태과학관"
+},
+"PL-169": {
+"lat": 37.7957,
+"lng": 126.45476,
+"by": "addr",
+"feed": "TA-130733",
+"fn": "화문석문화관"
+},
+"PL-171": {
+"lat": 37.55845,
+"lng": 126.65637,
+"by": "addr",
+"feed": "TA-1207259",
+"fn": "녹청자박물관"
+},
+"PL-173": {
+"lat": 37.47261,
+"lng": 126.6205,
+"by": "name",
+"feed": "TA-2601714",
+"fn": "인천 아트플랫폼"
+},
+"PL-177": {
+"lat": 37.40927,
+"lng": 126.41351,
+"by": "name",
+"feed": "TA-128601",
+"fn": "큰무리어촌체험마을"
+},
+"PL-180": {
+"lat": 37.7746,
+"lng": 126.43472,
+"by": "addr",
+"feed": "TA-2523291",
+"fn": "강화자연사박물관"
+},
+"PL-181": {
+"lat": 37.52112,
+"lng": 126.97911,
+"by": "name",
+"feed": "TA-129703",
+"fn": "국립중앙박물관"
+},
+"PL-182": {
+"lat": 37.57408,
+"lng": 126.97756,
+"by": "name",
+"feed": "TA-1849416",
+"fn": "대한민국역사박물관"
+},
+"PL-186": {
+"lat": 37.5743,
+"lng": 126.95553,
+"by": "name",
+"feed": "TA-130152",
+"fn": "서대문형무소역사관"
+},
+"PL-191": {
+"lat": 37.5719,
+"lng": 126.98339,
+"by": "name",
+"feed": "TA-2606224",
+"fn": "공평도시유적전시관"
+},
+"PL-194": {
+"lat": 37.55687,
+"lng": 126.80887,
+"by": "name",
+"feed": "TA-2706762",
+"fn": "국립항공박물관"
+},
+"PL-195": {
+"lat": 37.65558,
+"lng": 127.04951,
+"by": "name",
+"feed": "TA-4060676",
+"fn": "서울로봇인공지능과학관"
+},
+"PL-202": {
+"lat": 37.26692,
+"lng": 127.10742,
+"by": "name",
+"feed": "TA-130136",
+"fn": "경기도박물관"
+},
+"PL-203": {
+"lat": 37.26914,
+"lng": 127.11033,
+"by": "name",
+"feed": "TA-631003",
+"fn": "백남준아트센터"
+},
+"PL-204": {
+"lat": 37.51602,
+"lng": 127.3006,
+"by": "name",
+"feed": "TA-3012162",
+"fn": "실학박물관"
+},
+"PL-206": {
+"lat": 37.28209,
+"lng": 127.01908,
+"by": "name",
+"feed": "TA-1921150",
+"fn": "수원화성박물관"
+},
+"PL-207": {
+"lat": 38.01122,
+"lng": 127.06643,
+"by": "name",
+"feed": "TA-1284966",
+"fn": "전곡선사박물관"
+},
+"PL-208": {
+"lat": 37.89843,
+"lng": 126.73163,
+"by": "name",
+"feed": "TA-2375571",
+"fn": "캠프 그리브스"
+},
+"PL-212": {
+"lat": 37.37849,
+"lng": 127.10639,
+"by": "name",
+"feed": "TA-1907759",
+"fn": "한국잡월드"
+},
+"PL-213": {
+"lat": 37.40093,
+"lng": 127.09558,
+"by": "name",
+"feed": "TA-2371204",
+"fn": "판교박물관"
+},
+"PL-214": {
+"lat": 37.31401,
+"lng": 126.95003,
+"by": "name",
+"feed": "TA-2463812",
+"fn": "의왕철도박물관"
+},
+"PL-216": {
+"lat": 37.29765,
+"lng": 127.03563,
+"by": "name",
+"feed": "TA-638913",
+"fn": "수원박물관"
+},
+"PL-217": {
+"lat": 37.29634,
+"lng": 127.05143,
+"by": "name",
+"feed": "TA-2379222",
+"fn": "수원광교박물관"
+},
+"PL-220": {
+"lat": 37.66621,
+"lng": 126.74768,
+"by": "name",
+"feed": "TA-2660801",
+"fn": "현대 모터스튜디오 고양"
+},
+"PL-223": {
+"lat": 37.33659,
+"lng": 127.17788,
+"by": "name",
+"feed": "TA-130147",
+"fn": "한국등잔박물관"
+},
+"PL-225": {
+"lat": 37.2739,
+"lng": 127.15713,
+"by": "name",
+"feed": "TA-2734982",
+"fn": "용인시박물관"
+},
+"PL-226": {
+"lat": 37.4243,
+"lng": 126.86488,
+"by": "name",
+"feed": "TA-2649975",
+"fn": "광명동굴"
+},
+"PL-228": {
+"lat": 37.476,
+"lng": 126.61849,
+"by": "name",
+"feed": "TA-2601710",
+"fn": "인천개항박물관"
+},
+"PL-229": {
+"lat": 37.47479,
+"lng": 126.61817,
+"by": "name",
+"feed": "TA-1931699",
+"fn": "짜장면박물관"
+},
+"PL-230": {
+"lat": 37.47007,
+"lng": 126.60024,
+"by": "name",
+"feed": "TA-2465140",
+"fn": "한국이민사박물관"
+},
+"PL-231": {
+"lat": 37.39471,
+"lng": 126.63795,
+"by": "name",
+"feed": "TA-3097744",
+"fn": "국립세계문자박물관"
+},
+"PL-233": {
+"lat": 37.41947,
+"lng": 126.65349,
+"by": "name",
+"feed": "TA-130060",
+"fn": "인천상륙작전기념관"
+},
+"PL-234": {
+"lat": 37.77374,
+"lng": 126.43528,
+"by": "name",
+"feed": "TA-129810",
+"fn": "강화역사박물관"
+},
+"PL-235": {
+"lat": 37.7746,
+"lng": 126.43472,
+"by": "name",
+"feed": "TA-2523291",
+"fn": "강화자연사박물관"
+},
+"PL-237": {
+"lat": 37.59437,
+"lng": 126.69863,
+"by": "addr",
+"feed": "TA-864987",
+"fn": "인천광역시 검단선사박물관"
+},
+"PL-238": {
+"lat": 37.39281,
+"lng": 126.63589,
+"by": "name",
+"feed": "TA-1851364",
+"fn": "인천도시역사관"
+},
+"PL-239": {
+"lat": 37.55157,
+"lng": 126.73995,
+"by": "name",
+"feed": "TA-2662902",
+"fn": "인천어린이과학관"
+},
+"PL-240": {
+"lat": 37.51207,
+"lng": 126.73785,
+"by": "name",
+"feed": "TA-130911",
+"fn": "부평역사박물관"
+},
+"PL-241": {
+"lat": 37.52061,
+"lng": 127.11507,
+"by": "addr",
+"feed": "TA-2758179",
+"fn": "올림픽체조경기장(KSPO DOME)"
+},
+"PL-242": {
+"lat": 37.5493,
+"lng": 127.07626,
+"by": "name",
+"feed": "TA-126490",
+"fn": "서울어린이대공원"
+},
+"PL-243": {
+"lat": 37.52639,
+"lng": 126.93361,
+"by": "addr",
+"feed": "TA-1054888",
+"fn": "여의도 둘레길(여의도 자전거도로)"
+},
+"PL-244": {
+"lat": 37.52928,
+"lng": 127.07396,
+"by": "addr",
+"feed": "TA-1148818",
+"fn": "한강공원 뚝섬 눈썰매장"
+},
+"PL-245": {
+"lat": 37.50769,
+"lng": 126.99275,
+"by": "name",
+"feed": "TA-970138",
+"fn": "반포한강공원"
+},
+"PL-246": {
+"lat": 37.56303,
+"lng": 126.88515,
+"by": "addr",
+"feed": "TA-1029885",
+"fn": "난지한강공원 익스트림장"
+},
+"PL-248": {
+"lat": 37.46911,
+"lng": 127.03682,
+"by": "addr",
+"feed": "TA-753972",
+"fn": "매헌윤봉길의사기념관"
+},
+"PL-253": {
+"lat": 37.52743,
+"lng": 126.83009,
+"by": "name",
+"feed": "TA-1265735",
+"fn": "서서울호수공원"
+},
+"PL-255": {
+"lat": 37.63162,
+"lng": 127.06942,
+"by": "name",
+"feed": "TA-2704696",
+"fn": "경춘선숲길"
+},
+"PL-257": {
+"lat": 37.56965,
+"lng": 127.00507,
+"by": "name",
+"feed": "TA-129507",
+"fn": "청계천"
+},
+"PL-260": {
+"lat": 37.66549,
+"lng": 127.01149,
+"by": "name",
+"feed": "TA-2908314",
+"fn": "우이동 가족캠핑장"
+},
+"PL-263": {
+"lat": 37.47661,
+"lng": 127.18837,
+"by": "addr",
+"feed": "TA-125449",
+"fn": "남한산성도립공원 [유네스코 세계유산]"
+},
+"PL-268": {
+"lat": 37.82087,
+"lng": 127.52092,
+"by": "addr",
+"feed": "TA-762653",
+"fn": "자라섬캠핑장"
+},
+"PL-269": {
+"lat": 37.55112,
+"lng": 127.56884,
+"by": "name",
+"feed": "TA-125485",
+"fn": "용문산"
+},
+"PL-274": {
+"lat": 37.38029,
+"lng": 127.00293,
+"by": "name",
+"feed": "TA-126705",
+"fn": "백운호수"
+},
+"PL-279": {
+"lat": 37.19251,
+"lng": 126.64612,
+"by": "addr",
+"feed": "TA-654645",
+"fn": "안산 어촌민속박물관"
+},
+"PL-280": {
+"lat": 37.1208,
+"lng": 126.685,
+"by": "addr",
+"feed": "TA-1932009",
+"fn": "궁평리 해수욕장"
+},
+"PL-282": {
+"lat": 37.56138,
+"lng": 127.20547,
+"by": "addr",
+"feed": "TA-282240",
+"fn": "미사경정공원"
+},
+"PL-285": {
+"lat": 37.89204,
+"lng": 126.74479,
+"by": "addr",
+"feed": "TA-2583625",
+"fn": "평화누리 캠핑장"
+},
+"PL-286": {
+"lat": 38.00887,
+"lng": 127.05886,
+"by": "addr",
+"feed": "TA-125520",
+"fn": "한탄강 관광지"
+},
+"PL-288": {
+"lat": 37.45762,
+"lng": 126.74926,
+"by": "addr",
+"feed": "TA-128027",
+"fn": "인천대공원"
+},
+"PL-289": {
+"lat": 37.45762,
+"lng": 126.74926,
+"by": "addr",
+"feed": "TA-128027",
+"fn": "인천대공원"
+},
+"PL-293": {
+"lat": 37.57309,
+"lng": 126.64811,
+"by": "addr",
+"feed": "TA-1325945",
+"fn": "수도권매립지 드림파크 야생화단지"
+},
+"PL-294": {
+"lat": 37.4833,
+"lng": 126.56816,
+"by": "addr",
+"feed": "TA-2993378",
+"fn": "씨사이드파크"
+},
+"PL-295": {
+"lat": 37.47575,
+"lng": 126.60415,
+"by": "name",
+"feed": "TA-879086",
+"fn": "월미공원"
+},
+"PL-299": {
+"lat": 37.59324,
+"lng": 126.45705,
+"by": "name",
+"feed": "TA-127291",
+"fn": "강화 동막해변"
+},
+"PL-377": {
+"lat": 37.58581,
+"lng": 126.81832,
+"by": "name",
+"feed": "TA-809490",
+"fn": "강서습지생태공원"
+},
+"PL-383": {
+"lat": 37.73281,
+"lng": 126.94925,
+"by": "addr",
+"feed": "TA-2790984",
+"fn": "장흥조각공원(양주시립장욱진미술관)"
+},
+"PL-393": {
+"lat": 37.27464,
+"lng": 126.98267,
+"by": "name",
+"feed": "TA-2944481",
+"fn": "국립농업박물관"
+},
+"PL-394": {
+"lat": 37.56957,
+"lng": 126.96662,
+"by": "name",
+"feed": "TA-3038260",
+"fn": "국립기상박물관"
+},
+"PL-404": {
+"lat": 37.4971,
+"lng": 127.484,
+"by": "name",
+"feed": "TA-1926610",
+"fn": "양평군립미술관"
+},
+"PL-441": {
+"lat": 37.28271,
+"lng": 127.01583,
+"by": "name",
+"feed": "TA-2033483",
+"fn": "수원시립미술관"
+},
+"PL-462": {
+"lat": 37.27976,
+"lng": 127.42449,
+"by": "name",
+"feed": "TA-129762",
+"fn": "이천시립월전미술관"
+},
+"PL-481": {
+"lat": 37.73115,
+"lng": 126.94933,
+"by": "name",
+"feed": "TA-3395136",
+"fn": "양주시립민복진미술관"
+},
+"PL-482": {
+"lat": 37.63013,
+"lng": 126.92928,
+"by": "name",
+"feed": "TA-130416",
+"fn": "사비나미술관"
+},
+"PL-490": {
+"lat": 37.26653,
+"lng": 126.98117,
+"by": "addr",
+"feed": "TA-2747132",
+"fn": "경기상상캠퍼스"
+},
+"PL-502": {
+"lat": 37.75083,
+"lng": 126.48542,
+"by": "addr",
+"feed": "TA-127184",
+"fn": "고려궁지"
+},
+"PL-503": {
+"lat": 37.62445,
+"lng": 127.09309,
+"by": "addr",
+"feed": "TA-2774274",
+"fn": "노원 불빛정원"
+},
+"L100-013": {
+"lat": 37.55112,
+"lng": 127.56884,
+"by": "addr",
+"feed": "TA-125485",
+"fn": "용문산"
+},
+"L100-014": {
+"lat": 37.82417,
+"lng": 127.51267,
+"by": "name",
+"feed": "TA-2772315",
+"fn": "음악역 1939"
+},
+"L100-015": {
+"lat": 37.7086,
+"lng": 126.68722,
+"by": "addr",
+"feed": "TA-2609320",
+"fn": "지혜의 숲"
+},
+"L100-036": {
+"lat": 37.58051,
+"lng": 127.00237,
+"by": "name",
+"feed": "TA-126534",
+"fn": "대학로"
+},
+"L100-038": {
+"lat": 37.5679,
+"lng": 126.9696,
+"by": "name",
+"feed": "TA-2778454",
+"fn": "정동길"
+}
+};
+ function apply(){var n=0;try{(W.SPOTS||[]).forEach(function(p){var c=p&&C[p.id];if(c&&(p.lat==null||p.lng==null)){p.lat=c.lat;p.lng=c.lng;p.coordSrc='한국관광공사 TourAPI';n++;}});}catch(e){}return n;}
+ apply();W.addEventListener('load',function(){setTimeout(function(){if(apply()&&typeof W.render==='function'){try{W.render();}catch(e){}}},200);});
+ W.guriCoords={apply:apply,count:Object.keys(C).length};
 })();
 </script>
 <!-- GUNGRI_R17_STAGE7_EXAMPLES -->
