@@ -3204,7 +3204,7 @@ function cHome(){
   '<div style="height:12px"></div>'+
   '<button class="btn btn-g w100" data-cattend="'+today.id+'">출석 확인하러 가기</button></div>':'')+
  (un?'<div class="warn" style="margin-top:0"><b>답을 기다리는 글이 '+un+'건 있습니다.</b> 대화 탭에서 확인해 주세요.</div>':'')+
- '<div class="sec-h serif">운영 히스토리 · 내가 등록한 강의/모임</div><div class="sm mute" style="margin:-4px 0 10px">예전에 운영한 활동은 내용을 불러와 날짜와 장소만 바꿔 다시 등록할 수 있습니다.</div>'+h+
+ '<div class="sec-h serif">운영 히스토리 · 내가 등록한 활동</div><div class="sm mute" style="margin:-4px 0 10px">예전에 운영한 활동은 내용을 불러와 날짜와 장소만 바꿔 다시 등록할 수 있습니다.</div>'+h+
  '<button class="btn btn-g w100" data-cv="cnew">＋ 유료 모임·강좌 만들기</button>'+
  '<div class="sec-h serif" style="margin-top:20px">이번 달 정산</div>'+
  '<div class="card"><div class="row"><span style="flex:1">지급 대기 '+st.filter(function(s){return s.st==="지급대기";}).length+'건</span>'+
@@ -3354,7 +3354,7 @@ function cSchedule(){
  '<button class="btn btn-d w100" data-act="mcancel">활동 취소하기</button>'+
  '<div id="sc_err"></div></div></div><div class="pad"></div>';}
 /* ===== 캡틴 모임 등록 ===== */
-var CNEWCAT="NORMAL",EDITID=null,CSTEP=1,CAP_SUBMIT_NOTICE=null;
+var CNEWCAT="EDU",EDITID=null,CSTEP=1,CAP_SUBMIT_NOTICE=null;
 function feeBoxes(cls,sel){
  return FEEITEMS.map(function(f){
   var on=sel&&sel.indexOf(f)>=0;
@@ -3436,11 +3436,13 @@ function cNew(){
  var d=EDITID?find(MEET,EDITID):null;
  if(d)CNEWCAT=d.cat;
  var tabs="";
- [["NORMAL","나가요"],["REGULAR","움직여요"],["EDU","배워요"],["SOCIAL","만나요"],["VOL","나눠요"]].forEach(function(x){
+ var _ct=[["EDU","배워요 · 수강료"],["VOL","나눠요 · 무료"]];
+ if(!_ct.some(function(x){return x[0]===CNEWCAT;})){var _nm={NORMAL:"나가요",REGULAR:"움직여요",SOCIAL:"만나요"}[CNEWCAT];if(_nm)_ct.unshift([CNEWCAT,_nm]);}
+ _ct.forEach(function(x){
   tabs+='<button class="btn btn-s '+(CNEWCAT===x[0]?'':'btn-o')+'" data-cc="'+x[0]+'" style="flex:1"'+(d?' disabled':'')+'>'+x[1]+'</button>';});
  var stepName=["","무엇을","언제 어디서","비용과 안내"][CSTEP];
  return '<div class="top"><div class="inner"><button class="back" data-cv="chome">← 캡틴 홈</button>'+
- '<div class="hello serif" style="font-size:20px">'+(d?"모임 수정":(CNEWCAT==="EDU"?"새 유료 강좌 등록":"새 유료 모임 등록"))+'</div>'+
+ '<div class="hello serif" style="font-size:20px">'+(d?"모임 수정":(CNEWCAT==="EDU"?"새 강좌 등록 (수강료)":CNEWCAT==="VOL"?"새 나눔 등록 (무료)":"새 모임 등록"))+'</div>'+
  '<div class="sub">'+CSTEP+' / 3 · '+stepName+'</div>'+
  '<div style="height:5px;background:rgba(255,255,255,.2);border-radius:99px;margin-top:10px">'+
  '<div style="width:'+(CSTEP*33)+'%;height:100%;background:var(--gold);border-radius:99px"></div></div>'+
@@ -6812,7 +6814,7 @@ function do275(action,type,id){
  }
  if(action==='make'){
    if(isCap()){
-     CDRAFT={};CDRAFT.k_title=title+' 같이 해요';CDRAFT.k_place=venue;CDRAFT.k_date=date;CDRAFT.k_time='10:00';CDRAFT.k_seats='6';CDRAFT.k_lv='1';CDRAFT.k_axes='';CNEWCAT='NORMAL';CSTEP=1;EDITID=null;CV='cnew';render();return;
+     CDRAFT={};CDRAFT.k_title=title+' 같이 해요';CDRAFT.k_place=venue;CDRAFT.k_date=date;CDRAFT.k_time='10:00';CDRAFT.k_seats='6';CDRAFT.k_lv='1';CDRAFT.k_axes='';CNEWCAT='EDU';CSTEP=1;EDITID=null;CV='cnew';render();return;
    }
    QUICKNEW={title:title+' 같이 가요',place:venue,date:date,time:'10:00',seats:4,body:'이 활동을 같이 해보고 싶습니다.',from:'quick'};UV='quicknew';render();return;
  }
@@ -10207,20 +10209,20 @@ body.gate-dev .acct{position:sticky!important;top:0!important;z-index:13900!impo
    (m.status==="REJECT"?'<div class="warn" style="margin:9px 0 0"><b>반려 사유</b><br>'+m.rejMemo+'</div><div class="row" style="margin-top:9px"><button class="btn btn-o btn-s" data-fix="'+m.id+'">수정하기</button><button class="btn btn-s" data-refix="'+m.id+'">재검수 요청</button></div>':'')+
    '<div class="row" style="margin-top:9px"><button class="btn btn-o btn-s" style="flex:1" data-cmanage="'+m.id+'">활동 운영 보기</button><button class="btn btn-s" style="flex:1" data-reregister="'+m.id+'">이 활동 다시 열기</button></div></div>';
   });
-  if(!h)h='<div class="sm mute">아직 등록하신 모임이 없습니다.</div>';
+  if(!h)h='<div class="sm mute">아직 등록하신 활동이 없습니다. 위의 <b>＋ 새 활동 등록</b>으로 시작해 보세요.</div>';
   var rs=roomsOf(me().n),un=0;rs.forEach(function(r){un+=unread(r);});
   var st=SETTLE.filter(function(s){return s.cap===me().n;}),sum=0;st.forEach(function(s){if(s.st==="지급대기")sum+=s.pay;});
   var today=mine.filter(function(m){return isOpenMeet(m)&&todayMeet(m);})[0];
   var nextMine=mine.filter(function(m){return isOpenMeet(m)&&futureMeet(m);}).sort(function(a,b){var da=meetDateTime(a),db=meetDateTime(b);return (da?da.getTime():9e15)-(db?db.getTime():9e15);})[0];
   var focus=today||nextMine;
   return '<div class="top"><div class="inner"><div class="brand">C A P T A I N</div><div class="hello serif">'+me().n+' 캡틴</div><div class="sub">'+(me().hl||'')+'</div></div></div><div class="sec">'+
-   '<button class="btn btn-g w100 gr-newprog" data-cv="cnew" data-gr-newprog="1" style="min-height:58px;font-size:18.5px;margin-bottom:12px">＋ 새 프로그램 개설</button>'+
+   '<button class="btn btn-g w100 gr-newprog" data-cv="cnew" data-gr-newprog="1" style="min-height:58px;font-size:18.5px;margin-bottom:12px">＋ 새 활동 등록</button>'+
    (CAP_SUBMIT_NOTICE?'<div class="info" style="margin-top:0;border:2px solid var(--gold)"><b>✓ 등록 완료 · 검수 요청을 보냈습니다.</b><br><span style="display:block;margin-top:6px">'+CAP_SUBMIT_NOTICE.title+'</span><span class="sm mute">현재 상태: 검수 대기 · 관리자 확인 후 회원 화면에 공개됩니다.</span></div>':'')+
    (focus?'<div class="card" style="background:var(--navy);border-color:var(--gold);color:#fff"><div class="code">'+(today?'오늘 하실 일':'다음 활동')+'</div><div class="serif" style="font-size:20px;font-weight:700;margin:6px 0 8px">'+focus.title+'</div><div style="font-size:17px">📅 '+(focus.date?fdateRange(focus):focus.days)+' '+ftime(focus.time)+'</div><div style="font-size:17px;margin-top:3px">📍 '+focus.place+'</div><div style="font-size:17px;margin-top:3px">👥 신청 '+focus.book.length+'명</div><div style="height:12px"></div>'+
     (today?'<button class="btn btn-g w100" data-cattend="'+focus.id+'">'+(counts(focus).left?'오늘 출석 확인 시작':'출석 확인 완료 · 활동 마감 보기')+'</button>':'<button class="btn btn-g w100" data-cmanage="'+focus.id+'">활동 운영 미리 보기</button>')+'</div>':'')+
    (un?'<div class="warn" style="margin-top:0"><b>답을 기다리는 글이 '+un+'건 있습니다.</b> 대화 탭에서 확인해 주세요.</div>':'')+
-   '<div class="sec-h serif">운영 히스토리 · 내가 등록한 강의/모임</div><div class="sm mute" style="margin:-4px 0 10px">예전에 운영한 활동은 내용을 불러와 날짜와 장소만 바꿔 다시 등록할 수 있습니다.</div>'+h+
-   '<button class="btn btn-g w100" data-cv="cnew">새 모임 등록하기</button><div class="sec-h serif" style="margin-top:20px">이번 달 정산</div><div class="card"><div class="row"><span style="flex:1">지급 대기 '+st.filter(function(s){return s.st==="지급대기";}).length+'건</span><b>'+won(sum)+'</b></div><div class="row" style="margin-top:6px"><span style="flex:1">수수료 <b style="color:var(--ok)">0%</b> (6개월 파격 할인)</span><span>0원</span></div><div class="sm mute" style="margin-top:8px">모임 종료 후 3영업일 이내 입금</div><div style="height:10px"></div><button class="btn btn-o w100" data-cv="csettle">정산 내역 자세히</button></div>'+
+   '<div class="sec-h serif">운영 히스토리 · 내가 등록한 활동</div><div class="sm mute" style="margin:-4px 0 10px">예전에 운영한 활동은 내용을 불러와 날짜와 장소만 바꿔 다시 등록할 수 있습니다.</div>'+h+
+   '<div class="sec-h serif" style="margin-top:20px">이번 달 정산</div><div class="card"><div class="row"><span style="flex:1">지급 대기 '+st.filter(function(s){return s.st==="지급대기";}).length+'건</span><b>'+won(sum)+'</b></div><div class="row" style="margin-top:6px"><span style="flex:1">수수료 <b style="color:var(--ok)">0%</b> (6개월 파격 할인)</span><span>0원</span></div><div class="sm mute" style="margin-top:8px">모임 종료 후 3영업일 이내 입금</div><div style="height:10px"></div><button class="btn btn-o w100" data-cv="csettle">정산 내역 자세히</button></div>'+
    '<div class="sec-h serif" style="margin-top:20px">활동 운영</div><div class="cards" style="grid-template-columns:1fr 1fr;gap:9px;display:grid"><button class="btn btn-o" style="min-height:64px;flex-direction:column;font-size:16px" data-cv="cincident">⚠<br>사고 보고</button><button class="btn btn-o" style="min-height:64px;flex-direction:column;font-size:16px" data-cv="cclose">✓<br>활동 마감</button><button class="btn btn-o" style="min-height:64px;flex-direction:column;font-size:16px" data-cv="cschedule">📅<br>일정 변경</button><button class="btn btn-o" style="min-height:64px;flex-direction:column;font-size:16px" data-act="trust">🛡<br>안심 원칙</button></div>'+
    '<div class="sec-h serif" style="margin-top:20px">운영진에게 문의</div><div class="card"><div class="sm mute" style="margin-bottom:9px">궁금하시거나 불편하신 점을 적어 주세요. <b>운영진만 봅니다.</b> 다른 캡틴에게는 보이지 않습니다.</div><textarea id="ask_t" placeholder="체육관 대관료를 참가비에 넣어도 될까요?"></textarea><div style="height:9px"></div><button class="btn btn-o w100" data-act="asksend">문의 보내기</button>'+
    (ASKS.filter(function(k){return k.by===me().n&&k.a;}).length?'<div class="info" style="margin-top:11px"><b>답변이 왔습니다</b><br>'+ASKS.filter(function(k){return k.by===me().n&&k.a;})[0].a+'</div>':'')+'</div></div><div class="pad"></div>';
@@ -19972,7 +19974,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  /* one owner of the top-bar title (legacy title writers delegate here) */
  var TITLES={h:'궁리',first:'궁리',today:'오늘 궁리',week:'이번 주',mine:'나의 궁리',passport:'궁리여권',what:'뭐할까?',who:'함께할까?',t:'나가요',m:'움직여요',e:'배워요',c:'만나요',v:'나눠요',tdfeed:'오늘도 난',tdnew:'오늘도 난 쓰기',talk:'만나요',tk:'신청·결제 내역',my:'내 정보',prof:'내 정보',signup:'새로 가입',
   detail:'활동 상세',room:'대화방',spot:'가볼 곳',eventspot:'행사',quicknew:'모임 만들기',compnew:'동행 만들기',phnew:'사진 올리기',capapply:'캡틴 신청',spotreq:'가볼 곳 알려주기',onb:'추천 조건',invset:'초대 설정',blocked:'차단 관리',history:'지난 활동',noti:'알림',why:'추천 이유',trust:'안심 원칙',exc:'결제·환불',excd:'결제·환불',friendinvite:'친구 초대',invite:'초대장',done:'완료',
-  chome:'캡틴 홈',cops:'운영',cmore:'더보기',cnew:'새 프로그램',cmanage:'활동 운영',croster:'출석',ctalk:'대화',csettle:'정산',cclose:'활동 마감',cincident:'사고 보고',cschedule:'일정',cmember:'회원 화면'};
+  chome:'캡틴 홈',cops:'운영',cmore:'더보기',cnew:'새 활동 등록',cmanage:'활동 운영',croster:'출석',ctalk:'대화',csettle:'정산',cclose:'활동 마감',cincident:'사고 보고',cschedule:'일정',cmember:'회원 화면'};
  W.guriIsFront=function(){try{if(role()!=='USER')return false;var sh=document.getElementById('visualShell'),app=document.getElementById('app');var sv=!!sh&&getComputedStyle(sh).display!=='none'&&sh.getClientRects().length>0;var av=!!app&&getComputedStyle(app).display!=='none'&&app.getClientRects().length>0;return sv&&!av;}catch(e){return false;}};
  var OWN_TITLE={h:1,today:1,week:1,mine:1,passport:1,cops:1,cmore:1,csettle:1};
  var HEADING_FIRST={detail:1,spot:1,eventspot:1,quicknew:1,compnew:1,chome:1,cnew:1,cmanage:1,croster:1,cclose:1,cschedule:1,cincident:1,phnew:1,capapply:1,spotreq:1};
@@ -20120,11 +20122,11 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   var upcoming=sess.filter(function(x){return !x.s.completed&&!x.s.cancelled;}).sort(function(a,b){return String(a.s.date).localeCompare(String(b.s.date));});
   var attend=upcoming.filter(function(x){return x.s.status==='ACTIVE'||x.s.status==='READY'||(x.s.date&&x.s.date<=addDays(t,1));});
   var done=ps.filter(function(m){return GR.lifecycle(m.id)==='COMPLETED';}),doneS=sess.filter(function(x){return x.s.completed;});
-  var tiles=[['1','내 프로그램',progs.length],['2','새 프로그램 개설','＋'],['3','예정 SESSION',upcoming.length],['4','참가자 관리',ps.filter(function(m){return live(m);}).length],['5','출석관리',attend.length],['6','완료 활동',done.length+doneS.length]];
+  var tiles=[['1','내 프로그램',progs.length],['2','새 활동 등록','＋'],['3','예정 SESSION',upcoming.length],['4','참가자 관리',ps.filter(function(m){return live(m);}).length],['5','출석관리',attend.length],['6','완료 활동',done.length+doneS.length]];
   var h='<div class="gr3-tiles">'+tiles.map(function(x){return '<button class="gr3-tile" data-gr-opsjump="'+x[0]+'"><b>'+x[2]+'</b><span>'+x[1]+'</span></button>';}).join('')+'</div>';
   function sessRow(x,btn){return '<div class="card gr3-row"><div class="row">'+pill(x.s.no+'회차','p')+pill(SSL[x.s.status])+'</div><div class="tt">'+esc(x.m.title)+'</div><div class="sm mute">'+esc((x.s.date?fd(x.s.date):'날짜 확인 중')+' '+ft(x.s.time))+' · 👥 '+x.s.participantIds.length+(x.s.capacity?'/'+x.s.capacity:'')+'명'+(x.s.completed||x.s.active?' · 출석 '+x.s.participantIds.filter(function(u){return x.s.attendance[u];}).length+'명':'')+'</div><button class="btn btn-o btn-s" data-cmanage="'+esc(x.m.id)+'">'+btn+'</button></div>';}
   h+='<div class="gr3-ops" id="gr3-ops-1"><h3>1. 내 프로그램</h3>'+(progs.map(function(m){var r=GR.rec(m.id);return '<div class="card gr3-row"><div class="row">'+pill(PSL[r.programState]||r.programState||'','p')+pill(LSL[GR.lifecycle(m.id)]||'')+'</div><div class="tt">'+esc(m.title)+'</div><div class="sm mute">회차 '+GR.sessionsOf(m.id).length+'개 · '+esc(m.place||'')+'</div><div class="row" style="gap:6px;margin-top:6px"><button class="btn btn-o btn-s" data-cm="'+esc(m.id)+'">상세</button><button class="btn btn-o btn-s" data-cmanage="'+esc(m.id)+'">활동 운영</button></div></div>';}).join('')||empty('아직 개설한 프로그램이 없습니다.'))+'</div>';
-  h+='<div class="gr3-ops" id="gr3-ops-2"><h3>2. 새 프로그램 개설</h3><button class="btn btn-g w100" data-cv="cnew" data-gr-newprog="1">＋ 새 프로그램 개설 (1/3 무엇을 → 2/3 언제·어디서 → 3/3 비용·안내)</button></div>';
+  h+='<div class="gr3-ops" id="gr3-ops-2"><h3>2. 새 활동 등록</h3><button class="btn btn-g w100" data-cv="cnew" data-gr-newprog="1">＋ 새 활동 등록 (1/3 무엇을 → 2/3 언제·어디서 → 3/3 비용·안내)</button></div>';
   h+='<div class="gr3-ops" id="gr3-ops-3"><h3>3. 예정 SESSION</h3>'+(upcoming.map(function(x){return sessRow(x,'회차 운영');}).join('')||empty('예정된 회차가 없습니다.'))+'</div>';
   h+='<div class="gr3-ops" id="gr3-ops-4"><h3>4. 참가자 관리</h3>'+(ps.filter(function(m){return live(m);}).map(function(m){var ids=GR.rec(m.id).kind==='PROGRAM'?[].concat.apply([],GR.sessionsOf(m.id).map(function(s){return s.participantIds;})):GR.participants(m.id);var u={};ids.forEach(function(i){u[i]=1;});var k=Object.keys(u);
     return '<div class="card gr3-row"><div class="tt">'+esc(m.title)+'</div><div class="sm">'+(k.length?k.map(nick).map(esc).join(', '):'신청자 없음')+'</div><button class="btn btn-o btn-s" data-cmanage="'+esc(m.id)+'">참가자 보기</button></div>';}).join('')||empty('운영 중인 활동이 없습니다.'))+'</div>';
@@ -23519,7 +23521,7 @@ body.gr-reg-open{overflow:hidden}
  }
  function injectTab(html,tab){
   var a=actOfTab(tab);if(!a||typeof html!=='string')return html;
-  var block='<div class="gr7-tabhead">'+introHtml(a)+(role()==='ADMIN'?'':regBtn(a))+'</div>';
+  var block='<div class="gr7-tabhead">'+introHtml(a)+(role()==='ADMIN'?'':(role()==='CAPTAIN'&&a.cat!=='EDU'&&a.cat!=='VOL')?'':regBtn(a))+'</div>';
   var i=html.indexOf('<div class="sec">');
   if(i<0)return html;
   return html.slice(0,i+17)+block+html.slice(i+17);
