@@ -3466,21 +3466,20 @@ function formStep(pre,cat,d,step){
  var bad=d.rejMemo||"";
  var warnBox=bad?'<div class="warn" style="margin-top:0"><b>고쳐야 할 점</b><br>'+bad+'</div>':'';
  if(step===1){
-  var body='<label class="req">제목</label><input id="'+pre+'title" placeholder="구리한강공원 코스모스 산책" value="'+(d.title||"")+'">'+
+  var body='<label class="req">제목</label><input id="'+pre+'title" placeholder="예: '+({EDU:"스마트폰 사진 차근차근 배워요",VOL:"어르신 스마트폰 도우미 봉사"}[cat]||"구리한강공원 코스모스 산책")+'" value="'+(d.title||"")+'">'+
    '<label>대표사진 <span class="sm mute">(선택)</span></label><input type="file" accept="image/*" id="'+pre+'photo">'+
    '<div class="sm mute" style="margin-top:4px">사진이 없으면 승인된 장소 사진 또는 활동유형 기본 이미지를 사용합니다.</div>'+
    ((d.photoData||CDRAFT.photoData)?'<img src="'+(d.photoData||CDRAFT.photoData)+'" style="width:100%;max-height:180px;object-fit:cover;border-radius:14px;margin-top:8px">':'');
-  if(cat==="EDU")body+='<label class="req">강의 성격</label><select id="'+pre+'type">'+
-   ["같이 하기","듣기","경험 나눔"].map(function(x){return '<option'+(d.type===x?' selected':'')+'>'+x+'</option>';}).join('')+'</select>'+
-   '<div class="sm mute" style="margin-top:4px">"○○자격증 취득반"은 등록할 수 없습니다.</div>'+
-   '<label class="req">어떤 시간인가요</label><textarea id="'+pre+'desc" placeholder="어렵게 설명하지 않습니다">'+(d.desc||"")+'</textarea>';
-  if(cat==="VOL")body+='<label class="req">어떤 나눔인가요</label><textarea id="'+pre+'desc" placeholder="옆에서 도와드리는 자리입니다">'+(d.desc||"")+'</textarea>';
+  if(cat==="EDU")body+='<input type="hidden" id="'+pre+'type" value="'+(d.type||"같이 하기")+'">'+
+   '<label class="req">어떤 강좌인가요</label><textarea id="'+pre+'desc" placeholder="무엇을, 몇 회에 걸쳐, 어떻게 가르치는지 편하게 적어 주세요">'+(d.desc||"")+'</textarea>'+
+   '<div class="sm mute" style="margin-top:4px">"○○자격증 취득반"은 등록할 수 없습니다.</div>';
+  if(cat==="VOL")body+='<label class="req">어떤 나눔인가요</label><textarea id="'+pre+'desc" placeholder="어떤 경험·재능을 누구에게 나누는지 적어 주세요">'+(d.desc||"")+'</textarea>';
   if(cat==="NORMAL"||cat==="EDU"){
    var ax=(Array.isArray(d.axes)?d.axes.map(cleanAxis):[]);
    if(!ax.length&&d.kind2&&AXIS_KEYS.indexOf(cleanAxis(d.kind2))>=0)ax=[cleanAxis(d.kind2)];
-   body+='<label class="req">무엇인가요</label>'+axisButtonsHtml(ax,'data-regaxis',pre)+axisHintsHtml(ax,true)+
+   body+='<!--AX1--><label class="req">무엇인가요</label>'+axisButtonsHtml(ax,'data-regaxis',pre)+axisHintsHtml(ax,true)+
     '<input type="hidden" id="'+pre+'axes" value="'+ax.join(",")+'">'+
-    '<input type="hidden" id="'+pre+'kind2" value="'+(ax.length?axisLegacy(ax[0]):"")+'">';
+    '<input type="hidden" id="'+pre+'kind2" value="'+(ax.length?axisLegacy(ax[0]):"")+'"><!--AX2-->';
   }else{
    var kk=KINDS[{REGULAR:"m",SOCIAL:"c",VOL:"v"}[cat]]||[];
    body+='<label class="req">무엇인가요</label><div class="cbs">'+
@@ -3488,7 +3487,8 @@ function formStep(pre,cat,d,step){
      (KINDHINT[k]?'<span class="sm mute" style="display:block;font-weight:400">'+KINDHINT[k]+'</span>':'')+'</button>';}).join('')+'</div>'+
     '<input type="hidden" id="'+pre+'kind2" value="'+(d.kind2||"")+'">';
   }
-  body+='<label>프로그램 성격</label><select id="'+pre+'nature">'+['체험','강좌','함께 걷기·나들이','취미 모임','봉사·나눔'].map(function(x){return '<option'+(d.nature===x?' selected':'')+'>'+x+'</option>';}).join('')+'</select>';
+  body+='<input type="hidden" id="'+pre+'nature" value="'+(d.nature||({EDU:"강좌",VOL:"봉사·나눔"}[cat]||"체험"))+'">';
+  if(cat==="EDU"){var _m=body.match(/<!--AX1-->[\s\S]*?<!--AX2-->/);if(_m)body=_m[0]+body.replace(_m[0],'');}
   body+='<label class="req">모임 난이도</label><select id="'+pre+'lv">'+lvOpts(d.lv)+'</select>'+
    '<div class="sm mute" style="margin-top:4px">걷기만이 아니라 자전거·낚시·탁구 등 모든 모임에 쓰는 공통 기준입니다.</div>';
   return warnBox+body;}
@@ -23651,8 +23651,9 @@ body.gr-reg-open{overflow:hidden}
     '<div class="gr7-h">캡틴을 고르면 그 캡틴이 진행하는 모임으로 등록되고, <b>“등록자: '+esc(me().n)+' (대신 등록)”</b>이 기록에 남습니다. 캡틴에게는 알림이 갑니다.</div></div>';
   }
   if(a.cat==='NORMAL'&&RG.src)h+=srcBlock();
-  h+=fi('title','제목','text',{req:1,ph:'구리한강공원 코스모스 산책'});
-  h+=ta('desc','어떤 모임인가요','어떤 분들과 어떻게 보내는지 편하게 적어 주세요',1);
+  var PH={NORMAL:['구리한강공원 코스모스 산책','어디를 가고 무엇을 보고 오는지 편하게 적어 주세요'],REGULAR:['아침 공원 걷기 함께해요','어떤 운동을 어느 정도 힘들기로 하는지 적어 주세요'],EDU:['스마트폰 사진 서로 배워요','무엇을 누구와 서로 배우는지 적어 주세요'],SOCIAL:['책 한 권 함께 읽는 모임','어떤 관심사로 만나 무엇을 하는지 적어 주세요'],VOL:['우리 동네 산책로 줍깅','어떤 나눔이고 봉사시간은 어떻게 기록하는지 적어 주세요']}[a.cat]||['',''];
+  h+=fi('title','제목','text',{req:1,ph:'예: '+PH[0]});
+  h+=ta('desc','어떤 모임인가요',PH[1],1);
   h+='<label class="gr7-l">대표사진 <span class="gr7-opt">(선택)</span></label><input type="file" accept="image/*" data-f="photo">'+
    (d.photoData?'<img class="gr7-ph" src="'+esc(d.photoData)+'" alt="대표사진"><button class="btn btn-o btn-s" data-grr="photoclear" style="margin-top:6px">사진 지우기</button>':'<div class="gr7-h">없으면 승인된 장소 사진이나 기본 이미지를 씁니다.</div>');
   if(a.cat==='EDU'){h+=eduBlock();}
