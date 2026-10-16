@@ -1,25 +1,25 @@
 {
  "schema": "GUNGRI_FEED_V1",
- "generatedAt": "2026-10-16T05:44:27+09:00",
+ "generatedAt": "2026-10-17T05:43:10+09:00",
  "source": {
   "name": "한국관광공사 TourAPI 4.0 (KorService2)",
   "page": "https://www.data.go.kr/data/15101578/openapi.do",
   "notice": "사진은 공공누리 유형(Type1·Type3)이 표시된 것만 사용 가능으로 표시합니다. 공개는 궁리 스텝 검수·대표 승인 후에만 합니다."
  },
  "stats": {
-  "places": 2418,
-  "events": 100,
-  "newPlaces": 73,
-  "newEvents": 7,
-  "apiCalls": 266,
+  "places": 2479,
+  "events": 104,
+  "newPlaces": 76,
+  "newEvents": 6,
+  "apiCalls": 271,
   "mock": false
  },
  "options": {
   "showExamples": true
  },
  "log": [
-  "목록 확인: 새로 받을 항목 80건(행사 7) · 이번 실행 상한 200건",
-  "상세 수집 80건 · API 호출 266건",
+  "목록 확인: 새로 받을 항목 82건(행사 6) · 이번 실행 상한 200건",
+  "상세 수집 82건 · API 호출 271건",
   "큐레이션 표시(로컬100 등) 0건"
  ],
  "places": [
@@ -5437,9 +5437,9 @@
    "feedId": "TA-125577",
    "contentId": "125577",
    "contentTypeId": "12",
-   "modifiedtime": "20260921160058",
+   "modifiedtime": "20261016115025",
    "n": "노송지대",
-   "a": "경기도 수원시 장안구 파장동",
+   "a": "경기도 수원시 장안구 장안로346번길 70",
    "ar": "경기",
    "r": "수원시",
    "k": [
@@ -5458,11 +5458,11 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://jangan.suwon.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-02",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/43/3547143_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/43/3547143_image3_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/79/4120079_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/79/4120079_image3_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -5479,8 +5479,8 @@
      "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/44/3547144_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/44/3547144_image2_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/43/3547143_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/43/3547143_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -9599,6 +9599,63 @@
    ]
   },
   {
+   "feedId": "TA-128156",
+   "contentId": "128156",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016155509",
+   "n": "태산패밀리파크",
+   "a": "경기도 김포시 하성면 하성로 585",
+   "ar": "경기",
+   "r": "김포시",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "태산패밀리파크는 2002년 개장한 대규모 복합문화공간이다.",
+   "summary": "태산패밀리파크는 2002년 개장한 대규모 복합문화공간이다. 2020년 7월 대규모 리모델링 사업을 통해 부지를 추가로 확충하고 시설을 새롭게 정비하면서 김포 북부권의 대표 가족공원으로 자리매김하였다. 공원 내 시설마다 운영 기간 및 시간, 휴장일, 이용료가 다르기 때문에 홈페이지를 통해 확인해야 한다. 태산패밀리파크는 공예체험장(도자기, 목공예), 물놀이장, 바닥분수대, 연못, 야생초화원, 반려견 놀이터, 느티나무 잔디밭, 어린이 놀이터, 도서관 등의 시설이 있다. 이곳의 대표적인 시설 중의 하나인 공예체험장에서는 전문가의 지도 아래 이루어지는 핸드페인팅과 물레 성형까지 체험 가능한 도자기 체험장과 연필꽂이나 액자 등을 만들 수 있는 목공예 체험이 이루어진다. 여름철 한시적으로 개방하는 물놀이장은 슬라이드와…",
+   "hours": "[공원]- 00:00~24:00[반려견 놀이터] - 09:00~18:00[공예체험장] - 09:00~18:00[물놀이장 / 바닥분수] - 11:00~16:40※ 물놀이장 및 바닥분수는 매년 운영일정 변경될 수 있음※ 공예체험 홈페이지 및 유선문의",
+   "closed": "[공원] 연중무휴[반려견 놀이터] 매주 월요일[공예체험장] 1월 1일 / 설·추석 연휴[물놀이장 / 바닥분수] 매주 월요일~화요일 / 우천 시",
+   "parking": "가능 (버스 6대 / 승용차 207대 / 장애인 7대)",
+   "phone": "- 031-997-6868 - 공예체험문의 031-997-5164",
+   "homepage": "https://www.guc.or.kr",
+   "lat": 37.7252262677,
+   "lng": 126.6298128376,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.guc.or.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/12/3547112_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/12/3547112_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/13/3547113_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/13/3547113_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/14/3547114_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/14/3547114_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-1284966",
    "contentId": "1284966",
    "contentTypeId": "14",
@@ -11976,6 +12033,63 @@
    ]
   },
   {
+   "feedId": "TA-129799",
+   "contentId": "129799",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016144903",
+   "n": "호림박물관 신림본관",
+   "a": "서울특별시 관악구 남부순환로152길 53 (신림동)",
+   "ar": "서울",
+   "r": "관악구",
+   "k": [
+    "문화시설",
+    "박물관"
+   ],
+   "sub": "박물관",
+   "why": "호림박물관은 호림 윤장섭((湖林 尹章燮, 1922~2016) 선생이 출연한 문화유산과 기금을 기반으로 민족문화의 계승과 발전을 위하여 설립되었다.",
+   "summary": "호림박물관은 호림 윤장섭((湖林 尹章燮, 1922~2016) 선생이 출연한 문화유산과 기금을 기반으로 민족문화의 계승과 발전을 위하여 설립되었다. 윤장섭 선생은 1981년 7월 재단법인 성보문화재단을 설립하고, 이어서 1982년 10월 서울시 강남구 대치동에 호림박물관을 개관하였다. 그 후 서울시 관악구 신림동에 박물관을 확장·신축하여 1999년 5월에 재개관하였다. 2009년 6월에는 문화 예술을 사랑하는 시민들에게 더 가까이 다가가고자 문화의 중심지로 떠오르고 있는 강남구 신사동 호림아트센터 내에 신사분관을 개관하였다. 호림박물관은 도자․금속․나무․서화․전적 등 2만 여 점의 문화유산을 소장하고 있으며, 이 가운데 62건의 문화유산이 국보(8건)와 보물(54건)로, 11건의 문화유산이 서울특별시 유형문화…",
+   "hours": "화요일~금요일 10:00~17:00 (입장 마감 16:00)",
+   "closed": "매주 토요일, 일요일, 월요일 / 법정공휴일 / 근로자의 날(5월 1일)",
+   "fee": "- 일반 5,000원- 청소년 3,000원- 장애인 / 경로 3,000원※ 무료 : 매달 마지막 주 수요일(문화가 있는 날)",
+   "phone": "02-858-2500",
+   "homepage": "https://www.horimmuseum.org",
+   "lat": 37.4807647116,
+   "lng": 126.9187790252,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.horimmuseum.org",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/80/3540180_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/80/3540180_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/81/3540181_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/81/3540181_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/82/3540182_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/3540182_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-129804",
    "contentId": "129804",
    "contentTypeId": "14",
@@ -13840,6 +13954,62 @@
    ]
   },
   {
+   "feedId": "TA-129907",
+   "contentId": "129907",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016133102",
+   "n": "조형갤러리",
+   "a": "서울특별시 종로구 인사동5길 29 (인사동) 지하 1층",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설",
+    "전시"
+   ],
+   "sub": "미술관",
+   "why": "1990년 관훈동에서 개관 이후 2002년 인사동 태화빌딩에 더 넓은 공간으로 확장 이전하여 회화제 및 인사포험과 역량 있는 작가의 기획전시와 대관 전시를 통해…",
+   "summary": "1990년 관훈동에서 개관 이후 2002년 인사동 태화빌딩에 더 넓은 공간으로 확장 이전하여 회화제 및 인사포험과 역량 있는 작가의 기획전시와 대관 전시를 통해 여러 분야의 미술을 소개하고 있다. 갤러리 전시 공간의 주요 부분은 좌우 15m 정사각형 형태이고, 나머지 부분은 좌우 4m, 6m이며, 천장 높이는 3m로 구성되어 있다. 정사각형 구조와 높은 천장으로 이루어진 전시공간은 전시된 모든 작품이 한눈에 들어오는 시원한 구도이다. 또한 자신만의 독특한 전시 형태를 연출할 수 있는 대형 전시공간이다.",
+   "hours": "10:30~18:30",
+   "closed": "연중무휴",
+   "phone": "02-736-4804",
+   "homepage": "http://www.chohyunggallery.com",
+   "lat": 37.5719877556,
+   "lng": 126.9848419922,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.chohyunggallery.com",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/33/3540833_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/33/3540833_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/34/3540834_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/34/3540834_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/35/3540835_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/35/3540835_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-129917",
    "contentId": "129917",
    "contentTypeId": "14",
@@ -13886,6 +14056,176 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/38/4101038_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/38/4101038_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-129918",
+   "contentId": "129918",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016134353",
+   "n": "국제갤러리",
+   "a": "서울특별시 종로구 삼청로 54 (소격동)",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설"
+   ],
+   "sub": "미술관",
+   "why": "국제갤러리는 1982년 개관 이후 지금까지 대표적인 국내 화랑으로서 세계적으로 유명한 현대미술 작가의 작품과 그 흐름을 접하고 감상할 수 있는 기회를 제공한다.",
+   "summary": "국제갤러리는 1982년 개관 이후 지금까지 대표적인 국내 화랑으로서 세계적으로 유명한 현대미술 작가의 작품과 그 흐름을 접하고 감상할 수 있는 기회를 제공한다. 헬렌 프랑켄댈러, 샘 프란시스, 짐 다인, 프랭크 스텔라, 로버트 맨골드, 안토니 카로와 같은 해외 주요 작가들의 작품을 소개하고 전시하는 선도적인 역할을 수행하여 그 중요성을 국내외에서 인정받고 있다. 국제갤러리는 세계 전역의 작가들과 그들이 속한 갤러리 및 아트딜러들과 직접 연계하여 전시기획 업무를 진행하며, 장래성 있는 작가 발굴, 지속적인 작품 제작 후원 및 국제무대 진출을 위한 중요한 통로와 지지기반 구축 등에 힘써왔으며, 한국 예술가들을 지원하고 세계 미술계에 소개하는 역할을 한다.",
+   "hours": "- 월요일~토요일 10:00~18:00- 일요일 및 공휴일 10:00~17:00",
+   "closed": "연중무휴",
+   "fee": "전시 별로 상이함",
+   "phone": "02-735-8449",
+   "homepage": "https://www.kukjegallery.com",
+   "lat": 37.5807354004,
+   "lng": 126.9806266354,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.kukjegallery.com",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/32/3384832_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/32/3384832_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/33/3384833_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/33/3384833_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/34/3384834_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/34/3384834_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-129927",
+   "contentId": "129927",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016133408",
+   "n": "갤러리 서림",
+   "a": "서울특별시 강남구 학동로 523",
+   "ar": "서울",
+   "r": "강남구",
+   "k": [
+    "문화시설",
+    "전시"
+   ],
+   "sub": "미술관",
+   "why": "갤러리 서림은 강남구 학동로에 위치하고 있다.",
+   "summary": "갤러리 서림은 강남구 학동로에 위치하고 있다. 1984년 시인 김성옥이 인사동에 서림화랑으로 처음 개관한 상업미술 전시판매장이다. 서림화랑의 대표 시인 김성옥은 인사동 시절인 1991년에 당시 문화의 불모지였던 강남에 박여숙화랑과 함께 청담미술제를 개최하는 주역으로 강남구 청담동 일대가 문화 예술적인 지역성을 갖게 되는데 역할을 하기도 했다. 2008년 4월에는 인사동에 있던 화랑을 청담동으로 이전하면서 화랑 이름도 갤러리 서림으로 바꾸었다. 지금도 다양한 작가들의 작품을 전시하면서 다양한 예술을 경험할 수 있는 기회를 제공하고 있다.",
+   "hours": "11:00~18:00",
+   "closed": "매주 일요일",
+   "fee": "무료",
+   "phone": "02-515-3377",
+   "homepage": "https://blog.naver.com/evenart",
+   "lat": 37.5200845451,
+   "lng": 127.0560485437,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://blog.naver.com/evenart",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/72/3413872_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/72/3413872_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/89/1837289_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/89/1837289_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/26/1837326_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/26/1837326_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-129928",
+   "contentId": "129928",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016133629",
+   "n": "이목화랑",
+   "a": "서울특별시 종로구 북촌로 94",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설",
+    "전시"
+   ],
+   "sub": "전시장",
+   "why": "이목화랑은 1976년 개관한 오랜 전통을 가진 미술 전시관이다.",
+   "summary": "이목화랑은 1976년 개관한 오랜 전통을 가진 미술 전시관이다. 내부에 들어가면 조용한 분위기 속에서 작품을 감상할 수 있으며, 전시 일정 기간과 작품 및 작가에 관한 정보가 홈페이지에 있어 미리 확인하고 갈 수 있다. 이곳은 저명한 예술가와 신진 예술가의 작품을 발견하여 지원하고 전시하며 예술가의 진흥을 위해 예술 작품을 판매한다. 오랜 전통이 있는 만큼 오랫동안 인연을 맺어오고 있는 원로작가의 전시를 초대전으로 진행하여 신구세대를 모두 아우를 수 있는 전시를 진행한다. 젊고 유능한 실력 있는 작가들의 양성을 위해서 아트페어와 미술제에도 적극적으로 참여하여 그들을 알리고 소식을 전하며 작가 양성에 노력하여 미술시장 발전을 위해 열정적으로 노력하고 있는 미술관이다.",
+   "hours": "- 평일 11:00~18:00- 주말 11:00~17:00※ 자세한 사항은 전화문의 요망",
+   "closed": "매주 일요일, 월요일",
+   "fee": "무료",
+   "phone": "02-514-8888",
+   "homepage": "http://www.yeemockgallery.co.kr",
+   "lat": 37.5851308924,
+   "lng": 126.9854091297,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.yeemockgallery.co.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/87/3589687_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/87/3589687_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/83/3589683_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/3589683_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/84/3589684_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/84/3589684_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -15753,6 +16093,62 @@
    "checkedAt": "2026-10-02"
   },
   {
+   "feedId": "TA-130231",
+   "contentId": "130231",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016135321",
+   "n": "국립극장",
+   "a": "서울특별시 중구 장충단로 59 (장충동2가)",
+   "ar": "서울",
+   "r": "중구",
+   "k": [
+    "문화시설"
+   ],
+   "sub": "공연장",
+   "why": "국립극장은 1950년 4월 29일 아시아 최초의 국립극장으로 설립됐다.",
+   "summary": "국립극장은 1950년 4월 29일 아시아 최초의 국립극장으로 설립됐다. 전통예술을 동시대 예술로 창작하는 국내 유일의 제작극장으로, 대극장 규모의 '해오름극장(1,221석)'과 중극장 규모의 '달오름극장(512석)', 소극장 규모의 '별오름극장(100석)'을 비롯하여 원형무대 구조의 '하늘극장(627석)'을 가지고 있다.전속 예술단체로는 국립창극단·국립무용단·국립국악관현악단이 소속해 있으며, 다양한 신작과 레퍼토리 작품으로 국민과 호흡하고 있다.2012년 9월부터는 레퍼토리 시즌제를 도입한 이후 전속단체는 물론, 국내외 예술 단체와의 협업을 통해 대한민국 대표 공연기관으로서 공연예술 생태계의 균형과 조화를 견인하고 있다.",
+   "hours": "공연 별로 상이함",
+   "closed": "공연 별로 상이함",
+   "fee": "공연 별로 상이함",
+   "phone": "02-2280-4114",
+   "homepage": "http://www.ntok.go.kr",
+   "lat": 37.552668441,
+   "lng": 126.9996170038,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.ntok.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/10/3083810_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/10/3083810_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/12/3083812_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/12/3083812_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/13/3083813_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/13/3083813_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-130259",
    "contentId": "130259",
    "contentTypeId": "14",
@@ -17369,6 +17765,63 @@
    ]
   },
   {
+   "feedId": "TA-130418",
+   "contentId": "130418",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016135119",
+   "n": "신문박물관",
+   "a": "서울특별시 종로구 세종대로 152 일민미술관 5, 6층",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설",
+    "박물관"
+   ],
+   "sub": "박물관",
+   "why": "신문박물관은 우리나라 최초의 근대 신문인 한성순보 창간(1883) 이래 한국 신문 140년의 역사를 한눈에 조망할 수 있는 공간으로 세기의 경계를 지나던 200…",
+   "summary": "신문박물관은 우리나라 최초의 근대 신문인 한성순보 창간(1883) 이래 한국 신문 140년의 역사를 한눈에 조망할 수 있는 공간으로 세기의 경계를 지나던 2000년 동아일보사가 한국 신문의 역사를 성찰하고 그 교훈을 통해 미래를 내다보고자 개관했다. 세계적으로 신문 박물관은 1931년 독일 아헨시에 세워진 국제신문박물관을 비롯하여 미국 워싱턴의 뉴지엄, 일본 요코하마의 일본신문박물관 등 손에 꼽을 정도이며, 유구한 언론의 역사를 가진 선진 각국과 함께하는 상징적인 박물관이다. 신문은 역사의 그릇이며 정치, 경제, 사회, 문화 등 그날그날의 역사가 숨 쉬고 있다. 따라서 시대와 함께 명멸과 성쇠를 거듭했던 신문의 과거와 현재를 모아놓은 신문박물관은 축소된 역사의 현장이라 할 수 있다. 신문박물관은 신문을 통해…",
+   "hours": "화요일~일요일 10:00~18:30 (매표 마감 18:00)",
+   "closed": "매주 월요일 / 1월 1일 / 설·추석 연휴※ 봄과 가을의 경우, 3월, 9월 첫째 주 화요일~일요일 정기 휴관",
+   "fee": "[개인]- 일반 4,000원- 청소년, 대학생 3,000원[단체예약]- 일반 3,000원- 청소년, 대학생 2,500원",
+   "phone": "02-2020-1880",
+   "homepage": "http://www.presseum.or.kr",
+   "lat": 37.5698215076,
+   "lng": 126.9776325478,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.presseum.or.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/15/3556615_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/15/3556615_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/14/3556614_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/14/3556614_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/16/3556616_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/16/3556616_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-130424",
    "contentId": "130424",
    "contentTypeId": "14",
@@ -17588,6 +18041,63 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-130446",
+   "contentId": "130446",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016013001",
+   "n": "가회민화박물관",
+   "a": "서울특별시 종로구 북촌로 52 (가회동)",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설",
+    "박물관"
+   ],
+   "sub": "박물관",
+   "why": "우리 겨레는 반만년이라는 유구한 세월 동안 외래문화를 수용하면서도 전통문화의 주체성과 독자성을 잘 지켜왔다.",
+   "summary": "우리 겨레는 반만년이라는 유구한 세월 동안 외래문화를 수용하면서도 전통문화의 주체성과 독자성을 잘 지켜왔다. 그러나 오늘날 산업이 발달하고 생활양식이 급변하면서 우리의 전통문화는 점차 퇴색되어만 가고 있다. 이러한 시점에서 우리 민족의 전통 유산인 민화를 체계적으로 연구하고 전시하여 훌륭한 문화유산을 느끼는 일은 매우 중요하다. 가회민화박물관은 우리의 소중한 문화유산을 일깨우기 위해 선조들의 삶과 지혜가 담겨 있는 민화와 부적을 좀 더 깊이 있게 연구하여 그 소중함을 일깨우고자 하는 데 설립 목적을 두고 있다. 2002년에 문을 연 가회민화박물관에서 전시하고 있는 민화는 우리의 삶과 닮아 있는 그림이며, 무병장수(無病長壽), 부귀다남(富貴多男), 부귀공명(富貴功名) 등 인간의 소박한 바람이 담겨 있다. 한편…",
+   "hours": "[관람시간]- 3월~11월 10:00~18:00- 12월~2월 10:00~17:00※ 관람 시 종료 40분 전까지 입장[체험시간]- 10:00~16:00※ 체험 시 종료 1시간 전까지 입장",
+   "closed": "매주 월요일",
+   "fee": "5,000원",
+   "phone": "02-741-0466",
+   "homepage": "http://www.gahoemuseum.org네이버",
+   "lat": 37.5814913719,
+   "lng": 126.9852634614,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.gahoemuseum.org네이버",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/90/3355090_image2_1.png",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/90/3355090_image3_1.png",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/87/3355087_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/87/3355087_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/88/3355088_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/88/3355088_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -18423,6 +18933,63 @@
    ]
   },
   {
+   "feedId": "TA-130761",
+   "contentId": "130761",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016175253",
+   "n": "서울특별시교육청 노원평생학습관",
+   "a": "서울특별시 노원구 동일로204길 13 (중계동)",
+   "ar": "서울",
+   "r": "노원구",
+   "k": [
+    "문화시설",
+    "도서관"
+   ],
+   "sub": "도서관",
+   "why": "서울특별시교육청 노원평생학습관은 1990년에 중계도서관으로 개관하여 공공도서관의 역할을 수행하여 왔으며, 1999년 7월 16일부터 중계평생학습관으로 개편, 2…",
+   "summary": "서울특별시교육청 노원평생학습관은 1990년에 중계도서관으로 개관하여 공공도서관의 역할을 수행하여 왔으며, 1999년 7월 16일부터 중계평생학습관으로 개편, 2007년에 노원평생학습관으로 기관명을 변경했다. 지역사회의 인적 자원과 물적 자원을 연결하고 융합하여 개인과 공동체의 성장과 발달을 위한 평생학습센터로 정보의 수집·제공·축적을 넘어 가치를 창출하는 생명력 있는 실천 공동체의 허브로 자리매김하고 있다. 열린 자료실과 다양한 평생학습교실을 통해 지식과 세계의 정보를 연결하고 융합하며 유용한 정보를 서로 나누는 지역학습공동체로서 평생교육이 시작되는 공간이다. 책을 빌려볼 수 있는 간행물실이 있고 평생학습관으로서 여러 학습을 할 수 있는 강의식과 세미나실, 독서토론실 등의 공간이 있다.",
+   "hours": "[문헌정보실]- 평일 09:00~20:00- 주말 09:00~17:00[디지털자료실, 어린이실]- 평일 09:00~18:00- 주말 09:00~17:00[자율학습실, 마음자리(간행물실)]- 하절기 (3월~10월) 07:00~22:00- 동절기 (11월~2월) 08:00~22:00",
+   "closed": "매달 둘째·넷째 월요일 / 일요일을 제외한 법정공휴일(단, 공휴일과 일요일이 겹칠 경우 휴관) / 임시휴관일",
+   "fee": "무료",
+   "phone": "02-979-1741",
+   "homepage": "https://nwllc.sen.go.kr/nwllc",
+   "lat": 37.6395138571,
+   "lng": 127.067821061,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://nwllc.sen.go.kr/nwllc",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/67/3566267_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/67/3566267_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/68/3566268_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/68/3566268_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/69/3566269_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/69/3566269_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-130764",
    "contentId": "130764",
    "contentTypeId": "14",
@@ -18537,10 +19104,125 @@
    ]
   },
   {
+   "feedId": "TA-130771",
+   "contentId": "130771",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016174657",
+   "n": "서울특별시교육청 구로도서관",
+   "a": "서울특별시 구로구 공원로 15 시립구로도서관",
+   "ar": "서울",
+   "r": "구로구",
+   "k": [
+    "문화시설",
+    "도서관"
+   ],
+   "sub": "도서관",
+   "why": "영림중학교 맞은편에 있는 구로도서관은 지역 사회 주민에게 정보를 제공하고 교육 및 문화 활동에 기여하기 위하여 개관한 공공도서관이다.",
+   "summary": "영림중학교 맞은편에 있는 구로도서관은 지역 사회 주민에게 정보를 제공하고 교육 및 문화 활동에 기여하기 위하여 개관한 공공도서관이다. 자료를 수집, 정리하여 이용자에게 제공함은 물론 오늘날과 같이 급변하는 정보화 시대에 있어 인터넷을 통하여 광범위한 정보에 접근하도록 함으로써 지역 주민과 함께하는 도서관으로 자리 잡아 왔다. 구로도서관은 디지털산업단지로 변모하는 지역 요건을 반영하여 IT 자료를 특화자료로 수집하여 제공하며, 다양한 독서교육 및 문화행사 프로그램을 운영하고 있다. 도서관 내에는 종합자료실, 어린이자료실, 디지털간행물실 등의 자료실과 열람실 그리고 동아리실 등이 소재하고 있다. 구로도서관은 수도권 지하철 2호선 대림역 4번 출구에서 약 550m 떨어진 곳에 위치하고 있다.",
+   "hours": "[종합자료실]- 평일 09:00~20:00- 주말 09:00~17:00[디지털자료실＆간행물실＆어린이자료실]- 평일 09:00~18:00- 주말 09:00~17:00[일반열람실(3월~10월)]- 평일 07:00~22:00- 주말 07:00~22:00 [일반열람실(11월~2월)]- 평일 08:00~22:00- 주말 08:00~22:00",
+   "closed": "매월 첫째, 셋째 수요일 / 법정 공휴일(일요일과 겹칠 경우 휴관) / 임시휴관일",
+   "fee": "무료",
+   "phone": "02-6958-2800",
+   "homepage": "http://grlib.sen.go.kr",
+   "lat": 37.498545317,
+   "lng": 126.8918457201,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://grlib.sen.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/48/3566348_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/48/3566348_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/49/3566349_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/49/3566349_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/50/3566350_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/50/3566350_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-130778",
+   "contentId": "130778",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016174230",
+   "n": "서울특별시교육청 어린이도서관",
+   "a": "서울특별시 종로구 사직로 89 (사직동)",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설",
+    "도서관",
+    "공원"
+   ],
+   "sub": "도서관",
+   "why": "서울특별시교육청 어린이도서관은 1979년 세계 어린이의 해를 기념하여 설립된 우리나라의 유일한 어린이 전용 공립도서관으로 인왕산 자락의 사직공원 안에 있다.",
+   "summary": "서울특별시교육청 어린이도서관은 1979년 세계 어린이의 해를 기념하여 설립된 우리나라의 유일한 어린이 전용 공립도서관으로 인왕산 자락의 사직공원 안에 있다. 국내에서 발행되는 어린이와 관련된 각종 사전, 컴퓨터, 각 교과목, 과학, 예술, 명작, 창작동화, 역사, 지리에 관련된 도서 등 유치원이나 초등학생을 위한 많은 자료가 비치되어 있다. 자료는 자유롭게 선택하여 이용할 수 있고 일부는 가정으로 대출할 수 있다. 어린이에게 필요한 모든 자료는 제1 자료실, 제2 자료실, 유아실 등의 자료실에서 볼 수 있으며 디지털 자료실에서는 전자 자료 및 인터넷을 통한 정보를 찾아볼 수 있다. 또한 문화공간인 전시실을 마련하여 어린이와 지역주민의 문화공유 장으로 제공되고 있으며 어린이들이 책을 가까이 할 수 있도록 다양…",
+   "hours": "- 평일 09:00~18:00- 주말 09:00~17:00",
+   "closed": "매월 첫째주·셋째주 월요일 / 일요일을 제외한 법정공휴일 (단, 일요일과 법정공휴일이 겹칠 경우 휴관)",
+   "fee": "무료",
+   "phone": "02-731-2300",
+   "homepage": "https://childlib.sen.go.kr/childlib",
+   "lat": 37.5757913199,
+   "lng": 126.9687058696,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://childlib.sen.go.kr/childlib",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/44/3414044_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/44/3414044_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/45/3414045_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/45/3414045_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/46/3414046_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/46/3414046_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-130779",
    "contentId": "130779",
    "contentTypeId": "14",
-   "modifiedtime": "20261001133852",
+   "modifiedtime": "20261016174036",
    "n": "서울특별시교육청 영등포평생학습관",
    "a": "서울특별시 영등포구 버드나루로15길 10 (당산동)",
    "ar": "서울",
@@ -18550,8 +19232,8 @@
    ],
    "sub": "문화공간",
    "why": "서울특별시교육청 영등포평생학습관은 지역주민의 삶의 질 향상과 자아실현을 위한 다양한 평생학습 프로그램 운영을 통해 자기 계발의 기회를 제공하고 있으며, 문해교육…",
-   "summary": "서울특별시교육청 영등포평생학습관은 지역주민의 삶의 질 향상과 자아실현을 위한 다양한 평생학습 프로그램 운영을 통해 자기 계발의 기회를 제공하고 있으며, 문해교육, 학업 중단 학생 학습 지원, 다문화 사업, 부모교육 등 균등한 평생학습 기회를 제공하는 지역사회 평생학습센터로서의 역할을 하고 있다. 또한 독서문화 정착과 지역사회 지식·정보 문화센터의 역할을 다하기 위하여 23만여권의 자료를 비치하고 이용자 편의를 우선하여 서비스하고 있으며, 지역주민이 문화를 향유하고 풍요로운 삶을 가꿀 수 있도록 다양한 문화 활동을 지원하고 있다.",
-   "hours": "[문헌정보실] 평일 09:00~20:00 / 주말 09:00~17:00 [디지털 간행물실] 평일 09:00~18:00 / 주말 09:00~17:00[어린이실] 평일 09:00~18:00 / 주말 09:00~17:00[자율학습실] 하절기 07:00~22:00 / 동절기 08:00~22:00",
+   "summary": "서울특별시교육청 영등포평생학습관은 지역주민의 삶의 질 향상과 자아실현을 위한 다양한 평생학습 프로그램 운영을 통해 자기 계발의 기회를 제공하고 있으며, 문해교육, 학업 중단 학생 학습 지원, 다문화 사업, 부모교육 등 균등한 평생학습 기회를 제공하는 지역사회 평생학습센터로서의 역할을 하고 있다. 또한 독서문화 정착과 지역사회 지식·정보 문화센터의 역할을 다하기 위하여 23만여 권의 자료를 비치하고 이용자 편의를 우선하여 서비스하고 있으며, 지역주민이 문화를 향유하고 풍요로운 삶을 가꿀 수 있도록 다양한 문화 활동을 지원하고 있다.",
+   "hours": "[문헌정보실]평일 09:00~20:00주말 09:00~17:00 [디지털 간행물실]평일 09:00~18:00주말 09:00~17:00[어린이실]평일 09:00~18:00주말 09:00~17:00[자율학습실]하절기 07:00~22:00동절기 08:00~22:00",
    "closed": "[정기휴관일] 매월 둘째, 넷째 월요일 / 공휴일(※ 단, 일요일은 개관하되, 일요일과 다른 공휴일이 겹치는 경우에는 휴관)",
    "phone": "02-6712-7500",
    "homepage": "http://ydpllc.sen.go.kr",
@@ -18560,7 +19242,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://ydpllc.sen.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-02",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/95/3581795_image2_1.jpeg",
@@ -18583,6 +19265,120 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/92/3581792_image2_1.jpeg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/92/3581792_image2_1.jpeg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-130782",
+   "contentId": "130782",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016173508",
+   "n": "서울특별시교육청 고덕평생학습관",
+   "a": "서울특별시 강동구 고덕로 295 (고덕동)",
+   "ar": "서울",
+   "r": "강동구",
+   "k": [
+    "문화시설",
+    "도서관"
+   ],
+   "sub": "도서관",
+   "why": "고덕평생학습관은 1984년 고덕도서관으로 개관한 이래 지역주민의 독서생활화 및 다양한 평생교육서비스 제공을 통해 삶의 질 향상에 기여하고 있는 지역 중심 기관으…",
+   "summary": "고덕평생학습관은 1984년 고덕도서관으로 개관한 이래 지역주민의 독서생활화 및 다양한 평생교육서비스 제공을 통해 삶의 질 향상에 기여하고 있는 지역 중심 기관으로 1999년 고덕평생학습관으로 명칭을 변경하였다. 고덕평생학습관은 지역 내 성인 및 어린이를 대상으로 하는 평생학습교실 강좌가 개설되어 있다. 영어, 일본어 중국어 등 [외국어 강좌], 미술, 도예, 악기 등 [문화 예술 강좌], 부동산 경매, 한자, 문예창작 등 [인문교양강좌], 스마트폰 활용 및 영상 편집, 디지털 드로잉 등 IT 역량강화를 위한 다양한 분야의 강좌들이 구성되어 있다. 이외에도 매년 가을 개최하는 평생학습축제, 상시 운영하는 전시 등 다양한 문화행사가 열리고 있다. 문헌정보실, 어린이실, 디지털자료실, 강의실, 자율학습실, 학습기…",
+   "hours": "[문헌정보실 및 연속간행물실]- 평일 09:00~20:00- 주말 09:00~17:00[디지털자료실]- 평일 09:00~18:00- 주말 09:00~17:00[어린이실]- 평일 09:00~18:00- 주말 09:00~17:00[필사공감]09:00~17:00[일반열람실]07:00~22:00 (11월~2월 08:00~22:00)",
+   "closed": "매월 둘째·넷째 월요일 / 공휴일",
+   "fee": "무료",
+   "phone": "02-6902-2600",
+   "homepage": "http://gdllc.sen.go.kr",
+   "lat": 37.5561204357,
+   "lng": 127.1580393467,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://gdllc.sen.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/74/3566274_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/3566274_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/75/3566275_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/75/3566275_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/76/3566276_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/76/3566276_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-130783",
+   "contentId": "130783",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016173740",
+   "n": "서울특별시교육청 동대문도서관",
+   "a": "서울특별시 동대문구 천호대로4길 22 (신설동)",
+   "ar": "서울",
+   "r": "동대문구",
+   "k": [
+    "문화시설",
+    "도서관"
+   ],
+   "sub": "도서관",
+   "why": "서울특별시교육청 동대문도서관은 1971년 3월에 개관하여 25만여 자료를 소장하고 있는 서울특별시교육청 소속 공공도서관이다.",
+   "summary": "서울특별시교육청 동대문도서관은 1971년 3월에 개관하여 25만여 자료를 소장하고 있는 서울특별시교육청 소속 공공도서관이다. 지역주민의 지식정보 제공과 자아실현을 위한 다양한 프로그램을 운영하여 자기 계발의 기회를 제공하고 있다. 1996년 전자정보자료실을 개설하여 1997년 7월부터 모든 장서의 대출이 가능하게 되었다. 종합자료1실과 2실, 어린이실, 시청각실, 강의실, 자율학습실 등 총 510석의 좌석을 갖추고 있다. 각 실에서 자료를 찾아서 바로 이용할 수 있고 대출과 자료예약도 가능하다. 또한 야간에 도서관을 방문하여 자료를 찾아가는 서비스인 야간예약대출도 시행하고 있다.",
+   "hours": "[종합자료1실]- 평일 09:00~20:00- 주말 09:00~17:00[종합자료2실, 어린이실]- 평일 09:00~18:00- 주말 09:00~17:00[자율학습1실, 자율학습2실]- 하절기(3월~10월) 평일 07:00~20:00- 하절기(3월~10월) 주말 07:00~22:00- 동절기(11월~2월) 평일 08:00~20:00- 동절기(11월~2월) 주말 08:00~22:00",
+   "closed": "매월 둘째, 넷째주 수요일 / 일요일을 제외한 법정공휴일(단, 공휴일과 일요일이 겹칠 경우 휴관) / 임시 휴관일",
+   "fee": "무료",
+   "phone": "02-2170-1000",
+   "homepage": "https://ddmlib.sen.go.kr/ddmlib",
+   "lat": 37.573460257,
+   "lng": 127.0248135739,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://ddmlib.sen.go.kr/ddmlib",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/36/3478436_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/36/3478436_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/35/3478435_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/35/3478435_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/37/3478437_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/37/3478437_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -18709,7 +19505,7 @@
    "feedId": "TA-130787",
    "contentId": "130787",
    "contentTypeId": "14",
-   "modifiedtime": "20260227094503",
+   "modifiedtime": "20261016172744",
    "n": "인천 계양도서관",
    "a": "인천광역시 계양구 계양산로134번길 18 (계산동)",
    "ar": "인천",
@@ -18719,19 +19515,19 @@
     "도서관"
    ],
    "sub": "도서관",
-   "why": "2004년 개관한 계양도서관은 만남, 발견&감동이라는 슬로건 아래 양질의 최신 정보를 제공하고 유익한 독서프로그램을 개발하며 다양한 평생학습 프로그램을 운영하고…",
-   "summary": "2004년 개관한 계양도서관은 만남, 발견&감동이라는 슬로건 아래 양질의 최신 정보를 제공하고 유익한 독서프로그램을 개발하며 다양한 평생학습 프로그램을 운영하고 있다. 주요사업으로는 책 읽는 도시, 인천 만들기 / 독서 확산 프로그램 운영 / (독서특화) 동화구연 체험관 운영 / 평생학습 프로그램 운영 /초등학력 인정 문해교육 글오름학교 / 마을교육공동체 지원사업이 있다. 특색사업으로는 생태·환경의 중요성을 이해하고 실천할 수 있는 기후 위기 대응 생태 환경교육, 계양산 숲 생태 아카이빙 프로그램을 운영하고 있다.",
+   "why": "2004년 개관한 계양도서관은 만남, 발견&감동이라는 슬로건 아래 양질의 최신 정보를 제공하고 유익한 독서 프로그램을 개발하며 다양한 평생학습 프로그램을 운영하…",
+   "summary": "2004년 개관한 계양도서관은 만남, 발견&감동이라는 슬로건 아래 양질의 최신 정보를 제공하고 유익한 독서 프로그램을 개발하며 다양한 평생학습 프로그램을 운영하고 있다. 주요 사업으로는 책 읽는 도시, 인천 만들기 / 독서 확산 프로그램 운영 / (독서특화) 동화구연 체험관 운영 / 평생학습 프로그램 운영 /초등학력 인정 문해교육 글오름학교 / 마을교육공동체 지원사업이 있다. 특색사업으로는 생태·환경의 중요성을 이해하고 실천할 수 있는 기후 위기 대응 생태 환경 교육, 계양산 숲 생태 아카이빙 프로그램을 운영하고 있다.",
    "hours": "[열람실]- 06:00~22:00[종합자료실]- 평일 09:00~20:00- 주말 09:00~17:00[디지털자료실]- 평일 09:00~18:00- 주말 09:00~17:00[어린이열람실]- 평일 09:00~18:00- 주말 09:00~17:00",
    "closed": "매주 화요일 / 관공서 공휴일 (일요일은 제외) / 대체 공휴일 / 임시휴관일(특별한 사유로 관장이 지정하는 날)(단, 일요일이 국가 공휴일과 겹친 경우 휴관)",
    "fee": "무료",
    "phone": "인천 계양도서관 032-540-4400",
    "homepage": "https://lib.ice.go.kr/gyeyang",
-   "lat": 37.54595769629555,
-   "lng": 126.73018571045002,
+   "lat": 37.5459576963,
+   "lng": 126.7301857105,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://lib.ice.go.kr/gyeyang",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-03",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/29/3590829_image2_1.jpg",
@@ -18936,7 +19732,7 @@
    "feedId": "TA-130792",
    "contentId": "130792",
    "contentTypeId": "14",
-   "modifiedtime": "20260914142942",
+   "modifiedtime": "20261016172943",
    "n": "인천광역시교육청북구도서관",
    "a": "인천광역시 부평구 신트리로 21 (부평동)",
    "ar": "인천",
@@ -18946,18 +19742,19 @@
     "도서관",
     "마을"
    ],
-   "why": "인천광역시교육청북구도서관은 1991년 개관하여 책으로 하나 되는 인천교육 구현을 위해 ‘책 읽는 도시, 인천만들기’ 등 독서문화진흥 사업을 마을교육공동체와 함께…",
-   "summary": "인천광역시교육청북구도서관은 1991년 개관하여 책으로 하나 되는 인천교육 구현을 위해 ‘책 읽는 도시, 인천만들기’ 등 독서문화진흥 사업을 마을교육공동체와 함께 노력하고 있다. 학교도서관을 지원하는 특색사업을 통해 학생들이 늘 책을 가까이하며 학습과 교양에 도움이 될 수 있는 다양한 활동들을 지원하고 있다. 북구도서관은 구민 모두가 도서관이 책 읽는 곳을 넘어, 즐겁고 편안한 도시의 거실로서 거듭날 수 있도록 지식정보서비스도 강화하며 지역구민과 소통하고 있다. 신관과 본관에는 종합자료실, 디지털자료실, 어린이자료실, 강의실, 열람실, 휴게실 등의 시설을 갖추고 있다. 마을평생교육, 유아·어린이프로그램, 청소년프로그램, 학교대상프로그램을 운영한다.",
+   "sub": "도서관",
+   "why": "인천광역시교육청북구도서관은 1991년 개관하여 책으로 하나 되는 인천 교육 구현을 위해 ‘책 읽는 도시, 인천만들기’ 등 독서문화진흥 사업을 마을교육공동체와 함…",
+   "summary": "인천광역시교육청북구도서관은 1991년 개관하여 책으로 하나 되는 인천 교육 구현을 위해 ‘책 읽는 도시, 인천만들기’ 등 독서문화진흥 사업을 마을교육공동체와 함께 노력하고 있다. 학교도서관을 지원하는 특색사업을 통해 학생들이 늘 책을 가까이하며 학습과 교양에 도움이 될 수 있는 다양한 활동들을 지원하고 있다. 북구도서관은 구민 모두가 도서관이 책 읽는 곳을 넘어, 즐겁고 편안한 도시의 거실로서 거듭날 수 있도록 지식 정보 서비스도 강화하며 지역구민과 소통하고 있다. 신관과 본관에는 종합자료실, 디지털자료실, 어린이자료실, 강의실, 열람실, 휴게실 등의 시설을 갖추고 있다. 마을평생교육, 유아·어린이프로그램, 청소년프로그램, 학교대상프로그램을 운영한다.",
    "hours": "[종합자료실]- 평일 09:00~20:00- 주말 09:00~17:00[어린이자료실 / 디지털자료실] - 평일 09:00~18:00- 주말 09:00~17:00[일반열람실 (제1~4열람실)]- 06:00~22:00",
    "closed": "매주 월요일 / 관공서의 공휴일 (일요일은 제외. 단, 일요일과 공휴일이 겹치는 경우 휴관 ) / 대체공휴일",
    "phone": "032-363-5000",
    "homepage": "https://lib.ice.go.kr/bukgu",
-   "lat": 37.5059269968,
-   "lng": 126.723604731,
+   "lat": 37.5066223903,
+   "lng": 126.7236526915,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://lib.ice.go.kr/bukgu",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-01",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/38/3078638_image2_1.jpg",
@@ -19038,6 +19835,64 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/66/3057766_image2_1.JPG",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/66/3057766_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-130842",
+   "contentId": "130842",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016161907",
+   "n": "아라리오 갤러리 서울",
+   "a": "서울특별시 종로구 율곡로 85 (원서동)",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설",
+    "미술관",
+    "전시"
+   ],
+   "sub": "미술관",
+   "why": "아라리오갤러리 서울은 2006년 종로구 소격동에서 첫 문을 연 이래 탄탄한 전속 작가 시스템과 과감한 전시 기획력을 발판으로 동시대 미술 현장을 이끌어 가고 있…",
+   "summary": "아라리오갤러리 서울은 2006년 종로구 소격동에서 첫 문을 연 이래 탄탄한 전속 작가 시스템과 과감한 전시 기획력을 발판으로 동시대 미술 현장을 이끌어 가고 있다. 2014년 3월 국립현대미술관 인근으로 위치를 이전하였으며, 2018년 4월부터 2019년 11월까지는 홍익대학교 인근에 서울의 두 번째 전시공간인 아라리오갤러리 서울 라이즈 호텔을 열어 지역이 상징하는 젊고 새로운 실험 정신을 계승, 발전시키고자 노력하기도 했다. 2022년 아라리오갤러리 서울은 소격동 시대를 종료한 후 2023년 2월 종로구 원서동에서 한층 새로운 모습으로 재개관을 했다. 선제적 발굴 및 꾸준한 지원을 통해 작가들의 조력자로 활동하고 함께 성장하는 데 목표를 둠과 동시에 실험적이며 진지한 전시 기획을 실현시켜 한국 미술계의 발…",
+   "hours": "11:00~18:00",
+   "closed": "매주 일요일, 월요일",
+   "fee": "무료",
+   "phone": "02-541-5701",
+   "homepage": "https://www.arariogallery.com/ko",
+   "lat": 37.5778724855,
+   "lng": 126.9885091975,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.arariogallery.com/ko",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/21/3465421_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/21/3465421_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/46/3336146_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/46/3336146_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/47/3336147_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/47/3336147_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -19158,10 +20013,67 @@
    ]
   },
   {
+   "feedId": "TA-130881",
+   "contentId": "130881",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016155240",
+   "n": "서울대학교 미술관",
+   "a": "서울특별시 관악구 관악로 1 (신림동) 서울대학교 151동",
+   "ar": "서울",
+   "r": "관악구",
+   "k": [
+    "문화시설",
+    "미술관"
+   ],
+   "sub": "미술관",
+   "why": "서울대학교미술관은 항상 새롭고 독창적이며 시대를 반영하는 예술을 선보이고자 노력해 왔다.",
+   "summary": "서울대학교미술관은 항상 새롭고 독창적이며 시대를 반영하는 예술을 선보이고자 노력해 왔다. 2006년 현대미술로의 초대전을 시작으로 개관한 서울대학교미술관은 동시대 미술의 흐름, 사회적 이슈, 미술관의 역할 등 시대의 변화에 민감하게 반응하여 전시, 행사, 교육프로그램을 제공해 왔다. 국내 최초의 대학미술관인 서울대학교미술관은 그 전신을 1946년에 개관한 서울대학교 박물관 현대미술부에 두고 있다. 박물관 현대미술부는 1995년 서울대학교 50주년 기념사업의 일환으로 미술관 건립 준비를 시작하게 된다. 그해 삼성문화재단이 건립 기증 협찬을 확정하고, 1996년 네덜란드 건축가 렘 쿨하스(Rem Koolhaas)의 설계를 시작으로 2005년 7월 완공되었다. U-Glass를 건물 외부 마감재로 선택하여 철골 트…",
+   "hours": "화요일~일요일 10:00~18:00 (입장마감 17:30)",
+   "closed": "매주 월요일 / 1월 1일 / 설·추석 당일 / 개교기념일(10월 15일) / 전시 준비 기간",
+   "fee": "무료",
+   "phone": "02-880-9504",
+   "homepage": "http://www.snumoa.org",
+   "lat": 37.4662981348,
+   "lng": 126.9483705895,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.snumoa.org",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/85/3540185_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/85/3540185_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/86/3540186_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/86/3540186_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/87/3540187_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/87/3540187_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-130886",
    "contentId": "130886",
    "contentTypeId": "14",
-   "modifiedtime": "20260727100241",
+   "modifiedtime": "20261016154740",
    "n": "샤롯데씨어터",
    "a": "서울특별시 송파구 올림픽로 240 (잠실동)",
    "ar": "서울",
@@ -19169,20 +20081,21 @@
    "k": [
     "문화시설"
    ],
+   "sub": "공연장",
    "why": "샤롯데씨어터는 국내 최초의 뮤지컬 전용 극장이다.",
    "summary": "샤롯데씨어터는 국내 최초의 뮤지컬 전용 극장이다. 총 1,260석 규모로 롯데그룹이 한국의 뮤지컬 업계 발전을 도모하기 위해 2004년 착공, 2006년 10월 28일 개관하였다. 세계 어느 극장과 비교해도 손색없는 샤롯데씨어터는 우아하고 고급스러운 중세 유럽 분위기의 품격 있는 내관과 외관을 자랑하고 있으며, 뮤지컬 전용 극장으로서 갖춰야 할 모든 요소를 최첨단 시스템을 갖추고 있다. 오페라 공연의 경우 더 크고 생생하게 배우들의 표정과 생동감 있게 무대를 가까이서 즐길 수 있게 하기 위해서 오페라글라스도 대여해 준다.",
    "hours": "공연 별로 상이함",
    "closed": "매주 월요일",
    "fee": "공연 별로 상이함",
-   "phone": "1644-0078",
+   "phone": "1877-6077",
    "stay": "공연 별로 상이함",
    "homepage": "http://www.charlottetheater.co.kr",
-   "lat": 37.5123289178,
-   "lng": 127.0976165811,
+   "lat": 37.5106427227,
+   "lng": 127.0997139511,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.charlottetheater.co.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-09-30",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/19/3109819_image2_1.JPG",
@@ -19214,10 +20127,66 @@
    ]
   },
   {
+   "feedId": "TA-130903",
+   "contentId": "130903",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016153947",
+   "n": "북촌문화센터",
+   "a": "서울특별시 종로구 계동길 37 (계동)",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설"
+   ],
+   "sub": "문화공간",
+   "why": "국내외 방문객들에게 북촌의 역사와 가치, 북촌의 의미, 그리고 우리의 전통문화를 알리기 위해 2002년 10월에 개관하여 운영되고 있다.",
+   "summary": "국내외 방문객들에게 북촌의 역사와 가치, 북촌의 의미, 그리고 우리의 전통문화를 알리기 위해 2002년 10월에 개관하여 운영되고 있다. 북촌문화센터는 1921년 지어진 국가등록문화유산 ‘서울 계동 근대 한옥’으로 구 민형기 가옥으로 알려졌다가 최근에 민형기의 부인인 유진경 가옥으로 고증이 진행되고 있다. 북촌 내에서는 흔히 ‘민재무관댁’ 또는 ‘계동마님댁’으로 불리었다고 한다. 원래 안채, 바깥채, 앞행랑채, 뒷행랑채, 사당 등으로 구성되어 있었지만, 한옥 개보수 기준 조례에 의거해 최대한 한옥 원형을 보존하고 복원하는데 중점을 두어 개보수되어 현재는 ‘북촌가꾸기 사업’의 일환으로 주민커뮤니티 및 방문객 안내센터 역할을 하고 있다. 홍보 전시관은 원래 뒷행랑채였던 공간으로 현재는 북촌의 역사와 가치를 홍보…",
+   "hours": "- 화요일 / 목요일~금요일 09:00~18:00- 수요일 09:00~20:00- 토요일~일요일 09:00~17:00",
+   "closed": "매주 월요일",
+   "fee": "무료※ 단, 체험료 별도",
+   "phone": "02-741-1033",
+   "homepage": "https://hanok.seoul.go.kr공식",
+   "lat": 37.5789989927,
+   "lng": 126.9866898118,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://hanok.seoul.go.kr공식",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/09/3339109_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/09/3339109_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/06/3339106_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/06/3339106_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/07/3339107_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/07/3339107_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-130911",
    "contentId": "130911",
    "contentTypeId": "14",
-   "modifiedtime": "20260325093432",
+   "modifiedtime": "20261016153641",
    "n": "부평역사박물관",
    "a": "인천광역시 부평구 굴포로 151 (삼산동)",
    "ar": "인천",
@@ -19236,12 +20205,12 @@
    "fee": "무료",
    "phone": "032-515-6471",
    "homepage": "https://portal.icbp.go.kr/bphm",
-   "lat": 37.5120659090618,
-   "lng": 126.737846478137,
+   "lat": 37.5120659091,
+   "lng": 126.7378464781,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://portal.icbp.go.kr/bphm",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-03",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/37/3073237_image2_1.jpg",
@@ -19330,6 +20299,120 @@
    ]
   },
   {
+   "feedId": "TA-130920",
+   "contentId": "130920",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016153431",
+   "n": "경희대학교 자연사박물관",
+   "a": "서울특별시 동대문구 경희대로 26 (회기동)",
+   "ar": "서울",
+   "r": "동대문구",
+   "k": [
+    "문화시설",
+    "박물관"
+   ],
+   "sub": "박물관",
+   "why": "경희대학교 자연사박물관은 오랜 시간 자연을 연구한 결과물을 토대로 경희대학교 창학정신인 문화 세계 창조를 실현하기 위해 1978년 개관하였다.",
+   "summary": "경희대학교 자연사박물관은 오랜 시간 자연을 연구한 결과물을 토대로 경희대학교 창학정신인 문화 세계 창조를 실현하기 위해 1978년 개관하였다. 자연사박물관에 보존된 9만여 점의 표본은 1940년대부터 수집하였으며, 우리나라에서 이미 멸종되었거나 최근 자취를 감춘 멸종 위기 종들도 소장하고 있다. 각 분야 전문 교수진이 연구용으로 수집한 암석, 화석, 동식물 표본을 생물진화의 현재 상태와 그간의 생태변화를 쉽게 이해할 수 있도록 6개 층에 전시하고 있으며, 이 전시 표본을 기반으로 자연 보전과 생명의 중요성을 이해하고 실천할 수 있도록 관람 안내를 하고 있다. 경희대학교 자연사박물관은 어린이부터 성인까지 동식물의 분류와 생태를 체계적으로 학습하면서 자연 탐구 의욕과 자연보호 의식을 높일 수 있도록 교육하고자 …",
+   "hours": "월요일~금요일 10:00~17:00※ 하계 및 동계방학 개관 시간 상이 (홈페이지 공지사항 참조)",
+   "closed": "매주 토요일~일요일 / 법정공휴일 / 개교기념일(5월 18일)",
+   "fee": "무료",
+   "phone": "02-961-0143",
+   "homepage": "http://nhm.khu.ac.kr",
+   "lat": 37.5938822863,
+   "lng": 127.0527143863,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://nhm.khu.ac.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/01/3540401_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/01/3540401_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/02/3540402_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/02/3540402_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/03/3540403_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/03/3540403_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-130931",
+   "contentId": "130931",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016153243",
+   "n": "삼성출판박물관",
+   "a": "서울특별시 종로구 비봉길 2-2 (구기동)",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설",
+    "박물관"
+   ],
+   "sub": "박물관",
+   "why": "삼성출판박물관은 우리나라에 처음으로 세워진 출판·인쇄 전문 박물관이다.",
+   "summary": "삼성출판박물관은 우리나라에 처음으로 세워진 출판·인쇄 전문 박물관이다. 세계 최초의 금속활자를 발명하고 출판문화를 꽃피운 문화민족으로서 자긍심을 일깨우고 이와 관련된 사회 교육 활동을 펼치자는 목적으로 설립되었다. 1990년에 개관한 이래로 다른 문화유산과 달리 소실되기 쉬운 출판·인쇄 문화유산을 발굴하여 보관하고 전시하는 데 많은 노력을 기울이고 있다. 상설전시실과 특별기획전시실에서는 여러 점의 국보급 전적을 비롯한, 희귀 양장본에 이르기까지 3만여 점 이상의 전적과 각종 지제품, 고활자, 인쇄기기, 문방사우 등의 관계 자료를 소장하여 전시함으로써 우리나라의 출판 인쇄문화 1천3백 년의 역사를 볼 수 있다. 전시장 안쪽에는 도장으로 기념 책갈피와 엽서를 만들어 볼 수 있는 공간이 마련되어 있어 좋은 기념품…",
+   "hours": "월요일~금요일 10:00~17:00",
+   "closed": "매주 토요일~일요일 / 법정공휴일",
+   "fee": "- 일반 3,000원- 학생 2,000원",
+   "phone": "02-394-6544",
+   "homepage": "http://www.ssmop.org",
+   "lat": 37.608697773,
+   "lng": 126.957099764,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.ssmop.org",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/50/3540850_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/50/3540850_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/51/3540851_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/51/3540851_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/52/3540852_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/52/3540852_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-130937",
    "contentId": "130937",
    "contentTypeId": "14",
@@ -19387,6 +20470,121 @@
    ]
   },
   {
+   "feedId": "TA-130938",
+   "contentId": "130938",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016153103",
+   "n": "광나루안전체험관",
+   "a": "서울특별시 광진구 능동로 238",
+   "ar": "서울",
+   "r": "광진구",
+   "k": [
+    "문화시설",
+    "공원",
+    "체험"
+   ],
+   "sub": "체험문화시설",
+   "why": "서울어린이대공원 정문 옆에 위치한 광나루안전체험관은 화재나 지진, 태풍 등 각종 재난 상황을 가상으로 설정하여 일반 시민들이 직접 체험하면서 안전교육을 받을 수…",
+   "summary": "서울어린이대공원 정문 옆에 위치한 광나루안전체험관은 화재나 지진, 태풍 등 각종 재난 상황을 가상으로 설정하여 일반 시민들이 직접 체험하면서 안전교육을 받을 수 있는 국내 최초의 재난 체험관이다. 각종 재난·재해로부터 불특정 다수인들에 대하여 재난에 대처할 수 있는 능력을 기르고 안전 의식을 함양할 수 있는 가상 재난 체험 시설의 필요성이 제기되면서 광나루안전체험관이 설립되게 되었다. 광나루안전체험관은 각종 체험시설을 통하여 운영요원(소방공무원 등)에 의한 설명과 함께 직접 체험할 수 있다. 체험하기 위해서는 온라인 사전 예약은 필수이며, 긴바지와 양말을 착용해야 한다. 반바지, 치마, 맨발의 경우 체험이 불가하다.",
+   "hours": "09:00~17:00※ 인터넷 사전 예약 필수",
+   "closed": "매주 월요일 / 1월 1일 / 설·추석 당일",
+   "fee": "무료",
+   "phone": "02-2049-4061",
+   "homepage": "https://fire.seoul.go.kr",
+   "lat": 37.5512561292,
+   "lng": 127.0771455959,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://fire.seoul.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/02/3540002_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/02/3540002_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/03/3540003_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/03/3540003_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/04/3540004_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/04/3540004_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-130949",
+   "contentId": "130949",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016152814",
+   "n": "이화여대 자연사박물관",
+   "a": "서울특별시 서대문구 이화여대길 52",
+   "ar": "서울",
+   "r": "서대문구",
+   "k": [
+    "문화시설",
+    "박물관"
+   ],
+   "sub": "박물관",
+   "why": "이화여자대학교 자연사박물관은 자연에 대한 학교교육과 사회교육에 이바지할 목적으로 1969년 11월 20일 국내 최초로 설립되었다.",
+   "summary": "이화여자대학교 자연사박물관은 자연에 대한 학교교육과 사회교육에 이바지할 목적으로 1969년 11월 20일 국내 최초로 설립되었다. 자연사박물관은 동물, 식물, 광물, 암석, 화석의 다양한 표본들과 실제 자연 생태계를 재현해 놓은 디오라마 전시, 살아있는 동물을 관찰할 수 있는 생태 코너, 자연환경을 영상으로 접할 수 있는 영상시설 등의 최신 전시기법으로 전시하여 도심에서 자연을 쉽게 느낄 수 있는 자연사의 산 교육장이다. 자연사에 관련된 순수 학술 연구와 동물, 식물과 광물·암석·화석을 채집, 보존, 전시, 연구하고 멸종 위기 생물 종의 조사와 천연기념물, 국제보호조, 특산·희귀종, 신종 등 희귀한 표본을 다수 소장 및 전시하고 있다. 귀중한 자연사 표본은 항온·항습 시설을 갖춘 최신 시설의 수장고에 보관하…",
+   "hours": "월요일~금요일 / 2·4주차 토요일 10:00~16:00",
+   "closed": "1, 2, 7, 8월 토요일 / 1·3·5주차 토요일(3월~6월 / 9월~12월) / 매주 일요일 / 공휴일",
+   "fee": "무료",
+   "phone": "02-3277-4700",
+   "homepage": "https://cms.ewha.ac.kr",
+   "lat": 37.5617080471,
+   "lng": 126.9465802534,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://cms.ewha.ac.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/46/3305246_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/46/3305246_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/44/3305244_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/44/3305244_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/45/3305245_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/45/3305245_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-130950",
    "contentId": "130950",
    "contentTypeId": "14",
@@ -19416,6 +20614,122 @@
    "sourceUrl": "http://www.enjoymuseum.org",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
    "checkedAt": "2026-10-03"
+  },
+  {
+   "feedId": "TA-130951",
+   "contentId": "130951",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016152404",
+   "n": "전기박물관",
+   "a": "서울특별시 서초구 효령로72길 60 (서초동)",
+   "ar": "서울",
+   "r": "서초구",
+   "k": [
+    "문화시설",
+    "박물관",
+    "궁"
+   ],
+   "sub": "박물관",
+   "why": "한국전력은 1887년 경복궁에 처음으로 전기불이 켜진 이후 일제의 강점과 남북 분단, 그리고 한국전쟁이라는 민족상잔의 아픔을 국민들과 함께 이겨내면서 오늘날 우…",
+   "summary": "한국전력은 1887년 경복궁에 처음으로 전기불이 켜진 이후 일제의 강점과 남북 분단, 그리고 한국전쟁이라는 민족상잔의 아픔을 국민들과 함께 이겨내면서 오늘날 우리 사회의 중추적인 기간산업으로 자리하게 되었다. 20세기 격변하는 역사의 소용돌이 속에서도 꾸준히 성장을 거듭하여 국가 경제 발전의 원동력이 되어온 한국전력은 국가경제와 고객에 대한 무한 책임과 전력 문화 창달을 위하여 끊임없이 노력하고 있다. 한국전력은 지난 세기의 전기 역사를 체계적으로 정리하여 보존하고 사람들에게 전기의 소중함과 근대 과학의 발전 과정을 알려주기 위해 전기박물관을 건립했다. 전기박물관은 전력인의 혼이 담긴 소중한 전력문화유산을 후손에게 물려주고자 하는 전력인의 바람이다.",
+   "hours": "화요일~토요일 10:00~17:30",
+   "closed": "매주 일요일~월요일 / 법정공휴일",
+   "fee": "무료",
+   "phone": "02-2105-8190",
+   "homepage": "https://www.kepco.co.kr/art",
+   "lat": 37.4855903837,
+   "lng": 127.0280730687,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.kepco.co.kr/art",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/11/3540611_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/11/3540611_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/12/3540612_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/12/3540612_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/13/3540613_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/13/3540613_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-130958",
+   "contentId": "130958",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016145649",
+   "n": "한양대학교 박물관",
+   "a": "서울특별시 성동구 왕십리로 222 (사근동)",
+   "ar": "서울",
+   "r": "성동구",
+   "k": [
+    "문화시설",
+    "박물관",
+    "체험"
+   ],
+   "sub": "박물관",
+   "why": "한양대학교박물관은 1979년 개관 이래, 끊임없이 귀중한 문화유산을 발굴, 수집, 보존하고 연구하고 있다.",
+   "summary": "한양대학교박물관은 1979년 개관 이래, 끊임없이 귀중한 문화유산을 발굴, 수집, 보존하고 연구하고 있다. 2003년 이후 매년 특별전을 개최하고 각종 문화체험 및 문화강좌, 박물관 교육 사업을 진행하는 등 대학 캠퍼스를 넘어 지역사회 문화적 플랫폼이자 복합문화예술공간으로서의 역할을 다하고 있다. 건물은 1층부터 5층까지 있지만 실질적으로 전시 공간은 2층부터 시작한다. 2층에는 다양한 전자기기들의 과거와 현재의 모습을 만나볼 수 있다. 3층에는 다양한 주제의 특별전이 열리는 100여평 규모의 기획전시실이 마련되어 있다. 4층은 도자·서화·생활민속실은 소장품 가운데 대표적인 도자기, 서화, 민속품을 엄선하여 전시하고 있으며, 화려하고 섬세한 공예 기술을 비롯하여, 다양한 서화와 생활 도구를 통해 당대 사람들…",
+   "hours": "10:00~17:00 (입장 마감 16:30)",
+   "closed": "매주 일요일 / 법정공휴일",
+   "fee": "무료",
+   "phone": "02-2220-1394",
+   "homepage": "https://museumuf.hanyang.ac.kr",
+   "lat": 37.5551677748,
+   "lng": 127.0447214163,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://museumuf.hanyang.ac.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/29/3537629_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/29/3537629_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/30/3537630_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/30/3537630_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/31/3537631_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3537631_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
   },
   {
    "feedId": "TA-130978",
@@ -30381,6 +31695,62 @@
    ]
   },
   {
+   "feedId": "TA-229910",
+   "contentId": "229910",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016162558",
+   "n": "남산골공원서울천년타임캡슐광장",
+   "a": "서울특별시 중구 퇴계로34길 28 (필동2가)",
+   "ar": "서울",
+   "r": "중구",
+   "k": [
+    "문화시설",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "서울 정도(定都) 600년을 맞이한 오늘날의 시민 생활과 서울의 모습을 대표할 수 있는 문물 600점을 캡슐에 담아 400년 후인 서울 정도 1,000년에 후손…",
+   "summary": "서울 정도(定都) 600년을 맞이한 오늘날의 시민 생활과 서울의 모습을 대표할 수 있는 문물 600점을 캡슐에 담아 400년 후인 서울 정도 1,000년에 후손에게 문화유산으로 전하고자 함이다. 400년간의 시간 여행을 위해 지금도 긴 잠에 빠져 있는 타임캡슐은 서울 정도 600년을 기념해 서울시가 1994년 11월 29일 보신각 종을 본뜬 모양의 직경 1.3m, 높이 1.7m, 무게 2.5t의 크기인 캡슐을 특수 제작하였다. 이 캡슐에는 정치, 경제, 사회, 문화 등 현재 생활의 모든 것을 보여줄 문물 600여 점이 수장되어 있다. 캡슐이 묻힌 남산골 타임캡슐 광장은 1,500 평의 운석 분화구 모양으로 분지 형태를 이루고 있으며, 42m의 크기로 동그랗게 움푹 파인 곳에 타임캡슐이 묻혀있다. 또한 서울시…",
+   "hours": "- 하절기(4월~10월) 09:00~21:00- 동절기(11월~3월) 09:00~20:00",
+   "closed": "매주 월요일",
+   "fee": "무료",
+   "phone": "남산골한옥마을 관리사무소 02-2264-4412",
+   "lat": 37.5597239241,
+   "lng": 126.99327181,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 229910)",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/40/3528440_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/40/3528440_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/37/3528437_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/37/3528437_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/38/3528438_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/38/3528438_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-231962",
    "contentId": "231962",
    "contentTypeId": "14",
@@ -30545,6 +31915,63 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-231976",
+   "contentId": "231976",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016144212",
+   "n": "목인박물관 목석원",
+   "a": "서울특별시 종로구 창의문로5길 46-1 (부암동)",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "문화시설",
+    "박물관"
+   ],
+   "sub": "박물관",
+   "why": "2006년 종로구 인사동에서 개관한 목인박물관은 2019년 부암동으로 이전하여 목인박물관 목석원으로 재개관하였다.",
+   "summary": "2006년 종로구 인사동에서 개관한 목인박물관은 2019년 부암동으로 이전하여 목인박물관 목석원으로 재개관하였다. 목인이란, 전통 인물 및 각종 동물의 모습을 조각한 목 조각상을 말한다. 목인박물관 목석원에는 조선시대를 중심으로 근·현대에 이르기까지 상여장식용 조각 및 신당, 사찰을 포함한 각종 민속 목조각상들이 약 12,000여 점이 있으며, 이러한 자료들은 당시의 시대 및 생활상을 고증하고 연구하는데 중요한 기초 자료로 활용될 수 있다. 7개의 실내전시장에서는 세계 각국의 목인(木人)이 전시되어 있으며, 약 3,000여 평 규모의 야외전시장에서는 한국의 문인석(文人石), 무인석(武人石), 동자석(童子石)과 일본, 중국 등 아시아의 다채로운 석인(石人)들도 만나볼 수 있다.",
+   "hours": "- 하절기 10:30~19:00 (입장마감 18:00)- 동절기 10:30~18:00 (입장마감 17:00)",
+   "closed": "매주 월요일 / 설·추석 연휴",
+   "fee": "- 일반 12,000원- 19세 미만(13~18세) 8,000원- 36개월 이상~초등학생(3~12세) 6,000원※ 모든 관람객에게 음료 1잔을 제공",
+   "phone": "02-722-5055",
+   "homepage": "http://www.mokinmuseum.com",
+   "lat": 37.5890182499,
+   "lng": 126.9632912949,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.mokinmuseum.com",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/15/3540815_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/15/3540815_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/12/3540812_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/12/3540812_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/13/3540813_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/13/3540813_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
     }
    ]
   },
@@ -34122,6 +35549,119 @@
    ]
   },
   {
+   "feedId": "TA-250466",
+   "contentId": "250466",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016142721",
+   "n": "aT센터",
+   "a": "서울특별시 서초구 강남대로 27 (양재동)",
+   "ar": "서울",
+   "r": "서초구",
+   "k": [
+    "문화시설",
+    "전시"
+   ],
+   "sub": "전시장",
+   "why": "aT센터는 2002년 11월 개관 이래 농수산 식품 수출 종합 지원 기능을 수행하기 위해 다양한 국내외 전시 및 회의를 개최하고 있다.",
+   "summary": "aT센터는 2002년 11월 개관 이래 농수산 식품 수출 종합 지원 기능을 수행하기 위해 다양한 국내외 전시 및 회의를 개최하고 있다. 국제외식산업식자재박람회, 바이어 수출상담회, 대한민국 국제 요리 경연대회 등 국내외 고객이 직접 참여하는 다양한 행사와 우리 농식품 판로 확대를 위하여 지자체와 연계한 농수산물 전시회도 적극으로 유치하여 개최하고 있다. 또한, 농식품 비즈니스 창조·융합 HUB 기능 수행을 위해 스마트 스튜디오(사진·동영상·상세페이지 제작), 디지털 스튜디오(영상 스튜디오·크로마키 스튜디오·화상상담실)를 운영하고 있다.",
+   "hours": "홈페이지 참조",
+   "closed": "홈페이지 참조",
+   "phone": "02-6300-1114",
+   "homepage": "http://atcenter.at.or.kr",
+   "lat": 37.4673402849,
+   "lng": 127.040735573,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://atcenter.at.or.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/36/3554636_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/36/3554636_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/37/3554637_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/37/3554637_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/38/3554638_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/38/3554638_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-250469",
+   "contentId": "250469",
+   "contentTypeId": "14",
+   "modifiedtime": "20261016142413",
+   "n": "서울무역전시컨벤션센터(SETEC)",
+   "a": "서울특별시 강남구 남부순환로 3104",
+   "ar": "서울",
+   "r": "강남구",
+   "k": [
+    "문화시설",
+    "전시"
+   ],
+   "sub": "전시장",
+   "why": "서울무역전시컨벤션센터(SETEC)는 전문 전시회, 박람회, 국제회의, 이벤트, 문화공연 등 다양한 수요의 전시컨벤션 시설이다.",
+   "summary": "서울무역전시컨벤션센터(SETEC)는 전문 전시회, 박람회, 국제회의, 이벤트, 문화공연 등 다양한 수요의 전시컨벤션 시설이다. 국제적 수준의 전시 개최 등을 위한 공간 연출이 가능하고, 다양한 부대시설 및 지원시설과 편의시설 등을 구비하고 있다. 서울 강남의 교통요지에 자리한 SETEC은 총 세 개의 전시실과 다섯 개의 회의장으로 구성되어 있다. 대규모 전시뿐 아니라 중·소규모 회의 운영까지 가능하며 매년 70여 개의 전시회를 개최하고 있다. 전시 기간 동안은 협소한 주차장으로 인해 내부가 매우 혼잡하므로 지하철 3호선, 분당선 등 대중교통 및 주변 공영주차장을 활용하면 좀 더 편리하게 전시를 관람할 수 있다.",
+   "hours": "09:00~18:00※ 전시마다 상이하므로 전화문의 요망",
+   "closed": "연중무휴",
+   "fee": "※ 전시마다 상이하므로 전화문의 요망",
+   "phone": "02-2187-4600",
+   "homepage": "http://www.setec.or.kr",
+   "lat": 37.4957711209,
+   "lng": 127.0715255079,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.setec.or.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/29/3526629_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/29/3526629_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/30/3526630_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/30/3526630_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/31/3526631_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3526631_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2507011",
    "contentId": "2507011",
    "contentTypeId": "14",
@@ -34631,6 +36171,91 @@
      "rights": "AUTO"
     }
    ]
+  },
+  {
+   "feedId": "TA-252547",
+   "contentId": "252547",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016104408",
+   "n": "창의문(자하문)",
+   "a": "서울특별시 종로구 창의문로 118 (부암동)",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "관광지",
+    "성곽"
+   ],
+   "sub": "유적지",
+   "why": "서울성곽에는 동서남북에 4대문(四大門), 그 사이에 4소문(四小門)을 두었는데, 창의문은 서대문과 북대문 사이의 북소문(北小門)으로 ‘올바른 것을 드러나게 하다…",
+   "summary": "서울성곽에는 동서남북에 4대문(四大門), 그 사이에 4소문(四小門)을 두었는데, 창의문은 서대문과 북대문 사이의 북소문(北小門)으로 ‘올바른 것을 드러나게 하다’는 뜻이 있다. 그러나 창의문은 북소문으로 불린 적은 없었고, 이곳 계곡의 이름을 빌어 ‘자하문(紫霞門)’이라는 별칭으로 불려 왔다. 1413년(태종 13)에는 풍수학자 최양선이 “창의문과 숙정문은 경복궁의 양팔과 같으므로 길이 내어 지맥을 상하게 해서는 안 된다”라고 건의한 것을 받아들여 두 문을 닫고 소나무를 심어 통행을 금지하였다고 한다. 그러나 1422년(세종 4)에는 군인들의 출입통로로 이용할 수 있게 하였고, 1617년(광해군 9)에는 궁궐 보수 작업 때 석재의 운반을 위해 열어주도록 하였다는 『조선왕조실록』의 기록을 보면 당시에도 길 자…",
+   "hours": "[3월~4월] 07:00~18:00[5월~8월] 07:00~19:00[9월~10월] 07:00~18:00[11월~2월] 09:00~17:00",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "02-730-9924",
+   "homepage": "https://my.heritage.go.kr",
+   "lat": 37.5926044932,
+   "lng": 126.9664956513,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://my.heritage.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/88/3353988_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/88/3353988_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/83/3353983_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/3353983_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/84/3353984_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/84/3353984_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-252560",
+   "contentId": "252560",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016103427",
+   "n": "도라전망대",
+   "a": "경기도 파주시 장단면 제3땅굴로 310",
+   "ar": "경기",
+   "r": "파주시",
+   "k": [
+    "관광지",
+    "전망대"
+   ],
+   "sub": "공원",
+   "why": "도라산전망대는 송악산 OP 폐쇄에 따라 대체 신설되었으며, 북한의 생활을 바라볼 수 있는 남측의 최북단 전망대이다.",
+   "summary": "도라산전망대는 송악산 OP 폐쇄에 따라 대체 신설되었으며, 북한의 생활을 바라볼 수 있는 남측의 최북단 전망대이다. 수십대의 망원경이 설치되어 있어 개성의 송악산, 김일성 동상, 기정동, 개성시 변두리, 금암골(협동농장)등을 망원경을 통해 바라볼 수 있으며, 날씨가 맑은 날에는 개성공단까지 볼 수 있다. 도라산전망대는 민간인 통제구역 안에 위치하고 있기 때문에 일반 승용차의 출입이 제한된다. DMZ관광을 하기 위해서는 비무장지대 연계관광을 이용하는 것이 편리하다. 2018년 10월 신축이전된 도라산전망대는 실향민과 남북분단 현장을 보러 오는 외국인 관광객 등 연간 80여만 명 이상의 방문객이 찾는 명소이다. 또한 민간인 통제구역을 방문하기 위해서는 신분증을 필참 해야 하므로 잊지 말고 준비해야 한다. (출처…",
+   "hours": "[DMZ 평화관광 현장매표 및 예약발권]09:00~14:30※ 자세한 사항은 홈페이지 참조 또는 전화 문의 요망",
+   "closed": "매주 월요일 / 주중 공휴일 / 설·추석 당일※ DMZ 안보위협, 기상악화, 안전 확보 상황 발생 시 모든 일정이 중단될 수 있음",
+   "parking": "가능",
+   "phone": "DMZ 평화관광 매표소 031-954-0303 / 031-954-0640 DMZ 평화관광 안내 031-953-4744 / 031-950-1974",
+   "homepage": "https://dmz.paju.go.kr",
+   "lat": 37.9088307085,
+   "lng": 126.7047717833,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://dmz.paju.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17"
   },
   {
    "feedId": "TA-2535347",
@@ -36971,6 +38596,62 @@
    "sourceUrl": "https://dmz.paju.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
    "checkedAt": "2026-10-15"
+  },
+  {
+   "feedId": "TA-2569510",
+   "contentId": "2569510",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016013000",
+   "n": "교하동 고인돌 산림욕장",
+   "a": "경기도 파주시 교하로1290번길 91-1 (당하동)",
+   "ar": "경기",
+   "r": "파주시",
+   "k": [
+    "관광지",
+    "유적"
+   ],
+   "sub": "유적지",
+   "why": "선사시대의 유적인 고인돌과 지압로등 체육시설, 벚나무길로 조성되어 있다.",
+   "summary": "선사시대의 유적인 고인돌과 지압로등 체육시설, 벚나무길로 조성되어 있다. 동패동 교하중학교 인근 다율동과 당하동, 교하동이 인접한 구릉지대에는 100 여기가 넘는 고인돌이 무리를 이루고 있다. 그러나 군사시설 조성과정에서 고인돌 대부분이 파괴되었고, 20 여기만이 남게 되었으며 그 가운데 상태가 양호한 6기가 기념물로 지정되어 있다. 다율동에서 발굴된 고인돌은 이미 훼손된 상태였기 때문에 본래의 하부구조가 제대로 남아 있지 않지만, 탁자식으로 추정된다. 고인돌 주변에서 나온 유물로는 작은 토기조각 등이 있다. 일부의 고인돌은 현재 경기도청, 통일로, 온양민속박물관 등에 이전 복원되었다. 발굴된 당하동 고인돌의 대부분도 제자리를 벗어난 것들이다. 고인돌 가운데는 하부구조가 타원형의 적석으로 이루어진 것도 있다…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "phone": "파주시청 산림정원과 031-940-4611",
+   "homepage": "https://tour.paju.go.kr",
+   "lat": 37.7463623578,
+   "lng": 126.7405548723,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://tour.paju.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/30/3383530_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/30/3383530_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/27/3383527_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/27/3383527_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/28/3383528_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/28/3383528_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
   },
   {
    "feedId": "TA-2570218",
@@ -39612,6 +41293,35 @@
    ]
   },
   {
+   "feedId": "TA-2633936",
+   "contentId": "2633936",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016133215",
+   "n": "오이도 선사유적공원",
+   "a": "경기도 시흥시 서해안로 113-27 (정왕동)",
+   "ar": "경기",
+   "r": "시흥시",
+   "k": [
+    "관광지",
+    "공원",
+    "유적"
+   ],
+   "sub": "유적지",
+   "why": "오이도 유적은 우리나라 중부 서해안 지역의 대표적인 패총(조개무덤)으로서, 우리나라 선사시대 해안 생활상과 문화를 연구하는데 귀중한 자료를 제공해 준다.",
+   "summary": "오이도 유적은 우리나라 중부 서해안 지역의 대표적인 패총(조개무덤)으로서, 우리나라 선사시대 해안 생활상과 문화를 연구하는데 귀중한 자료를 제공해 준다. 2002년 국가사적 제441호로 지정된 후 문화재의 보존과 활용을 위해 오이도 선사유적공원을 조성하고 2018년 4월 10일에 개장했다. 오이도 선사유적공원은 다양한 선사문화 생활상을 엿볼 수 있는 선사체험마을과 움집 체험이 가능한 야영마을, 발굴터, 사냥터 등이 조성되어 있다. 더불어 신석기시대 오이도 패총의 중요성을 알려 주는 패총전시관, 오이도의 낙조를 감상할 수 있는 전망대, 산책하기 좋은 억새길 등 다양한 볼거리를 갖추고 있다.",
+   "hours": "- 09:00~18:00- 패총전시관 10:00~17:00※ 자세한 사항은 홈페이지 참고",
+   "closed": "1월 1일 / 설·추석 당일",
+   "parking": "가능",
+   "phone": "031-488-6909",
+   "homepage": "https://oidomuseum.siheung.go.kr",
+   "lat": 37.3430369521,
+   "lng": 126.6961682997,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://oidomuseum.siheung.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17"
+  },
+  {
    "feedId": "TA-2633971",
    "contentId": "2633971",
    "contentTypeId": "14",
@@ -40447,6 +42157,63 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/72/2649972_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/72/2649972_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2650230",
+   "contentId": "2650230",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016093232",
+   "n": "문래예술공장",
+   "a": "서울특별시 영등포구 경인로88길 5-4",
+   "ar": "서울",
+   "r": "영등포구",
+   "k": [
+    "관광지",
+    "마을"
+   ],
+   "sub": "체험문화시설",
+   "why": "서울특별시 창작공간 문래예술공장은 자생적 예술 마을인 문래창작촌을 포함하여 국내외 다양한 예술가들을 위한 창작지원센터로 2010년 1월 28일에 개관했다.",
+   "summary": "서울특별시 창작공간 문래예술공장은 자생적 예술 마을인 문래창작촌을 포함하여 국내외 다양한 예술가들을 위한 창작지원센터로 2010년 1월 28일에 개관했다. 문래동 철공소 거리의 옛 철재 상가 자리에 전문 창작공간으로 새롭게 건립되었으며, 공동작업실, 다목적 발표장을 비롯해 녹음실, 세미나실 등 창작 및 발표 활동을 위한 다양한 지원시설을 갖추고 있다. 장르의 경계를 넘어 자유로운 동시대 실험 예술을 지원하는 예술창작 플랫폼이다.",
+   "hours": "※ 시설 별 상이하므로 전화문의 요망",
+   "closed": "※ 시설 별 상이하므로 전화문의 요망",
+   "parking": "가능",
+   "phone": "02-2676-4300",
+   "homepage": "http://www.sfac.or.kr",
+   "lat": 37.51322701,
+   "lng": 126.9001444947,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.sfac.or.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/16/3466116_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/16/3466116_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/17/3466117_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/17/3466117_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/18/3466118_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/18/3466118_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -42533,7 +44300,7 @@
    "feedId": "TA-2675078",
    "contentId": "2675078",
    "contentTypeId": "28",
-   "modifiedtime": "20260928152512",
+   "modifiedtime": "20261016131243",
    "n": "초대길",
    "a": "서울특별시 강북구 4.19로 114 (수유동)",
    "ar": "서울",
@@ -42542,6 +44309,7 @@
     "레포츠",
     "둘레길"
    ],
+   "sub": "둘레길",
    "why": "초대길은 강북구에서 새로 조성한 둘레길 코스로, 북한산 둘레길 2구간 순례길 일부분인 구간이다.",
    "summary": "초대길은 강북구에서 새로 조성한 둘레길 코스로, 북한산 둘레길 2구간 순례길 일부분인 구간이다. 총 거리 1.3㎞이며, 그리 길지도, 난도가 높지 않은 코스이다. 초대검사 이준, 초대 국회의부장 신익희, 초대 대법원장 김병로, 초대 부통령 이시영 선생 등 대한민국 근현대사 초대 직위를 역임하신 분들의 묘역 길이다. 초대길은 우리 선조들의 독립정신과 민주주의 역사를 담은 근현대사기념관을 출발하여, 독립운동가이자 건국 초 국회의장을 지낸 신익희 선생의 묘역을 거쳐 신익희 선생의 장남 신하균 선생, 이준 열사 묘역 등을 거쳐 마지막으로 경술국치 후 형제들과 함께 재산을 모두 정리하고 만주로 건너가 독립운동에 매진했던 이시영 선생 묘역에서 마무리된다.",
    "hours": "상시 개방",
@@ -42553,34 +44321,34 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.gangbuk.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-01",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/64/2675064_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/64/2675064_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/60/4126060_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/60/4126060_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
      "usable": true,
-     "rights": "AUTO_NOEDIT"
+     "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/62/2675062_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/62/2675062_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/61/4126061_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/61/4126061_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
      "usable": true,
-     "rights": "AUTO_NOEDIT"
+     "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/63/2675063_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/63/2675063_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/62/4126062_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/62/4126062_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
      "usable": true,
-     "rights": "AUTO_NOEDIT"
+     "rights": "AUTO"
     }
    ]
   },
@@ -42747,6 +44515,63 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/55/3453155_image2_1.JPG",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/55/3453155_image2_1.JPG",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2683997",
+   "contentId": "2683997",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016101402",
+   "n": "카포레",
+   "a": "경기도 양평군 강하면 강남로 458",
+   "ar": "경기",
+   "r": "양평군",
+   "k": [
+    "관광지",
+    "숲"
+   ],
+   "sub": "숲/치유",
+   "why": "카포레는 건축가 곽희수와 사라 김정숙 패션 디자이너가 숲속의 캐비닛(CABINET IN FOREST)이라는 콘셉트로 설계한 모던한 건축물이다.",
+   "summary": "카포레는 건축가 곽희수와 사라 김정숙 패션 디자이너가 숲속의 캐비닛(CABINET IN FOREST)이라는 콘셉트로 설계한 모던한 건축물이다. 경기도 양평의 2,000여 평 대지에 갤러리와 카페, 야외공연장, 사계절 정원으로 이루어진 강, 바람, 나무, 공기, 햇살을 느낄 수 있는 아름다운 자연 속의 복합문화시설이다. 다양한 전시는 물론 음료도 함께 즐길 수 있어 가족과 친구, 연인과 함께 방문하기 좋은 곳이다.",
+   "hours": "- 10:00~20:00 (마지막 주문 19:30)- 갤리리관 10:00~19:00",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "0507-1317-5342",
+   "homepage": "https://www.instagram.com/ca_fore",
+   "lat": 37.5057174383,
+   "lng": 127.4353714123,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.instagram.com/ca_fore",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/82/3529982_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/3529982_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/81/3529981_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/81/3529981_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/83/3529983_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/3529983_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -43298,7 +45123,7 @@
    "feedId": "TA-2704696",
    "contentId": "2704696",
    "contentTypeId": "28",
-   "modifiedtime": "20250523133727",
+   "modifiedtime": "20261016092201",
    "n": "경춘선숲길",
    "a": "서울특별시 노원구 하계동 107-2",
    "ar": "서울",
@@ -43310,40 +45135,43 @@
    "sub": "둘레길",
    "why": "경춘선숲길은 옛 경춘선이 오가던 철로를 단장해 뉴트로 명소로 자리 잡고 있다.",
    "summary": "경춘선숲길은 옛 경춘선이 오가던 철로를 단장해 뉴트로 명소로 자리 잡고 있다. 일제강점기 때 경춘철도주식회사에 의해 1939년 7월 25일 사설철도로 개통하여 2010년 12월 20일을 71년간의 마지막 열차 운행을 마치고 폐선이 되었다. 버려졌던 폐철길을 2013년부터 단계적으로 공원으로 조성하여 경춘선의 추억을 되살리고 다시금 생명이 깃든 길을 만들어 천천히 쉬어가며 자연과 나란히 걸을 수 있는 경춘선숲길로 재탄생되었다. 구간마다 다양한 테마가 있어 지루할 틈이 없다. 날씨가 좋은 날 걷기에 아주 좋은 코스이다.",
-   "homepage": "https://parks.seoul.go.kr/parks/detailView.do?pIdx=1380",
-   "lat": 37.6316233163,
-   "lng": 127.0694164404,
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "phone": "경춘선숲길 방문자센터 02-3783-5977",
+   "homepage": "https://gil.seoul.go.kr",
+   "lat": 37.6315684182,
+   "lng": 127.0693996029,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://parks.seoul.go.kr/parks/detailView.do?pIdx=1380",
+   "sourceUrl": "https://gil.seoul.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-04",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/58/2650858_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/58/2650858_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/56/4126256_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/4126256_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
      "usable": true,
-     "rights": "AUTO_NOEDIT"
+     "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/57/2650857_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/57/2650857_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/58/4126258_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/58/4126258_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
      "usable": true,
-     "rights": "AUTO_NOEDIT"
+     "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/59/2650859_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/59/2650859_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/60/4126260_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/60/4126260_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
      "usable": true,
-     "rights": "AUTO_NOEDIT"
+     "rights": "AUTO"
     }
    ]
   },
@@ -44831,7 +46659,7 @@
    "feedId": "TA-2718737",
    "contentId": "2718737",
    "contentTypeId": "12",
-   "modifiedtime": "20261002154140",
+   "modifiedtime": "20261016092359",
    "n": "트릭아트스토리",
    "a": "인천광역시 제물포구 동화마을길 42 (송월동3가)",
    "ar": "인천",
@@ -44844,7 +46672,7 @@
    "sub": "미술관",
    "why": "송월동 동화마을에 있는 트릭아트스토리는 관객 참여형 놀이공간인 트릭아트 전시관이다.",
    "summary": "송월동 동화마을에 있는 트릭아트스토리는 관객 참여형 놀이공간인 트릭아트 전시관이다. 트릭아트스토리는 2층 규모로 2015년 개관했다. 송월동 동화마을 안에 있어, 동화마을의 인기 관광 코스이다. 이곳에는 45점의 트릭아트 벽화가 전시돼 있다. 트릭아트란 과학적인 화법과 특수 도료를 이용해 그림이 마치 살아 움직이는 것처럼 느껴지도록 입체적으로 그린 그림이다. 관람객들은 단순히 그림을 감상하는 것이 아니라 입체 그림에 들어가서 포즈를 취하고 사진을 찍는 등 재미있게 체험할 수 있다. 트릭아트 외에도 동작 인식 시스템과 거울미로, 블랙 아트 등 흥미로운 전시물이 있다.",
-   "hours": "09:00~18:00 (입장 마감 17:30",
+   "hours": "09:00~18:00 (입장 마감 17:30)",
    "closed": "매주 월요일 / 1월 1일 / 설·추석 연휴",
    "parking": "가능",
    "phone": "032-761-2631",
@@ -44854,7 +46682,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://ijcf.or.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-03",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/85/3529785_image2_1.jpg",
@@ -47226,6 +49054,63 @@
    ]
   },
   {
+   "feedId": "TA-2732172",
+   "contentId": "2732172",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016090436",
+   "n": "영덕레스피아",
+   "a": "경기도 용인시 기흥구 흥덕1로 43 (영덕동)",
+   "ar": "경기",
+   "r": "용인시",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "영덕레스피아는 용인 시민들의 여가활동 및 건강 증진 목적으로 조성된 녹색 공원이다.",
+   "summary": "영덕레스피아는 용인 시민들의 여가활동 및 건강 증진 목적으로 조성된 녹색 공원이다. 레스피아란 하수처리시설을 지하로 내리고 지상에는 아름다운 공원으로 조성해 놓은 공간을 말한다. 영덕레스피아에는 풋살구장(인조잔디), 농구장, 인라인스케이트장 등의 체육시설과 파고라, 놀이마운딩, 바닥분수, 산책로, 체력단련시설, 화장실 등의 다양한 편의시설이 조성되어 있다. 다만 풋살장은 예약 후 이용이 가능하다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "용인시청 하수운영과 031-6193-9384",
+   "homepage": "https://www.yongin.go.kr",
+   "lat": 37.2722258601,
+   "lng": 127.0669319171,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.yongin.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/55/3559755_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/55/3559755_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/54/3559754_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/54/3559754_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/56/3559756_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/3559756_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2732361",
    "contentId": "2732361",
    "contentTypeId": "12",
@@ -47948,6 +49833,63 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/41/4095241_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/41/4095241_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2733962",
+   "contentId": "2733962",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016090155",
+   "n": "수성동계곡",
+   "a": "서울특별시 종로구 옥인동 185-3 (옥인동)",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "관광지",
+    "계곡"
+   ],
+   "sub": "수변활동",
+   "why": "수성동계곡은 인왕산에서 흘러 내려와 청계천으로 합류하는 계곡으로, 계곡의 물소리가 크고 맑아 동네 이름이 조선 시대에 수성동(水聲洞)으로 불렸다고 한다.",
+   "summary": "수성동계곡은 인왕산에서 흘러 내려와 청계천으로 합류하는 계곡으로, 계곡의 물소리가 크고 맑아 동네 이름이 조선 시대에 수성동(水聲洞)으로 불렸다고 한다. 겸재 정선이 북악산과 인왕산의 경승 8경을 그려 담은 ‘장동팔경첩’에 속할 만큼 아름다운 곳으로 조선 시대 역사 지리서인 『동국여지비고』, 『한성지략』 등에 ‘명승지’로 소개된 곳이다. 또한 안평대군과 겸재 정선이 자주 찾아와 아름다운 수성동계곡을 바라보며 한문과 예술을 즐겼다고 한다. 1971년 옥인시범아파트가 들어서면서 수려한 경관을 잃어버렸으나 그로부터 40년 후, 아파트를 철거하고 문화재보호 구역으로 지정되면서 본래의 아름다움을 되찾게 되었다. 역사와 자연이 어우러져 멋진 숲과 시원한 계곡을 도심 속에서 만나 볼 수 있는 큰 매력이 있는 장소이다. …",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "02-2148-2844",
+   "homepage": "https://korean.visitseoul.net",
+   "lat": 37.5822252893,
+   "lng": 126.9631836038,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://korean.visitseoul.net",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/97/4126497_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/97/4126497_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/96/4126496_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/96/4126496_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/98/4126498_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/98/4126498_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -52946,6 +54888,119 @@
    ]
   },
   {
+   "feedId": "TA-2741592",
+   "contentId": "2741592",
+   "contentTypeId": "38",
+   "modifiedtime": "20261016130655",
+   "n": "수유시장",
+   "a": "서울특별시 강북구 도봉로67길 18 (수유동)",
+   "ar": "서울",
+   "r": "강북구",
+   "k": [
+    "시장·쇼핑",
+    "시장",
+    "전통시장"
+   ],
+   "sub": "시장",
+   "why": "1966년에 개장한 서울 시내의 5대 재래시장으로 건물형시장(수유시장), 골목형시장 (수유전통시장, 수유재래시장)으로 구성되어 있다.",
+   "summary": "1966년에 개장한 서울 시내의 5대 재래시장으로 건물형시장(수유시장), 골목형시장 (수유전통시장, 수유재래시장)으로 구성되어 있다. 점포를 쉽게 찾을 수 있도록 도로를 색깔로 구분하고 출입구에 상호를 적어놓았다. 정육, 생선, 야채, 간식, 먹거리를 함께 묶어서 구매 배달하는 비대면 장보기 서비스를 제공하고 있다.",
+   "hours": "점포 별로 상이함",
+   "closed": "점포 별로 상이함",
+   "parking": "가능",
+   "phone": "02-945-4506",
+   "lat": 37.6306857025,
+   "lng": 127.023252596,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2741592)",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/70/4126070_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/70/4126070_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/71/4126071_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/71/4126071_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/72/4126072_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/72/4126072_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2741594",
+   "contentId": "2741594",
+   "contentTypeId": "38",
+   "modifiedtime": "20261016131702",
+   "n": "수유중앙시장",
+   "a": "서울특별시 강북구 노해로17길 21 (수유동)",
+   "ar": "서울",
+   "r": "강북구",
+   "k": [
+    "시장·쇼핑",
+    "시장"
+   ],
+   "sub": "시장",
+   "why": "서울 강북구에 위치한 수유중앙시장은 서울시에서 선정한 서울 시내 5대 우수 시장 중 한 곳이다.",
+   "summary": "서울 강북구에 위치한 수유중앙시장은 서울시에서 선정한 서울 시내 5대 우수 시장 중 한 곳이다. 이곳은 건물형 시장으로 시작해 골목골목 작은 점포들도 들어서 지금 형태의 시장의 모습을 보이고 있다. 이곳은 농산물, 채소, 과일, 가공식품, 의류 등 다양한 업종으로 구성되어 다양한 물건을 구매할 수 있는 생활밀착형 전통시장이다. 수유중앙시장은 인심이 넘치고 저렴한 가격으로 제품을 구입할 수 있다는 장점도 가지고 있다.",
+   "hours": "점포 별로 상이함",
+   "closed": "점포 별로 상이함",
+   "parking": "가능",
+   "phone": "02-902-1353",
+   "lat": 37.6405677471,
+   "lng": 127.0212407141,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2741594)",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/81/4126081_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/81/4126081_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/82/4126082_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/4126082_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/83/4126083_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/4126083_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2741602",
    "contentId": "2741602",
    "contentTypeId": "38",
@@ -53294,7 +55349,7 @@
    "feedId": "TA-2743742",
    "contentId": "2743742",
    "contentTypeId": "38",
-   "modifiedtime": "20261015173307",
+   "modifiedtime": "20261016105457",
    "n": "공릉동도깨비시장",
    "a": "서울특별시 노원구 동일로180길 53 (공릉동)",
    "ar": "서울",
@@ -53315,7 +55370,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2743742)",
-   "checkedAt": "2026-10-16",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/71/4126271_image2_1.jpg",
@@ -59617,6 +61672,61 @@
    ]
   },
   {
+   "feedId": "TA-2755808",
+   "contentId": "2755808",
+   "contentTypeId": "28",
+   "modifiedtime": "20261016162757",
+   "n": "쌍용수상레저",
+   "a": "경기도 양평군 양평읍 오빈리 414-4",
+   "ar": "경기",
+   "r": "양평군",
+   "k": [
+    "레포츠"
+   ],
+   "sub": "운동장",
+   "why": "쌍용수상레저는 남한강변에서 수상레저를 즐길 수 있는 시설이다.",
+   "summary": "쌍용수상레저는 남한강변에서 수상레저를 즐길 수 있는 시설이다. 수상스키, 웨이크보드, 물놀이기구, 플라이피쉬, 모터보트, 웨이크 서핑 등 다양한 수상레저를 즐길 수 있다. 웨이크보드와 수상스키, 바나나보트, 바이퍼, 플라이 피쉬, 패키지, 땅콩, 수상레저 패키지, 날으는 바나나, 클럽 워터피아, 웨이크 스케이트 등 다양한 수상 레저를 즐길 수 있다. 이곳은 마스터 크래프트 프로스타, 스키인 보트, 베이 라이너 180 매직 등의 보트를 보유하고 있다.",
+   "hours": "06:00~20:00",
+   "closed": "연중무휴",
+   "phone": "0507-1384-8705",
+   "homepage": "http://www.ddwake.com",
+   "lat": 37.5041,
+   "lng": 127.4594,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.ddwake.com",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/54/4128554_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/54/4128554_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/55/4128555_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/55/4128555_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/56/4128556_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/4128556_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2755854",
    "contentId": "2755854",
    "contentTypeId": "28",
@@ -60065,6 +62175,61 @@
    ]
   },
   {
+   "feedId": "TA-2757537",
+   "contentId": "2757537",
+   "contentTypeId": "28",
+   "modifiedtime": "20261016164301",
+   "n": "고재낚시터",
+   "a": "경기도 양평군 지평면 고재길 108",
+   "ar": "경기",
+   "r": "양평군",
+   "k": [
+    "레포츠"
+   ],
+   "sub": "수변활동",
+   "why": "고재낚시터는 낚시와 글램핑을 함께 즐길 수 있는 곳이다.",
+   "summary": "고재낚시터는 낚시와 글램핑을 함께 즐길 수 있는 곳이다. 캠핑은 하지 않고 낚시만 할 수도 있다. 고재저수지는 아담한 분지형이라 아늑한 분위기를 느낄 수 있다. 저수지 중앙에는 분수가 있어서 수중에 산소를 공급해 주고 여름철에 수온을 떨어뜨리는 기능을 한다. 저수지 연안을 따라 돔 형태의 방갈로들이 들어서 있다. 돔방갈로는 다른 곳에는 없는 특이한 형태다. 그 앞으로 그늘막 텐트를 설치해 편하게 낚시를 즐길 수 있다.",
+   "hours": "[낚시터]- 상시 개방[글램핑]- 입실 13:00- 퇴실 11:00",
+   "closed": "연중무휴",
+   "phone": "0507-1333-1199",
+   "homepage": "http://gojefish.com/wp/http://gojefish.com/wp",
+   "lat": 37.4274394228,
+   "lng": 127.6062339504,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://gojefish.com/wp/http://gojefish.com/wp",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/87/4128587_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/87/4128587_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/83/4128583_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/4128583_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/84/4128584_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/84/4128584_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2757627",
    "contentId": "2757627",
    "contentTypeId": "28",
@@ -60275,6 +62440,61 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/66/2758566_image2_1.JPG",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/66/2758566_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2758029",
+   "contentId": "2758029",
+   "contentTypeId": "28",
+   "modifiedtime": "20261016163903",
+   "n": "대명낚시터",
+   "a": "경기도 양평군 단월면 소부록길 35",
+   "ar": "경기",
+   "r": "양평군",
+   "k": [
+    "레포츠"
+   ],
+   "sub": "수변활동",
+   "why": "대명낚시터는 양평과 홍천의 경계 소리산 자락에 자리하여 청정한 수질이 연중 유입되는 곳이다.",
+   "summary": "대명낚시터는 양평과 홍천의 경계 소리산 자락에 자리하여 청정한 수질이 연중 유입되는 곳이다. 농업용수 확보가 아닌 낚시만을 위해 만들어진 사유지 낚시터이다. 수심은 2~3m 정도의 평지지로 낚시하기에 알맞은 깊이이다. 90개 좌석으로 아담한 규모에 붕어 빼고는 다 있는 특수 어종 잡이터이다. 관리동 앞에는 휴게실과 취침실을 무료로 이용할 수 있다. 이곳 물고기는 자체 축영장에서 순치시켜 방류를 하여 방류량이 매우 많다. 양어장 직거래로 유통 마진을 최소화시켜 대량으로 들여오므로 가능한 일이다. 매일 고기를 방류하는데 요일별 방류 어종은 다음과 같다. 한 번에 물고기 100kg 정도씩을 방류한다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "phone": "0507-1309-3624",
+   "homepage": "https://cafe.naver.com/ydmfishing",
+   "lat": 37.5686693465,
+   "lng": 127.6741137113,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://cafe.naver.com/ydmfishing",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/70/4128570_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/70/4128570_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/69/4128569_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/69/4128569_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/71/4128571_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/71/4128571_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -62614,6 +64834,64 @@
    ]
   },
   {
+   "feedId": "TA-2763773",
+   "contentId": "2763773",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016160110",
+   "n": "경반계곡",
+   "a": "경기도 가평군 가평읍 경반리",
+   "ar": "경기",
+   "r": "가평군",
+   "k": [
+    "관광지",
+    "마을",
+    "계곡",
+    "폭포"
+   ],
+   "sub": "수변활동",
+   "why": "칼봉과 매봉 사이에 있는 수락폭포에서 시작되는 계곡으로서 경반사를 지나 경반천과 경반리 마을을 거쳐 보납산 부근에서 가평천과 합류하기까지 약 5㎞에 걸쳐 이어진…",
+   "summary": "칼봉과 매봉 사이에 있는 수락폭포에서 시작되는 계곡으로서 경반사를 지나 경반천과 경반리 마을을 거쳐 보납산 부근에서 가평천과 합류하기까지 약 5㎞에 걸쳐 이어진다. 칼봉과 매봉 사이를 흐르는 계곡물이 곳곳에 소(沼)를 이루고, 계곡 주변에 나무들이 무성하여 나무들 속에 계곡이 있는 것처럼 보이기도 한다. 용추계곡에 비하여 경관은 손색이 없지만 잘 알려져 있지 않아서 상대적으로 청정함을 유지하고 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "가평군관광안내소 031-582-8830",
+   "lat": 37.832994,
+   "lng": 127.469201,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2763773)",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/36/3510936_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/36/3510936_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/37/3510937_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/37/3510937_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/38/3510938_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/38/3510938_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2763788",
    "contentId": "2763788",
    "contentTypeId": "12",
@@ -63439,6 +65717,63 @@
    ]
   },
   {
+   "feedId": "TA-2764942",
+   "contentId": "2764942",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016164923",
+   "n": "북부수자원생태공원",
+   "a": "경기도 부천시 오정구 벌말로 220 (대장동) 220",
+   "ar": "경기",
+   "r": "부천시",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "북부수자원생태공원은 수질 개선을 목적으로 하수종말처리장을 건립하고, 수자원생태공원이라는 개념을 도입하여 혐오시설이 아닌 시민들을 위한 쉼터 공간으로 활용되고 있…",
+   "summary": "북부수자원생태공원은 수질 개선을 목적으로 하수종말처리장을 건립하고, 수자원생태공원이라는 개념을 도입하여 혐오시설이 아닌 시민들을 위한 쉼터 공간으로 활용되고 있다. 하수처리시설과 체육시설, 공원시설로 구성되어 있다. 또한 하수처리공정 현장견학, 공원견학 등도 가능하며, 자세한 사항은 홈페이지를 참조하는 것이 좋다.",
+   "hours": "10:00~16:00",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-678-4855~7",
+   "homepage": "http://www.bcstp.co.kr",
+   "lat": 37.5510230834,
+   "lng": 126.7684367152,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.bcstp.co.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/89/4002089_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/89/4002089_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/71/4002071_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/71/4002071_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/72/4002072_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/72/4002072_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2764949",
    "contentId": "2764949",
    "contentTypeId": "14",
@@ -63549,6 +65884,64 @@
    "sourceUrl": "http://cafe.naver.com/brownh9mvl",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
    "checkedAt": "2026-10-03"
+  },
+  {
+   "feedId": "TA-2765241",
+   "contentId": "2765241",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016155345",
+   "n": "묘적사계곡",
+   "a": "경기도 남양주시 와부읍 월문리",
+   "ar": "경기",
+   "r": "남양주시",
+   "k": [
+    "관광지",
+    "사찰",
+    "계곡"
+   ],
+   "sub": "유적지",
+   "why": "백봉산의 남쪽 골짜기에 신라 문무왕 때 원효대사가 창건하였다 전해지는 묘적사가 있다.",
+   "summary": "백봉산의 남쪽 골짜기에 신라 문무왕 때 원효대사가 창건하였다 전해지는 묘적사가 있다. 그 아래 길게 이어진 계곡을 묘적사계곡이라 부른다. 묘적사계곡은 경기도 남양주시 와부읍 월문리에서 묘적사 사찰에 이르는 산길을 따라 이어진다. 묘적교를 지나면서 본격적으로 계곡이 시작된다. 구불구불한 산길을 따라 구간에 따라 길이 좁았다, 넓어졌다가 반복되고, 곳곳에 시원한 물줄기가 흘러내리는 폭포도 형성되어 있어 찾는 이들이 많다. 2018년부터 시작된 하천 정원화 사업으로 묘적사 계곡도 변화하는 중이다. 묘적사 계곡은 수심이 깊지 않아 누구나 안전하게 물놀이를 즐길 수 있으며, 시원한 물줄기의 폭포 아래 수심이 성인 무릎 정도이다. 가족 단위의 물놀이를 즐기기에 좋다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "남양주시청 문화관광과 031-590-4783",
+   "homepage": "https://www.nyj.go.kr/culture",
+   "lat": 37.6184,
+   "lng": 127.2681,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.nyj.go.kr/culture",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/81/3500381_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/81/3500381_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/82/3500382_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/3500382_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/83/3500383_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/3500383_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
   },
   {
    "feedId": "TA-2765247",
@@ -63884,6 +66277,62 @@
    ]
   },
   {
+   "feedId": "TA-2765510",
+   "contentId": "2765510",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016162751",
+   "n": "청계광장",
+   "a": "서울특별시 중구 태평로1가 1",
+   "ar": "서울",
+   "r": "중구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "서울 중구 청계천이 시작되는 세종로에 조성된 자연 친화적인 생태환경을 갖춘 광장이다.",
+   "summary": "서울 중구 청계천이 시작되는 세종로에 조성된 자연 친화적인 생태환경을 갖춘 광장이다. 다양한 볼거리를 제공하고 접근성이 좋아 시민들과 외국인 관광객들이 즐겨 찾는 서울의 대표적인 관광 명소이다. 삼색 조명의 캔들 분수와 2단 폭포에서 4m 아래로 떨어지는지는 물줄기, 폭포 양옆에는 전국에서 돌을 가져온 8 도석으로 제작된 ‘팔석담’을 깔아 놓았다. 밤에는 광장의 조명들과 물이 어우러지는 환상적인 모습을 연출하여 밤에도 찾는 사람들이 많다. 청계천 전 구간을 1/100로 축소한 미니어처도 볼거리로 제공하고 있으며, 연중 다채로운 시민 문화행사 및 축제가 진행되는 곳이다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "02-2290-7111",
+   "homepage": "https://sisul.or.kr/open_content/cheonggye",
+   "lat": 37.5691,
+   "lng": 126.9775,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://sisul.or.kr/open_content/cheonggye",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/55/3385055_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/55/3385055_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/56/3385056_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/3385056_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/57/3385057_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/57/3385057_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2765519",
    "contentId": "2765519",
    "contentTypeId": "14",
@@ -64045,6 +66494,65 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/81/3551881_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/81/3551881_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2766152",
+   "contentId": "2766152",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016164339",
+   "n": "영월근린공원",
+   "a": "경기도 여주시 주내로 13 (상동)",
+   "ar": "경기",
+   "r": "여주시",
+   "k": [
+    "관광지",
+    "공원",
+    "숲",
+    "체험"
+   ],
+   "sub": "생활체험",
+   "why": "영월근린공원은 남한강 둔치에 자리 잡은 영월루를 중심으로 조성된 공원이다.",
+   "summary": "영월근린공원은 남한강 둔치에 자리 잡은 영월루를 중심으로 조성된 공원이다. 지역 주민들뿐 아니라 나들이객들을 위한 싱그러운 숲길은 아이들의 체험학습 장소로도 손색없다. 공원 숲길을 따라 걷다 보면 만나는 영월루와 다양한 우리 문화재들을 구경하는 재미가 있다. 영월근린공원의 자랑인 영월루 전망대에 오르면 한눈에 아름다운 남한강 풍경을 내려다볼 수 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "031-887-3563",
+   "homepage": "https://www.yeoju.go.kr/tour",
+   "lat": 37.2944189434,
+   "lng": 127.6476583509,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.yeoju.go.kr/tour",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/54/3540454_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/54/3540454_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/48/3540448_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/48/3540448_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/49/3540449_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/49/3540449_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -64724,6 +67232,63 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2767503",
+   "contentId": "2767503",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016162404",
+   "n": "계양산장미원",
+   "a": "인천광역시 계양구 경명대로955번길 18",
+   "ar": "인천",
+   "r": "계양구",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "인천광역시 계양구 계산동 계양산 일대에 조성된 대규모 장미 공원으로 면적 4,667㎡에 장미 67종 11,366주와 금낭화 등 야생화도 13종 12,000여 본…",
+   "summary": "인천광역시 계양구 계산동 계양산 일대에 조성된 대규모 장미 공원으로 면적 4,667㎡에 장미 67종 11,366주와 금낭화 등 야생화도 13종 12,000여 본에 달하는 꽃을 심어 놓았다. 벽천분수와 물레방아, 원두막과 수로 등 시설물도 다양하게 설치하여 여유 있게 산책하면서 마음껏 꽃밭을 감상할 수 있도록 마련하였다. 입구에 51면을 갖춘 주차장이 있고 대중 버스와의 연결도 수월하다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능요금 (무료)",
+   "phone": "032-450-5655",
+   "homepage": "https://www.gyeyang.go.kr",
+   "lat": 37.5470484,
+   "lng": 126.712737,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.gyeyang.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/85/3393585_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/85/3393585_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/84/3393584_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/84/3393584_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/86/3393586_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/86/3393586_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -65693,7 +68258,7 @@
    "feedId": "TA-2767621",
    "contentId": "2767621",
    "contentTypeId": "12",
-   "modifiedtime": "20260630184428",
+   "modifiedtime": "20261016160554",
    "n": "백운산전망대",
    "a": "인천광역시 영종구 운서동 산1-1",
    "ar": "인천",
@@ -65709,13 +68274,13 @@
    "closed": "연중무휴",
    "parking": "불가능",
    "phone": "인천종합 관광안내소 032-832-3031",
-   "homepage": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112609134178098",
-   "lat": 37.4924879905,
-   "lng": 126.5165819042,
+   "homepage": "https://itour.incheon.go.kr",
+   "lat": 37.4924338181,
+   "lng": 126.5165686474,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://itour.incheon.go.kr/ssst/ssst/detail.do?pgListMode=S&cotId=APD21112609134178098",
+   "sourceUrl": "https://itour.incheon.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-11",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/77/3364277_image2_1.jpg",
@@ -65728,7 +68293,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/74/3364274_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/3364274_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/3364274_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -65737,7 +68302,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/75/3364275_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/75/3364275_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/75/3364275_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -65750,7 +68315,7 @@
    "feedId": "TA-2767624",
    "contentId": "2767624",
    "contentTypeId": "12",
-   "modifiedtime": "20260630184428",
+   "modifiedtime": "20261016161041",
    "n": "세계평화의숲",
    "a": "인천광역시 영종구 신도시북로 31-35 (운서동)",
    "ar": "인천",
@@ -65767,13 +68332,42 @@
    "closed": "연중무휴",
    "parking": "가능",
    "phone": "032-760-7773",
-   "homepage": "https://cafe.naver.com/wpforest",
-   "lat": 37.4996600768552,
-   "lng": 126.480474753516,
+   "homepage": "https://www.yeongjong.go.kr/tour",
+   "lat": 37.4996600769,
+   "lng": 126.4804747535,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://cafe.naver.com/wpforest",
+   "sourceUrl": "https://www.yeongjong.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-11"
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/41/4024041_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/41/4024041_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/28/4024028_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/28/4024028_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/31/4024031_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/4024031_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
   },
   {
    "feedId": "TA-2767625",
@@ -65886,6 +68480,61 @@
    "sourceUrl": "https://shinsukngreen.co.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
    "checkedAt": "2026-10-11"
+  },
+  {
+   "feedId": "TA-2767753",
+   "contentId": "2767753",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016161921",
+   "n": "후암거실",
+   "a": "서울특별시 용산구 두텁바위로1가길 47 (후암동)",
+   "ar": "서울",
+   "r": "용산구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "후암거실은 서울역 인근에 위치한 곳으로, 나만의 공간에서 영화를 볼 수 있는 아늑한 공간이다.",
+   "summary": "후암거실은 서울역 인근에 위치한 곳으로, 나만의 공간에서 영화를 볼 수 있는 아늑한 공간이다. 남산과 서울타워를 바라보며 홈 시어터 시설(4K 지원 빔과 5.1 채널 스피커)이 완비된 공유거실에서 연인이나 친구와 함께 우리만의 시간을 보낼 수 있는 공간이다. 내부는 청록색 소파와 원목의 가구들로 눈길을 이끄는 세련된 인테리어로 꾸며놨다. 후암거실의 1층과 2층은 카페 후암연립으로 간단한 음료와 디저트, 주류를 주문할 수 있다. 남산타워가 한눈에 보이는 야경을 감상하며 조용하고 편안한 시간을 보낼 수 있다.",
+   "hours": "09:00~24:00",
+   "closed": "연중무휴",
+   "parking": "불가능",
+   "phone": "070-8839-6552",
+   "lat": 37.5484381303,
+   "lng": 126.9762336353,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2767753)",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/59/3542759_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/59/3542759_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/60/3542760_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/60/3542760_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/61/3542761_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/61/3542761_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
   },
   {
    "feedId": "TA-2767760",
@@ -67143,6 +69792,62 @@
    ]
   },
   {
+   "feedId": "TA-2768156",
+   "contentId": "2768156",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016155954",
+   "n": "백운공원",
+   "a": "인천광역시 부평구 십정동 186-419 (십정동)",
+   "ar": "인천",
+   "r": "부평구",
+   "k": [
+    "관광지",
+    "공원"
+   ],
+   "sub": "공원",
+   "why": "백운 공원은 한하운의 시인의 시비가 있는 곳이다, 한센병 시인으로 알려진 한하운 시인은 불운한 삶을 살았지만 인생의 희망을 잃지 않고 아름답게 승화한 시인으로 …",
+   "summary": "백운 공원은 한하운의 시인의 시비가 있는 곳이다, 한센병 시인으로 알려진 한하운 시인은 불운한 삶을 살았지만 인생의 희망을 잃지 않고 아름답게 승화한 시인으로 알려져 있다. 수원 세류동 나환자 정착촌 환자 600여 명이 부평에 정착하면서 한하운 시인도 인천과의 인연이 시작되었다. 그는 이곳에서 나환자들의 자활을 위한 성계원을 설립하였다. 금수현 가곡의 ‘파랑새’의 가사를 작사하기도 하였는데 그가 한센병에서 벗어나 자유로운 삶을 살고 싶어 했던 애절한 마음을 느낄 수 있다. 숱한 냉대를 받으며 살았던 인생이었지만 1960년 한센병 음성 판정을 받고 성계원을 나와서도 나환자들을 위해 봉사하면서 살다 십정동 자택에서 56세의 일기로 사망하였다. 그를 기리는 공원 안에는 축구장과 테니스장도 마련돼 있다. 지금은 부…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능요금 (무료)",
+   "phone": "032-509-8682",
+   "lat": 37.4822883618,
+   "lng": 126.7029146144,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2768156)",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/55/3395555_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/55/3395555_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/56/3395556_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/3395556_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/57/3395557_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/57/3395557_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2768158",
    "contentId": "2768158",
    "contentTypeId": "28",
@@ -67429,7 +70134,7 @@
    "feedId": "TA-2768191",
    "contentId": "2768191",
    "contentTypeId": "12",
-   "modifiedtime": "20260630212627",
+   "modifiedtime": "20261016150347",
    "n": "황룡사(인천)",
    "a": "인천광역시 검단구 봉수대로 1172-1",
    "ar": "인천",
@@ -67445,12 +70150,12 @@
    "closed": "연중무휴",
    "parking": "가능",
    "phone": "032-567-2533",
-   "lat": 37.5805775647,
-   "lng": 126.6640687601,
+   "lat": 37.580522906,
+   "lng": 126.6640545402,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2768191)",
-   "checkedAt": "2026-10-11",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/50/3530650_image2_1.jpg",
@@ -67462,8 +70167,8 @@
      "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/43/3530643_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/43/3530643_image3_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/42/3530642_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/42/3530642_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -67471,8 +70176,8 @@
      "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/44/3530644_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/44/3530644_image3_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/43/3530643_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/43/3530643_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -70056,6 +72761,33 @@
    ]
   },
   {
+   "feedId": "TA-2777952",
+   "contentId": "2777952",
+   "contentTypeId": "28",
+   "modifiedtime": "20261016142601",
+   "n": "심학산 둘레길",
+   "a": "경기도 파주시 산남동 산31",
+   "ar": "경기",
+   "r": "파주시",
+   "k": [
+    "레포츠",
+    "숲",
+    "둘레길"
+   ],
+   "sub": "등산",
+   "why": "심학산(해발 192m)의 길쭉한 능선 자락의 유순한 숲길이 이어지는 둘레길로 노면은 굴곡이 거의 없고 오르막과 내리막이 적어 가족들이 함께 이야기를 나누며 걷기…",
+   "summary": "심학산(해발 192m)의 길쭉한 능선 자락의 유순한 숲길이 이어지는 둘레길로 노면은 굴곡이 거의 없고 오르막과 내리막이 적어 가족들이 함께 이야기를 나누며 걷기 좋은 길이다. 배수지에서 시작하여 약천사, 수투바위, 배밭정자, 낙조전망대, 솔향기쉼터를 거쳐 다시 배수지로 돌아오는 순환형 코스이다. 총 6.8㎞로 약 2시간이 소요된다. 둘레길을 걷다 보면 만나는 낙조전망대에서는 한강과 임진강 하구와 일산과 파주, 인천대교와 강화도까지 조망할 수 있으며, 기골이 장대한 남자가 투구를 쓰고 있는 모습을 한듯한 수투바위도 볼 수 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "phone": "파주시청 산림정원과 031-940-4612",
+   "lat": 37.702461507,
+   "lng": 126.7042777151,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2777952)",
+   "checkedAt": "2026-10-17"
+  },
+  {
    "feedId": "TA-2778089",
    "contentId": "2778089",
    "contentTypeId": "28",
@@ -70099,6 +72831,62 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/00/2790600_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/00/2790600_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2778135",
+   "contentId": "2778135",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016142145",
+   "n": "오류동역 광장",
+   "a": "서울특별시 구로구 오류동 65-6",
+   "ar": "서울",
+   "r": "구로구",
+   "k": [
+    "관광지",
+    "산책"
+   ],
+   "sub": "공원",
+   "why": "서울 구로구 오류동역 광장은 지하철 1호선 오류동역 3번 출구 앞에 위치한 광장이다.",
+   "summary": "서울 구로구 오류동역 광장은 지하철 1호선 오류동역 3번 출구 앞에 위치한 광장이다. 오류동역을 바라보고 왼쪽에는 운동시설과 벤치, 산책로가 조성되어 지역 주민들이 만남과 휴식을 취할 수 있는 장소로 이용되고 있으며, 오른쪽에는 공영 주차장이 있다. 지역 주민들을 위한 프로그램과 바자회 등 다양한 종류의 행사가 진행되는 이벤트 장소인 동시에 지역 주민들을 위한 생활편의 공간으로 활용되고 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "오류1동 주민센터 02-2620-7450",
+   "lat": 37.495,
+   "lng": 126.844,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2778135)",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/10/3401710_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/10/3401710_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/11/3401711_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/11/3401711_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/12/3401712_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/12/3401712_image2_1.JPG",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -70489,6 +73277,61 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2779558",
+   "contentId": "2779558",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016135809",
+   "n": "북한산 족두리봉",
+   "a": "서울특별시 은평구 진흥로 325 (불광동)",
+   "ar": "서울",
+   "r": "은평구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "등산",
+   "why": "서울의 진산인 북한산은 은평구와 성북구, 강북구, 도봉구와 경기도 의정부시, 양주시, 고양시에 걸쳐 있다.",
+   "summary": "서울의 진산인 북한산은 은평구와 성북구, 강북구, 도봉구와 경기도 의정부시, 양주시, 고양시에 걸쳐 있다. 최고봉인 백운대와 동쪽의 인수봉, 남쪽의 만경대가 뻗어 내린 화려한 능선이 일 년 내내 등산객들의 발길을 끌어모은다. 족두리봉은 북한산 가장 남서쪽에 솟은 높이 370m의 봉우리다. 멀리서 보면 봉우리 모양이 족두리를 쓴 것처럼 보인다고 해서 붙은 이름인데, 한편으로는 독수리의 머리처럼 보인다고 하여 수리봉이라고도 불리며, 인수봉을 그대로 옮겨놓은 듯하다고 하여 작은 인수봉으로도 불린다. 불광역에서 출발하면 약 50분이면 족두리봉에 오를 수 있다. 시간은 짧지만, 난도는 조금 높다. 급경사의 계단은 물론 위험한 바위 구간이 있어 주의가 필요하다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "북한산국립공원관리사무소 02-909-0497",
+   "lat": 37.6107537013,
+   "lng": 126.9449361385,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2779558)",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/13/2796513_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/13/2796513_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/96/2796496_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/96/2796496_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/99/2796499_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/99/2796499_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -75460,6 +78303,33 @@
    ]
   },
   {
+   "feedId": "TA-2795956",
+   "contentId": "2795956",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016145948",
+   "n": "양평 창대리 고가",
+   "a": "경기도 양평군 양평읍 충신로 333-6",
+   "ar": "경기",
+   "r": "양평군",
+   "k": [
+    "관광지"
+   ],
+   "sub": "공원",
+   "why": "양평 창대리 고가는 약 200년 전에 세워진 경기지방의 전형적인 주거 모습을 간직한 가옥이다.",
+   "summary": "양평 창대리 고가는 약 200년 전에 세워진 경기지방의 전형적인 주거 모습을 간직한 가옥이다. 작은 언덕을 뒤로하여 수목이 우거진 주위와 앞으로 넓게 트인 농경지를 바라보는 좋은 자연경관 속에 동남향의 이상적인 방위를 택하여 세워졌다. 전체적으로 ‘ㅁ’자 형태를 이루고 있는데 ‘ㄱ’자의 안채를 중심으로 서남쪽 바깥으로 사랑채가 있고 그 옆으로 대문간이 있으며 대문간에서 직각으로 꺾여서 외양간·헛간 등이 딸려 있고 안채 뒤에도 따로 헛간 채가 마련되어 있다. 경기지방의 중류 가옥의 전형을 이룬다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "양평군청 문화유산팀 031-770-2317",
+   "homepage": "https://tour.yp21.go.kr",
+   "lat": 37.4710487454,
+   "lng": 127.5058950884,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://tour.yp21.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17"
+  },
+  {
    "feedId": "TA-2797014",
    "contentId": "2797014",
    "contentTypeId": "38",
@@ -75569,6 +78439,60 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2799774",
+   "contentId": "2799774",
+   "contentTypeId": "28",
+   "modifiedtime": "20261016133612",
+   "n": "파이브이모션",
+   "a": "경기도 가평군 설악면 자잠로282번길 72-95",
+   "ar": "경기",
+   "r": "가평군",
+   "k": [
+    "레포츠"
+   ],
+   "sub": "운동장",
+   "why": "파이브이모션은 아름다운 조경을 자랑하는 청평호를 따라 자리 잡은 자연친화적 캠핑장이다.",
+   "summary": "파이브이모션은 아름다운 조경을 자랑하는 청평호를 따라 자리 잡은 자연친화적 캠핑장이다. 전 사이트가 리버뷰라는 것이 이곳만의 특징이다. 사이트는 상층부와 하층부로 구성돼 있다. 유일하게 차박이 가능한 A 존은 5m와 7m의 파쇄석 구조이며, 사이트 간격은 1.5로 설계됐다. 화목난로와 화로대 사용이 쉬운 편이다. D 존은 5.5m와 6m의 나무 데크 사이트이며, 사이트 옆에 주차할 수 있는 구조다. 총 4개의 사이트가 있으며, 데크팩 종류는 나사형 데크팩만 사용이 가능하다. K 존은 킹 데크 사이트로 8m와 6m의 대형 데크 사이트다. 수영장, 화장실, 샤워장, 편의점 등 부대시설을 이용하기에 편리하다. B 존의 경우 상층부에 위치해 강가 바로 앞은 아니지만 넓고 탁 트인 뷰를 감상하기 좋다. 5m와 7m의…",
+   "hours": "- 입실 13:00- 퇴실 12:00",
+   "closed": "연중무휴",
+   "phone": "031-338-1998",
+   "lat": 37.7000068716,
+   "lng": 127.4999417503,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 2799774)",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/76/2799876_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/76/2799876_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/72/2799872_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/72/2799872_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/74/2799874_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/2799874_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -85954,6 +88878,63 @@
    ]
   },
   {
+   "feedId": "TA-2946113",
+   "contentId": "2946113",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016013000",
+   "n": "길상도예",
+   "a": "서울특별시 서초구 강남대로39길 15-9 (서초동) 101호",
+   "ar": "서울",
+   "r": "서초구",
+   "k": [
+    "관광지",
+    "체험"
+   ],
+   "sub": "생활체험",
+   "why": "길상도예공방은 일반인을 대상으로 하는 취미반과 전문가 과정으로 나뉘어있다.",
+   "summary": "길상도예공방은 일반인을 대상으로 하는 취미반과 전문가 과정으로 나뉘어있다. 취미반 수업 중 도자기 원데이 클래스는 총 2시간 정도 작업이 진행된다. 5인 이상의 단체체험은 따로 문의를 해야 하며, 대부분 4인 이하의 인원은 소수정예 클래스로 진행된다. 1:1 또는 1:2~4로 진행되기 때문에 처음 도자기를 접해보더라도 어렵지 않게 최대한 원하는 형태로 제작해 볼 수 있다. 제작기법은 물레성형과 핸드빌딩이 있으며 원하는 도자기의 디자인에 따라 소요되는 시간이 다르므로 개수는 1인당 1개에서 최대 2개까지 가능하다. 완성품은 4주 정도의 기간이 소요되고 직접 가져가거나 택배발송도 가능하다. 길상도예공방은 에서 BTS가 체험한 곳으로 아미들에게 유명한 도예공방이다. 지민은 뷔에게, 진은 정국에게, 뷔는 슈가에게 …",
+   "hours": "10:00~22:00",
+   "closed": "매주 월요일~화요일",
+   "parking": "가능",
+   "phone": "0507-1415-8203",
+   "homepage": "https://www.instagram.com/gilsang_ceramics",
+   "lat": 37.4857850368,
+   "lng": 127.0324262666,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.instagram.com/gilsang_ceramics",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/05/2947505_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/05/2947505_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/50/2946050_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/50/2946050_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/06/2947506_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/06/2947506_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-2946229",
    "contentId": "2946229",
    "contentTypeId": "38",
@@ -88044,7 +91025,7 @@
    "feedId": "TA-2998800",
    "contentId": "2998800",
    "contentTypeId": "12",
-   "modifiedtime": "20260728135634",
+   "modifiedtime": "20261016225317",
    "n": "영흥수목원",
    "a": "경기도 수원시 영통구 영통로 435 (영통동)",
    "ar": "경기",
@@ -88057,17 +91038,18 @@
    ],
    "sub": "수목원",
    "why": "영흥수목원은 영흥숲공원이 둘러싸고 있는 산지 지형을 살려 조성된 식물원이다.",
-   "summary": "영흥수목원은 영흥숲공원이 둘러싸고 있는 산지 지형을 살려 조성된 식물원이다. 수목원에 들어서면 푸른 잔디밭과 다양한 테마의 숲과 공원을 볼 수 있고 이곳의 랜드마크인 온실에는 이국적인 느낌을 주는 독특한 식물을 볼 수 있다. 또한 시민들이 쉬어갈 수 있는 방문자센터에서는 수목원을 조망하며 카페를 이용하거나 다양한 전시와 교육 프로그램을 볼 수 있다. 또한 일정 기간 동안 야간개장을 운영하는데 해가 질 무렵에 조명과 어우러진 수목원의 또 다른 매력을 느낄 수 있다.",
+   "summary": "영흥수목원은 영흥숲공원이 둘러싸고 있는 산지 지형을 살려 조성된 식물원이다. 수목원에 들어서면 푸른 잔디밭과 다양한 테마의 숲과 공원을 볼 수 있고 이곳의 랜드마크인 온실에서는 이국적인 느낌을 주는 독특한 식물을 볼 수 있다. 또한 시민들이 쉬어갈 수 있는 방문자센터에서는 수목원을 조망하며 카페를 이용하거나 다양한 전시와 교육 프로그램을 볼 수 있다. 또한 일정 기간 동안 야간개장을 운영하는데 해가 질 무렵에 조명과 어우러진 수목원의 또 다른 매력을 느낄 수 있다.",
    "hours": "09:30~17:30 (매표 마감 17:00)",
-   "closed": "매주 월요일",
+   "closed": "매주 월요일 (단, 월요일이 공휴일인 경우 그 다음 첫 번째 평일)",
    "parking": "가능",
    "phone": "031-369-2390",
+   "homepage": "https://www.suwon.go.kr",
    "lat": 37.2595807421,
    "lng": 127.0730899691,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
-   "sourceLabel": "한국관광공사 TourAPI (contentId 2998800)",
-   "checkedAt": "2026-10-09",
+   "sourceUrl": "https://www.suwon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/47/4093547_image2_1.jpg",
@@ -88079,17 +91061,17 @@
      "rights": "AUTO_NOEDIT"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/65/3430265_image2_1.jpeg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/65/3430265_image2_1.jpeg",
-     "licenseCode": "Type1",
-     "license": "공공누리 1유형(출처표시)",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/43/4093543_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/43/4093543_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
      "usable": true,
-     "rights": "AUTO"
+     "rights": "AUTO_NOEDIT"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/41/4093541_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/41/4093541_image2_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/44/4093544_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/44/4093544_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -89954,6 +92936,66 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3012119",
+   "contentId": "3012119",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016134400",
+   "n": "황금산문화공원",
+   "a": "경기도 남양주시 경춘로 434 (다산동)",
+   "ar": "경기",
+   "r": "남양주시",
+   "k": [
+    "관광지",
+    "공원",
+    "숲",
+    "산책",
+    "체험"
+   ],
+   "sub": "생활체험",
+   "why": "황금산문화공원은 해발 128.6m의 황금산 등산로 초입에 위치한 도심에 숨겨진 공원이자 자연휴양림이다.",
+   "summary": "황금산문화공원은 해발 128.6m의 황금산 등산로 초입에 위치한 도심에 숨겨진 공원이자 자연휴양림이다. 황골약수터를 시작으로 주차장을 포함하여 숲속산책로, 숲속체험장, 생태 연못 등 총 17개의 특별한 지점으로 이루어져 있다. 조경이 잘 되어 있는 잔디마당과 나무 데크로 이어진 산책로는 남녀노소 누구나 이용하기에 좋다. 이 공원은 황금산과 이어진 6개 코스의 등산로가 연결되어 있으며, 모든 등산코스는 왕복 40분에서 1시간 정도 소요된다. 경사가 완만하여 가볍게 산책을 즐기기에도 좋으며, 황금산 정상에서는 저 멀리로 올림픽 대교와 롯데타워까지 조망이 가능하다. 황금산문화공원 초입에 위치한 유아숲체험장은 관내 보육 시설 및 가족단위 이용객들을 대상으로 다양한 프로그램을 진행하는 장소이다. 매년 이용객이 늘면서…",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "공원관리과 031-590-5354",
+   "homepage": "https://www.nyj.go.kr/culture",
+   "lat": 37.6079216371,
+   "lng": 127.1620455735,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.nyj.go.kr/culture",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/71/3002171_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/71/3002171_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/61/3002161_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/61/3002161_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/62/3002162_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/62/3002162_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -92148,6 +95190,62 @@
    ]
   },
   {
+   "feedId": "TA-3019162",
+   "contentId": "3019162",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016172919",
+   "n": "서순라길",
+   "a": "서울특별시 종로구 종로 150-3 (종로3가)",
+   "ar": "서울",
+   "r": "종로구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "둘레길",
+   "why": "서순라길은 서울 종로구 종로 150-3에서 권농동 26까지를 잇는 도로로, 옛 조선의 치안을 담당하는 순라군이 다니던 길이다.",
+   "summary": "서순라길은 서울 종로구 종로 150-3에서 권농동 26까지를 잇는 도로로, 옛 조선의 치안을 담당하는 순라군이 다니던 길이다. 종묘를 순찰하던 순라청의 서쪽에 위치한다고 하여 ‘서순라길’로 부른다. 주위에 익선동, 인사동, 북촌, 삼청동 등 전통적인 인기 관광 지역 있고, 서순라길 내에는 식당, 카페, 공방 등 즐길 거리가 많다. 특히 봄에 꽃이 피고, 가을에 단풍이 들면 돌담의 풍경이 아름다워 데이트 코스, 가족 나들이로 많이 찾는다. 거리를 걸으면서 멋진 사진을 남길 수 있는 곳들이 많다.",
+   "hours": "상시",
+   "closed": "연중무휴",
+   "parking": "불가 (인근 공영주차장 이용)",
+   "phone": "02-2148-1114",
+   "homepage": "https://korean.visitseoul.net",
+   "lat": 37.5703668702,
+   "lng": 126.9942021769,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://korean.visitseoul.net",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/56/3019156_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/3019156_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/57/3019157_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/57/3019157_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/58/3019158_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/58/3019158_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-3022959",
    "contentId": "3022959",
    "contentTypeId": "38",
@@ -93056,6 +96154,118 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/84/3002584_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/84/3002584_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3035809",
+   "contentId": "3035809",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016133954",
+   "n": "안산다문화음식거리",
+   "a": "경기도 안산시 단원구 원곡동 780-4",
+   "ar": "경기",
+   "r": "안산시",
+   "k": [
+    "관광지",
+    "마을"
+   ],
+   "sub": "음식거리",
+   "why": "안산역 1번 출구에서 약 600m 앞에는 안산다문화마을특구가 있다.",
+   "summary": "안산역 1번 출구에서 약 600m 앞에는 안산다문화마을특구가 있다. 안산시는 세계 110여 나라에서 온 8만여 명의 외국인이 살고 있는데 다문화마을특구는 전체 주민 중 88%가 외국인이라고 한다. 이러한 다문화마을특구에 위치한 다문화음식거리는 중국, 베트남, 인도, 네팔, 인도네시아, 태국, 러시아, 우즈베키스탄, 파키스탄, 캄보디아, 스리랑카, 일본 등 10여 개 국가의 이주민들이 각국의 전통음식과 문화를 보여주고 있다. 다문화음식거리에는 다양한 나라들의 길거리음식, 동남아 열대과일, 식재료 등을 판매하는 상점들이 즐비하고 음식뿐 아니라 다양한 생필품들을 판매하는 곳도 많아 이색적인 음식과 문화를 체험할 수 있다. 다문화음식거리가 있는 원곡본동주민센터 옆에 자리한 외국인주민센터에는 세계 각국의 방향과 거리…",
+   "hours": "매장별 상이",
+   "closed": "매장별 상이",
+   "parking": "가능",
+   "phone": "안산역 관광안내소 070-4740-2580",
+   "lat": 37.329,
+   "lng": 126.7904,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 3035809)",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/94/3002594_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/94/3002594_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/99/3002599_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/99/3002599_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/01/3002601_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/01/3002601_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3036140",
+   "contentId": "3036140",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016172623",
+   "n": "수암봉",
+   "a": "경기도 안산시 상록구 수암동 산 5-1",
+   "ar": "경기",
+   "r": "안산시",
+   "k": [
+    "관광지"
+   ],
+   "sub": "등산",
+   "why": "수암봉(수리산)은 안산시, 군포시, 안양시, 시흥시 등 4개 시에 걸쳐 있는 경기도를 대표하는 산으로 본래의 산 이름은 독수리와 같다고 하여 독수리봉이라 불렀는…",
+   "summary": "수암봉(수리산)은 안산시, 군포시, 안양시, 시흥시 등 4개 시에 걸쳐 있는 경기도를 대표하는 산으로 본래의 산 이름은 독수리와 같다고 하여 독수리봉이라 불렀는데, 조선 말엽에 이르러 산봉이 수려하므로 수암봉이라 칭하였다 한다. 수암봉(수리산) 대부분은 얇은 토양층으로 덮여 있고 정상 부분은 암석이 노출되어 있어 가파른 절벽을 형성하고 있으며, 일부 골짜기를 따라서는 암괴류가 나타나기도 한다. 해발 398m로 등반코스도 다양하게 개발되어 있으며, 산 정상에 오르면 안산시뿐만 아니라 시흥시까지 보이는 탁 트인 전망이 장관을 이룬다. 곳곳에 정자, 벤치, 체육시설 등이 설치되어 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "031-8008-8265",
+   "homepage": "https://www.ansan.go.kr",
+   "lat": 37.3641,
+   "lng": 126.8915,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.ansan.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/34/3036134_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/34/3036134_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/35/3036135_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/35/3036135_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/36/3036136_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/36/3036136_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -96613,7 +99823,7 @@
    "feedId": "TA-3076051",
    "contentId": "3076051",
    "contentTypeId": "12",
-   "modifiedtime": "20260727143809",
+   "modifiedtime": "20261016225919",
    "n": "일월수목원",
    "a": "경기도 수원시 장안구 일월로 61 (천천동)",
    "ar": "경기",
@@ -96628,7 +99838,7 @@
    "sub": "전시장",
    "why": "일월수목원은 경기도 수원시 일월호수공원 내에 위치한 도심형 거점 수목원으로 2023년 5월 개관했다.",
    "summary": "일월수목원은 경기도 수원시 일월호수공원 내에 위치한 도심형 거점 수목원으로 2023년 5월 개관했다. 2,100여 종의 다양한 식물을 보유하고 있으며 다산정원과 숲정원, 침엽수원, 초지원, 건조정원, 전시온실 등 16개의 주제 정원을 조성해 계절마다 다양한 식물을 감상할 수 있다. 식물의 수집과 보전, 연구를 비롯해 자연과 사람을 연결하는 다양한 전시와 교육 프로그램을 운영하고 있다. 하루 두 차례 진행되는 수목원 해설 프로그램을 통해 식물에 대한 이해를 높일 수 있으며 연령별 체험과 교육 프로그램도 함께 제공한다. 도심 속에서 자연을 가까이 만나며 휴식과 배움, 여가를 함께 즐길 수 있는 공간이다.",
-   "hours": "09:30~17:30 (매표 마감 17:00)",
+   "hours": "09:30~17:30 (매표 및 입장 마감 17:00)",
    "closed": "매주 월요일 (단, 월요일이 공휴일인 경우 그 다음날)",
    "parking": "가능",
    "phone": "031-369-2380",
@@ -96638,7 +99848,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.suwon.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-09",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/85/4092785_image2_1.JPG",
@@ -96874,6 +100084,64 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/50/3053050_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/50/3053050_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-3079629",
+   "contentId": "3079629",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016132534",
+   "n": "진달래동산",
+   "a": "경기도 부천시 원미구 춘의동 산21-1",
+   "ar": "경기",
+   "r": "부천시",
+   "k": [
+    "관광지",
+    "박물관",
+    "도서관",
+    "공원"
+   ],
+   "sub": "도서관",
+   "why": "부천종합운동장을 품고 있는 부천의 주산인 원미산(167m)은 부천시민의 등산지와 휴식처로 각광을 받고 있다.",
+   "summary": "부천종합운동장을 품고 있는 부천의 주산인 원미산(167m)은 부천시민의 등산지와 휴식처로 각광을 받고 있다. 이에 부천시는 부천시립원미도서관 뒤편 3만여㎡에 진달래동산을 비롯하여 박물관, 수영장, 눈썰매장, 교통공원, 야외극장 등 다양한 문화레저 시설과 종합운동장과 인공 폭포, 인공 암벽, 국궁장 등의 시설을 갖춘 큰 규모의 공원을 조성하여 2001년 3월 25일 개원하였다. 원미산진달래동산은 봄이면 3만 여 그루의 진달래꽃이 군락을 이루며 피어 있어 장관을 이룬다. 이곳에서 매년 4월에 열리는 원미산진달래축제는 공식 엠블램을 개발해 사용하고 있어 지역 축제로서의 이미지 구축에도 도움을 주고 있다. 지하철 7호선 부천종합운동장역에서 450M 거리에 위치해 있으며 주변에는 부천활박물관, 원미공원이 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "phone": "부천시청 녹지과 032-625-3578",
+   "homepage": "https://bucheon.go.kr",
+   "lat": 37.4999,
+   "lng": 126.8003,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://bucheon.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/28/3079628_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/28/3079628_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/22/3079622_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/22/3079622_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/23/3079623_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/23/3079623_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -119242,6 +122510,62 @@
    ]
   },
   {
+   "feedId": "TA-4127711",
+   "contentId": "4127711",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016100639",
+   "n": "법룡사",
+   "a": "서울특별시 강남구 광평로31길 56 (수서동)",
+   "ar": "서울",
+   "r": "강남구",
+   "k": [
+    "관광지"
+   ],
+   "sub": "유적지",
+   "why": "전국비구니회에 위치한 법룡사는 지역주민을 위한 포교도량이다.",
+   "summary": "전국비구니회에 위치한 법룡사는 지역주민을 위한 포교도량이다. 웅장한 규모의 만불전은 법룡사의 자랑이기도 하다. 법당 주위로 지장전, 관음전이 있다. 회관 건물은 광수산 협곡에 자리한 배의 모습이다. 아미타불(무량광불)이 계신 피안을 향해 항해하는 반야용선의 모습이라 할 수 있으며 그 항해실이 만불전이다. 만불전은 정각 이루신 석가모니 부처님을 주불로 모시고, 중생의 병고를 살펴 치료해 주시는 약사여래를 좌협시불로 극락정토주불인 아미타여래를 우협시불로 모시고 있다.",
+   "hours": "04:30~18:00",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "02-3411-8104",
+   "homepage": "https://kbhiksuni.org/beopyongsa-temple",
+   "lat": 37.4861505163,
+   "lng": 127.0883687527,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://kbhiksuni.org/beopyongsa-temple",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/59/3463059_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/59/3463059_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/56/3463056_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/3463056_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/57/3463057_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/57/3463057_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-433042",
    "contentId": "433042",
    "contentTypeId": "14",
@@ -122600,6 +125924,65 @@
    ]
   },
   {
+   "feedId": "TA-756618",
+   "contentId": "756618",
+   "contentTypeId": "12",
+   "modifiedtime": "20261016114837",
+   "n": "상동호수공원",
+   "a": "경기도 부천시 원미구 길주로 16 (상동)",
+   "ar": "경기",
+   "r": "부천시",
+   "k": [
+    "관광지",
+    "공원",
+    "산책",
+    "호수"
+   ],
+   "sub": "호수",
+   "why": "상동호수공원은 부천시에서 가장 큰 면적의 공원이다.",
+   "summary": "상동호수공원은 부천시에서 가장 큰 면적의 공원이다. 인공호수를 중심으로 외곽에는 2.5km의 산책로가 조성되어 시원한 물줄기와 함께 가벼운 운동을 즐길 수 있다. 계절별 아름다운 꽃경관을 즐길 수 있으며 주요시설로는 분수, 광장, 들꽃마당, 정원텃밭, 생태논, 전통농경문화센터, 수피아 호수식물원 등이 있으며 배드민턴장, 게이트볼장, 농구장 등의 체육시설 등으로 꾸며져 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "032-324-2019",
+   "homepage": "http://www.sdlakepark2019.com",
+   "lat": 37.5061237467,
+   "lng": 126.7441497806,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.sdlakepark2019.com",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/96/4119296_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/96/4119296_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/90/3037390_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/90/3037390_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/91/3037391_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/91/3037391_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-761264",
    "contentId": "761264",
    "contentTypeId": "12",
@@ -125286,7 +128669,7 @@
    "feedId": "TA-E-3488421",
    "contentId": "3488421",
    "contentTypeId": "15",
-   "modifiedtime": "20261001144253",
+   "modifiedtime": "20261016155150",
    "name": "2026 국립극장 쏙쏙들이페스티벌",
    "start_date": "2026-03-14",
    "end_date": "2026-12-26",
@@ -125305,11 +128688,11 @@
    "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
    "lat": 37.7832839326,
    "lng": 126.6946859929,
-   "checkedAt": "2026-10-02",
+   "checkedAt": "2026-10-17",
    "photos": [
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/67/4116867_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/67/4116867_image3_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/50/4127750_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/50/4127750_image3_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -126576,51 +129959,6 @@
    ]
   },
   {
-   "feedId": "TA-E-3343831",
-   "contentId": "3343831",
-   "contentTypeId": "15",
-   "modifiedtime": "20261002173900",
-   "name": "2026 대한민국 AI 콘텐츠 어워즈",
-   "start_date": "2026-10-15",
-   "end_date": "2026-10-16",
-   "place_name": "수원 롯데시네마",
-   "address": "경기도 수원시 권선구 세화로 134 (서둔동) 4층",
-   "region": "경기",
-   "city": "수원시",
-   "hours": "11:00~21:00",
-   "fee": "무료",
-   "organizer": "경기도",
-   "phone": "070-7575-2351",
-   "why": "경기도가 주최하고 경기콘텐츠진흥원이 주관하는 「2026 대한민국 AI 콘텐츠 어워즈」는 생성형 AI 기술과 영상 콘텐츠의 만남을 통해 새로운 창작의 가능성을 발…",
-   "summary": "경기도가 주최하고 경기콘텐츠진흥원이 주관하는 「2026 대한민국 AI 콘텐츠 어워즈」는 생성형 AI 기술과 영상 콘텐츠의 만남을 통해 새로운 창작의 가능성을 발견하고, AI 시대 콘텐츠 산업의 미래를 함께 모색하는 행사이다. 오는 10월 15일부터 16일까지 롯데시네마 수원에서 열리는 이번 어워즈에서는 국내외에서 출품된 다양한 AI 영상 작품을 스크린으로 만나볼 수 있으며, 작품 상영뿐 아니라 창작자와 직접 이야기를 나누는 GV, AI와 콘텐츠 산업의 현재와 미래를 논의하는 산업 포럼, 우수 작품을 선정하는 시상식 등 다채로운 프로그램이 진행된다. 또한 영화 관람과 전문 프로그램을 넘어 관객이 보다 가까이에서 AI 콘텐츠를 경험하고 즐길 수 있는 팝업스토어 등 참여형 콘텐츠도 함께 마련된다. 기술이 창작자의…",
-   "sub": "행사",
-   "source_url": "https://www.gcon.or.kr/KAICA2026/index.html",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.2641627269,
-   "lng": 126.997385539,
-   "checkedAt": "2026-10-03",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/34/4111534_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/34/4111534_image3_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/33/4111533_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/33/4111533_image2_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-790211",
    "contentId": "790211",
    "contentTypeId": "15",
@@ -127436,6 +130774,64 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/13/4126813_image2_1.JPG",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/13/4126813_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-E-4127713",
+   "contentId": "4127713",
+   "contentTypeId": "15",
+   "modifiedtime": "20261016092505",
+   "name": "《소장품, 시대의 장면들》",
+   "start_date": "2026-10-16",
+   "end_date": "2026-12-06",
+   "place_name": "아르코미술관 제1,2전시실",
+   "address": "서울특별시 종로구 동숭길 3 (동숭동)",
+   "region": "서울",
+   "city": "종로구",
+   "hours": "11:00~19:00",
+   "fee": "무료",
+   "organizer": "한국문화예술위원회",
+   "phone": "02-760-4850",
+   "why": "《소장품, 시대의 장면들》은 아르코미술관 소장품 가운데 70점을 선별해, 한국 현대미술의 주요한 흐름과 아르코미술관의 전시 역사 속에서 소장품이 지닌 의미와 가…",
+   "summary": "《소장품, 시대의 장면들》은 아르코미술관 소장품 가운데 70점을 선별해, 한국 현대미술의 주요한 흐름과 아르코미술관의 전시 역사 속에서 소장품이 지닌 의미와 가치를 조명한다. 1970년대부터 2000년대까지 아르코미술관 전시에 참여했던 작가 60인의 작품을 따라, 그 시기 한국 현대미술의 다양한 경향과 작가들의 예술적 성취를 다시 들여다본다. 작품 곁에는 작가들의 활동과 미술관의 전시사를 보여주는 아카이브 자료가 함께 배치 된다. 여기에 외부 연구자들이 이번 전시를 위해 진행한 소장품 연구 성과가 더해져, 한국 현대미술의 다층적인 이야기를 펼쳐진다.",
+   "theme": [
+    "미술관",
+    "전시"
+   ],
+   "sub": "행사",
+   "source_url": "https://www.arko.or.kr",
+   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
+   "lat": 37.5805022888,
+   "lng": 127.0032561826,
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/18/4127718_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/18/4127718_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/14/4127714_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/14/4127714_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/15/4127715_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/15/4127715_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -128406,6 +131802,47 @@
    ]
   },
   {
+   "feedId": "TA-E-4127746",
+   "contentId": "4127746",
+   "contentTypeId": "15",
+   "modifiedtime": "20261016095844",
+   "name": "2026 남산 야간 트래킹 「반짝반짝 남산밤길」",
+   "start_date": "2026-10-21",
+   "end_date": "2026-11-21",
+   "place_name": "남산골한옥마을 및 남산 일대",
+   "address": "서울특별시 중구 퇴계로34길 28 (필동2가)",
+   "region": "서울",
+   "city": "중구",
+   "hours": "- 19:00~21:00 - 접수 마감 18:00~19:20",
+   "fee": "무료",
+   "organizer": "서울시",
+   "phone": "02-6052-1002",
+   "why": "서울의 대표 야간 명소인 남산의 숲과 야경을 걸으며 즐기는 비경쟁형 야간 트래킹 행사다.",
+   "summary": "서울의 대표 야간 명소인 남산의 숲과 야경을 걸으며 즐기는 비경쟁형 야간 트래킹 행사다. 참가자는 남산골한옥마을에서 출발해 남산연결보행로와 남산공원길을 지나 남산타워까지 약 3km를 이동한다. 야광 손목팔찌 및 야광 그립톡을 지닌 참가자들의 작은 빛이 남산 밤길을 따라 이어져 반딧불이 움직이는 듯한 풍경을 만든다. 회차별 약 700명이 100명 단위 7개 그룹으로 나뉘어 준비운동과 안전교육 후 순차 출발하며, 팔각정 도착 후 그룹별 기념사진을 촬영 해산한다.",
+   "theme": [
+    "공원",
+    "숲",
+    "마을"
+   ],
+   "sub": "행사",
+   "source_url": "https://www.instagram.com/hot2seoul",
+   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
+   "lat": 37.55954227,
+   "lng": 126.9947387353,
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/48/4127748_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/48/4127748_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-E-2591661",
    "contentId": "2591661",
    "contentTypeId": "15",
@@ -129107,6 +132544,60 @@
    ]
   },
   {
+   "feedId": "TA-E-3384023",
+   "contentId": "3384023",
+   "contentTypeId": "15",
+   "modifiedtime": "20261016142829",
+   "name": "양천가족 거리축제",
+   "start_date": "2026-10-25",
+   "end_date": "2026-10-25",
+   "place_name": "신정네거리역 일대(서울남부지방법원 방향 약 900m 구간)",
+   "address": "서울특별시 양천구 중앙로 265-1 (신정동) 신정네거리역 일대(서울남부지방법원 방향 약 900m 구간)",
+   "region": "서울",
+   "city": "양천구",
+   "hours": "10:30~21:00",
+   "fee": "무료",
+   "organizer": "양천구청",
+   "phone": "010-8792-7604",
+   "why": "가족과 이웃, 세대가 어울리고 연결되는 문화 축제로서 양천구 신정네거리역 일대 900M의 도로에서 펼쳐진다.",
+   "summary": "가족과 이웃, 세대가 어울리고 연결되는 문화 축제로서 양천구 신정네거리역 일대 900M의 도로에서 펼쳐진다. 2026년 축제 주제는 [위로], [꿈], [품]을 주제로 어린이부터 어르신까지 모든 세대가 소통하고 즐길 수 있는 프로그램으로 구성되었다. 거리퍼레이드, 개막식, 만남의 광장, 북페스티벌, 키즈플레이존, 구름길, 여행길, 프린지스테이지, 바람길, 먹거리 부스의 체험 부스와 다양한 이벤트 프로그램, LG헬로우비젼 〈태군노래자랑〉 양천문화원 〈전통예술제〉 축하공연 〈드림뮤지컬〉 〈안예은〉 〈소유〉 〈백지영〉 〈박지현〉이 참여한 공연프로그램으로 진행된다.",
+   "sub": "축제",
+   "source_url": "https://yfac.kr",
+   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
+   "lat": 37.5199910799,
+   "lng": 126.8528612908,
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/74/4128374_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/74/4128374_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/66/4128366_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/66/4128366_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/67/4128367_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/67/4128367_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-E-4115269",
    "contentId": "4115269",
    "contentTypeId": "15",
@@ -129483,6 +132974,65 @@
    ]
   },
   {
+   "feedId": "TA-E-3113222",
+   "contentId": "3113222",
+   "contentTypeId": "15",
+   "modifiedtime": "20261016153556",
+   "name": "온 가족 책 잔치",
+   "start_date": "2026-11-07",
+   "end_date": "2026-11-07",
+   "place_name": "서울특별시교육청정독도서관 야외정원",
+   "address": "서울특별시 종로구 북촌로5길 48 (화동) 서울특별시교육청정독도서관 야외정원",
+   "region": "서울",
+   "city": "종로구",
+   "hours": "11:00~17:00",
+   "fee": "무료",
+   "organizer": "서울특별시교육청",
+   "phone": "02-2011-5742",
+   "why": "온 가족 책 잔치는 2013년부터 매년 가을 정독도서관에서 열려온 서울시교육청 대표 독서문화 축제이다.",
+   "summary": "온 가족 책 잔치는 2013년부터 매년 가을 정독도서관에서 열려온 서울시교육청 대표 독서문화 축제이다. 책을 매개로 가족과 이웃이 함께 어울리며 소통할 수 있는 장을 마련하고, 다양한 체험과 공연, 전시를 통해 독서의 즐거움과 가치를 일상 속에서 경험하도록 기획되었다. 특히 도서관·평생학습관, 지역 서점, 학교 독서동아리 등 다양한 기관이 힘을 모아 시민과 학생들이 직접 참여하는 프로그램을 운영함으로써 협력형 축제로 발전하였다. 책 읽는 온 가족 시상식, 문화 공연, 책과 연계된 창의 체험 활동, 친환경·전통문화 체험 등 다채로운 프로그램이 마련되어 남녀노소 누구나 즐길 수 있으며, 독서가 단순한 활동을 넘어 생활의 기쁨과 공동체의 가치를 느끼는 계기를 제공하는 의미 있는 행사이다.",
+   "theme": [
+    "전시",
+    "도서관",
+    "체험"
+   ],
+   "sub": "체험행사",
+   "source_url": "https://jdlib.sen.go.kr/jdlib/board/index.do?menu_idx=242&manage_idx=2478",
+   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
+   "lat": 37.5796819937,
+   "lng": 126.9823646863,
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/36/4128436_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/36/4128436_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/29/4128429_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/29/4128429_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/30/4128430_image2_1.png",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/30/4128430_image2_1.png",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-E-4115275",
    "contentId": "4115275",
    "contentTypeId": "15",
@@ -129745,6 +133295,45 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/70/4109170_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/70/4109170_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-E-4115260",
+   "contentId": "4115260",
+   "contentTypeId": "15",
+   "modifiedtime": "20260928135832",
+   "name": "쿼드, 연극의 질문들：〈서안화차〉",
+   "start_date": "2026-12-16",
+   "end_date": "2026-12-27",
+   "place_name": "대학로극장 쿼드",
+   "address": "서울특별시 종로구 동숭길 122 (동숭동)",
+   "region": "서울",
+   "city": "종로구",
+   "hours": "- 평일 19:30- 주말 15:00※ 월요일 공연 없음",
+   "fee": "전석 50,000원※ 자세한 이용요금 및 할인정보는 공식 홈페이지 참조",
+   "organizer": "서울문화재단 대학로극장 쿼드",
+   "phone": "1577-0369",
+   "why": "중국 서안의 여산릉을 향해 달려가는 기차 안, 상곤은 곧 마주하게 될 진시황의 지하 궁전과 셀 수 없이 많은 병마용에 대한 기대로 가득 차 있다.",
+   "summary": "중국 서안의 여산릉을 향해 달려가는 기차 안, 상곤은 곧 마주하게 될 진시황의 지하 궁전과 셀 수 없이 많은 병마용에 대한 기대로 가득 차 있다. 상곤이 유한한 삶 속에서 영원을 욕망했던 진시황의 모습과 자신의 삶에서 ‘한 번도 온전히 가져보지 못한 것’들에 대한 떠올릴 때, 기차는 어느덧 서안에 도착한다. 중국인 어머니를 둔 한국 사람, 한 번도 온전히 보답받지 못한 사랑을 가진 사람. 진시황의 불멸 욕망 앞에 선 상곤의 삶의 욕망은 무엇일까? 평생을 ‘주변’에서 살아 온 상곤이 가장 거대한 이야기 앞에 서서 자신을 본다. 그 거대한 욕망 앞에서 이제야 상곤 자신의 이야기를 들여다본다.",
+   "theme": [
+    "궁"
+   ],
+   "sub": "공연",
+   "source_url": "https://www.quad.or.kr",
+   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
+   "lat": 37.5836990003,
+   "lng": 127.0037166586,
+   "checkedAt": "2026-10-17",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/61/4115261_image2_1.png",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/61/4115261_image3_1.png",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
