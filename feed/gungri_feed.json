@@ -1,25 +1,25 @@
 {
  "schema": "GUNGRI_FEED_V1",
- "generatedAt": "2026-10-18T05:37:32+09:00",
+ "generatedAt": "2026-10-19T05:36:51+09:00",
  "source": {
   "name": "한국관광공사 TourAPI 4.0 (KorService2)",
   "page": "https://www.data.go.kr/data/15101578/openapi.do",
   "notice": "사진은 공공누리 유형(Type1·Type3)이 표시된 것만 사용 가능으로 표시합니다. 공개는 궁리 스텝 검수·대표 승인 후에만 합니다."
  },
  "stats": {
-  "places": 2485,
-  "events": 93,
-  "newPlaces": 7,
+  "places": 2487,
+  "events": 76,
+  "newPlaces": 3,
   "newEvents": 0,
-  "apiCalls": 41,
+  "apiCalls": 27,
   "mock": false
  },
  "options": {
   "showExamples": true
  },
  "log": [
-  "목록 확인: 새로 받을 항목 7건(행사 0) · 이번 실행 상한 200건",
-  "상세 수집 7건 · API 호출 41건",
+  "목록 확인: 새로 받을 항목 3건(행사 0) · 이번 실행 상한 200건",
+  "상세 수집 3건 · API 호출 27건",
   "큐레이션 표시(로컬100 등) 0건"
  ],
  "places": [
@@ -11579,7 +11579,7 @@
    "feedId": "TA-129764",
    "contentId": "129764",
    "contentTypeId": "14",
-   "modifiedtime": "20260929154316",
+   "modifiedtime": "20261018130403",
    "n": "국립현대미술관 과천",
    "a": "경기도 과천시 광명로 313 (막계동)",
    "ar": "경기",
@@ -11591,6 +11591,7 @@
     "성곽",
     "마을"
    ],
+   "sub": "미술관",
    "why": "국립현대미술관 과천관은 청계산의 자연경관과 어우러진 건축물과 넓은 야외조각공원을 갖추고 있으며, 옛 성곽과 봉화대, 전통마을의 담장과 계단 등 전통적인 요소를 …",
    "summary": "국립현대미술관 과천관은 청계산의 자연경관과 어우러진 건축물과 넓은 야외조각공원을 갖추고 있으며, 옛 성곽과 봉화대, 전통마을의 담장과 계단 등 전통적인 요소를 현대적으로 표현한 건축 양식이 특징이다. 한국 근·현대미술을 비롯한 다양한 작품을 전시하고 있으며, 백남준, 이중섭, 천경자 등 국내 주요 작가들의 작품을 만나볼 수 있다. 전시와 작품 수집, 연구, 교육 등 다양한 활동도 함께 진행하고 있다. 특히 미술관 중앙에 설치된 백남준의 은 과천관을 대표하는 작품이다. 개천절인 10월 3일을 상징하는 1,003대의 텔레비전 수상기로 제작된 작품으로, 미술관을 찾는 관람객들에게 독특한 볼거리를 제공한다. 미술관 야외에는 약 3만 3,000㎡ 규모의 야외조각공원이 조성되어 있다. 자연 속에서 다양한 조각 작품을 …",
    "hours": "10:00~18:00",
@@ -11603,34 +11604,34 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.mmca.go.kr/visitingInfo/gwacheonInfo.do",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-01",
+   "checkedAt": "2026-10-19",
    "photos": [
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/58/3565358_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/58/3565358_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/86/4123586_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/86/4123586_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
      "usable": true,
-     "rights": "AUTO_NOEDIT"
+     "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/56/3565356_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/56/3565356_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/82/4123582_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/4123582_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
      "usable": true,
-     "rights": "AUTO_NOEDIT"
+     "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/57/3565357_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/57/3565357_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/83/4123583_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/4123583_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
      "usable": true,
-     "rights": "AUTO_NOEDIT"
+     "rights": "AUTO"
     }
    ]
   },
@@ -20780,6 +20781,64 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/31/3537631_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3537631_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-130964",
+   "contentId": "130964",
+   "contentTypeId": "14",
+   "modifiedtime": "20261018125707",
+   "n": "한국카메라박물관",
+   "a": "경기도 과천시 대공원광장로 8",
+   "ar": "경기",
+   "r": "과천시",
+   "k": [
+    "문화시설",
+    "박물관",
+    "전시"
+   ],
+   "sub": "박물관",
+   "why": "한국카메라박물관은 사설 카메라 전문 박물관으로 사진작가이자 사업가인 김종세가 설립하였다.",
+   "summary": "한국카메라박물관은 사설 카메라 전문 박물관으로 사진작가이자 사업가인 김종세가 설립하였다. 전시관은 기획전시관, 주전시관, 부전시관으로 이루어져 있다. 3,000여 점이 넘는 카메라와 6,000여 점의 각종 렌즈 그리고 유리원판 필름, 초기 환등기, 사진 인화장비, 각종 액세서리 등을 합하면 무려 15,000여 점이 넘는 유물들을 소장하고 있다. 유물들 중에는 카메라의 원조인 카메라 옵스큐라, 카메라 루시다에서부터 1839년 카메라와 은판 사진술이 세계 최초로 발명된 시기의 유물들, 그리고 최첨단 현대 카메라에 이르기까지 카메라 발전사에 기여한 카메라들이 전시되어 있다. 전시된 대부분의 카메라 내부를 볼 수 있도록 전시 공간을 배치한 것이 특징이다. 개인 카메라박물관으로는 세계 5위 안에 들 정도로 박물관 규…",
+   "hours": "[하절기(3월~10월)] 10:00~18:00 (입장 마감 17:00)[동절기(11월~2월)] 10:00~17:00 (입장 마감 16:00)",
+   "closed": "매주 월요일 / 일요일 / 설·추석 연휴",
+   "fee": "[개인]- 일반 5,000원- 중·고등학생, 경로 4,000원- 어린이 3,000원[단체(20인 이상)]- 일반 4,000원- 중·고등학생, 경로 3,000원- 어린이 2,000원",
+   "phone": "02-502-4123",
+   "homepage": "http://www.kcpm.or.kr",
+   "lat": 37.4350273266,
+   "lng": 127.0056447643,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.kcpm.or.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-19",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/81/3329881_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/81/3329881_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/83/3329883_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/3329883_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/84/3329884_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/84/3329884_image2_1.JPG",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -40997,6 +41056,64 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/14/4110014_image2_1.JPG",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/14/4110014_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-2615462",
+   "contentId": "2615462",
+   "contentTypeId": "14",
+   "modifiedtime": "20261018125113",
+   "n": "아해박물관",
+   "a": "경기도 과천시 추사로 133 (주암동)",
+   "ar": "경기",
+   "r": "과천시",
+   "k": [
+    "문화시설",
+    "박물관",
+    "전시"
+   ],
+   "sub": "박물관",
+   "why": "아해박물관은 유아, 초등학생을 대상으로 한 전통 놀잇감을 전시한 박물관이다.",
+   "summary": "아해박물관은 유아, 초등학생을 대상으로 한 전통 놀잇감을 전시한 박물관이다. 아해박물관 명칭 중 ‘아해’는 어린이의 순우리말이다. 이 박물관에서는 한국의 5천 년 역사를 간직한 놀잇감들을 수집 보존하고 전시하여 전통놀잇감 또한 소중한 역사임을 일깨워주고 있다. 아해박물관 상설전시실에서는 유물적 가치가 있는 소장품 관람과 어린이들의 특성을 고려해 적절한 체험적 관람이 되도록 조성되어 있다. 소장품 전시는 현대 어린이들의 과학성 예술성 창조성 개발을 위해 자연물로 이루어진 우리나라 전통놀잇감과 어린이 공부를 위해 사용되었던 자료를 전시하고 있다. 또한 태아의 놀이와 공부를 나타내는 전시에서 시작하여 다양한 놀잇감을 계절, 연력, 소재 등 다양한 각도에서 해석하여 전시하고 있다.",
+   "hours": "10:00~17:00",
+   "closed": "매주 토요일~일요일 / 법정공휴일",
+   "fee": "5,000원",
+   "phone": "02-3418-5501※ 사전예약 필수(유선)",
+   "homepage": "http://www.ahaemuseum.org",
+   "lat": 37.4576282763,
+   "lng": 127.0299951227,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.ahaemuseum.org",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-10-19",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/06/4123606_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/06/4123606_image3_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/71/3565371_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/71/3565371_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/72/3565372_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/72/3565372_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -129745,63 +129862,6 @@
    ]
   },
   {
-   "feedId": "TA-E-2756396",
-   "contentId": "2756396",
-   "contentTypeId": "15",
-   "modifiedtime": "20260820153636",
-   "name": "덕수궁 밤의 석조전",
-   "start_date": "2026-09-09",
-   "end_date": "2026-10-18",
-   "place_name": "덕수궁 석조전",
-   "address": "서울특별시 중구 세종대로 99 (정동) 덕수궁",
-   "region": "서울",
-   "city": "중구",
-   "hours": "18:00~20:55(회차당 100분)",
-   "fee": "유료(1인 35,000원)",
-   "organizer": "국가유산청 궁능유적본부",
-   "phone": "1522-2295",
-   "why": "[덕수궁 밤의 석조전]은 전문 해설사와 함께하는 '석조전 야간 탐방'과 클래식 연주를 들으며 고종이 사랑했던 가배차(커피)와 디저트를 즐기는 '테라스 카페 체험…",
-   "summary": "[덕수궁 밤의 석조전]은 전문 해설사와 함께하는 '석조전 야간 탐방'과 클래식 연주를 들으며 고종이 사랑했던 가배차(커피)와 디저트를 즐기는 '테라스 카페 체험', 대한제국 황실의 이야기를 담은 뮤지컬 공연 관람으로 구성되어 있는 덕수궁 야간 관람 프로그램이다. 2021년 시범 사업을 시작으로 높은 만족도와 호응에 힘입어 2022년 정식 개최되었으며, 2023년부터 반기별로 운영되고 있다. 궁인의 안내에 따라 대한제국 황실의 이야기를 품은 덕수궁 석조전으로 시간 여행을 떠나는 특별함을 경험하고, 개화기 소품을 활용한 '인생궁컷' 사진과 기념품을 통해 덕수궁 석조전에서의 밤을 오래 기억할 수 있는 복합 문화 체험 프로그램이다.",
-   "theme": [
-    "궁",
-    "체험"
-   ],
-   "source_url": "https://www.kh.or.kr/short/M3K4",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.5650549194,
-   "lng": 126.9765746344,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/10/4102010_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/10/4102010_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/02/4073902_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/02/4073902_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/03/4073903_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/03/4073903_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-3352029",
    "contentId": "3352029",
    "contentTypeId": "15",
@@ -130061,60 +130121,6 @@
    ]
   },
   {
-   "feedId": "TA-E-3113045",
-   "contentId": "3113045",
-   "contentTypeId": "15",
-   "modifiedtime": "20261007160554",
-   "name": "파주페어 북앤컬처",
-   "start_date": "2026-10-09",
-   "end_date": "2026-10-18",
-   "place_name": "아시아출판문화정보센터 및 파주출판도시 일원",
-   "address": "경기도 파주시 회동길 145 (문발동) 아시아출판문화정보센터 및 파주출판도시 일원",
-   "region": "경기",
-   "city": "파주시",
-   "hours": "10:00~20:00",
-   "fee": "무료(일부 프로그램 유료)",
-   "organizer": "출판도시문화재단",
-   "phone": "031-955-0075",
-   "why": "파주페어 북앤컬처는 주요 출판사, 작가와 독자, 서점이 한 자리에 모여 책을 단순히 읽는 대상에 그치지 않고 새로운 시각에서 들여다보고 즐길 수 있는 특별한 장…",
-   "summary": "파주페어 북앤컬처는 주요 출판사, 작가와 독자, 서점이 한 자리에 모여 책을 단순히 읽는 대상에 그치지 않고 새로운 시각에서 들여다보고 즐길 수 있는 특별한 장을 제공한다. 책이라는 원천 콘텐츠에서 발현되는 공연, 전시, 체험 등 다채로운 문화예술 창작 작품을 시민들에게 선보이며 독서 문화의 영역을 한층 넓혀간다. 나아가 국내에 국한되지 않고 우수한 K-Book과 관련 콘텐츠를 해외 시장에 적극적으로 소개하며 판로를 개척하는 글로벌 마켓의 역할까지 수행한다. 2026 파주페어 북앤컬처는 약 10일에 걸쳐 다채로운 프로그램으로 구성된다. 개막식 'BOOKS ALIVE!'를 비롯해 인디 뮤직과 댄스 페스티벌, 청소년 댄스 페스티벌 등 다채로운 공연이 펼쳐진다. 290여 개 출판사와 서점 등이 참여하는 북마켓 '…",
-   "sub": "행사",
-   "source_url": "https://pajufair.com",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.7085879207,
-   "lng": 126.687203713,
-   "checkedAt": "2026-10-08",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/24/4110424_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/24/4110424_image3_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/19/4110419_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/19/4110419_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/20/4110420_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/20/4110420_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-4120802",
    "contentId": "4120802",
    "contentTypeId": "15",
@@ -130301,267 +130307,6 @@
    ]
   },
   {
-   "feedId": "TA-E-790211",
-   "contentId": "790211",
-   "contentTypeId": "15",
-   "modifiedtime": "20261012101902",
-   "name": "장애인문화예술축제 A+ Festival",
-   "start_date": "2026-10-16",
-   "end_date": "2026-10-18",
-   "place_name": "마곡광장",
-   "address": "서울특별시 강서구 마곡중앙5로 지하9 (마곡동) 마곡광장",
-   "region": "서울",
-   "city": "강서구",
-   "hours": "13:00~21:00",
-   "fee": "무료",
-   "organizer": "한국장애인문화예술단체총연합회",
-   "phone": "02-304-6211",
-   "why": "2026 장애인문화예술축제 A+ Festival은 장애예술인과 비장애예술인, 시민 모두가 예술을 매개로 소통하고 함께 어우러지는 문화예술축제이다.",
-   "summary": "2026 장애인문화예술축제 A+ Festival은 장애예술인과 비장애예술인, 시민 모두가 예술을 매개로 소통하고 함께 어우러지는 문화예술축제이다. ‘찬란하게 빛나는, 별나라 이야기’를 주제로 서로 다른 별들이 모여 하나의 아름다운 별자리를 이루듯, 각자의 개성과 재능을 지닌 사람들이 예술을 통해 연결되고 조화를 이루는 과정을 담아낸다. 본 축제는 장애예술인의 창작활동과 예술적 역량을 조명하고, 장애와 비장애의 경계를 넘어 누구나 동등하게 문화예술을 향유할 수 있는 환경을 조성하는 것을 목적으로 한다. 이를 위해 음악, 무용, 연극 등 다양한 장르의 공연과 장애예술인의 작품을 선보이는 전시, 시민이 직접 참여할 수 있는 체험 프로그램 등을 운영한다. 또한 장애예술인과 비장애예술인이 함께하는 협업 무대를 통해 …",
-   "sub": "축제",
-   "source_url": "https://aplusfestival.or.kr",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.5660114537,
-   "lng": 126.8269274564,
-   "checkedAt": "2026-10-13",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/45/4116345_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/45/4116345_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/46/4116346_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/46/4116346_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/47/4116347_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/47/4116347_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-2952759",
-   "contentId": "2952759",
-   "contentTypeId": "15",
-   "modifiedtime": "20260923153000",
-   "name": "우이천변 페스타 2026 이상한 나라의 웰니스",
-   "start_date": "2026-10-16",
-   "end_date": "2026-10-18",
-   "place_name": "우이천(우이교~쌍한교)",
-   "address": "서울특별시 강북구 도봉로101길 18 (수유동)",
-   "region": "서울",
-   "city": "강북구",
-   "hours": "13:00~20:00",
-   "fee": "프로그램별로 상이함",
-   "organizer": "강북구청",
-   "phone": "02-901-6216",
-   "why": "강북구 대표 관광자원 북한산에서 발원한 우이천은 구민의 생활공간이자 접근성이 용이하여 많은 외지인이 방문하는 장소이다.",
-   "summary": "강북구 대표 관광자원 북한산에서 발원한 우이천은 구민의 생활공간이자 접근성이 용이하여 많은 외지인이 방문하는 장소이다. 하천 특성과 지역성을 반영한 문화, 관광이 결합된 축제를 통해 강북구만의 새로운 라이프스타일을 제시한다. 물 흐르듯이 우이천변을 따라 이동하며 자연의 풍경과 시민들의 일상, 문화예술과 상권을 다채롭게 즐길 수 있는 강북구 대표 수변 관광 라이프스타일 축제이다.",
-   "source_url": "https://www.gangbuk.go.kr/",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.6433604336,
-   "lng": 127.0296368138,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/66/4115066_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/66/4115066_image3_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-1307813",
-   "contentId": "1307813",
-   "contentTypeId": "15",
-   "modifiedtime": "20261013112928",
-   "name": "강동선사문화축제",
-   "start_date": "2026-10-16",
-   "end_date": "2026-10-18",
-   "place_name": "서울 암사동 유적, 암사역사공원 일대",
-   "address": "서울특별시 강동구 올림픽로 875 (암사동)",
-   "region": "서울",
-   "city": "강동구",
-   "hours": "10:00~21:00 (10.16 금 15:00~21:00)",
-   "fee": "무료 (일부 체험비 별도)",
-   "organizer": "서울특별시 강동구",
-   "phone": "02-3425-5247",
-   "why": "제31회 강동선사문화축제는 서울 강동구 암사동 일대에서 개최되는 선사문화 주제의 역사문화축제이다.",
-   "summary": "제31회 강동선사문화축제는 서울 강동구 암사동 일대에서 개최되는 선사문화 주제의 역사문화축제이다. 서울을 대표하는 신석기시대 유적인 서울 암사동 유적을 중심으로, 선사시대의 생활문화와 역사적 가치를 알리는 행사이다. 축제는 선사문화 체험, 전시, 공연, 참여 프로그램 등을 통해 관람객이 신석기시대 문화를 직접 접하고 이해할 수 있도록 구성된다. 역사적 공간과 지역의 문화자원을 활용한 다양한 프로그램을 통해 지역 주민과 방문객이 함께 참여하는 축제이다. 강동구의 문화적 정체성을 알리고 암사동 일대의 역사관광 자원을 소개하며, 선사문화의 의미를 공유하는 장으로 마련된다.",
-   "theme": [
-    "유적"
-   ],
-   "sub": "축제",
-   "source_url": "https://www.gdsunsa.com",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.5590614348,
-   "lng": 127.1306006547,
-   "checkedAt": "2026-10-15",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/75/4114675_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/75/4114675_image3_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/98/3561098_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/98/3561098_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/01/3561101_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/01/3561101_image2_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-2618530",
-   "contentId": "2618530",
-   "contentTypeId": "15",
-   "modifiedtime": "20260915164442",
-   "name": "양재 플라워 페스타",
-   "start_date": "2026-10-16",
-   "end_date": "2026-10-18",
-   "place_name": "매헌시민의숲 공원 內 스타프렌즈정원 일대",
-   "address": "서울특별시 서초구 매헌로 99 (양재동)",
-   "region": "서울",
-   "city": "서초구",
-   "hours": "10:00~17:00",
-   "fee": "무료",
-   "organizer": "농림축산식품부",
-   "phone": "02-6952-9497",
-   "why": "2026 양재플라워페스타는 2026년 10월 16일부터 10월 18일까지 양재꽃시장 일원에서 개최되는 화훼문화 축제이다.",
-   "summary": "2026 양재플라워페스타는 2026년 10월 16일부터 10월 18일까지 양재꽃시장 일원에서 개최되는 화훼문화 축제이다. 행사는 다양한 꽃과 화훼 콘텐츠를 직접 보고 체험할 수 있도록 전시, 체험, 무대 프로그램, 참여형 이벤트 등으로 구성되는 행사이다. 주요 프로그램은 장미, 스프레이국화, 거베라, 리시안셔스, 호접란 등 신품종을 소개하는 신품종 쇼케이스와 플로리스트 작품 전시, 꽃을 활용한 원데이 클래스, 어린이 플로리스트·원예치료사 직업체험, 어린이 꽃그림 프로그램, 플라워 토크콘서트 등이다. 또한 상품성이 낮아 폐기될 수 있는 꽃을 활용하여 압화 소품을 제작하는 ‘못난꽃 잘났다’ 체험 프로그램과 행사장 곳곳을 둘러보며 참여하는 스탬프투어, SNS 참여 이벤트 등이 함께 운영되는 축제이다. 다양한 세대…",
-   "theme": [
-    "전시",
-    "시장",
-    "체험"
-   ],
-   "source_url": "https://flowerfesta.co.kr",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.4730498034,
-   "lng": 127.0369770849,
-   "checkedAt": "2026-09-30",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/79/4110979_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/79/4110979_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/80/4110980_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/80/4110980_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/81/4110981_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/81/4110981_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-3379778",
-   "contentId": "3379778",
-   "contentTypeId": "15",
-   "modifiedtime": "20261006091502",
-   "name": "가락 옥토버페스트",
-   "start_date": "2026-10-16",
-   "end_date": "2026-10-18",
-   "place_name": "가락몰 3층 하늘공원",
-   "address": "서울특별시 송파구 양재대로 932 (가락동) 가락몰 3층 하늘공원",
-   "region": "서울",
-   "city": "송파구",
-   "hours": "16:00~22:00",
-   "fee": "무료",
-   "organizer": "서울시농수산식품공사",
-   "phone": "02-3435-1000",
-   "why": "선선한 가을바람이 불어오는 계절, 가락시장의 대표 가을 축제인 ‘제3회 가락 옥토버페스트’가 마침내 막을 올린다.",
-   "summary": "선선한 가을바람이 불어오는 계절, 가락시장의 대표 가을 축제인 ‘제3회 가락 옥토버페스트’가 마침내 막을 올린다. 맛있는 먹거리와 시원한 수제맥주, 감성 넘치는 즐길 거리로 가득 채워질 가락몰에서 가을밤의 낭만을 만끽할 수 있는 기회다. 행사는 2026년 10월 16일(금)부터 10월 18일(일)까지 3일간, 매일 오후 4시부터 밤 10시까지 가락몰 3층 하늘공원에서 펼쳐진다. 입장료는 전액 무료이며, 마음에 드는 맥주와 안주 부스를 자유롭게 이용하는 방식이다. 이번 축제의 핵심 관전 포인트는 세 가지다. 첫째, 전국 대표 수제맥주 브루어리들이 한자리에 모인다. 가볍고 청량한 라거부터 깊은 풍미의 에일, 상큼한 과일향 맥주까지 취향대로 골라 마시는 즐거움이 있다. 둘째, 가락시장만의 신선함을 담은 ‘특선 안…",
-   "theme": [
-    "시장"
-   ],
-   "sub": "행사",
-   "source_url": "https://www.garak.co.kr",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.4960246566,
-   "lng": 127.1107532009,
-   "checkedAt": "2026-10-07",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/73/3553073_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/73/3553073_image3_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/46/4116646_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/46/4116646_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/47/4116647_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/47/4116647_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-2667707",
    "contentId": "2667707",
    "contentTypeId": "15",
@@ -130591,114 +130336,6 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/89/4099089_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/89/4099089_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-2612274",
-   "contentId": "2612274",
-   "contentTypeId": "15",
-   "modifiedtime": "20261012181553",
-   "name": "관악강감찬축제",
-   "start_date": "2026-10-16",
-   "end_date": "2026-10-18",
-   "place_name": "낙성대공원",
-   "address": "서울특별시 관악구 낙성대로 77 (봉천동)",
-   "region": "서울",
-   "city": "관악구",
-   "hours": "12:00~21:00",
-   "fee": "무료",
-   "organizer": "관악구",
-   "phone": "02-828-5766",
-   "why": "관악강감찬축제는 역사를 품은 도시 관악에서 귀주대첩의 영웅 강감찬 장군의 호국정신과 위업을 기리고자 개최되는 서울의 대표적인 역사문화 축제이다.",
-   "summary": "관악강감찬축제는 역사를 품은 도시 관악에서 귀주대첩의 영웅 강감찬 장군의 호국정신과 위업을 기리고자 개최되는 서울의 대표적인 역사문화 축제이다. 관악강감찬축제는 고려 명장 강감찬 장군의 호국정신을 기리고자 개최되는 서울의 대표적인 역사 문화축제이자, 관악구민이 함께 만들고 즐기는 관악의 대표 축제이다. 강감찬축제는 1998년부터 이어 온 관악구 대표 전통문화축제 ‘관악산 철쭉제’와 1988년부터 이어 온 추모제향 ‘낙성대 인헌제’를 통합하여, 2016년 새롭게 시작되었다. 강감찬축제는 북두칠성의 네 번째 별 문곡성이 떨어진 곳에서 강감찬 장군이 탄생하였다는 낙성대, 장군의 시호를 딴 인헌동, 장군이 송도를 오갈 때 자주 들렀다는 정자가 있는 서원동 등 장군의 얼이 서린 문화유산을 배경으로 오늘날 우리들의 모…",
-   "sub": "축제",
-   "source_url": "https://www.ggcfest.com",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.4715875501,
-   "lng": 126.9587204342,
-   "checkedAt": "2026-10-13",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/31/4073831_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/4073831_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/23/4073823_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/23/4073823_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/24/4073824_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/24/4073824_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-229057",
-   "contentId": "229057",
-   "contentTypeId": "15",
-   "modifiedtime": "20261006140924",
-   "name": "서울와우북페스티벌",
-   "start_date": "2026-10-16",
-   "end_date": "2026-10-18",
-   "place_name": "홍대앞 레드로드 R1,R2 어룰림마당로, 레드로드발전소 홍보관 갤러리, 플랫폼P, 소극장 산울림, 소극장 산울림카페",
-   "address": "서울특별시 마포구 서교동 348-24 서울특별시 마포구 어울마당로",
-   "region": "서울",
-   "city": "마포구",
-   "hours": "10:00-21:30",
-   "fee": "유료",
-   "organizer": "(사)와우컬처랩",
-   "phone": "02-312-1590",
-   "why": "제22회 서울와우북페스티벌은 2026년 10월 16일(금)부터 10월 18일(일)까지 3일간 서울 마포구 홍대 앞 일대에서 열리는 책 축제이다.",
-   "summary": "제22회 서울와우북페스티벌은 2026년 10월 16일(금)부터 10월 18일(일)까지 3일간 서울 마포구 홍대 앞 일대에서 열리는 책 축제이다. 올해의 주제는 \"변하는, 변하지 않는\"이다. 이 축제는 책과 사람이 만나는 자리를 만드는 것을 목적으로 한다. 기획자, 뮤지션, 출판사가 한자리에 모여, 작가와 편집자, 독자가 얼굴을 맞대고 이야기를 나누는 장이다. 혼자 또는 함께 깊이 읽으며, 책을 읽는 일이 하나의 경험이 되는 시간을 지향하는 축제이다. 행사 장소는 홍대 레드로드 R1·R2(도서전), 플랫폼P 다목적실(강연), 산울림소극장(영희페스티벌), 산울림 카페(리딩웨이브), 레드로드발전소 홍보관 갤러리(상상만발책그림전)이다.",
-   "sub": "축제",
-   "source_url": "https://wowlab.or.kr/wowbook-festival/2026-wowfestival",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.5564346247,
-   "lng": 126.926273606,
-   "checkedAt": "2026-10-07",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/76/4117576_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/76/4117576_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/69/4117569_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/69/4117569_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/70/4117570_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/70/4117570_image2_1.png",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -130756,63 +130393,6 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/37/4117537_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/37/4117537_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-623666",
-   "contentId": "623666",
-   "contentTypeId": "15",
-   "modifiedtime": "20261012142326",
-   "name": "포천 산정호수 명성산 억새꽃축제",
-   "start_date": "2026-10-16",
-   "end_date": "2026-10-18",
-   "place_name": "포천 산정호수 및 명성산 일원",
-   "address": "경기도 포천시 영북면 산정호수로411번길 108 포천 산정호수 및 명성산 일원",
-   "region": "경기",
-   "city": "포천시",
-   "hours": "11:00~17:00(토, 일 11:00~21:00)",
-   "fee": "무료(일부 체험프로그램 유료)",
-   "organizer": "포천시, (재)포천문화관광재단",
-   "phone": "031-535-5013, 5135",
-   "why": "제29회 포천 산정호수 명성산 억새꽃축제는 아름다운 산정호수와 명성산 일원에서 2026년 10월 16일부터 18일까지 3일간 열린다.",
-   "summary": "제29회 포천 산정호수 명성산 억새꽃축제는 아름다운 산정호수와 명성산 일원에서 2026년 10월 16일부터 18일까지 3일간 열린다. ‘가을, 억새로 가장 빛나는 우리의 순간들’이라는 주제로 펼쳐지며, 억새 물결과 어우러진 다채로운 공연과 체험, 야간 볼거리가 마련되어 있다. 낮에는 감성적인 억새꽃 가든 쉼터에서 쉬어가거나 명성산 플로깅, 억새 막믈리에, 전투장비 전시 체험, 1년 후에 받는 편지 등 온 가족이 함께 즐길 수 있는 체험형 프로그램에 참여할 수 있다. 저녁에는 산정호수 위에서 펼쳐지는 화려한 수상 불꽃극과 주민들이 직접 꾸민 야간 억새 조명이 호숫가를 밝혀 가을밤의 특별한 추억을 선사한다. 또한 가수 박창근, 박주희, 양혜승이 함께하는 개막 축하공연을 비롯해 지역 예술인 무대가 어우러져 한층 …",
-   "theme": [
-    "호수"
-   ],
-   "sub": "축제",
-   "source_url": "https://pcfac.or.kr/sub03/sub07-1.php?type=view&uid=1817323",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 38.0683053869,
-   "lng": 127.3239505196,
-   "checkedAt": "2026-10-13",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/83/3555383_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/83/3555383_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/79/3555379_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/79/3555379_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/80/3555380_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/80/3555380_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -131109,228 +130689,6 @@
    ]
   },
   {
-   "feedId": "TA-E-2761411",
-   "contentId": "2761411",
-   "contentTypeId": "15",
-   "modifiedtime": "20261007145224",
-   "name": "금천하모니축제",
-   "start_date": "2026-10-17",
-   "end_date": "2026-10-18",
-   "place_name": "금천구청 광장, 금나래 중앙공원 등",
-   "address": "서울특별시 금천구 시흥대로73길 70 (시흥동)",
-   "region": "서울",
-   "city": "금천구",
-   "hours": "11:00 ~ 20:00",
-   "fee": "무료",
-   "organizer": "금천구",
-   "phone": "070-4118-3420",
-   "why": "금천하모니축제는 2003년부터 시작해 20년 넘게 매해 열리는 금천구 대표 축제이다.",
-   "summary": "금천하모니축제는 2003년부터 시작해 20년 넘게 매해 열리는 금천구 대표 축제이다. 올해는 '울림의 하모니, 마음을 잇는 멜로디'라는 슬로건을 가지고 '음악'을 소재로 주민들이 쉬고 즐기고 화합하는 축제의 장을 마련하고자 한다. 금천구청을 중심으로 금나래중앙공원, 구청 앞 광장 등을 축제 장소로 활용하여 주민들이 직접 목소리를 모아 아름다운 멜로디를 만드는 시민참여 쇼콰이어 '싱 포 하모니'부터 신나는 음악 공연, 다채로운 체험 부스, 감성 가득한 플리마켓, 그리고 맛있는 푸드트럭까지 주민들이 즐기고 참여할수 있는 콘텐츠로 구성될 예정이다.",
-   "sub": "축제",
-   "source_url": "https://www.data.go.kr/data/15101578/openapi.do",
-   "source_label": "한국관광공사 TourAPI (contentId 2761411)",
-   "lat": 37.4564406598,
-   "lng": 126.895507334,
-   "checkedAt": "2026-10-08",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/92/3483192_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/92/3483192_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/75/3115075_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/75/3115075_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/76/3115076_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/76/3115076_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-4116560",
-   "contentId": "4116560",
-   "contentTypeId": "15",
-   "modifiedtime": "20260930140716",
-   "name": "동물행복페스타",
-   "start_date": "2026-10-17",
-   "end_date": "2026-10-18",
-   "place_name": "여의도한강공원",
-   "address": "서울특별시 영등포구 여의도동 83-6 여의도한강공원",
-   "region": "서울",
-   "city": "영등포구",
-   "hours": "10:00 ~ 17:00",
-   "fee": "동물행복런 10,000원(이외 프로그램 무료)",
-   "organizer": "서울시, 한국일보",
-   "phone": "02-724-2798",
-   "why": "2026 서울동물행복페스타는 서울 동물보호의 날을 기념해 사람과 동물이 함께 살아가는 문화를 시민들과 나누는 참여형 축제이다.",
-   "summary": "2026 서울동물행복페스타는 서울 동물보호의 날을 기념해 사람과 동물이 함께 살아가는 문화를 시민들과 나누는 참여형 축제이다. 10월 17일부터 18일까지 여의도한강공원 물빛무대 앞 광장에서 열리며, 반려인뿐 아니라 비반려인과 가족 단위 방문객도 함께 즐길 수 있는 다양한 프로그램을 선보인다. 반려견과 보호자가 한강을 함께 걷는 ‘동물행복런’, 반려동물과의 일상 고민을 나누는 ‘설채현의 펫톡 라이브’, 입양견과 보호자의 특별한 이야기를 만나는 ‘견생2회차 자랑대회’, 새로운 가족을 기다리는 동물들을 소개하는 ‘핌키 레드카펫 입양제’ 등이 진행된다. 또한 야생동물·농장동물·실험동물·봉사동물·전시동물 등 다양한 동물복지 이슈를 게임과 미션으로 체험하는 ‘동물보호 PLAY존’을 비롯해 행동·건강 상담, 동물등록,…",
-   "theme": [
-    "공원"
-   ],
-   "source_url": "https://www.animalhappy.kr",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.5318646872,
-   "lng": 126.9232252046,
-   "checkedAt": "2026-10-01",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/64/4116564_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/64/4116564_image3_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/61/4116561_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/61/4116561_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/62/4116562_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/62/4116562_image2_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-3544911",
-   "contentId": "3544911",
-   "contentTypeId": "15",
-   "modifiedtime": "20261015130728",
-   "name": "수봉산 페스티벌",
-   "start_date": "2026-10-17",
-   "end_date": "2026-10-18",
-   "place_name": "수봉공원 인공폭포 일대",
-   "address": "인천광역시 미추홀구 수봉안길 84 (숭의동)",
-   "region": "인천",
-   "city": "미추홀구",
-   "hours": "14:00~20:30",
-   "fee": "무료",
-   "organizer": "인천광역시 미추홀구",
-   "phone": "032-880-7976",
-   "why": "2021년부터 시작된 수봉산 페스티벌은 인천 미추홀구의 대표적인 문화축제로, 수봉산의 자연경관과 다채로운 문화예술을 한자리에서 즐길 수 있는 관광연계형 축제이다.",
-   "summary": "2021년부터 시작된 수봉산 페스티벌은 인천 미추홀구의 대표적인 문화축제로, 수봉산의 자연경관과 다채로운 문화예술을 한자리에서 즐길 수 있는 관광연계형 축제이다. 수봉산을 찾은 주민과 관광객이 자연 속에서 공연과 전시, 체험, 먹거리를 함께 즐기며 특별한 시간을 보낼 수 있도록 다양한 프로그램을 선보인다. 축제에서는 지역예술인의 공연과 인기 아티스트 초청공연을 비롯해 다양한 장르의 음악을 만날 수 있으며, 가족과 함께 즐길 수 있는 체험프로그램과 아트프리마켓, 상설전시, 푸드존 등 풍성한 즐길거리와 볼거리, 먹거리가 마련된다. 특히 수봉산의 역사적 가치와 아름다운 자연환경을 배경으로 펼쳐지는 야외 공연은 도심 속에서 자연과 문화를 동시에 만끽할 수 있는 수봉산 페스티벌만의 매력이다.",
-   "sub": "축제",
-   "source_url": "https://www.michuhol.go.kr",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.4598298556,
-   "lng": 126.6632947343,
-   "checkedAt": "2026-10-16",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/40/4116440_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/40/4116440_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/36/4116436_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/36/4116436_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/37/4116437_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/37/4116437_image2_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-1720025",
-   "contentId": "1720025",
-   "contentTypeId": "15",
-   "modifiedtime": "20261015093708",
-   "name": "다산정약용문화제",
-   "start_date": "2026-10-17",
-   "end_date": "2026-10-18",
-   "place_name": "정약용유적지 및 다산생태공원",
-   "address": "경기도 남양주시 조안면 다산로747번길 11",
-   "region": "경기",
-   "city": "남양주시",
-   "hours": "10:00 ~ 17:30",
-   "fee": "무료",
-   "organizer": "남양주시",
-   "phone": "031-590-2799",
-   "why": "다산정약용문화제는 정약용의 삶과 사상, 실학 정신을 주제로 경기도 남양주시에서 개최하는 축제이다.",
-   "summary": "다산정약용문화제는 정약용의 삶과 사상, 실학 정신을 주제로 경기도 남양주시에서 개최하는 축제이다. 제40회 다산정약용문화제는 2026년 10월 17일부터 18일까지 정약용유적지와 다산생태공원 일원에서 열리는 행사이다. 주요 프로그램은 헌화·헌다례, 개막식, 40주년 기념 특별 패션쇼와 기념콘서트, 정약용 로봇창작대회, 문예대회 등이다. 17일에는 이상봉 디자이너의 특별 패션쇼가, 18일에는 억스·박혜원·어반자카파가 출연하는 기념콘서트가 예정되어 있다. 체험 프로그램은 행사장 곳곳에서 미션을 수행하며 보물을 찾는 ‘여유당헌터스’, ‘디지털 디톡스 유배체험’, 인공지능과 로봇 등을 접하는 ‘정약용 미래공방’, 전통놀이와 한복체험 등으로 구성되어 있다. 이 밖에도 다산생태공원에서 버스킹 공연과 마켓 등을 운영하며…",
-   "theme": [
-    "공원",
-    "유적"
-   ],
-   "sub": "행사",
-   "source_url": "https://www.nyj.go.kr/thinkj/index.do",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.5163138398,
-   "lng": 127.2998987869,
-   "checkedAt": "2026-10-16",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/69/4116969_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/69/4116969_image3_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/67/4116967_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/67/4116967_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/68/4116968_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/68/4116968_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-2828431",
    "contentId": "2828431",
    "contentTypeId": "15",
@@ -131376,135 +130734,6 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/62/4116962_image2_1.jpg",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/62/4116962_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-2865258",
-   "contentId": "2865258",
-   "contentTypeId": "15",
-   "modifiedtime": "20261007145952",
-   "name": "노원 북 페스티벌",
-   "start_date": "2026-10-17",
-   "end_date": "2026-10-18",
-   "place_name": "하계2동 주민센터 앞 경춘선숲길 일대",
-   "address": "서울특별시 노원구 공릉로55길 88 (하계동) 하계2동 주민센터 앞 경춘선숲길 일대",
-   "region": "서울",
-   "city": "노원구",
-   "hours": "12:00~20:00",
-   "fee": "무료",
-   "organizer": "노원구청",
-   "phone": "02-2116-0701",
-   "why": "2026 노원 야외도서관 낭만보장은 ‘AI 시대 결국, 사람’을 주제로 책과 독서, 문화 프로그램을 야외 공간에서 함께 운영하는 독서문화행사이다.",
-   "summary": "2026 노원 야외도서관 낭만보장은 ‘AI 시대 결국, 사람’을 주제로 책과 독서, 문화 프로그램을 야외 공간에서 함께 운영하는 독서문화행사이다. 인공지능과 알고리즘이 일상생활에 폭넓게 활용되는 환경에서 책을 매개로 사람 간의 만남과 소통에 주목하는 것을 주요 내용으로 한다. 행사장에는 사서가 선정한 도서를 열람할 수 있는 야외 서가를 조성하며, 빈백과 캠핑의자 등 야외 독서를 위한 휴게 공간을 함께 운영한다. 행사 기간에는 야외 공간에서 자유롭게 도서를 열람할 수 있으며, 북콘서트와 인문학 강연 등 책과 사람을 주제로 한 독서문화 프로그램을 진행한다. 도서 전시와 독서 공간, 공연 및 강연 프로그램을 하나의 행사 공간에서 운영하여 시민이 다양한 방식으로 책과 문화를 접할 수 있도록 구성한 야외도서관 행사이…",
-   "theme": [
-    "도서관"
-   ],
-   "sub": "축제",
-   "source_url": "https://www.nowonlib.kr",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.6320431648,
-   "lng": 127.0679535372,
-   "checkedAt": "2026-10-08",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/70/4117270_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/70/4117270_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/63/4117263_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/63/4117263_image2_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/64/4117264_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/64/4117264_image2_1.JPG",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-3315407",
-   "contentId": "3315407",
-   "contentTypeId": "15",
-   "modifiedtime": "20261012144115",
-   "name": "2026 제3차 제물포웨이브마켓",
-   "start_date": "2026-10-17",
-   "end_date": "2026-10-18",
-   "place_name": "상상플랫폼",
-   "address": "인천광역시 제물포구 월미로 33 (북성동1가)",
-   "region": "인천",
-   "city": "제물포구",
-   "hours": "11:00~18:00",
-   "fee": "무료",
-   "organizer": "인천광역시",
-   "phone": "010-9265-3796",
-   "why": "2026 제물포 웨이브 마켓은 10월 17일부터 18일까지 이틀간 인천 제물포구 상상플랫폼 웨이브홀에서 열리는 가을 피크닉형 로컬 마켓 행사이다.",
-   "summary": "2026 제물포 웨이브 마켓은 10월 17일부터 18일까지 이틀간 인천 제물포구 상상플랫폼 웨이브홀에서 열리는 가을 피크닉형 로컬 마켓 행사이다. 운영 시간은 오전 11시부터 오후 6시까지이며, 실내 공간에서 진행되는 행사이다. 인천 지역 로컬 브랜드 56팀이 참여하며 도시락과 핫푸드, 수제 음료, 제철 농산물, 공예품, 패션·문화 상품 등을 판매하는 마켓으로 구성된다. 행사 기간에는 마술공연과 버블쇼, 풍선아트, 폴라로이드 촬영 프로그램이 운영되며 패션 페인팅, 핸드크림 만들기, 가죽 팔찌 만들기, 키캡 키링 만들기, 마리모 만들기, 슬라임 만들기 등 체험 프로그램도 진행된다. 보물찾기, 링 토스, 주사위, 컵 스택, 10초 맞히기 등 참여형 놀이 이벤트도 함께 운영되는 행사이다. 또한 마켓 이용권 할인,…",
-   "sub": "행사",
-   "source_url": "https://www.instagram.com/jemulpowav_official",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.4760834131,
-   "lng": 126.6146527143,
-   "checkedAt": "2026-10-13",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/65/4120465_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/65/4120465_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
-   "feedId": "TA-E-4117084",
-   "contentId": "4117084",
-   "contentTypeId": "15",
-   "modifiedtime": "20261002104647",
-   "name": "2026 HELLO DDC FESTIVAL",
-   "start_date": "2026-10-18",
-   "end_date": "2026-10-18",
-   "place_name": "동두천 보산동 외국인 관광특구 일원",
-   "address": "경기도 동두천시 생연동 571-85",
-   "region": "경기",
-   "city": "동두천시",
-   "hours": "13:00~21:00",
-   "fee": "무료",
-   "organizer": "동두천시",
-   "phone": "010-3014-2816",
-   "why": "2026 HELLO DDC FESTIVAL은 경기도 동두천시에서 주최하는 도심재생 야간축제이다.",
-   "summary": "2026 HELLO DDC FESTIVAL은 경기도 동두천시에서 주최하는 도심재생 야간축제이다. 보산동 외국인관광특구의 독특한 도심문화예술 자원을 선보며 경기 북부를 대표하는 야간 축제로 개최된다. 오픈스테이지, DDC 댄스, DDC 콘서트 등 다양한 무대 프로그램을 선보일 예정이며 그 외에도 공방 체험, 먹거리존 등 부스 프로그램도 참여가 가능하다.",
-   "sub": "행사",
-   "source_url": "https://www.helloddc.co.kr",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 37.9131691698,
-   "lng": 127.0561166549,
-   "checkedAt": "2026-10-03",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/85/4117085_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/85/4117085_image3_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
