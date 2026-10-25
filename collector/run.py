@@ -10,7 +10,7 @@
   - 바뀐 것만 상세를 다시 받습니다(feed/state.json 에 contentId별 수정일 기록).
   - 하루 호출 예산(config.dailyCallBudget)을 넘기지 않습니다. 넘기면 멈추고 다음 날 이어서 받습니다.
 """
-import argparse, datetime, json, os, sys, time
+import argparse, datetime, json, os, re, sys, time
 
 from . import mapping
 from .tourapi import TourAPI, QuotaExceeded, TourAPIError
@@ -36,7 +36,21 @@ def save(path, data):
 
 
 def excluded(title, cfg):
-    return any(k in (title or '') for k in cfg.get('excludeTitleKeywords', []))
+    import re
+    t = title or ''
+    return any(k in t for k in cfg.get('excludeTitleKeywords', [])) or any(re.search(x, t) for x in cfg.get('excludeTitleRegex', []))
+
+
+def shop_ok(title, ct, cfg):
+    """시장·쇼핑(38)은 전통시장·먹자골목 같은 거리형만 받는다 — 백화점·마트·매장 같은 상업시설은 뺀다"""
+    if str(ct) != '38':
+        return True
+    return any(k in (title or '') for k in cfg.get('shoppingKeep', []))
+
+
+def prio(title, cfg):
+    """유원지·먹자골목·해수욕장처럼 많이 찾는 곳이면 0, 아니면 1 (목록에서 먼저 받기)"""
+    return 0 if any(k in (title or '') for k in cfg.get('priorityKeywords', [])) else 1
 
 
 def exclude_ids(here=HERE):
@@ -97,6 +111,8 @@ def collect(api, cfg, state, today, max_details, log):
     """목록 → 바뀐 항목만 상세 → 피드 레코드"""
     seen = state.setdefault('seen', {})
     buckets = []  # 권역 × 유형별 장소 후보 [(kind, contentId, contentTypeId, modifiedtime)]
+    buckets_meta = []  # buckets와 같은 순서 — 수도권(후순위) 여부
+    low = set(cfg.get('lowPriorityRegions', []))
     events = []
     okq = badq = 0
     # 1) 장소 목록 (수정일순, 권역 × 유형)
@@ -114,12 +130,73 @@ def collect(api, cfg, state, today, max_details, log):
                 fresh = 0
                 for it in r['items']:
                     cid, mt = str(it.get('contentid')), str(it.get('modifiedtime') or '')
-                    if excluded(mapping.clean(it.get('title')), cfg) or is_excluded_id('PLACE', cid, cfg):
+                    ttl = mapping.clean(it.get('title'))
+                    if excluded(ttl, cfg) or is_excluded_id('PLACE', cid, cfg) or not shop_ok(ttl, ct, cfg):
                         continue
                     if seen.get(cid) != mt:
-                        b.append(('PLACE', cid, ct, mt)); fresh += 1
+                        b.append(('PLACE', cid, ct, mt, prio(ttl, cfg))); fresh += 1
                 if fresh == 0 or page * cfg['numOfRows'] >= r['total']:
                     break  # 수정일순이므로 새 것이 없으면 다음 페이지도 없음
+            b.sort(key=lambda x: x[4])  # 같은 칸 안에서는 유원지·먹자골목 등 목적형 먼저(수정일순 유지)
+            buckets_meta.append(regn in low)
+    # 1-b) 목적형 키워드 검색(유원지·먹자골목·전통시장 …) — 전국. 지방 우선, 수도권은 뒤로
+    kw_hits = []; kw_seen = set(); keep_regions = region_labels(cfg)
+    for word in cfg.get('keywordQueries', []):
+        for page in range(1, cfg.get('keywordPages', 2) + 1):
+            try:
+                r = api.keyword(word, page=page, rows=cfg['numOfRows']); okq += 1
+            except TourAPIError as e:
+                log.append(f'키워드 건너뜀({word}): {e}'); badq += 1; break
+            for it in r['items']:
+                cid, mt = str(it.get('contentid')), str(it.get('modifiedtime') or '')
+                ct = str(it.get('contenttypeid') or '')
+                ttl = mapping.clean(it.get('title'))
+                if ct not in ('12', '14', '28', '38', '39') or cid in kw_seen:
+                    continue
+                if excluded(ttl, cfg) or is_excluded_id('PLACE', cid, cfg) or not shop_ok(ttl, ct, cfg):
+                    continue
+                lab = mapping.region_of(it)
+                if lab and lab not in keep_regions:
+                    continue
+                if ct == '39' and not any(k in ttl for k in cfg.get('shoppingKeep', []) + [word]):
+                    continue  # 음식점은 거리·촌(먹자골목 등)만, 개별 식당은 받지 않음
+                if seen.get(cid) != mt:
+                    kw_seen.add(cid)
+                    kw_hits.append(('PLACE', cid, ct, mt, str(it.get('lDongRegnCd') or '') in low))
+            if page * cfg['numOfRows'] >= r['total']:
+                break
+    # 1-c) 이름으로 찾기(100대 명산 등 큐레이션 목록): 매일 nameQueriesPerRun개씩 이어서 — 한 바퀴 돌면 처음부터
+    nq = int(cfg.get('nameQueriesPerRun', 0))
+    if nq:
+        cur = state.setdefault('nameCursor', {})
+        for ln in cfg.get('nameQueryLists', []):
+            L = load(os.path.join(HERE, 'curation', ln + '.json'), {})
+            its = L.get('items', [])
+            if not its:
+                continue
+            pos = int(cur.get(ln, 0)) % len(its)
+            for k in range(min(nq, len(its))):
+                it = its[(pos + k) % len(its)]
+                q = it.get('q') or it['name']
+                try:
+                    r = api.keyword(q, page=1, rows=30); okq += 1
+                except TourAPIError as e:
+                    log.append(f'이름 검색 건너뜀({q}): {e}'); badq += 1; break
+                key = re.sub(r'\s', '', it.get('match') or it['name'])
+                for h in r['items']:
+                    cid, mt = str(h.get('contentid')), str(h.get('modifiedtime') or '')
+                    ttl = mapping.clean(h.get('title')); ct = str(h.get('contenttypeid') or '')
+                    if ct not in ('12', '28') or cid in kw_seen or key not in re.sub(r'\s', '', ttl):
+                        continue
+                    if excluded(ttl, cfg) or is_excluded_id('PLACE', cid, cfg):
+                        continue
+                    lab = mapping.region_of(h)
+                    if it.get('sido') and lab and lab not in it['sido']:
+                        continue  # 이름이 같은 다른 지역의 산은 받지 않음
+                    if seen.get(cid) != mt:
+                        kw_seen.add(cid); kw_hits.append(('PLACE', cid, ct, mt, False))
+            cur[ln] = (pos + nq) % len(its)
+    kw_hits.sort(key=lambda x: x[4])  # 지방(False) 먼저
     # 2) 행사 (오늘 이후 시작 또는 진행 중)
     start = (today - datetime.timedelta(days=30)).strftime('%Y%m%d')
     horizon = (today + datetime.timedelta(days=cfg['festivalDaysAhead'])).strftime('%Y%m%d')
@@ -146,9 +223,19 @@ def collect(api, cfg, state, today, max_details, log):
         raise TourAPIError('목록 조회가 모두 실패했습니다(TourAPI 서버가 응답하지 않음). 잠시 뒤 다시 실행해 주세요')
     events.sort(key=lambda t: t[3], reverse=True)
     todo = list(events)
+    todo.extend(x[:4] for x in kw_hits)
+    every = max(1, int(cfg.get('lowPriorityEvery', 1)))
     for i in range(max((len(b) for b in buckets), default=0)):
-        todo.extend(b[i] for b in buckets if i < len(b))
-    log.append(f'목록 확인: 새로 받을 항목 {len(todo)}건(행사 {len(events)}) · 이번 실행 상한 {max_details}건')
+        for b, is_low in zip(buckets, buckets_meta):
+            if i < len(b) and (not is_low or i % every == 0):
+                todo.append(b[i][:4])
+    seen_ids = set(); dedup = []
+    for x in todo:  # 같은 항목이 키워드·목록 양쪽에 있으면 한 번만
+        if x[1] in seen_ids:
+            continue
+        seen_ids.add(x[1]); dedup.append(x)
+    todo = dedup
+    log.append(f'목록 확인: 새로 받을 항목 {len(todo)}건(행사 {len(events)} · 키워드 {len(kw_hits)}) · 이번 실행 상한 {max_details}건')
     # 3) 상세 (common + intro + image = 3건/항목)
     out = {'PLACE': [], 'EVENT': []}
     done = 0
@@ -190,9 +277,12 @@ def curation_tag(records, here=HERE):
         if len(t) < 3:
             continue
         for L in lists:
+            mn = int(L.get('minLen', 4))
             for it in L.get('items', []):
-                c = norm(it['name'])
-                if len(c) >= 4 and (c == t or (len(t) >= 4 and (c in t or t in c))):
+                c = norm(it.get('match') or it['name'])
+                if len(c) < mn or (it.get('sido') and isinstance(it['sido'], list) and rec.get('ar') and rec['ar'] not in it['sido']):
+                    continue
+                if c == t or (len(t) >= mn and (c in t or t in c)):
                     rec.setdefault('curation', [])
                     if L['name'] not in rec['curation']:
                         rec['curation'].append(L['name']); rec['curationId'] = it['id']; n += 1
@@ -244,7 +334,7 @@ def main(argv=None):
     log = []
     if a.mock:
         from .mock import MockOpener
-        cfg['regions'] = ['11', '41', '43']  # 예시 자료가 있는 권역(설정과 무관하게 시험)
+        cfg['regions'] = ['11', '41', '43', '51']; cfg['lowPriorityRegions'] = ['11', '41']  # 예시 자료가 있는 권역(설정과 무관하게 시험)
         api = TourAPI('MOCK-KEY', cfg.get('mobileApp', 'GUNGRI'), cfg['dailyCallBudget'], opener=MockOpener(), sleep=0)
     else:
         try:

@@ -91,6 +91,10 @@ class TourAPI:
         """수정일순(C) 목록 — 새로 바뀐 것부터"""
         return self.call('areaBasedList2', contentTypeId=content_type, lDongRegnCd=ldong_regn, arrange=arrange, numOfRows=rows, pageNo=page)
 
+    def keyword(self, word, page=1, rows=100):
+        """제목·내용에 키워드가 들어간 곳(전국, 수정일순) — 유원지·먹자골목 같은 목적형 검색"""
+        return self.call('searchKeyword2', keyword=word, arrange='C', numOfRows=rows, pageNo=page)
+
     def festivals(self, start_yyyymmdd, page=1, rows=100, ldong_regn=None):
         return self.call('searchFestival2', eventStartDate=start_yyyymmdd, lDongRegnCd=ldong_regn, arrange='C', numOfRows=rows, pageNo=page)
 

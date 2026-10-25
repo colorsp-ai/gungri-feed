@@ -11,7 +11,25 @@ PLACES = {
                    {'contentid': '900005', 'title': '행주산성', 'addr1': '경기도 고양시 덕양구 행주로15번길 89', 'lDongRegnCd': '41', 'modifiedtime': '20260922070000', 'contenttypeid': '12'}],
     ('38', '41'): [{'contentid': '900004', 'title': '구리전통시장', 'addr1': '경기도 구리시 구리시장로 19', 'lDongRegnCd': '41', 'modifiedtime': '20260919080000', 'contenttypeid': '38'}],
 }
+KEYWORD = {
+    '가리산': [{'contentid': '900301', 'title': '가리산 자연휴양림', 'addr1': '강원특별자치도 홍천군 화촌면 1', 'lDongRegnCd': '51', 'modifiedtime': '20260920090000', 'contenttypeid': '12', 'mapx': '127.9', 'mapy': '37.8'},
+             {'contentid': '900302', 'title': '가리산 횟집', 'addr1': '강원특별자치도 홍천군 1', 'lDongRegnCd': '51', 'modifiedtime': '20260920090000', 'contenttypeid': '39'},
+             {'contentid': '900303', 'title': '가리산 약수터', 'addr1': '경기도 가평군 1', 'lDongRegnCd': '41', 'modifiedtime': '20260920090000', 'contenttypeid': '12'}],
+    '둘레길': [{'contentid': '900304', 'title': '○○ 둘레길', 'addr1': '충청북도 충주시 1', 'lDongRegnCd': '43', 'modifiedtime': '20260920090000', 'contenttypeid': '28', 'mapx': '127.9', 'mapy': '36.9'}],  # searchKeyword2 — 키워드별 결과(지방 유원지·먹자골목 / 상업시설 / 개별 식당)
+    '유원지': [{'contentid': '900201', 'title': '속초 ○○유원지', 'addr1': '강원특별자치도 속초시 조양동 1', 'lDongRegnCd': '51', 'modifiedtime': '20260920090000', 'contenttypeid': '12', 'mapx': '128.59', 'mapy': '38.20'},
+             {'contentid': '900202', 'title': '○○ 아울렛 유원지점', 'addr1': '강원특별자치도 속초시 1', 'lDongRegnCd': '51', 'modifiedtime': '20260920090000', 'contenttypeid': '38'}],
+    '먹자골목': [{'contentid': '900203', 'title': '청주 ○○ 먹자골목', 'addr1': '충청북도 청주시 상당구 1', 'lDongRegnCd': '43', 'modifiedtime': '20260921090000', 'contenttypeid': '39', 'mapx': '127.49', 'mapy': '36.64'},
+             {'contentid': '900204', 'title': '○○식당 본점', 'addr1': '충청북도 청주시 1', 'lDongRegnCd': '43', 'modifiedtime': '20260921090000', 'contenttypeid': '39'},
+             {'contentid': '900205', 'title': '서울 ○○ 먹자골목', 'addr1': '서울특별시 마포구 1', 'lDongRegnCd': '11', 'modifiedtime': '20260921090000', 'contenttypeid': '39'}],
+    '전통시장': [{'contentid': '900206', 'title': '○○ 홈플러스', 'addr1': '충청북도 청주시 1', 'lDongRegnCd': '43', 'modifiedtime': '20260921090000', 'contenttypeid': '38'},
+             {'contentid': '900207', 'title': '스마트팜 체험관', 'addr1': '충청북도 청주시 1', 'lDongRegnCd': '43', 'modifiedtime': '20260921090000', 'contenttypeid': '12'}],
+}
 COMMON = {
+    '900301': {'overview': '가리산 숲길입니다.', 'tel': '', 'homepage': '', 'firstimage': ''},
+    '900304': {'overview': '숲 사이로 이어지는 둘레길입니다.', 'tel': '', 'homepage': '', 'firstimage': ''},
+    '900201': {'overview': '바다와 놀이시설이 함께 있는 유원지입니다.', 'tel': '', 'homepage': '', 'firstimage': ''},
+    '900203': {'overview': '저녁이면 불이 켜지는 먹자골목입니다.', 'tel': '', 'homepage': '', 'firstimage': ''},
+    '900207': {'overview': '스마트팜을 보고 체험하는 곳입니다.', 'tel': '', 'homepage': '', 'firstimage': ''},
     '900001': {'overview': '담배공장을 고친 수장고형 미술관입니다. 소장품이 보관된 모습을 가까이서 볼 수 있습니다.', 'tel': '043-261-1400', 'homepage': '<a href="https://www.mmca.go.kr/" target="_blank">https://www.mmca.go.kr</a>', 'firstimage': 'http://tong.visitkorea.or.kr/cms/resource/01/900001_image2_1.jpg', 'cpyrhtDivCd': 'Type3', 'mapx': '127.4905', 'mapy': '36.6512'},
     '900002': {'overview': '뚝섬 일대의 대규모 도시 숲입니다.<br>평지 산책로가 넓어 천천히 걷기 좋습니다.', 'tel': '02-460-2905', 'homepage': '', 'firstimage': 'http://tong.visitkorea.or.kr/cms/resource/02/900002_image2_1.jpg', 'cpyrhtDivCd': 'Type1', 'mapx': '127.0374', 'mapy': '37.5444'},
     '900003': {'overview': '조선 왕릉 아홉 기가 모인 세계유산입니다. 숲길이 완만해 천천히 걷기 좋습니다.', 'tel': '031-563-2909', 'homepage': '', 'firstimage': 'http://tong.visitkorea.or.kr/cms/resource/03/900003_image2_1.jpg', 'cpyrhtDivCd': 'Type1', 'mapx': '127.1330', 'mapy': '37.6213'},
@@ -48,11 +66,13 @@ class MockOpener:
         q = {k: v[0] for k, v in urllib.parse.parse_qs(p.query).items()}
         if op == 'areaBasedList2':
             return wrap(PLACES.get((q.get('contentTypeId'), q.get('lDongRegnCd')), []) if q.get('pageNo', '1') == '1' else [])
+        if op == 'searchKeyword2':
+            return wrap(KEYWORD.get(q.get('keyword'), []) if q.get('pageNo', '1') == '1' else [])
         if op == 'searchFestival2':
             return wrap(FESTIVALS if q.get('pageNo', '1') == '1' else [])
         cid = q.get('contentId', '')
         if op == 'detailCommon2':
-            base = next((x for v in PLACES.values() for x in v if x['contentid'] == cid), None) or next((x for x in FESTIVALS if x['contentid'] == cid), {})
+            base = next((x for v in list(PLACES.values()) + list(KEYWORD.values()) for x in v if x['contentid'] == cid), None) or next((x for x in FESTIVALS if x['contentid'] == cid), {})
             return wrap([dict(base, **COMMON.get(cid, {}))] if base else [])
         if op == 'detailIntro2':
             return wrap([INTRO.get(cid, {})])

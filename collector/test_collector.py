@@ -26,12 +26,61 @@ class T(unittest.TestCase):
             self.assertFalse(mk['photos'][0]['usable'], '저작권 유형 없는 사진은 사용 불가')
             self.assertNotIn('fee', mk, '없는 값은 넣지 않음')
 
+    def test_local_keyword_and_commercial_filter(self):
+        with tempfile.TemporaryDirectory() as d:
+            f = self.run_mock(d)
+            names = [p['n'] for p in f['places']]
+            self.assertIn('속초 ○○유원지', names, '지방 유원지(키워드 검색)')
+            self.assertIn('청주 ○○ 먹자골목', names, '지방 먹자골목(음식점 유형이라도 골목·거리형은 받음)')
+            self.assertIn('스마트팜 체험관', names, '“스마트”는 마트로 오인하지 않음')
+            self.assertFalse(any('아울렛' in n or '홈플러스' in n for n in names), '백화점·마트·아울렛 등 상업시설 제외')
+            self.assertNotIn('○○식당 본점', names, '개별 식당은 받지 않음')
+            ar = {p['n']: p['ar'] for p in f['places']}
+            self.assertEqual(ar['속초 ○○유원지'], '강원')
+            u = next(x for x in f['places'] if x['n'] == '속초 ○○유원지')
+            self.assertEqual(u['coordState'], 'SOURCE_PROVIDED'); self.assertAlmostEqual(u['lat'], 38.20)
+
+    def test_local_first_when_budget_small(self):
+        with tempfile.TemporaryDirectory() as d:
+            f = self.run_mock(d, '--max-details', '3')
+            got = [p['ar'] for p in f['places']]
+            self.assertTrue(all(a in ('강원', '충청') for a in got), '하루 상한이 작으면 지방(키워드 적중)을 먼저 받음: %s' % got)
+
+    def test_mountain_and_trail(self):
+        with tempfile.TemporaryDirectory() as d:
+            f = self.run_mock(d)
+            names = [p['n'] for p in f['places']]
+            self.assertIn('가리산 자연휴양림', names, '100대 명산 이름 검색(10개씩)')
+            self.assertNotIn('가리산 횟집', names); self.assertNotIn('가리산 약수터', names, '다른 지역·음식점은 받지 않음')
+            self.assertIn('○○ 둘레길', names)
+            st = json.load(open(os.path.join(d, 'state.json'), encoding='utf-8'))
+            self.assertEqual(st['nameCursor']['mountain100'], 10, '다음 날은 11번째 산부터')
+            self.run_mock(d)
+            st = json.load(open(os.path.join(d, 'state.json'), encoding='utf-8'))
+            self.assertEqual(st['nameCursor']['mountain100'], 20)
+        L = json.load(open(os.path.join(run.HERE, 'curation', 'mountain100.json'), encoding='utf-8'))
+        self.assertEqual(len(L['items']), 100)
+        rec = [{'n': '설악산국립공원', 'ar': '강원'}, {'n': '경주 남산', 'ar': '경북'}, {'n': '서울 남산', 'ar': '서울'}, {'n': '남산타워', 'ar': '서울'}]
+        run.curation_tag(rec)
+        self.assertIn('산림청 100대 명산', rec[0].get('curation', [])); self.assertIn('산림청 100대 명산', rec[1].get('curation', []))
+        self.assertNotIn('curation', rec[2]); self.assertNotIn('curation', rec[3])
+
+    def test_shop_ok_and_regex(self):
+        cfg = run.load(os.path.join(run.HERE, 'config.json'), {})
+        for ttl in ('롯데백화점 광주점', '○○ 이마트', '스타필드 안성', '○○ 매장', '동네마트', '프리미엄 아울렛'):
+            self.assertTrue(run.excluded(ttl, cfg), ttl)
+        for ttl in ('스마트팜 체험관', '매장문화재 전시관', '부평깡통시장', '속초중앙시장'):
+            self.assertFalse(run.excluded(ttl, cfg), ttl)
+        self.assertTrue(run.shop_ok('죽도시장', '38', cfg)); self.assertFalse(run.shop_ok('○○ 쇼핑센터점', '38', cfg)); self.assertTrue(run.shop_ok('○○백화점', '12', cfg))
+        self.assertEqual(len(cfg['regions']), 17)
+
     def test_incremental(self):
         with tempfile.TemporaryDirectory() as d:
             self.run_mock(d)
+            self.run_mock(d)  # 수도권(후순위)에서 건너뛴 항목은 이튿날 이어서 받음
             f = self.run_mock(d)
             self.assertEqual(f['stats']['newPlaces'], 0)
-            self.assertEqual(f['stats']['places'], 5, '이전 피드 유지')
+            self.assertEqual(f['stats']['places'], 11, '이전 피드 유지')
 
     def test_budget(self):
         with tempfile.TemporaryDirectory() as d:
