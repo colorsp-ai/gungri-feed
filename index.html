@@ -102,7 +102,7 @@
 </script>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <!-- GUNG-RI v3.01.02L: simplified captain venue/photo -->
-<script>window.GUNGRI_BUILD="PROD";</script><title>궁리 GUNG-RI R17 RC · PROD</title>
+<script>window.GUNGRI_BUILD="QA";</script><title>궁리 GUNG-RI R17 RC · QA</title>
 <style>
 :root{--fs:1;--navy:#12314F;--navyD:#0A1F35;--gold:#B98C2A;--goldL:#E4C97E;
 --paper:#F3EFE6;--paperD:#E5DED0;--ink:#1B1B1B;--mute:#4E4B46;--line:#CFC6B4;--seal:#B4362A;--ok:#2F6F5E}
@@ -834,17 +834,20 @@ var ACCOUNTS=[
 {id:"adm",n:"관리자",role:"ADMIN",perm:"OWNER"},
 {id:"stf",n:"스텝1",role:"ADMIN",perm:"STAFF"},
 {id:"stf2",n:"스텝2",role:"ADMIN",perm:"STAFF"},
-{id:"capA",n:"김영수",role:"CAPTAIN",hl:"구리 토박이 · 모임 진행 3년"},
-{id:"capB",n:"정만호",role:"CAPTAIN",hl:"시장 사진 20년"},
-{id:"capP",n:"예스공방",role:"CAPTAIN",hl:"이천 예스파크 공방 · 콘텐츠 공급자",providerPlaces:["PL-141"]},
-{id:"u1",n:"김무늬",nick:"김무늬",sex:"여",role:"USER",tier:"실버",born:1968,reg:"경기 구리",
- tags:["산책·나들이","사진","맛집·시장"],want:["피클볼"],lv:2},
-{id:"u2",n:"이정희",nick:"이정희",sex:"여",role:"USER",tier:"골드",born:1964,reg:"경기 남양주",
- tags:["산책·나들이","배움","봉사"],want:["피클볼","우쿨렐레"],lv:3},
-{id:"u3",n:"박상철",nick:"박상철",sex:"남",role:"USER",tier:"기본",born:1970,reg:"서울 강동",
- tags:["운동","여행"],want:["피클볼"],lv:4},
-{id:"u4",n:"윤경순",nick:"윤경순",sex:"여",role:"USER",tier:"실버",born:1966,reg:"경기 구리",
- tags:["맛집·시장","사진"],want:["우쿨렐레"],lv:2}];
+{id:"capA",n:"김영수",role:"CAPTAIN",hl:"구리 토박이 · 모임 진행 3년",born:1971,reg:"서울 강서"},
+{id:"capB",n:"정만호",role:"CAPTAIN",hl:"시장 사진 20년",born:1969,reg:"경기 안양"},
+{id:"capC",n:"한도현",role:"CAPTAIN",hl:"의정부 토박이 · 동네 걷기 모임",born:1966,reg:"경기 의정부"},
+{id:"capP",n:"예스공방",role:"CAPTAIN",hl:"이천 예스파크 공방 · 콘텐츠 공급자",providerPlaces:["PL-141"],born:1970,reg:"경기 포천"},
+{id:"u1",n:"김무늬",nick:"김무늬",sex:"여",role:"USER",tier:"실버",born:1968,reg:"경기 구리",tags:["산책·나들이","사진","맛집·시장"],want:["피클볼"],lv:2},
+{id:"u2",n:"이정희",nick:"이정희",sex:"여",role:"USER",tier:"골드",born:1964,reg:"경기 남양주",tags:["산책·나들이","배움","봉사"],want:["피클볼","우쿨렐레"],lv:3},
+{id:"u3",n:"박상철",nick:"박상철",sex:"남",role:"USER",tier:"기본",born:1970,reg:"서울 강동",tags:["운동","여행"],want:["피클볼"],lv:4},
+{id:"u4",n:"윤경순",nick:"윤경순",sex:"여",role:"USER",tier:"실버",born:1966,reg:"경기 구리",tags:["맛집·시장","사진"],want:["우쿨렐레"],lv:2},
+{id:"uSokcho",n:"김준태",nick:"김준태",sex:"남",role:"USER",tier:"기본",born:1965,reg:"강원 속초",tags:["나가요","움직여요","역사"],want:["여행","걷기"],lv:2},
+{id:"uF",n:"나운도",nick:"나운도",sex:"남",role:"USER",tier:"기본",born:1973,reg:"충북 청주",tags:["산책·나들이","운동"],want:["걷기"],lv:3},
+{id:"uG",n:"강기도",nick:"강기도",sex:"남",role:"USER",tier:"기본",born:1971,reg:"강원 원주",tags:["운동","봉사"],want:["피클볼"],lv:3},
+{id:"uH",n:"김영삼",nick:"김영삼",sex:"남",role:"USER",tier:"기본",born:1976,reg:"경남 거제",tags:["여행","맛집·시장"],want:["여행"],lv:2},
+{id:"uI",n:"한동훈",nick:"한동훈",sex:"남",role:"USER",tier:"기본",born:1973,reg:"부산 해운대",tags:["사진","산책·나들이"],want:["사진"],lv:2},
+{id:"uJ",n:"김대중",nick:"김대중",sex:"남",role:"USER",tier:"기본",born:1967,reg:"전남 신안",tags:["배움","역사"],want:["우쿨렐레"],lv:2}];
 var ACC="guest";
 var DEMOALL=false;   // false = 회원만 보기
 function me(){return find(ACCOUNTS,ACC)||find(ACCOUNTS,"guest")||ACCOUNTS[0];}
@@ -5883,6 +5886,7 @@ saveSeedActivity=function(code){
  return m;
 };
 
+window.__LEG={MEET:JSON.parse(JSON.stringify(MEET)),ROOMS:JSON.parse(JSON.stringify(ROOMS)),PHOTOS:JSON.parse(JSON.stringify(PHOTOS)),COMPS:JSON.parse(JSON.stringify(COMPS))};
 resetLegacyDemoContent();
 /* 기존 최초 render가 데모 데이터로 한 번 실행된 뒤이므로 MASTER-only 상태로 즉시 재렌더 */
 
@@ -8691,10 +8695,6 @@ body.visual-ui:not(.visual-home) #visualShell{display:none}
     <div class="ui-cat-img"></div>
     <div class="ui-cat-icon">📸</div>
     <div class="ui-cat-body"><b style="color:#C4501B">오늘도 난…</b><small>내가 한 일 남기기</small></div>
-    </div><div class="ui-cat" data-ui-axis="place">
-    <div class="ui-cat-img" style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8XGBsbHR0dERYgIh8cIhocHRz/2wBDAQUFBQcGBw0HBw0cEhASHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBz/wAARCABGAJkDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6i8T6vLq2oyKGP2WFtqJnjjqfqe1YwjPervkknPXNOWDJ6V6MUkrI+YnzTm5PUoeVz0pfK9q0RAPSgW49KonkKCxdOKf5R9Kvi3x2qQW/tSGqZmeSfSgxGtM23tTDAfSgPZmcIfajyea0lg9qX7PntQP2Zm+T7UeT7VpfZ/alEHtQP2ZmiA0vkH0rWFtx0pwtxnpQNUjI8igwe1av2fPalNtx0qQ9kY5g9qPJ4rUNufTnpUq6WShZ5FQY4H3v/wBVDdtxxouWw3w3qz6Rfxgsfs0rbXUnjnv+H+NepbvdvzryGW2aNiOvcEV6Vvf++axqwTd0d2FqShFxZwy2429KXyBV9VTAzn8MUFI+xb8QK7FAz9kiiIB6U5bfHOKvqsQ6hv0qRolI+Vj+IotrYapK1ymlmzkAIefapUsCfvFY8f3zjNSqnqWNO8pT0B/OlyeZaprsA02ExbmuFD9wBx+dPWDTgu0rKzf384/T0poiH+TThEPQ0uRdWWopbIBZ6arEO8jZHBGABUbaShUNDcRv7Nwam8oenFOWLPQZpcltbj5YvdFX+ynZtqvEx9nFRfYnQ4ZGFXihRuRTxIAQrOBnsWxmnZk+zh0Kkdkz9B+ZApGswjpGzorvnapYZfAycDqcD0q5JhTjH6V86fFvx94h0P4v+E4dPjuBZabhvsyRpIt40+UbLZynGFGcYOW6VLVtTahhnWk4wV2j6CfTnUDKj8CDTGtSvGDmrhjAOP65pfL2jqaOUy5I9EZklm6c7ePeoXB27eg9BWpJGCM1VdFqlG5LjbYzWi4JxXeba5CRBg/Suy21lWjaxdKG553Hq8bdwT7GpE1WNjwpr5sTV/LAIii3YxnH+Bq/Z+K7y2CiN2VR/CHP+NfW/wBjXimmeJ/aaTs0fQ76xDGR5jKg9WbH86RvEmnR43XcI/4Fn+VfOk+qQ3crSXEIkkfliZG5/WnLeW5HEWPpK4/rU/2MurH/AGp2PoSTxZpUakm7Q+ygn+lVv+E205SNvnMP9zH868OttQhiLbUf5vWZz/Wp0vzuOZpCpPC+Z06cZ6np39al5TGOlm/uGsxvrdI9lufHAJ/0e2UL/ekbP8qZF48ZVIktEZ+xRiB+teRyXEkjoYropGB8yMS2TnrnPp2xUSGf7RkXm2PPcuWx9c4z2/E0nl9NKzgx/XW3dTR6hfeNdTkBEbRQD0Rcn8zVRPFWqSRsr3rBSOSAB+vBrzaSfUmdV2bl25Z47g4zg8YPPUAZ9/ao42vXTfJFOSMfuvmdjxk9OOOlRy0IKzg/uLU5z1U1952p8TTwSkw30ox1w7VXuNb+0SedNM0kn99iSf51xs2qi0UGdHj2gFnaIAL0/wBrj8qr6nrM1rBMIowbkRkxRyHYNxHyBiTwpJ6/WsquZYPD61Gk/TUuGFrVPh1+Z6VZeM9QhAjivG2js4DY/PmvP/iHenUvHOh3s7K0wSEMwGM7ZTjgVzE+v6pcy2LW15HYBYUWeIBZWklyCxXdwFxx16Vman4qg1zVdNuLe9tLl7Zvs8jxNwZF+Y/KCSAcjH1rwsdm+CxMf9nVmmm9Oh9Vw3h54evOVeSScZJX80fQ1l4r1GCbetyzIDyr/MD/AFFdVB4/tnjAuYTG+PvK2V/WvmkeL9QfR7m0udXittWlIKTWtqZDCCRhdvQtj1xjmsHTvF93oOtw6nrniSXV7O5iNuLS1RgGb5QHAY4XHPuTSqZ9l9Woo8jt32/4c8d4DEUk2pL03PrVPGVjM2I7qD6M2D+tNk1tpTlJEb3Ug14RpHifw5q5tyl04aZ1j3bxsV2XIBbPFdTcpY2HkK915TzsFj3ORljgDkHjqPzr1aFXLq0faU6qsu5wzeKg7Tj9x6WdVlUHJBGPSvRftQ9DXypf+KUspLyCTUzC9qFMivIRtyMjHPOfavo77a//AD0P5j/GuLGTwzklTqRfezN6EqzTvFo+RIrCaQDNtJ+JNX4dImx/x7EfVq6uKCKPGZCcgdquBolHG4/hX2v1l8qsfK+zs3dnFnSZ88Ww/wC+6lj0q4XGYB/31XW+anPyEn8qDNxwqD6tS+sPsHJHuc7HpU5OfJQfU1P/AGTP1xGPxrYa6I/ijH5moJbogZMn5DFT7aTHZIrwaVMeroPzpZtNkiBIlT9aVb2MMMsSfc1yviL4h/2b4mt/Dtpod9qt5NDHNi0lVSu5mBLBuNoC5JzjkVhiMXHDx9pVdkb4ehLET9nTV2dBbiSF28x1IPAwen51U17x3pnhK6sILlTPLcv8yRyKDEgIBY/n09qz9Q13TbLUbRrvxENPSI/vbSLy5GnyRt3NyUHb5R361y/jv4bXraxD/Z0dnbafYxoqxSXeZZnZizYXrnJAFfM4/P3Ufs8Oml3f6H0WByTkXPX1fZfqdJq/xP0LUri3isL69shC5WXz7QyRTk4xna24AZ6YNcJ4hfVLiSSez1LTrwzhpY5ReCETNgDGJNpwOT7YqW3+GlzpljPq2syxxwr+8eDzMF2YjapbsT/s5Jrndaa7a9UCN7i8lxFHGIxukIxhI0GdqD6c96+aq4eFaq609W+57sEqceRKyJPAfw/8beLry4ivGu7DRntnklv1eOdg4GQkao5JZjgD2r1LSfD2leFtANnZ6WbHyEBcTRHzC5A5djgls8jniuZ8MeFbfw1ZvqOt3Jiugu9xBMY1txwclkwS3TkcCuQm+N3ia31u7Ok6ldJpkrBIrW7f7UoUYxw+ck4rjxmCnW/gy5f1NE0lruOutIi8DPdasdevXiuM7xKwKuTgjGDlmGTXJTat4o13VpP7F0PUpUYKrNHA5Djj5s5wB0/rXql746stL0zRbjxZ4C8P6lqSXAkaFYjbPBb4XEpVSV3segIH05r3nT7Xwv4klNvp2vXVhcOFaOK/2yQybgMbZB69BmvMqzqULc0VJvS70LVKL3dj5z8LfDPxH4itoG8RINIWBg8cdvEjTP0ydoO1MY712974Q16KO18vU7PZAojJvXaaTaNvzcfLuOOPT1r1bVPCPiLQGijbTfMt3babmCfMSDjn2/Ec1yfivUrDQbZUurtfOnIVFjyZHbIGFXOR/WvIr4nEOXJKNvI6oUqdr/iedX+kW+q6t5UihxFEqyILgxMcABWxkj1znrX2zsH/ADxH6/4V8JWvhy70XXJdb1DWY40VWZbaPczyDA+8c4A5/Aivuz7cPQfmv+NdmD57Pld1p3InGHVanzSb64KISwHyjpVebVmiX5mkP0xRRX75CKsj8jqTld6kcWuIybsSnBxg4p765xhUb8WooquRXMnUly7lU6w7OBjH05pt3qpggeR9xVCu4D3zjH5UUVjVk4rQ2jq0jz/wt4m8Qa14tvrMyWk+l6XKLySSRTHPNDL/AKuHC5UbSwye4FbfxrvL9vhzrCyzfYTaRxzI2nuwJbjarE4LKdxz6YGM0UV+dYuvUqV3Gcm1c/SMFQp08OpQikzyP4BeFZPHmotaPeG2Fm3nvNje4QEYwDwzbh/FwBzya+rNP8GaP4fLTWkTtdzDdNd3DGWeXPXc5OevYY/SiisZvVnVBaXPNvij8X/D2gXUnhK78P3OrX0hHyyyiG3VhjDbly/U9gK4Nb3Vf7G0qTTLTTNMuNTDCWe1eTzEjVwFRGfcR15PU0UVSVkJ67np2g/A7XfGWnfbvEPiCAW0TIpht1kcBmCkEAlQfxres/gnpPhW7N5ZyfPbrlr6ZRLcZBUny1PyR/72GP0oorKTexcYq5R134XWmp6fe3sTiOCBDNcSSs8kkxAXPyk8k9cluD2rkNJ8QWmm2JjMM7tMVht/n6Phfmc55x29KKK87MYRcI3RT01PqT4b6tN43+GoivZpSzwyW5lz8+wcBs55bp+VfJniW5tNGisr+MXE2uzXDxRTyN8kQjYDdgk5Y4H0oorz0lOVPm1HJ2TsQaLqsmpajbTTuWaaCVHUrkNtTnvx82SPzr7h8mX/AKZ/+Pf40UVpyJTcVsrHHGTa1Z//2Q==')"></div>
-    <div class="ui-cat-icon">📍</div>
-    <div class="ui-cat-body"><b style="color:#0B7D45">어디가볼까?</b><small>가볼 곳 한눈에</small></div>
     </div></section>
 <section class="ui-sec"><div class="ui-sec-head"><h2>궁리가 추천한 활동이에요</h2><button data-ui-route="what">더보기 ›</button></div><div class="ui-rec-grid" id="uiRecommendations"></div></section>
 <section class="ui-end"><div class="ui-end-copy"><h2>찾는 만남에서,<br>이어지는 관계로.</h2><p>전문가가 아니어도 동네 친구를 모을 수 있어요.<br>모임을 직접 열어보고 싶다면, 캡틴이 되어보세요.</p></div><button class="ui-end-btn" data-ui-route="captain">캡틴 신청하기 →</button></section>
@@ -10066,7 +10066,7 @@ body.gate-dev .acct{position:sticky!important;top:0!important;z-index:13900!impo
   close();setTimeout(function(){try{if(window.GateNavRC2)GateNavRC2.normalize();}catch(e){}},20);
  });
  // v2.99.3 DEV 전용 실행본: Android content://, file://, sandbox preview 등 실행 프로토콜과 무관하게 QA 역할 진입을 항상 활성화한다.
- /* R17 PROD: DEV 도구는 ?dev=1 또는 좌하단 5회 탭으로만 */
+ try{document.body.classList.add("gate-dev");localStorage.setItem("GUNGRI_DEV_MODE","1");}catch(e){}
  window.GateDevRoleUX={open:open,close:close,draw:draw};
 })();
 </script>
@@ -20279,7 +20279,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
  /* ======================================================================
     6. PEOPLE (B3 · B4 · B5)
     ====================================================================== */
- var QA_NAMES={u1:'MEMBER_A',u2:'MEMBER_B',u3:'MEMBER_C',u4:'MEMBER_D',u2b:'MEMBER_B2',uSokcho:'MEMBER_E',capA:'CAPTAIN_A',capB:'CAPTAIN_B',capP:'PROVIDER_CAPTAIN',stf:'STAFF_A',stf2:'STAFF_B',adm:'ADMIN_A',guest:'GUEST'};
+ var QA_NAMES={capC:'CAPTAIN_C',uF:'MEMBER_F',uG:'MEMBER_G',uH:'MEMBER_H',uI:'MEMBER_I',uJ:'MEMBER_J',u1:'MEMBER_A',u2:'MEMBER_B',u3:'MEMBER_C',u4:'MEMBER_D',u2b:'MEMBER_B2',uSokcho:'MEMBER_E',capA:'CAPTAIN_A',capB:'CAPTAIN_B',capP:'PROVIDER_CAPTAIN',stf:'STAFF_A',stf2:'STAFF_B',adm:'ADMIN_A',guest:'GUEST'};
  W.guriQaName=function(id){return QA_NAMES[id]||'';};
  function tagAccounts(){(W.ACCOUNTS||[]).forEach(function(a){if(QA_NAMES[a.id])a.qa=QA_NAMES[a.id];});}
  var baseCap=W.uCapApply;
@@ -24164,6 +24164,116 @@ function sendPlaceReq(){
   '.ga-evr{padding:10px 0;border-top:1px solid #e6efe9}.ga-evr:first-of-type{border-top:0}.ga-evt{font-size:20px;font-weight:800;color:#1f2a30;line-height:1.35}.ga-evm{font-size:16px;color:#4a4f52;margin:3px 0 8px}'+
   '.ga-evb{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ga-evb .btn{min-height:50px;font-size:17px}';
  D.head.appendChild(st);
+})();
+
+</script>
+<script id="guri-r17-testacct">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriTestAcct)return;W.__guriTestAcct=1;
+ /* QA 전용 테스트 계정: ID/비밀번호(해시만 저장)로 로그인, 서버 가입 아님 */
+ var SALT='gungri-qa|';
+ var T=[{"id": "ADMIN_A", "acc": "adm", "h": "7363d5e8f74a0e0b02146047da0dfce14b0413678eef96ba32121fad6ca1d9b8"}, {"id": "STAFF_A", "acc": "stf", "h": "0112ebf11df7f57883ca2269629b2bc2dc120b8a1ac30c91590fc52ef0dcbcb5"}, {"id": "STAFF_B", "acc": "stf2", "h": "ce8651d6250273a4f09c71247ff4c1333af1cbf16b2c899540bc37e4ead7f25e"}, {"id": "CAPTAIN_A", "acc": "capA", "h": "cffb1ba5d4ca1c44d06b53e8cfb3cd1cd170ea039b8270c2709d26495394bdb8"}, {"id": "CAPTAIN_B", "acc": "capB", "h": "9b9f54f58a8e4de609e176d09d3ca9f3622fbdee5d798ffe42205a951229d291"}, {"id": "CAPTAIN_C", "acc": "capC", "h": "76c2d7146306ce5016b9ee6faad81233838a77a92d367f8dcdce537564ed1791"}, {"id": "PROVIDER_CAPTAIN", "acc": "capP", "h": "525022fb4051aa5b6357ce911cd97744e5f8ee41471aea04a1c984f5912101e1"}, {"id": "MEMBER_A", "acc": "u1", "h": "f96e2ce253a6e2be48fed89a8fa6ac2c27af536d72e5128bb1030f768cdb12bd"}, {"id": "MEMBER_B", "acc": "u2", "h": "9897b0f096a9870ec7e737f7c9cae82e2b3f41596f21de4e80896f8312c84357"}, {"id": "MEMBER_C", "acc": "u3", "h": "dcb4aa9bc2b5271e026e6fda6a01c7e2e3c5785d9cbdd0ef6b0f53523422f4cb"}, {"id": "MEMBER_D", "acc": "u4", "h": "200187ec85fedacb806e077876a2f15ec21edba3a656eef0bb834a31650f963f"}, {"id": "MEMBER_E", "acc": "uSokcho", "h": "b1755eb8b548ef7c49645ece807e9cbc779d2308a57f58c75c4216b7a981356a"}, {"id": "MEMBER_F", "acc": "uF", "h": "59ccdb0383357ebd54b890c2086ad40b1dcab446c1583445723df39fb28ae3c0"}, {"id": "MEMBER_G", "acc": "uG", "h": "ea2a90b1042daf925d843fdec732d675a42b67f6577d5fd81159b76ad96cbeda"}, {"id": "MEMBER_H", "acc": "uH", "h": "e91b2290f8cc0ba26898510880e296ce72a6ba3a18ec2d0732dae8ea8e986b54"}, {"id": "MEMBER_I", "acc": "uI", "h": "2c25f84f3506a819540df28a5f93b484aa7c70e11213cc4bdfdfd75af470eec4"}, {"id": "MEMBER_J", "acc": "uJ", "h": "d7f4cd97e467d2626d4342009f3de5fd3a410d333dce435897cbb1953a1665b7"}, {"id": "GUEST", "acc": "guest", "h": ""}];
+ function sha256(s){
+  var K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  var b=unescape(encodeURIComponent(s)),l=b.length,w=[],i,j;
+  for(i=0;i<l;i++)w[i>>2]|=b.charCodeAt(i)<<(24-(i%4)*8);
+  w[l>>2]|=0x80<<(24-(l%4)*8);w[(((l+8)>>6)+1)*16-1]=l*8;
+  var H=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  for(i=0;i<w.length;i+=16){var a=H.slice(),x=[];
+   for(j=0;j<64;j++){
+    if(j<16)x[j]=w[i+j]|0;else{var s0=((x[j-15]>>>7)|(x[j-15]<<25))^((x[j-15]>>>18)|(x[j-15]<<14))^(x[j-15]>>>3),s1=((x[j-2]>>>17)|(x[j-2]<<15))^((x[j-2]>>>19)|(x[j-2]<<13))^(x[j-2]>>>10);x[j]=(x[j-16]+s0+x[j-7]+s1)|0;}
+    var S1=((a[4]>>>6)|(a[4]<<26))^((a[4]>>>11)|(a[4]<<21))^((a[4]>>>25)|(a[4]<<7)),ch=(a[4]&a[5])^(~a[4]&a[6]),t1=(a[7]+S1+ch+K[j]+x[j])|0,S0=((a[0]>>>2)|(a[0]<<30))^((a[0]>>>13)|(a[0]<<19))^((a[0]>>>22)|(a[0]<<10)),mj=(a[0]&a[1])^(a[0]&a[2])^(a[1]&a[2]),t2=(S0+mj)|0;
+    a=[(t1+t2)|0,a[0],a[1],a[2],(a[3]+t1)|0,a[4],a[5],a[6]];}
+   for(j=0;j<8;j++)H[j]=(H[j]+a[j])|0;}
+  return H.map(function(v){return ('00000000'+(v>>>0).toString(16)).slice(-8);}).join('');}
+ W.__gtHash=sha256;
+ function find(id,pw){id=String(id||'').trim().toUpperCase();if(!id)return null;
+  for(var i=0;i<T.length;i++){if(T[i].id!==id)continue;if(!T[i].h)return T[i];if(sha256(SALT+id+'|'+String(pw||''))===T[i].h)return T[i];return {bad:1};}
+  return null;}
+ function msg(t){var e=D.getElementById('grClMsg');if(e)e.textContent=t;try{W.toast(t);}catch(x){}}
+ D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-cl="go"]'):null;if(!b)return;
+  var g=function(i){var e=D.getElementById(i);return e?e.value:'';};var r=find(g('clEm'),g('clPw'));if(!r)return;
+  ev.preventDefault();ev.stopPropagation();ev.stopImmediatePropagation();
+  if(r.bad){msg('ID 또는 비밀번호가 맞지 않습니다.');return;}
+  var sh=D.getElementById('grCl');if(sh)sh.style.display='none';
+  var t=D.createElement('button');t.setAttribute('data-v2992-acc',r.acc);t.style.display='none';D.body.appendChild(t);t.click();t.remove();
+ },true);
+ /* 샘플 모임·방·사진 복원 + 새 인물 배분 */
+ var L=W.__LEG;
+ if(L&&L.MEET&&L.MEET.length&&!(W.MEET||[]).length){
+  var M=JSON.parse(JSON.stringify(L.MEET)),by={};M.forEach(function(m){by[m.id]=m;});
+  function add(id,k,names){var m=by[id];if(!m)return;m[k]=m[k]||[];names.forEach(function(n){if(m[k].indexOf(n)<0&&(k!=='book'||!m.seats||m.book.length<m.seats))m[k].push(n);});}
+  add('m1','book',['나운도','강기도']);add('m1','cart',['김준태']);
+  add('m2','book',['김영삼','한동훈']);
+  add('m3','book',['김대중','나운도']);
+  add('c3','book',['김준태','한동훈']);
+  add('g1','book',['강기도']);add('g2','book',['한동훈','김영삼']);
+  add('e1','book',['김대중','김준태']);add('e2','book',['나운도','김준태','이정희']);
+  add('v1','book',['강기도','윤경순']);add('v2','book',['박상철','이정희','김영삼']);
+  add('hx1','book',['김준태']);
+  ['c3','v2'].forEach(function(i){if(by[i]){by[i].cap='한도현';by[i].owner='capC';}});
+  var R=JSON.parse(JSON.stringify(L.ROOMS));
+  R.forEach(function(r){var m=by[r.tgt];if(!m)return;var s={};(r.members||[]).forEach(function(n){s[n]=1;});(m.book||[]).forEach(function(n){if(!s[n]){s[n]=1;r.members.push(n);}});});
+  /* 한도현이 맡은 모임은 방도 만들어 준다 */
+  ['c3','v2'].forEach(function(i){var m=by[i];if(!m||R.some(function(r){return r.tgt===i;}))return;R.push({id:'rs'+i,tgt:i,title:m.title,kind:'MEET',owner:'한도현',members:['한도현'].concat(m.book||[]),banned:[],msgs:[]});});
+  W.MEET=M;W.ROOMS=R;W.PHOTOS=JSON.parse(JSON.stringify(L.PHOTOS));W.COMPS=JSON.parse(JSON.stringify(L.COMPS));
+ }
+ if(W.PREF){(W.ACCOUNTS||[]).forEach(function(a){if(a.role==='USER'&&!a.guest&&!W.PREF[a.n])W.PREF[a.n]={time:['평일 오전','주말 오전'],dist:'30km 이내',level:a.lv||2,walk:'60분',tags:a.tags||[],size:'소규모',want:a.want||[],done:true};});}
+})();
+
+</script>
+<script id="guri-r17-fix1028">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriFix1028)return;W.__guriFix1028=1;
+ /* ---- 2. 좌표 처리 ----
+    원인 1: 수집 장소는 좌표를 feedLat/feedLng에 담는데 거리 계산은 lat/lng만 봐서 정확한 좌표가 있어도 시·군 중심으로 어림했다.
+    원인 2: 주소 글자 안에서 지역 이름을 찾아서 '인구리'(양양) 속 '구리'가 구리시 중심으로 잡혔다(0.0km).
+    고침: ① 정확 좌표(lat/lng → feedLat/feedLng, 한국 범위 확인) 우선 ② 주소는 '낱말 단위'로만 시·군 이름을 찾기 ③ 못 찾으면 거리 없음(null) */
+ var origFP=W.filterPoint;
+ function ok(a,b){a=+a;b=+b;return isFinite(a)&&isFinite(b)&&a>=32.5&&a<=39.5&&b>=123.5&&b<=132.5;}
+ function G(k){try{return W[k]||W.eval(k);}catch(e){return null;}}
+ function strip(s){return String(s||'').replace(/(특별자치시|특별자치도|광역시|특별시|시|군|구)$/,'');}
+ W.filterPoint=function(o){
+  if(!o)return null;
+  if(ok(o.lat,o.lng))return {lat:+o.lat,lng:+o.lng,approx:false};
+  if(ok(o.feedLat,o.feedLng))return {lat:+o.feedLat,lng:+o.feedLng,approx:false};
+  var GEO=G('GEO')||{},GC=G('GUNGNI_CITY_GEO')||{};
+  var addr=String(o.a||o.address||o['주소']||o['주소/지역']||''),living=String(o.__living||o.r||o.city||o['시군구']||'');
+  var toks=addr.split(/[\s,()·\[\]]+/).concat(living.split(/[\s,]+/)).filter(Boolean).map(strip).filter(function(t){return t.length>=2;});
+  var keys=Object.keys(GEO).concat(Object.keys(GC)),region=String(o.__province||o.ar||o.region||o['권역']||'');
+  var hit=null;
+  if(region==='광주'||addr.indexOf('광주광역')>=0)return origFP?origFP(o):null;
+  for(var i=0;i<toks.length&&!hit;i++)for(var j=0;j<keys.length;j++){var k=keys[j];if(k==='광주'&&!/경기/.test(region+addr))continue;if(strip(k)===toks[i]){hit=GEO[k]||GC[k];break;}}
+  if(hit)return {lat:hit[0],lng:hit[1],approx:true};
+  /* 광역시·서울·인천·제주 등은 원래 규칙(권역 이름) 그대로, 단 주소·이름 글자 속 우연한 일치는 쓰지 않는다 */
+  if(origFP){var c=Object.assign({},o,{lat:null,lng:null,feedLat:null,feedLng:null,ar:region,__province:'',a:'',address:'',n:'',title:'',r:'',__living:'',city:''});c['주소']='';c['PLACE명']='';c['시군구']='';
+   var r=origFP(c);if(r)return r;
+   var first=addr.split(/\s+/)[0]||'';if(/^(서울|인천|대전|대구|부산|울산|세종|제주)/.test(first)){c.a=first;return origFP(c);}}
+  return null;};
+ /* 좁은 거리(5km 이하) 필터에는 '대략' 좌표를 넣지 않는다 */
+ var opp=W.discPlacePass;
+ if(typeof opp==='function')W.discPlacePass=function(x){var r=opp.apply(this,arguments);if(!r)return r;
+  try{var km=+W.DISC_KM;if(km>0&&km<=5){var d=W.discDist(x);if(d&&d.approx)return false;}}catch(e){}return r;};
+ /* ---- 3. 로그인 ---- 서버 로그인은 이 환경에서 재현할 수 없어, 확인 표시와 자동 재확인을 넣는다 */
+ var busy=false;
+ D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-cl="go"]'):null;if(!b)return;
+  var C=W.guriCloud;if(!C||!C.signIn)return;
+  var g=function(i){var e=D.getElementById(i);return e?e.value:'';},id=g('clEm'),pw=g('clPw');
+  if(D.querySelector('#clNk'))return; /* 가입 화면은 그대로 */
+  if(!id||!pw)return;
+  ev.preventDefault();ev.stopPropagation();ev.stopImmediatePropagation();
+  if(busy)return;busy=true;b.disabled=true;
+  var m=D.getElementById('grClMsg');if(m){m.style.color='#0f6b45';m.textContent='로그인 중입니다…';}
+  function done(){busy=false;b.disabled=false;}
+  Promise.resolve(C.signIn(id,pw)).then(function(r){
+   if(!r){done();return;}
+   function guest(){try{return W.isGuest();}catch(e){return false;}}
+   function chk(n){if(!guest()){done();try{W.render();}catch(e){}return;}
+    if(n>=2){done();return;}
+    setTimeout(function(){if(!guest()){done();return;}Promise.resolve(C.signIn(id,pw)).then(function(){chk(n+1);},function(){done();});},900);}
+   setTimeout(function(){chk(0);},700);
+  },function(){done();});
+ },true);
 })();
 
 </script>
