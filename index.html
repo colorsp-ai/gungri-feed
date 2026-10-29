@@ -24277,4 +24277,33 @@ function sendPlaceReq(){
 })();
 
 </script>
+<script id="guri-r17-nomed">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriNoMed)return;W.__guriNoMed=1;
+ /* 병원·의원·약국·안경점 등 의료·상업 시설은 가볼 곳과 장소 추천(등록 포함)에서 뺀다 */
+ var MED=/병원|의원|의료원|의료재단|약국|안경|치과|한의원|한방병원|보건소|보건지소|보건진료소|요양|클리닉|정형외과|내과|외과|소아과|산부인과|이비인후과|피부과|안과|비뇨|재활의학|메디컬|건강검진|검진센터|의료기|한약|침술|물리치료|동물병원|수의/;
+ var KEEP=/박물관|미술관|전시관|기념관|역사관|체험관|테마파크|공원|사찰|서원|유적|둘레길|한방진흥|약령시|약초|허브|힐링/;
+ function isMed0(x){if(!x)return false;var t=[x.n||x.name||x.title||'',x.feedSub||x.sub||'',x.placeType||'',x.type||'',(x.k||[]).join(' ')].join(' ');
+  if(!MED.test(t))return false;var nm=String(x.n||x.name||x.title||'');if(KEEP.test(nm)&&!/(병원|의원|의료원|약국|치과|한의원|보건소)$/.test(nm.trim()))return false;return true;}
+ var COM_N=/롯데마트|이마트|홈플러스|코스트코|트레이더스|하이마트|전자랜드|하나로마트|메가마트|대형마트|백화점|아울렛|쇼핑몰|쇼핑센터|면세점|홈쇼핑|스타필드|롯데월드몰|롯데몰|이케아|갤러리아|AK플라자|뉴코아|타임스퀘어|코엑스몰|롯데시네마|메가박스|CGV|다이소|올리브영|편의점/i;
+ var COM_A=/백화점|롯데마트|이마트|홈플러스|하이마트|코스트코|아울렛|쇼핑몰|스타필드|갤러리아|AK플라자|뉴코아|이케아|롯데월드몰|롯데몰|타임스퀘어/;
+ function isCom(x){if(!x)return false;var nm=String(x.n||x.name||x.title||''),ad=String(x.a||x.address||'');return COM_N.test(nm+' '+(x.feedSub||x.sub||''))||COM_A.test(ad);}
+ W.guriIsCommercial=isCom;
+ function isMed(x){return isMed0(x)||isCom(x);}
+ W.guriIsMedical=isMed;
+ function sweep(){var n=0;
+  try{var S=W.SPOTS;if(Array.isArray(S))for(var i=S.length-1;i>=0;i--){if(isMed(S[i])){S.splice(i,1);n++;}}}catch(e){}
+  try{['GUNG_RI_PLACE_CANDIDATES'].forEach(function(k){var A=W[k];if(Array.isArray(A))for(var i=A.length-1;i>=0;i--){var c=A[i],cc=c&&(c.content||c);if(isMed({n:(cc&&(cc.name||cc.title||cc.n))||c.title||c.n,sub:cc&&cc.sub,k:cc&&cc.k})){A.splice(i,1);n++;}}});}catch(e){}
+  return n;}
+ W.guriSweepMedical=sweep;
+ function wrapIngest(){var o=W.guriFeedIngest;if(typeof o!=='function'||o.__med)return false;
+  W.guriFeedIngest=function(feed){try{if(feed&&Array.isArray(feed.places))feed.places=feed.places.filter(function(x){return !isMed(x);});}catch(e){}
+   var r=o.apply(this,arguments);try{sweep();}catch(e){}return r;};W.guriFeedIngest.__med=1;return true;}
+ wrapIngest();sweep();
+ var n=0,iv=setInterval(function(){wrapIngest();if(sweep()&&typeof W.render==='function'){try{W.render();}catch(e){}}if(++n>40)clearInterval(iv);},1500);
+ /* 장소 선택·검색 화면에서도 한 번 더 막는다 */
+ var op=W.discPlacePass;if(typeof op==='function')W.discPlacePass=function(x){return isMed(x)?false:op.apply(this,arguments);};
+})();
+
+</script>
 </body></html>
