@@ -24247,4 +24247,252 @@ function sendPlaceReq(){
 })();
 
 </script>
+<script id="guri-r17-acct">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriAcct)return;W.__guriAcct=1;
+ function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function me(){try{return W.me();}catch(e){return null;}}
+ function usr(){var m=me();return m&&m.role==='USER'&&!m.guest&&m.id!=='guest'?m:null;}
+ function C(){return W.guriCloud;}
+ function sess(){try{return C()&&C()._sess&&C()._sess();}catch(e){return null;}}
+ function cloud(){var s=sess(),m=usr();return !!(s&&s.uid&&m&&(m.uid===s.uid||m.cloud));}
+ function human(e){var m=String((e&&(e.msg||e.message||e.error_description||e.error))||e||'');
+  if(/invalid.*(login|credential)|Invalid login/i.test(m))return '현재 비밀번호가 맞지 않습니다.';
+  if(/same.*password|different from the old/i.test(m))return '새 비밀번호가 현재와 같습니다. 다른 비밀번호를 써 주세요.';
+  if(/weak|at least|should be/i.test(m))return '비밀번호가 너무 짧거나 쉽습니다. 6자 이상, 숫자와 글자를 섞어 주세요.';
+  if(/network|failed to fetch|abort|timeout/i.test(m))return '서버에 연결되지 않아요. 잠시 뒤 다시 해 주세요.';
+  return '처리하지 못했습니다. 잠시 뒤 다시 해 주세요.';}
+ var MSG='',BUSY=false;
+ function sheet(){var el=D.getElementById('grAc');if(!el){el=D.createElement('div');el.id='grAc';D.body.appendChild(el);}return el;}
+ function paint(){var el=sheet(),m=usr();if(!m){el.style.display='none';return;}var cl=cloud();
+  var reg=String(m.reg||'').split(/\s+/);
+  el.style.display='block';
+  el.innerHTML='<div class="ac-sheet" role="dialog" aria-modal="true" aria-label="내 정보 관리"><div class="ac-top"><b>내 정보 관리</b><button type="button" class="ac-x" data-ac="close">닫기</button></div>'+
+   '<div class="ac-h">내 정보</div>'+
+   '<label for="acNk">별명 (다른 회원에게 보이는 이름)</label><input id="acNk" type="text" maxlength="20" value="'+esc(m.nick||m.n)+'">'+
+   '<label for="acReg">사는 곳 (시·도 시·군·구)</label><input id="acReg" type="text" maxlength="30" placeholder="예) 경기 구리" value="'+esc(m.reg||'')+'">'+
+   '<label for="acBorn">태어난 해</label><input id="acBorn" type="number" inputmode="numeric" placeholder="예) 1965" value="'+esc(m.born||'')+'">'+
+   '<div class="ac-s">휴대전화 번호는 본인 확인이 필요해서 앱에서 바로 바꿀 수 없어요. 번호가 바뀌었다면 운영진에게 알려 주세요.</div>'+
+   '<button type="button" class="ac-go" data-ac="save">내 정보 저장</button>'+
+   '<div class="ac-h" style="margin-top:22px">비밀번호 바꾸기</div>'+
+   (cl?'<label for="acOld">지금 비밀번호</label><input id="acOld" type="password" autocomplete="current-password">'+
+    '<label for="acNew">새 비밀번호 (6자 이상)</label><input id="acNew" type="password" autocomplete="new-password">'+
+    '<label for="acNew2">새 비밀번호 한 번 더</label><input id="acNew2" type="password" autocomplete="new-password">'+
+    '<button type="button" class="ac-go ac-o" data-ac="pw">비밀번호 바꾸기</button>':
+    '<div class="ac-s">이 계정은 서버 로그인 계정이 아니어서 앱에서 비밀번호를 바꿀 수 없어요. 서버에 가입한 계정으로 로그인하면 바꿀 수 있어요.</div>')+
+   '<div class="ac-msg" id="acMsg" role="status">'+esc(MSG)+'</div></div>';}
+ function say(t,ok){MSG=t;var e=D.getElementById('acMsg');if(e){e.textContent=t;e.style.color=ok?'#0f6b45':'#b3261e';}}
+ function open(){MSG='';D.body.classList.add('gr-reg-open');paint();}
+ function close(){var el=D.getElementById('grAc');if(el)el.style.display='none';D.body.classList.remove('gr-reg-open');}
+ function g(i){var e=D.getElementById(i);return e?e.value:'';}
+ function save(){var m=usr();if(!m)return;
+  var nk=g('acNk').trim().slice(0,20),reg=g('acReg').trim().slice(0,30),born=parseInt(g('acBorn'),10)||0;
+  if(!nk){say('별명을 적어 주세요.');return;}
+  if(born&&(born<1930||born>new Date().getFullYear()-18)){say('태어난 해를 다시 확인해 주세요.');return;}
+  m.nick=nk;if(reg)m.reg=reg;if(born)m.born=born;
+  var s=sess();
+  if(!cloud()){say('저장했어요. (이 기기에서만 보관돼요)',true);try{W.render();}catch(e){}return;}
+  var sg=(reg||'').split(/\s+/);BUSY=true;
+  Promise.resolve(C()._rest('/member_private?on_conflict=id',{method:'POST',body:{id:s.uid,reg:reg||null,born:born||null,updated_at:new Date().toISOString()},prefer:'resolution=merge-duplicates,return=minimal'}))
+   .then(function(){return C()._rest('/profiles?id=eq.'+encodeURIComponent(s.uid),{method:'PATCH',body:{nickname:nk,sido:sg[0]||null,sigungu:sg.slice(1).join(' ')||null},prefer:'return=minimal'});})
+   .then(function(){BUSY=false;say('저장했어요.',true);try{W.render();}catch(e){}},function(e){BUSY=false;say('이 기기에는 저장했지만 서버 저장은 실패했어요. '+human(e));});}
+ function pw(){if(BUSY)return;var s=sess(),old=g('acOld'),n1=g('acNew'),n2=g('acNew2');
+  if(!s||!cloud()){say('서버 로그인 계정에서만 바꿀 수 있어요.');return;}
+  if(!old){say('지금 비밀번호를 적어 주세요.');return;}
+  if(n1.length<6){say('새 비밀번호는 6자 이상으로 해 주세요.');return;}
+  if(n1!==n2){say('새 비밀번호가 서로 달라요. 다시 적어 주세요.');return;}
+  if(n1===old){say('새 비밀번호가 지금과 같아요. 다른 비밀번호를 써 주세요.');return;}
+  BUSY=true;say('확인하는 중입니다…',true);
+  var cred=s.email?{email:s.email}:{phone:s.phone};
+  /* 1) 지금 비밀번호가 맞는지 확인 → 2) 새 비밀번호로 변경 */
+  Promise.resolve(C()._raw('/auth/v1/token?grant_type=password',{method:'POST',body:Object.assign({password:old},cred)}))
+   .then(function(j){if(!j||!j.access_token)throw {msg:'Invalid login'};return C()._raw('/auth/v1/user',{method:'PUT',body:{password:n1}},j.access_token);})
+   .then(function(){BUSY=false;['acOld','acNew','acNew2'].forEach(function(i){var e=D.getElementById(i);if(e)e.value='';});say('비밀번호를 바꿨어요. 다음 로그인부터 새 비밀번호를 써 주세요.',true);},
+         function(e){BUSY=false;say(human(e));});}
+ D.addEventListener('click',function(ev){var t=ev.target&&ev.target.closest?ev.target:null;if(!t)return;
+  var b=t.closest('[data-ac]');if(!b)return;ev.preventDefault();ev.stopPropagation();var a=b.getAttribute('data-ac');
+  if(a==='open')open();else if(a==='close')close();else if(a==='save')save();else if(a==='pw')pw();},true);
+ var o=W.uProfile;
+ if(typeof o==='function')W.uProfile=function(){var h=o.apply(this,arguments);if(typeof h!=='string'||!usr())return h;
+  var btn='<div class="sec"><button type="button" class="btn btn-o w100" data-ac="open" style="min-height:54px;font-size:18px">🔐 내 정보 · 비밀번호 관리</button></div>';
+  var i=h.indexOf('<div class="sec');return i<0?h+btn:h.slice(0,i)+btn+h.slice(i);};
+ var st=D.createElement('style');st.textContent='#grAc{display:none;position:fixed;inset:0;z-index:2147482400;background:rgba(0,0,0,.45);overflow:auto}.ac-sheet{box-sizing:border-box;max-width:520px;margin:0 auto;min-height:100%;background:#fff;padding:14px 16px 32px;font-size:18px}.ac-top{display:flex;justify-content:space-between;align-items:center;font-size:21px;margin-bottom:8px}.ac-x{min-height:46px;padding:0 16px;border-radius:12px;border:1px solid #b8c4be;background:#fff;font-size:17px}.ac-h{font-size:20px;font-weight:800;margin:10px 0 2px;color:#0f6b45}.ac-sheet label{display:block;margin:12px 0 4px;font-weight:700}.ac-sheet input{box-sizing:border-box;width:100%;min-height:52px;padding:0 12px;border:2px solid #b8c4be;border-radius:12px;font-size:19px}.ac-s{font-size:15px;color:#4b5a60;margin:8px 0;line-height:1.5}.ac-go{width:100%;min-height:56px;margin-top:12px;border:0;border-radius:14px;background:#0f6b45;color:#fff;font-size:20px;font-weight:900}.ac-go.ac-o{background:#fff;color:#0f6b45;border:2px solid #0f6b45}.ac-msg{min-height:26px;margin:12px 0;font-size:17px;font-weight:700;color:#b3261e}';
+ D.head.appendChild(st);
+})();
+
+</script>
+<script id="guri-r17-dedupe">
+(function(){'use strict';
+ var W=window;if(W.__guriDedupe)return;W.__guriDedupe=1;
+ /* 같은 길·같은 코스가 두 번 등록된 것을 하나로 합친다.
+    (앱에 처음부터 있던 '서울둘레길 1코스 수락산' + 수집기가 가져온 '서울둘레길 1코스') */
+ var PAT=/([가-힣]{2,8}(?:둘레길|올레길|랑길|갈맷길|누리길))\s*0*(\d{1,3})\s*코스/;
+ function keyOf(s){var n=String((s&&s.n)||'').replace(/[\[\]()（）]/g,' ');var m=PAT.exec(n);return m?m[1]+'#'+(+m[2]):null;}
+ function isFeed(s){return !!(s&&(s.contentOrigin==='TOURAPI_FEED'||/^TA-/.test(String(s.id||''))));}
+ function empty(v){return v==null||v===''||(Array.isArray(v)&&!v.length);}
+ var TXT={summary:1,overview:1,highlights:0,access:1,returnRoute:1,walking:0};
+ function joinTxt(x,y){x=String(x||'').trim();y=String(y||'').trim();if(!y)return x;if(!x)return y;
+  var nx=x.replace(/\s+/g,''),ny=y.replace(/\s+/g,'');if(nx.indexOf(ny)>=0)return x;if(ny.indexOf(nx)>=0)return y;return x+'\n\n'+y;}
+ function mergeInto(k,d){
+  Object.keys(d).forEach(function(f){if(f==='id'||f==='n'||f==='cart'||f==='contentDetail'||f==='feedFilled'||f==='k')return;
+   if(empty(k[f])&&!empty(d[f]))k[f]=d[f];
+   else if((f==='why'||f==='c')&&typeof k[f]==='string'&&typeof d[f]==='string')k[f]=joinTxt(k[f],d[f]);});
+  if(Array.isArray(d.k)){k.k=Array.isArray(k.k)?k.k:[];d.k.forEach(function(x){if(k.k.indexOf(x)<0)k.k.push(x);});}
+  if(d.contentDetail){k.contentDetail=k.contentDetail||{};var kd=k.contentDetail,dd=d.contentDetail;
+   Object.keys(dd).forEach(function(c){var v=dd[c];if(empty(v))return;
+    if(empty(kd[c]))kd[c]=v;
+    else if(typeof v==='string'&&typeof kd[c]==='string'&&TXT[c])kd[c]=joinTxt(kd[c],v);
+    else if(Array.isArray(v)&&Array.isArray(kd[c]))v.forEach(function(x){if(kd[c].indexOf(x)<0)kd[c].push(x);});});}
+  if(d.feedFilled)k.feedFilled=Object.assign({},d.feedFilled,k.feedFilled||{});
+  if(d.feedId)k.feedId=k.feedId||d.feedId;
+  if(d.feedLat&&!k.feedLat){k.feedLat=d.feedLat;k.feedLng=d.feedLng;}
+  if(Array.isArray(d.cart)&&d.cart.length){k.cart=Array.isArray(k.cart)?k.cart:[];d.cart.forEach(function(x){if(k.cart.indexOf(x)<0)k.cart.push(x);});}
+  try{var G=W.GR;if(!G)return;
+   /* 사진: 종류와 상관없이 모두 대표 장소로 옮긴다(대표 사진은 하나만) */
+   var hasMain=(G.photos||[]).some(function(p){return p.entityId===k.id&&p.role==='MAIN'&&p.rightsState!=='REJECTED';});
+   (G.photos||[]).forEach(function(p){if(p&&p.entityId===d.id){p.entityId=k.id;if(p.entityType==='PLACE'||!p.entityType)p.entityType='PLACE';
+     if(p.role==='MAIN'&&p.rightsState!=='REJECTED'){if(hasMain)p.role='GALLERY';else hasMain=true;}}});
+   (G.sources||[]).forEach(function(x){if(x&&x.entityId===d.id)x.entityId=k.id;});
+   (G.audit||[]).forEach(function(x){if(x&&x.entityId===d.id)x.entityId=k.id;});
+   var kd2=G.content&&G.content['PLACE:'+k.id],dr=G.content&&G.content['PLACE:'+d.id];
+   if(dr){if(!kd2){dr.entityId=k.id;G.content['PLACE:'+k.id]=dr;}else{
+     (dr.history||[]).forEach(function(h){(kd2.history=kd2.history||[]).push(h);});
+     if(dr.overrides)kd2.overrides=Object.assign({},dr.overrides,kd2.overrides||{});
+     (kd2.history=kd2.history||[]).push({at:new Date().toISOString(),actor:'SYSTEM',from:null,to:kd2.state,note:'중복 등록 통합: '+d.id+' → '+k.id});}
+    delete G.content['PLACE:'+d.id];}
+  }catch(e){}
+ }
+ function sweep(){var S=W.SPOTS;if(!Array.isArray(S))return 0;var by={},n=0;
+  S.forEach(function(s,i){var k=keyOf(s);if(!k)return;(by[k]=by[k]||[]).push(s);});
+  Object.keys(by).forEach(function(k){var g=by[k];if(g.length<2)return;
+   var keep=g.filter(function(s){return !isFeed(s);})[0]||g[0];
+   g.forEach(function(s){if(s===keep)return;mergeInto(keep,s);var i=S.indexOf(s);if(i>=0){S.splice(i,1);n++;}});});
+  return n;}
+ W.guriSweepDuplicates=sweep;
+ function wrapIngest(){var o=W.guriFeedIngest;if(typeof o!=='function'||o.__dd)return false;
+  W.guriFeedIngest=function(){var r=o.apply(this,arguments);try{sweep();}catch(e){}return r;};W.guriFeedIngest.__dd=1;return true;}
+ wrapIngest();sweep();
+ var c=0,iv=setInterval(function(){wrapIngest();if(sweep()>0&&typeof W.render==='function'){try{W.render();}catch(e){}}if(++c>40)clearInterval(iv);},1500);
+})();
+
+</script>
+<script id="guri-r17-recover">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriRecover)return;W.__guriRecover=1;
+ function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function C(){return W.guriCloud;}
+ var R={mode:'reset',step:'id',id:'',phone:'',email:'',pw:'',nick:'',msg:'',ok:false,busy:false,cool:0,tok:''};
+ var timer=null;
+ function human(e){var m=String((e&&(e.msg||e.message||e.error_description||e.error))||e||'');
+  if(/expired|invalid.*(otp|token)|token.*invalid/i.test(m))return '인증번호가 맞지 않거나 시간이 지났어요. 다시 받아 주세요.';
+  if(/rate|too many|seconds/i.test(m))return '너무 자주 요청했어요. 잠시(1분) 뒤에 다시 해 주세요.';
+  if(/same.*password|different from the old/i.test(m))return '새 비밀번호가 예전과 같아요. 다른 비밀번호를 써 주세요.';
+  if(/not found|user.*not|signups not allowed/i.test(m))return '이 번호로 가입한 회원을 찾지 못했어요.';
+  if(/sms|provider|twilio|unable to send/i.test(m))return '문자를 보내지 못했어요. 잠시 뒤 다시 해 주세요. 계속 안 되면 운영진에게 알려 주세요.';
+  if(/network|failed to fetch|abort|timeout/i.test(m))return '서버에 연결되지 않아요. 잠시 뒤 다시 해 주세요.';
+  return '처리하지 못했어요. 잠시 뒤 다시 해 주세요.';}
+ function e164(v){var p=C()&&C().phoneOf?C().phoneOf(v):'';return p?'+82'+p.slice(1):'';}
+ function sheet(){var el=D.getElementById('grRc');if(!el){el=D.createElement('div');el.id='grRc';D.body.appendChild(el);}return el;}
+ function say(t,ok){R.msg=t;R.ok=!!ok;var e=D.getElementById('rcMsg');if(e){e.textContent=t;e.style.color=ok?'#0f6b45':'#b3261e';}}
+ function paint(){var el=sheet();el.style.display='block';D.body.classList.add('gr-reg-open');
+  var title=R.mode==='verify'?'휴대전화 인증':'비밀번호 찾기',h='';
+  if(R.step==='id'){
+   h='<div class="rc-s">가입할 때 쓴 휴대전화 번호를 적어 주세요. 문자로 인증번호를 보내 드려요.<br>운영진은 이메일(@ 포함)을 적으면 메일로 안내해 드려요.</div>'+
+    '<label for="rcId">휴대전화 번호 또는 이메일</label><input id="rcId" type="text" inputmode="text" autocomplete="username" placeholder="예) 010-1234-5678" value="'+esc(R.id)+'">'+
+    '<button type="button" class="rc-go" data-rc="send">인증번호 받기</button>';
+  }else if(R.step==='code'){
+   h='<div class="rc-s"><b>'+esc(R.phone.replace(/^\+82/,'0'))+'</b> 번호로 문자를 보냈어요. 받은 6자리 숫자를 적어 주세요.</div>'+
+    '<label for="rcCode">인증번호 (6자리)</label><input id="rcCode" type="text" inputmode="numeric" maxlength="8" autocomplete="one-time-code">'+
+    (R.mode==='reset'?'<label for="rcPw">새 비밀번호 (6자 이상)</label><input id="rcPw" type="password" autocomplete="new-password"><label for="rcPw2">새 비밀번호 한 번 더</label><input id="rcPw2" type="password" autocomplete="new-password">':'')+
+    '<button type="button" class="rc-go" data-rc="verify">'+(R.mode==='reset'?'확인하고 비밀번호 바꾸기':'인증하고 시작하기')+'</button>'+
+    '<button type="button" class="rc-o" data-rc="resend"'+(R.cool>0?' disabled':'')+'>'+(R.cool>0?'다시 받기 ('+R.cool+'초 뒤)':'인증번호 다시 받기')+'</button>';
+  }else if(R.step==='newpw'){
+   h='<div class="rc-s">새 비밀번호를 정해 주세요.</div><label for="rcPw">새 비밀번호 (6자 이상)</label><input id="rcPw" type="password" autocomplete="new-password"><label for="rcPw2">새 비밀번호 한 번 더</label><input id="rcPw2" type="password" autocomplete="new-password">'+
+    '<button type="button" class="rc-go" data-rc="setpw">비밀번호 바꾸기</button>';
+  }else{h='<div class="rc-s" style="font-size:19px">'+esc(R.msg)+'</div><button type="button" class="rc-go" data-rc="done">확인</button>';}
+  el.innerHTML='<div class="rc-sheet" role="dialog" aria-modal="true" aria-label="'+title+'"><div class="rc-top"><b>'+title+'</b><button type="button" class="rc-x" data-rc="close">닫기</button></div>'+h+(R.step==='done'?'':'<div class="rc-msg" id="rcMsg" role="status" style="color:'+(R.ok?'#0f6b45':'#b3261e')+'">'+esc(R.msg)+'</div>')+'</div>';}
+ function open(mode,o){R=Object.assign({mode:mode||'reset',step:'id',id:'',phone:'',email:'',pw:'',nick:'',msg:'',ok:false,busy:false,cool:0,tok:''},o||{});if(R.mode==='verify')R.step='code';
+  var s=D.getElementById('grCl');if(s)s.style.display='none';paint();if(R.step==='code')startCool();}
+ function close(){var el=D.getElementById('grRc');if(el)el.style.display='none';D.body.classList.remove('gr-reg-open');if(timer){clearInterval(timer);timer=null;}}
+ function startCool(){R.cool=60;if(timer)clearInterval(timer);timer=setInterval(function(){R.cool--;if(R.cool<=0){R.cool=0;clearInterval(timer);timer=null;}var b=D.querySelector('[data-rc=resend]');if(b&&R.step==='code'){b.disabled=R.cool>0;b.textContent=R.cool>0?'다시 받기 ('+R.cool+'초 뒤)':'인증번호 다시 받기';}},1000);}
+ function g(i){var e=D.getElementById(i);return e?e.value:'';}
+ function sendOtp(){if(R.busy)return;
+  var id=g('rcId').trim()||R.id;R.id=id;if(!id){say('번호나 이메일을 적어 주세요.');return;}
+  if(id.indexOf('@')>=0){R.busy=true;say('보내는 중…',true);
+   Promise.resolve(C()._raw('/auth/v1/recover',{method:'POST',body:{email:id}})).then(function(){R.busy=false;R.step='done';R.msg='메일을 보냈어요. 메일 안의 단추를 누르면 이 앱으로 돌아와 새 비밀번호를 정할 수 있어요.';paint();},function(e){R.busy=false;say(human(e));});return;}
+  var ph=e164(id);if(!ph){say('휴대전화 번호를 숫자로 적어 주세요. 예) 010-1234-5678');return;}
+  R.busy=true;say('문자를 보내는 중…',true);R.phone=ph;
+  Promise.resolve(C()._raw('/auth/v1/otp',{method:'POST',body:{phone:ph,create_user:false}})).then(function(){R.busy=false;R.step='code';R.msg='';paint();startCool();},function(e){R.busy=false;say(human(e));});}
+ function resend(){if(R.busy||R.cool>0)return;R.busy=true;say('문자를 다시 보내는 중…',true);
+  Promise.resolve(C()._raw('/auth/v1/otp',{method:'POST',body:{phone:R.phone,create_user:false}})).then(function(){R.busy=false;say('다시 보냈어요.',true);startCool();},function(e){R.busy=false;say(human(e));});}
+ function checkPw(){var a=g('rcPw'),b=g('rcPw2');if(a.length<6){say('새 비밀번호는 6자 이상으로 해 주세요.');return null;}if(a!==b){say('새 비밀번호가 서로 달라요. 다시 적어 주세요.');return null;}return a;}
+ function finishLogin(pw){var id=R.phone.replace(/^\+82/,'0');
+  return Promise.resolve(C().signIn(id,pw)).then(function(ok){R.step='done';R.msg=ok?'완료했어요. 로그인되었습니다.':'완료했어요. 새 비밀번호로 로그인해 주세요.';paint();},function(){R.step='done';R.msg='완료했어요. 새 비밀번호로 로그인해 주세요.';paint();});}
+ function verify(){if(R.busy)return;var code=g('rcCode').replace(/\D/g,'');if(code.length<4){say('인증번호를 적어 주세요.');return;}
+  var pw=null;if(R.mode==='reset'){pw=checkPw();if(!pw)return;}
+  R.busy=true;say('확인하는 중…',true);
+  Promise.resolve(C()._raw('/auth/v1/verify',{method:'POST',body:{type:'sms',phone:R.phone,token:code}})).then(function(j){
+    if(!j||!j.access_token)throw {msg:'invalid token'};
+    if(R.mode==='reset')return C()._raw('/auth/v1/user',{method:'PUT',body:{password:pw}},j.access_token).then(function(){return pw;});
+    return R.pw;
+  }).then(function(p){R.busy=false;return finishLogin(p);},function(e){R.busy=false;say(human(e));});}
+ function setpw(){if(R.busy)return;var pw=checkPw();if(!pw)return;R.busy=true;say('바꾸는 중…',true);
+  Promise.resolve(C()._raw('/auth/v1/user',{method:'PUT',body:{password:pw}},R.tok)).then(function(){R.busy=false;try{history.replaceState(null,'',location.pathname+location.search);}catch(e){}R.step='done';R.msg='비밀번호를 바꿨어요. 새 비밀번호로 로그인해 주세요.';paint();},function(e){R.busy=false;say(human(e));});}
+ D.addEventListener('click',function(ev){var t=ev.target&&ev.target.closest?ev.target:null;if(!t)return;var b=t.closest('[data-rc]');
+  if(b){ev.preventDefault();ev.stopPropagation();var a=b.getAttribute('data-rc');
+   if(a==='open')open('reset');else if(a==='close'||a==='done')close();else if(a==='send')sendOtp();else if(a==='resend')resend();else if(a==='verify')verify();else if(a==='setpw')setpw();return;}
+  /* 로그인 창이 열릴 때마다 "비밀번호를 잊으셨나요?"를 붙인다 */
+  if(t.closest('.ui-nav .login,[data-cl="open"],[data-cl="tab-in"],[data-cl="tab-up"]')){setTimeout(addLink,80);setTimeout(addLink,300);setTimeout(addLink,700);}
+ },true);
+ var mo=new MutationObserver(function(){addLink();});mo.observe(D.body||D.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['style']});
+ function addLink(){var s=D.getElementById('grCl');if(!s||s.style.display==='none'||!D.getElementById('clEm'))return;
+  var old=s.querySelector('.rc-link');if(D.getElementById('clNk')){if(old)old.remove();return;}
+  if(old)return;var pv=s.querySelector('.cl-pv'),a=D.createElement('button');a.type='button';a.className='rc-link';a.setAttribute('data-rc','open');a.textContent='비밀번호를 잊으셨나요?';
+  var go=s.querySelector('.cl-go');if(go&&go.parentNode)go.parentNode.insertBefore(a,pv||go.nextSibling);}
+ /* 가입: 서버가 문자 인증을 요구하면 인증번호 입력 창을 띄운다 */
+ D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-cl="go"]'):null;if(!b||!D.getElementById('clNk'))return;
+  var c=C();if(!c||!c.signUp)return;var id=g('clEm'),pw=g('clPw'),nk=g('clNk');if(!id||!pw)return;
+  ev.preventDefault();ev.stopPropagation();ev.stopImmediatePropagation();
+  Promise.resolve(c.signUp(id,pw,nk)).then(function(ok){if(ok)return;var m=(D.getElementById('grClMsg')||{}).textContent||'';
+   if(/인증번호/.test(m)&&id.indexOf('@')<0){var ph=e164(id);if(ph)open('verify',{phone:ph,pw:pw,nick:nk});}});
+ },true);
+ /* 비밀번호 재설정 메일의 링크로 돌아왔을 때 */
+ function boot(){var h=String(location.hash||'');if(/type=recovery/.test(h)){var m=h.match(/access_token=([^&]+)/);if(m){open('reset',{step:'newpw',tok:decodeURIComponent(m[1])});}}}
+ if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',function(){setTimeout(boot,600);},{once:true});else setTimeout(boot,600);
+ var st=D.createElement('style');st.textContent='#grRc{display:none;position:fixed;inset:0;z-index:2147482600;background:rgba(0,0,0,.45);overflow:auto}.rc-sheet{box-sizing:border-box;max-width:520px;margin:0 auto;min-height:100%;background:#fff;padding:14px 16px 32px;font-size:18px}.rc-top{display:flex;justify-content:space-between;align-items:center;font-size:21px;margin-bottom:10px}.rc-x{min-height:46px;padding:0 16px;border-radius:12px;border:1px solid #b8c4be;background:#fff;font-size:17px}.rc-s{line-height:1.6;margin:8px 0}.rc-sheet label{display:block;margin:12px 0 4px;font-weight:700}.rc-sheet input{box-sizing:border-box;width:100%;min-height:52px;padding:0 12px;border:2px solid #b8c4be;border-radius:12px;font-size:19px}.rc-go{width:100%;min-height:56px;margin-top:14px;border:0;border-radius:14px;background:#0f6b45;color:#fff;font-size:20px;font-weight:900}.rc-o{width:100%;min-height:50px;margin-top:10px;border-radius:14px;border:2px solid #0f6b45;background:#fff;color:#0f6b45;font-size:18px;font-weight:800}.rc-o[disabled]{opacity:.5}.rc-msg{min-height:26px;margin:12px 0;font-size:17px;font-weight:700}.rc-link{display:block;width:100%;margin-top:10px;min-height:48px;border:0;background:transparent;color:#0f6b45;font-size:17px;font-weight:800;text-decoration:underline}';
+ D.head.appendChild(st);
+})();
+
+</script>
+<script id="guri-r17-capsrv">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriCapSrv)return;W.__guriCapSrv=1;
+ /* 캡틴 신청서를 서버(captain_applications)에 올리고, 운영진 기기로 불러와 승인 상태를 서버와 맞춘다 */
+ function C(){return W.guriCloud;}
+ function sess(){try{return C()&&C()._sess&&C()._sess();}catch(e){return null;}}
+ function slim(a){var o={};Object.keys(a||{}).forEach(function(k){var v=a[k];if(typeof v!=='function'&&k!=='history'&&k!=='chk')o[k]=v;});return o;}
+ function send(a){var s=sess();if(!s||!s.uid||a.serverId)return;
+  var body={applicant_uid:s.uid,name:String(a.name||'').slice(0,40),born:+a.born||null,region:String(a.region||'').slice(0,80),tel:String(a.tel||'').slice(0,30),payload:slim(a)};
+  Promise.resolve(C()._rest('/captain_applications',{method:'POST',body:body,prefer:'return=representation'})).then(function(r){var row=r&&r[0];if(row&&row.id){a.serverId=row.id;}},function(){a.serverPending=true;});}
+ function patch(a,status,reason){var s=sess();if(!s||!a||!a.serverId)return;
+  Promise.resolve(C()._rest('/captain_applications?id=eq.'+encodeURIComponent(a.serverId),{method:'PATCH',body:{status:status,reason:reason||null,reviewed_by:s.uid,updated_at:new Date().toISOString()},prefer:'return=minimal'})).catch(function(){});}
+ function wrapGR(){var G=W.GR;if(!G||G.__capsrv||typeof G.appSubmit!=='function')return false;G.__capsrv=1;
+  var os=G.appSubmit;G.appSubmit=function(obj){var a=os.apply(this,arguments);try{if(a&&!(obj&&obj.serverId))send(a);}catch(e){}return a;};
+  ['appReview:STAFF_REVIEWED','appApprove:APPROVED','appReject:REJECTED'].forEach(function(p){var n=p.split(':')[0],st=p.split(':')[1],o=G[n];if(typeof o!=='function')return;
+   G[n]=function(id,reason){var r=o.apply(this,arguments);try{if(r){patch(G.appFind(id),st,n==='appReject'?reason:null);}}catch(e){}return r;};});
+  return true;}
+ /* 운영진: 서버에 쌓인 신청서를 이 기기의 승인 대기 목록으로 불러온다 */
+ var busy=false;
+ function pull(){var G=W.GR,m=null;try{m=W.me();}catch(e){}if(busy||!G||!G.appSubmit||!sess()||!m||m.role!=='ADMIN')return;busy=true;
+  Promise.resolve(C()._rest('/captain_applications?select=*&status=in.(SUBMITTED,STAFF_REVIEWED)&order=created_at.asc&limit=200')).then(function(rows){busy=false;if(!Array.isArray(rows))return;var add=0;
+   rows.forEach(function(r){if((G.applications||[]).some(function(a){return a.serverId===r.id;}))return;
+    var p=r.payload||{};var a=G.appSubmit(Object.assign({},p,{id:'sv'+String(r.id).slice(0,8),serverId:r.id,kind:'캡틴',name:r.name||p.name,born:r.born||p.born,region:r.region||p.region,tel:r.tel||p.tel,src:'앱 신청(서버)',accountId:null,chk:{meet:false,id:false,pledge:false,screen:false}}));
+    if(a&&r.status==='STAFF_REVIEWED'){try{a.chk={meet:true,id:true,pledge:true,screen:true};G.appReview(a.id);}catch(e){}}add++;});
+   if(add&&typeof W.render==='function'){try{W.render();}catch(e){}}},function(){busy=false;});}
+ var n=0,iv=setInterval(function(){wrapGR();pull();if(++n>600)clearInterval(iv);},20000);
+ setTimeout(function(){wrapGR();},1500);
+ W.guriCapSrvPull=pull;
+})();
+
+</script>
 </body></html>
