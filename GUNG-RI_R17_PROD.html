@@ -24495,4 +24495,58 @@ function sendPlaceReq(){
 })();
 
 </script>
+<script id="guri-r17-jobs">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriJobs)return;W.__guriJobs=1;
+ function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+ var DEF='https://raw.githubusercontent.com/colorsp-ai/gungri-feed/main/feed/gungri_feed.json';
+ var LINKS=[
+  ['구리시 모집공고','구리시청 채용·모집 공고 게시판. 공무직, 기간제, 강사 모집 등이 올라와요.','https://www.guri.go.kr/www/selectBbsNttList.do?bbsNo=41&key=389'],
+  ['남양주 일자리 포털','남양주시 일자리 공고와 상담을 볼 수 있어요.','https://gyeonggi.work.go.kr/namyangju/main.do?space=main_favorites'],
+  ['경기도 공공기관 채용 (잡아바)','경기도일자리재단의 공공기관 채용 공고. 근무지역을 구리·남양주로 골라 보세요. 강사, 시간제, 계약직 공고도 많아요.','https://job.gg.go.kr/pblcEmpmn/list.do'],
+  ['고용24 채용정보 검색','전국 채용 공고. 지역을 구리·남양주로, 근무형태를 시간선택제로 골라 보세요. 우대사항에서 “(준)고령자(50세 이상)”를 고를 수 있어요.','https://m.work24.go.kr/wk/a/b/1200/retriveDtlEmpSrchList.do'],
+  ['고용24 (직업훈련·내일배움카드)','훈련 과정 검색과 국민내일배움카드 신청, 중장년 일자리 프로그램 안내.','https://www.work24.go.kr'],
+  ['서울시 공공일자리','서울시 일자리포털의 공공일자리 공고. 서울 쪽 근무도 생각하신다면 확인해 보세요.','https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgListPage.do'],
+  ['서울시 평생학습 (중장년 강좌)','서울시 평생학습포털의 중장년 강좌. 서울시민 대상 강좌가 많으니 신청 자격은 강좌마다 꼭 확인하세요.','https://sll.seoul.go.kr/lms/requestCourse/doAgeCourseListView.do?main_se=lie&keyword=%EC%A4%91%EC%9E%A5%EB%85%84&mnid=202601114183'],
+  ['서울시 평생학습 (어르신 강좌)','같은 포털의 어르신 대상 강좌 검색이에요. 신청 자격은 강좌마다 확인하세요.','https://sll.seoul.go.kr/lms/requestCourse/doAgeCourseListView.do?main_se=lie&keyword=%EC%96%B4%EB%A5%B4%EC%8B%A0&mnid=202601275256']];
+ var S={region:'전체',jobs:null,err:'',loading:false,at:''};
+ function jobsUrl(){var u=ls('GUNGRI_FEED_URL')||DEF;return u.replace(/[^\/]*$/,'gungri_jobs.json');}
+ function load(force){if(S.loading)return;var c=ls('GUNGRI_JOBS_CACHE');
+  if(!force&&c){try{var j=JSON.parse(c);if(j&&j.jobs){S.jobs=j.jobs;S.at=(j.generatedAt||'').slice(0,10);}}catch(e){}}
+  S.loading=true;paint();
+  fetch(jobsUrl(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(j){
+   if(!j||j.schema!=='GUNGRI_JOBS_V1'||!Array.isArray(j.jobs))throw new Error('format');
+   S.jobs=j.jobs;S.at=(j.generatedAt||'').slice(0,10);S.err='';ls('GUNGRI_JOBS_CACHE',JSON.stringify(j));},
+   function(){S.err=S.jobs?'':'아직 올라온 일자리 목록이 없어요.';}).then(function(){S.loading=false;paint();});}
+ function alive(j){var t=new Date().toISOString().slice(0,10);return !j.end||j.end>=t;}
+ function jobHtml(j){var meta=[j.place,j.kind,j.age,j.end?('~'+j.end.slice(5).replace('-','/')+' 마감'):''].filter(Boolean).map(esc).join(' · ');
+  var a=/^https:\/\//.test(j.link||'')?'<a class="jb-a" href="'+esc(j.link)+'" target="_blank" rel="noopener noreferrer">공고 자세히 보기</a>':'';
+  return '<div class="jb-card"><b>'+esc(j.title)+'</b><div class="jb-m">'+meta+'</div>'+(j.org?'<div class="jb-m">기관: '+esc(j.org)+'</div>':'')+(j.summary?'<div class="jb-s">'+esc(j.summary.slice(0,120))+'</div>':'')+a+'</div>';}
+ function paint(){var el=D.getElementById('grJb');if(!el||el.style.display==='none')return;
+  var list=(S.jobs||[]).filter(alive).filter(function(j){return S.region==='전체'||(j.place+j.title+j.org).indexOf(S.region)>=0;});
+  var h='<div class="jb-sheet" role="dialog" aria-modal="true" aria-label="일·용돈벌이 길잡이"><div class="jb-top"><b>일·용돈벌이 길잡이</b><button type="button" class="jb-x" data-jb="close">닫기</button></div>'+
+   '<div class="jb-note">나이와 상관없이 할 수 있는 일, 용돈벌이 일을 공식 기관 정보로 안내해 드려요. 신청과 지원은 각 기관 사이트에서 해요.</div>'+
+   '<h3>지금 올라온 시니어 일자리</h3><div class="jb-tabs">'+['전체','구리','남양주'].map(function(r){return '<button type="button" data-jb="reg" data-r="'+r+'" class="'+(S.region===r?'on':'')+'">'+r+'</button>';}).join('')+'</div>'+
+   (S.loading&&!S.jobs?'<div class="jb-m">불러오는 중…</div>':'')+
+   (list.length?list.slice(0,30).map(jobHtml).join(''):(S.jobs||S.err?'<div class="jb-m">'+esc(S.err||'지금 이 지역에 올라온 공고가 없어요. 아래 기관 사이트도 함께 확인해 보세요.')+'</div>':''))+
+   (S.at?'<div class="jb-m">목록 갱신: '+esc(S.at)+' · 출처: 한국노인인력개발원 노인일자리여기(100세누리)</div>':'')+
+   '<h3>직접 찾아보는 곳</h3>'+LINKS.map(function(l){return '<div class="jb-card"><b>'+esc(l[0])+'</b><div class="jb-s">'+esc(l[1])+'</div><a class="jb-a" href="'+esc(l[2])+'" target="_blank" rel="noopener noreferrer">사이트 열기</a></div>';}).join('')+
+   '<div class="jb-card"><b>전화로 물어보기</b><div class="jb-s">고용노동부 고객상담센터 1350 (국번 없이)</div><a class="jb-a" href="tel:1350">1350 전화하기</a></div>'+
+   '<h3>이것만은 꼭 지켜요</h3><div class="jb-warn">· 일을 시작하기 전에 돈(보증금, 교육비, 가입비)을 먼저 내라고 하면 응하지 마세요.<br>· 주민등록번호, 통장 번호는 정식 계약 전에 알려 주지 마세요.<br>· 이상하면 1350 또는 가까운 센터에 먼저 물어보세요.<br>· 궁리는 공고를 소개만 해요. 채용과 근로조건은 해당 기관이 정해요.</div></div>';
+  el.innerHTML=h;}
+ function open(){var el=D.getElementById('grJb');if(!el){el=D.createElement('div');el.id='grJb';D.body.appendChild(el);}el.style.display='block';D.body.classList.add('gr-reg-open');load();paint();}
+ function close(){var el=D.getElementById('grJb');if(el)el.style.display='none';D.body.classList.remove('gr-reg-open');}
+ D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-jb]'):null;if(!b)return;ev.preventDefault();ev.stopPropagation();
+  var a=b.getAttribute('data-jb');if(a==='open')open();else if(a==='close')close();else if(a==='reg'){S.region=b.getAttribute('data-r')||'전체';paint();}},true);
+ W.guriJobsOpen=open;
+ function entry(){var c=D.querySelector('.ui-cats');if(!c||D.querySelector('.jb-entry'))return;
+  var b=D.createElement('button');b.type='button';b.className='jb-entry';b.setAttribute('data-jb','open');b.innerHTML='<b>일·용돈벌이 길잡이</b><span>내 동네 시니어 일자리와 상담처</span>';
+  c.parentNode.insertBefore(b,c.nextSibling);}
+ new MutationObserver(entry).observe(D.body||D.documentElement,{childList:true,subtree:true});setTimeout(entry,800);
+ var st=D.createElement('style');st.textContent='.jb-entry{display:block;width:calc(100% - 24px);margin:10px 12px;min-height:64px;padding:8px 14px;border-radius:16px;border:2px solid #0f6b45;background:#fff;color:#0f6b45;text-align:left;font-size:20px}.jb-entry span{display:block;font-size:15px;color:#3d5a4c}#grJb{display:none;position:fixed;inset:0;z-index:2147482500;background:rgba(0,0,0,.45);overflow:auto}.jb-sheet{box-sizing:border-box;max-width:560px;margin:0 auto;min-height:100%;background:#fff;padding:14px 16px 40px;font-size:18px}.jb-top{display:flex;justify-content:space-between;align-items:center;font-size:22px}.jb-x{min-height:46px;padding:0 16px;border-radius:12px;border:1px solid #b8c4be;background:#fff;font-size:17px}.jb-note{margin:10px 0;line-height:1.6}.jb-sheet h3{margin:20px 0 8px;font-size:20px}.jb-tabs{display:flex;gap:8px;margin-bottom:8px}.jb-tabs button{flex:1;min-height:46px;border-radius:12px;border:2px solid #0f6b45;background:#fff;color:#0f6b45;font-size:17px;font-weight:800}.jb-tabs button.on{background:#0f6b45;color:#fff}.jb-card{border:1px solid #cfd8d3;border-radius:14px;padding:12px;margin:10px 0}.jb-m{font-size:16px;color:#4b5a53;margin:4px 0}.jb-s{font-size:16px;line-height:1.5;margin:6px 0}.jb-a{display:inline-block;margin-top:6px;min-height:44px;line-height:44px;padding:0 16px;border-radius:12px;background:#0f6b45;color:#fff;text-decoration:none;font-weight:800}.jb-warn{background:#fff6e5;border:1px solid #f0c36b;border-radius:14px;padding:12px;line-height:1.8;font-size:17px}';
+ D.head.appendChild(st);
+})();
+
+</script>
 </body></html>
