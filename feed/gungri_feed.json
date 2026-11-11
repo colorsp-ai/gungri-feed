@@ -1,27 +1,27 @@
 {
  "schema": "GUNGRI_FEED_V1",
- "generatedAt": "2026-11-10T12:07:30+09:00",
+ "generatedAt": "2026-11-11T10:03:18+09:00",
  "source": {
   "name": "한국관광공사 TourAPI 4.0 (KorService2)",
   "page": "https://www.data.go.kr/data/15101578/openapi.do",
   "notice": "사진은 공공누리 유형(Type1·Type3)이 표시된 것만 사용 가능으로 표시합니다. 공개는 궁리 스텝 검수·대표 승인 후에만 합니다."
  },
  "stats": {
-  "places": 5382,
-  "events": 75,
-  "newPlaces": 127,
-  "newEvents": 5,
-  "apiCalls": 575,
+  "places": 5389,
+  "events": 77,
+  "newPlaces": 163,
+  "newEvents": 4,
+  "apiCalls": 690,
   "mock": false
  },
  "options": {
   "showExamples": true
  },
  "log": [
-  "목록 확인: 새로 받을 항목 5075건(행사 5 · 키워드 9) · 이번 실행 상한 200건",
+  "목록 확인: 새로 받을 항목 6179건(행사 4 · 키워드 249) · 이번 실행 상한 200건",
   "시간 한도 도달 — 남은 항목은 다음 실행에서 이어 받습니다",
-  "상세 수집 132건 · API 호출 575건",
-  "큐레이션 표시(로컬100 등) 5건"
+  "상세 수집 167건 · API 호출 690건",
+  "큐레이션 표시(로컬100 등) 0건"
  ],
  "places": [
   {
@@ -1658,7 +1658,7 @@
    "feedId": "TA-1018702",
    "contentId": "1018702",
    "contentTypeId": "12",
-   "modifiedtime": "20250425093214",
+   "modifiedtime": "20261111084802",
    "n": "국제시장 먹자골목",
    "a": "부산광역시 중구 중구로 36",
    "ar": "경남",
@@ -1670,16 +1670,16 @@
    "sub": "시장",
    "why": "창선동 국제시장 내 먹자골목은 야외 음식점으로 60년이 넘는 역사를 자랑하며, 새콤한 오징어무침을 곁들인 충무김밥과 달콤하면서도 매콤한 맛이 매력인 떡볶이, 물…",
    "summary": "창선동 국제시장 내 먹자골목은 야외 음식점으로 60년이 넘는 역사를 자랑하며, 새콤한 오징어무침을 곁들인 충무김밥과 달콤하면서도 매콤한 맛이 매력인 떡볶이, 물국수와 순대, 부산의 명물인 비빔당면과 팥빙수 등 다양한 길거리 음식을 맛볼 수 있는 곳이다. 국제시장 골목길 좌판 의자에 앉아서 먹고 즐기는 풍경은 우리나라 재래시장의 정감 넘치는 모습 중 하나로, 내국인은 물론 외국 관광객들이 필수적으로 찾는 먹거리 골목이다. 국제시장 먹자골목을 경험하고 국제시장의 옷, 구두, 액세서리 등 다양한 쇼핑을 즐겨보자.",
-   "hours": "09:00~20:00 / ※ 점포별로 상이함",
+   "hours": "09:00~20:00※ 점포별로 상이함",
    "closed": "매주 일요일",
    "parking": "가능",
    "phone": "051-245-7389",
-   "lat": 35.1011311741,
-   "lng": 129.0280793175,
+   "lat": 35.1010911515,
+   "lng": 129.0280508254,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 1018702)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/30/3476830_image2_1.jpg",
@@ -1692,7 +1692,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/31/3476831_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3476831_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/31/3476831_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -1700,8 +1700,8 @@
      "rights": "AUTO_NOEDIT"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/33/3476833_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/33/3476833_image3_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/32/3476832_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/32/3476832_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -6390,7 +6390,7 @@
    "feedId": "TA-1115613",
    "contentId": "1115613",
    "contentTypeId": "12",
-   "modifiedtime": "20261023013001",
+   "modifiedtime": "20261111084802",
    "n": "수성못 유원지",
    "a": "대구광역시 수성구 두산동 512",
    "ar": "경북",
@@ -6411,7 +6411,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.suseong.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/73/3422773_image2_1.png",
@@ -7301,7 +7301,7 @@
    "feedId": "TA-1128853",
    "contentId": "1128853",
    "contentTypeId": "38",
-   "modifiedtime": "20261019175232",
+   "modifiedtime": "20261111084802",
    "n": "중리전통시장",
    "a": "대전광역시 대덕구 중리북로37번길 26",
    "ar": "충청",
@@ -7323,7 +7323,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 1128853)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/41/3565141_image2_1.jpg",
@@ -13661,9 +13661,9 @@
    "feedId": "TA-125605",
    "contentId": "125605",
    "contentTypeId": "12",
-   "modifiedtime": "20250918100157",
+   "modifiedtime": "20261111084802",
    "n": "강촌유원지",
-   "a": "강원특별자치도 춘천시 남산면 일원",
+   "a": "강원특별자치도 춘천시 남산면 강촌로 34",
    "ar": "강원",
    "r": "춘천시",
    "k": [
@@ -13677,13 +13677,13 @@
    "closed": "연중무휴",
    "parking": "가능",
    "phone": "033-262-4464",
-   "homepage": "https://www.chuncheon.go.kr/tour/destination/all-tour/detail/?tourId=182&pageIndex=1&parntsSortOrdr=5&searchWrd=%EA%B0%95%EC%B4%8C&searchType=",
-   "lat": 37.8157038798,
-   "lng": 127.6325486998,
+   "homepage": "https://www.chuncheon.go.kr/tour",
+   "lat": 37.8156932155,
+   "lng": 127.6325868382,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://www.chuncheon.go.kr/tour/destination/all-tour/detail/?tourId=182&pageIndex=1&parntsSortOrdr=5&searchWrd=%EA%B0%95%EC%B4%8C&searchType=",
+   "sourceUrl": "https://www.chuncheon.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/64/3533864_image2_1.jpg",
@@ -13695,8 +13695,8 @@
      "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/59/3533859_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/59/3533859_image3_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/65/3533865_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/65/3533865_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -13704,8 +13704,8 @@
      "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/58/3533858_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/58/3533858_image3_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/66/3533866_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/66/3533866_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -15016,7 +15016,7 @@
    "feedId": "TA-125720",
    "contentId": "125720",
    "contentTypeId": "12",
-   "modifiedtime": "20261023131443",
+   "modifiedtime": "20261111084802",
    "n": "죽도해수욕장",
    "a": "강원특별자치도 양양군 현남면 인구중앙길",
    "ar": "강원",
@@ -15039,7 +15039,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://jukdo-beach.co.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/82/4128982_image2_1.jpg",
@@ -16441,7 +16441,7 @@
    "feedId": "TA-125841",
    "contentId": "125841",
    "contentTypeId": "12",
-   "modifiedtime": "20260313100558",
+   "modifiedtime": "20261111084802",
    "n": "무창포해수욕장",
    "a": "충청남도 보령시 웅천읍 열린바다1길 10",
    "ar": "충청",
@@ -16458,12 +16458,12 @@
    "parking": "가능",
    "phone": "보령시 웅천읍사무소 041-930-0800 보령시 해수욕장경영과 041-930-6810 무창포관광협의회 041-936-3561",
    "homepage": "http://www.moochangpo.com",
-   "lat": 36.2444881783269,
-   "lng": 126.53653373179,
+   "lat": 36.2444881783,
+   "lng": 126.5365337318,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.moochangpo.com",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/13/3513913_image2_1.jpg",
@@ -16498,7 +16498,7 @@
    "feedId": "TA-125842",
    "contentId": "125842",
    "contentTypeId": "12",
-   "modifiedtime": "20251027105946",
+   "modifiedtime": "20261111084802",
    "n": "만리포해수욕장",
    "a": "충청남도 태안군 소원면 만리포2길 138",
    "ar": "충청",
@@ -16515,13 +16515,12 @@
    "closed": "연중무휴",
    "parking": "가능",
    "phone": "041-672-9662",
-   "homepage": "https://www.taean.go.kr/prog/tursmCn/tour/sub02_03/view.do?cntno=26&contentTypeCode=TC002",
-   "lat": 36.7858023228,
-   "lng": 126.1422683553,
+   "lat": 36.7857521577,
+   "lng": 126.1422576019,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://www.taean.go.kr/prog/tursmCn/tour/sub02_03/view.do?cntno=26&contentTypeCode=TC002",
-   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 125842)",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/35/2653435_image2_1.jpg",
@@ -16538,7 +16537,7 @@
    "feedId": "TA-125843",
    "contentId": "125843",
    "contentTypeId": "12",
-   "modifiedtime": "20261103095331",
+   "modifiedtime": "20261111084802",
    "n": "방포해수욕장",
    "a": "충청남도 태안군 안면읍 방포1길 29-1",
    "ar": "충청",
@@ -16560,7 +16559,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://taean.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/84/3340684_image2_1.jpg",
@@ -16595,7 +16594,7 @@
    "feedId": "TA-125845",
    "contentId": "125845",
    "contentTypeId": "12",
-   "modifiedtime": "20261103092929",
+   "modifiedtime": "20261111084802",
    "n": "몽산포해수욕장",
    "a": "충청남도 태안군 남면 몽산포길 65-27",
    "ar": "충청",
@@ -16619,7 +16618,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.mongsanpo.or.kr태안",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/86/3344186_image2_1.jpg",
@@ -16654,7 +16653,7 @@
    "feedId": "TA-125846",
    "contentId": "125846",
    "contentTypeId": "12",
-   "modifiedtime": "20261103095612",
+   "modifiedtime": "20261111084802",
    "n": "삼봉해수욕장",
    "a": "충청남도 태안군 안면읍 삼봉길 209-3",
    "ar": "충청",
@@ -16677,7 +16676,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.taean.go.kr/tour.do",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/65/3340665_image2_1.jpg",
@@ -16712,7 +16711,7 @@
    "feedId": "TA-125847",
    "contentId": "125847",
    "contentTypeId": "12",
-   "modifiedtime": "20261012141722",
+   "modifiedtime": "20261111084802",
    "n": "천리포해수욕장",
    "a": "충청남도 태안군 소원면 천리포1길 277-6",
    "ar": "충청",
@@ -16736,7 +16735,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.taean.go.kr/tour.do",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/15/4119715_image2_1.jpg",
@@ -16831,7 +16830,7 @@
    "feedId": "TA-125852",
    "contentId": "125852",
    "contentTypeId": "12",
-   "modifiedtime": "20261103095807",
+   "modifiedtime": "20261111084802",
    "n": "청포대해수욕장",
    "a": "충청남도 태안군 남면 청포대길 57-2",
    "ar": "충청",
@@ -16854,7 +16853,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://taean.go.kr/tour.do",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/41/3055541_image2_1.jpg",
@@ -19033,7 +19032,7 @@
    "feedId": "TA-126078",
    "contentId": "126078",
    "contentTypeId": "12",
-   "modifiedtime": "20261104162652",
+   "modifiedtime": "20261111084802",
    "n": "광안리해수욕장",
    "a": "부산광역시 수영구 광안해변로 219 (광안동)",
    "ar": "경남",
@@ -19056,7 +19055,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.suyeong.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource_photo/46/4140046_image2_1.JPG",
@@ -19091,7 +19090,7 @@
    "feedId": "TA-126079",
    "contentId": "126079",
    "contentTypeId": "12",
-   "modifiedtime": "20260309150604",
+   "modifiedtime": "20261111084802",
    "n": "다대포해수욕장",
    "a": "부산광역시 사하구 몰운대1길 14",
    "ar": "경남",
@@ -19113,7 +19112,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.visitbusan.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/15/3497115_image2_1.jpg",
@@ -19148,7 +19147,7 @@
    "feedId": "TA-126080",
    "contentId": "126080",
    "contentTypeId": "12",
-   "modifiedtime": "20260309153737",
+   "modifiedtime": "20261111084802",
    "n": "송정해수욕장",
    "a": "부산광역시 해운대구 송정동 712-2",
    "ar": "경남",
@@ -19170,7 +19169,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.haeundae.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/22/3495922_image2_1.jpg",
@@ -19205,7 +19204,7 @@
    "feedId": "TA-126081",
    "contentId": "126081",
    "contentTypeId": "12",
-   "modifiedtime": "20260909092001",
+   "modifiedtime": "20261111084802",
    "n": "해운대해수욕장",
    "a": "부산광역시 해운대구 해운대해변로 264",
    "ar": "경남",
@@ -19227,7 +19226,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.haeundae.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/47/4105447_image2_1.jpg",
@@ -19436,7 +19435,7 @@
    "feedId": "TA-126086",
    "contentId": "126086",
    "contentTypeId": "12",
-   "modifiedtime": "20261020100348",
+   "modifiedtime": "20261111084802",
    "n": "흥남해수욕장",
    "a": "경상남도 거제시 장목면 흥남길 46",
    "ar": "경남",
@@ -19458,7 +19457,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://tour.geoje.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/94/3039994_image2_1.JPG",
@@ -19493,7 +19492,7 @@
    "feedId": "TA-126090",
    "contentId": "126090",
    "contentTypeId": "12",
-   "modifiedtime": "20261109013002",
+   "modifiedtime": "20261111084802",
    "n": "월포해수욕장",
    "a": "경상북도 포항시 북구 청하면 해안로2308번길",
    "ar": "경북",
@@ -19515,7 +19514,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.pohang.go.kr/phtour/index.do",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-10",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/30/3528330_image2_1.jpg",
@@ -19550,7 +19549,7 @@
    "feedId": "TA-126091",
    "contentId": "126091",
    "contentTypeId": "12",
-   "modifiedtime": "20261027145102",
+   "modifiedtime": "20261111084802",
    "n": "일산해수욕장(울산)",
    "a": "울산광역시 동구 해수욕장10길 18 (일산동)",
    "ar": "경남",
@@ -19573,7 +19572,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.donggu.ulsan.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-28",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/44/3528444_image2_1.jpg",
@@ -19720,6 +19719,34 @@
    ]
   },
   {
+   "feedId": "TA-126094",
+   "contentId": "126094",
+   "contentTypeId": "12",
+   "modifiedtime": "20261111084802",
+   "n": "화진해수욕장",
+   "a": "경상북도 포항시 북구 송라면 동해대로3218번길 34-4",
+   "ar": "경북",
+   "r": "포항시",
+   "k": [
+    "관광지",
+    "해수욕장"
+   ],
+   "sub": "해변",
+   "why": "화진해수욕장은 포항시 북구 송라면에 있는 해수욕장이다.",
+   "summary": "화진해수욕장은 포항시 북구 송라면에 있는 해수욕장이다. 백사장 길이 400m, 폭 100m로 평균 수심은 1.5m이다. 작은 해수욕장이지만 주변에 나무가 많고 바닷물이 깨끗하다. 또한 냇물이 두 군데에서 흘러내려 담수욕도 할 수 있다. 해수욕장 개장은 7월 초부터 8월 말까지다. 마을 번영회에서는 7월부터 11월까지 소나무 숲에 텐트와 캠핑카를 허용하는 캠핑장을 운영하고 있어 화진해수욕장은 해수욕과 캠핑 두 가지를 동시에 즐길 수 있는 최적의 장소이다. 또한 바나나 보트와 제트스키를 탈 수 있는 해양레포츠 시설이 있고 서핑 강습도 진행된다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "화진해수욕장 054-262-5437 송라면사무소 054-243-6001",
+   "homepage": "https://www.pohang.go.kr",
+   "lat": 36.2515,
+   "lng": 129.3741,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.pohang.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-11-11"
+  },
+  {
    "feedId": "TA-126095",
    "contentId": "126095",
    "contentTypeId": "12",
@@ -19781,7 +19808,7 @@
    "feedId": "TA-126096",
    "contentId": "126096",
    "contentTypeId": "12",
-   "modifiedtime": "20260311100340",
+   "modifiedtime": "20261111084802",
    "n": "진하해수욕장",
    "a": "울산광역시 울주군 서생면 진하해변길 77",
    "ar": "경남",
@@ -19798,12 +19825,12 @@
    "parking": "가능",
    "phone": "052-237-3471",
    "homepage": "https://www.ulju.ulsan.kr/tour",
-   "lat": 35.3838546791884,
-   "lng": 129.345975785015,
+   "lat": 35.3838546792,
+   "lng": 129.345975785,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.ulju.ulsan.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/33/3060633_image2_1.jpg",
@@ -19838,7 +19865,7 @@
    "feedId": "TA-126097",
    "contentId": "126097",
    "contentTypeId": "12",
-   "modifiedtime": "20260317101258",
+   "modifiedtime": "20261111084802",
    "n": "장사해수욕장",
    "a": "경상북도 영덕군 남정면 장사리",
    "ar": "경북",
@@ -19860,7 +19887,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://tour.yd.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/40/3515940_image2_1.jpg",
@@ -19895,7 +19922,7 @@
    "feedId": "TA-126098",
    "contentId": "126098",
    "contentTypeId": "12",
-   "modifiedtime": "20260701105452",
+   "modifiedtime": "20261111084802",
    "n": "일광해수욕장",
    "a": "부산광역시 기장군 일광읍 삼성리 143-10",
    "ar": "경남",
@@ -19917,7 +19944,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.visitbusan.net/kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/94/3495494_image2_1.jpg",
@@ -20006,10 +20033,67 @@
    ]
   },
   {
+   "feedId": "TA-126102",
+   "contentId": "126102",
+   "contentTypeId": "12",
+   "modifiedtime": "20261111084802",
+   "n": "구산해수욕장",
+   "a": "경상북도 울진군 기성면 기성로 108",
+   "ar": "경북",
+   "r": "울진군",
+   "k": [
+    "관광지",
+    "해수욕장"
+   ],
+   "sub": "해변",
+   "why": "경북 울진군 기성면 구산리에 있는 구산해수욕장은 백사장 길이는 400m, 수심 1.5~2m, 경사도 15~20도의 아담한 규모의 해수욕장이다.",
+   "summary": "경북 울진군 기성면 구산리에 있는 구산해수욕장은 백사장 길이는 400m, 수심 1.5~2m, 경사도 15~20도의 아담한 규모의 해수욕장이다. 규모는 작지만 깨끗한 바닷물과 넓은 백사장, 완만한 경사, 울창한 소나무 숲으로 이루어져 가족 피서지로 적합하다. 해수욕장을 감싸는 울창한 소나무 숲에 식수대와 야영장이 있어 시원한 그늘에서 휴식을 취하며 산림욕도 할 수 있다. 주변에는 관동팔경 중 하나인 월송정과 애월헌, 노동서원, 명계서원 등의 문화 유적지가 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "구산해수욕장 054-788-7208 울산군청 문화관광과 054-789-5862",
+   "homepage": "http://www.uljin.go.kr/tour",
+   "lat": 36.7532728719,
+   "lng": 129.467450458,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.uljin.go.kr/tour",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-11-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/70/3039170_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/70/3039170_image3_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/71/3039171_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/71/3039171_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/73/3039173_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/73/3039173_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-126103",
    "contentId": "126103",
    "contentTypeId": "12",
-   "modifiedtime": "20260312162926",
+   "modifiedtime": "20261111084802",
    "n": "고래불해수욕장",
    "a": "경상북도 영덕군 병곡면 병곡리",
    "ar": "경북",
@@ -20032,7 +20116,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.yd.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/48/3515948_image2_1.jpg",
@@ -20067,7 +20151,7 @@
    "feedId": "TA-126104",
    "contentId": "126104",
    "contentTypeId": "12",
-   "modifiedtime": "20251215111142",
+   "modifiedtime": "20261111084802",
    "n": "대진해수욕장",
    "a": "경상북도 영덕군 영해면 영덕대게로 2840",
    "ar": "경북",
@@ -20080,17 +20164,17 @@
    "sub": "해변",
    "why": "영덕군 영해면 해안마을인 대진리를 중심으로 펼쳐진 대진해수욕장은 어디 내놓아도 손색이 없을 만큼 해수욕장으로서의 조건을 두루 갖추고 있다.",
    "summary": "영덕군 영해면 해안마을인 대진리를 중심으로 펼쳐진 대진해수욕장은 어디 내놓아도 손색이 없을 만큼 해수욕장으로서의 조건을 두루 갖추고 있다. 맑고 깨끗한 바닷물이 그대로 간직되어 있으며, 길이 8km, 폭 100m의 백사장 뒤로는 송림이 병풍처럼 둘러쳐져 있어 장관을 이루고 있다. 또한, 수심이 1~2m 정도로 깊지 않고 경사도 완만하여 어린이를 동반한 가족 단위 피서지로 적당하다. 백사장의 모래는 알이 굵고 질이 좋아 모래찜질에는 그만이며 몸에 잘 붙지 않는 것이 특징이다. 대진해수욕장의 가장 큰 자랑거리는 백사장을 가로질러 흐르는 폭 200m의 송천천이다. 이곳에서는 담수욕을 즐길 수 있어서 천연 샤워장으로도 안성맞춤이다. 또한, 민물과 바닷물이 만나는 곳이라 민물낚시와 바다낚시를 한꺼번에 즐길 수 있고 …",
-   "hours": "[비수기] / - 09:00~18:00 / [성수기] / - 09:00~19:30",
-   "closed": "연중 무휴 / ※기상악화 및 유해생물 출현시 입욕통제",
-   "parking": "가능 (약 소형 250대) / 요금(무료)",
+   "hours": "[비수기] - 09:00~18:00 [성수기] - 09:00~19:30",
+   "closed": "연중 무휴 ※기상악화 및 유해생물 출현시 입욕통제",
+   "parking": "가능 (약 소형 250대)요금(무료)",
    "phone": "054-730-7721",
-   "homepage": "https://tour.yd.go.kr/kor/sight/sightView.aspx?idx=248",
-   "lat": 36.5645374176,
-   "lng": 129.4266915867,
+   "homepage": "https://tour.yd.go.kr",
+   "lat": 36.5644891008,
+   "lng": 129.4266600473,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://tour.yd.go.kr/kor/sight/sightView.aspx?idx=248",
+   "sourceUrl": "https://tour.yd.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/38/3042738_image2_1.JPG",
@@ -20103,7 +20187,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/42/3042742_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/42/3042742_image3_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/42/3042742_image2_1.JPG",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -20112,7 +20196,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/65/2021965_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/65/2021965_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/65/2021965_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -20171,6 +20255,66 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/19/3026519_image2_1.JPG",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/19/3026519_image2_1.JPG",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-126122",
+   "contentId": "126122",
+   "contentTypeId": "12",
+   "modifiedtime": "20261111084802",
+   "n": "부산 송도해수욕장",
+   "a": "부산광역시 서구 송도해변로 100",
+   "ar": "경남",
+   "r": "서구",
+   "k": [
+    "관광지",
+    "공원",
+    "해변",
+    "해수욕장",
+    "시장"
+   ],
+   "sub": "해변",
+   "why": "부산 자갈치시장에서 3km 떨어진 곳에 위치하며, 1913년 부산에서 제일 먼저 개장한 해수욕장이다.",
+   "summary": "부산 자갈치시장에서 3km 떨어진 곳에 위치하며, 1913년 부산에서 제일 먼저 개장한 해수욕장이다. 2000년부터 5년여간 정비사업을 펼쳐 줄어든 백사장을 확장하고 분수대 등을 설치하며 해변공원이 되었다. 주위에 수산시장과 암남공원 등이 있다. 1913년 부산에서 최초로 개발된 해수욕장 구역으로, 1996년 4월, 군사보호구역에서 개방된 도시 자연공원인 암남공원과 바다낚시로 유명한 두도공원으로 연결된 송도는 울창한 원시림과 자연 그대로 보존된 기암괴석, 그리고 부산의 상징인 갈매기와 멀리 영도를 배경으로 한 조용한 바다정경이 장관인 곳이다. 주변에 다양한 숙박시설과 먹을거리를 갖추고 있으며 구름다리, 산책로, 보트장, 주차장 등 편의시설이 잘 갖추어져 있다. 송도 해안의 암남공원은 해안 생태 공원으로 송도…",
+   "hours": "06:00~23:00",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "051-240-4000",
+   "homepage": "http://tour.busan.go.kr",
+   "lat": 35.0738858025,
+   "lng": 129.0164304362,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://tour.busan.go.kr",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-11-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/86/2504686_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/86/2504686_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/63/3436163_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/63/3436163_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/64/3436164_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/64/3436164_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -21676,7 +21820,7 @@
    "feedId": "TA-126271",
    "contentId": "126271",
    "contentTypeId": "12",
-   "modifiedtime": "20260630184428",
+   "modifiedtime": "20261111084802",
    "n": "대광해수욕장",
    "a": "전남광주통합특별시 신안군 임자면 광산리",
    "ar": "호남",
@@ -21692,13 +21836,13 @@
    "closed": "연중무휴",
    "parking": "가능",
    "phone": "061-261-6524",
-   "homepage": "https://tour.shinan.go.kr/home/tour/island_tour/imja/place/place_02/page.wscms",
-   "lat": 35.1034268421,
-   "lng": 126.0701421506,
+   "homepage": "http://tour.shinan.go.kr",
+   "lat": 35.1033863373,
+   "lng": 126.0701320679,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://tour.shinan.go.kr/home/tour/island_tour/imja/place/place_02/page.wscms",
+   "sourceUrl": "http://tour.shinan.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/95/3378795_image2_1.JPG",
@@ -21711,7 +21855,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/91/3378791_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/91/3378791_image3_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/91/3378791_image2_1.JPG",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -21720,7 +21864,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/82/3378782_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/3378782_image3_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/3378782_image2_1.JPG",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -21733,7 +21877,7 @@
    "feedId": "TA-126272",
    "contentId": "126272",
    "contentTypeId": "12",
-   "modifiedtime": "20261027144808",
+   "modifiedtime": "20261111084802",
    "n": "사구미해수욕장",
    "a": "전남광주통합특별시 해남군 송지면 사구미길 20",
    "ar": "호남",
@@ -21756,7 +21900,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.haenam.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-28",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/69/3587569_image2_1.jpg",
@@ -21791,7 +21935,7 @@
    "feedId": "TA-126273",
    "contentId": "126273",
    "contentTypeId": "12",
-   "modifiedtime": "20261104100836",
+   "modifiedtime": "20261111084802",
    "n": "가계해수욕장",
    "a": "전남광주통합특별시 진도군 고군면 신비의바닷길 13",
    "ar": "호남",
@@ -21813,7 +21957,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.jindo.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/36/3079736_image2_1.jpg",
@@ -21906,7 +22050,7 @@
    "feedId": "TA-126276",
    "contentId": "126276",
    "contentTypeId": "12",
-   "modifiedtime": "20261104105711",
+   "modifiedtime": "20261111084802",
    "n": "우전해수욕장",
    "a": "전남광주통합특별시 신안군 증도면 지도증도로 1684",
    "ar": "호남",
@@ -21930,7 +22074,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 126276)",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/20/3558920_image2_1.jpg",
@@ -21965,7 +22109,7 @@
    "feedId": "TA-126278",
    "contentId": "126278",
    "contentTypeId": "12",
-   "modifiedtime": "20261104112852",
+   "modifiedtime": "20261111084802",
    "n": "상록해수욕장",
    "a": "전북특별자치도 부안군 변산면 변산로 3210-16",
    "ar": "호남",
@@ -21986,7 +22130,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 126278)",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/06/3067106_image2_1.jpg",
@@ -22079,7 +22223,7 @@
    "feedId": "TA-126280",
    "contentId": "126280",
    "contentTypeId": "12",
-   "modifiedtime": "20261104104954",
+   "modifiedtime": "20261111084802",
    "n": "안도해수욕장",
    "a": "전남광주통합특별시 여수시 남면 안도해수욕장길 105",
    "ar": "호남",
@@ -22103,7 +22247,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.yeosu.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/54/3548954_image2_1.JPG",
@@ -22196,7 +22340,7 @@
    "feedId": "TA-126282",
    "contentId": "126282",
    "contentTypeId": "12",
-   "modifiedtime": "20260630184428",
+   "modifiedtime": "20261111084802",
    "n": "방죽포해수욕장",
    "a": "전남광주통합특별시 여수시 돌산읍 향일암로 804-6",
    "ar": "호남",
@@ -22219,7 +22363,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.yeosu.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/02/3521502_image2_1.jpg",
@@ -22254,7 +22398,7 @@
    "feedId": "TA-126286",
    "contentId": "126286",
    "contentTypeId": "12",
-   "modifiedtime": "20261105104012",
+   "modifiedtime": "20261111084802",
    "n": "동호해수욕장",
    "a": "전북 고창군 해리면 동호리 712",
    "ar": "호남",
@@ -22274,7 +22418,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 126286)",
-   "checkedAt": "2026-11-06",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/23/4142423_image2_1.jpg",
@@ -22309,7 +22453,7 @@
    "feedId": "TA-126287",
    "contentId": "126287",
    "contentTypeId": "12",
-   "modifiedtime": "20261007110516",
+   "modifiedtime": "20261111084802",
    "n": "변산해수욕장",
    "a": "전북특별자치도 부안군 변산면 대항리 603",
    "ar": "호남",
@@ -22332,7 +22476,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.buan.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource_photo/44/3446644_image2_1.jpg",
@@ -22367,7 +22511,7 @@
    "feedId": "TA-126288",
    "contentId": "126288",
    "contentTypeId": "12",
-   "modifiedtime": "20261104112509",
+   "modifiedtime": "20261111084802",
    "n": "격포해수욕장",
    "a": "전북특별자치도 부안군 변산면 변산해변로 1",
    "ar": "호남",
@@ -22389,7 +22533,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.buan.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/55/3522155_image2_1.jpg",
@@ -22424,7 +22568,7 @@
    "feedId": "TA-126289",
    "contentId": "126289",
    "contentTypeId": "12",
-   "modifiedtime": "20261027144455",
+   "modifiedtime": "20261111084802",
    "n": "가마미해수욕장",
    "a": "전남광주통합특별시 영광군 홍농읍 가마미로 355",
    "ar": "호남",
@@ -22447,7 +22591,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.yeonggwang.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-28",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/63/3018763_image2_1.jpg",
@@ -22482,7 +22626,7 @@
    "feedId": "TA-126290",
    "contentId": "126290",
    "contentTypeId": "12",
-   "modifiedtime": "20260427131517",
+   "modifiedtime": "20261111084802",
    "n": "구시포해수욕장",
    "a": "전북특별자치도 고창군 상하면 진암구시포로 545",
    "ar": "호남",
@@ -22505,7 +22649,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.gochang.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/11/3536211_image2_1.jpg",
@@ -22540,7 +22684,7 @@
    "feedId": "TA-126291",
    "contentId": "126291",
    "contentTypeId": "12",
-   "modifiedtime": "20261104100219",
+   "modifiedtime": "20261111084802",
    "n": "돌머리해수욕장",
    "a": "전남광주통합특별시 함평군 함평읍 석성리 523-1 솔밭수퍼",
    "ar": "호남",
@@ -22563,7 +22707,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.hampyeong.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/55/3381355_image2_1.JPG",
@@ -22598,7 +22742,7 @@
    "feedId": "TA-126295",
    "contentId": "126295",
    "contentTypeId": "12",
-   "modifiedtime": "20261104101722",
+   "modifiedtime": "20261111084802",
    "n": "수문해수욕장",
    "a": "전남광주통합특별시 장흥군 안양면 수문리",
    "ar": "호남",
@@ -22620,7 +22764,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.jangheung.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/55/3535955_image2_1.jpg",
@@ -22655,7 +22799,7 @@
    "feedId": "TA-126302",
    "contentId": "126302",
    "contentTypeId": "12",
-   "modifiedtime": "20260706153119",
+   "modifiedtime": "20261111084802",
    "n": "땅끝송호해수욕장",
    "a": "전남광주통합특별시 해남군 송지면 땅끝해안로 1827",
    "ar": "호남",
@@ -22680,7 +22824,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.haenam.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/87/3587587_image2_1.jpg",
@@ -23317,7 +23461,7 @@
    "feedId": "TA-126447",
    "contentId": "126447",
    "contentTypeId": "12",
-   "modifiedtime": "20261020111104",
+   "modifiedtime": "20261111084802",
    "n": "신양섭지해수욕장",
    "a": "제주특별자치도 서귀포시 성산읍 섭지코지로 107",
    "ar": "제주",
@@ -23339,7 +23483,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.visitjeju.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/02/3024202_image2_1.jpg",
@@ -23432,7 +23576,7 @@
    "feedId": "TA-126449",
    "contentId": "126449",
    "contentTypeId": "12",
-   "modifiedtime": "20261029155812",
+   "modifiedtime": "20261111084802",
    "n": "중문색달해수욕장",
    "a": "제주특별자치도 서귀포시 중문관광로72번길 100 (색달동)",
    "ar": "제주",
@@ -23456,7 +23600,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.visitjeju.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-30",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/13/3552513_image2_1.jpg",
@@ -23484,6 +23628,64 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-126451",
+   "contentId": "126451",
+   "contentTypeId": "12",
+   "modifiedtime": "20261111084802",
+   "n": "함덕해수욕장 (함덕 서우봉 해변)",
+   "a": "제주특별자치도 제주시 조천읍 조함해안로 519-10",
+   "ar": "제주",
+   "r": "제주시",
+   "k": [
+    "관광지",
+    "해변",
+    "해수욕장"
+   ],
+   "sub": "해변",
+   "why": "제주올레 19코스를 걷다 보면 에메랄드빛 보석을 품고 있는 함덕해수욕장을 만날 수 있다.",
+   "summary": "제주올레 19코스를 걷다 보면 에메랄드빛 보석을 품고 있는 함덕해수욕장을 만날 수 있다. 제주시 조천읍 함덕리에 자리한 함덕해수욕장은 해수욕장 바로 옆에 우뚝 선 오름(서우봉) 덕분에 ‘함덕서 우봉해변’이라고도 불린다. 제주공항에서 불과 20㎞ 떨어졌지만, 이곳에 도착하는 순간 다른 나라에 온 것 같은 기분이 든다. 입구부터 환영해 주는 키 큰 야자수들, 하얀 모래와 대조를 이루는 에메랄드빛 바다, 모래와 미역마저 투명하게 비춰주는 맑은 물과 하얀 파도가 그러하다. 제주도 수많은 해수욕장 중에서도, 바다색이 가장 예쁜 3곳을 꼽는다면 단연 협재, 김녕, 그리고 함덕해수욕장이다. 물이 맑고 수심이 얕아서 가족단위 피서지로도 좋다. 해수욕장 서쪽은 구름다리로 연결되어 있어 바다 위를 걷는 듯한 경험을 할 수 있…",
+   "hours": "상시 개방 ※ 해수욕장 개장기간에는 변동 가능성 있음",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "064-728-3989",
+   "homepage": "http://www.visitjeju.net",
+   "lat": 33.543868551,
+   "lng": 126.6683432124,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.visitjeju.net",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-11-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/00/3354600_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/00/3354600_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/08/3354608_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/08/3354608_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/07/3354607_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/07/3354607_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -25274,7 +25476,7 @@
    "feedId": "TA-126564",
    "contentId": "126564",
    "contentTypeId": "12",
-   "modifiedtime": "20261027143252",
+   "modifiedtime": "20261111084802",
    "n": "남일대해수욕장",
    "a": "경상남도 사천시 모례2길 11-19 (향촌동)",
    "ar": "경남",
@@ -25296,7 +25498,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.toursacheon.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-28",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/62/3374262_image2_1.JPG",
@@ -25449,7 +25651,7 @@
    "feedId": "TA-126577",
    "contentId": "126577",
    "contentTypeId": "12",
-   "modifiedtime": "20261104174508",
+   "modifiedtime": "20261111084802",
    "n": "명사해수욕장",
    "a": "경상남도 거제시 남부면 명사해수욕장길",
    "ar": "경남",
@@ -25472,7 +25674,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.geoje.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/84/4142284_image2_1.jpg",
@@ -25566,7 +25768,7 @@
    "feedId": "TA-126589",
    "contentId": "126589",
    "contentTypeId": "12",
-   "modifiedtime": "20260318101005",
+   "modifiedtime": "20261111084802",
    "n": "황포해수욕장",
    "a": "경상남도 거제시 장목면 황포1길",
    "ar": "경남",
@@ -25586,12 +25788,12 @@
    "parking": "가능 (약 소형 50대)",
    "phone": "거제시청 해양항만과 055-639-4243~5",
    "homepage": "https://tour.geoje.go.kr",
-   "lat": 35.0200691416253,
-   "lng": 128.674030501213,
+   "lat": 35.0200691416,
+   "lng": 128.6740305012,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.geoje.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/97/3519197_image2_1.jpg",
@@ -25831,7 +26033,7 @@
    "feedId": "TA-126649",
    "contentId": "126649",
    "contentTypeId": "12",
-   "modifiedtime": "20261103103838",
+   "modifiedtime": "20261111084802",
    "n": "궁촌해변(궁촌해수욕장)",
    "a": "강원특별자치도 삼척시 근덕면 궁촌해변길 65",
    "ar": "강원",
@@ -25852,7 +26054,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.samcheok.go.kr/tour.web",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/48/3040348_image2_1.jpg",
@@ -26212,7 +26414,7 @@
    "feedId": "TA-126682",
    "contentId": "126682",
    "contentTypeId": "12",
-   "modifiedtime": "20261027143515",
+   "modifiedtime": "20261111084802",
    "n": "두곡월포해수욕장",
    "a": "경상남도 남해군 남면 당항리 535-16",
    "ar": "경남",
@@ -26234,7 +26436,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.namhae.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-28",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/48/3554848_image2_1.jpg",
@@ -26445,7 +26647,7 @@
    "feedId": "TA-126694",
    "contentId": "126694",
    "contentTypeId": "12",
-   "modifiedtime": "20261103171001",
+   "modifiedtime": "20261111084802",
    "n": "후정해수욕장",
    "a": "경상북도 울진군 죽변면 후정2길 67",
    "ar": "경북",
@@ -26468,7 +26670,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.uljin.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/03/3576603_image2_1.jpg",
@@ -26503,7 +26705,7 @@
    "feedId": "TA-126695",
    "contentId": "126695",
    "contentTypeId": "12",
-   "modifiedtime": "20260528115203",
+   "modifiedtime": "20261111084802",
    "n": "꽃지해수욕장",
    "a": "충청남도 태안군 안면읍 승언리",
    "ar": "충청",
@@ -26521,12 +26723,12 @@
    "parking": "가능",
    "phone": "당암리 관광안내소 041-670-2543",
    "homepage": "http://www.taean.go.kr/tour.do",
-   "lat": 36.5013176424177,
-   "lng": 126.334652012646,
+   "lat": 36.5013176424,
+   "lng": 126.3346520126,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.taean.go.kr/tour.do",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/64/4060364_image2_1.jpg",
@@ -26991,7 +27193,7 @@
    "feedId": "TA-126742",
    "contentId": "126742",
    "contentTypeId": "12",
-   "modifiedtime": "20260713101346",
+   "modifiedtime": "20261111084802",
    "n": "춘장대해수욕장",
    "a": "충청남도 서천군 서면 춘장대길 20",
    "ar": "충청",
@@ -27013,7 +27215,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://chunjangdae.or.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/89/3043689_image2_1.jpg",
@@ -30656,7 +30858,7 @@
    "feedId": "TA-127214",
    "contentId": "127214",
    "contentTypeId": "12",
-   "modifiedtime": "20261016160628",
+   "modifiedtime": "20261111084802",
    "n": "구룡포해수욕장",
    "a": "경상북도 포항시 남구 구룡포읍 호미로426번길 6",
    "ar": "경북",
@@ -30678,7 +30880,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.pohang.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/11/3042811_image2_1.jpg",
@@ -31062,7 +31264,7 @@
    "feedId": "TA-127292",
    "contentId": "127292",
    "contentTypeId": "12",
-   "modifiedtime": "20261103094226",
+   "modifiedtime": "20261111084802",
    "n": "구례포해수욕장",
    "a": "충청남도 태안군 원북면 황촌리",
    "ar": "충청",
@@ -31084,7 +31286,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.taean.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/17/3055617_image2_1.jpg",
@@ -32390,7 +32592,7 @@
    "feedId": "TA-127490",
    "contentId": "127490",
    "contentTypeId": "12",
-   "modifiedtime": "20260915211824",
+   "modifiedtime": "20261111084802",
    "n": "협재해수욕장",
    "a": "제주특별자치도 제주시 한림읍 한림로 329-10",
    "ar": "제주",
@@ -32414,7 +32616,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.visitjeju.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/66/3096066_image2_1.jpg",
@@ -33198,7 +33400,7 @@
    "feedId": "TA-127546",
    "contentId": "127546",
    "contentTypeId": "12",
-   "modifiedtime": "20261027151222",
+   "modifiedtime": "20261111084802",
    "n": "남열해돋이해수욕장",
    "a": "전남광주통합특별시 고흥군 영남면 남열리",
    "ar": "호남",
@@ -33221,7 +33423,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.goheung.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-28",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/30/3360830_image2_1.JPG",
@@ -34946,7 +35148,7 @@
    "feedId": "TA-127698",
    "contentId": "127698",
    "contentTypeId": "12",
-   "modifiedtime": "20260625141329",
+   "modifiedtime": "20261111084802",
    "n": "영일대해수욕장",
    "a": "경상북도 포항시 북구 두호동 685-1",
    "ar": "경북",
@@ -34968,7 +35170,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.pohang.go.kr/phtour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/79/4078979_image2_1.jpg",
@@ -35176,7 +35378,7 @@
    "feedId": "TA-127728",
    "contentId": "127728",
    "contentTypeId": "12",
-   "modifiedtime": "20260921094733",
+   "modifiedtime": "20261111084802",
    "n": "원평해수욕장",
    "a": "강원특별자치도 삼척시 근덕면 원평길 38-20",
    "ar": "강원",
@@ -35198,7 +35400,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.samcheok.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/85/3070685_image2_1.jpg",
@@ -35557,7 +35759,7 @@
    "feedId": "TA-127766",
    "contentId": "127766",
    "contentTypeId": "12",
-   "modifiedtime": "20261021151303",
+   "modifiedtime": "20261111084802",
    "n": "도초 시목해수욕장",
    "a": "전남광주통합특별시 신안군 도초면 시목길 219-30",
    "ar": "호남",
@@ -35579,7 +35781,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 127766)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/33/2821533_image2_1.jpg",
@@ -36171,7 +36373,7 @@
    "feedId": "TA-127864",
    "contentId": "127864",
    "contentTypeId": "12",
-   "modifiedtime": "20261106013000",
+   "modifiedtime": "20261111084802",
    "n": "파도리해수욕장",
    "a": "충청남도 태안군 소원면 모항파도로 490-85",
    "ar": "충청",
@@ -36192,7 +36394,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.taean.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-07",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/04/3055504_image2_1.JPG",
@@ -36227,7 +36429,7 @@
    "feedId": "TA-127865",
    "contentId": "127865",
    "contentTypeId": "12",
-   "modifiedtime": "20261006132134",
+   "modifiedtime": "20261111084802",
    "n": "고사포해수욕장",
    "a": "전북특별자치도 부안군 변산면 노루목길 8-8",
    "ar": "호남",
@@ -36248,7 +36450,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.buan.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/91/4096491_image2_1.jpg",
@@ -36283,7 +36485,7 @@
    "feedId": "TA-127866",
    "contentId": "127866",
    "contentTypeId": "12",
-   "modifiedtime": "20260910084213",
+   "modifiedtime": "20261111084802",
    "n": "대천해수욕장",
    "a": "충청남도 보령시 머드로 123",
    "ar": "충청",
@@ -36306,7 +36508,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://daecheonbeach.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/66/3513866_image2_1.jpg",
@@ -36341,7 +36543,7 @@
    "feedId": "TA-127867",
    "contentId": "127867",
    "contentTypeId": "12",
-   "modifiedtime": "20260929233650",
+   "modifiedtime": "20261111084802",
    "n": "수륙해수욕장",
    "a": "경상남도 통영시 산양읍 영운리",
    "ar": "경남",
@@ -36365,7 +36567,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.utour.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/55/3558155_image2_1.jpg",
@@ -36400,7 +36602,7 @@
    "feedId": "TA-127870",
    "contentId": "127870",
    "contentTypeId": "12",
-   "modifiedtime": "20261029154924",
+   "modifiedtime": "20261111084802",
    "n": "곽지해수욕장",
    "a": "제주특별자치도 제주시 애월읍 곽지리 1565",
    "ar": "제주",
@@ -36423,7 +36625,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.visitjeju.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-30",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/30/3053130_image2_1.jpg",
@@ -36458,7 +36660,7 @@
    "feedId": "TA-127874",
    "contentId": "127874",
    "contentTypeId": "12",
-   "modifiedtime": "20260921093315",
+   "modifiedtime": "20261111084802",
    "n": "송지호 해수욕장",
    "a": "강원특별자치도 고성군 죽왕면 오호리",
    "ar": "강원",
@@ -36480,7 +36682,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.gwgs.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/14/3516814_image2_1.jpg",
@@ -37269,7 +37471,7 @@
    "feedId": "TA-127939",
    "contentId": "127939",
    "contentTypeId": "12",
-   "modifiedtime": "20260929213659",
+   "modifiedtime": "20261111084802",
    "n": "덕포해수욕장",
    "a": "경상남도 거제시 덕포5길 32-4",
    "ar": "경남",
@@ -37291,7 +37493,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.geoje.go.kr/index.geoje",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/43/3372343_image2_1.JPG",
@@ -37554,7 +37756,7 @@
    "feedId": "TA-127969",
    "contentId": "127969",
    "contentTypeId": "12",
-   "modifiedtime": "20250902165929",
+   "modifiedtime": "20261111084802",
    "n": "명암유원지",
    "a": "충청북도 청주시 상당구 것대로46번길 33 (산성동)",
    "ar": "충청",
@@ -37570,13 +37772,13 @@
    "closed": "연중무휴",
    "parking": "가능",
    "phone": "043-201-4422",
-   "homepage": "https://www.cheongju.go.kr/sangdang/contents.do?key=990",
-   "lat": 36.6502618081,
-   "lng": 127.5393098776,
+   "homepage": "https://www.cheongju.go.kr",
+   "lat": 36.6502133964,
+   "lng": 127.5392927336,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://www.cheongju.go.kr/sangdang/contents.do?key=990",
+   "sourceUrl": "https://www.cheongju.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/06/3504206_image2_1.jpg",
@@ -37589,7 +37791,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/07/3504207_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/07/3504207_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/07/3504207_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -37597,8 +37799,8 @@
      "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/15/3504215_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/15/3504215_image3_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/08/3504208_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/08/3504208_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -40497,7 +40699,7 @@
    "feedId": "TA-128727",
    "contentId": "128727",
    "contentTypeId": "12",
-   "modifiedtime": "20260804173434",
+   "modifiedtime": "20261111084802",
    "n": "사근진해변(사근진해수욕장)",
    "a": "강원특별자치도 강릉시 해안로604번길 16",
    "ar": "강원",
@@ -40520,7 +40722,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://visitgangneung.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/04/4095604_image2_1.jpg",
@@ -40783,7 +40985,7 @@
    "feedId": "TA-128758",
    "contentId": "128758",
    "contentTypeId": "12",
-   "modifiedtime": "20261105100615",
+   "modifiedtime": "20261111084802",
    "n": "경포해수욕장",
    "a": "강원특별자치도 강릉시 창해로 514 (안현동)",
    "ar": "강원",
@@ -40806,7 +41008,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.gn.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-06",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/89/4145189_image2_1.jpg",
@@ -41420,7 +41622,7 @@
    "feedId": "TA-128894",
    "contentId": "128894",
    "contentTypeId": "12",
-   "modifiedtime": "20261102172627",
+   "modifiedtime": "20261111084802",
    "n": "어은돌해수욕장",
    "a": "충청남도 태안군 소원면 모항리",
    "ar": "충청",
@@ -41443,7 +41645,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.taean.go.kr/tour.do",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-03",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/73/3340773_image2_1.jpg",
@@ -41652,7 +41854,7 @@
    "feedId": "TA-128901",
    "contentId": "128901",
    "contentTypeId": "12",
-   "modifiedtime": "20261102171050",
+   "modifiedtime": "20261111084802",
    "n": "밧개해수욕장",
    "a": "충청남도 태안군 안면읍 승언리",
    "ar": "충청",
@@ -41674,7 +41876,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.taean.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-03",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/93/3055593_image2_1.jpg",
@@ -41709,7 +41911,7 @@
    "feedId": "TA-128902",
    "contentId": "128902",
    "contentTypeId": "12",
-   "modifiedtime": "20261102171318",
+   "modifiedtime": "20261111084802",
    "n": "백사장해수욕장",
    "a": "충청남도 태안군 안면읍 창기리 1287-5",
    "ar": "충청",
@@ -41730,7 +41932,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 128902)",
-   "checkedAt": "2026-11-03",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/26/2716426_image2_1.jpg",
@@ -41747,7 +41949,7 @@
    "feedId": "TA-128903",
    "contentId": "128903",
    "contentTypeId": "12",
-   "modifiedtime": "20261102171630",
+   "modifiedtime": "20261111084802",
    "n": "기지포해수욕장",
    "a": "충청남도 태안군 안면읍 해안관광로 745-19",
    "ar": "충청",
@@ -41770,7 +41972,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://taean.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-03",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/06/2716306_image2_1.jpg",
@@ -41903,7 +42105,7 @@
    "feedId": "TA-128908",
    "contentId": "128908",
    "contentTypeId": "12",
-   "modifiedtime": "20260309093631",
+   "modifiedtime": "20261111084802",
    "n": "신두리해수욕장",
    "a": "충청남도 태안군 원북면 신두해변길 199",
    "ar": "충청",
@@ -41921,12 +42123,12 @@
    "parking": "가능",
    "phone": "041-670-2695",
    "homepage": "http://www.taean.go.kr/tour.do",
-   "lat": 36.83977656029601,
-   "lng": 126.18973690295046,
+   "lat": 36.8397765603,
+   "lng": 126.189736903,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.taean.go.kr/tour.do",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/86/3493386_image2_1.jpg",
@@ -42963,7 +43165,7 @@
    "feedId": "TA-129202",
    "contentId": "129202",
    "contentTypeId": "12",
-   "modifiedtime": "20260630212627",
+   "modifiedtime": "20261111084802",
    "n": "송산유원지",
    "a": "전남광주통합특별시 광산구 박호등임로 43-1",
    "ar": "호남",
@@ -42986,7 +43188,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.gwangsan.go.kr/culture",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/60/4066060_image2_1.jpg",
@@ -43654,7 +43856,7 @@
    "feedId": "TA-129400",
    "contentId": "129400",
    "contentTypeId": "12",
-   "modifiedtime": "20261007113751",
+   "modifiedtime": "20261111084802",
    "n": "김녕해수욕장",
    "a": "제주특별자치도 제주시 구좌읍 구좌해안로 237",
    "ar": "제주",
@@ -43678,7 +43880,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.visitjeju.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/80/4107980_image2_1.JPG",
@@ -43706,6 +43908,64 @@
      "source": "한국관광공사",
      "usable": true,
      "rights": "AUTO"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-129401",
+   "contentId": "129401",
+   "contentTypeId": "12",
+   "modifiedtime": "20261111084802",
+   "n": "삼양해수욕장",
+   "a": "제주특별자치도 제주시 삼양이동",
+   "ar": "제주",
+   "r": "제주시",
+   "k": [
+    "관광지",
+    "해변",
+    "해수욕장"
+   ],
+   "sub": "해변",
+   "why": "삼양해수욕장은 관광객들에게 잘 알려지지 않은 해변이다.",
+   "summary": "삼양해수욕장은 관광객들에게 잘 알려지지 않은 해변이다. 상대적으로 소박하며, 물이 깨끗하고 고운 모래가 특징이다. 특히 화산암편과 규산염광물이 많은 세립질 모래로 이루어져 있어 반짝이는 검은 모래가 특색이라 바다와 모래를 배경으로 사진을 찍으면 인생사진을 건질 수 있는 해수욕장이다. 이 모래는 태양열에 뜨거워졌을 때 그 안에 몸을 파묻고 찜질을 하면 신경통 및 관절염에 좋다고 알려지고 있어, 매년 여름이면 뜨거운 모래를 덮고 찜질하는 관광객들의 모습을 심심찮게 볼 수 있다.",
+   "hours": "상시 개방",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "064-728-3991",
+   "homepage": "http://www.visitjeju.net",
+   "lat": 33.5254971286,
+   "lng": 126.5852430307,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "http://www.visitjeju.net",
+   "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
+   "checkedAt": "2026-11-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/20/3039520_image2_1.jpeg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/20/3039520_image3_1.jpeg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/07/3039507_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/07/3039507_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/44/3039544_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/44/3039544_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
     }
    ]
   },
@@ -44062,7 +44322,7 @@
    "feedId": "TA-129487",
    "contentId": "129487",
    "contentTypeId": "12",
-   "modifiedtime": "20261103155159",
+   "modifiedtime": "20261111084802",
    "n": "설리해수욕장",
    "a": "경상남도 남해군 미조면 미송로303번길 48-1",
    "ar": "경남",
@@ -44084,7 +44344,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://tour.namhae.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/25/3339025_image2_1.jpg",
@@ -44828,7 +45088,7 @@
    "feedId": "TA-129583",
    "contentId": "129583",
    "contentTypeId": "12",
-   "modifiedtime": "20260313173653",
+   "modifiedtime": "20261111084802",
    "n": "독산해수욕장",
    "a": "충청남도 보령시 웅천읍 소황리",
    "ar": "충청",
@@ -44851,7 +45111,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.brcn.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/23/3513923_image2_1.jpg",
@@ -45310,7 +45570,7 @@
    "feedId": "TA-129638",
    "contentId": "129638",
    "contentTypeId": "12",
-   "modifiedtime": "20261102170518",
+   "modifiedtime": "20261111084802",
    "n": "장안해수욕장",
    "a": "충청남도 보령시 웅천읍",
    "ar": "충청",
@@ -45332,7 +45592,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.brcn.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-03",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/11/3048111_image2_1.jpg",
@@ -45367,7 +45627,7 @@
    "feedId": "TA-129641",
    "contentId": "129641",
    "contentTypeId": "12",
-   "modifiedtime": "20260313172705",
+   "modifiedtime": "20261111084802",
    "n": "용두해수욕장",
    "a": "충청남도 보령시 남포면 열린바다로 82-45",
    "ar": "충청",
@@ -45390,7 +45650,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.brcn.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/94/3513894_image2_1.jpg",
@@ -68160,7 +68420,7 @@
    "feedId": "TA-1309877",
    "contentId": "1309877",
    "contentTypeId": "38",
-   "modifiedtime": "20261019172227",
+   "modifiedtime": "20261111084802",
    "n": "태평전통시장",
    "a": "대전광역시 중구 수침로55번길 56",
    "ar": "충청",
@@ -68183,7 +68443,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.djjunggu.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/36/3526636_image2_1.jpg",
@@ -74930,7 +75190,7 @@
    "feedId": "TA-131998",
    "contentId": "131998",
    "contentTypeId": "38",
-   "modifiedtime": "20260527152847",
+   "modifiedtime": "20261111084802",
    "n": "양양전통시장 (4, 9일)",
    "a": "강원특별자치도 양양군 양양읍 남문5길 9",
    "ar": "강원",
@@ -74947,12 +75207,12 @@
    "closed": "점포별로 상이함",
    "parking": "가능요금 (무료)",
    "phone": "033-671-2878",
-   "lat": 38.0750745554395,
-   "lng": 128.623309589206,
+   "lat": 38.0750745554,
+   "lng": 128.6233095892,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 131998)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/04/4068204_image2_1.jpg",
@@ -75157,7 +75417,7 @@
    "feedId": "TA-132013",
    "contentId": "132013",
    "contentTypeId": "38",
-   "modifiedtime": "20261109103451",
+   "modifiedtime": "20261111084802",
    "n": "보은전통시장",
    "a": "충청북도 보은군 보은읍 삼산로 17-16",
    "ar": "충청",
@@ -75180,7 +75440,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://bbsj.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-10",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/05/3342505_image2_1.JPG",
@@ -75332,7 +75592,7 @@
    "feedId": "TA-132019",
    "contentId": "132019",
    "contentTypeId": "38",
-   "modifiedtime": "20261027091208",
+   "modifiedtime": "20261111084802",
    "n": "삼성전통시장",
    "a": "충청북도 음성군 삼성면 대성로 615",
    "ar": "충청",
@@ -75355,7 +75615,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.chungbuk.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-28",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/93/4136393_image2_1.jpg",
@@ -75390,7 +75650,7 @@
    "feedId": "TA-132023",
    "contentId": "132023",
    "contentTypeId": "38",
-   "modifiedtime": "20260312090840",
+   "modifiedtime": "20261111084802",
    "n": "생거진천 전통시장",
    "a": "충청북도 진천군 진천읍 성석리 969",
    "ar": "충청",
@@ -75411,7 +75671,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 132023)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/73/3498073_image2_1.jpg",
@@ -75728,7 +75988,7 @@
    "feedId": "TA-132042",
    "contentId": "132042",
    "contentTypeId": "38",
-   "modifiedtime": "20261008111346",
+   "modifiedtime": "20261111084802",
    "n": "광천전통시장",
    "a": "충청남도 홍성군 광천읍 광천로285번길 8-16",
    "ar": "충청",
@@ -75751,7 +76011,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://hongseong.go.kr/market",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26"
+   "checkedAt": "2026-11-11"
   },
   {
    "feedId": "TA-132043",
@@ -76219,7 +76479,7 @@
    "feedId": "TA-132098",
    "contentId": "132098",
    "contentTypeId": "38",
-   "modifiedtime": "20261027095250",
+   "modifiedtime": "20261111084802",
    "n": "화순고인돌전통시장",
    "a": "전남광주통합특별시 화순군 화순읍 시장길 44",
    "ar": "호남",
@@ -76243,7 +76503,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.hwasun.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-28",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/74/3536174_image2_1.jpg",
@@ -76278,7 +76538,7 @@
    "feedId": "TA-132101",
    "contentId": "132101",
    "contentTypeId": "38",
-   "modifiedtime": "20260317101258",
+   "modifiedtime": "20261111084802",
    "n": "자인전통시장",
    "a": "경상북도 경산시 자인면 자인시장길 5-1",
    "ar": "경북",
@@ -76296,12 +76556,12 @@
    "closed": "점포 별로 상이함",
    "parking": "가능",
    "phone": "경산시청 전통시장팀 053-810-5119",
-   "lat": 35.816717392486474,
-   "lng": 128.82353961722345,
+   "lat": 35.8167173925,
+   "lng": 128.8235396172,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 132101)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/98/3529398_image2_1.jpg",
@@ -78891,7 +79151,7 @@
    "feedId": "TA-132253",
    "contentId": "132253",
    "contentTypeId": "38",
-   "modifiedtime": "20261026090854",
+   "modifiedtime": "20261111084802",
    "n": "평창올림픽시장(구 평창전통시장)",
    "a": "강원특별자치도 평창군 평창읍 평창시장1길 8-1",
    "ar": "강원",
@@ -78914,7 +79174,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.pc.go.kr/Home",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/46/4129146_image2_1.jpg",
@@ -79351,7 +79611,7 @@
    "feedId": "TA-132270",
    "contentId": "132270",
    "contentTypeId": "38",
-   "modifiedtime": "20261014172158",
+   "modifiedtime": "20261111084802",
    "n": "동송전통시장",
    "a": "강원특별자치도 철원군 동송읍 이평로47번길 21",
    "ar": "강원",
@@ -79374,7 +79634,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.cwg.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/74/4123774_image2_1.jpg",
@@ -79466,7 +79726,7 @@
    "feedId": "TA-132274",
    "contentId": "132274",
    "contentTypeId": "38",
-   "modifiedtime": "20260630212627",
+   "modifiedtime": "20261111084802",
    "n": "함평천지전통시장",
    "a": "전남광주통합특별시 함평군 함평읍 시장길 49",
    "ar": "호남",
@@ -79483,12 +79743,12 @@
    "closed": "※ 점포 별로 상이함",
    "parking": "가능",
    "phone": "0507-1425-1733",
-   "lat": 35.0641374928073,
-   "lng": 126.523212837545,
+   "lat": 35.0641374928,
+   "lng": 126.5232128375,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 132274)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/12/3502712_image2_1.jpg",
@@ -79523,7 +79783,7 @@
    "feedId": "TA-132279",
    "contentId": "132279",
    "contentTypeId": "38",
-   "modifiedtime": "20260319161708",
+   "modifiedtime": "20261111084802",
    "n": "의령전통시장",
    "a": "경상남도 의령군 의령읍 의병로 222-1",
    "ar": "경남",
@@ -79541,12 +79801,12 @@
    "parking": "가능",
    "phone": "055-573-2227",
    "homepage": "https://uiryeongmarket.kr",
-   "lat": 35.319633140659,
-   "lng": 128.261129226687,
+   "lat": 35.3196331407,
+   "lng": 128.2611292267,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://uiryeongmarket.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/55/3522055_image2_1.jpg",
@@ -79746,7 +80006,7 @@
    "feedId": "TA-132286",
    "contentId": "132286",
    "contentTypeId": "38",
-   "modifiedtime": "20261027100257",
+   "modifiedtime": "20261111084802",
    "n": "의성전통시장",
    "a": "경상북도 의성군 의성읍 전통시장1길 15-3",
    "ar": "경북",
@@ -79768,7 +80028,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 132286)",
-   "checkedAt": "2026-10-28",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/40/3562040_image2_1.jpg",
@@ -80291,7 +80551,7 @@
    "feedId": "TA-132331",
    "contentId": "132331",
    "contentTypeId": "38",
-   "modifiedtime": "20261028160520",
+   "modifiedtime": "20261111084802",
    "n": "김제전통시장",
    "a": "전북특별자치도 김제시 요촌동 417-2",
    "ar": "호남",
@@ -80313,7 +80573,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 132331)",
-   "checkedAt": "2026-10-29",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/35/3559435_image2_1.jpg",
@@ -81177,7 +81437,7 @@
    "feedId": "TA-132406",
    "contentId": "132406",
    "contentTypeId": "38",
-   "modifiedtime": "20260814153837",
+   "modifiedtime": "20261111084802",
    "n": "감곡전통시장",
    "a": "충청북도 음성군 감곡면 장감로132번길 22",
    "ar": "충청",
@@ -81199,13 +81459,13 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 132406)",
-   "checkedAt": "2026-10-26"
+   "checkedAt": "2026-11-11"
   },
   {
    "feedId": "TA-132410",
    "contentId": "132410",
    "contentTypeId": "38",
-   "modifiedtime": "20260903092842",
+   "modifiedtime": "20261111084802",
    "n": "일로전통시장",
    "a": "전남광주통합특별시 무안군 일로읍 시장길 11-22",
    "ar": "호남",
@@ -81228,7 +81488,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.muan.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/71/4098771_image2_1.jpg",
@@ -82035,7 +82295,7 @@
    "feedId": "TA-132532",
    "contentId": "132532",
    "contentTypeId": "38",
-   "modifiedtime": "20251023143000",
+   "modifiedtime": "20261111084802",
    "n": "대구 서문시장 & 서문시장 야시장",
    "a": "대구광역시 중구 큰장로26길 45",
    "ar": "경북",
@@ -82048,30 +82308,21 @@
    "sub": "시장",
    "why": "1920년대에 천황당지를 매립하여 지금의 장소로 이전한 대구 큰 장이라고 했던 서문시장은 오랜 역사를 가지고 있다.",
    "summary": "1920년대에 천황당지를 매립하여 지금의 장소로 이전한 대구 큰 장이라고 했던 서문시장은 오랜 역사를 가지고 있다. 조선시대 3대 시장이라면 대구, 평양, 강경 등 세 군데 시장을 말했다. 대구 성곽의 서쪽에 있었기 때문에 서문시장이라 명하였고 처음에는 성곽에서 300m 정도의 거리인 지금의 시장북로 본전커피숍 주위 오토바이 골목일대가 시장이었으며 매월 2일과 7일 개장했다고 한다. 홍두깨 전, 닭 전 골목이름이 지금까지 남아 있다. 섬유 관련 품 목이 주종을 이루며 주단, 포목, 메리야스, 공예품, 남녀의류, 그릇, 건해산물등 없는 것이 없을 정도로 규모가 크다. 푸근한 인심이 살아 있으며 냉난방시설, 대형주차장등 이 편리하게 갖추어져 있다.",
-   "hours": "[서문시장] / - 09:00~18:00 / [대구서문 야시장] / - 금요일~토요일 19:00~23:30 / - 일요일 19:00~22:30",
-   "closed": "- 서문시장 매월 첫째주·셋째주 일요일 / - 대구서문 야시장 매주 월요일~목요일",
+   "hours": "[서문시장]- 09:00~18:00[대구서문 야시장]- 금요일~토요일 19:00~23:30- 일요일 19:00~22:30",
+   "closed": "- 서문시장 매월 첫째주·셋째주 일요일 - 대구서문 야시장 매주 월요일~목요일",
    "parking": "가능",
    "phone": "청라언덕관광센터 053-421-3339",
    "homepage": "http://www.nightseomun.com",
-   "lat": 35.8689226144,
-   "lng": 128.5807862176,
+   "lat": 35.8688780818,
+   "lng": 128.5807602619,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.nightseomun.com",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/47/3039247_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/47/3039247_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
      "url": "https://tong.visitkorea.or.kr/cms/resource/51/3039251_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/51/3039251_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/51/3039251_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -82080,7 +82331,16 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/50/3039250_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/50/3039250_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/50/3039250_image2_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/48/3039248_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/48/3039248_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -83056,7 +83316,7 @@
    "feedId": "TA-132636",
    "contentId": "132636",
    "contentTypeId": "38",
-   "modifiedtime": "20260318101005",
+   "modifiedtime": "20261111084802",
    "n": "울산 중앙전통시장",
    "a": "울산광역시 중구 옥교동 98-8",
    "ar": "경남",
@@ -83078,7 +83338,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 132636)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/33/3527233_image2_1.jpg",
@@ -84639,7 +84899,7 @@
    "feedId": "TA-132780",
    "contentId": "132780",
    "contentTypeId": "38",
-   "modifiedtime": "20261027144517",
+   "modifiedtime": "20261111084802",
    "n": "북평민속오일장",
    "a": "강원특별자치도 동해시 오일장길 32 (북평동)",
    "ar": "강원",
@@ -84663,7 +84923,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.dh.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-28",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/32/4127932_image2_1.jpg",
@@ -84755,7 +85015,7 @@
    "feedId": "TA-132783",
    "contentId": "132783",
    "contentTypeId": "38",
-   "modifiedtime": "20261025013002",
+   "modifiedtime": "20261111084802",
    "n": "간성전통시장",
    "a": "강원특별자치도 고성군 간성읍 간성시장2길 9-3",
    "ar": "강원",
@@ -84778,7 +85038,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.gwgs.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/69/3378469_image2_1.JPG",
@@ -84813,7 +85073,7 @@
    "feedId": "TA-132784",
    "contentId": "132784",
    "contentTypeId": "38",
-   "modifiedtime": "20261022164638",
+   "modifiedtime": "20261111084802",
    "n": "거진전통시장",
    "a": "강원특별자치도 고성군 거진읍 거진시장길 15",
    "ar": "강원",
@@ -84836,7 +85096,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.gwgs.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/75/3026775_image2_1.jpg",
@@ -85901,7 +86161,7 @@
    "feedId": "TA-1433722",
    "contentId": "1433722",
    "contentTypeId": "38",
-   "modifiedtime": "20260519165541",
+   "modifiedtime": "20261111084802",
    "n": "세종전통시장(4, 9일)",
    "a": "세종특별자치시 조치원읍 조치원8길 42",
    "ar": "충청",
@@ -85918,12 +86178,12 @@
    "parking": "가능",
    "phone": "044-868-4209",
    "homepage": "https://www.sejong.go.kr/index.jsp",
-   "lat": 36.5997227052195,
-   "lng": 127.300572941722,
+   "lat": 36.5997227052,
+   "lng": 127.3005729417,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.sejong.go.kr/index.jsp",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/23/4065623_image2_1.jpg",
@@ -85958,7 +86218,7 @@
    "feedId": "TA-1433773",
    "contentId": "1433773",
    "contentTypeId": "38",
-   "modifiedtime": "20261019165755",
+   "modifiedtime": "20261111084802",
    "n": "불로전통시장",
    "a": "대구광역시 동구 팔공로26길 9-1 (불로동)",
    "ar": "경북",
@@ -85981,7 +86241,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://bbsj.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/33/3035333_image2_1.jpg",
@@ -86283,7 +86543,7 @@
    "feedId": "TA-147317",
    "contentId": "147317",
    "contentTypeId": "12",
-   "modifiedtime": "20260630184428",
+   "modifiedtime": "20261111084802",
    "n": "신지명사십리해수욕장",
    "a": "전남광주통합특별시 완도군 신지면",
    "ar": "호남",
@@ -86305,7 +86565,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.wando.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource_photo/59/4060859_image2_1.jpg",
@@ -89372,7 +89632,7 @@
    "feedId": "TA-1621077",
    "contentId": "1621077",
    "contentTypeId": "12",
-   "modifiedtime": "20260914135941",
+   "modifiedtime": "20261111084802",
    "n": "세화해수욕장",
    "a": "제주특별자치도 제주시 구좌읍 세화길 (구좌읍)",
    "ar": "제주",
@@ -89397,7 +89657,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.visitjeju.net/kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/79/4107979_image2_1.JPG",
@@ -89483,6 +89743,33 @@
      "rights": "AUTO_NOEDIT"
     }
    ]
+  },
+  {
+   "feedId": "TA-1621384",
+   "contentId": "1621384",
+   "contentTypeId": "12",
+   "modifiedtime": "20261111084802",
+   "n": "도구해수욕장",
+   "a": "경상북도 포항시 남구 동해면 일월로81번길",
+   "ar": "경북",
+   "r": "포항시",
+   "k": [
+    "관광지",
+    "해수욕장"
+   ],
+   "sub": "해변",
+   "why": "도구해수욕장은 포스코와 구룡포해수욕장의 중간 지점인 경상북도 포항시 남구 동해면 도구리에 위치한 해수욕장이다.",
+   "summary": "도구해수욕장은 포스코와 구룡포해수욕장의 중간 지점인 경상북도 포항시 남구 동해면 도구리에 위치한 해수욕장이다. 백사장은 길이 800m, 폭 50m로 1일 25,000명을 수용할 수 있다. 고대 설화인 연오랑과 세오녀의 전설이 서려 있는 곳이다. 연오랑과 세오녀의 전설은 신라 사람인 연오랑과 세오녀가 일본으로 건너가니 신라의 해와 달이 빛을 잃게 되었고, 그 후 세오가 보낸 비단으로 제사를 지내 해와 달이 빛을 되찾았다는 설화이다. 명주조개의 서식지로 조개잡이 체험 행사가 자주 열리며 이 외에도 바나나보트, 제트스키 등 해양 레포츠도 즐길 수 있다. 편의 시설로는 샤워장, 식수대, 세족대, 매점 등이 마련되어 있다.",
+   "hours": "08:00~20:00",
+   "closed": "연중무휴",
+   "parking": "가능",
+   "phone": "054-270-6224",
+   "lat": 35.9917743402,
+   "lng": 129.4443781919,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 1621384)",
+   "checkedAt": "2026-11-11"
   },
   {
    "feedId": "TA-1622150",
@@ -90652,7 +90939,7 @@
    "feedId": "TA-1624161",
    "contentId": "1624161",
    "contentTypeId": "38",
-   "modifiedtime": "20260319094959",
+   "modifiedtime": "20261111084802",
    "n": "남목전통시장",
    "a": "울산광역시 동구 남목17길 9 (동부동)",
    "ar": "경남",
@@ -90669,12 +90956,12 @@
    "closed": "점포 별로 상이함",
    "parking": "불가능",
    "phone": "052-251-0986",
-   "lat": 35.5427238814437,
-   "lng": 129.427386730335,
+   "lat": 35.5427238814,
+   "lng": 129.4273867303,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 1624161)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/32/3522832_image2_1.jpg",
@@ -91684,7 +91971,7 @@
    "feedId": "TA-1627240",
    "contentId": "1627240",
    "contentTypeId": "12",
-   "modifiedtime": "20260205143103",
+   "modifiedtime": "20261111084802",
    "n": "삼탄유원지",
    "a": "충청북도 충주시 산척면 인등로 177",
    "ar": "충청",
@@ -91697,20 +91984,21 @@
    "summary": "충북선의 아름다운 간이역, 삼탄역 근처의 삼탄전 주위에 형성된 유원지다. 삼탄은 관청소여울, 소나무여울, 따개비 여울 등 여울이 셋이라는 뜻으로 산수경치가 수려하고 사계절 소풍객과 전국의 낚시꾼, 산나물 캐러 많이 찾는 곳이다. 화전민들이 가끔 머물렀을 정도로 인적이 드물어 전쟁등 큰 변란이 있을 때마다 피난처로 삼았던 오지였다. 1958년 목행과 봉양 사이의 충북선이 연장 개통되면서 유원지가 되었다. 기암절벽 아래 맑고 깨끗한 물이 흘러서 여름철 피서지로 많이 찾고 있다. 삼탄 유원지는 산수경관이 수려하고 물이 주변의 산과 조화를 이뤄 옛날부터 충주의 명승지로 꼽히고 있으며 2000년 6월 18일 깨끗하고 넓은 체육공원이 준공되어 더욱 많은 사람들이 찾고 있다.",
    "hours": "상시 개방",
    "closed": "연중무휴",
+   "parking": "가능",
    "phone": "충주종합관광안내소 043-842-0531",
    "homepage": "https://www.chungju.go.kr/tour",
-   "lat": 37.0705126407347,
-   "lng": 128.032055896836,
+   "lat": 37.0705126407,
+   "lng": 128.0320558968,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.chungju.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26"
+   "checkedAt": "2026-11-11"
   },
   {
    "feedId": "TA-1627632",
    "contentId": "1627632",
    "contentTypeId": "12",
-   "modifiedtime": "20250527093136",
+   "modifiedtime": "20261111084802",
    "n": "칠보물테마유원지",
    "a": "전북특별자치도 정읍시 칠보면 칠보산로 1555 (칠보면)",
    "ar": "호남",
@@ -91727,13 +92015,13 @@
    "closed": "신정 / 설 / 추석 / 매주 월요일",
    "parking": "가능",
    "phone": "063-538-9388",
-   "homepage": "https://www.jeongeup.go.kr/culture/index.jeongeup?menuCd=DOM_000000604005004000",
-   "lat": 35.6068433883,
-   "lng": 126.9850038796,
+   "homepage": "https://www.jeongeup.go.kr",
+   "lat": 35.6068000846,
+   "lng": 126.9849880008,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://www.jeongeup.go.kr/culture/index.jeongeup?menuCd=DOM_000000604005004000",
+   "sourceUrl": "https://www.jeongeup.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/70/3060470_image2_1.jpg",
@@ -91746,7 +92034,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/67/3060467_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/67/3060467_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/67/3060467_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -91755,7 +92043,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/60/3060460_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/60/3060460_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/60/3060460_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -94284,7 +94572,7 @@
    "feedId": "TA-1762129",
    "contentId": "1762129",
    "contentTypeId": "39",
-   "modifiedtime": "20260610083438",
+   "modifiedtime": "20261111084802",
    "n": "횡재먹거리한우",
    "a": "경상북도 영주시 풍기읍 소백로 2156",
    "ar": "경북",
@@ -94300,7 +94588,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 1762129)",
-   "checkedAt": "2026-10-26"
+   "checkedAt": "2026-11-11"
   },
   {
    "feedId": "TA-1769266",
@@ -96261,7 +96549,7 @@
    "feedId": "TA-1851929",
    "contentId": "1851929",
    "contentTypeId": "39",
-   "modifiedtime": "20260227112030",
+   "modifiedtime": "20261111084802",
    "n": "만나먹거리촌",
    "a": "전북특별자치도 익산시 금마면 무왕로 1790-8",
    "ar": "호남",
@@ -96272,12 +96560,12 @@
    "sub": "음식거리",
    "why": "전북 익산시에 위치한 만나먹거리촌은 국내산 황태를 재료로 한 황태찜과 황태구이를 전문으로 요리하고 있으며, 이 밖에 오리주물럭, 민물새우탕, 참게탕 등 다양한 …",
    "summary": "전북 익산시에 위치한 만나먹거리촌은 국내산 황태를 재료로 한 황태찜과 황태구이를 전문으로 요리하고 있으며, 이 밖에 오리주물럭, 민물새우탕, 참게탕 등 다양한 메뉴를 맛볼 수 있다. 밑반찬으로는 직접 재배한 유기농 야채를 활용한 다양한 반찬이 손님을 맞이할 준비를 하고 있으며, 넓은 단체석도 마련되어 있다. 또한 넓은 주차장이 있어 편리하게 이용할 수 있다.",
-   "lat": 35.983239474418,
-   "lng": 127.045458492688,
+   "lat": 35.9832394744,
+   "lng": 127.0454584927,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 1851929)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/75/1977375_image2_1.jpg",
@@ -97883,7 +98171,7 @@
    "feedId": "TA-1918639",
    "contentId": "1918639",
    "contentTypeId": "12",
-   "modifiedtime": "20260629103606",
+   "modifiedtime": "20261111084802",
    "n": "월정리해변(월정리해수욕장)",
    "a": "제주특별자치도 제주시 구좌읍 해맞이해안로 485",
    "ar": "제주",
@@ -97907,7 +98195,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.visitjeju.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/93/4075293_image2_1.jpg",
@@ -98920,7 +99208,7 @@
    "feedId": "TA-1939570",
    "contentId": "1939570",
    "contentTypeId": "12",
-   "modifiedtime": "20260309102540",
+   "modifiedtime": "20261111084802",
    "n": "임랑해수욕장",
    "a": "부산광역시 기장군 장안읍 임랑리",
    "ar": "경남",
@@ -98938,12 +99226,12 @@
    "parking": "가능요금 (무료)",
    "phone": "051-709-5448",
    "homepage": "https://www.visitbusan.net",
-   "lat": 35.3159730180485,
-   "lng": 129.262056351708,
+   "lat": 35.315973018,
+   "lng": 129.2620563517,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.visitbusan.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/79/3495479_image2_1.jpg",
@@ -99705,7 +99993,7 @@
    "feedId": "TA-1953198",
    "contentId": "1953198",
    "contentTypeId": "38",
-   "modifiedtime": "20260706114028",
+   "modifiedtime": "20261111084802",
    "n": "원주중원전통시장",
    "a": "강원특별자치도 원주시 중앙시장길 20-3 (중앙동)",
    "ar": "강원",
@@ -99727,7 +100015,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 1953198)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/90/4081790_image2_1.jpg",
@@ -104011,7 +104299,7 @@
    "feedId": "TA-2022531",
    "contentId": "2022531",
    "contentTypeId": "12",
-   "modifiedtime": "20261104111959",
+   "modifiedtime": "20261111084802",
    "n": "선유도해수욕장",
    "a": "전북특별자치도 군산시 옥도면",
    "ar": "호남",
@@ -104033,7 +104321,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.gunsan.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/39/3350739_image2_1.jpg",
@@ -104068,7 +104356,7 @@
    "feedId": "TA-2022541",
    "contentId": "2022541",
    "contentTypeId": "12",
-   "modifiedtime": "20261102165048",
+   "modifiedtime": "20261111084802",
    "n": "왜목마을 해수욕장",
    "a": "충청남도 당진시 석문면 왜목길 26",
    "ar": "충청",
@@ -104091,7 +104379,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.dangjin.go.kr/tour.do",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-03",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/69/3047169_image2_1.JPG",
@@ -104184,7 +104472,7 @@
    "feedId": "TA-2022601",
    "contentId": "2022601",
    "contentTypeId": "12",
-   "modifiedtime": "20261104092259",
+   "modifiedtime": "20261111084802",
    "n": "율포해수욕장",
    "a": "전남광주통합특별시 보성군 회천면 우암길 24",
    "ar": "호남",
@@ -104208,7 +104496,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://tour.boseong.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/29/3370529_image2_1.JPG",
@@ -105990,7 +106278,7 @@
    "feedId": "TA-2357444",
    "contentId": "2357444",
    "contentTypeId": "12",
-   "modifiedtime": "20251126135157",
+   "modifiedtime": "20261111084802",
    "n": "구송정 유원지",
    "a": "전북특별자치도 순창군 동계면 서호길 48-12",
    "ar": "호남",
@@ -106006,12 +106294,12 @@
    "closed": "연중무휴",
    "parking": "가능",
    "phone": "063-650-5721",
-   "lat": 35.4315065038,
-   "lng": 127.237974847,
+   "lat": 35.4314662395,
+   "lng": 127.23795864,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2357444)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/81/3573481_image2_1.jpg",
@@ -106023,8 +106311,8 @@
      "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/80/3573480_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/80/3573480_image3_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/82/3573482_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/82/3573482_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -106032,8 +106320,8 @@
      "rights": "AUTO"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/79/3573479_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/79/3573479_image3_1.jpg",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/78/3573478_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/78/3573478_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -111246,7 +111534,7 @@
    "feedId": "TA-2489840",
    "contentId": "2489840",
    "contentTypeId": "38",
-   "modifiedtime": "20261020091306",
+   "modifiedtime": "20261111084802",
    "n": "서산동부전통시장",
    "a": "충청남도 서산시 시장3길 7-2",
    "ar": "충청",
@@ -111269,7 +111557,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://cafe.naver.com/ssmarket",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/24/3560024_image2_1.jpg",
@@ -113298,7 +113586,7 @@
    "feedId": "TA-250510",
    "contentId": "250510",
    "contentTypeId": "38",
-   "modifiedtime": "20260225143533",
+   "modifiedtime": "20261111084802",
    "n": "매포전통시장",
    "a": "충청북도 단양군 매포읍 평동18길 5",
    "ar": "충청",
@@ -113315,12 +113603,12 @@
    "closed": "※ 점포 별로 상이함",
    "parking": "가능",
    "phone": "단양군청 경제과 043-420-2403",
-   "lat": 37.034328625241,
-   "lng": 128.299287324763,
+   "lat": 37.0343286252,
+   "lng": 128.2992873248,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 250510)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/00/1959800_image2_1.jpg",
@@ -118082,7 +118370,7 @@
    "feedId": "TA-2563697",
    "contentId": "2563697",
    "contentTypeId": "12",
-   "modifiedtime": "20260811150026",
+   "modifiedtime": "20261111084802",
    "n": "지산유원지",
    "a": "전남광주통합특별시 동구 지호로164번길 23 (지산동)",
    "ar": "호남",
@@ -118104,7 +118392,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://jisanpark.co.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/78/4097378_image2_1.jpg",
@@ -125066,7 +125354,7 @@
    "feedId": "TA-2614909",
    "contentId": "2614909",
    "contentTypeId": "12",
-   "modifiedtime": "20261103114440",
+   "modifiedtime": "20261111084802",
    "n": "서문풍물야시장&서문시장삼겹살거리",
    "a": "충청북도 청주시 상당구 무심동로392번길 18 (서문동)",
    "ar": "충청",
@@ -125088,7 +125376,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.cheongju.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-05",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/41/3461441_image2_1.jpg",
@@ -135279,7 +135567,7 @@
    "feedId": "TA-2702823",
    "contentId": "2702823",
    "contentTypeId": "12",
-   "modifiedtime": "20261023105219",
+   "modifiedtime": "20261111084802",
    "n": "정암해수욕장",
    "a": "강원특별자치도 양양군 강현면 정암리",
    "ar": "강원",
@@ -135302,7 +135590,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.yangyang.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/76/4128976_image2_1.jpg",
@@ -135850,7 +136138,7 @@
    "feedId": "TA-2704932",
    "contentId": "2704932",
    "contentTypeId": "12",
-   "modifiedtime": "20260313150909",
+   "modifiedtime": "20261111084802",
    "n": "인구해수욕장",
    "a": "강원특별자치도 양양군 현남면 인구항길 12",
    "ar": "강원",
@@ -135868,12 +136156,12 @@
    "closed": "연중무휴",
    "parking": "가능",
    "phone": "033-670-2518",
-   "lat": 37.9702564431218,
-   "lng": 128.761916491838,
+   "lat": 37.9702564431,
+   "lng": 128.7619164918,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2704932)",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/42/3518042_image2_1.jpg",
@@ -136780,7 +137068,7 @@
    "feedId": "TA-2708326",
    "contentId": "2708326",
    "contentTypeId": "38",
-   "modifiedtime": "20260512091430",
+   "modifiedtime": "20261111084802",
    "n": "울산큰애기청년야시장",
    "a": "울산광역시 중구 젊음의거리 90 (옥교동)",
    "ar": "경남",
@@ -136797,12 +137085,12 @@
    "closed": "매주 월요일, 화요일",
    "parking": "가능",
    "phone": "중앙전통시장 상인회 052-246-6660중구청 전통시장과 052-290-8364",
-   "lat": 35.55402103518451,
-   "lng": 129.32205765485907,
+   "lat": 35.5540210352,
+   "lng": 129.3220576549,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2708326)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/07/2492807_image2_1.jpg",
@@ -137232,7 +137520,7 @@
    "feedId": "TA-2710586",
    "contentId": "2710586",
    "contentTypeId": "12",
-   "modifiedtime": "20261007113213",
+   "modifiedtime": "20261111084802",
    "n": "공지천유원지",
    "a": "강원특별자치도 춘천시 이디오피아길 25",
    "ar": "강원",
@@ -137254,7 +137542,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2710586)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/46/4006746_image2_1.jpg",
@@ -137458,7 +137746,7 @@
    "feedId": "TA-2710820",
    "contentId": "2710820",
    "contentTypeId": "12",
-   "modifiedtime": "20261026013002",
+   "modifiedtime": "20261111084802",
    "n": "설악해수욕장",
    "a": "강원특별자치도 양양군 강현면 용호리 4-5",
    "ar": "강원",
@@ -137480,7 +137768,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://tour.yangyang.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/53/4128953_image2_1.jpg",
@@ -137515,7 +137803,7 @@
    "feedId": "TA-2710821",
    "contentId": "2710821",
    "contentTypeId": "12",
-   "modifiedtime": "20261014110805",
+   "modifiedtime": "20261111084802",
    "n": "중광정해수욕장",
    "a": "강원특별자치도 양양군 현북면 하조대해안길 119",
    "ar": "강원",
@@ -137538,7 +137826,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.yangyang.go.kr/r",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/58/3389558_image2_1.JPG",
@@ -137573,7 +137861,7 @@
    "feedId": "TA-2710823",
    "contentId": "2710823",
    "contentTypeId": "12",
-   "modifiedtime": "20260313150007",
+   "modifiedtime": "20261111084802",
    "n": "기사문해수욕장",
    "a": "강원특별자치도 양양군 현북면 기사문리",
    "ar": "강원",
@@ -137590,12 +137878,12 @@
    "closed": "연중무휴",
    "parking": "가능",
    "phone": "양양군 관광문화과 033-670-2518",
-   "lat": 38.006204670418846,
-   "lng": 128.73097919912695,
+   "lat": 38.0062046704,
+   "lng": 128.7309791991,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2710823)",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/81/3518281_image2_1.jpg",
@@ -137630,7 +137918,7 @@
    "feedId": "TA-2710829",
    "contentId": "2710829",
    "contentTypeId": "12",
-   "modifiedtime": "20260323095249",
+   "modifiedtime": "20261111084802",
    "n": "잔교리해수욕장",
    "a": "강원특별자치도 양양군 현북면 잔교리",
    "ar": "강원",
@@ -137647,12 +137935,12 @@
    "parking": "가능",
    "phone": "양양군 관광문화과 033-670-2518",
    "homepage": "https://tour.yangyang.go.kr",
-   "lat": 37.99334091684809,
-   "lng": 128.74256062555804,
+   "lat": 37.9933409168,
+   "lng": 128.7425606256,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.yangyang.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/66/3518266_image2_1.jpg",
@@ -137687,7 +137975,7 @@
    "feedId": "TA-2710838",
    "contentId": "2710838",
    "contentTypeId": "12",
-   "modifiedtime": "20261014104938",
+   "modifiedtime": "20261111084802",
    "n": "동산해수욕장",
    "a": "강원특별자치도 양양군 현남면 동산큰길 84-54",
    "ar": "강원",
@@ -137709,7 +137997,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.yangyang.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/70/3351770_image2_1.JPG",
@@ -137744,7 +138032,7 @@
    "feedId": "TA-2710849",
    "contentId": "2710849",
    "contentTypeId": "12",
-   "modifiedtime": "20261007112729",
+   "modifiedtime": "20261111084802",
    "n": "동산포해수욕장",
    "a": "강원특별자치도 양양군 현남면 동산큰길 39",
    "ar": "강원",
@@ -137766,7 +138054,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2710849)",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/74/3518274_image2_1.jpg",
@@ -140981,7 +141269,7 @@
    "feedId": "TA-2723589",
    "contentId": "2723589",
    "contentTypeId": "12",
-   "modifiedtime": "20261102151845",
+   "modifiedtime": "20261111084802",
    "n": "광암해수욕장",
    "a": "경상남도 창원시 마산합포구 진동면 요장리",
    "ar": "경남",
@@ -141003,7 +141291,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.changwon.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-03",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/78/3565278_image2_1.jpg",
@@ -141038,7 +141326,7 @@
    "feedId": "TA-2723610",
    "contentId": "2723610",
    "contentTypeId": "12",
-   "modifiedtime": "20261102150938",
+   "modifiedtime": "20261111084802",
    "n": "사곡해수욕장",
    "a": "경상남도 거제시 사등면 사곡리 757-1",
    "ar": "경남",
@@ -141060,7 +141348,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.geoje.go.kr/index.geoje",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-03",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/41/3372141_image2_1.JPG",
@@ -141584,7 +141872,7 @@
    "feedId": "TA-2723802",
    "contentId": "2723802",
    "contentTypeId": "12",
-   "modifiedtime": "20261102144154",
+   "modifiedtime": "20261111084802",
    "n": "짱뚱어해수욕장",
    "a": "전남광주통합특별시 신안군 증도면 문준경길 459-2",
    "ar": "호남",
@@ -141609,7 +141897,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://jnbeach.jeonnam.go.kr/jnbeach",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-03",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/57/3558857_image2_1.jpg",
@@ -141971,7 +142259,7 @@
    "feedId": "TA-2724982",
    "contentId": "2724982",
    "contentTypeId": "12",
-   "modifiedtime": "20261007110234",
+   "modifiedtime": "20261111084802",
    "n": "화진포해수욕장",
    "a": "강원특별자치도 고성군 현내면 초도리 99",
    "ar": "강원",
@@ -141994,7 +142282,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://hwajinpobeach.co.kr고성군",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource_photo/65/3590065_image2_1.jpg",
@@ -164265,7 +164553,7 @@
    "feedId": "TA-2746186",
    "contentId": "2746186",
    "contentTypeId": "38",
-   "modifiedtime": "20261016170518",
+   "modifiedtime": "20261111084802",
    "n": "문창전통시장",
    "a": "대전광역시 중구 보문로20번길 22 (문창동)",
    "ar": "충청",
@@ -164287,7 +164575,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2746186)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/86/3564686_image2_1.jpg",
@@ -164322,7 +164610,7 @@
    "feedId": "TA-2746192",
    "contentId": "2746192",
    "contentTypeId": "38",
-   "modifiedtime": "20261016171236",
+   "modifiedtime": "20261111084802",
    "n": "송강전통시장",
    "a": "대전광역시 유성구 봉산로 17 (송강동)",
    "ar": "충청",
@@ -164344,7 +164632,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2746192)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/28/3565028_image2_1.jpg",
@@ -166687,7 +166975,7 @@
    "feedId": "TA-2748736",
    "contentId": "2748736",
    "contentTypeId": "38",
-   "modifiedtime": "20261016165753",
+   "modifiedtime": "20261111084802",
    "n": "무안전통시장",
    "a": "전남광주통합특별시 무안군 무안읍 성내리 21-13",
    "ar": "호남",
@@ -166710,7 +166998,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2748736)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/46/3582446_image2_1.jpg",
@@ -174361,7 +174649,7 @@
    "feedId": "TA-2755359",
    "contentId": "2755359",
    "contentTypeId": "38",
-   "modifiedtime": "20261105130859",
+   "modifiedtime": "20261111084802",
    "n": "남해전통시장",
    "a": "경상남도 남해군 남해읍 화전로 110",
    "ar": "경남",
@@ -174385,7 +174673,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.namhae.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-11-06",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/22/4142922_image2_1.jpg",
@@ -205457,7 +205745,7 @@
    "feedId": "TA-2784049",
    "contentId": "2784049",
    "contentTypeId": "38",
-   "modifiedtime": "20260318101005",
+   "modifiedtime": "20261111084802",
    "n": "명서전통시장",
    "a": "경남 창원시 의창구 명서동 505-22",
    "ar": "경남",
@@ -205474,12 +205762,12 @@
    "closed": "※ 점포 별로 상이함",
    "parking": "가능",
    "phone": "055-265-3536",
-   "lat": 35.2494443631004,
-   "lng": 128.645974100416,
+   "lat": 35.2494443631,
+   "lng": 128.6459741004,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2784049)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/66/4002466_image2_1.jpg",
@@ -206027,7 +206315,7 @@
    "feedId": "TA-2784221",
    "contentId": "2784221",
    "contentTypeId": "38",
-   "modifiedtime": "20260318101005",
+   "modifiedtime": "20261111084802",
    "n": "장유전통시장",
    "a": "경상남도 김해시 장유로 287-22 (무계동)",
    "ar": "경남",
@@ -206046,12 +206334,12 @@
    "parking": "가능",
    "phone": "055-312-3830",
    "homepage": "http://blog.naver.com/jangyumarket",
-   "lat": 35.2005685222946,
-   "lng": 128.814808307889,
+   "lat": 35.2005685223,
+   "lng": 128.8148083079,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://blog.naver.com/jangyumarket",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/74/3521874_image2_1.jpg",
@@ -206086,7 +206374,7 @@
    "feedId": "TA-2784223",
    "contentId": "2784223",
    "contentTypeId": "38",
-   "modifiedtime": "20260914153433",
+   "modifiedtime": "20261111084802",
    "n": "외동전통시장",
    "a": "경상남도 김해시 내외로 80 (외동)",
    "ar": "경남",
@@ -206109,7 +206397,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.instagram.com/oedongmarket",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/28/3542128_image2_1.jpg",
@@ -209633,7 +209921,7 @@
    "feedId": "TA-2791430",
    "contentId": "2791430",
    "contentTypeId": "38",
-   "modifiedtime": "20260729093320",
+   "modifiedtime": "20261111084802",
    "n": "불란지야시장",
    "a": "제주특별자치도 서귀포시 중문상로17번길 4 (중문동)",
    "ar": "제주",
@@ -209655,7 +209943,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2791430)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/88/2800688_image2_1.jpg",
@@ -211891,7 +212179,7 @@
    "feedId": "TA-2795203",
    "contentId": "2795203",
    "contentTypeId": "38",
-   "modifiedtime": "20250901102043",
+   "modifiedtime": "20261111084802",
    "n": "덕산마을오일장",
    "a": "경상남도 산청군 시천면 남명로 188-5",
    "ar": "경남",
@@ -211909,12 +212197,12 @@
    "closed": "점포 별로 상이함",
    "parking": "가능",
    "phone": "사천면사무소 055-970-7271",
-   "lat": 35.2770732962,
-   "lng": 127.8377648318,
+   "lat": 35.2770320187,
+   "lng": 127.8377436968,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2795203)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/33/2795933_image2_1.jpg",
@@ -211936,7 +212224,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/41/2795941_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/41/2795941_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/41/2795941_image2_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -215912,7 +216200,7 @@
    "feedId": "TA-2858406",
    "contentId": "2858406",
    "contentTypeId": "39",
-   "modifiedtime": "20250613161533",
+   "modifiedtime": "20261111084802",
    "n": "중문회포장센터 새벽야시장",
    "a": "제주특별자치도 서귀포시 중문관광로 293 (대포동)",
    "ar": "제주",
@@ -215923,13 +216211,13 @@
    ],
    "sub": "시장",
    "why": "중문회포장센터 새벽야시장은 중문관광단지 ICC 제주국제컨벤션센터 근처에 있다.",
-   "summary": "중문회포장센터 새벽야시장은 중문관광단지 ICC 제주국제컨벤션센터 근처에 있다. 고등어회, 딱새우회, 갈치회 등 각종 모듬회를 포장해 갈 수 있는 곳으로 가성비 회 맛집이다. 고등어회와 딱새우회가 대표메뉴이며 이외에도 갈치회, 모듬회 등이 있다. 세트메뉴도 준비되어 있어 다양한 회와 사이드메뉴를 함께 즐길 수 있다. 밤 11시까지 운영하고 있어서 야식 포장하기도 좋고, 매장에서 늦은 시간까지 먹을 수도 있다. 인터넷 예약과 배달도 하고 있어서, 중문관광단지 내에서 숙박하는 여행자라면 배달해서 먹을 수 있다. 주차 공간도 여유로운 편이다. 주변에 함께 둘러보기 좋은 여행지로 대포주상절리, 베릿내오름, 천지연폭포, 중문색달해수욕장 등이 있다.",
-   "lat": 33.2466568335,
-   "lng": 126.4292786894,
+   "summary": "중문회포장센터 새벽야시장은 중문관광단지 ICC 제주국제컨벤션센터 근처에 있다. 고등어회, 딱새우회, 갈치회 등 각종 모듬회를 포장해 갈 수 있는 곳으로 가성비 회 맛집이다. 고등어회와 딱새우회가 대표 메뉴이며 이외에도 갈치회, 모듬회 등이 있다. 세트 메뉴도 준비되어 있어 다양한 회와 사이드 메뉴를 함께 즐길 수 있다. 밤 11시까지 운영하고 있어서 야식 포장하기도 좋고, 매장에서 늦은 시간까지 먹을 수도 있다. 인터넷 예약과 배달도 하고 있어서, 중문관광단지 내에서 숙박하는 여행자라면 배달해서 먹을 수 있다. 주차 공간도 여유로운 편이다. 주변에 함께 둘러보기 좋은 여행지로 대포주상절리, 베릿내오름, 천지연폭포, 중문색달해수욕장 등이 있다.",
+   "lat": 33.2466275403,
+   "lng": 126.4292677762,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2858406)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/02/2858402_image2_1.JPG",
@@ -215941,8 +216229,8 @@
      "rights": "AUTO_NOEDIT"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/01/2858401_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/01/2858401_image3_1.JPG",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/03/2858403_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/03/2858403_image2_1.JPG",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -215950,8 +216238,8 @@
      "rights": "AUTO_NOEDIT"
     },
     {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/99/2858399_image2_1.JPG",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/99/2858399_image3_1.JPG",
+     "url": "https://tong.visitkorea.or.kr/cms/resource/01/2858401_image2_1.JPG",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/01/2858401_image2_1.JPG",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
@@ -223084,7 +223372,7 @@
    "feedId": "TA-2912191",
    "contentId": "2912191",
    "contentTypeId": "38",
-   "modifiedtime": "20260928171923",
+   "modifiedtime": "20261111084802",
    "n": "점촌전통시장",
    "a": "경상북도 문경시 신흥시장길 19 신흥상가",
    "ar": "경북",
@@ -223107,7 +223395,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 2912191)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/77/2912177_image2_1.jpg",
@@ -223142,7 +223430,7 @@
    "feedId": "TA-2912236",
    "contentId": "2912236",
    "contentTypeId": "38",
-   "modifiedtime": "20260929094839",
+   "modifiedtime": "20261111084802",
    "n": "성주 전통시장",
    "a": "경상북도 성주군 시장길 37",
    "ar": "경북",
@@ -223165,7 +223453,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.sj.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/26/2912226_image2_1.jpg",
@@ -227085,7 +227373,7 @@
    "feedId": "TA-2926970",
    "contentId": "2926970",
    "contentTypeId": "38",
-   "modifiedtime": "20261021145526",
+   "modifiedtime": "20261111084802",
    "n": "유구전통시장",
    "a": "충청남도 공주시 유구읍 시장길 30",
    "ar": "충청",
@@ -227109,7 +227397,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.gongju.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/94/4125194_image2_1.jpg",
@@ -227362,7 +227650,7 @@
    "feedId": "TA-2929920",
    "contentId": "2929920",
    "contentTypeId": "38",
-   "modifiedtime": "20261015133204",
+   "modifiedtime": "20261111084802",
    "n": "북신전통시장",
    "a": "경상남도 통영시 북신동 668",
    "ar": "경남",
@@ -227385,7 +227673,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://북신시장.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/32/4121832_image2_1.jpg",
@@ -259918,7 +260206,7 @@
    "feedId": "TA-3379890",
    "contentId": "3379890",
    "contentTypeId": "38",
-   "modifiedtime": "20260402173829",
+   "modifiedtime": "20261111084803",
    "n": "수암한우야시장",
    "a": "울산광역시 남구 수암로128번길 12 (야음동)",
    "ar": "경남",
@@ -259936,12 +260224,12 @@
    "parking": "가능",
    "phone": "052-275-4041",
    "homepage": "https://blog.naver.com/suamsangga",
-   "lat": 35.52697639200432,
-   "lng": 129.32076454559632,
+   "lat": 35.526976392,
+   "lng": 129.3207645456,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://blog.naver.com/suamsangga",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/79/3581979_image2_1.jpg",
@@ -262649,6 +262937,63 @@
    ]
   },
   {
+   "feedId": "TA-3459331",
+   "contentId": "3459331",
+   "contentTypeId": "12",
+   "modifiedtime": "20261111084803",
+   "n": "만리포해수욕장전망대",
+   "a": "충청남도 태안군 소원면 가락골길 14-10",
+   "ar": "충청",
+   "r": "태안군",
+   "k": [
+    "관광지",
+    "해변",
+    "해수욕장",
+    "전망대"
+   ],
+   "sub": "해변",
+   "why": "만리포해수욕장 전망대는 충청남도 태안군 소원면에 위치한 해안 전망대이다.",
+   "summary": "만리포해수욕장 전망대는 충청남도 태안군 소원면에 위치한 해안 전망대이다. 만리포의 아름다운 해변과 서해의 탁 트인 풍경을 감상할 수 있는 명소이다.",
+   "hours": "화~일 09:00~22:00",
+   "closed": "매주 월요일 휴무",
+   "phone": "0416702775",
+   "lat": 36.7833215638,
+   "lng": 126.1408204729,
+   "coordState": "SOURCE_PROVIDED",
+   "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
+   "sourceLabel": "한국관광공사 TourAPI (contentId 3459331)",
+   "checkedAt": "2026-11-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/28/3459328_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/28/3459328_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/18/3459318_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/18/3459318_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    },
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/17/3459317_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/17/3459317_image2_1.jpg",
+     "licenseCode": "Type1",
+     "license": "공공누리 1유형(출처표시)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO"
+    }
+   ]
+  },
+  {
    "feedId": "TA-3463600",
    "contentId": "3463600",
    "contentTypeId": "12",
@@ -265068,7 +265413,7 @@
    "feedId": "TA-3537204",
    "contentId": "3537204",
    "contentTypeId": "12",
-   "modifiedtime": "20250915162858",
+   "modifiedtime": "20261111084803",
    "n": "복분자유원지",
    "a": "전북특별자치도 고창군 부안면 복분자로 531",
    "ar": "호남",
@@ -265085,12 +265430,12 @@
    "closed": "매주 화요일 / 명절",
    "parking": "경차 주차장: 20대 / 일반 주차장: 100대 / 장애인 주차장: 4대 / 전기차 주차장: 4대",
    "phone": "0507-1324-9123",
-   "lat": 35.5097208688,
-   "lng": 126.6456892974,
+   "lat": 35.5096787702,
+   "lng": 126.6456763668,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 3537204)",
-   "checkedAt": "2026-10-26"
+   "checkedAt": "2026-11-11"
   },
   {
    "feedId": "TA-3543668",
@@ -279073,7 +279418,7 @@
    "feedId": "TA-583071",
    "contentId": "583071",
    "contentTypeId": "12",
-   "modifiedtime": "20260313170449",
+   "modifiedtime": "20261111084803",
    "n": "구조라해수욕장",
    "a": "경상남도 거제시 일운면 구조라리 500-1",
    "ar": "경남",
@@ -279097,7 +279442,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://tour.geoje.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/10/3519210_image2_1.jpg",
@@ -279132,7 +279477,7 @@
    "feedId": "TA-584712",
    "contentId": "584712",
    "contentTypeId": "38",
-   "modifiedtime": "20251230101601",
+   "modifiedtime": "20261111084803",
    "n": "통영중앙전통시장",
    "a": "경상남도 통영시 중앙시장1길 14-16",
    "ar": "경남",
@@ -279150,13 +279495,13 @@
    "closed": "점포 별로 상이함",
    "parking": "가능",
    "phone": "055-649-5225",
-   "homepage": "https://www.tongyeong.go.kr/00973/01168/01172.web",
-   "lat": 34.8453294044,
-   "lng": 128.4246359087,
+   "homepage": "https://www.tongyeong.go.kr",
+   "lat": 34.8452907209,
+   "lng": 128.4246112443,
    "coordState": "SOURCE_PROVIDED",
-   "sourceUrl": "https://www.tongyeong.go.kr/00973/01168/01172.web",
+   "sourceUrl": "https://www.tongyeong.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/67/3523867_image2_1.jpg",
@@ -279169,7 +279514,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/69/3523869_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/69/3523869_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/69/3523869_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -279178,7 +279523,7 @@
     },
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/68/3523868_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/68/3523868_image3_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/68/3523868_image2_1.jpg",
      "licenseCode": "Type1",
      "license": "공공누리 1유형(출처표시)",
      "source": "한국관광공사",
@@ -279191,7 +279536,7 @@
    "feedId": "TA-584736",
    "contentId": "584736",
    "contentTypeId": "38",
-   "modifiedtime": "20260318101005",
+   "modifiedtime": "20261111084803",
    "n": "서호전통시장",
    "a": "경상남도 통영시 새터길 42-7",
    "ar": "경남",
@@ -279209,18 +279554,18 @@
    "parking": "불가능",
    "phone": "055-645-3024",
    "homepage": "https://www.tongyeong.go.kr",
-   "lat": 34.8412549904618,
-   "lng": 128.419414614205,
+   "lat": 34.8412549905,
+   "lng": 128.4194146142,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.tongyeong.go.kr",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26"
+   "checkedAt": "2026-11-11"
   },
   {
    "feedId": "TA-585526",
    "contentId": "585526",
    "contentTypeId": "12",
-   "modifiedtime": "20261021111129",
+   "modifiedtime": "20261111084803",
    "n": "사천진해변(사천뒷불해수욕장)",
    "a": "강원특별자치도 강릉시 사천면 진리해변길 111",
    "ar": "강원",
@@ -279243,7 +279588,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://visitgangneung.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource_photo/65/4118565_image2_1.jpg",
@@ -279619,7 +279964,7 @@
    "feedId": "TA-591866",
    "contentId": "591866",
    "contentTypeId": "12",
-   "modifiedtime": "20261007101720",
+   "modifiedtime": "20261111084803",
    "n": "금능해수욕장",
    "a": "제주특별자치도 제주시 한림읍 금능길 119-10",
    "ar": "제주",
@@ -279642,7 +279987,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "http://www.visitjeju.net",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource_photo/15/3515415_image2_1.jpg",
@@ -282572,7 +282917,7 @@
    "feedId": "TA-699569",
    "contentId": "699569",
    "contentTypeId": "39",
-   "modifiedtime": "20260304100426",
+   "modifiedtime": "20261111084803",
    "n": "먹거리순대",
    "a": "충청남도 천안시 동남구 병천면 아우내순대길 27",
    "ar": "충청",
@@ -282583,12 +282928,12 @@
    "sub": "음식거리",
    "why": "‘먹거리 순대’는 아우네 장터에 위치한 병천 순대 전문점이다.",
    "summary": "‘먹거리 순대’는 아우네 장터에 위치한 병천 순대 전문점이다. 이곳은 천안시가 지정한 향토 음식점 중에 하나이다. 선지와 찹쌀, 당면, 양배추 등 16가지 메뉴로 속을 채워 맹물에 삶은 후 하루동안 냉장 숙성을 시켜 만든 순대와 돼지뼈에 오가피와 생강, 소주를 넣어 육수를 낸 순대국밥이 인기메뉴이다. 식당 내부에는 입식 좌석으로 이루어져 있으며 좌석수가 많아 단체로도 이용이 가능하다.",
-   "lat": 36.7604143848532,
-   "lng": 127.297835420027,
+   "lat": 36.7604143849,
+   "lng": 127.29783542,
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.data.go.kr/data/15101578/openapi.do",
    "sourceLabel": "한국관광공사 TourAPI (contentId 699569)",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/93/700493_image2_1.jpg",
@@ -289475,7 +289820,7 @@
    "feedId": "TA-989046",
    "contentId": "989046",
    "contentTypeId": "12",
-   "modifiedtime": "20260630184428",
+   "modifiedtime": "20261111084803",
    "n": "오시아노 관광단지",
    "a": "전남광주통합특별시 해남군 화원면 시아로 552",
    "ar": "호남",
@@ -289496,7 +289841,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.haenam.go.kr/tour",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-27",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/22/3572322_image2_1.jpg",
@@ -290093,7 +290438,7 @@
    "feedId": "TA-998885",
    "contentId": "998885",
    "contentTypeId": "38",
-   "modifiedtime": "20261020162628",
+   "modifiedtime": "20261111084803",
    "n": "대구 칠성시장&별별상상 칠성야시장",
    "a": "대구광역시 북구 칠성시장로 28",
    "ar": "경북",
@@ -290116,7 +290461,7 @@
    "coordState": "SOURCE_PROVIDED",
    "sourceUrl": "https://www.buk.daegu.kr칠성야시장",
    "sourceLabel": "한국관광공사 TourAPI · 공식 홈페이지",
-   "checkedAt": "2026-10-26",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/10/3586510_image2_1.JPG",
@@ -292041,60 +292386,6 @@
    ]
   },
   {
-   "feedId": "TA-E-506470",
-   "contentId": "506470",
-   "contentTypeId": "15",
-   "modifiedtime": "20261102170820",
-   "name": "김해분청도자기축제",
-   "start_date": "2026-11-06",
-   "end_date": "2026-11-10",
-   "place_name": "롯데가든파크",
-   "address": "경상남도 김해시 장유로 551 (신문동) 롯데가든파크",
-   "region": "경남",
-   "city": "김해시",
-   "hours": "10:00~20:00 (월, 화 10:00~18:00)",
-   "fee": "유료 (도자기 전품목 20% 할인, 요식업 사업자 : 추가 10% 할인)",
-   "organizer": "(사)김해도예협회, (재)김해문화관광재단",
-   "phone": "055-330-3244",
-   "why": "김해분청도자기축제는 조선 초기 분청사기의 대표적인 산지인 김해에서 열리는 도자문화축제로, 전통 도자문화의 가치를 계승하고 현대적으로 재해석하여 선보이는 김해의 …",
-   "summary": "김해분청도자기축제는 조선 초기 분청사기의 대표적인 산지인 김해에서 열리는 도자문화축제로, 전통 도자문화의 가치를 계승하고 현대적으로 재해석하여 선보이는 김해의 대표 축제이다. 올해로 31회를 맞이하는 김해분청도자기축제는 김해 분청도자기의 독창적인 아름다움과 예술성을 가까이에서 만나볼 수 있도록 작품 전시와 판매, 도자기 제작 체험, 도예 시연 등 다양한 프로그램으로 구성된 축제이다. 특히 지역 도예인들의 개성 있는 작품을 한자리에서 감상할 수 있으며, 관람객이 직접 흙을 만지고 도자기를 만들어보는 체험 프로그램을 통해 분청도자기의 매력을 보다 쉽고 재미있게 경험할 수 있다. 또한 어린이와 가족 단위 관람객을 위한 체험,공연,이벤트 등 남녀노소 누구나 함께 즐길 수 있는 프로그램을 마련하여 전통 도자문화가 일…",
-   "sub": "축제",
-   "source_url": "http://festival.buncheong.co.kr/main.web",
-   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
-   "lat": 35.183247103,
-   "lng": 128.8287850953,
-   "checkedAt": "2026-11-03",
-   "photos": [
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/49/3546549_image2_1.jpg",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/49/3546549_image3_1.jpg",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/93/4120393_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/93/4120393_image2_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    },
-    {
-     "url": "https://tong.visitkorea.or.kr/cms/resource/30/4126030_image2_1.png",
-     "thumb": "https://tong.visitkorea.or.kr/cms/resource/30/4126030_image2_1.png",
-     "licenseCode": "Type3",
-     "license": "공공누리 3유형(출처표시·변경금지)",
-     "source": "한국관광공사",
-     "usable": true,
-     "rights": "AUTO_NOEDIT"
-    }
-   ]
-  },
-  {
    "feedId": "TA-E-4144229",
    "contentId": "4144229",
    "contentTypeId": "15",
@@ -292653,7 +292944,7 @@
    "feedId": "TA-E-2646950",
    "contentId": "2646950",
    "contentTypeId": "15",
-   "modifiedtime": "20261109171214",
+   "modifiedtime": "20261111084802",
    "name": "진안고원 김치보쌈축제",
    "start_date": "2026-11-14",
    "end_date": "2026-11-15",
@@ -292672,7 +292963,7 @@
    "source_label": "한국관광공사 TourAPI (contentId 2646950)",
    "lat": 35.7953163124,
    "lng": 127.4339300277,
-   "checkedAt": "2026-11-10",
+   "checkedAt": "2026-11-11",
    "photos": [
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/78/4149678_image2_1.jpeg",
@@ -293112,6 +293403,42 @@
    ]
   },
   {
+   "feedId": "TA-E-4151221",
+   "contentId": "4151221",
+   "contentTypeId": "15",
+   "modifiedtime": "20261111084803",
+   "name": "2026 제1회 강원 도시재생 집수리의 날",
+   "start_date": "2026-11-20",
+   "end_date": "2026-11-21",
+   "place_name": "학성갤러리 / 원주시도시재생지원센터",
+   "address": "강원특별자치도 원주시 남산로218번길 7 (학성동)",
+   "region": "강원",
+   "city": "원주시",
+   "hours": "10:00~17:00",
+   "fee": "무료",
+   "organizer": "강원특별자치도",
+   "phone": "033-250-2987",
+   "why": "「2026 제1회 강원 도시재생 집수리의 날」은 도시재생사업 안에서 추진되는 집수리 지원사업과 지역 집수리 인력의 활동을 소개하고, 생활 속 집수리 방법과 주거…",
+   "summary": "「2026 제1회 강원 도시재생 집수리의 날」은 도시재생사업 안에서 추진되는 집수리 지원사업과 지역 집수리 인력의 활동을 소개하고, 생활 속 집수리 방법과 주거관리 정보를 나누는 참여형 행사이다. 2026년 11월 20일부터 21일까지 원주시 학성갤러리에서 개최하는 행사이다. 강원특별자치도 내 도시재생사업에서는 노후주택을 보수하여 주거환경을 개선하는 집수리 지원사업과 함께, 지역 여건에 따라 주민이 개선된 환경을 스스로 유지·관리할 수 있도록 집수리 기술교육과 자격 취득 과정을 운영하고 있다. 이번 행사는 이러한 교육을 통해 배운 기술로 이웃의 주거환경을 개선하고 지역에서 나눔을 실천하는 인력을 ‘강원 도시재생 집수리 술사’로 소개하는 자리이다. 주요 프로그램은 집수리 술사와 전문 교육업체가 진행하는 생활 …",
+   "sub": "행사",
+   "source_url": "https://gwurc.or.kr/",
+   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
+   "lat": 37.3548373317,
+   "lng": 127.9437145394,
+   "checkedAt": "2026-11-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/22/4151222_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/22/4151222_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
    "feedId": "TA-E-3368470",
    "contentId": "3368470",
    "contentTypeId": "15",
@@ -293275,6 +293602,81 @@
     {
      "url": "https://tong.visitkorea.or.kr/cms/resource/46/4138946_image2_1.png",
      "thumb": "https://tong.visitkorea.or.kr/cms/resource/46/4138946_image2_1.png",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-E-4151224",
+   "contentId": "4151224",
+   "contentTypeId": "15",
+   "modifiedtime": "20261111084803",
+   "name": "역사랑께 배우랑께",
+   "start_date": "2026-11-21",
+   "end_date": "2026-11-21",
+   "place_name": "전라감영",
+   "address": "전북특별자치도 전주시 완산구 전라감영로 55 (중앙동4가)",
+   "region": "호남",
+   "city": "전주시",
+   "hours": "12:30~20:30",
+   "fee": "무료",
+   "organizer": "전북특별자치도, 전주시",
+   "phone": "063-232-9938",
+   "why": "「역사랑께 배우랑께」는 조선시대 전라관찰사 서유구가 전라감영에서의 업무와 일상을 기록한 『완영일록』을 소재로, 전주의 역사문화유산을 가족과 함께 탐방하고 체험하…",
+   "summary": "「역사랑께 배우랑께」는 조선시대 전라관찰사 서유구가 전라감영에서의 업무와 일상을 기록한 『완영일록』을 소재로, 전주의 역사문화유산을 가족과 함께 탐방하고 체험하는 참여형 역사문화 프로그램이다. 전라감영을 비롯해 호남권역 예담고, 완판본문화관, 전동성당, 풍남문 등 주요 역사문화 공간을 방문하여 전문 해설과 함께 역사적 배경을 살펴보고, 유물 관람 및 발굴 체험, 목판 인쇄 체험, 판소리 공연 관람 등을 통해 전주의 역사와 문화를 다채롭게 경험한다. 또한 탐방 장소별 기념사진과 역사적 이야기, 소감을 기록하여 가족만의 『오늘의 완영일록』을 완성함으로써 과거의 역사 기록을 오늘날의 특별한 추억으로 이어가고, 가족이 함께 지역 역사문화유산의 가치를 공유하는 계기를 마련하고자 한다.",
+   "theme": [
+    "체험"
+   ],
+   "sub": "체험행사",
+   "source_url": "https://www.instagram.com/culture__art/?hl=ko",
+   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
+   "lat": 35.8165952746,
+   "lng": 127.1458864053,
+   "checkedAt": "2026-11-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/25/4151225_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/25/4151225_image3_1.jpg",
+     "licenseCode": "Type3",
+     "license": "공공누리 3유형(출처표시·변경금지)",
+     "source": "한국관광공사",
+     "usable": true,
+     "rights": "AUTO_NOEDIT"
+    }
+   ]
+  },
+  {
+   "feedId": "TA-E-3315407",
+   "contentId": "3315407",
+   "contentTypeId": "15",
+   "modifiedtime": "20261111084802",
+   "name": "2026 제4차 제물포웨이브마켓",
+   "start_date": "2026-11-21",
+   "end_date": "2026-11-22",
+   "place_name": "상상플랫폼",
+   "address": "인천광역시 제물포구 월미로 33 (북성동1가)",
+   "region": "인천",
+   "city": "제물포구",
+   "hours": "11:00~18:00",
+   "fee": "무료",
+   "organizer": "인천광역시",
+   "phone": "010-9265-3796",
+   "why": "2026 제물포웨이브마켓 「파머스마켓」이 11월 21일(토)과 22일(일) 이틀간 인천 제물포구 상상플랫폼 웨이브홀에서 열린다.",
+   "summary": "2026 제물포웨이브마켓 「파머스마켓」이 11월 21일(토)과 22일(일) 이틀간 인천 제물포구 상상플랫폼 웨이브홀에서 열린다. 실내에서 진행되어 날씨 걱정 없이 방문할 수 있으며 이번 마켓에서는 강화의 들판과 인천 곳곳의 농가, 마을기업, 로컬 브랜드가 정성껏 준비한 제철 식재료와 상품을 만나볼 수 있다. 파머스마켓 19팀과 웨이브마켓 36팀이 참여하며, 갓 구운 빵과 수제 디저트, 로컬 주류, 공예품, 패션 및 문화 상품까지 다양하게 준비될 예정이다. 농협과 축협이 함께하는 특가 장터도 열릴 예정이다. 대파와 귀리, 고춧가루, 과일 등 제철 농산물을 특가로 판매된다. 축협 한우 트럭에서는 한우 1+등급 등심, 채끝, 양지 등을 직판하며 강화 교동의 고구마와 감자로 만든 수제 칩 브랜드 송화칩스의 특별 팝…",
+   "sub": "행사",
+   "source_url": "https://www.instagram.com/jemulpowav_official",
+   "source_label": "한국관광공사 TourAPI · 행사 홈페이지",
+   "lat": 37.4760834131,
+   "lng": 126.6146527143,
+   "checkedAt": "2026-11-11",
+   "photos": [
+    {
+     "url": "https://tong.visitkorea.or.kr/cms/resource/10/4151210_image2_1.jpg",
+     "thumb": "https://tong.visitkorea.or.kr/cms/resource/10/4151210_image3_1.jpg",
      "licenseCode": "Type3",
      "license": "공공누리 3유형(출처표시·변경금지)",
      "source": "한국관광공사",
