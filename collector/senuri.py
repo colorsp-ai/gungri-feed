@@ -75,10 +75,18 @@ def bad(text, words):
     return any(w in (text or '') for w in words)
 
 
-def fetch(url, opener=None):
-    req = urllib.request.Request(url, headers={'User-Agent': 'GUNGRI-collector/1.0'})
-    with (opener or urllib.request.urlopen)(req, timeout=30) as r:
-        return r.read().decode('utf-8', 'replace')
+def fetch(url, opener=None, tries=4):
+    import time
+    last = None
+    for n in range(tries):
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': 'GUNGRI-collector/1.0'})
+            with (opener or urllib.request.urlopen)(req, timeout=60) as r:
+                return r.read().decode('utf-8', 'replace')
+        except Exception as e:      # 일시적 접속 지연(SSL 시간초과 등)은 쉬었다가 다시 시도
+            last = e
+            time.sleep(3 * (n + 1))
+    raise last
 
 
 def build(it, cfg, today, detail=None):
@@ -134,11 +142,49 @@ def collect(cfg, key, today, fetcher=fetch):
     return out, drop
 
 
+def probe2(cfg, key, fetcher):
+    """지역 필터가 되는지, 목록이 최신순인지 알아보는 진단. 로그를 읽고 설정을 정한다."""
+    def get(extra, rows=100, page=1):
+        q = {'serviceKey': key, 'pageNo': page, 'numOfRows': rows}; q.update(extra)
+        return items(fetcher(f"{BASE}{cfg['listOp']}?{urllib.parse.urlencode(q)}"))
+    rows, total = get({})
+    print('전체 건수', total, '· 1쪽', len(rows), '건')
+    print('접수시작일 앞/뒤:', rows[0].get('frDd'), rows[-1].get('frDd'), '· 마감일 앞/뒤:', rows[0].get('toDd'), rows[-1].get('toDd'))
+    seen = {}
+    for p in (1, 2, 3):
+        for it in get({}, 100, p)[0]:
+            seen[it.get('workPlc', '')] = it.get('workPlcNm', '')
+    print('근무지 코드 예:', list(seen.items())[:12])
+    hit = {c: n for c, n in seen.items() if region_hit(n, cfg['regionWords'])}
+    print('구리/남양주 코드(앞 3쪽):', hit)
+    base = rows[0].get('workPlc', '')
+    for pname in ('workPlc', 'workPlcCd', 'workPlace', 'region', 'sido', 'areaCd'):
+        try:
+            r, t = get({pname: base}, 20)
+            same = all(x.get('workPlc') == base for x in r)
+            print(f'필터 {pname}={base}: 건수 {t} · 모두 같은 지역 {same}')
+        except Exception as e:
+            print(f'필터 {pname}: 오류 {e}')
+    for pname in ('workPlcNm', 'keyword', 'srchWord', 'searchWord', 'recrtTitle', 'jobNm'):
+        try:
+            r, t = get({pname: '구리'}, 20)
+            print(f'검색 {pname}=구리: 건수 {t} · 예 {[x.get("workPlcNm") for x in r[:3]]}')
+        except Exception as e:
+            print(f'검색 {pname}: 오류 {e}')
+    for pre in ('01', '010', '0100', '41', '31'):
+        try:
+            r, t = get({'workPlc': pre}, 5)
+            print(f'접두 workPlc={pre}: 건수 {t} · 예 {[x.get("workPlcNm") for x in r[:3]]}')
+        except Exception as e:
+            print(f'접두 {pre}: 오류 {e}')
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument('--out', default=os.environ.get('GUNGRI_FEED_DIR', 'feed'))
     ap.add_argument('--mock', action='store_true')
     ap.add_argument('--probe', action='store_true')
+    ap.add_argument('--probe2', action='store_true')
     ap.add_argument('--today', default=None)
     a = ap.parse_args(argv)
     cfg, _ = load_cfg()
@@ -150,6 +196,8 @@ def main(argv=None):
         fetcher, key = mock_fetch, 'MOCK'
     if not key:
         print('SENURI_KEY(공공데이터포털 인증키)가 없습니다.', file=sys.stderr); return 2
+    if a.probe2:
+        probe2(cfg, key, fetcher); return 0
     if a.probe:
         q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': 1, 'numOfRows': 2})
         print(fetcher(f"{BASE}{cfg['listOp']}?{q}")[:1500]); return 0
