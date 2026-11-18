@@ -6,9 +6,12 @@
 import argparse, datetime, json, os, re, sys, urllib.parse
 from . import senuri
 
-DEF = {'url': 'https://apis.data.go.kr/B552474/SenuriService/getJobOperInsttList',
-       'pages': 15, 'rows': 100, 'regionWords': ['구리', '남양주'], 'extraParams': {}}
-T = {'name': ['insttNm', 'operInsttNm', 'jobOperInsttNm', 'oranNm', 'orgNm', 'instNm', 'name'],
+DEF = {'url': 'https://apis.data.go.kr/B552474/JobBsnInfoService/getJobOperInsttList',
+       'pages': 5, 'rows': 100, 'extraParams': {},
+       # 시군구 행정구역 코드(행정표준코드): 경기도 41, 구리시 41310, 남양주시 41360
+       'queries': [{'label': '구리', 'dstrCd1': '4100000000', 'dstrCd2': '4131000000'},
+                   {'label': '남양주', 'dstrCd1': '4100000000', 'dstrCd2': '4136000000'}]}
+T = {'name': ['orgName', 'operOrgNm', 'operInsttNm', 'insttNm', 'jobOperInsttNm', 'oranNm', 'orgNm', 'instNm', 'name'],
      'addr': ['addr', 'address', 'insttAddr', 'operInsttAddr', 'locAddr', 'adres', 'workPlcNm'],
      'tel': ['telNo', 'tel', 'insttTelNo', 'phone', 'telno', 'reprsntTelno'],
      'kind': ['insttTypeNm', 'insttSeNm', 'operSeNm', 'kind', 'jobSeNm', 'bsnsNm'],
@@ -32,30 +35,34 @@ def pick(d, key):
         v = low.get(n.lower())
         if v:
             return v
+    hints = {'name': ('name', 'nm'), 'addr': ('addr', 'adres'), 'tel': ('tel', 'phone'), 'kind': ('type', 'se'), 'area': ('sido', 'sigungu')}[key]
+    for k, v in low.items():                     # 항목 이름이 달라도 이름 조각으로 한 번 더 찾는다
+        if v and any(h in k for h in hints) and not (key == 'name' and 'proj' in k):
+            return v
     return ''
 
 
 def collect(c, key, fetcher=senuri.fetch):
-    out, seen, scanned = [], set(), 0
-    for page in range(1, int(c['pages']) + 1):
-        q = {'serviceKey': key, 'pageNo': page, 'numOfRows': c['rows']}
-        q.update(c.get('extraParams') or {})
-        rows, total = senuri.items(fetcher(f"{c['url']}?{urllib.parse.urlencode(q)}"))
-        if not rows:
-            break
-        for r in rows:
-            scanned += 1
-            blob = ' '.join(str(v) for v in r.values())
-            if not any(w in blob for w in c['regionWords']):
-                continue
-            o = {'name': pick(r, 'name'), 'addr': pick(r, 'addr'), 'tel': pick(r, 'tel'), 'kind': pick(r, 'kind'), 'area': pick(r, 'area')}
-            k = (o['name'], o['addr'])
-            if not o['name'] or k in seen:
-                continue
-            seen.add(k); out.append(o)
-        if total is not None and page * int(c['rows']) >= total:
-            break
-    return out, scanned
+    out, seen, got = [], set(), 0
+    for qd in c['queries']:
+        for page in range(1, int(c['pages']) + 1):
+            q = {'serviceKey': key, 'pageNo': page, 'numOfRows': c['rows'], **{k: v for k, v in qd.items() if k != 'label'}, **(c.get('extraParams') or {})}
+            try:
+                rows, total = senuri.items(fetcher(f"{c['url']}?{urllib.parse.urlencode(q)}"))
+            except Exception as e:
+                print('  조회 실패:', qd.get('label'), page, e, file=sys.stderr); break
+            if not rows:
+                break
+            for r in rows:
+                got += 1
+                o = {'name': pick(r, 'name'), 'addr': pick(r, 'addr'), 'tel': pick(r, 'tel'), 'kind': pick(r, 'kind'), 'area': qd.get('label', '')}
+                k = (o['name'], o['addr'])
+                if not o['name'] or k in seen:
+                    continue
+                seen.add(k); out.append(o)
+            if total is not None and page * int(c['rows']) >= total:
+                break
+    return out, got
 
 
 def main(argv=None, fetcher=senuri.fetch):
@@ -70,8 +77,10 @@ def main(argv=None, fetcher=senuri.fetch):
         print('SENURI_KEY(공공데이터포털 인증키)가 없습니다.', file=sys.stderr); return 2
     if a.probe:
         try:
-            q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': 1, 'numOfRows': 3, **(c.get('extraParams') or {})})
-            print('주소:', c['url']); print(fetcher(f"{c['url']}?{q}")[:1800])
+            print('주소:', c['url'])
+            for qd in c['queries']:
+                q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': 1, 'numOfRows': 3, **{k: v for k, v in qd.items() if k != 'label'}, **(c.get('extraParams') or {})})
+                print('---', qd.get('label')); print(fetcher(f"{c['url']}?{q}")[:1500])
         except Exception as e:
             print('조회 실패:', e, file=sys.stderr); return 2
         return 0
@@ -83,7 +92,7 @@ def main(argv=None, fetcher=senuri.fetch):
     feed = {'schema': 'GUNGRI_ORGS_V1', 'generatedAt': datetime.datetime.now(senuri.KST).isoformat(timespec='seconds'),
             'source': {'name': '한국노인인력개발원 노인일자리 수행기관', 'page': 'https://www.data.go.kr/data/15056961/openapi.do'}, 'orgs': orgs}
     if not orgs:
-        print(f'구리·남양주 기관 0건(훑어 본 {scanned}건) — 파일을 새로 만들지 않습니다.'); return 0
+        print(f'기관 0건(받은 {scanned}건) — 파일을 새로 만들지 않습니다.'); return 0
     json.dump(feed, open(os.path.join(a.out, 'gungri_orgs.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'기관 {len(orgs)}건 저장 (훑어 본 {scanned}건)'); return 0
 
