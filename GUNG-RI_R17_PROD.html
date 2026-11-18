@@ -24510,7 +24510,12 @@ function sendPlaceReq(){
   ['서울시 공공일자리','서울시 일자리포털의 공공일자리 공고. 서울 쪽 근무도 생각하신다면 확인해 보세요.','https://job.seoul.go.kr/hmpg/rmim/pjmg/pjmgListPage.do'],
   ['서울시 평생학습 (중장년 강좌)','서울시 평생학습포털의 중장년 강좌. 서울시민 대상 강좌가 많으니 신청 자격은 강좌마다 꼭 확인하세요.','https://sll.seoul.go.kr/lms/requestCourse/doAgeCourseListView.do?main_se=lie&keyword=%EC%A4%91%EC%9E%A5%EB%85%84&mnid=202601114183'],
   ['서울시 평생학습 (어르신 강좌)','같은 포털의 어르신 대상 강좌 검색이에요. 신청 자격은 강좌마다 확인하세요.','https://sll.seoul.go.kr/lms/requestCourse/doAgeCourseListView.do?main_se=lie&keyword=%EC%96%B4%EB%A5%B4%EC%8B%A0&mnid=202601275256']];
- var S={region:'전체',jobs:null,err:'',loading:false,at:''};
+ var S={region:'전체',jobs:null,err:'',loading:false,at:'',orgs:null};
+ function orgsUrl(){var u=ls('GUNGRI_FEED_URL')||DEF;return u.replace(/[^\/]*$/,'gungri_orgs.json');}
+ function loadOrgs(){if(S.orgs!==null)return;S.orgs=[];fetch(orgsUrl(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(j){if(j&&j.schema==='GUNGRI_ORGS_V1'&&Array.isArray(j.orgs)){S.orgs=j.orgs;paint();}}).catch(function(){});}
+ function nmap(q){return 'https://map.naver.com/p/search/'+encodeURIComponent(q);}
+ function telOk(t){return /^[0-9][0-9\-\s]{6,14}$/.test(t||'');}
+ function orgHtml(o){var t=telOk(o.tel)?'<a class="jb-a" href="tel:'+esc(String(o.tel).replace(/[^0-9]/g,''))+'">'+esc(o.tel)+' 전화하기</a> ':'';return '<div class="jb-card"><b>'+esc(o.name)+'</b><div class="jb-m">'+esc([o.kind,o.addr].filter(Boolean).join(' · '))+'</div>'+t+'<a class="jb-a" href="'+esc(nmap(o.name))+'" target="_blank" rel="noopener noreferrer">지도에서 찾기</a></div>';}
  function jobsUrl(){var u=ls('GUNGRI_FEED_URL')||DEF;return u.replace(/[^\/]*$/,'gungri_jobs.json');}
  function load(force){if(S.loading)return;var c=ls('GUNGRI_JOBS_CACHE');
   if(!force&&c){try{var j=JSON.parse(c);if(j&&j.jobs){S.jobs=j.jobs;S.at=(j.generatedAt||'').slice(0,10);}}catch(e){}}
@@ -24529,13 +24534,16 @@ function sendPlaceReq(){
    '<div class="jb-note">나이와 상관없이 할 수 있는 일, 용돈벌이 일을 공식 기관 정보로 안내해 드려요. 신청과 지원은 각 기관 사이트에서 해요.</div>'+
    '<h3>지금 올라온 시니어 일자리</h3><div class="jb-tabs">'+['전체','구리','남양주'].map(function(r){return '<button type="button" data-jb="reg" data-r="'+r+'" class="'+(S.region===r?'on':'')+'">'+r+'</button>';}).join('')+'</div>'+
    (S.loading&&!S.jobs?'<div class="jb-m">불러오는 중…</div>':'')+
-   (list.length?list.slice(0,30).map(jobHtml).join(''):(S.jobs||S.err?'<div class="jb-m">'+esc(S.err||'지금 이 지역에 올라온 공고가 없어요. 아래 기관 사이트도 함께 확인해 보세요.')+'</div>':''))+
+   (list.length?list.slice(0,30).map(jobHtml).join(''):(S.jobs||S.err?'<div class="jb-m">'+esc(S.err||'지금 접수 중인 공고가 이 지역에는 없어요. 목록은 매일 새벽에 새로 불러오고 있어요. 아래 ‘우리 동네 문의처’와 기관 사이트도 함께 확인해 보세요.')+'</div>':''))+
    (S.at?'<div class="jb-m">목록 갱신: '+esc(S.at)+' · 출처: 한국노인인력개발원 노인일자리여기(100세누리)</div>':'')+
+   '<h3>우리 동네 문의처</h3>'+(S.orgs&&S.orgs.length?S.orgs.filter(function(o){return (o.addr||'').indexOf('구리')>=0||(o.addr||'').indexOf('남양주')>=0||(o.area||'').indexOf('구리')>=0||(o.area||'').indexOf('남양주')>=0;}).slice(0,12).map(orgHtml).join(''):'')+
+   ['구리 시니어클럽','남양주 시니어클럽','구리 노인복지관','남양주 노인복지관'].map(function(q){return '<div class="jb-card"><b>'+esc(q)+'</b><div class="jb-s">시니어클럽·노인복지관은 노인일자리 사업을 안내해 줘요. 지도에서 위치와 전화번호를 확인하세요.</div><a class="jb-a" href="'+esc(nmap(q))+'" target="_blank" rel="noopener noreferrer">지도에서 찾기</a></div>';}).join('')+
+   '<div class="jb-card"><b>보건복지상담센터 129</b><div class="jb-s">노인일자리 사업 참여 방법이 궁금하면 물어볼 수 있어요. (국번 없이)</div><a class="jb-a" href="tel:129">129 전화하기</a></div>'+
    '<h3>직접 찾아보는 곳</h3>'+LINKS.map(function(l){return '<div class="jb-card"><b>'+esc(l[0])+'</b><div class="jb-s">'+esc(l[1])+'</div><a class="jb-a" href="'+esc(l[2])+'" target="_blank" rel="noopener noreferrer">사이트 열기</a></div>';}).join('')+
    '<div class="jb-card"><b>전화로 물어보기</b><div class="jb-s">고용노동부 고객상담센터 1350 (국번 없이)</div><a class="jb-a" href="tel:1350">1350 전화하기</a></div>'+
    '<h3>이것만은 꼭 지켜요</h3><div class="jb-warn">· 일을 시작하기 전에 돈(보증금, 교육비, 가입비)을 먼저 내라고 하면 응하지 마세요.<br>· 주민등록번호, 통장 번호는 정식 계약 전에 알려 주지 마세요.<br>· 이상하면 1350 또는 가까운 센터에 먼저 물어보세요.<br>· 궁리는 공고를 소개만 해요. 채용과 근로조건은 해당 기관이 정해요.</div></div>';
   el.innerHTML=h;}
- function open(){var el=D.getElementById('grJb');if(!el){el=D.createElement('div');el.id='grJb';D.body.appendChild(el);}el.style.display='block';D.body.classList.add('gr-reg-open');load();paint();}
+ function open(){var el=D.getElementById('grJb');if(!el){el=D.createElement('div');el.id='grJb';D.body.appendChild(el);}el.style.display='block';D.body.classList.add('gr-reg-open');load();loadOrgs();paint();}
  function close(){var el=D.getElementById('grJb');if(el)el.style.display='none';D.body.classList.remove('gr-reg-open');}
  D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-jb]'):null;if(!b)return;ev.preventDefault();ev.stopPropagation();
   var a=b.getAttribute('data-jb');if(a==='open')open();else if(a==='close')close();else if(a==='reg'){S.region=b.getAttribute('data-r')||'전체';paint();}},true);
@@ -24545,6 +24553,86 @@ function sendPlaceReq(){
   c.parentNode.insertBefore(b,c.nextSibling);}
  new MutationObserver(entry).observe(D.body||D.documentElement,{childList:true,subtree:true});setTimeout(entry,800);
  var st=D.createElement('style');st.textContent='.jb-entry{display:block;width:calc(100% - 24px);margin:10px 12px;min-height:64px;padding:8px 14px;border-radius:16px;border:2px solid #0f6b45;background:#fff;color:#0f6b45;text-align:left;font-size:20px}.jb-entry span{display:block;font-size:15px;color:#3d5a4c}#grJb{display:none;position:fixed;inset:0;z-index:2147482500;background:rgba(0,0,0,.45);overflow:auto}.jb-sheet{box-sizing:border-box;max-width:560px;margin:0 auto;min-height:100%;background:#fff;padding:14px 16px 40px;font-size:18px}.jb-top{display:flex;justify-content:space-between;align-items:center;font-size:22px}.jb-x{min-height:46px;padding:0 16px;border-radius:12px;border:1px solid #b8c4be;background:#fff;font-size:17px}.jb-note{margin:10px 0;line-height:1.6}.jb-sheet h3{margin:20px 0 8px;font-size:20px}.jb-tabs{display:flex;gap:8px;margin-bottom:8px}.jb-tabs button{flex:1;min-height:46px;border-radius:12px;border:2px solid #0f6b45;background:#fff;color:#0f6b45;font-size:17px;font-weight:800}.jb-tabs button.on{background:#0f6b45;color:#fff}.jb-card{border:1px solid #cfd8d3;border-radius:14px;padding:12px;margin:10px 0}.jb-m{font-size:16px;color:#4b5a53;margin:4px 0}.jb-s{font-size:16px;line-height:1.5;margin:6px 0}.jb-a{display:inline-block;margin-top:6px;min-height:44px;line-height:44px;padding:0 16px;border-radius:12px;background:#0f6b45;color:#fff;text-decoration:none;font-weight:800}.jb-warn{background:#fff6e5;border:1px solid #f0c36b;border-radius:14px;padding:12px;line-height:1.8;font-size:17px}';
+ D.head.appendChild(st);
+})();
+
+</script>
+<script id="guri-r17-kw">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriKw)return;W.__guriKw=1;
+ /* 연관 키워드: 장소·행사의 이름뿐 아니라 설명·태그에서 매력 포인트(벚꽃·단풍·물놀이…)를 뽑아 검색과 추천에 쓴다 */
+ var C=[ /* [키워드, 계절(봄/여름/가을/겨울/''), 찾는 글자(정규식), 검색어 동의어] */
+  ['벚꽃','봄','벚꽃|벚나무|벗꽃|벚길|왕벚','벗꽃|벚꽃|벚나무|사쿠라'],
+  ['철쭉·진달래','봄','철쭉|진달래','철쭉|진달래'],
+  ['유채꽃','봄','유채','유채'],
+  ['튤립','봄','튤립','튤립'],
+  ['장미','봄','장미','장미'],
+  ['수국','여름','수국','수국'],
+  ['연꽃','여름','연꽃|연밭|연못','연꽃|연밭'],
+  ['해바라기','여름','해바라기','해바라기'],
+  ['물놀이','여름','물놀이|워터|분수|계곡|수영장|물놀이장|바닥분수|개울','물놀이|물놀이장|분수|계곡|워터'],
+  ['단풍','가을','단풍|만추|홍엽','단풍|단풍놀이|만추'],
+  ['은행나무','가을','은행나무|은행잎|은행길|은행나무길','은행나무|은행잎|은행길|은행'],
+  ['억새','가을','억새|갈대','억새|갈대'],
+  ['코스모스','가을','코스모스','코스모스'],
+  ['눈꽃','겨울','눈꽃|설경|상고대|눈썰매|눈 덮','눈꽃|설경|눈썰매|눈'],
+  ['일출·일몰','','일출|해돋이|일몰|노을|석양','일출|해돋이|일몰|노을|석양'],
+  ['야경','','야경|야간|조명|불빛|빛축제','야경|야간|조명'],
+  ['산책','','산책|둘레길|산책로|숲길|걷기','산책|걷기|둘레길|산책로'],
+  ['호수·강변','','호수|강변|하천|수변|물길|호숫','호수|강변|수변|물가'],
+  ['숲·나무','','숲|수목|나무|삼림욕|피톤치드','숲|나무|수목|삼림욕'],
+  ['꽃구경','','꽃|화원|정원','꽃구경|꽃|정원']];
+ var SEASON={'봄':[3,4,5],'여름':[6,7,8],'가을':[9,10,11],'겨울':[12,1,2]};
+ var SEED=[ /* 이름에 들어 있으면 붙이는 대표 키워드(운영진이 늘려 갈 수 있음) */
+  [/서울숲/,['벚꽃','물놀이','은행나무','단풍']]];
+ function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function season(){var m=new Date().getMonth()+1;for(var s in SEASON)if(SEASON[s].indexOf(m)>=0)return s;return '';}
+ function txt(x){var d=x.contentDetail||{},p=[];
+  [x.n,x.name,x.title,x.why,x.c,x.cl,x.summary,x.place_name,d.summary,d.overview,d.highlights&&d.highlights.join?d.highlights.join(' '):'',d.stay].forEach(function(v){if(v)p.push(v);});
+  [x.k,x.tags,x.theme,x.kw].forEach(function(a){if(a)p.push(typeof a==='string'?a:a.join(' '));});return p.join(' ');}
+ var cache={};
+ function kwOf(x){if(!x)return [];var id=String(x.id||x.event_id||x.feedId||x.n||x.name||''),t=txt(x),ck=id+'|'+t.length;if(cache[ck])return cache[ck];
+  var out=[];(x.kw||[]).forEach(function(k){if(out.indexOf(k)<0)out.push(k);});
+  SEED.forEach(function(s){if(s[0].test(x.n||x.name||''))s[1].forEach(function(k){if(out.indexOf(k)<0)out.push(k);});});
+  C.forEach(function(c){if(out.indexOf(c[0])<0&&new RegExp(c[2]).test(t))out.push(c[0]);});
+  return cache[ck]=out;}
+ function altsFor(tok){tok=tok.replace(/^#/,'').trim();if(!tok)return null;var alts=[tok];
+  C.forEach(function(c){if(new RegExp('^(?:'+c[3]+')$').test(tok)||c[0]===tok){alts.push(c[0]);}});
+  if(SEASON[tok])C.forEach(function(c){if(c[1]===tok)alts.push(c[0]);});
+  if(/^(봄|여름|가을|겨울)(?:철|에|꽃|나들이)?$/.test(tok)){var s=tok.slice(0,2).replace(/[철에꽃나]/g,'');if(SEASON[s])C.forEach(function(c){if(c[1]===s)alts.push(c[0]);});}
+  return alts;}
+ function ok(x,q,base){var toks=String(q||'').split(/[\s,]+/).filter(Boolean);if(!toks.length)return true;var k=kwOf(x),hay=(base+' '+k.join(' ')).toLowerCase();
+  return toks.every(function(t){var a=altsFor(t);return !a||a.some(function(s){return hay.indexOf(String(s).toLowerCase())>=0;});});}
+ function baseP(x){return [x.n,x.ar,x.r,x.a,(x.k||[]).join(' ')].join(' ');}
+ function baseE(e){var th=e.theme||e.tags||[];if(typeof th==='string')th=[th];return [e.name||e.title||e.event_name,e.place_name||e.venue_text||e.address,e.region||e.area||'',th.join(' ')].join(' ');}
+ function wrap(){var P=W.discPlacePass,E=W.discEventPass;if(typeof P!=='function'||typeof E!=='function'||P.__kw)return false;
+  W.discPlacePass=function(x){var q=W.DISC_Q;if(!q)return P.call(this,x);W.DISC_Q='';var r;try{r=P.call(this,x);}finally{W.DISC_Q=q;}return r&&ok(x,q,baseP(x));};
+  W.discEventPass=function(e){var q=W.DISC_Q;if(!q)return E.call(this,e);W.DISC_Q='';var r;try{r=E.call(this,e);}finally{W.DISC_Q=q;}return r&&ok(e,q,baseE(e));};
+  W.discPlacePass.__kw=1;return true;}
+ W.guriKeywordsOf=kwOf;
+ /* 결과 카드에 키워드 표시 + 지금 철 추천 줄 */
+ function find(id){var S=W.SPOTS||[];for(var i=0;i<S.length;i++)if(String(S[i].id)===id)return S[i];return null;}
+ function evFind(id){var E=[];try{E=W.discEvents();}catch(e){}for(var i=0;i<E.length;i++)if(String(E[i].event_id||E[i].id)===id)return E[i];return null;}
+ function decorate(){
+  var q=String(W.DISC_Q||'');var qa=q.split(/[\s,]+/).filter(Boolean).map(altsFor).filter(Boolean);
+  D.querySelectorAll('button.card[data-go^="s:"],button.card[data-goevent]').forEach(function(b){if(b.querySelector('.kw-line'))return;
+   var id=b.getAttribute('data-go')?b.getAttribute('data-go').slice(2):b.getAttribute('data-goevent'),x=b.getAttribute('data-go')?find(id):evFind(id);if(!x)return;
+   var k=kwOf(x).filter(function(v){return C.some(function(c){return c[0]===v&&(c[1]||['산책','야경','일출·일몰'].indexOf(v)>=0);});});if(!k.length)return;
+   var hit=function(v){return qa.some(function(a){return a.indexOf(v)>=0;});};k.sort(function(a,b2){return (hit(b2)?1:0)-(hit(a)?1:0);});
+   var d=D.createElement('div');d.className='kw-line';d.innerHTML=k.slice(0,4).map(function(v){return '<span class="kw-c'+(hit(v)?' on':'')+'">#'+esc(v)+'</span>';}).join('');b.appendChild(d);});
+  var inp=D.getElementById('discQ');if(inp&&!D.getElementById('kwSug')){
+   var s=season(),list=C.filter(function(c){return c[1]===s;}),cnt=function(c){var n=0;(W.SPOTS||[]).forEach(function(x){if(x.admin_hidden!==true&&kwOf(x).indexOf(c[0])>=0)n++;});return n;};
+   var rows=list.map(function(c){return [c[0],cnt(c)];}).filter(function(r){return r[1]>0;});
+   var all=C.slice(0,0);var box=D.createElement('div');box.id='kwSug';
+   box.innerHTML='<div class="kw-h">'+(s?s+'에는 이런 곳이 좋아요':'이런 걸로 찾아보세요')+'</div>'+(rows.length?rows.map(function(r){return '<button type="button" class="kw-s" data-kwq="'+esc(r[0])+'">#'+esc(r[0])+' <i>'+r[1]+'</i></button>';}).join(''):'')+
+    ['산책','야경','호수·강변','일출·일몰'].map(function(v){return '<button type="button" class="kw-s alt" data-kwq="'+esc(v)+'">#'+esc(v)+'</button>';}).join('');
+   var row=inp.parentNode;row.parentNode.insertBefore(box,row.nextSibling);}}
+ D.addEventListener('click',function(ev){var b=ev.target&&ev.target.closest?ev.target.closest('[data-kwq]'):null;if(!b)return;ev.preventDefault();ev.stopPropagation();
+  var v=b.getAttribute('data-kwq').split('·')[0],inp=D.getElementById('discQ'),go=D.querySelector('[data-disc-search]');if(inp){inp.value=v;}if(go)go.click();},true);
+ D.addEventListener('keydown',function(ev){if(ev.key==='Enter'&&ev.target&&ev.target.id==='discQ'){var go=D.querySelector('[data-disc-search]');if(go){ev.preventDefault();go.click();}}},true);
+ var t=null;function sched(){if(t)return;t=setTimeout(function(){t=null;try{wrap();decorate();}catch(e){}},60);}
+ new MutationObserver(sched).observe(D.body||D.documentElement,{childList:true,subtree:true});wrap();sched();
+ var st=D.createElement('style');st.textContent='#kwSug{margin:10px 0 2px}.kw-h{font-weight:800;font-size:16px;margin-bottom:6px}.kw-s{min-height:44px;margin:0 6px 6px 0;padding:0 14px;border-radius:22px;border:2px solid #0f6b45;background:#fff;color:#0f6b45;font-size:17px;font-weight:800}.kw-s i{font-style:normal;font-size:14px;opacity:.7}.kw-s.alt{border-color:#9aa8a1;color:#40504a}.kw-line{margin-top:8px}.kw-c{display:inline-block;margin:0 6px 4px 0;padding:2px 9px;border-radius:12px;background:#eef3f0;color:#2d5a45;font-size:14.5px}.kw-c.on{background:#0f6b45;color:#fff;font-weight:800}';
  D.head.appendChild(st);
 })();
 
