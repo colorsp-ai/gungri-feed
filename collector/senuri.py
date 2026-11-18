@@ -11,7 +11,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 KST = datetime.timezone(datetime.timedelta(hours=9))
 BASE = 'https://apis.data.go.kr/B552474/SenuriService'
 DEF = {'listOp': '/getJobList', 'detailOp': '/getJobInfo', 'pages': 8, 'rows': 100,
-       'areas': [{'q': '구리', 'label': '경기 구리시'}, {'q': '하남', 'label': '경기 하남시(인근)'}],
+       'areas': [{'q': '구리', 'label': '경기 구리시'},
+                 {'q': '하남', 'label': '경기 구리·남양주·하남 인근',
+                  'hint': ['구리', '남양주', '하남', '다산', '별내', '진접', '오남', '호평', '평내', '마석', '화도', '와부', '덕소', '미사', '감일', '위례', '풍양', '양정', '퇴계원', '수동', '조안']}],
        'regionWords': ['구리', '하남'], 'maxDetails': 40,
        'badWords': ['선입금', '수수료', '보증금', '다단계', '투자', '입회비', '교육비 납부', '가입비', '물품 구입']}
 # 응답 태그 이름이 명세와 조금 달라도 읽도록 후보를 둔다
@@ -107,7 +109,7 @@ def build(it, cfg, today, detail=None):
 
 def collect(cfg, key, today, fetcher=fetch):
     """지역 이름 조건(workPlcNm)으로 서버에서 먼저 거른 뒤, 접수 중인 공고만 남긴다."""
-    kept, seen, drop = [], set(), {'마감': 0, '위험문구': 0, '조회실패': 0}
+    kept, seen, drop = [], set(), {'마감': 0, '위험문구': 0, '지역밖': 0, '조회실패': 0}
     for area in cfg['areas']:
         for page in range(1, int(cfg['pages']) + 1):
             q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': page, 'numOfRows': cfg['rows'], 'workPlcNm': area['q']})
@@ -128,6 +130,8 @@ def collect(cfg, key, today, fetcher=fetch):
                     drop['마감'] += 1; continue
                 if bad(j['title'] + ' ' + j['org'], cfg['badWords']):
                     drop['위험문구'] += 1; continue
+                if area.get('hint') and not region_hit(j['title'] + ' ' + j['org'] + ' ' + j['place'], area['hint']):
+                    drop['지역밖'] += 1; continue        # 이 코드에는 다른 지역 공고가 섞여 있어 제목·기관에 동네 이름이 있는 것만 남긴다
                 active += 1
                 j['place'] = j['place'] or area['label']
                 j['area'] = area['label']
