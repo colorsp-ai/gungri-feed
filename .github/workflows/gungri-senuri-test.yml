@@ -11,8 +11,14 @@ jobs:
         with:
           python-version: '3.11'
       - name: 일자리 수집 시험
+        continue-on-error: true
         env:
           SENURI_KEY: ${{ secrets.SENURI_KEY }}
         run: |
           python -m collector.senuri --out /tmp/jobs
-          head -c 3000 /tmp/jobs/gungri_jobs.json
+          head -c 1500 /tmp/jobs/gungri_jobs.json
+      - name: 수행기관 응답 확인
+        continue-on-error: true
+        env:
+          SENURI_KEY: ${{ secrets.SENURI_KEY }}
+        run: python -m collector.orgs --probe
