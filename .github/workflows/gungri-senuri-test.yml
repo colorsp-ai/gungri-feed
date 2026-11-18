@@ -10,7 +10,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: 일자리 API 진단
+      - name: 일자리 수집 시험
         env:
           SENURI_KEY: ${{ secrets.SENURI_KEY }}
-        run: python -m collector.senuri --probe2
+        run: |
+          python -m collector.senuri --out /tmp/jobs
+          head -c 3000 /tmp/jobs/gungri_jobs.json
