@@ -1,0 +1,16 @@
+name: 궁리 일자리 점검 (빠른 시험)
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 일자리 API 진단
+        env:
+          SENURI_KEY: ${{ secrets.SENURI_KEY }}
+        run: python -m collector.senuri --probe2
