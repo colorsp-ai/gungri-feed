@@ -10,15 +10,16 @@ import xml.etree.ElementTree as ET
 HERE = os.path.dirname(os.path.abspath(__file__))
 KST = datetime.timezone(datetime.timedelta(hours=9))
 BASE = 'https://apis.data.go.kr/B552474/SenuriService'
-DEF = {'listOp': '/getJobList', 'detailOp': '/getJobInfo', 'pages': 20, 'rows': 100,
-       'regionWords': ['구리', '남양주'], 'maxDetails': 60,
+DEF = {'listOp': '/getJobList', 'detailOp': '/getJobInfo', 'pages': 8, 'rows': 100,
+       'areas': [{'q': '구리', 'label': '경기 구리시'}, {'q': '하남', 'label': '경기 하남시(인근)'}],
+       'regionWords': ['구리', '하남'], 'maxDetails': 40,
        'badWords': ['선입금', '수수료', '보증금', '다단계', '투자', '입회비', '교육비 납부', '가입비', '물품 구입']}
 # 응답 태그 이름이 명세와 조금 달라도 읽도록 후보를 둔다
 T = {'id': ['jobId', 'jobid', 'id'], 'title': ['recrtTitle', 'jobTitle', 'title', 'wantedTitle', 'subject'],
-     'kind': ['emplymShpNm', 'emplyForm', 'empType', 'employType'], 'job': ['jobclsNm', 'jobCls', 'occupation'],
-     'place': ['workPlaceNm', 'workPlace', 'workPlcNm', 'workplace'], 'org': ['acptInstNm', 'cmpnyNm', 'company', 'orgName', 'plbizNm'],
+     'kind': ['emplyShpText', 'emplymShpNm', 'emplyForm', 'empType', 'employType'], 'job': ['jobclsNm', 'jobCls', 'occupation'],
+     'place': ['workPlaceNm', 'workPlace', 'workPlcNm', 'workplace'], 'org': ['oranNm', 'acptInstNm', 'cmpnyNm', 'company', 'orgName', 'plbizNm'],
      'method': ['acptMthd', 'acptMthdNm', 'receiptMethod'], 'status': ['acptState', 'acptStts', 'receiptState', 'closeYn'],
-     'start': ['frAcptDd', 'startDate', 'acptBgnDd', 'beginDate'], 'end': ['toAcptDd', 'endDate', 'acptEndDd', 'closeDate'],
+     'start': ['frDd', 'frAcptDd', 'startDate', 'acptBgnDd', 'beginDate'], 'end': ['toDd', 'toAcptDd', 'endDate', 'acptEndDd', 'closeDate'],
      'age': ['age', 'ageLmt', 'ageRange', 'recrtAge'], 'count': ['clltPrnnum', 'recruitNum', 'headcount'],
      'body': ['detailContent', 'content', 'recrtCn'], 'addr': ['plbizAddr', 'workplaceAddr', 'addr', 'address'],
      'home': ['homepage', 'homepageUrl', 'url']}
@@ -95,7 +96,7 @@ def build(it, cfg, today, detail=None):
         d['jobId'] = it['jobId']          # 상세 응답이 달라도 목록의 공고ID를 유지
     end = parse_date(pick(d, 'end'))
     return {
-        'jobId': pick(d, 'id'), 'title': pick(d, 'title'), 'kind': pick(d, 'kind'), 'job': pick(d, 'job'),
+        'jobId': pick(d, 'id'), 'title': pick(d, 'title'), 'kind': ('' if re.fullmatch(r'[A-Z]{2}\d+', pick(d, 'kind')) else pick(d, 'kind')), 'job': pick(d, 'job'),
         'place': pick(d, 'place') or pick(d, 'addr'), 'org': pick(d, 'org'), 'method': pick(d, 'method'),
         'start': parse_date(pick(d, 'start')), 'end': end, 'age': pick(d, 'age'), 'count': pick(d, 'count'),
         'summary': re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', pick(d, 'body'))).strip()[:300],
@@ -105,38 +106,47 @@ def build(it, cfg, today, detail=None):
 
 
 def collect(cfg, key, today, fetcher=fetch):
-    kept, seen, drop = [], set(), {'지역밖': 0, '마감': 0, '위험문구': 0}
-    for page in range(1, int(cfg['pages']) + 1):
-        q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': page, 'numOfRows': cfg['rows']})
-        rows, total = items(fetcher(f"{BASE}{cfg['listOp']}?{q}"))
-        if not rows:
-            break
-        for it in rows:
-            j = build(it, cfg, today)
-            if not j['jobId'] or j['jobId'] in seen:
-                continue
-            seen.add(j['jobId'])
-            if not region_hit(j['place'] + ' ' + j['title'] + ' ' + j['org'], cfg['regionWords']):
-                drop['지역밖'] += 1; continue
-            if j['end'] and j['end'] < today.isoformat():
-                drop['마감'] += 1; continue
-            if bad(j['title'] + ' ' + j['summary'], cfg['badWords']):
-                drop['위험문구'] += 1; continue
-            kept.append((it, j))
-        if total is not None and page * int(cfg['rows']) >= total:
-            break
-    out = []
+    """지역 이름 조건(workPlcNm)으로 서버에서 먼저 거른 뒤, 접수 중인 공고만 남긴다."""
+    kept, seen, drop = [], set(), {'마감': 0, '위험문구': 0, '조회실패': 0}
+    for area in cfg['areas']:
+        for page in range(1, int(cfg['pages']) + 1):
+            q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': page, 'numOfRows': cfg['rows'], 'workPlcNm': area['q']})
+            try:
+                rows, total = items(fetcher(f"{BASE}{cfg['listOp']}?{q}"))
+            except Exception as e:
+                print('  목록 조회 실패:', area['q'], page, e, file=sys.stderr); drop['조회실패'] += 1; break
+            if not rows:
+                break
+            active = 0
+            for it in rows:
+                j = build(it, cfg, today)
+                if not j['jobId'] or j['jobId'] in seen:
+                    continue
+                seen.add(j['jobId'])
+                closed = (it.get('deadline') == '마감') or (j['end'] and j['end'] < today.isoformat())
+                if closed:
+                    drop['마감'] += 1; continue
+                if bad(j['title'] + ' ' + j['org'], cfg['badWords']):
+                    drop['위험문구'] += 1; continue
+                active += 1
+                j['place'] = j['place'] or area['label']
+                j['area'] = area['label']
+                kept.append((it, j))
+            if active == 0 or (total is not None and page * int(cfg['rows']) >= total):
+                break
+    out, detail_ok = [], True
     for n, (it, j) in enumerate(kept):
-        if n < int(cfg['maxDetails']):
+        if detail_ok and n < int(cfg['maxDetails']):
             try:
                 dq = urllib.parse.urlencode({'serviceKey': key, 'id': j['jobId']})
                 drows, _ = items(fetcher(f"{BASE}{cfg['detailOp']}?{dq}"))
                 if drows:
-                    j = build(it, cfg, today, drows[0])
+                    area, place = j['area'], j['place']
+                    j = build(it, cfg, today, drows[0]); j['area'] = area; j['place'] = j['place'] or place
                     if bad(j['title'] + ' ' + j['summary'], cfg['badWords']):
                         drop['위험문구'] += 1; continue
             except Exception:
-                pass
+                detail_ok = False        # 상세 조회 주소가 맞지 않으면 한 번 실패한 뒤 더 시도하지 않는다
         out.append(j)
     out.sort(key=lambda x: (x['end'] or '9999', x['title']))
     return out, drop
