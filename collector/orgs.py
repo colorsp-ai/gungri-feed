@@ -12,8 +12,8 @@ DEF = {'url': 'https://apis.data.go.kr/B552474/JobBsnInfoService/getJobOperInstt
        'queries': [{'label': '구리', 'dstrCd1': '4100000000', 'dstrCd2': '4131000000'},
                    {'label': '남양주', 'dstrCd1': '4100000000', 'dstrCd2': '4136000000'}]}
 T = {'name': ['orgName', 'operOrgNm', 'operInsttNm', 'insttNm', 'jobOperInsttNm', 'oranNm', 'orgNm', 'instNm', 'name'],
-     'addr': ['addr', 'address', 'insttAddr', 'operInsttAddr', 'locAddr', 'adres', 'workPlcNm'],
-     'tel': ['telNo', 'tel', 'insttTelNo', 'phone', 'telno', 'reprsntTelno'],
+     'addr': ['zipAddr', 'addr', 'address', 'insttAddr', 'operInsttAddr', 'locAddr', 'adres', 'workPlcNm'],
+     'tel': ['telNum', 'telNo', 'tel', 'insttTelNo', 'phone', 'telno', 'reprsntTelno'],
      'kind': ['insttTypeNm', 'insttSeNm', 'operSeNm', 'kind', 'jobSeNm', 'bsnsNm'],
      'area': ['sidoNm', 'sigunguNm', 'areaNm', 'ctprvnNm', 'signguNm']}
 
@@ -33,8 +33,10 @@ def pick(d, key):
     low = {k.lower(): v for k, v in d.items()}
     for n in T[key]:
         v = low.get(n.lower())
-        if v:
+        if v and (key != 'tel' or re.search(r'\d', v)):     # 전화번호가 ******로 가려져 오면 비워 둔다
             return v
+    if key == 'tel':
+        return ''
     hints = {'name': ('name', 'nm'), 'addr': ('addr', 'adres'), 'tel': ('tel', 'phone'), 'kind': ('type', 'se'), 'area': ('sido', 'sigungu')}[key]
     for k, v in low.items():                     # 항목 이름이 달라도 이름 조각으로 한 번 더 찾는다
         if v and any(h in k for h in hints) and not (key == 'name' and 'proj' in k):
@@ -55,7 +57,7 @@ def collect(c, key, fetcher=senuri.fetch):
                 break
             for r in rows:
                 got += 1
-                o = {'name': pick(r, 'name'), 'addr': pick(r, 'addr'), 'tel': pick(r, 'tel'), 'kind': pick(r, 'kind'), 'area': qd.get('label', '')}
+                o = {'name': pick(r, 'name'), 'addr': pick(r, 'addr'), 'tel': pick(r, 'tel'), 'kind': '', 'area': qd.get('label', '')}
                 k = (o['name'], o['addr'])
                 if not o['name'] or k in seen:
                     continue

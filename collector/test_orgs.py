@@ -8,5 +8,6 @@ class T(unittest.TestCase):
             f = json.load(fh)
         self.assertEqual(f['schema'], 'GUNGRI_ORGS_V1')
         self.assertEqual([o['name'] for o in f['orgs']], ['예시 구리시니어클럽', '예시 남양주시니어클럽'])
-        self.assertEqual(f['orgs'][0]['tel'], '031-000-0000')
+        self.assertEqual(f['orgs'][0]['tel'], '031-000-0000'); self.assertEqual(f['orgs'][1]['tel'], '')
+        self.assertEqual(f['orgs'][0]['addr'], '경기 구리시 예시로 1')
 if __name__ == '__main__': unittest.main()
