@@ -196,6 +196,31 @@ def probe3(cfg, key, fetcher):
     print('구리 1쪽 접수시작일 앞/뒤:', rows[0].get('frDd') if rows else None, rows[-1].get('frDd') if rows else None)
 
 
+def probe4(cfg, key, fetcher):
+    from collections import Counter
+    def get(extra, rows=100, page=1):
+        q = {'serviceKey': key, 'pageNo': page, 'numOfRows': rows}; q.update(extra)
+        return items(fetcher(f"{BASE}{cfg['listOp']}?{urllib.parse.urlencode(q)}"))
+    for w in ('구리시', '남양주시', '남양주', '하남', '하남시', '030090', '남양', '양주', '구리 ', '경기'):
+        try:
+            r, t = get({'workPlcNm': w}, 50)
+            print(f'workPlcNm={w!r}: {t}건 · 지역코드 {Counter(x.get("workPlc") for x in r).most_common(3)} · 접수중 {sum(1 for x in r if x.get("deadline") != "마감")}/{len(r)}')
+        except Exception as e:
+            print(f'workPlcNm={w!r}: 오류 {e}')
+    codes = {}
+    for p in range(1, 41):
+        try:
+            r, t = get({}, 100, p)
+        except Exception as e:
+            print('쪽', p, '오류', e); break
+        for x in r:
+            n = x.get('workPlcNm', '')
+            if n:
+                codes.setdefault(n, set()).add(x.get('workPlc'))
+    print('경기 지역 이름→코드:', {n: sorted(c) for n, c in codes.items() if n.startswith('경기')})
+    print('구리/남양주 포함 이름:', {n: sorted(c) for n, c in codes.items() if '구리' in n or '남양주' in n})
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument('--out', default=os.environ.get('GUNGRI_FEED_DIR', 'feed'))
@@ -217,7 +242,7 @@ def main(argv=None):
     if a.probe3:
         probe3(cfg, key, fetcher); return 0
     if a.probe2:
-        probe3(cfg, key, fetcher); return 0
+        probe4(cfg, key, fetcher); return 0
     if a.probe:
         q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': 1, 'numOfRows': 2})
         print(fetcher(f"{BASE}{cfg['listOp']}?{q}")[:1500]); return 0
