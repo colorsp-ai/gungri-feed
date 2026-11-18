@@ -179,12 +179,30 @@ def probe2(cfg, key, fetcher):
             print(f'접두 {pre}: 오류 {e}')
 
 
+def probe3(cfg, key, fetcher):
+    """workPlcNm 조건으로 지역 걸러내기가 되는지, 응답이 어떻게 생겼는지 원문으로 확인."""
+    for w in ('구리', '남양주', '경기 구리시', '경기 남양주시'):
+        q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': 1, 'numOfRows': 3, 'workPlcNm': w})
+        txt = fetcher(f"{BASE}{cfg['listOp']}?{q}")
+        rows, total = items(txt)
+        print(f'--- workPlcNm={w} · 전체 {total}건 · 받은 {len(rows)}건')
+        print(txt[:1100])
+        print('가져온 항목 이름들:', sorted({k for r in rows for k in r}))
+    q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': 1, 'numOfRows': 100, 'workPlcNm': '구리'})
+    rows, total = items(fetcher(f"{BASE}{cfg['listOp']}?{q}"))
+    from collections import Counter
+    print('구리 1쪽 접수상태:', Counter(r.get('deadline') for r in rows))
+    print('구리 1쪽 근무지:', Counter((r.get('workPlc'), r.get('workPlcNm')) for r in rows).most_common(6))
+    print('구리 1쪽 접수시작일 앞/뒤:', rows[0].get('frDd') if rows else None, rows[-1].get('frDd') if rows else None)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument('--out', default=os.environ.get('GUNGRI_FEED_DIR', 'feed'))
     ap.add_argument('--mock', action='store_true')
     ap.add_argument('--probe', action='store_true')
     ap.add_argument('--probe2', action='store_true')
+    ap.add_argument('--probe3', action='store_true')
     ap.add_argument('--today', default=None)
     a = ap.parse_args(argv)
     cfg, _ = load_cfg()
@@ -196,8 +214,10 @@ def main(argv=None):
         fetcher, key = mock_fetch, 'MOCK'
     if not key:
         print('SENURI_KEY(공공데이터포털 인증키)가 없습니다.', file=sys.stderr); return 2
+    if a.probe3:
+        probe3(cfg, key, fetcher); return 0
     if a.probe2:
-        probe2(cfg, key, fetcher); return 0
+        probe3(cfg, key, fetcher); return 0
     if a.probe:
         q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': 1, 'numOfRows': 2})
         print(fetcher(f"{BASE}{cfg['listOp']}?{q}")[:1500]); return 0
