@@ -36,12 +36,18 @@ jobs:
         env:
           SENURI_KEY: ${{ secrets.SENURI_KEY }}
         run: python -m collector.senuri --out feed
+      - name: 시니어 일자리 수행기관 수집
+        continue-on-error: true
+        env:
+          SENURI_KEY: ${{ secrets.SENURI_KEY }}
+        run: python -m collector.orgs --out feed
       - name: 피드 저장(바뀐 경우만)
         run: |
           git config user.name  "gungri-collector"
           git config user.email "gungri-collector@users.noreply.github.com"
           git add feed/gungri_feed.json feed/state.json
           if [ -f feed/gungri_jobs.json ]; then git add feed/gungri_jobs.json; fi
+          if [ -f feed/gungri_orgs.json ]; then git add feed/gungri_orgs.json; fi
           if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
           git commit -m "feed: $(date -u +%F) 자동 수집"
           # 수집하는 동안 저장소가 바뀌었으면(직접 올린 파일 등) 최신을 받아 이 결과를 위에 얹고 다시 저장
