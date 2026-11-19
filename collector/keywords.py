@@ -31,11 +31,14 @@ def cfg():
     return {'model': MODEL, 'maxPerRun': 250, 'batch': 8, **c}
 
 
+_WS = re.compile(r'\s+')
+
+
 def text_of(p):
     parts = [('이름', p.get('n')), ('지역', ' '.join(filter(None, [p.get('ar'), p.get('r')]))), ('분류', ' '.join(p.get('k') or [])),
              ('한줄', p.get('why')), ('소개', p.get('summary') or p.get('overview')), ('볼거리', ' / '.join(p.get('highlights') or [])),
              ('체류', p.get('stay')), ('운영', p.get('hours')), ('요금', p.get('fee')), ('주차', p.get('parking')), ('설명', p.get('c')), ('상세', p.get('cl'))]
-    return '\n'.join(f'{k}: {re.sub(r"\s+", " ", str(v)).strip()[:500]}' for k, v in parts if v and str(v).strip())
+    return '\n'.join(k + ': ' + _WS.sub(' ', str(v)).strip()[:500] for k, v in parts if v and str(v).strip())
 
 
 def has_text(p):
