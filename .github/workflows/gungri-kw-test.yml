@@ -1,0 +1,27 @@
+name: 궁리 키워드 점검 (빠른 시험)
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 단위 시험
+        run: python -m unittest collector.test_keywords
+      - name: AI 키워드 시험(16곳만)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python -m collector.keywords --out /tmp/kw --max 16
+          python - <<'PY'
+          import json
+          d = json.load(open('/tmp/kw/gungri_keywords.json', encoding='utf-8'))
+          items = [(k, v) for k, v in d['items'].items() if v][:8]
+          print('키워드가 붙은 곳 예:')
+          for k, v in items:
+              print(k, [(x['k'] + ('?' if x['est'] else '')) for x in v])
+          PY
