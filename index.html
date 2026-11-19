@@ -24670,7 +24670,7 @@ function sendPlaceReq(){
   W.discPlacePass=function(x){var q=W.DISC_Q;if(!q)return P.call(this,x);W.DISC_Q='';var r;try{r=P.call(this,x);}finally{W.DISC_Q=q;}return r&&ok(x,q,baseP(x));};
   W.discEventPass=function(e){var q=W.DISC_Q;if(!q)return E.call(this,e);W.DISC_Q='';var r;try{r=E.call(this,e);}finally{W.DISC_Q=q;}return r&&ok(e,q,baseE(e));};
   W.discPlacePass.__kw=1;return true;}
- W.guriKeywordsOf=kwOf;
+ W.guriKeywordsOf=kwOf;W.guriKwTxt=txt;W.guriKwAlts=altsFor;W.guriKwSeason=season;W.guriKwC=C;
  /* 결과 카드에 키워드 표시 + 지금 철 추천 줄 */
  function find(id){var S=W.SPOTS||[];for(var i=0;i<S.length;i++)if(String(S[i].id)===id)return S[i];return null;}
  function evFind(id){var E=[];try{E=W.discEvents();}catch(e){}for(var i=0;i<E.length;i++)if(String(E[i].event_id||E[i].id)===id)return E[i];return null;}
@@ -24694,6 +24694,96 @@ function sendPlaceReq(){
  var t=null;function sched(){if(t)return;t=setTimeout(function(){t=null;try{wrap();decorate();}catch(e){}},60);}
  new MutationObserver(sched).observe(D.body||D.documentElement,{childList:true,subtree:true});wrap();sched();
  var st=D.createElement('style');st.textContent='#kwSug{margin:10px 0 2px}.kw-h{font-weight:800;font-size:16px;margin-bottom:6px}.kw-s{min-height:44px;margin:0 6px 6px 0;padding:0 14px;border-radius:22px;border:2px solid #0f6b45;background:#fff;color:#0f6b45;font-size:17px;font-weight:800}.kw-s i{font-style:normal;font-size:14px;opacity:.7}.kw-s.alt{border-color:#9aa8a1;color:#40504a}.kw-line{margin-top:8px}.kw-c{display:inline-block;margin:0 6px 4px 0;padding:2px 9px;border-radius:12px;background:#eef3f0;color:#2d5a45;font-size:14.5px}.kw-c.on{background:#0f6b45;color:#fff;font-weight:800}';
+ D.head.appendChild(st);
+})();
+
+</script>
+<script id="guri-r17-sc">
+(function(){'use strict';
+ var W=window,D=document;if(W.__guriSc)return;W.__guriSc=1;
+ /* 상황 사전: 자연어 문장 → 키워드·상황 → 점수. 하나라도 맞으면 보이고, 많이 맞는 곳이 위로 올라온다. */
+ var SC=[{"p":"주말 가족 나들이","a":["주말 가족 나들이","가족 나들이","주말 가족 여행","가족 외출","온 가족 나들이"],"pr":["공원","정원","호수·강변","체험·공예","먹거리","박물관","산책"],"m":[],"who":"가족","when":"주말","rg":"60km 이내","g":"동행"},{"p":"손주랑 가볼만한 곳","a":["손주랑 가볼만한 곳","손주와","손자 손녀","아이랑","아이와 함께"],"pr":["체험·공예","공원","박물관","실내","물놀이","먹거리"],"m":[],"who":"손주와","when":"","rg":"30km 이내","g":"동행"},{"p":"부부 데이트","a":["부부 데이트","부부 나들이","부부 여행","둘이서","남편이랑","아내랑"],"pr":["카페","호수·강변","야경","산책","한옥·전통마을","먹거리"],"m":[],"who":"부부와","when":"","rg":"","g":"동행"},{"p":"친구랑 나들이","a":["친구랑 나들이","친구와","동창 모임 장소","계모임","모임 장소"],"pr":["먹거리","전통시장","카페","산책","사진 찍기 좋아요"],"m":[],"who":"친구와","when":"","rg":"","g":"동행"},{"p":"혼자 산책","a":["혼자 산책","혼자 가기 좋은","나 홀로","혼자 여행","혼자 걷기"],"pr":["산책","호수·강변","숲·나무","도서관·책","미술관·전시"],"m":[],"who":"혼자","when":"","rg":"","g":"동행"},{"p":"동호회 단체 모임","a":["동호회 단체 모임","단체 모임","단체 나들이","모임 장소","단체로"],"pr":["단체 모임","체험·공예","먹거리","둘레길·트레킹"],"m":[],"who":"단체","when":"","rg":"","g":"동행"},{"p":"반려견 산책","a":["반려견 산책","강아지 산책","반려견 동반","댕댕이"],"pr":["산책","공원","호수·강변","숲·나무"],"m":["반려견 동반"],"who":"","when":"","rg":"","g":"동행"},{"p":"주말 여행","a":["주말 여행","주말 나들이","이번 주말","주말에 갈 만한 곳","주말 어디"],"pr":["여행 명소","호수·강변","산·등산","바다·해변","한옥·전통마을"],"m":[],"who":"","when":"주말","rg":"전국 포함","g":"시간"},{"p":"주말 드라이브","a":["주말 드라이브","드라이브","드라이브 코스","차로 가기 좋은"],"pr":["호수·강변","바다·해변","산·등산","야경","카페"],"m":["주차 편함"],"who":"","when":"주말","rg":"30~120km","g":"시간"},{"p":"당일치기 여행","a":["당일치기 여행","당일 여행","당일치기","하루 코스","하루 여행"],"pr":["여행 명소","전통시장","박물관","호수·강변"],"m":[],"who":"","when":"","rg":"100km 이내","g":"시간"},{"p":"반나절 코스","a":["반나절 코스","반나절","오전만","오후 짧게","짧은 코스"],"pr":["산책","박물관","전통시장","카페"],"m":[],"who":"","when":"","rg":"30km 이내","g":"시간"},{"p":"1박 2일 여행","a":["1박 2일 여행","1박2일","1박 2일 코스","일박 이일"],"pr":["여행 명소","바다·해변","산·등산","한옥·전통마을"],"m":[],"who":"","when":"","rg":"전국","g":"시간"},{"p":"아침 산책","a":["아침 산책","새벽 산책","아침에 걷기","모닝 산책","조깅"],"pr":["호수·강변","숲·나무","평지 산책","일출·일몰"],"m":["산책"],"who":"","when":"","rg":"10km 이내","g":"시간"},{"p":"저녁 산책·야경","a":["저녁 산책·야경","야경","밤 산책","저녁에 걷기","야간 나들이"],"pr":["야경","호수·강변","일출·일몰","산책"],"m":[],"who":"","when":"","rg":"30km 이내","g":"시간"},{"p":"평일 한적한 곳","a":["평일 한적한 곳","붐비지 않는","조용한 곳","사람 없는","한적한"],"pr":["힐링·휴식","숲·나무","호수·강변","도서관·책"],"m":[],"who":"","when":"평일","rg":"","g":"시간"},{"p":"오늘 어디 갈까","a":["오늘 어디 갈까","오늘 갈 곳","오늘 뭐 하지","지금 가볼 곳"],"pr":["(지금 철 키워드)","산책","박물관"],"m":[],"who":"","when":"오늘","rg":"20km 이내","g":"시간"},{"p":"여행 명소","a":["여행 명소","관광지","대표 명소","가볼 만한 곳","유명한 곳","핫플"],"pr":["여행 명소","사진 찍기 좋아요","역사·유적","호수·강변"],"m":[],"who":"","when":"","rg":"전국","g":"목적"},{"p":"걷기 좋은 길","a":["걷기 좋은 길","걷기","걷기 좋은 곳","산책로","트레킹","둘레길"],"pr":["둘레길·트레킹","산책","평지 산책","호수·강변","숲·나무"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"가벼운 등산","a":["가벼운 등산","쉬운 산","낮은 산","초보 등산","힐링 등산"],"pr":["산·등산","숲·나무","산책"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"힐링","a":["힐링","힐링 여행","쉬러 가기","마음 편한 곳","휴식"],"pr":["힐링·휴식","숲·나무","호수·강변","사찰·고택"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"사진 찍기 좋은 곳","a":["사진 찍기 좋은 곳","포토스팟","인생샷","사진 명소","출사"],"pr":["사진 찍기 좋아요","(지금 철 키워드)","야경","일출·일몰"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"맛집·먹거리 구경","a":["맛집·먹거리 구경","먹거리","먹방","맛있는 곳","시장 구경","로컬푸드"],"pr":["전통시장","먹거리","로컬푸드","막걸리·전통주"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"전통시장 구경","a":["전통시장 구경","시장","장 구경","오일장","재래시장"],"pr":["전통시장","먹거리","로컬푸드"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"전시 관람","a":["전시 관람","전시","미술관","박물관","갤러리","문화생활"],"pr":["미술관·전시","박물관","건축","공연"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"역사 탐방","a":["역사 탐방","역사 여행","문화재","유적지","궁궐","한옥"],"pr":["역사·유적","궁궐·성곽","한옥·전통마을","사찰·고택","박물관"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"체험 활동","a":["체험 활동","체험","만들기","공예 체험","농촌 체험","원데이 클래스"],"pr":["체험·공예","농촌체험","로컬푸드"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"책 읽기 좋은 곳","a":["책 읽기 좋은 곳","조용한 곳","도서관","책 읽기","북카페"],"pr":["도서관·책","카페","힐링·휴식"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"공연·축제","a":["공연·축제","축제","행사","공연 보러","페스티벌"],"pr":["공연","축제","주말 행사"],"m":[],"who":"","when":"","rg":"","g":"목적"},{"p":"꽃구경","a":["꽃구경","꽃 구경","꽃놀이","꽃길","꽃 명소"],"pr":["(지금 철 꽃: 벚꽃·철쭉·유채꽃·튤립·장미·수국·연꽃·해바라기·코스모스)"],"m":[],"who":"","when":"","rg":"","g":"계절"},{"p":"벚꽃 구경","a":["벚꽃 구경","벚꽃","벚꽃 명소","벗꽃","벚꽃길","벚꽃 축제"],"pr":["벚꽃"],"m":[],"who":"","when":"","rg":"","g":"계절"},{"p":"단풍 구경","a":["단풍 구경","단풍","단풍놀이","단풍 명소","가을 단풍","낙엽"],"pr":["단풍","은행나무"],"m":[],"who":"","when":"","rg":"","g":"계절"},{"p":"은행나무길","a":["은행나무길","은행나무","은행잎","노란 길"],"pr":["은행나무"],"m":[],"who":"","when":"","rg":"","g":"계절"},{"p":"가을 나들이","a":["가을 나들이","가을 여행","가을 산책","가을에 가볼 곳","가을 풍경"],"pr":["단풍","은행나무","억새","코스모스"],"m":[],"who":"","when":"","rg":"","g":"계절"},{"p":"봄 나들이","a":["봄 나들이","봄 여행","봄 산책","봄에 가볼 곳","봄꽃"],"pr":["벚꽃","유채꽃","철쭉·진달래","튤립"],"m":[],"who":"","when":"","rg":"","g":"계절"},{"p":"여름 피서","a":["여름 피서","피서","시원한 곳","더울 때","여름 여행","물놀이"],"pr":["물놀이","계곡·폭포","숲·나무","바다·해변","실내"],"m":[],"who":"","when":"","rg":"","g":"계절"},{"p":"겨울 나들이","a":["겨울 나들이","겨울 여행","눈꽃","설경","눈 구경","겨울 산책"],"pr":["눈꽃","실내","일출·일몰","야경"],"m":[],"who":"","when":"","rg":"","g":"계절"},{"p":"비 오는 날","a":["비 오는 날","비 오는 날 갈 곳","우천 실내","비 올 때"],"pr":["박물관","미술관·전시","전통시장","도서관·책","카페"],"m":["실내"],"who":"","when":"","rg":"","g":"날씨"},{"p":"추운 날 실내","a":["추운 날 실내","추울 때","겨울 실내","따뜻한 곳"],"pr":["박물관","미술관·전시","카페","전통시장"],"m":["실내"],"who":"","when":"","rg":"","g":"날씨"},{"p":"무리 없는 나들이","a":["무리 없는 나들이","편한 코스","쉬운 코스","무릎 안 아픈","걷기 편한","쉬운 길"],"pr":["평지 산책","호수·강변","화장실·쉼터 많음","박물관"],"m":[],"who":"","when":"","rg":"20km 이내","g":"체력"},{"p":"휠체어·유모차 가능","a":["휠체어·유모차 가능","휠체어","유모차","계단 없는","무장애"],"pr":["평지 산책","박물관","공원"],"m":["유모차·휠체어"],"who":"","when":"","rg":"","g":"체력"},{"p":"오래 걷기 힘들 때","a":["오래 걷기 힘들 때","조금만 걷는","짧게 걷기","쉬엄쉬엄"],"pr":["평지 산책","카페","화장실·쉼터 많음"],"m":[],"who":"","when":"","rg":"10km 이내","g":"체력"},{"p":"가까운 곳","a":["가까운 곳","근처","가까운","집 근처","내 주변","동네"],"pr":["(거리순)"],"m":[],"who":"","when":"","rg":"10km 이내","g":"이동"},{"p":"지하철 여행","a":["지하철 여행","지하철로 가는","대중교통","버스로 가는"],"pr":["산책","박물관","전통시장","카페"],"m":["지하철 가까움"],"who":"","when":"","rg":"","g":"이동"},{"p":"무료로 즐기기","a":["무료로 즐기기","무료","공짜","입장료 없는","돈 안 드는"],"pr":["산책","공원","박물관","전통시장"],"m":["무료"],"who":"","when":"","rg":"","g":"비용"}];
+ function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function rx(s){return String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+ var PM={'공원':'공원','정원':'정원|수목원|식물원','호수·강변':'호수|강변|하천|수변|물길|저수지|천변','체험·공예':'체험|공예|만들기|클래스|도예','먹거리':'먹거리|맛집|음식|식당|시장|푸드|한식|막걸리|국밥',
+  '박물관':'박물관','산책':'산책|둘레길|산책로|숲길|걷기|걷는','실내':'실내|박물관|미술관|전시|도서관|체험관','물놀이':'물놀이|워터|분수|계곡|수영장','카페':'카페|커피|찻집','야경':'야경|야간|조명|불빛',
+  '한옥·전통마을':'한옥|전통마을|민속촌|고택','전통시장':'시장|오일장','사진 찍기 좋아요':'사진|포토|인생샷|전망','숲·나무':'숲|수목|나무|삼림욕|피톤치드','도서관·책':'도서관|북카페|문고|책',
+  '미술관·전시':'미술관|전시|갤러리','단체 모임':'단체|모임','둘레길·트레킹':'둘레길|트레킹|올레길|누리길|갈맷길','여행 명소':'명소|관광|대표','산·등산':'등산|산행|능선|봉우리',
+  '바다·해변':'바다|해변|해수욕|해안|갯벌|포구','평지 산책':'평지|무장애|산책로|둘레길|공원','일출·일몰':'일출|해돋이|일몰|노을|석양','힐링·휴식':'힐링|휴식|쉼|치유|명상',
+  '역사·유적':'역사|유적|문화재|사적|고분|유산','사찰·고택':'사찰|고택|암자','로컬푸드':'로컬푸드|농산물|직매장|특산','막걸리·전통주':'막걸리|전통주|양조','건축':'건축|한옥',
+  '공연':'공연|연극|콘서트|음악회','궁궐·성곽':'궁궐|성곽|산성|행궁','농촌체험':'농촌|농장|체험마을','축제':'축제|페스티벌','계곡·폭포':'계곡|폭포',
+  '벚꽃':'벚꽃|벚나무|벗꽃|벚길','단풍':'단풍|만추','은행나무':'은행나무|은행길|은행잎','억새':'억새|갈대','코스모스':'코스모스','유채꽃':'유채','철쭉·진달래':'철쭉|진달래','튤립':'튤립','눈꽃':'눈꽃|설경|상고대'};
+ var MM={'반려견 동반':'반려|애견|펫|강아지','주차 편함':'주차','유모차·휠체어':'유모차|휠체어|무장애|배리어프리','지하철 가까움':'지하철|역세권','무료':'무료|입장료 없'};
+ var WORDS=[[/친구|동창|계모임/,'친구와','who'],[/가족|식구/,'가족과','who'],[/손주|손자|손녀|아기/,'손주와','who'],[/부부|남편|아내|여자친구|남자친구|연인|애인|둘이/,'둘이서','who'],[/혼자|나홀로/,'혼자','who'],
+  [/주말|토요일|일요일/,'주말','when'],[/평일/,'평일','when'],[/아침|새벽/,'아침','when',['산책']],[/저녁|야간/,'저녁·밤','when',['야경']],
+  [/식사|맛집|점심|먹거리|밥/,'식사','want',['먹거리']],[/한잔|술|막걸리|맥주|와인/,'한잔','want',['먹거리','막걸리·전통주']],
+  [/근교|가까운|근처|동네/,'가까운 곳','range'],[/요즘|뜨는|인기|핫플/,'요즘 뜨는','trend']];
+ var GENPH=['주말 여행','주말 드라이브','당일치기 여행','반나절 코스','1박 2일 여행','오늘 어디 갈까','여행 명소','가까운 곳','지하철 여행','평일 한적한 곳'];
+ var GEN=/여행|나들이|나들|관광|명소|가볼|갈만한|갈\s*만한|놀러|추천|어디|장소|코스|구경|좋은|있는|하는|곳$/;
+ var PART=/(에서|에는|에도|으로|이랑|하고|하며|할수|할|랑|과|와|의|에|도|만|를|을|은|는|이|가|쪽|근처)$/;
+ var C=function(){return W.guriKwC||[];};
+ function evName(e){try{return W.discEventName?W.discEventName(e):(e.name||e.title||'');}catch(x){return e.name||'';}}
+ function curKws(){var s=W.guriKwSeason?W.guriKwSeason():'';return C().filter(function(c){return c[1]===s;}).map(function(c){return c[0];});}
+ var IC={};
+ function scnHit(qs){var h=[];SC.forEach(function(s){var b=0;s.a.forEach(function(p){var n=p.replace(/\s+/g,'');if(n.length>=2&&qs.indexOf(n)>=0&&n.length>b)b=n.length;});if(b)h.push([b,s]);});h.sort(function(a,b){return b[0]-a[0];});return h.slice(0,3);}
+ function recognized(t){var qs=t.replace(/\s+/g,'');return GEN.test(qs)||C().some(function(c){return new RegExp(c[3]).test(qs);})||/봄|여름|가을|겨울/.test(qs)||WORDS.some(function(w){return w[0].test(qs);})||scnHit(qs).length>0;}
+ function nameHit(t){var S=W.SPOTS||[],i;for(i=0;i<S.length;i++){if(S[i].admin_hidden!==true&&[S[i].n,S[i].ar,S[i].r,S[i].a].join(' ').indexOf(t)>=0)return true;}
+  try{var E=W.discEvents();for(i=0;i<E.length;i++){if([evName(E[i]),E[i].region||E[i].area||'',E[i].place_name||E[i].venue_text||E[i].address||''].join(' ').indexOf(t)>=0)return true;}}catch(x){}return false;}
+ function interpret(q){if(IC[q]!==undefined)return IC[q];var terms=[],chips=[],seen={},names=[],rest=[];
+  q.split(/[\s,#]+/).forEach(function(t){t=t.trim();if(!t)return;var u=t.replace(PART,'');if(u.length<2)u=t;
+   var kwFull=C().some(function(c){return new RegExp('^(?:'+c[3]+')$').test(u);})||/^(봄|여름|가을|겨울)/.test(u);
+   if(!kwFull&&u.length>=2&&!GEN.test(u)&&!WORDS.some(function(w){return w[0].test(u);})&&!scnHit(u).length&&nameHit(u))names.push(u);else rest.push(t);});
+  var qs=rest.join('').replace(/[\s,#]+/g,'');
+  function add(label,w,req,o){if(seen[label]){if(w>seen[label].w)seen[label].w=w;if(req)seen[label].req=true;if(o.pass)seen[label].pass=true;return;}var t={label:label,w:w,req:req,re:o.re||null,kws:o.kws||null,base:!!o.base,hard:!!o.hard,pass:!!o.pass,boost:!!o.boost};seen[label]=t;terms.push(t);}
+  function pref(name,w,req,boost){if(!name)return;if(name.charAt(0)==='('){if(/지금 철/.test(name)){var k=curKws();if(k.length)add('지금 철 꽃·풍경',1,false,{kws:k});}return;}
+   var kw=C().some(function(c){return c[0]===name;});if(PM[name]||kw)add(name,w,req,{re:PM[name]||null,kws:kw?[name]:null,boost:!!boost});}
+  C().forEach(function(c){if(new RegExp(c[3]).test(qs))add(c[0],3,true,{kws:[c[0]],pass:true});});
+  ['봄','여름','가을','겨울'].forEach(function(s){if(qs.indexOf(s)>=0){var k=C().filter(function(c){return c[1]===s;}).map(function(c){return c[0];});if(k.length)add(s+' 풍경',2,true,{kws:k,pass:true});}});
+  scnHit(qs).forEach(function(h){var s=h[1];chips.push({t:s.p,k:'scn'});var gen=GENPH.indexOf(s.p)>=0;s.pr.forEach(function(p){pref(p,1,false,gen);});s.m.forEach(function(m){if(MM[m])add(m,2,!gen,{re:MM[m],boost:gen});else pref(m,2,!gen,gen);});
+   if(s.who)chips.push({t:s.who,k:'who'});if(s.when)chips.push({t:s.when,k:'when'});});
+  WORDS.forEach(function(w){if(w[0].test(qs)){chips.push({t:w[1],k:w[2]});(w[3]||[]).forEach(function(p){pref(p,w[2]==='want'?2:1,w[2]==='want');});}});
+  if(/여행|나들이|나들|관광|명소|가볼|갈만한|갈\s*만한|놀러/.test(qs)){chips.push({t:'여행·나들이',k:'gen'});pref('여행 명소',1,false,true);}
+  names.forEach(function(u){add('“'+u+'”',3,true,{re:rx(u),base:true,hard:true});});
+  var seenChip={};chips=chips.filter(function(c){var k=c.k+c.t;if(seenChip[k])return false;seenChip[k]=1;return true;});
+  var r=(terms.length||chips.length)?{terms:terms,chips:chips,hasReq:terms.some(function(t){return t.req;}),hasKw:terms.some(function(t){return t.pass;}),hasSoft:terms.some(function(t){return !t.hard&&!t.boost;})}:null;IC[q]=r;return r;}
+ function textOf(x,ev){var t=(W.guriKwTxt?W.guriKwTxt(x):'')+' '+(ev?evName(x):'');return t.toLowerCase();}
+ function baseOf(x,ev){return (ev?[evName(x),x.place_name||x.venue_text||x.address||'',x.region||x.area||''].join(' '):[x.n,x.ar,x.r,x.a].join(' ')).toLowerCase();}
+ function score(x,it,ev){var kws=W.guriKeywordsOf?W.guriKeywordsOf(x):[],tx=textOf(x,ev),bs=baseOf(x,ev),s=0,hits=[],all=true,hard=true,kwHit=false,soft=0,maxS=0;
+  it.terms.forEach(function(t){maxS+=t.w;var h=false;if(t.kws&&t.kws.some(function(k){return kws.indexOf(k)>=0;}))h=true;if(!h&&t.re&&new RegExp(t.re,'i').test(t.base?bs:tx))h=true;
+   if(h){s+=t.w;hits.push(t.label);if(!t.hard){if(!t.boost)soft+=t.w;if(t.pass)kwHit=true;}}else{if(t.req)all=false;if(t.hard)hard=false;}});
+  /* 통과 규칙: 장소·지역 이름은 꼭 맞아야 하고, 직접 말한 키워드가 있으면 그중 하나는 맞아야 하며, 없으면 상황 사전 키워드 중 하나라도 맞으면 된다 */
+  var pass=hard&&(it.hasKw?kwHit:(it.hasSoft?soft>0:true));
+  return {score:pass?s:0,hits:pass?hits:[],all:pass&&all&&hits.length>0,pass:pass,pct:maxS?s/maxS:0};}
+ var curQ=null;
+ function wrap(){var P=W.discPlacePass,E=W.discEventPass;if(typeof P!=='function'||typeof E!=='function'||!P.__kw||P.__sc)return false;
+  function run(f,self,x,ev){var q=String(W.DISC_Q||'');var it=q?interpret(q):null;if(!it)return f.call(self,x);
+   if(curQ!==q){curQ=q;W.__scAll=false;}
+   W.DISC_Q='';var r;try{r=f.call(self,x);}finally{W.DISC_Q=q;}if(!r)return false;var h=score(x,it,ev);return h.pass;}
+  W.discPlacePass=function(x){return run(P,this,x,false);};W.discEventPass=function(e){return run(E,this,e,true);};
+  W.discPlacePass.__kw=1;W.discPlacePass.__sc=1;W.discEventPass.__kw=1;return true;}
+ function find(id){var S=W.SPOTS||[];for(var i=0;i<S.length;i++)if(String(S[i].id)===id)return S[i];return null;}
+ function evFind(id){var E=[];try{E=W.discEvents();}catch(e){}for(var i=0;i<E.length;i++)if(String(E[i].event_id||E[i].id)===id)return E[i];return null;}
+ function decorate(){var inp=D.getElementById('discQ');var box=D.getElementById('scBox');var sug=D.getElementById('kwSug');var q=String(W.DISC_Q||'');var it=q?interpret(q):null;
+  if(!inp||!it){if(box)box.parentNode.removeChild(box);if(sug)sug.style.display='';return;}
+  var cards=[].slice.call(D.querySelectorAll('button.card[data-go^="s:"],button.card[data-goevent]'));
+  var info=cards.map(function(b,i){var sp=b.getAttribute('data-go'),id=sp?sp.slice(2):b.getAttribute('data-goevent'),x=sp?find(id):evFind(id);return {b:b,i:i,h:x?score(x,it,!sp):{score:0,hits:[],all:false}};});
+  var nAll=info.filter(function(o){return o.h.all;}).length;
+  var key=q+'|'+cards.length+'|'+nAll;
+  if(!box){box=D.createElement('div');box.id='scBox';var row=inp.parentNode;row.parentNode.insertBefore(box,row.nextSibling);}
+  if(sug)sug.style.display='none';
+  if(box.getAttribute('data-k')!==key){box.setAttribute('data-k',key);
+   var h='<div class="sc-h">이렇게 이해했어요</div><div class="sc-chips">'+it.terms.map(function(t){return '<span class="sc-c'+(t.req?' req':'')+'">'+esc(t.label.charAt(0)==='“'?t.label:'#'+t.label)+'</span>';}).join('')+'</div>';
+   var ref=it.chips.filter(function(c){return c.k==='who'||c.k==='when'||c.k==='range'||c.k==='trend';});
+   if(ref.length)h+='<div class="sc-ref">참고: '+ref.map(function(c){return esc(c.t);}).join(' · ')+(ref.some(function(c){return c.k==='trend';})?' (뜨는 곳은 이용 기록이 쌓이면 반영돼요)':' (아직 순서에는 반영하지 않아요)')+'</div>';
+   h+='<div class="sc-n">'+(cards.length?(it.terms.length?'맞는 곳 '+cards.length+'곳 · 정확도 높은 순으로 보여 드려요':'정해진 조건이 없어서 모든 곳을 가까운 순으로 보여 드려요'):'딱 맞는 곳이 아직 없어요. 다른 말로 찾아보세요.')+'</div>';
+   box.innerHTML=h;}
+  if(cards.length&&cards[0].parentNode.getAttribute('data-scq')!==key){var parent=cards[0].parentNode,last=cards[cards.length-1],ref2=last.nextSibling;
+   var sorted=info.slice().sort(function(a,b){return (b.h.score-a.h.score)||(a.i-b.i);});var fr=D.createDocumentFragment();sorted.forEach(function(o){fr.appendChild(o.b);});parent.insertBefore(fr,ref2);parent.setAttribute('data-scq',key);}
+  info.forEach(function(o){if(o.b.querySelector('.sc-why'))return;if(!o.h.hits.length)return;var d=D.createElement('div');d.className='sc-why';var lv=o.h.pct>=0.7?'정확도 높음':(o.h.pct>=0.4?'정확도 보통':'정확도 낮음');d.textContent=lv+' · 맞는 점: '+o.h.hits.slice(0,5).join(' · ');d.setAttribute('data-lv',lv);o.b.appendChild(d);});}
+ W.guriInterpret=interpret;W.guriScDecorate=function(){return decorate();};
+ var t=null;function sched(){if(t)return;t=setTimeout(function(){t=null;try{wrap();decorate();}catch(e){}},120);}
+ new MutationObserver(sched).observe(D.body||D.documentElement,{childList:true,subtree:true});sched();
+ var st=D.createElement('style');st.textContent='#scBox{margin:10px 0 4px;padding:12px 14px;border:2px solid #0f6b45;border-radius:16px;background:#f3faf6}.sc-h{font-weight:800;font-size:16px;margin-bottom:6px;color:#0f6b45}.sc-c{display:inline-block;margin:0 6px 6px 0;padding:6px 12px;border-radius:18px;background:#fff;border:1px solid #9cc9b4;font-size:16px;font-weight:700}.sc-c.req{background:#0f6b45;color:#fff;border-color:#0f6b45}.sc-ref,.sc-n{font-size:14.5px;color:#444;margin-top:2px}.sc-why{margin-top:7px;font-size:14.5px;font-weight:700;color:#0f6b45}';
  D.head.appendChild(st);
 })();
 
