@@ -24574,7 +24574,7 @@ function sendPlaceReq(){
  function loadOrgs(){if(S.orgs!==null)return;S.orgs=[];fetch(orgsUrl(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(j){if(j&&j.schema==='GUNGRI_ORGS_V1'&&Array.isArray(j.orgs)){S.orgs=j.orgs;paint();}}).catch(function(){});}
  function nmap(q){return 'https://map.naver.com/p/search/'+encodeURIComponent(q);}
  function telOk(t){return /^[0-9][0-9\-\s]{6,14}$/.test(t||'');}
- function orgHtml(o){var t=telOk(o.tel)?'<a class="jb-a" href="tel:'+esc(String(o.tel).replace(/[^0-9]/g,''))+'">'+esc(o.tel)+' 전화하기</a> ':'';return '<div class="jb-card"><b>'+esc(o.name)+'</b><div class="jb-m">'+esc([o.kind,o.addr].filter(Boolean).join(' · '))+'</div>'+t+'<a class="jb-a" href="'+esc(nmap(o.name))+'" target="_blank" rel="noopener noreferrer">지도에서 찾기</a></div>';}
+ function orgHtml(o){var t=telOk(o.tel)?'<a class="jb-a" href="tel:'+esc(String(o.tel).replace(/[^0-9]/g,''))+'">'+esc(o.tel)+' 전화하기</a> ':'';return '<div class="jb-card"><b>'+esc(o.name)+'</b><div class="jb-m">'+esc([o.kind,o.addr].filter(Boolean).join(' · '))+'</div>'+t+'<a class="jb-a" href="'+esc(nmap(o.name))+'" target="_blank" rel="noopener noreferrer">지도에서 전화번호 보기</a></div>';}
  function jobsUrl(){var u=ls('GUNGRI_FEED_URL')||DEF;return u.replace(/[^\/]*$/,'gungri_jobs.json');}
  function load(force){if(S.loading)return;var c=ls('GUNGRI_JOBS_CACHE');
   if(!force&&c){try{var j=JSON.parse(c);if(j&&j.jobs){S.jobs=j.jobs;S.at=(j.generatedAt||'').slice(0,10);}}catch(e){}}
@@ -24583,19 +24583,21 @@ function sendPlaceReq(){
    if(!j||j.schema!=='GUNGRI_JOBS_V1'||!Array.isArray(j.jobs))throw new Error('format');
    S.jobs=j.jobs;S.at=(j.generatedAt||'').slice(0,10);S.err='';ls('GUNGRI_JOBS_CACHE',JSON.stringify(j));},
    function(){S.err=S.jobs?'':'아직 올라온 일자리 목록이 없어요.';}).then(function(){S.loading=false;paint();});}
+ function uniq(a){var m={},o=[];a.forEach(function(j){var k=String(j.title||'').replace(/\s+/g,'')+'|'+String(j.org||'').replace(/\s+/g,'');if(m[k]===undefined){m[k]=o.length;o.push(j);}else if((j.end||'')>(o[m[k]].end||'')){o[m[k]]=j;}});return o;}
+ function fixPlace(j){if(j&&/구리·남양주·하남 인근/.test(j.place||'')){j=Object.assign({},j,{place:'경기 인근'});}return j;}
  function alive(j){var t=new Date().toISOString().slice(0,10);return !j.end||j.end>=t;}
  function jobHtml(j){var meta=[j.place,j.kind,j.age,j.end?('~'+j.end.slice(5).replace('-','/')+' 마감'):''].filter(Boolean).map(esc).join(' · ');
   var a=/^https:\/\//.test(j.link||'')?'<a class="jb-a" href="'+esc(j.link)+'" target="_blank" rel="noopener noreferrer">공고 자세히 보기</a>':'';
   return '<div class="jb-card"><b>'+esc(j.title)+'</b><div class="jb-m">'+meta+'</div>'+(j.org?'<div class="jb-m">기관: '+esc(j.org)+'</div>':'')+(j.summary?'<div class="jb-s">'+esc(j.summary.slice(0,120))+'</div>':'')+a+'</div>';}
  function paint(){var el=D.getElementById('grJb');if(!el||el.style.display==='none')return;
-  var list=(S.jobs||[]).filter(alive).filter(function(j){return S.region==='전체'||(j.place+j.title+j.org).indexOf(S.region)>=0;});
+  var list=uniq((S.jobs||[]).map(fixPlace).filter(alive)).filter(function(j){return S.region==='전체'||(j.place+j.title+j.org).indexOf(S.region)>=0;});
   var h='<div class="jb-sheet" role="dialog" aria-modal="true" aria-label="일·용돈벌이 길잡이"><div class="jb-top"><b>일·용돈벌이 길잡이</b><button type="button" class="jb-x" data-jb="close">닫기</button></div>'+
    '<div class="jb-note">나이와 상관없이 할 수 있는 일, 용돈벌이 일을 공식 기관 정보로 안내해 드려요. 신청과 지원은 각 기관 사이트에서 해요.</div>'+
    '<h3>지금 올라온 시니어 일자리</h3><div class="jb-tabs">'+['전체','구리','남양주'].map(function(r){return '<button type="button" data-jb="reg" data-r="'+r+'" class="'+(S.region===r?'on':'')+'">'+r+'</button>';}).join('')+'</div>'+
    (S.loading&&!S.jobs?'<div class="jb-m">불러오는 중…</div>':'')+
    (list.length?list.slice(0,30).map(jobHtml).join(''):(S.jobs||S.err?'<div class="jb-m">'+esc(S.err||'지금 접수 중인 공고가 이 지역에는 없어요. 목록은 매일 새벽에 새로 불러오고 있어요. 아래 ‘우리 동네 문의처’와 기관 사이트도 함께 확인해 보세요.')+'</div>':''))+
    (S.at?'<div class="jb-m">목록 갱신: '+esc(S.at)+' · 출처: 한국노인인력개발원 노인일자리여기(100세누리)</div>':'')+
-   '<h3>우리 동네 문의처</h3>'+(S.orgs&&S.orgs.length?S.orgs.filter(function(o){return (o.addr||'').indexOf('구리')>=0||(o.addr||'').indexOf('남양주')>=0||(o.area||'').indexOf('구리')>=0||(o.area||'').indexOf('남양주')>=0;}).slice(0,12).map(orgHtml).join(''):'')+
+   '<h3>우리 동네 문의처</h3><div class="jb-m">전화번호는 공공데이터에서 가려져 와서, 지도 버튼을 누르면 번호를 볼 수 있어요.</div>'+(S.orgs&&S.orgs.length?S.orgs.filter(function(o){return (o.addr||'').indexOf('구리')>=0||(o.addr||'').indexOf('남양주')>=0||(o.area||'').indexOf('구리')>=0||(o.area||'').indexOf('남양주')>=0;}).slice(0,12).map(orgHtml).join(''):'')+
    ['구리 시니어클럽','남양주 시니어클럽','구리 노인복지관','남양주 노인복지관'].map(function(q){return '<div class="jb-card"><b>'+esc(q)+'</b><div class="jb-s">시니어클럽·노인복지관은 노인일자리 사업을 안내해 줘요. 지도에서 위치와 전화번호를 확인하세요.</div><a class="jb-a" href="'+esc(nmap(q))+'" target="_blank" rel="noopener noreferrer">지도에서 찾기</a></div>';}).join('')+
    '<div class="jb-card"><b>보건복지상담센터 129</b><div class="jb-s">노인일자리 사업 참여 방법이 궁금하면 물어볼 수 있어요. (국번 없이)</div><a class="jb-a" href="tel:129">129 전화하기</a></div>'+
    '<h3>직접 찾아보는 곳</h3>'+LINKS.map(function(l){return '<div class="jb-card"><b>'+esc(l[0])+'</b><div class="jb-s">'+esc(l[1])+'</div><a class="jb-a" href="'+esc(l[2])+'" target="_blank" rel="noopener noreferrer">사이트 열기</a></div>';}).join('')+
