@@ -24651,11 +24651,18 @@ function sendPlaceReq(){
  function txt(x){var d=x.contentDetail||{},p=[];
   [x.n,x.name,x.title,x.why,x.c,x.cl,x.summary,x.place_name,d.summary,d.overview,d.highlights&&d.highlights.join?d.highlights.join(' '):'',d.stay].forEach(function(v){if(v)p.push(v);});
   [x.k,x.tags,x.theme,x.kw].forEach(function(a){if(a)p.push(typeof a==='string'?a:a.join(' '));});return p.join(' ');}
- var cache={};
- function kwOf(x){if(!x)return [];var id=String(x.id||x.event_id||x.feedId||x.n||x.name||''),t=txt(x),ck=id+'|'+t.length;if(cache[ck])return cache[ck];
+ var cache={},AI={},AIV=0,AIE={};
+ function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v);}catch(e){return null;}}
+ function aiUrl(){var u=ls('GUNGRI_FEED_URL')||'https://raw.githubusercontent.com/colorsp-ai/gungri-feed/main/feed/gungri_feed.json';return u.replace(/[^\/]*$/,'gungri_keywords.json');}
+ function aiSet(items){AI={};AIE={};Object.keys(items||{}).forEach(function(id){var l=items[id]||[];AI[id]=l.map(function(o){if(o.est)AIE[id+'|'+o.k]=1;return o.k;});});AIV++;cache={};}
+ function aiLoad(){var c=ls('GUNGRI_KW_CACHE');if(c){try{var j=JSON.parse(c);if(j&&j.items)aiSet(j.items);}catch(e){}}
+  fetch(aiUrl(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(j){if(!j||j.schema!=='GUNGRI_KW_V1'||!j.items)return;var o={};Object.keys(j.items).forEach(function(id){o[id]=(j.items[id]||[]).map(function(x){return {k:x.k,est:!!x.est};});});aiSet(o);ls('GUNGRI_KW_CACHE',JSON.stringify({items:o}));sched();}).catch(function(){});}
+ W.guriKwAiEst=function(id,k){return !!AIE[String(id)+'|'+k];};
+ function kwOf(x){if(!x)return [];var id=String(x.id||x.event_id||x.feedId||x.n||x.name||''),t=txt(x),ck=id+'|'+t.length+'|'+AIV;if(cache[ck])return cache[ck];
   var out=[];(x.kw||[]).forEach(function(k){if(out.indexOf(k)<0)out.push(k);});
   SEED.forEach(function(s){if(s[0].test(x.n||x.name||''))s[1].forEach(function(k){if(out.indexOf(k)<0)out.push(k);});});
   C.forEach(function(c){if(out.indexOf(c[0])<0&&new RegExp(c[2]).test(t))out.push(c[0]);});
+  (AI[id]||[]).forEach(function(k){if(out.indexOf(k)<0)out.push(k);});
   return cache[ck]=out;}
  function altsFor(tok){tok=tok.replace(/^#/,'').trim();if(!tok)return null;var alts=[tok];
   C.forEach(function(c){if(new RegExp('^(?:'+c[3]+')$').test(tok)||c[0]===tok){alts.push(c[0]);}});
@@ -24670,7 +24677,7 @@ function sendPlaceReq(){
   W.discPlacePass=function(x){var q=W.DISC_Q;if(!q)return P.call(this,x);W.DISC_Q='';var r;try{r=P.call(this,x);}finally{W.DISC_Q=q;}return r&&ok(x,q,baseP(x));};
   W.discEventPass=function(e){var q=W.DISC_Q;if(!q)return E.call(this,e);W.DISC_Q='';var r;try{r=E.call(this,e);}finally{W.DISC_Q=q;}return r&&ok(e,q,baseE(e));};
   W.discPlacePass.__kw=1;return true;}
- W.guriKeywordsOf=kwOf;W.guriKwTxt=txt;W.guriKwAlts=altsFor;W.guriKwSeason=season;W.guriKwC=C;
+ W.guriKeywordsOf=kwOf;aiLoad();W.guriKwTxt=txt;W.guriKwAlts=altsFor;W.guriKwSeason=season;W.guriKwC=C;
  /* 결과 카드에 키워드 표시 + 지금 철 추천 줄 */
  function find(id){var S=W.SPOTS||[];for(var i=0;i<S.length;i++)if(String(S[i].id)===id)return S[i];return null;}
  function evFind(id){var E=[];try{E=W.discEvents();}catch(e){}for(var i=0;i<E.length;i++)if(String(E[i].event_id||E[i].id)===id)return E[i];return null;}
@@ -24680,7 +24687,7 @@ function sendPlaceReq(){
    var id=b.getAttribute('data-go')?b.getAttribute('data-go').slice(2):b.getAttribute('data-goevent'),x=b.getAttribute('data-go')?find(id):evFind(id);if(!x)return;
    var k=kwOf(x).filter(function(v){return C.some(function(c){return c[0]===v&&(c[1]||['산책','야경','일출·일몰'].indexOf(v)>=0);});});if(!k.length)return;
    var hit=function(v){return qa.some(function(a){return a.indexOf(v)>=0;});};k.sort(function(a,b2){return (hit(b2)?1:0)-(hit(a)?1:0);});
-   var d=D.createElement('div');d.className='kw-line';d.innerHTML=k.slice(0,4).map(function(v){return '<span class="kw-c'+(hit(v)?' on':'')+'">#'+esc(v)+'</span>';}).join('');b.appendChild(d);});
+   var d=D.createElement('div');d.className='kw-line';d.innerHTML=k.slice(0,4).map(function(v){return '<span class="kw-c'+(hit(v)?' on':'')+(W.guriKwAiEst(id,v)?' est':'')+'">#'+esc(v)+(W.guriKwAiEst(id,v)?'?':'')+'</span>';}).join('');b.appendChild(d);});
   var inp=D.getElementById('discQ');if(inp&&!D.getElementById('kwSug')){
    var s=season(),list=C.filter(function(c){return c[1]===s;}),cnt=function(c){var n=0;(W.SPOTS||[]).forEach(function(x){if(x.admin_hidden!==true&&kwOf(x).indexOf(c[0])>=0)n++;});return n;};
    var rows=list.map(function(c){return [c[0],cnt(c)];}).filter(function(r){return r[1]>0;});
@@ -24694,7 +24701,7 @@ function sendPlaceReq(){
  var t=null;function sched(){if(t)return;t=setTimeout(function(){t=null;try{wrap();decorate();}catch(e){}},60);}
  new MutationObserver(sched).observe(D.body||D.documentElement,{childList:true,subtree:true});wrap();sched();
  var st=D.createElement('style');st.textContent='#kwSug{margin:10px 0 2px}.kw-h{font-weight:800;font-size:16px;margin-bottom:6px}.kw-s{min-height:44px;margin:0 6px 6px 0;padding:0 14px;border-radius:22px;border:2px solid #0f6b45;background:#fff;color:#0f6b45;font-size:17px;font-weight:800}.kw-s i{font-style:normal;font-size:14px;opacity:.7}.kw-s.alt{border-color:#9aa8a1;color:#40504a}.kw-line{margin-top:8px}.kw-c{display:inline-block;margin:0 6px 4px 0;padding:2px 9px;border-radius:12px;background:#eef3f0;color:#2d5a45;font-size:14.5px}.kw-c.on{background:#0f6b45;color:#fff;font-weight:800}';
- D.head.appendChild(st);
+ st.textContent+='.kw-c.est{border-style:dashed;opacity:.85}';D.head.appendChild(st);
 })();
 
 </script>
@@ -24736,7 +24743,7 @@ function sendPlaceReq(){
   var qs=rest.join('').replace(/[\s,#]+/g,'');
   function add(label,w,req,o){if(seen[label]){if(w>seen[label].w)seen[label].w=w;if(req)seen[label].req=true;if(o.pass)seen[label].pass=true;return;}var t={label:label,w:w,req:req,re:o.re||null,kws:o.kws||null,base:!!o.base,hard:!!o.hard,pass:!!o.pass,boost:!!o.boost};seen[label]=t;terms.push(t);}
   function pref(name,w,req,boost){if(!name)return;if(name.charAt(0)==='('){if(/지금 철/.test(name)){var k=curKws();if(k.length)add('지금 철 꽃·풍경',1,false,{kws:k});}return;}
-   var kw=C().some(function(c){return c[0]===name;});if(PM[name]||kw)add(name,w,req,{re:PM[name]||null,kws:kw?[name]:null,boost:!!boost});}
+   var kw=C().some(function(c){return c[0]===name;});if(PM[name]||kw)add(name,w,req,{re:PM[name]||null,kws:[name],boost:!!boost});}
   C().forEach(function(c){if(new RegExp(c[3]).test(qs))add(c[0],3,true,{kws:[c[0]],pass:true});});
   ['봄','여름','가을','겨울'].forEach(function(s){if(qs.indexOf(s)>=0){var k=C().filter(function(c){return c[1]===s;}).map(function(c){return c[0];});if(k.length)add(s+' 풍경',2,true,{kws:k,pass:true});}});
   scnHit(qs).forEach(function(h){var s=h[1];chips.push({t:s.p,k:'scn'});var gen=GENPH.indexOf(s.p)>=0;s.pr.forEach(function(p){pref(p,1,false,gen);});s.m.forEach(function(m){if(MM[m])add(m,2,!gen,{re:MM[m],boost:gen});else pref(m,2,!gen,gen);});
