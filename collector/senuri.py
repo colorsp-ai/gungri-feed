@@ -12,7 +12,7 @@ KST = datetime.timezone(datetime.timedelta(hours=9))
 BASE = 'https://apis.data.go.kr/B552474/SenuriService'
 DEF = {'listOp': '/getJobList', 'detailOp': '/getJobInfo', 'pages': 8, 'rows': 100,
        'areas': [{'q': '구리', 'label': '경기 구리시'},
-                 {'q': '하남', 'label': '경기 구리·남양주·하남 인근',
+                 {'q': '하남', 'label': '경기 인근',
                   'hint': ['구리', '남양주', '하남', '다산', '별내', '진접', '오남', '호평', '평내', '마석', '화도', '와부', '덕소', '미사', '감일', '위례', '풍양', '양정', '퇴계원', '수동', '조안']}],
        'regionWords': ['구리', '하남'], 'maxDetails': 40,
        'badWords': ['선입금', '수수료', '보증금', '다단계', '투자', '입회비', '교육비 납부', '가입비', '물품 구입']}
@@ -109,7 +109,7 @@ def build(it, cfg, today, detail=None):
 
 def collect(cfg, key, today, fetcher=fetch):
     """지역 이름 조건(workPlcNm)으로 서버에서 먼저 거른 뒤, 접수 중인 공고만 남긴다."""
-    kept, seen, drop = [], set(), {'마감': 0, '위험문구': 0, '지역밖': 0, '조회실패': 0}
+    kept, seen, drop = [], set(), {'마감': 0, '위험문구': 0, '지역밖': 0, '중복공고': 0, '조회실패': 0}
     for area in cfg['areas']:
         for page in range(1, int(cfg['pages']) + 1):
             q = urllib.parse.urlencode({'serviceKey': key, 'pageNo': page, 'numOfRows': cfg['rows'], 'workPlcNm': area['q']})
@@ -152,6 +152,16 @@ def collect(cfg, key, today, fetcher=fetch):
             except Exception:
                 detail_ok = False        # 상세 조회 주소가 맞지 않으면 한 번 실패한 뒤 더 시도하지 않는다
         out.append(j)
+    best = {}
+    for j in out:                         # 같은 기관이 같은 제목으로 여러 번 올린 공고는 마감이 가장 늦은 1건만 남긴다
+        k = (re.sub(r'\s+', '', j['title']), re.sub(r'\s+', '', j['org']))
+        if k in best:
+            drop['중복공고'] += 1
+            if (j['end'] or '') > (best[k]['end'] or ''):
+                best[k] = j
+        else:
+            best[k] = j
+    out = list(best.values())
     out.sort(key=lambda x: (x['end'] or '9999', x['title']))
     return out, drop
 

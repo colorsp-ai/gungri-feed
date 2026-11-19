@@ -44,8 +44,17 @@ def pick(d, key):
     return ''
 
 
+def tel_map():
+    try:
+        d = json.load(open(os.path.join(senuri.HERE, 'org_tels.json'), encoding='utf-8'))
+    except Exception:
+        return {}
+    return {k: v for k, v in d.items() if not k.startswith('_') and re.search(r'\d', str(v))}
+
+
 def collect(c, key, fetcher=senuri.fetch):
     out, seen, got = [], set(), 0
+    tels = tel_map()
     for qd in c['queries']:
         for page in range(1, int(c['pages']) + 1):
             q = {'serviceKey': key, 'pageNo': page, 'numOfRows': c['rows'], **{k: v for k, v in qd.items() if k != 'label'}, **(c.get('extraParams') or {})}
@@ -57,7 +66,7 @@ def collect(c, key, fetcher=senuri.fetch):
                 break
             for r in rows:
                 got += 1
-                o = {'name': pick(r, 'name'), 'addr': pick(r, 'addr'), 'tel': pick(r, 'tel'), 'kind': '', 'area': qd.get('label', '')}
+                o = {'name': pick(r, 'name'), 'addr': pick(r, 'addr'), 'tel': pick(r, 'tel') or tels.get(pick(r, 'name'), ''), 'kind': '', 'area': qd.get('label', '')}
                 k = (o['name'], o['addr'])
                 if not o['name'] or k in seen:
                     continue
