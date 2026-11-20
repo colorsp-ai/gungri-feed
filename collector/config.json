@@ -164,7 +164,8 @@
   ],
   "keywordPages": 2,
   "nameQueryLists": [
-    "mountain100"
+    "mountain100",
+    "citytour"
   ],
   "nameQueriesPerRun": 10,
   "excludeMedicalKeywords": [
@@ -238,5 +239,9 @@
     "롯데월드몰",
     "롯데몰",
     "타임스퀘어"
-  ]
+  ],
+  "nameQueriesPerList": {
+    "mountain100": 10,
+    "citytour": 60
+  }
 }

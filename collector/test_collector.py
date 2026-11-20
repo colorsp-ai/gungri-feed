@@ -65,6 +65,14 @@ class T(unittest.TestCase):
         self.assertIn('산림청 100대 명산', rec[0].get('curation', [])); self.assertIn('산림청 100대 명산', rec[1].get('curation', []))
         self.assertNotIn('curation', rec[2]); self.assertNotIn('curation', rec[3])
 
+    def test_citytour_list(self):
+        L = json.load(open(os.path.join(run.HERE, 'curation', 'citytour.json'), encoding='utf-8'))
+        cfg = run.load(os.path.join(run.HERE, 'config.json'), {})
+        self.assertIn('citytour', cfg['nameQueryLists']); self.assertGreater(len(L['items']), 100)
+        self.assertIn('14', L['ctypes'])
+        bad = [i['name'] for i in L['items'] if i['name'].endswith(('역', '터미널', '시청')) or len(i['name']) < 3]
+        self.assertEqual(bad, [], '역·터미널 등은 목록에 없어야 함')
+
     def test_shop_ok_and_regex(self):
         cfg = run.load(os.path.join(run.HERE, 'config.json'), {})
         for ttl in ('롯데백화점 광주점', '○○ 이마트', '스타필드 안성', '○○ 매장', '동네마트', '프리미엄 아울렛'):
@@ -73,6 +81,27 @@ class T(unittest.TestCase):
             self.assertFalse(run.excluded(ttl, cfg), ttl)
         self.assertTrue(run.shop_ok('죽도시장', '38', cfg)); self.assertFalse(run.shop_ok('○○ 쇼핑센터점', '38', cfg)); self.assertTrue(run.shop_ok('○○백화점', '12', cfg))
         self.assertEqual(len(cfg['regions']), 17)
+
+    def test_medical_and_department_store(self):
+        cfg = run.load(os.path.join(run.HERE, 'config.json'), {})
+        for ttl, addr in (('구리중앙병원', ''), ('행복약국', ''), ('밝은안경원', ''), ('서울치과의원', ''), ('구리시보건소', ''), ('성모요양병원', ''),
+                          ('롯데시네마 건대', ''), ('○○카페', '서울 중구 소공로 롯데백화점 본점 1층'), ('스타벅스', '경기 판교 현대백화점 판교점'), ('○○식당', '경기 구리 이마트 구리점 1층')):
+            self.assertTrue(run.excluded(ttl, cfg, addr), ttl + ' ' + addr)
+        for ttl, addr in (('대구안경박물관', ''), ('서울한방진흥센터', ''), ('구리전통시장', '경기 구리시 구리시장로 19'), ('한강공원', ''), ('남이섬', ''), ('국립현대미술관 청주', '')):
+            self.assertFalse(run.excluded(ttl, cfg, addr), ttl)
+
+    def test_medical_not_in_feed_and_old_feed_cleaned(self):
+        with tempfile.TemporaryDirectory() as d:
+            f = self.run_mock(d)
+            names = [p['n'] for p in f['places']]
+            for bad in ('구리중앙병원', '행복약국', '밝은안경원', '○○카페'):
+                self.assertNotIn(bad, names)
+            old = json.load(open(os.path.join(d, 'gungri_feed.json'), encoding='utf-8'))
+            old['places'].append({'feedId': 'TA-777', 'n': '옛 약국', 'a': '경기 구리시'}); old['places'].append({'feedId': 'TA-778', 'n': '카페', 'a': '서울 롯데백화점 본점'})
+            json.dump(old, open(os.path.join(d, 'gungri_feed.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+            f2 = self.run_mock(d)
+            ids = [p['feedId'] for p in f2['places']]
+            self.assertNotIn('TA-777', ids); self.assertNotIn('TA-778', ids)
 
     def test_incremental(self):
         with tempfile.TemporaryDirectory() as d:

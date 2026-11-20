@@ -35,10 +35,21 @@ def save(path, data):
     os.replace(tmp, path)
 
 
-def excluded(title, cfg):
+def excluded(title, cfg, addr=''):
+    """제외 대상인가: 상업시설(제목) · 병원·약국·안경점 같은 의료 시설(제목) · 백화점·마트 안에 입점한 곳(주소)"""
     import re
     t = title or ''
-    return any(k in t for k in cfg.get('excludeTitleKeywords', [])) or any(re.search(x, t) for x in cfg.get('excludeTitleRegex', []))
+    if any(k in t for k in cfg.get('excludeTitleKeywords', [])) or any(re.search(x, t) for x in cfg.get('excludeTitleRegex', [])):
+        return True
+    a = addr or ''
+    if a and any(k in a for k in cfg.get('excludeAddrKeywords', [])):
+        return True  # 주소에 백화점·대형마트 이름이 있으면 그 안에 입점한 업체
+    if any(k in t for k in cfg.get('excludeMedicalKeywords', [])):
+        # 박물관·공원 같은 이름은 살리되, 이름이 병원·의원·약국 등으로 끝나면 의료 시설
+        if any(k in t for k in cfg.get('medicalKeep', [])) and not re.search(r'(병원|의원|의료원|약국|치과|한의원|보건소|클리닉)\s*$', t.strip()):
+            return False
+        return True
+    return False
 
 
 def shop_ok(title, ct, cfg):
@@ -131,7 +142,7 @@ def collect(api, cfg, state, today, max_details, log):
                 for it in r['items']:
                     cid, mt = str(it.get('contentid')), str(it.get('modifiedtime') or '')
                     ttl = mapping.clean(it.get('title'))
-                    if excluded(ttl, cfg) or is_excluded_id('PLACE', cid, cfg) or not shop_ok(ttl, ct, cfg):
+                    if excluded(ttl, cfg, mapping.clean(it.get('addr1'))) or is_excluded_id('PLACE', cid, cfg) or not shop_ok(ttl, ct, cfg):
                         continue
                     if seen.get(cid) != mt:
                         b.append(('PLACE', cid, ct, mt, prio(ttl, cfg))); fresh += 1
@@ -153,7 +164,7 @@ def collect(api, cfg, state, today, max_details, log):
                 ttl = mapping.clean(it.get('title'))
                 if ct not in ('12', '14', '28', '38', '39') or cid in kw_seen:
                     continue
-                if excluded(ttl, cfg) or is_excluded_id('PLACE', cid, cfg) or not shop_ok(ttl, ct, cfg):
+                if excluded(ttl, cfg, mapping.clean(it.get('addr1'))) or is_excluded_id('PLACE', cid, cfg) or not shop_ok(ttl, ct, cfg):
                     continue
                 lab = mapping.region_of(it)
                 if lab and lab not in keep_regions:
@@ -175,7 +186,9 @@ def collect(api, cfg, state, today, max_details, log):
             if not its:
                 continue
             pos = int(cur.get(ln, 0)) % len(its)
-            for k in range(min(nq, len(its))):
+            per = int((cfg.get('nameQueriesPerList') or {}).get(ln, nq))
+            okct = tuple(L.get('ctypes') or ['12', '28'])
+            for k in range(min(per, len(its))):
                 it = its[(pos + k) % len(its)]
                 q = it.get('q') or it['name']
                 try:
@@ -186,16 +199,16 @@ def collect(api, cfg, state, today, max_details, log):
                 for h in r['items']:
                     cid, mt = str(h.get('contentid')), str(h.get('modifiedtime') or '')
                     ttl = mapping.clean(h.get('title')); ct = str(h.get('contenttypeid') or '')
-                    if ct not in ('12', '28') or cid in kw_seen or key not in re.sub(r'\s', '', ttl):
+                    if ct not in okct or cid in kw_seen or key not in re.sub(r'\s', '', ttl):
                         continue
-                    if excluded(ttl, cfg) or is_excluded_id('PLACE', cid, cfg):
+                    if excluded(ttl, cfg, mapping.clean(h.get('addr1'))) or is_excluded_id('PLACE', cid, cfg):
                         continue
                     lab = mapping.region_of(h)
                     if it.get('sido') and lab and lab not in it['sido']:
                         continue  # 이름이 같은 다른 지역의 산은 받지 않음
                     if seen.get(cid) != mt:
                         kw_seen.add(cid); kw_hits.append(('PLACE', cid, ct, mt, False))
-            cur[ln] = (pos + nq) % len(its)
+            cur[ln] = (pos + per) % len(its)
     kw_hits.sort(key=lambda x: x[4])  # 지방(False) 먼저
     # 2) 행사 (오늘 이후 시작 또는 진행 중)
     start = (today - datetime.timedelta(days=30)).strftime('%Y%m%d')
@@ -357,6 +370,10 @@ def main(argv=None):
         events = [x for x in events if x['feedId'] not in ex]
         if n0 != len(places) + len(events):
             log.append(f'폐기 목록(exclude.json)에 있는 항목 {n0 - len(places) - len(events)}건 피드에서 제거')
+    n_ex = len(places)
+    places = [x for x in places if not excluded(x.get('n', ''), cfg, x.get('a', ''))]
+    if n_ex != len(places):
+        log.append(f'상업·의료 시설 {n_ex - len(places)}건 기존 피드에서 제거')
     keep = region_labels(cfg)
     before = (len(places), len(events))
     places = [x for x in places if not x.get('ar') or x['ar'] in keep]
