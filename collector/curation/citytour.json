@@ -1,0 +1,8276 @@
+{
+"name": "전국 시티투어 경유지",
+"label": "시티투어 경유지",
+"source": "전국시티투어정보표준데이터(공공데이터포털) 경유지 중 궁리 미등록 장소. 소재지는 코스의 시도",
+"minLen": 3,
+"ctypes": [
+"12",
+"14",
+"28",
+"38"
+],
+"items": [
+{
+"id": "CT-001",
+"name": "가나아트파크",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 8
+},
+{
+"id": "CT-002",
+"name": "권율장군묘",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 8
+},
+{
+"id": "CT-003",
+"name": "이순신광장",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 7
+},
+{
+"id": "CT-004",
+"name": "조력문화관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 6
+},
+{
+"id": "CT-005",
+"name": "반달섬",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 6
+},
+{
+"id": "CT-006",
+"name": "고군산군도",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 6
+},
+{
+"id": "CT-007",
+"name": "봉하마을",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 6
+},
+{
+"id": "CT-008",
+"name": "가야테마파크",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 5
+},
+{
+"id": "CT-009",
+"name": "거북섬",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 5
+},
+{
+"id": "CT-010",
+"name": "송도컨벤시아",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 4
+},
+{
+"id": "CT-011",
+"name": "갈대습지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 4
+},
+{
+"id": "CT-012",
+"name": "방아머리선착장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 4
+},
+{
+"id": "CT-013",
+"name": "공주무령왕릉과왕릉원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 4
+},
+{
+"id": "CT-014",
+"name": "국립공주박물관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 4
+},
+{
+"id": "CT-015",
+"name": "섬진강기차마을",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 4
+},
+{
+"id": "CT-016",
+"name": "무령왕릉과왕릉원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 4
+},
+{
+"id": "CT-017",
+"name": "롯데리조트부여",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 4
+},
+{
+"id": "CT-018",
+"name": "정부세종청사",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 4
+},
+{
+"id": "CT-019",
+"name": "세종컨벤션센터",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 4
+},
+{
+"id": "CT-020",
+"name": "가야문화유적지",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 4
+},
+{
+"id": "CT-021",
+"name": "낙동강레일파크",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 4
+},
+{
+"id": "CT-022",
+"name": "계절별체험지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 4
+},
+{
+"id": "CT-023",
+"name": "이천관광지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 4
+},
+{
+"id": "CT-024",
+"name": "신륵사관광지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 4
+},
+{
+"id": "CT-025",
+"name": "황산공원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 4
+},
+{
+"id": "CT-026",
+"name": "아라리촌",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 4
+},
+{
+"id": "CT-027",
+"name": "전주종합경기장",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 4
+},
+{
+"id": "CT-028",
+"name": "동춘당",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 4
+},
+{
+"id": "CT-029",
+"name": "공지천",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 3
+},
+{
+"id": "CT-030",
+"name": "강원특별자치도립화목원",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 3
+},
+{
+"id": "CT-031",
+"name": "소양강댐",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 3
+},
+{
+"id": "CT-032",
+"name": "소양아트서클",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 3
+},
+{
+"id": "CT-033",
+"name": "종이미술관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 3
+},
+{
+"id": "CT-034",
+"name": "유리섬",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 3
+},
+{
+"id": "CT-035",
+"name": "근대건축시설물",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 3
+},
+{
+"id": "CT-036",
+"name": "자원회수시설",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 3
+},
+{
+"id": "CT-037",
+"name": "동부시장",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 3
+},
+{
+"id": "CT-038",
+"name": "궁남지",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 3
+},
+{
+"id": "CT-039",
+"name": "백강문화관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 3
+},
+{
+"id": "CT-040",
+"name": "나성동 도시상징광장",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 3
+},
+{
+"id": "CT-041",
+"name": "세종전통시장",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 3
+},
+{
+"id": "CT-042",
+"name": "대통령기록관",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 3
+},
+{
+"id": "CT-043",
+"name": "회암사지 및 박물관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 3
+},
+{
+"id": "CT-044",
+"name": "광안리해수욕장",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 3
+},
+{
+"id": "CT-045",
+"name": "송도구름산책로",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 3
+},
+{
+"id": "CT-046",
+"name": "이호목마등대",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 3
+},
+{
+"id": "CT-047",
+"name": "도두봉",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 3
+},
+{
+"id": "CT-048",
+"name": "동문시장",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 3
+},
+{
+"id": "CT-049",
+"name": "관덕정",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 3
+},
+{
+"id": "CT-050",
+"name": "수성못",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 3
+},
+{
+"id": "CT-051",
+"name": "도동서원",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 3
+},
+{
+"id": "CT-052",
+"name": "소호동동다리",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 3
+},
+{
+"id": "CT-053",
+"name": "오동도",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 3
+},
+{
+"id": "CT-054",
+"name": "사천바다케이블카",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 3
+},
+{
+"id": "CT-055",
+"name": "고스락",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 3
+},
+{
+"id": "CT-056",
+"name": "교도소세트장",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 3
+},
+{
+"id": "CT-057",
+"name": "왕궁리유적",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 3
+},
+{
+"id": "CT-058",
+"name": "농촌체험농장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 3
+},
+{
+"id": "CT-059",
+"name": "성안길",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 3
+},
+{
+"id": "CT-060",
+"name": "[10:50]안동역)",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 3
+},
+{
+"id": "CT-061",
+"name": "월영교",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 3
+},
+{
+"id": "CT-062",
+"name": "원도심",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 3
+},
+{
+"id": "CT-063",
+"name": "구)안동역 가능",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 3
+},
+{
+"id": "CT-064",
+"name": "물왕호수",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 3
+},
+{
+"id": "CT-065",
+"name": "오성제",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 3
+},
+{
+"id": "CT-066",
+"name": "오성한옥문화센터",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 3
+},
+{
+"id": "CT-067",
+"name": "아원고택",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 3
+},
+{
+"id": "CT-068",
+"name": "소양고택",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 3
+},
+{
+"id": "CT-069",
+"name": "플리커책방",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 3
+},
+{
+"id": "CT-070",
+"name": "오성한옥마을",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 3
+},
+{
+"id": "CT-071",
+"name": "양구명품관",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 3
+},
+{
+"id": "CT-072",
+"name": "만인산자연휴양림",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 3
+},
+{
+"id": "CT-073",
+"name": "우암사적공원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 3
+},
+{
+"id": "CT-074",
+"name": "대청호자연생태관",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 3
+},
+{
+"id": "CT-075",
+"name": "유성온천족욕체험장",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 3
+},
+{
+"id": "CT-076",
+"name": "인천대교",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 2
+},
+{
+"id": "CT-077",
+"name": "보문사",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 2
+},
+{
+"id": "CT-078",
+"name": "화개정원",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 2
+},
+{
+"id": "CT-079",
+"name": "대룡시장",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 2
+},
+{
+"id": "CT-080",
+"name": "교동제비집",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 2
+},
+{
+"id": "CT-081",
+"name": "선재도 목섬",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 2
+},
+{
+"id": "CT-082",
+"name": "국립생활자원관",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 2
+},
+{
+"id": "CT-083",
+"name": "경인아라뱃길 아라타워 전망대",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 2
+},
+{
+"id": "CT-084",
+"name": "소무의도",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 2
+},
+{
+"id": "CT-085",
+"name": "파라다이스시티",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 2
+},
+{
+"id": "CT-086",
+"name": "춘천삼악산호수케이블카",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-087",
+"name": "애니메이션박물관",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-088",
+"name": "춘천막국수체험박물관",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-089",
+"name": "소양강댐 닭갈비촌",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-090",
+"name": "소양강스카이워크",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-091",
+"name": "안산식물원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-092",
+"name": "성혹박물관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-093",
+"name": "탄도누에섬",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-094",
+"name": "퇴적암층",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-095",
+"name": "구봉도카페거리해솔길",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-096",
+"name": "송광사",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-097",
+"name": "선암사",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-098",
+"name": "야생차체험관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-099",
+"name": "순천 조계산",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-100",
+"name": "롯데광장",
+"kind": "PLACE",
+"sido": [
+"울산"
+],
+"cnt": 2
+},
+{
+"id": "CT-101",
+"name": "남이섬",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-102",
+"name": "마곡사",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-103",
+"name": "석장리박물관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-104",
+"name": "산림휴양마을",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-105",
+"name": "나태주풀꽃문학관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-106",
+"name": "옛공주읍사무소",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-107",
+"name": "천곡황금박쥐동굴",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-108",
+"name": "무릉계곡",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-109",
+"name": "시간여행마을 일원",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 2
+},
+{
+"id": "CT-110",
+"name": "레일바이크",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-111",
+"name": "충남안전체험관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-112",
+"name": "팜카밀레허브농원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-113",
+"name": "꽃지해수욕장",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-114",
+"name": "로컬푸드직매장",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-115",
+"name": "국립생태원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-116",
+"name": "장항송림자연휴양림",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-117",
+"name": "조류생태전시관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-118",
+"name": "서산 버드랜드",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-119",
+"name": "간월도",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-120",
+"name": "해미읍성",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-121",
+"name": "신동엽문학관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-122",
+"name": "정림사지",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-123",
+"name": "진도개테마파크",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-124",
+"name": "진도읍",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-125",
+"name": "운림산방",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-126",
+"name": "명품관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-127",
+"name": "이서커뮤니티센터",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-128",
+"name": "화순적벽입구",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-129",
+"name": "정부세종청사 옥상정원",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 2
+},
+{
+"id": "CT-130",
+"name": "고복자연공원",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 2
+},
+{
+"id": "CT-131",
+"name": "조천 벚꽃길",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 2
+},
+{
+"id": "CT-132",
+"name": "만남의광장",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-133",
+"name": "창원의집",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-134",
+"name": "마산상상길",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-135",
+"name": "창동예술촌",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-136",
+"name": "마산어시장",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-137",
+"name": "제황산공원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-138",
+"name": "진해루",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-139",
+"name": "조소앙 기념관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-140",
+"name": "수변산책",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-141",
+"name": "청암 민속박물관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-142",
+"name": "필룩스조명박물관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-143",
+"name": "수로왕비릉",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-144",
+"name": "구지봉",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-145",
+"name": "수로왕릉",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-146",
+"name": "봉황동유적",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-147",
+"name": "김해낙동강레일파크",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-148",
+"name": "불굴사",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-149",
+"name": "감천문화마을",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 2
+},
+{
+"id": "CT-150",
+"name": "평화공원",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 2
+},
+{
+"id": "CT-151",
+"name": "오래물광장",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 2
+},
+{
+"id": "CT-152",
+"name": "산지천",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 2
+},
+{
+"id": "CT-153",
+"name": "앞산전망대",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 2
+},
+{
+"id": "CT-154",
+"name": "송해공원",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 2
+},
+{
+"id": "CT-155",
+"name": "비슬산자연휴양림",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 2
+},
+{
+"id": "CT-156",
+"name": "마비정벽화마을",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 2
+},
+{
+"id": "CT-157",
+"name": "사유원",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 2
+},
+{
+"id": "CT-158",
+"name": "광양역사문화원＆광양향교",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-159",
+"name": "김시식지",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-160",
+"name": "망덕포구 먹거리타운",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-161",
+"name": "배알도섬정원＆윤동주유고보존 정병욱가옥",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-162",
+"name": "진월 조선 수군지 선소 기념관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-163",
+"name": "백운산자연휴양림",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-164",
+"name": "산림박물관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-165",
+"name": "불고기특화거리",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-166",
+"name": "서울대학교 남부연습림 관사",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-167",
+"name": "이순신대교홍보관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-168",
+"name": "이순신대교 먹거리타운",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-169",
+"name": "해비치로일원＆해오름육교",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-170",
+"name": "종포해양공원",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-171",
+"name": "돌산공원",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-172",
+"name": "진남관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-173",
+"name": "갓바위 해상보행교",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 2
+},
+{
+"id": "CT-174",
+"name": "서부해안 일대",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-175",
+"name": "KAEMS",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-176",
+"name": "KAI",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-177",
+"name": "항공우주과학관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-178",
+"name": "항공우주박물관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-179",
+"name": "우주항공청 및 무지갯빛해안도로",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-180",
+"name": "아라마루 아쿠아리움",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-181",
+"name": "무지갯빛해안도로",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-182",
+"name": "모충공원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-183",
+"name": "부용대",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-184",
+"name": "원불교총부",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 2
+},
+{
+"id": "CT-185",
+"name": "홍성스카이타워",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-186",
+"name": "홍주읍성",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 2
+},
+{
+"id": "CT-187",
+"name": "용연동굴",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-188",
+"name": "철암역사촌",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-189",
+"name": "구문소",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-190",
+"name": "365세이프타운",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-191",
+"name": "오크밸리",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-192",
+"name": "농촌체험마을",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-193",
+"name": "평택항홍보관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-194",
+"name": "미동산수목원",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 2
+},
+{
+"id": "CT-195",
+"name": "대신섬",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-196",
+"name": "파사성",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-197",
+"name": "신륵사",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-198",
+"name": "세종대왕릉",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-199",
+"name": "대로사",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-200",
+"name": "금은모래캠핑장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-201",
+"name": "명성황후생가",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-202",
+"name": "목화당1944",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-203",
+"name": "법기수원지",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-204",
+"name": "양산국화축제 운영 기간",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 2
+},
+{
+"id": "CT-205",
+"name": "계서당",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-206",
+"name": "닭실마을",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-207",
+"name": "오전약수관광지",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-208",
+"name": "오전약수탕",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-209",
+"name": "다덕약수탕",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-210",
+"name": "청도시장",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-211",
+"name": "와인터널",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-212",
+"name": "안동민속박물관",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-213",
+"name": "안동댐 정상",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-214",
+"name": "웅부공원",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 2
+},
+{
+"id": "CT-215",
+"name": "정선아리랑센터",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-216",
+"name": "화암동굴",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-217",
+"name": "아리랑센터",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-218",
+"name": "쁘띠프랑스",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-219",
+"name": "감악산출렁다리",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-220",
+"name": "DMZ평화관광",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-221",
+"name": "율곡수목원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-222",
+"name": "보광사",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-223",
+"name": "관곡지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-224",
+"name": "오이도",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-225",
+"name": "해양생태과학관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-226",
+"name": "시흥오이도박물관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 2
+},
+{
+"id": "CT-227",
+"name": "현풍도깨비시장",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 2
+},
+{
+"id": "CT-228",
+"name": "사문진주막촌",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 2
+},
+{
+"id": "CT-229",
+"name": "위봉산성",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 2
+},
+{
+"id": "CT-230",
+"name": "위봉폭포",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 2
+},
+{
+"id": "CT-231",
+"name": "한반도섬",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-232",
+"name": "효월드",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 2
+},
+{
+"id": "CT-233",
+"name": "장태산자연휴양림",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 2
+},
+{
+"id": "CT-234",
+"name": "대전시립박물관",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 2
+},
+{
+"id": "CT-235",
+"name": "국립대전현충원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 2
+},
+{
+"id": "CT-236",
+"name": "수타사",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-237",
+"name": "수타사농촌테마파크",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-238",
+"name": "화천시장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-239",
+"name": "산타우체국",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-240",
+"name": "화천박물관",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 2
+},
+{
+"id": "CT-241",
+"name": "을왕리 해변",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-242",
+"name": "인천대교 노을",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-243",
+"name": "석모도수목원",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-244",
+"name": "외포항 젓갈수산시장",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-245",
+"name": "석모도 수목권",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-246",
+"name": "진두선착장",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-247",
+"name": "십리포해수욕장",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-248",
+"name": "수도권매립지관광공사",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-249",
+"name": "수도권매리집관광공사",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-250",
+"name": "인스파이어 엔터테인먼트 리조트",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-251",
+"name": "무의도 입구",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-252",
+"name": "G타워",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-253",
+"name": "왕산마리나",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-254",
+"name": "아트센터인천",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-255",
+"name": "상상플랫폼",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-256",
+"name": "현대프리미엄아울렛 송도점",
+"kind": "PLACE",
+"sido": [
+"인천"
+],
+"cnt": 1
+},
+{
+"id": "CT-257",
+"name": "G상상마당",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-258",
+"name": "남이섬",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-259",
+"name": "강촌레일바이크",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-260",
+"name": "청평사 유람선 탑승",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-261",
+"name": "청평사 내 관광",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-262",
+"name": "물레길카누",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-263",
+"name": "물레길 산책",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-264",
+"name": "해피초원목장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-265",
+"name": "명동 닭갈비 골목",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-266",
+"name": "구곡폭포",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-267",
+"name": "소양강댐 닭갈비촌 근처",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-268",
+"name": "구봉산 카페거리",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-269",
+"name": "안산읍성수압마을",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-270",
+"name": "다문화거리",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-271",
+"name": "와이너리",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-272",
+"name": "고인돌공원",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-273",
+"name": "낙안읍성",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-274",
+"name": "드라마촬영장",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-275",
+"name": "금전산",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-276",
+"name": "고래박물관",
+"kind": "PLACE",
+"sido": [
+"울산"
+],
+"cnt": 1
+},
+{
+"id": "CT-277",
+"name": "대교전망대 입구",
+"kind": "PLACE",
+"sido": [
+"울산"
+],
+"cnt": 1
+},
+{
+"id": "CT-278",
+"name": "현대백화점",
+"kind": "PLACE",
+"sido": [
+"울산"
+],
+"cnt": 1
+},
+{
+"id": "CT-279",
+"name": "태화강전망대",
+"kind": "PLACE",
+"sido": [
+"울산"
+],
+"cnt": 1
+},
+{
+"id": "CT-280",
+"name": "삼호대숲",
+"kind": "PLACE",
+"sido": [
+"울산"
+],
+"cnt": 1
+},
+{
+"id": "CT-281",
+"name": "태화루",
+"kind": "PLACE",
+"sido": [
+"울산"
+],
+"cnt": 1
+},
+{
+"id": "CT-282",
+"name": "시계탑사거리",
+"kind": "PLACE",
+"sido": [
+"울산"
+],
+"cnt": 1
+},
+{
+"id": "CT-283",
+"name": "문화예술회관",
+"kind": "PLACE",
+"sido": [
+"울산"
+],
+"cnt": 1
+},
+{
+"id": "CT-284",
+"name": "김포 애기봉",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-285",
+"name": "김포맛집",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-286",
+"name": "김포 현대프리미엄아울렛",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-287",
+"name": "임진각",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-288",
+"name": "독개다리",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-289",
+"name": "파주 신세계프리미엄아울렛",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-290",
+"name": "화성행궁",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-291",
+"name": "남문 시장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-292",
+"name": "유구색동수국정원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-293",
+"name": "유구전통시장",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-294",
+"name": "충남역사박물관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-295",
+"name": "반죽동당간지주",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-296",
+"name": "하숙마을",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-297",
+"name": "백제오감체험관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-298",
+"name": "중식 이후 축제장 관람",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-299",
+"name": "동쪽바다중앙시장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-300",
+"name": "묵호시장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-301",
+"name": "천곡로터리",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-302",
+"name": "도째비골스카이밸리",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-303",
+"name": "해랑전망대",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-304",
+"name": "논골담길",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-305",
+"name": "망상해변",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-306",
+"name": "망상오토캠핑리조트",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-307",
+"name": "마천루",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-308",
+"name": "베틀바위",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-309",
+"name": "추암조각공원",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-310",
+"name": "촛대바위",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-311",
+"name": "한섬감성바닷길",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-312",
+"name": "동국사",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-313",
+"name": "신흥동일본식가옥",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-314",
+"name": "초원사진관",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-315",
+"name": "압록상상스쿨",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-316",
+"name": "6070청춘공작소",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-317",
+"name": "낭만공방",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-318",
+"name": "감성충전길",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-319",
+"name": "갤러리107",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-320",
+"name": "곡성성당",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-321",
+"name": "기차마을전통시장",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-322",
+"name": "뚝방마켓",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-323",
+"name": "축제장",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-324",
+"name": "신원사",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-325",
+"name": "우금치전적지",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-326",
+"name": "빵돌가마마을",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-327",
+"name": "홍대용과학관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-328",
+"name": "태조산공원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-329",
+"name": "호두과자만들기",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-330",
+"name": "태학산 치유의 숲",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-331",
+"name": "유관순열사사적지",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-332",
+"name": "각원사",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-333",
+"name": "삼거리공원 및 천안박물관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-334",
+"name": "천년의숲길봉곡사",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-335",
+"name": "외암마을",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-336",
+"name": "맹씨행단",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-337",
+"name": "세계꽃식물원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-338",
+"name": "레일바이크",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-339",
+"name": "옹기발효음식전시체험관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-340",
+"name": "영인산자연휴양림",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-341",
+"name": "공세리성당",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-342",
+"name": "피나클랜드",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-343",
+"name": "온양민속박물관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-344",
+"name": "곡교천은행나무길",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-345",
+"name": "신정호정원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-346",
+"name": "수덕사",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-347",
+"name": "충의사",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-348",
+"name": "덕산메타세쿼이아길",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-349",
+"name": "덕산온천족욕장",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-350",
+"name": "예당관광지",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-351",
+"name": "예산상설시장",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-352",
+"name": "만리포",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-353",
+"name": "유류피해극복기념관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-354",
+"name": "안면암",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-355",
+"name": "백사장항 수산시장",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-356",
+"name": "안면도수목원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-357",
+"name": "국립태안해양유물전시관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-358",
+"name": "만리포해변",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-359",
+"name": "신두리해안사구",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-360",
+"name": "장항 6080음식골목 맛나로",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-361",
+"name": "스카이워크",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-362",
+"name": "금강하구둑 관광지",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-363",
+"name": "문헌서원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-364",
+"name": "봉선저수지",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-365",
+"name": "한산면 일원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-366",
+"name": "이상재 생가",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-367",
+"name": "신성리갈대숲",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-368",
+"name": "이하복 고택",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-369",
+"name": "판교근대역사문화공간",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-370",
+"name": "한국최초성경전래지기념관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-371",
+"name": "마량진항 일원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-372",
+"name": "마량진 동백나무숲",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-373",
+"name": "황금산",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-374",
+"name": "안견기념관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-375",
+"name": "마애여래삼존상",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-376",
+"name": "여미오미",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-377",
+"name": "서산한우목장길",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-378",
+"name": "개심사",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-379",
+"name": "해미국제성지",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-380",
+"name": "부소산성",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-381",
+"name": "11월",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-382",
+"name": "부여왕릉원과 부여나성",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-383",
+"name": "무량사",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-384",
+"name": "반교마을 돌담길",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-385",
+"name": "<금요일 코스",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-386",
+"name": "백마강 달밤야시장 또는 관북리유적",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-387",
+"name": "부여관아",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-388",
+"name": "충남종합관광안내소 <토요일 코스",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-389",
+"name": "토요민속공연",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-390",
+"name": "쏠비치진도",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-391",
+"name": "신비의바닷길체험장",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-392",
+"name": "화순적벽",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-393",
+"name": "이서은행나무도지정느티나무물염정",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-394",
+"name": "창랑적벽",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-395",
+"name": "방축천 음악분수",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-396",
+"name": "초려역사공원",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-397",
+"name": "백제고분역사공원",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-398",
+"name": "세종전통문화체험관",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-399",
+"name": "교과서박물관",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-400",
+"name": "세종 홍판서댁",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-401",
+"name": "숭모각",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-402",
+"name": "뚜쥬르과자점",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-403",
+"name": "베어트리파트",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-404",
+"name": "조치원 영화",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-405",
+"name": "드라마 촬영지 및 우수건축자산",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-406",
+"name": "도시상징광장",
+"kind": "PLACE",
+"sido": [
+"세종"
+],
+"cnt": 1
+},
+{
+"id": "CT-407",
+"name": "가로수길",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-408",
+"name": "창원NC파크",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-409",
+"name": "3.15해양누리공원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-410",
+"name": "장복산",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-411",
+"name": "경화역공원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-412",
+"name": "시티세븐",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-413",
+"name": "창원컨벤션센터",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-414",
+"name": "마창대교",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-415",
+"name": "천일홍 축제장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-416",
+"name": "왕실 축제장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-417",
+"name": "천보산트레킹",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-418",
+"name": "회암사지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-419",
+"name": "초록지기마을",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-420",
+"name": "송암스페이스센터",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-421",
+"name": "관아지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-422",
+"name": "서울우유 견학 홍보관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-423",
+"name": "장욱진",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-424",
+"name": "기산저수지 수변산책로",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-425",
+"name": "김해탄소중립체험관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-426",
+"name": "김해목재문화박물관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-427",
+"name": "율하유적전시관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-428",
+"name": "대성동고분군",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-429",
+"name": "진영역사공원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-430",
+"name": "화포천습지과학관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-431",
+"name": "김해수도박물관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-432",
+"name": "박물관투어코스 : 임당유적전시관",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-433",
+"name": "경산시립박물관",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-434",
+"name": "삼성현역사문화관 고찰경관투어코스 : 환성사",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-435",
+"name": "갓바위",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-436",
+"name": "선본사",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-437",
+"name": "자인계정숲",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-438",
+"name": "남매지",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-439",
+"name": "시외버스터미널_포항역_스페이스워크_청하시장_보경사_이가리닻전망대_사방기념공원",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-440",
+"name": "포항역_시외버스터미널_구룡포일본인가옥거리_과메기문화관_호미곶광장_호미반도둘레길_죽도시장_영일대해수욕장_스페이스워크_보경사",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-441",
+"name": "포항역_시외버스터미널_구룡포일본인가옥거리_과메기문화관_호미곶광장_죽도시장_영일대해수욕장_스페이스워크",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-442",
+"name": "포항역_시외버스터미널_구룡포일본인가옥거리_과메기문화관_호미곶광장_죽도시장_영일대해수욕장",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-443",
+"name": "스페이스워크",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-444",
+"name": "옥정호 붕어섬",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-445",
+"name": "임실 전통시장",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-446",
+"name": "임실치즈테마파크",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-447",
+"name": "사선대",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-448",
+"name": "A코스",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-449",
+"name": "A코스 B코스",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-450",
+"name": "고운골갈대숲+온달관광지+구경시장+다누리아쿠아리움)",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-451",
+"name": "의림지",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-452",
+"name": "청풍호반케이블카",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-453",
+"name": "제천 옥순봉 출렁다리",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-454",
+"name": "제천 한방 치유의 숲",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-455",
+"name": "청풍문화재단지",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-456",
+"name": "해운대",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-457",
+"name": "용궁사",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-458",
+"name": "임랑해수욕장",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-459",
+"name": "국회부산도서관",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-460",
+"name": "낙동강에코센터",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-461",
+"name": "낙동강생태탐방선",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-462",
+"name": "암남공원",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-463",
+"name": "다대포해수욕장",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-464",
+"name": "아미산전망대",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-465",
+"name": "부네치아",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-466",
+"name": "낙동강하구에코센터",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-467",
+"name": "석당박물관",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-468",
+"name": "용두산공원",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-469",
+"name": "영도대교",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-470",
+"name": "흰여울 문화마을",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-471",
+"name": "하늘전망대",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-472",
+"name": "영도해녀촌",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-473",
+"name": "태종대",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-474",
+"name": "국립해양막물관",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-475",
+"name": "오륙도스카이워크",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-476",
+"name": "자갈치BIFF광장",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-477",
+"name": "UN기념공원",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-478",
+"name": "부산박물관",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-479",
+"name": "마린시티",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-480",
+"name": "동백섬",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-481",
+"name": "해운대해수욕장",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-482",
+"name": "센텀시티",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-483",
+"name": "시립미술관벡스코",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-484",
+"name": "광복로",
+"kind": "PLACE",
+"sido": [
+"부산"
+],
+"cnt": 1
+},
+{
+"id": "CT-485",
+"name": "01 제주항국제여객터미널 02 제주항연안여객터미널 03 김만덕기념관 04 동문시장 05 관덕정 06 용연구름다리 07 제주국제공항 08 용담레포츠공원 09 어영공원 10 도두봉 11 이호목마등대 12 제주시민속오일시장 13 연동한일시티파크 14 월랑마을 15 한라수목원 16 노형오거리 17 메종글래드호텔 18 삼무공원",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 1
+},
+{
+"id": "CT-486",
+"name": "김만덕기념관",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 1
+},
+{
+"id": "CT-487",
+"name": "용연구름다리",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 1
+},
+{
+"id": "CT-488",
+"name": "제주시민속오일시장",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 1
+},
+{
+"id": "CT-489",
+"name": "한라수목원",
+"kind": "PLACE",
+"sido": [
+"제주"
+],
+"cnt": 1
+},
+{
+"id": "CT-490",
+"name": "한밤마을",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-491",
+"name": "군위댐",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-492",
+"name": "군위전통시장",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-493",
+"name": "사라온이야기마을",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-494",
+"name": "혜원의 집",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-495",
+"name": "현풍백년도깨비시장",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-496",
+"name": "화원자연휴양림",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-497",
+"name": "인흥마을",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-498",
+"name": "대명유수지",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-499",
+"name": "군위삼존석굴",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-500",
+"name": "부계면",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-501",
+"name": "김수환추기경사랑과나눔공원",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-502",
+"name": "엄마아빠어렸을적에",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-503",
+"name": "화원동산",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-504",
+"name": "사문진나루",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-505",
+"name": "달성습지",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-506",
+"name": "디아크",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-507",
+"name": "봉무공원",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-508",
+"name": "팔공산자생식물원",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-509",
+"name": "동화사",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-510",
+"name": "동화사시설지구",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-511",
+"name": "방짜유기박물관",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-512",
+"name": "동성로",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-513",
+"name": "근대문화골목",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-514",
+"name": "두류공원",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-515",
+"name": "이월드",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-516",
+"name": "앞산해넘이전망대",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-517",
+"name": "앞산공원",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-518",
+"name": "고산골공룡공원",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-519",
+"name": "메타세콰이어길",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-520",
+"name": "동촌유원지",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-521",
+"name": "83타워",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-522",
+"name": "산이정원",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-523",
+"name": "대흥사",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-524",
+"name": "두륜산케이블카",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-525",
+"name": "국동어항단지",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-526",
+"name": "돌산대교",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-527",
+"name": "거북선대교",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-528",
+"name": "아쿠아플라넷",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-529",
+"name": "케이블카주차타워",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-530",
+"name": "소노캄 여수",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-531",
+"name": "하멜전시관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-532",
+"name": "돌산공원 입구",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-533",
+"name": "국가산단",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-534",
+"name": "돌산갓김치거리",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-535",
+"name": "충민사",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-536",
+"name": "고소대",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-537",
+"name": "이충무공어머니사시던곳",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-538",
+"name": "흥국사",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-539",
+"name": "14연대 주둔지",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-540",
+"name": "여순사건기념관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-541",
+"name": "손양원목사순교지",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-542",
+"name": "형제묘",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-543",
+"name": "위령비",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-544",
+"name": "조발도해오름언덕",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-545",
+"name": "팔영대교",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-546",
+"name": "적금공원",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-547",
+"name": "가사리생태공원",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-548",
+"name": "서틀러다육식물원",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-549",
+"name": "해양수산과학관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-550",
+"name": "향일암",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-551",
+"name": "승차)",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-552",
+"name": "유달산노적봉",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-553",
+"name": "유달유원지",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-554",
+"name": "평화광장",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-555",
+"name": "목포항구포차",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-556",
+"name": "목포역(",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-557",
+"name": "연희네슈퍼",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-558",
+"name": "스카이워크",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-559",
+"name": "유달산",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-560",
+"name": "근대역사관 1관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-561",
+"name": "가톨릭성지",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-562",
+"name": "김대중노벨평화상기념관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-563",
+"name": "목포종합수산시장",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-564",
+"name": "목포해상케이블카",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-565",
+"name": "민들레연극마을",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-566",
+"name": "화성시공예문화관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-567",
+"name": "예랑도예원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-568",
+"name": "소다미술관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-569",
+"name": "연꽃농원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-570",
+"name": "백미리",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-571",
+"name": "코레일",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-572",
+"name": "융릉건릉",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-573",
+"name": "공룡알화석산지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-574",
+"name": "국화도입파도",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-575",
+"name": "민들레연극마을축제",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-576",
+"name": "송산포도축제",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-577",
+"name": "정조효문화제",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-578",
+"name": "화성뱃놀이축제",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-579",
+"name": "해인사",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-580",
+"name": "핫들생태공원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-581",
+"name": "영상테마파크",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-582",
+"name": "여여정사",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-583",
+"name": "만어사",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-584",
+"name": "트윈터널",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-585",
+"name": "명례성지",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-586",
+"name": "수산제역사공원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-587",
+"name": "선샤인밀양테마파크",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-588",
+"name": "밀양 꿈의 정원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-589",
+"name": "표충사",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-590",
+"name": "얼음골축음기소리박물관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-591",
+"name": "얼음골 케이블카 및 트래킹",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-592",
+"name": "영남루",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-593",
+"name": "시내권 탐방",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-594",
+"name": "밀양아리랑 우주천문대",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-595",
+"name": "공연관람",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-596",
+"name": "위양지",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-597",
+"name": "삼천포대교공원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-598",
+"name": "체험시설 or 항공우주박물관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-599",
+"name": "다솔사",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-600",
+"name": "세종단종태실지",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-601",
+"name": "아라마루 아쿠아리움 or 와인족욕체험",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-602",
+"name": "선진거북선공원",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-603",
+"name": "승전길 요트체험 or 거북선 체험마을",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-604",
+"name": "사천바다케이블카 및 아라마루 아쿠아리움",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-605",
+"name": "사천케이블카 자연휴양림",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-606",
+"name": "노을전망교",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-607",
+"name": "삼천포대교공원  사천케이블카 자연휴양림",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-608",
+"name": "남일대해수욕장",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-609",
+"name": "단체관광객이 운행 요청 시",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-610",
+"name": "원하는 일정에 물돌이코스 또는 선비코스로 별도 운행",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-611",
+"name": "부석사",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-612",
+"name": "금성대군신단",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-613",
+"name": "소수서원",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-614",
+"name": "선비촌",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-615",
+"name": "죽계구곡 걷기",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-616",
+"name": "특산물시장",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-617",
+"name": "관사골",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-618",
+"name": "영주중앙시장",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-619",
+"name": "영주댐관광지",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-620",
+"name": "용마루공원",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-621",
+"name": "무섬마을",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-622",
+"name": "중앙동 빛들로 일원",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-623",
+"name": "익산관광지 3곳이상",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-624",
+"name": "익산쌍릉",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-625",
+"name": "나바위성지",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-626",
+"name": "익산문화예술의 거리",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-627",
+"name": "죽도둘레길",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-628",
+"name": "홍성전통시장",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-629",
+"name": "식물온실 들빛",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-630",
+"name": "광천토굴새우젓전시관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-631",
+"name": "새우젓 토굴",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-632",
+"name": "그림같은 수목원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-633",
+"name": "광천전통시장",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-634",
+"name": "남당항 해양분수공원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-635",
+"name": "노을전망대",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-636",
+"name": "어사리노을공원",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-637",
+"name": "이응노기념관",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-638",
+"name": "김좌진",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-639",
+"name": "한용운 생가",
+"kind": "PLACE",
+"sido": [
+"충남"
+],
+"cnt": 1
+},
+{
+"id": "CT-640",
+"name": "중앙탑사적공원",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-641",
+"name": "수안보족욕길",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-642",
+"name": "탄금호",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-643",
+"name": "통리장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-644",
+"name": "황지자유시장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-645",
+"name": "황지연못",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-646",
+"name": "출발)",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-647",
+"name": "빙하미술관",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-648",
+"name": "숭의전",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-649",
+"name": "전곡시장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-650",
+"name": "은대리 문화벽돌공장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-651",
+"name": "태풍전망대",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-652",
+"name": "연천먹자골목",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-653",
+"name": "베개용암 출렁다리",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-654",
+"name": "임진강 자연센터",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-655",
+"name": "백학광장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-656",
+"name": "경순왕릉",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-657",
+"name": "고랑포구 역사공원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-658",
+"name": "호로고루",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-659",
+"name": "승마체험",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-660",
+"name": "이천쌀밥거리",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-661",
+"name": "산수유마을",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-662",
+"name": "문화유산코스",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-663",
+"name": "북부: 진위향교",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-664",
+"name": "원릉군",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-665",
+"name": "정도전 사당",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-666",
+"name": "원릉군기념관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-667",
+"name": "만기사",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-668",
+"name": "남부: 평택향교",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-669",
+"name": "팽성읍객사",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-670",
+"name": "서부: 수도사",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-671",
+"name": "심복사",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-672",
+"name": "이대원장군묘",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-673",
+"name": "수도사",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-674",
+"name": "관광코스",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-675",
+"name": "북부: 오썸플렉스",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-676",
+"name": "웃다리문화촌",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-677",
+"name": "남부: 팽성생활사박물관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-678",
+"name": "원평나루",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-679",
+"name": "안정리예술인광장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-680",
+"name": "서부: 농업생태원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-681",
+"name": "농업생태원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-682",
+"name": "오썸플렉스",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-683",
+"name": "기획코스: 계절",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-684",
+"name": "지역 축제에 따라 코스 상이",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-685",
+"name": "자일산림욕장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-686",
+"name": "백영수미술관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-687",
+"name": "특화도서관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-688",
+"name": "관내대형카페",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-689",
+"name": "행복로",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-690",
+"name": "관광수요자 요구반영 자율코스 가능",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-691",
+"name": "옥화 치유의숲 치유센터 및 산림치유숲길",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-692",
+"name": "청석굴",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-693",
+"name": "상당산성",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-694",
+"name": "옥화자연휴양림 짚트랙 및 숲체험",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-695",
+"name": "운보의 집",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-696",
+"name": "초정리",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-697",
+"name": "문의문화재단지",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-698",
+"name": "청남대",
+"kind": "PLACE",
+"sido": [
+"충북"
+],
+"cnt": 1
+},
+{
+"id": "CT-699",
+"name": "이포보전망대",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-700",
+"name": "힐링센터",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-701",
+"name": "이포보",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-702",
+"name": "천서리막국수촌",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-703",
+"name": "세종시장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-704",
+"name": "출렁다리 남단",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-705",
+"name": "여주5일장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-706",
+"name": "폰박물관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-707",
+"name": "양산타워",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-708",
+"name": "물금벚꽃축제 운영 기간",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-709",
+"name": "홍룡폭포",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-710",
+"name": "양산시립박물관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-711",
+"name": "통도사",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-712",
+"name": "창기마을체험휴양관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-713",
+"name": "덕계시장",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-714",
+"name": "한국궁중꽃박물관",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-715",
+"name": "신불사",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-716",
+"name": "북정ㆍ신기고분군",
+"kind": "PLACE",
+"sido": [
+"경남"
+],
+"cnt": 1
+},
+{
+"id": "CT-717",
+"name": "새마을운동발상지",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-718",
+"name": "소싸움미디어체험관",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-719",
+"name": "농협로컬푸드직매장",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-720",
+"name": "청도읍성",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-721",
+"name": "홍차리에",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-722",
+"name": "프로방스",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-723",
+"name": "솔바람길",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-724",
+"name": "운문토속먹거리촌",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-725",
+"name": "청도로컬푸드허브센터",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-726",
+"name": "카페밀톤",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-727",
+"name": "청도박물관",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-728",
+"name": "청도소싸움경기장",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-729",
+"name": "만휴정",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-730",
+"name": "이천동석불상 또는 까치와 호랑이",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-731",
+"name": "봉정사",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-732",
+"name": "선성현문화단지",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-733",
+"name": "예끼마을",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-734",
+"name": "선성수상길",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-735",
+"name": "도산서원",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-736",
+"name": "이육사문학관",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-737",
+"name": "이육사청포도와인",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-738",
+"name": "하회장터",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-739",
+"name": "세계탈박물관",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-740",
+"name": "[14:00] 하회별신굿탈놀이관람",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-741",
+"name": "병산서원",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-742",
+"name": "터미널)",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-743",
+"name": "안동역 19:20",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-744",
+"name": "영호루",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-745",
+"name": "낙동강음악분수",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-746",
+"name": "한자마을",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-747",
+"name": "해상촬영장",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-748",
+"name": "임청각",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-749",
+"name": "찜닭골목",
+"kind": "PLACE",
+"sido": [
+"경북"
+],
+"cnt": 1
+},
+{
+"id": "CT-750",
+"name": "화암약수",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-751",
+"name": "레일바이크",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-752",
+"name": "아우라지",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-753",
+"name": "가리왕산케이블카",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-754",
+"name": "케이블카",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-755",
+"name": "술지움",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-756",
+"name": "임초2리 입구",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-757",
+"name": "비령이",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-758",
+"name": "레일바이크",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-759",
+"name": "가평크루즈",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-760",
+"name": "베고니아 새정원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-761",
+"name": "신비동물원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-762",
+"name": "이이유적지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-763",
+"name": "헤이리",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-764",
+"name": "혜음원지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-765",
+"name": "장단콩웰빙마루",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-766",
+"name": "임진각평화곤돌라",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-767",
+"name": "임진각관광지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-768",
+"name": "황희선생유적지",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-769",
+"name": "황포돛배",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-770",
+"name": "국립극장 무대예술지원센터",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-771",
+"name": "시화호",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-772",
+"name": "은계호수공원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-773",
+"name": "선사유적공원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-774",
+"name": "거북섬홍보관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-775",
+"name": "배다리선착장",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-776",
+"name": "거북섬마리나",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-777",
+"name": "오이도선사유적공원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-778",
+"name": "정규코스",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-779",
+"name": "특별코스",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-780",
+"name": "웅진플레이도시. 상동호수공원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-781",
+"name": "유가사",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-782",
+"name": "화석박물관",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-783",
+"name": "석빙고",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-784",
+"name": "현풍향교",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-785",
+"name": "솔례마을",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-786",
+"name": "한훤당고택",
+"kind": "PLACE",
+"sido": [
+"대구"
+],
+"cnt": 1
+},
+{
+"id": "CT-787",
+"name": "영은미술관",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-788",
+"name": "신익희생가",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-789",
+"name": "율봄식물원",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-790",
+"name": "A코스: 숲쟁이공원",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-791",
+"name": "백수해안도로",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-792",
+"name": "백수 풍력발전단지",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-793",
+"name": "영광칠산타워B코스: 물무산행복숲 황톳길",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-794",
+"name": "원불교영산성지",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-795",
+"name": "매간당고택",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-796",
+"name": "불갑사",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-797",
+"name": "광천선굴",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-798",
+"name": "청옥산 육백마지기",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-799",
+"name": "깨비마을",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-800",
+"name": "평창돌문화체험관",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-801",
+"name": "평창전통시장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-802",
+"name": "백룡동굴",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-803",
+"name": "어름치마을",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-804",
+"name": "해양레일바이크",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-805",
+"name": "해상케이블카",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-806",
+"name": "삼척중앙시장 청년몰 대금굴",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-807",
+"name": "활기치유의숲",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-808",
+"name": "삼척중앙시장 청년몰",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-809",
+"name": "용진로컬푸드직매장",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-810",
+"name": "공기마을 편백숲",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-811",
+"name": "대한민국술테마박물관",
+"kind": "PLACE",
+"sido": [
+"전북"
+],
+"cnt": 1
+},
+{
+"id": "CT-812",
+"name": "월정사",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-813",
+"name": "발왕산케이블카",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-814",
+"name": "2018평창동계올림픽기념관",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-815",
+"name": "용평리조트",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-816",
+"name": "알펜시아리조트",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-817",
+"name": "대관령양떼목장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-818",
+"name": "대관령하늘목장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-819",
+"name": "의야지바람마을",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-820",
+"name": "비엔나인형박물관",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-821",
+"name": "완도타워",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-822",
+"name": "장보고기념관",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-823",
+"name": "장보고유적지",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-824",
+"name": "완도수목원",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-825",
+"name": "정도리 구계등",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-826",
+"name": "특산품 전시장",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-827",
+"name": "송정역 탑승",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-828",
+"name": "DMZ펀치볼둘레길",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-829",
+"name": "DMZ자생식물권",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-830",
+"name": "을지전망대",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-831",
+"name": "양구수목원",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-832",
+"name": "두타연",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-833",
+"name": "계족산황톳길 걷기",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-834",
+"name": "낙조 및 대전시내 야경",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-835",
+"name": "카리용",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-836",
+"name": "옛충남도청",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-837",
+"name": "무수천하마을",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-838",
+"name": "지질박물관",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-839",
+"name": "대전시민천문대",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-840",
+"name": "엑스포과학공원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-841",
+"name": "대청호",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-842",
+"name": "구 대전형무소",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-843",
+"name": "목동성당",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-844",
+"name": "거룩한 말씀의수녀회",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-845",
+"name": "애국지사총 터",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-846",
+"name": "무령왕릉",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-847",
+"name": "국립공주박물관",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-848",
+"name": "금산인삼시장",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-849",
+"name": "개삼터",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-850",
+"name": "보석사",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-851",
+"name": "칠백의총",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-852",
+"name": "하늘물빛정원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-853",
+"name": "한밭교육박물관",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-854",
+"name": "베어트리파크",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-855",
+"name": "금강수목원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-856",
+"name": "대청호오백리길",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-857",
+"name": "문의 시내",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-858",
+"name": "청남대",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-859",
+"name": "관촉사",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-860",
+"name": "탑정호",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-861",
+"name": "계백장군유적지",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-862",
+"name": "돈암서원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-863",
+"name": "부소담악",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-864",
+"name": "향수길탐방",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-865",
+"name": "둔주봉",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-866",
+"name": "세천근린공원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-867",
+"name": "신상교",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-868",
+"name": "슬픈연가촬영지",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-869",
+"name": "찬샘마을",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-870",
+"name": "두메마을",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-871",
+"name": "삼정동생태공원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-872",
+"name": "대청댐물문화관",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-873",
+"name": "옛충남도청사",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-874",
+"name": "대전아쿠아리움",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-875",
+"name": "대전오월드",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-876",
+"name": "효월드 후문",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-877",
+"name": "대흥동성당",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-878",
+"name": "척야산수목원",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-879",
+"name": "홍천전통시장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-880",
+"name": "가령폭포",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-881",
+"name": "농촌체험관련마을",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-882",
+"name": "무궁화수목원",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-883",
+"name": "관내 축제 참가",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-884",
+"name": "농산물판매장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-885",
+"name": "백암산케이블카",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-886",
+"name": "양의대하천습지",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-887",
+"name": "살랑교",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-888",
+"name": "붕어섬",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-889",
+"name": "산천어파크골프장",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-890",
+"name": "평화누리호",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-891",
+"name": "평화의댐",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-892",
+"name": "산천어커피박물관",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-893",
+"name": "미륵바위쉼터",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-894",
+"name": "파로호",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-895",
+"name": "세계평화의종",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-896",
+"name": "파로호안보전시관",
+"kind": "PLACE",
+"sido": [
+"강원"
+],
+"cnt": 1
+},
+{
+"id": "CT-897",
+"name": "읍성권",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-898",
+"name": "황포돛배",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-899",
+"name": "산림자원연구소",
+"kind": "PLACE",
+"sido": [
+"전남"
+],
+"cnt": 1
+},
+{
+"id": "CT-900",
+"name": "계족산황톳길",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-901",
+"name": "유림공원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-902",
+"name": "계룡산 탐방",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-903",
+"name": "계룡산 도예촌",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-904",
+"name": "진잠향교",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-905",
+"name": "영동전통시장",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-906",
+"name": "와인삼겹살거리",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-907",
+"name": "노근리평화공원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-908",
+"name": "영동와인터널",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-909",
+"name": "난계국악박물관",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-910",
+"name": "정이품송",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-911",
+"name": "속리산국립공원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-912",
+"name": "솔향공원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-913",
+"name": "보은 선병국가옥",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-914",
+"name": "부소산성",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-915",
+"name": "국악의전당",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+},
+{
+"id": "CT-916",
+"name": "남사당놀이 공연관람",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-917",
+"name": "청룡사",
+"kind": "PLACE",
+"sido": [
+"경기"
+],
+"cnt": 1
+},
+{
+"id": "CT-918",
+"name": "식장산문화공원",
+"kind": "PLACE",
+"sido": [
+"대전"
+],
+"cnt": 1
+}
+]
+}
