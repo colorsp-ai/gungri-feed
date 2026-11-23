@@ -21417,6 +21417,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   var t=String(raw||'').replace(/^\s*궁리야[\s,.!?~]*/,'').trim();
   if(!t){bot('네, 말씀하세요.',{chips:MENU});return;}
   if(/끝말|놀이|게임|두뇌|심심/.test(t)&&!/어디/.test(t)){startWc();return;}
+  if(W.guriFood&&W.guriFood.isFoodQ(t)&&!/산책|여행|나들이/.test(t)){var fq=(t.match(/국밥|칼국수|짜장|짬뽕|삼겹|곰탕|설렁탕|백반|삼계탕|냉면|돈가스|순대|족발|보쌈|치킨|국수|만두|초밥|빵/)||[''])[0];G.foodQ=fq;bot('부담 없는 가격의 식당을 보여 드릴게요. 지자체가 지정한 착한가격업소예요. 영업시간은 가시기 전에 꼭 확인해 주세요.',{chips:[{k:'food',t:'식당 목록 열기'},{k:'menu',t:'처음으로'}]});return;}
   if(/어디|갈까|추천|나들이|가볼|갈만|가 볼|구경|놀러|산책/.test(t)){recommend();return;}
   if(/병원|약|아프|혈압|당뇨|증상|진단|세금|법|대출|투자|주식|보험|소송/.test(t)){bot('그건 저보다 전문가가 더 정확하게 알려 드릴 수 있어요. 병원이나 약국, 관련 기관에 꼭 물어보세요.\n저는 가볼 곳과 모임을 찾는 일을 도와드릴게요.',{chips:MENU});return;}
   if(/무료|경로|할인|공짜|요금|입장료/.test(t)){bot('어디가볼까 화면에서 “무료·경로 할인만 보기”를 체크하면, 무료이거나 65세 이상 할인이 있는 곳만 볼 수 있어요. 가시기 전에 꼭 한 번 더 확인해 주세요.',{chips:[{k:'find',t:'어디가볼까 열기'},{k:'menu',t:'처음으로'}]});return;}
@@ -21594,7 +21595,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   else if(k==='wc'){me('끝말잇기 해요');if(G.micOn)startKk();else startWc();}
   else if(k==='rec'){me('오늘 어디 갈까요?');recommend();}
   else if(k==='help'){me('이 앱 어떻게 써요?');help();}
-  else if(k==='find'){goFind();}
+  else if(k==='find'){goFind();}   else if(k==='food'){closeG();try{W.guriFood.open({q:G.foodQ||''});}catch(e){}}
   else if(k==='menu'){G.mode='chat';bot('무엇을 해 볼까요?',{chips:MENU});}
   else if(k==='hint'&&G.wc){var h=G.wc.kk?(G.wc.last?cands3(G.wc.last,G.wc.used).slice().sort(function(){return Math.random()-.5;}).slice(0,2):[]):hints(G.wc.last,G.wc.used,2);me('힌트 주세요');bot(h.length?'이런 말은 어때요?  '+h.join(' · '):'음… 저도 떠오르는 말이 없네요. 다른 말을 찾아보세요!',{chips:[{k:'hint',t:'힌트 또 주세요'},{k:'wcq',t:'그만할래요'}]});}
   else if(k==='wcq'){me('그만할래요');if(G.wc&&G.wc.kk)kkEnd();else wcEnd(false);}
@@ -24821,7 +24822,7 @@ function sendPlaceReq(){
   var ev=b.getAttribute('data-goevent');if(ev&&W.discEvents){try{var E=W.discEvents();for(var j=0;j<E.length;j++)if(String(E[j].event_id||E[j].id)===ev)return W.discEventName?W.discEventName(E[j]):(E[j].name||E[j].title);}catch(e){}}
   var h=b.querySelector('h3,h4,.t,strong,b');return ((h?h.textContent:b.textContent)||'').replace(/\s+/g,' ').trim().slice(0,24);}
  function isBye(q){var t=String(q||'').replace(/[\s.,!?~]/g,'');return t.length<=12&&(/(들어가|사라져|물러가|그만할게|안녕히|잘가)(라|줘|요|세요|봐)?$/.test(t)||/(궁리|공리|구리|궁이|궁니)(야|아|얘)?(는|좀)?(들어|사라|그만|닫아)/.test(t));}
- function ask(q){q=String(q||'').trim();if(isBye(q)){var ii=D.getElementById('mcIn');if(ii)ii.value='';dismiss();return;}if(q&&/시티\s*투어|투어\s*버스|버스\s*투어/.test(q)&&W.guriTours){var rg=(q.match(/서울|경기|인천|강원|충북|충남|대전|세종|전북|전남|광주|경북|경남|대구|부산|울산|제주/)||[''])[0];say('시티투어 목록을 열었어요. 가시기 전에 문의처로 꼭 확인해 주세요.','guide');W.guriTours.list(rg?{sido:rg}:{});return;}if(!q){say('무엇이 궁금하세요? 예를 들면 “가을 단풍 산책”처럼 말씀해 주세요.','think');return;}
+ function ask(q){q=String(q||'').trim();if(isBye(q)){var ii=D.getElementById('mcIn');if(ii)ii.value='';dismiss();return;}if(q&&/시티\s*투어|투어\s*버스|버스\s*투어/.test(q)&&W.guriTours){var rg=(q.match(/서울|경기|인천|강원|충북|충남|대전|세종|전북|전남|광주|경북|경남|대구|부산|울산|제주/)||[''])[0];say('시티투어 목록을 열었어요. 가시기 전에 문의처로 꼭 확인해 주세요.','guide');W.guriTours.list(rg?{sido:rg}:{});return;}if(q&&W.guriFood&&W.guriFood.isFoodQ(q)){var fq=(q.match(/국밥|칼국수|짜장|짬뽕|삼겹|곰탕|설렁탕|백반|삼계탕|냉면|돈가스|순대|족발|보쌈|치킨|국수|만두|칼국수|초밥|빵/)||[''])[0];say('착한가격 식당 목록을 열었어요. 영업시간은 가시기 전에 꼭 확인해 주세요.','guide');W.guriFood.open({q:fq});return;}if(!q){say('무엇이 궁금하세요? 예를 들면 “가을 단풍 산책”처럼 말씀해 주세요.','think');return;}
   S.busy=true;say('“'+q+'” 찾아볼게요…','think');
   try{W.DISC_Q=q;if(!W.DISC_KIND)W.DISC_KIND='ALL';D.body.classList.remove('visual-home');W.SUB='spot';W.UV='t';W.render();W.scrollTo(0,0);}catch(e){S.busy=false;say('지금은 찾기가 잘 안 돼요. 조금 뒤에 다시 해 주세요.','sulk');return;}
   setTimeout(function(){S.busy=false;var c=results(),it=W.guriInterpret?W.guriInterpret(q):null;
@@ -25067,6 +25068,72 @@ function sendPlaceReq(){
  try{new MutationObserver(sched).observe(D.body||D.documentElement,{childList:true,subtree:true});}catch(e){}
  if(W.GR_RENDER)W.GR_RENDER.after.push(sched);
  W.guriTours={list:openList,open:openTour,count:function(){return TOURS.length;},forPlace:function(id){return toursFor('PLACE',id);},forEvent:function(id){return toursFor('EVENT',id);},data:function(){build();return TOURS;},stopMatches:function(id){build();return IDX.tp[id]||[];}};
+ sched();
+})();
+</script>
+<script id="guri-r17-fd">(function(){'use strict';
+ var W=window,D=document;if(W.__guriFd)return;W.__guriFd=1;
+ var BASE=(W.GURI_FEED_DEFAULT_URL||'https://raw.githubusercontent.com/colorsp-ai/gungri-feed/main/feed/gungri_feed.json').replace(/[^\/]*$/,'')+'food/';
+ var SIDOS=['서울','경기','인천','강원','충북','충남','대전','세종','전북','전남광주','경북','경남','대구','부산','울산','제주'];
+ var LONG={'서울':'서울','경기':'경기','인천':'인천','강원':'강원','충북':'충북','충청북도':'충북','충남':'충남','충청남도':'충남','대전':'대전','세종':'세종','전북':'전북','전라북도':'전북','전남':'전남광주','전라남도':'전남광주','광주':'전남광주','경북':'경북','경상북도':'경북','경남':'경남','경상남도':'경남','대구':'대구','부산':'부산','울산':'울산','제주':'제주'};
+ var KINDS=['전체','한식','중식','일식','양식','기타요식업','베이커리'],KLAB={'기타요식업':'분식·기타','베이커리':'빵집'};
+ function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+ function norm(s){return String(s||'').replace(/[^0-9A-Za-z가-힣]/g,'');}
+ function won(n){return n?String(n).replace(/\B(?=(\d{3})+(?!\d))/g,',')+'원':'';}
+ function reg(){var r='';try{var a=W.me&&W.me();if(a&&!a.guest)r=String(a.reg||'');}catch(e){}
+  var t=r.split(/\s+/).filter(Boolean),sd='',gu='',dg='';
+  t.forEach(function(x){if(!sd&&LONG[x])sd=LONG[x];else if(/(시|군|구)$/.test(x)&&!gu)gu=x;else if(/(동|읍|면)$/.test(x)&&!dg)dg=x;});
+  if(!sd&&gu){/* 시도 생략 입력 */ }
+  if(!sd&&!gu){sd='경기';gu='구리시';dg='교문동';}
+  if(!sd)sd='경기';
+  return {sd:sd,gu:gu,dg:dg};}
+ var CODE={'서울':'seoul','경기':'gyeonggi','인천':'incheon','강원':'gangwon','충북':'chungbuk','충남':'chungnam','대전':'daejeon','세종':'sejong','전북':'jeonbuk','전남광주':'jeonnam_gwangju','경북':'gyeongbuk','경남':'gyeongnam','대구':'daegu','부산':'busan','울산':'ulsan','제주':'jeju'};
+ var CACHE={},LS={sd:'',gu:'',kind:'전체',q:'',n:40,all:false};
+ function load(sd){if(CACHE[sd])return Promise.resolve(CACHE[sd]);
+  var ck='GUNGRI_FOOD_'+sd;
+  return fetch(BASE+(CODE[sd]||'gyeonggi')+'.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(j){CACHE[sd]=j;try{localStorage.setItem(ck,JSON.stringify(j));}catch(e){}return j;})
+   .catch(function(e){var s=null;try{s=JSON.parse(localStorage.getItem(ck)||'null');}catch(x){}if(s){CACHE[sd]=s;return s;}throw e;});}
+ function pass(x){if(LS.kind!=='전체'&&x.k!==LS.kind)return false;if(LS.gu&&x.g!==LS.gu)return false;
+  if(LS.q){var q=norm(LS.q);if(!q)return true;var hay=norm(x.n+x.g+x.d+x.k+x.m.map(function(m){return m[0];}).join(''));if(hay.indexOf(q)<0)return false;}return true;}
+ function mapUrl(x){var a=String(x.a||'').replace(/\([^)]*\)/g,'').replace(/\s+/g,' ').trim();return 'https://map.kakao.com/link/search/'+encodeURIComponent(a+' '+x.n);}
+ function card(x){var ms=x.m.slice(0,3).map(function(m){return '<div class="m"><span>'+esc(m[0])+'</span><b>'+esc(won(m[1])||'가격 확인')+'</b></div>';}).join('');
+  return '<div class="cd"><div class="t"><b>'+esc(x.n)+'</b><small>'+esc(KLAB[x.k]||x.k)+' · '+esc(x.g)+(x.d?' '+esc(x.d):'')+'</small></div>'+ms+'<div class="ad">'+esc(String(x.a).replace(/\s*\([^)]*\)/,''))+'</div><a class="mp" href="'+esc(mapUrl(x))+'" target="_blank" rel="noopener">🗺 지도에서 보기</a></div>';}
+ function box(){return D.getElementById('grFd');}
+ function close(){var e=box();if(e){e.remove();D.body.classList.remove('gr-fd-open');}}
+ function guList(){var d=CACHE[LS.sd]||[],s={};d.forEach(function(x){s[x.g]=(s[x.g]||0)+1;});var me=reg();return Object.keys(s).sort(function(a,b){return (b===me.gu)-(a===me.gu)||a.localeCompare(b);});}
+ function rows(){var d=CACHE[LS.sd]||[],me=reg(),a=d.filter(pass);
+  a.sort(function(x,y){var sx=(me.gu&&x.g===me.gu?2:0)+(me.dg&&x.d===me.dg?1:0),sy=(me.gu&&y.g===me.gu?2:0)+(me.dg&&y.d===me.dg?1:0);return (sy-sx)||String(x.g).localeCompare(y.g)||String(x.d).localeCompare(y.d)||x.n.localeCompare(y.n);});return a;}
+ function listHTML(){if(!CACHE[LS.sd])return '<div class="note">식당 정보를 불러오고 있어요…</div>';var a=rows();
+  if(!a.length)return '<div class="note">조건에 맞는 식당이 없어요. 지역이나 종류를 바꿔 보세요.</div>';
+  return '<div class="note ct">'+(LS.gu?esc(LS.gu)+' ':'')+a.length+'곳</div>'+a.slice(0,LS.n).map(card).join('')+(a.length>LS.n?'<button type="button" class="more" data-fd="more">더 보기 ('+(a.length-LS.n)+'곳)</button>':'');}
+ function paint(){var l=D.getElementById('fdList');if(l)l.innerHTML=listHTML();var g=D.getElementById('fdGu');if(g){g.innerHTML='<option value="">전체 시·군·구</option>'+guList().map(function(x){return '<option value="'+esc(x)+'"'+(LS.gu===x?' selected':'')+'>'+esc(x)+'</option>';}).join('');}
+  [].forEach.call(D.querySelectorAll('#grFd [data-fk]'),function(b){b.classList.toggle('on',b.getAttribute('data-fk')===LS.kind);});}
+ function failMsg(){var l=D.getElementById('fdList');if(l)l.innerHTML='<div class="note">식당 정보를 불러오지 못했어요. 인터넷 연결(https 주소)을 확인하고 다시 열어 주세요.</div>';}
+ function open(o){o=o||{};var me=reg();if(!box()){LS.sd=o.sido||me.sd;LS.gu=o.gu!==undefined?o.gu:me.gu;LS.kind='전체';LS.n=40;}else{if(o.sido)LS.sd=o.sido;if(o.gu!==undefined)LS.gu=o.gu;}
+  if(o.q!==undefined)LS.q=o.q;if(o.kind)LS.kind=o.kind;
+  if(!box()){var e=D.createElement('div');e.id='grFd';e.setAttribute('role','dialog');e.setAttribute('aria-label','착한가격 식당');
+   e.innerHTML='<div class="h"><b>🍚 착한가격 식당</b><button type="button" data-fd="close">닫기 ✕</button></div><div class="bd"><div class="note">각 지방자치단체가 가격·위생·친절 기준으로 지정한 <b>착한가격업소</b> 가운데 식당이에요. 궁리가 임의로 고른 곳이 아니에요. 지정 기준일 2026-09-30. <b>영업시간·휴무는 바뀔 수 있으니 가시기 전에 지도나 전화로 꼭 확인</b>해 주세요.</div>'+
+    '<div class="row"><select id="fdSd" aria-label="시·도">'+SIDOS.map(function(s){return '<option value="'+s+'">'+(s==='전남광주'?'전남·광주':s)+'</option>';}).join('')+'</select><select id="fdGu" aria-label="시·군·구"></select></div>'+
+    '<input type="search" id="fdQ" placeholder="메뉴·동네·이름으로 찾기 (예: 국밥, 교문동)" aria-label="식당 찾기"><div class="chips">'+KINDS.map(function(k){return '<button type="button" data-fk="'+k+'">'+(KLAB[k]||k)+'</button>';}).join('')+'</div><div id="fdList"></div></div>';
+   D.body.appendChild(e);D.body.classList.add('gr-fd-open');}
+  var s=D.getElementById('fdSd');if(s)s.value=LS.sd;var q=D.getElementById('fdQ');if(q)q.value=LS.q;paint();
+  load(LS.sd).then(function(){if(box()){if(LS.gu&&!guList().length)LS.gu='';else if(LS.gu&&guList().indexOf(LS.gu)<0)LS.gu='';paint();}}).catch(failMsg);}
+ D.addEventListener('click',function(ev){var t=ev.target&&ev.target.closest?ev.target.closest('[data-fd],[data-fk],[data-fdopen]'):null;if(!t)return;
+  if(t.hasAttribute('data-fdopen')){ev.preventDefault();ev.stopPropagation();open();return;}
+  if(t.hasAttribute('data-fk')){LS.kind=t.getAttribute('data-fk');LS.n=40;paint();return;}
+  var a=t.getAttribute('data-fd');if(a==='close'){close();}else if(a==='more'){LS.n+=40;paint();}},true);
+ D.addEventListener('change',function(e){var t=e.target;if(!t)return;if(t.id==='fdSd'){LS.sd=t.value;LS.gu='';LS.n=40;paint();load(LS.sd).then(paint).catch(failMsg);}else if(t.id==='fdGu'){LS.gu=t.value;LS.n=40;paint();}},true);
+ D.addEventListener('input',function(e){if(e.target&&e.target.id==='fdQ'){LS.q=e.target.value;LS.n=40;paint();}},true);
+ (W.guriOverlayBacks=W.guriOverlayBacks||[]).push(function(){if(box()){close();return true;}return false;});
+ var st=D.createElement('style');st.textContent='#grFd{position:fixed;inset:0;z-index:2147482000;background:#f4f7f6;display:flex;flex-direction:column;font-size:18px;color:#1f2a30}#grFd .h{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#b4571a;color:#fff}#grFd .h b{flex:1;font-size:20px}#grFd .h button{background:#fff;color:#8a3f10;border:0;border-radius:12px;padding:10px 14px;font-size:16px;font-weight:700;min-height:44px}#grFd .bd{flex:1;overflow:auto;padding:12px;-webkit-overflow-scrolling:touch}#grFd .note{background:#fff8ee;border:1px solid #ecd2b0;border-radius:12px;padding:10px 12px;font-size:15px;line-height:1.6;margin-bottom:10px}#grFd .note.ct{background:none;border:0;padding:2px 2px;font-weight:700}#grFd .row{display:flex;gap:8px;margin-bottom:8px}#grFd select{flex:1;min-width:0;height:50px;font-size:17px;border:1px solid #9bb3a9;border-radius:12px;padding:0 8px;background:#fff}#grFd input{width:100%;box-sizing:border-box;height:52px;font-size:18px;border:1px solid #9bb3a9;border-radius:12px;padding:0 12px}#grFd .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}#grFd .chips button{min-height:46px;padding:8px 14px;border-radius:23px;border:1px solid #b4571a;background:#fff;color:#8a3f10;font-size:16px;font-weight:700}#grFd .chips button.on{background:#b4571a;color:#fff}#grFd .cd{background:#fff;border:1px solid #d8e2de;border-radius:14px;padding:12px 14px;margin:10px 0}#grFd .cd .t b{display:block;font-size:20px}#grFd .cd small{color:#5b6770;font-size:15px}#grFd .m{display:flex;justify-content:space-between;gap:10px;margin-top:6px;font-size:17px}#grFd .m b{color:#8a3f10;white-space:nowrap}#grFd .ad{margin-top:8px;font-size:15px;color:#4a4f52}#grFd .mp{display:inline-block;margin-top:10px;min-height:46px;line-height:46px;padding:0 16px;border-radius:12px;background:#0f6b45;color:#fff;font-weight:700;text-decoration:none;font-size:17px}#grFd .more{width:100%;min-height:54px;border-radius:14px;border:1px solid #b4571a;background:#fff;color:#8a3f10;font-size:18px;font-weight:700;margin:8px 0 20px}.fd-home{display:flex;align-items:center;gap:12px;width:calc(100% - 24px);min-height:68px;margin:0 12px 14px;padding:10px 16px;background:#b4571a;color:#fff;border:0;border-radius:18px;text-align:left;box-shadow:0 3px 10px rgba(180,87,26,.35)}.fd-home .ic{font-size:30px;line-height:1}.fd-home .tx{flex:1}.fd-home b{display:block;font-size:19px;font-weight:800}.fd-home small{display:block;font-size:14px;font-weight:600;margin-top:2px}.fd-home .go{font-size:28px;font-weight:700}';
+ D.head.appendChild(st);
+ function decorate(){var th=D.querySelector('.tc-home'),hs=D.querySelector('.ui-cats');
+  if(hs&&hs.parentNode&&!D.querySelector('.fd-home')){var h=D.createElement('button');h.type='button';h.className='fd-home';h.setAttribute('data-fdopen','1');h.innerHTML='<span class="ic" aria-hidden="true">🍚</span><span class="tx"><b>착한가격 식당 찾기</b><small>지자체가 지정한 부담 없는 식당 · 메뉴와 가격 표시</small></span><span class="go" aria-hidden="true">›</span>';
+   if(th&&th.parentNode===hs.parentNode)hs.parentNode.insertBefore(h,th.nextSibling);else hs.parentNode.insertBefore(h,hs);}}
+ var T=null;function sched(){clearTimeout(T);T=setTimeout(function(){try{decorate();}catch(e){}},200);}
+ try{new MutationObserver(sched).observe(D.body||D.documentElement,{childList:true,subtree:true});}catch(e){}
+ if(W.GR_RENDER)W.GR_RENDER.after.push(sched);
+ W.guriFood={open:open,close:close,load:load,isFoodQ:function(q){return /식당|맛집|밥집|식사|점심|저녁|국밥|칼국수|한식|중식|일식|양식|분식|짜장|짬뽕|삼겹|곰탕|설렁탕|백반|배고|뭐\s*먹|먹을|먹고/.test(String(q||''));}};
  sched();
 })();
 </script>
