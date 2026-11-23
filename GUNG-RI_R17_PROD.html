@@ -21413,7 +21413,7 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
    o.push({id:x.id,t:x.n,s:[loc,sub,ben].filter(Boolean).join(' · ')});}
   return o;}
  /* ---------- 대화 ---------- */
- function intent(raw){
+ function ruleIntent(raw,noai){
   var t=String(raw||'').replace(/^\s*궁리야[\s,.!?~]*/,'').trim();
   if(!t){bot('네, 말씀하세요.',{chips:MENU});return;}
   if(/끝말|놀이|게임|두뇌|심심/.test(t)&&!/어디/.test(t)){startWc();return;}
@@ -21428,27 +21428,53 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   if(/누구|이름|뭐야|뭐예요|정체|소개/.test(t)){bot('저는 궁리예요. “누구랑, 어디 가서, 뭐 하지?” 그 궁리를 대신해 드리는 안내원이에요. 가볼 곳을 골라 드리고, 끝말잇기도 같이 할 수 있어요.',{chips:MENU});return;}
   if(/안녕|반가|하이/.test(t)){bot('안녕하세요! 오늘은 무엇을 해 볼까요?',{chips:MENU});return;}
   if(/고마|감사|잘했|최고/.test(t)){bot('천만에요. 언제든 불러 주세요.',{chips:MENU});return;}
-  aiOrFallback(t);
+  if(noai===2)return;if(noai){bot('아직 그런 이야기는 잘 몰라요. 대신 이런 건 도와드릴 수 있어요.',{chips:MENU});return;}aiOrFallback(t);
  }
+function aiReady(){return !!(W.fetch&&AIU&&!G.aiDead&&(W.location.protocol==='https:'||W.location.hostname==='localhost'));}
+ function intent(raw){var t=String(raw||'').replace(/^\s*궁리야[\s,.!?~]*/,'').trim();
+  if(!t){ruleIntent(raw);return;}
+  if(/끝말|쿵꿍따|놀이|두뇌/.test(t)&&!/어디|추천/.test(t)){ruleIntent(t);return;}
+  if(/병원|약국|처방|혈압|당뇨|증상|진단|아프|세금|대출|투자|주식|소송|보험/.test(t)){ruleIntent(t);return;}
+  if(t.replace(/\s/g,'').length<=8||!aiReady()){ruleIntent(t);return;}
+  aiOrFallback(t,true);}
+
  /* ---------- 계속 이어지는 대화: 서버(Claude)가 답한다. 서버가 없거나 실패하면 예전 안내 문구로 돌아간다 ---------- */
  var AIU=(function(){try{var u=W.localStorage.getItem('GUNGRI_AI_URL');if(u)return u;}catch(e){}return 'https://gvzpdexgpaudnfncpxcs.supabase.co/functions/v1/gungri-chat';})(),AIK='sb_publishable_eJjV4_VNLYZVIzCURXYmng_6KeYewE4';
- function ctxPlaces(t){var S=W.SPOTS||[],q=String(t).replace(/[^가-힣A-Za-z0-9 ]/g,' ').split(/\s+/).filter(function(x){return x.length>=2;}),sd=memberSido(),sc=[];
-  S.forEach(function(p){if(!p||p.admin_hidden===true||!p.n)return;var txt=(p.n+' '+(p.a||'')+' '+(p.why||'')+' '+((p.contentDetail&&p.contentDetail.summary)||'')+' '+((p.k||[]).join?(p.k||[]).join(' '):'')),n=0;q.forEach(function(w){if(txt.indexOf(w)>=0)n+=(p.n.indexOf(w)>=0?3:1);});
-   if(sd&&W.guriSidoOfPlace&&W.guriSidoOfPlace(p)===sd)n+=0.5;if(n>0)sc.push([n+Math.random()*0.1,p]);});
-  sc.sort(function(a,b){return b[0]-a[0];});var o=sc.slice(0,6).map(function(x){return x[1];});
-  if(o.length<3){var f=placeCards(3);f.forEach(function(c){var p=S.filter(function(x){return String(x.id)===String(c.id);})[0];if(p&&o.indexOf(p)<0)o.push(p);});}
-  return o.map(function(p){var ad=W.guriAddrText?W.guriAddrText(p):p.a;return {n:p.n,a:String(ad||'').slice(0,50),why:String(((p.contentDetail&&p.contentDetail.summary)||p.why||'')).slice(0,120)};});}
- function aiOrFallback(t){var FB='아직 그런 이야기는 잘 몰라요. 대신 이런 건 도와드릴 수 있어요.';
+ var SYN={'산책':['산책','공원','둘레길','호수','숲','천변','수목원','걷'],'걷':['산책','둘레길','공원','걷'],'가족':['가족','아이','체험','박물관','공원','동물','놀이'],'아이':['아이','체험','박물관','공원','동물','놀이'],'친구':['친구','카페','공원','전시','시장','산책'],'데이트':['공원','호수','전시','야경','정원'],'여행':['여행','관광','명소'],'단풍':['단풍','가을','숲','산'],'꽃':['꽃','정원','수목원'],'전시':['전시','미술','박물관','문화'],'운동':['운동','체육','걷기','등산'],'등산':['등산','산','둘레길'],'바다':['바다','해변','해안'],'온천':['온천','스파'],'야경':['야경','야간','호수','공원']};
+ function qwords(t){var q=String(t).replace(/[^가-힣A-Za-z0-9 ]/g,' ').split(/\s+/).filter(function(x){return x.length>=2;}),o=q.slice();q.forEach(function(w){Object.keys(SYN).forEach(function(k){if(w.indexOf(k)>=0)SYN[k].forEach(function(s){if(o.indexOf(s)<0)o.push(s);});});});return o;}
+ function kmOf(p){try{var d=W.discDist&&W.discDist(p);return d&&isFinite(d.km)&&d.km<900?d.km:null;}catch(e){return null;}}
+ function ctxPlaces(t){var S=W.SPOTS||[],ws=qwords(t),sd=memberSido(),sc=[],all=[];
+  S.forEach(function(p){if(!p||p.admin_hidden===true||!p.n)return;var km=kmOf(p),txt=(p.n+' '+(p.a||'')+' '+(p.why||'')+' '+((p.contentDetail&&p.contentDetail.summary)||'')+' '+((p.k||[]).join?(p.k||[]).join(' '):'')),n=0;
+   ws.forEach(function(w){if(txt.indexOf(w)>=0)n+=(p.n.indexOf(w)>=0?3:1);});
+   if(sd&&W.guriSidoOfPlace&&W.guriSidoOfPlace(p)===sd)n+=0.3;
+   var o={p:p,km:km,n:n};all.push(o);if(n>=1)sc.push([n+(km==null?0:1.5/(1+km/6)),o]);});
+  sc.sort(function(a,b){return b[0]-a[0];});var pick=sc.slice(0,8).map(function(x){return x[1];});
+  if(pick.length<4){all.filter(function(o){return o.km!=null;}).sort(function(a,b){return a.km-b.km;}).slice(0,6).forEach(function(o){if(pick.indexOf(o)<0&&pick.length<6)pick.push(o);});}
+  pick.sort(function(a,b){return (a.km==null?999:a.km)-(b.km==null?999:b.km);});pick=pick.slice(0,6);
+  return pick.map(function(o){var p=o.p,ad=W.guriAddrText?W.guriAddrText(p):p.a;return {id:p.id,n:p.n,a:String(ad||'').slice(0,50),why:String(((p.contentDetail&&p.contentDetail.summary)||p.why||'')).slice(0,120),km:o.km==null?null:Math.round(o.km*10)/10};});}
+ function wantFood(t){return /식당|맛집|밥|식사|배고|먹|국밥|칼국수|짜장|짬뽕|삼겹|곰탕|설렁탕|백반|삼계탕|냉면|돈가스|순대|족발|보쌈|치킨|국수|만두|초밥|빵|외식|회식/.test(t);}
+ function foodMap(f){var a=String(f.a||'').replace(/\([^)]*\)/g,'').replace(/\s+/g,' ').trim();return 'https://map.kakao.com/link/search/'+encodeURIComponent(a+' '+f.n);}
+ function won(n){return n?String(n).replace(/\B(?=(\d{3})+(?!\d))/g,',')+'원':'가격 확인';}
+ function nowCtx(){var d=new Date(),h=d.getHours(),dw=['일','월','화','수','목','금','토'][d.getDay()];var tod=h<6?'새벽':h<11?'아침':h<14?'점심':h<18?'오후':h<21?'저녁':'밤';return {date:d.toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric',weekday:'long'}),time:tod+' '+h+'시',weekend:(d.getDay()===0||d.getDay()===6)};}
+ function aiOrFallback(t,first){var FB='아직 그런 이야기는 잘 몰라요. 대신 이런 건 도와드릴 수 있어요.';
   if(G.aiDead){bot('대화 서버가 아직 준비되지 않았어요 (오류 404). 대신 이런 건 도와드릴 수 있어요.',{chips:MENU});return;}
   if(!W.fetch||!AIU){bot(FB,{chips:MENU});return;}
   if(W.location.protocol!=='https:'&&W.location.hostname!=='localhost'){bot('지금은 파일로 열려 있어서 대화 서버에 연결하기 어려워요. 인터넷 주소(https)로 열어 주세요. 그때까지는 끝말잇기와 길 안내만 돼요.',{chips:MENU});return;}
   G.hist=G.hist||[];G.hist.push({role:'user',content:String(t).slice(0,300)});G.hist=G.hist.slice(-12);
   G.msgs.push({w:'bot',t:'생각하고 있어요…',cards:null,chips:null});paint();var ph=G.msgs[G.msgs.length-1];
-  var ctl=new AbortController(),to=setTimeout(function(){ctl.abort();},20000);
-  fetch(AIU,{method:'POST',headers:{'Content-Type':'application/json','apikey':AIK,'Authorization':'Bearer '+AIK},body:JSON.stringify({messages:G.hist,places:ctxPlaces(t),date:new Date().toLocaleDateString('ko-KR',{year:'numeric',month:'long',day:'numeric',weekday:'long'}),region:memberSido()||''}),signal:ctl.signal})
-  .then(function(r){clearTimeout(to);if(!r.ok){if(r.status===404)G.aiDead=true;throw new Error(r.status);}return r.json();})
-  .then(function(j){var rep=j&&j.reply?String(j.reply).trim():'';var i=G.msgs.indexOf(ph);if(i>=0)G.msgs.splice(i,1);if(!rep)throw new Error('empty');G.hist.push({role:'assistant',content:rep});bot(rep,{chips:null});})
-  .catch(function(e){clearTimeout(to);var i=G.msgs.indexOf(ph);if(i>=0)G.msgs.splice(i,1);G.hist.pop();var c=String(e&&e.message||'');bot(c==='429'?'잠깐만요, 오늘은 이야기를 너무 많이 나눠서 숨이 차요. 조금 뒤에 다시 말씀해 주세요.':c==='404'?'대화 서버가 아직 준비되지 않았어요 (오류 404). 대신 이런 건 도와드릴 수 있어요.':/^\d+$/.test(c)?'대화 서버에 문제가 있어요 (오류 '+c+'). 잠시 뒤 다시 말씀해 주세요.':'대화 서버에 연결하지 못했어요. 인터넷이 되는지 확인해 주세요.',{chips:MENU});});}
+  var cand=[],food=[];
+  function drop(){var i=G.msgs.indexOf(ph);if(i>=0)G.msgs.splice(i,1);}
+  function fail(e){drop();G.hist.pop();var c=String(e&&e.message||'');bot(c==='429'?'잠깐만요, 오늘은 이야기를 너무 많이 나눠서 숨이 차요. 조금 뒤에 다시 말씀해 주세요.':c==='404'?'대화 서버가 아직 준비되지 않았어요 (오류 404). 대신 이런 건 도와드릴 수 있어요.':/^\d+$/.test(c)?'대화 서버에 문제가 있어요 (오류 '+c+'). 잠시 뒤 다시 말씀해 주세요.':'대화 서버에 연결하지 못했어요. 인터넷이 되는지 확인해 주세요.',{chips:MENU});if(first)ruleIntent(t,2);}
+  try{cand=ctxPlaces(t);}catch(e){cand=[];}
+  var fp=(wantFood(t)&&W.guriFood&&W.guriFood.pick)?W.guriFood.pick(t,6).catch(function(){return [];}):Promise.resolve([]);
+  fp.then(function(fd){food=fd||[];var ctl=new AbortController(),to=setTimeout(function(){ctl.abort();},22000);
+   return fetch(AIU,{method:'POST',headers:{'Content-Type':'application/json','apikey':AIK,'Authorization':'Bearer '+AIK},body:JSON.stringify({messages:G.hist,places:cand.map(function(p){return {n:p.n,a:p.a,why:p.why,km:p.km};}),food:food.map(function(f){return {n:f.n,k:f.k,g:f.g,d:f.d,m:(f.m||[]).slice(0,2).map(function(m){return m[0]+' '+won(m[1]);}).join(', ')};}),now:nowCtx(),date:nowCtx().date,region:memberSido()||''}),signal:ctl.signal}).then(function(r){clearTimeout(to);if(!r.ok){if(r.status===404)G.aiDead=true;throw new Error(r.status);}return r.json();});})
+  .then(function(j){var rep=j&&j.reply?String(j.reply).trim():'';drop();if(!rep)throw new Error('empty');G.hist.push({role:'assistant',content:rep});
+   var cards=[];cand.forEach(function(p){if(cards.length<3&&p.n&&p.n.length>=2&&rep.indexOf(p.n)>=0)cards.push({id:p.id,t:p.n,s:[p.km!=null?'약 '+p.km+'km':'',p.a].filter(Boolean).join(' · ')});});
+   var usedFood=false;food.forEach(function(f){if(cards.length<3&&f.n&&rep.indexOf(f.n)>=0){usedFood=true;cards.push({t:f.n,s:((f.m&&f.m[0])?f.m[0][0]+' '+won(f.m[0][1])+' · ':'')+'착한가격업소',map:foodMap(f)});}});
+   G.foodQ='';var chips=usedFood||(food.length&&!cards.length)?[{k:'food',t:'식당 더 보기'}]:(cards.length?[{k:'find',t:'어디가볼까 열기'}]:null);
+   bot(rep,{cards:cards.length?cards:null,chips:chips});})
+  .catch(function(e){fail(e);});}
 
  function help(){bot('이 앱은 이렇게 쓰면 돼요.\n① “어디가볼까”에서 가볼 곳과 행사를 찾아요.\n② 마음에 드는 곳에서 모임을 열거나 참여해요.\n③ 다녀온 뒤에는 사진과 이야기를 남겨요.',{chips:[{k:'find',t:'어디가볼까 열기'},{k:'menu',t:'처음으로'}]});}
  function recommend(){var c=placeCards(2);if(!c.length){bot('지금 보여 드릴 곳을 찾지 못했어요. 어디가볼까에서 직접 찾아보세요.',{chips:[{k:'find',t:'어디가볼까 열기'}]});return;}
@@ -21560,14 +21586,14 @@ body.guri-r14-input-focus #v2992DevRoleBtn,body.guri-r14-input-focus #v2999QaBtn
   '#grGl .b.bot{background:#fff;border:1px solid #d8e2de}#grGl .b.me{background:#0f6b45;color:#fff;margin-left:auto}'+
   '#grGl .cd{display:flex;align-items:center;gap:10px;margin:8px 0 0;padding:10px;border:1px solid #d8e2de;border-radius:12px;background:#f4faf6;white-space:normal}#grGl .cd div{flex:1}#grGl .cd b{display:block;font-size:18px}#grGl .cd small{color:#5b6770;font-size:14px}'+
   '#grGl .ch{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}#grGl .ch button,#grGl .cd button{min-height:50px;padding:10px 14px;border-radius:14px;border:1px solid #0f6b45;background:#fff;color:#0f6b45;font-size:17px;font-weight:700}'+
-  '#grGl .s{padding:6px 14px;background:#e3f2ea;color:#0f6b45;font-weight:800;font-size:18px}#grGl .f{display:flex;gap:8px;padding:10px 12px;background:#fff;border-top:1px solid #d8e2de}'+
+  '#grGl .cd a.gmap{min-height:50px;line-height:50px;padding:0 14px;border-radius:14px;background:#0f6b45;color:#fff;font-size:17px;font-weight:700;text-decoration:none;white-space:nowrap}#grGl .s{padding:6px 14px;background:#e3f2ea;color:#0f6b45;font-weight:800;font-size:18px}#grGl .f{display:flex;gap:8px;padding:10px 12px;background:#fff;border-top:1px solid #d8e2de}'+
   '#grGl .f input{flex:1;min-width:0;height:52px;border:1px solid #9bb3a9;border-radius:12px;padding:0 12px;font-size:18px}#grGl .f button{height:52px;border:0;border-radius:12px;font-size:17px;font-weight:800}#grGl .snd{background:#0f6b45;color:#fff;padding:0 16px}#grGl .mk{background:#e8f1ec;color:#0f6b45;width:56px;font-size:22px}#grGl .mk.on{background:#c0392b;color:#fff}';
  D.head.appendChild(st);
  function box(){return D.getElementById('grGl');}
  function chipsHTML(c){return c&&c.length?'<div class="ch">'+c.map(function(x){return '<button type="button" data-ggc="'+esc(x.k)+'">'+esc(x.t)+'</button>';}).join('')+'</div>':'';}
  function paint(){var e=box();if(!e)return;var m=e.querySelector('.m');if(!m)return;var lastBot=-1;G.msgs.forEach(function(x,i){if(x.w==='bot')lastBot=i;});
   m.innerHTML=G.msgs.map(function(x,i){if(x.w==='me')return '<div class="b me">'+esc(x.t)+'</div>';
-   var h='<div class="b bot">'+esc(x.t);if(x.cards)h+=x.cards.map(function(c){return '<div class="cd"><div><b>'+esc(c.t)+'</b><small>'+esc(c.s)+'</small></div><button type="button" data-ggplace="'+esc(c.id)+'">보기</button></div>';}).join('');
+   var h='<div class="b bot">'+esc(x.t);if(x.cards)h+=x.cards.map(function(c){return '<div class="cd"><div><b>'+esc(c.t)+'</b><small>'+esc(c.s)+'</small></div>'+(c.map?'<a class="gmap" href="'+esc(c.map)+'" target="_blank" rel="noopener">지도</a>':'<button type="button" data-ggplace="'+esc(c.id)+'">보기</button>')+'</div>';}).join('');
    h+='</div>';return h+(i===lastBot?chipsHTML(x.chips):'');}).join('');
   paintStatus();
   m.scrollTop=m.scrollHeight;}
@@ -25108,7 +25134,7 @@ function sendPlaceReq(){
   return '<div class="note ct">'+(LS.gu?esc(LS.gu)+' ':'')+a.length+'곳</div>'+a.slice(0,LS.n).map(card).join('')+(a.length>LS.n?'<button type="button" class="more" data-fd="more">더 보기 ('+(a.length-LS.n)+'곳)</button>':'');}
  function paint(){var l=D.getElementById('fdList');if(l)l.innerHTML=listHTML();var g=D.getElementById('fdGu');if(g){g.innerHTML='<option value="">전체 시·군·구</option>'+guList().map(function(x){return '<option value="'+esc(x)+'"'+(LS.gu===x?' selected':'')+'>'+esc(x)+'</option>';}).join('');}
   [].forEach.call(D.querySelectorAll('#grFd [data-fk]'),function(b){b.classList.toggle('on',b.getAttribute('data-fk')===LS.kind);});}
- function failMsg(){var l=D.getElementById('fdList');if(l)l.innerHTML='<div class="note">식당 정보를 불러오지 못했어요. 인터넷 연결(https 주소)을 확인하고 다시 열어 주세요.</div>';}
+ function failMsg(e){var l=D.getElementById('fdList'),c=String(e&&e.message||''),why=/^404$/.test(c)?'식당 파일이 아직 올라와 있지 않아요 (오류 404). 관리자에게 알려 주세요.':/^\d+$/.test(c)?'서버 오류예요 ('+c+'). 잠시 뒤 다시 열어 주세요.':'인터넷 연결(https 주소)을 확인하고 다시 열어 주세요.';if(l)l.innerHTML='<div class="note">식당 정보를 불러오지 못했어요. '+why+'</div>';}
  function open(o){o=o||{};var me=reg();if(!box()){LS.sd=o.sido||me.sd;LS.gu=o.gu!==undefined?o.gu:me.gu;LS.kind='전체';LS.n=40;}else{if(o.sido)LS.sd=o.sido;if(o.gu!==undefined)LS.gu=o.gu;}
   if(o.q!==undefined)LS.q=o.q;if(o.kind)LS.kind=o.kind;
   if(!box()){var e=D.createElement('div');e.id='grFd';e.setAttribute('role','dialog');e.setAttribute('aria-label','착한가격 식당');
@@ -25133,7 +25159,10 @@ function sendPlaceReq(){
  var T=null;function sched(){clearTimeout(T);T=setTimeout(function(){try{decorate();}catch(e){}},200);}
  try{new MutationObserver(sched).observe(D.body||D.documentElement,{childList:true,subtree:true});}catch(e){}
  if(W.GR_RENDER)W.GR_RENDER.after.push(sched);
- W.guriFood={open:open,close:close,load:load,isFoodQ:function(q){return /식당|맛집|밥집|식사|점심|저녁|국밥|칼국수|한식|중식|일식|양식|분식|짜장|짬뽕|삼겹|곰탕|설렁탕|백반|배고|뭐\s*먹|먹을|먹고/.test(String(q||''));}};
+ function pick(q,n){var me=reg(),kw=(String(q).match(/국밥|칼국수|짜장|짬뽕|삼겹|곰탕|설렁탕|백반|삼계탕|냉면|돈가스|순대|족발|보쌈|치킨|국수|만두|초밥|빵/)||[''])[0];
+  return load(me.sd).then(function(d){var base=d.filter(function(x){return !me.gu||x.g===me.gu;});if(base.length<3)base=d.slice();var c=kw?base.filter(function(x){return norm(x.n+x.m.map(function(m){return m[0];}).join('')).indexOf(kw)>=0;}):base;if(c.length<2)c=base;
+   c=c.map(function(x){return [(me.dg&&x.d===me.dg?1:0)+Math.random()*0.9,x];}).sort(function(a,b){return b[0]-a[0];}).slice(0,n).map(function(x){return x[1];});return c;});}
+ W.guriFood={pick:pick,open:open,close:close,load:load,isFoodQ:function(q){return /식당|맛집|밥집|식사|점심|저녁|국밥|칼국수|한식|중식|일식|양식|분식|짜장|짬뽕|삼겹|곰탕|설렁탕|백반|배고|뭐\s*먹|먹을|먹고/.test(String(q||''));}};
  sched();
 })();
 </script>
